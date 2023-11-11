@@ -12,25 +12,28 @@
             <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="10" />
             <layout class="stick_to_sides_attachment" alignment="horizontal" inset="12" apply_to_children="true" />
 
-            <container height="141" navigation_container="true">
+            <container height="200" navigation_container="true">
                 <attachment_group class="vertical_arrange" vertical_gap="0" />
-                <container height="140">
+                <container height="180">
   			        <layout class="arrange_horizontal_attachment" layout="270,-1" gap="5" offset="0"/>
 					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
 
                     <!-- sender picture -->
-                    <container width="140">
+                    <container width="180">
                         <layout class="arrange_horizontal_attachment" alignment="middle,extend" gap="10" />
                         <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 
-           				<widget class="object_portrait_picture" id="snpc" scale_picture="true" image_alignment="left,centre_y" width="120">
-							<layout class="stick_to_sides_attachment" alignment="all"/>
+                        <widget class="object_portrait_picture" id="sncl" scale_picture="true" image_alignment="left" width="80">				
+						<!-- <layout class="stick_to_sides_attachment" alignment="right" inset="0" /> -->
+						<layout class="stick_to_sides_attachment" alignment="all"/>
 						</widget>
 
-						<widget class="object_portrait_picture" id="sncl" scale_picture="true" image_alignment="right" width="80">				
-						<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
-						<layout class="stick_to_sides_attachment" alignment="all" inset="20"/>
+           				<widget class="object_portrait_picture" id="snpc" scale_picture="true" image_alignment="right,centre_y" width="120">
+							<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+                            <layout class="stick_to_sides_attachment" alignment="all" inset="20"/>
 						</widget>
+
+
                     </container>
 
                     <!-- sender, headline, category and time -->
