@@ -1,0 +1,123 @@
+<!-- MODIFIED BY FMENHANCED -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="vertical"/>
+	<layout class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="4"/>
+
+	<container id="topc">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!-- CA and RCA for edit mode -->
+		<container id="cacn" height="24" hidden="true">
+			<layout class="arrange_horizontal_attachment" layout="30,25,22,50" gap="2" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<widget class="label">
+				<translation id="text" translation_id="458476" type="use" value="RCA:[COMMENT: Player attributes panel; Edit Mode, abbreviation for Recommended Current Ability; see also Current Ability ID 310135 for context]" />
+			</widget>
+			<widget class="label" id="prca">
+				<record id="object_property" get_property="PRCA" />
+			</widget>
+			<widget class="label">
+				<translation id="text" translation_id="456577" type="use" value="CA:[COMMENT: Player attributes panel; abbreviation for Current Ability]" />
+			</widget>
+			<widget class="editable_client_object_property_panel" id="plca" alignment="right,centre_y">
+				<record id="object_property" get_property="PCAB" />
+			</widget>
+		</container>
+<!--PA -->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="label" id="PPAB:" auto_size="vertical" font="title" colour="text">
+				<record id="object_property" get_property="PPAB" name="true" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,0,0,20" />
+			</widget>
+
+			<widget class="text" id="PPAB" auto_size="vertical">
+				<record id="object_property" get_property="PPAB" />
+			</widget>
+		</container>
+
+		<widget class="horizontal_subtle_divider"/>
+<!--CA For outfield replaced GK suitability-->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="label" id="PCAB" auto_size="vertical" font="title" colour="text">
+				<record id="object_property" get_property="PCAB" name="true" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0,0,0,20" />
+			</widget>
+
+			<widget class="text" id="PCAB" auto_size="vertical">
+					<record id="object_property" get_property="PCAB" />
+			</widget>
+		</container>	
+		
+        <widget class="horizontal_subtle_divider"/>
+
+		<!-- Personality -->
+		<container>
+			<layout class="vertical_arrange_autosize"/>
+
+			<widget class="label" id="PPs:" auto_size="vertical" font="title" colour="text">
+				<record id="object_property" get_property="PPst" name="true" />
+			</widget>
+
+			<widget class="personality_label" id="PPst" auto_size="vertical">
+				<record id="object_property" get_property="PPst" />
+			</widget>
+
+		</container>
+
+		<widget class="horizontal_subtle_divider"/>
+
+		<!-- Media Description -->
+		<container>
+			<layout class="vertical_arrange_autosize"/>
+
+			<widget class="label" id="Pde:" auto_size="vertical" font="title" colour="text">
+				<record id="object_property" get_property="Pdes" name="true" />
+			</widget>
+
+			<widget class="player_description_text" id="Pdes" auto_size="vertical">
+				<record id="object_property" get_property="Pdes" />
+			</widget>
+
+		</container>
+
+		<widget class="horizontal_subtle_divider" />
+
+		<!-- Reputation -->
+		<container>
+			<layout class="vertical_arrange_autosize"/>
+
+			<widget class="label" auto_size="vertical" font="title" colour="text">
+				<record id="object_property" get_property="Npjr" name="true" />
+			</widget>
+
+			<widget class="global_reputation_stars_label" auto_size="vertical" alignment="left,centre_y">
+				<record id="object_property" get_property="Prsa" />
+			</widget>
+
+		</container>
+
+		<widget class="horizontal_subtle_divider" />
+	</container>
+
+	<!-- Preferred moves -->
+	<container id="botc">
+		<layout class="vertical_arrange" vertical_alignment="top,extend"/>
+
+		<widget class="label" auto_size="vertical" font="title" colour="text">
+			<translation id="text" translation_id="402385" type="use" value="Player Traits[COMMENT: label for the previously named 'Preferred Moves' section (ID 229993), changed to Player Traits because it fits all potential options more suitably]" />
+		</widget>
+
+		<container class="scrolling_box">
+			<widget class="preferred_moves_panel" file="player/player information preferred moves" id="pfmp" auto_size="vertical">
+				<record id="object_property" get_property="objt" set_property="objt" />
+			</widget>
+		</container>
+
+	</container>
+
+</panel>

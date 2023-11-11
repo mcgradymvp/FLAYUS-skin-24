@@ -1,0 +1,70 @@
+<panel>
+	<layout class="arrange_vertical_attachment" layout="10,-1" offset="0" gap="2" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+	
+	
+	<container />
+	
+			<!--hidden-->
+					<container id="cnt0" save_session_state="true">
+						<translation id="title" translation_id="348857" type="use" value="Hidden[COMMENT: steam workshop publishing panel; user can set the level of publicity for their steam workshop content]" />
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+						<widget class="client_object_label_value_table" id="edtb" edit_mode="false">
+
+							<boolean id="should_force_refresh" value="true" />
+
+							<record id="table_properties" auto_size="none">
+								<flags id="mode" value="fill_rows, stripe_rows, printable" />
+								<boolean id="auto_size_rows" value="true" />
+								<boolean id="fixed_size_rows" value="false" />
+
+								<string id="layout" value="-4,-2" />
+								<integer id="row_spacing" value="0" />
+								<list id="column_widget_properties">
+									<record indx="0" alignment="left,centre_y" />
+									<record indx="1" alignment="right,centre_y" auto_size="vertical" spec="text" />
+								</list>
+
+								<list id="column_table_properties">
+									<record indx="0">
+										<integer id="left" value="8" />
+									</record>
+									<record indx="1">
+										<flags id="alignment" value="left,centre_y" />
+										<integer id="top" value="2" />
+										<integer id="bottom" value="2" />
+									</record>
+								</list>
+							</record>
+
+							<record id="object_property">
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+
+							<list id="viewed_property_ids">
+								<integer value="Pnar" />
+								<integer value="Pada" />
+								<integer value="Pamb" />
+								<integer value="Ploy" />
+								<integer value="Ppre" />
+								<integer value="Ppro" />
+								<integer value="Pspo" />
+								<integer value="Ptem" />
+								<integer value="Pcvy" />
+								<integer value="PCON" />
+								<integer value="Pdir" />
+								<integer value="Pimp" />
+								<integer value="Pipr" />
+								<integer value="Pver" />
+								<integer value="PCRP" />
+								<integer value="PHRP" />
+								<integer value="PWRP" />
+							</list>
+
+						</widget>
+
+					</container>
+
+</panel>

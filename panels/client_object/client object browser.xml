@@ -6,18 +6,37 @@
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 		</container>
 
-	<!-- background picture - covers entire screen -->
-	<widget class="picture" file="backgrounds/bg" id="bgnd" >
-		<boolean id="scale_picture" value="true" />
-		<boolean id="keep_aspect_ratio" value="false" />
-		<attachment class="test_multiple_globals_attachment" default_value="false">
-				<list id="get_properties">
-				<record get_property="MatS" test_mode="equal" value="true" skip_if_null="true" />
+<!-- background picture - covers entire screen -->
+    <widget class="background" file="backgrounds/default" id="bgnd">
+        <!-- Once everything is hooked up we'll use a get global attachment like below tied to the
+			     appropriate global setting to show/hide instead of the complex test multiple global
+				 setups for the various items we'll show/hide -->
+        <!--<attachment class="get_global_attachment" get_property="background_visible" set_property="Shwn" />-->
+        <record id="object_property">
+            <integer id="get_property" value="bgnd" />
+            <integer id="set_property" value="file" />
+        </record>
+        <attachment class="test_multiple_globals_attachment" default_value="false">
+            <list id="get_properties">
+                <record get_property="MatS" test_mode="equal" value="true" skip_if_null="true" />
+                <!-- PROP_FULL_SCREEN_3D_BEING_DRAWN -->
                 <record get_property="Ma3D" test_mode="equal" value="true" comparison_mode="or" skip_if_null="true" />
-				</list>
-				<integer id="set_property" value="hidn" />
-			</attachment>
-	</widget>
+            </list>
+            <integer id="set_property" value="hidn" />
+        </attachment>
+    </widget>
+
+	<widget class="picture" file="backgrounds/bg" scale_picture="true" transparency="0.7">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+        <attachment class="test_multiple_globals_attachment" default_value="false">
+            <list id="get_properties">
+                <record get_property="MatS" test_mode="equal" value="true" skip_if_null="true" />
+                <!-- PROP_FULL_SCREEN_3D_BEING_DRAWN -->
+                <record get_property="Ma3D" test_mode="equal" value="true" comparison_mode="or" skip_if_null="true" />
+            </list>
+            <integer id="set_property" value="hidn" />
+        </attachment>
+    </widget>
 	
 	<widget>
         <layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="mai1"/>

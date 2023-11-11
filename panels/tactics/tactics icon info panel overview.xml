@@ -103,4 +103,13 @@
 		</widget>
 	</container>
 
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<!--pos/role/duty indicator-->
+		<widget class="position_role_duty_suitability_pie" id="prdF" width="20" height="25">
+			<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="37"/>
+		</widget>
+	</container>
 </panel>

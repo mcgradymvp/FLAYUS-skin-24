@@ -41,6 +41,7 @@
 			<translation id="name" type="use" value="Emon Scout View" />
 		  <record id="view">
                     <record id="PsRK" auto_hide_priority="3" width="70" />
+<record id="port" auto_hide_priority="4" width="32" />
                     <record id="PSpi" auto_hide_priority="2" width="10"  />                    <!-- player status/info -->
                     <record id="PNaN" auto_hide_priority="3" width="140" />     <!-- player name/nation -->                   
 					<record id="PCaD" auto_hide_priority="4" minimum_width="100"/>             <!-- player club/division -->                    

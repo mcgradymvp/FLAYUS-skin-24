@@ -1,0 +1,54 @@
+<panel>
+    <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+    <!-- Player Contract -->
+    <container>
+        <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+        <record id="object_property" get_property="Pion" set_property="hidn"/>
+
+        <widget class="player_contract_panel" file="player/fme/tabs/contract/contract horizontal">
+            <record id="object_property">
+                <list id="get_properties">
+                    <record get_property="Popj" set_property="Shwn"/>
+                    <record get_property="objt" set_property="objt"/>
+                </list>
+            </record>
+        </widget>
+
+    </container>
+
+    <!-- Second Contract Panel (i.e. out on loan)-->
+    <container>
+        <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+        <record id="object_property" get_property="Pion" set_property="Shwn"/>
+
+        <widget class="player_contract_panel" pUOC="true" file="player/fme/tabs/contract/contract and loan">
+            <record id="object_property">
+                <list id="get_properties">
+                    <record get_property="Popj" set_property="Shwn"/>
+                    <record get_property="objt" set_property="objt"/>
+                </list>
+            </record>
+        </widget>
+
+    </container>
+
+    <!-- Player Unattached (i.e. has no club)-->
+    <container class="main_subtle_box">
+        <layout class="vertical_arrange" vertical_alignment="middle" vertical_gap="11"/>
+
+        <record id="object_property" get_property="Phnc" set_property="Shwn"/>
+
+        <!-- Club Crest -->
+        <widget class="picture" file="icons/custom/icon box/unemployed" height="75" image_alignment="middle" scale_picture="true"/>
+
+        <!-- Employment Details -->
+        <widget class="player_extra_details_text" multiline="false" auto_size="vertical" alignment="middle">
+            <record id="object_property" get_property="PExD" />
+        </widget>
+
+    </container>
+
+</panel>

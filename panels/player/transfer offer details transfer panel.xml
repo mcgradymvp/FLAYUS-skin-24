@@ -2,18 +2,26 @@
 	<attachment_group class="vertical_arrange_autosize" />
 
 	<boolean id="should_force_refresh" value="true"/>
-	
-	<container id="adop" draw_horizontal_dividers="true">
-		<attachment_group class="vertical_arrange_autosize">
-			<global id="vertical_gap" name="ui.inner_box_gap"/>
-		</attachment_group>
-		<widget class="transfer_offer_additional_fees_panel" id="fees" navigation_container="true" remove_if="is_fmt"/>
-		<widget class="transfer_offer_clauses_panel" id="clau" navigation_container="true" remove_if="is_fmt"/>
-		<widget class="transfer_offer_combined_additional_fees_and_clauses_panel" id="afac" navigation_container="true" create_if="is_fmt"/>
+	<symbol id="club_message_box_colour_reject" value="red2"/>
+	<symbol id="club_message_box_colour_normal" value="grey1"/>
+	<symbol id="club_message_text_colour_reject" value="white"/>
+	<symbol id="club_message_text_colour_normal" value="text"/>
 
-		<widget class="transfer_offer_loan_clauses_panel" id="loin" navigation_container="true" remove_if="is_fmt"/>
-		<widget class="transfer_offer_loan_options_panel" id="lopp" navigation_container="true" remove_if="is_fmt"/>
-		<widget class="transfer_offer_combined_loan_clauses_and_options_panel" id="lcao" navigation_container="true" create_if="is_fmt"/>
+	<!-- Duration -->
+	<container id="lodc">
+		<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+		<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<container id="lodu" class="transfer_offer_loan_duration_panel"/>
+	</container>
+
+	<container id="adop" >
+		<attachment_group class="vertical_arrange_autosize" />
+			<widget class="transfer_offer_loan_clauses_panel" id="loin"/>
+			<widget class="transfer_offer_additional_fees_panel" id="fees"/>
+			<widget class="transfer_offer_clauses_panel" id="clau"/>
+			<widget class="transfer_offer_loan_options_panel" id="lopp"/>
 	</container>
 
 </panel>

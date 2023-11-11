@@ -1,0 +1,13 @@
+<properties>
+
+	<record id="image_borders" left="18" right="8" top="0" bottom="0"/>
+	<record id="image_slices" left="15" right="10"/>
+
+	<record id="font_spec"> 
+		<colour id="colour" name="text"/>
+	</record>
+	
+	<record id="primary_icon_properties" red_replacement="text" />
+	<colour id="green_replacement" name="text"/>
+	
+</properties>

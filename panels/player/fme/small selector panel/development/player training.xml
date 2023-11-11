@@ -1,0 +1,85 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="icon_box" id="scrB" icon="icons/custom/icon box/training">
+		<layout class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="8"/>
+
+		<container>
+			<layout class="vertical_arrange_autosize_all"/>
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" id="TrTi" section="Ptra" auto_size="all">
+				<string id="remove_if" value="is_fmt"/>
+				<translation id="text" translation_id="248422" type="use" value="Training[COMMENT; training section of player profile]" />
+			</widget>
+
+			<widget class="text" id="NotT" auto_size="all" font="title" colour="accent">
+				<translation id="text" translation_id="248422" type="use" value="Training[COMMENT; training section of player profile]" />
+			</widget>
+
+		</container>
+
+		<container>
+			<layout class="vertical_arrange" vertical_alignment="top"/>
+
+			<!--pos/role/duty-->
+			<container id="PoRD">
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0" vertical_offset="0" />
+
+				<widget class="training_position_role_duty_label" height="20" colour="text" navigation_focus_target="false">
+					<record id="object_property" get_property="PTnp" />
+				</widget>
+			</container>
+
+			<!--other infos-->
+			<container height="38" id="Oinf">
+				<attachment_group class="horizontal_arrange" horizontal_layout="-2,-2,-1" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+
+				<container class="client_object_property_labelled_panel" id="1col" property="PTaf">
+					<record id="object_property" get_property="objt" set_property="objt" />
+					<record id="label_widget_properties">
+						<boolean id="abbt" value="true" />
+						<integer id="navigation_focus_target" value="false" />
+					</record>
+					<record id="value_widget_properties" wants_mouse_events="false" appearance="none" secondary_icon_enabled="false" colour="text" size="small">
+						<integer id="height" value="30" />
+						<integer id="navigation_focus_target" value="false" />
+					</record>
+				</container>
+
+				<container class="client_object_property_labelled_panel" id="2col" property="PTiR">
+					<record id="object_property" get_property="objt" set_property="objt" />
+					<record id="label_widget_properties">
+						<boolean id="abbt" value="true" />
+						<integer id="navigation_focus_target" value="false" />
+					</record>
+					<record id="value_widget_properties" wants_mouse_events="false" appearance="none" secondary_icon_enabled="false" icon_alignment="left,centre_y" alignment="left,centre_y" size="small">
+						<integer id="height" value="30" />
+						<integer id="navigation_focus_target" value="false" />
+					</record>
+				</container>
+
+				<container class="client_object_property_labelled_panel" id="3col" property="PtWC">
+					<record id="object_property" get_property="objt" set_property="objt" />
+					<record id="label_widget_properties">
+						<boolean id="abbt" value="true" />
+						<integer id="navigation_focus_target" value="false" />
+					</record>
+					<record id="value_widget_properties">
+						<integer id="height" value="30" />
+						<integer id="navigation_focus_target" value="false" />
+					</record>
+				</container>
+			</container>
+
+			<widget class="text" id="NotH" height="30">
+				<translation id="text" translation_id="476865" type="use" value="Cannot alter training as he is currently away from the club.[COMMENT: AREA: Player Overview; SUB-AREA: Training sub panel; BN: 8833; TONE: Formal; CHARLIMIT: None;]" />
+			</widget>
+
+		</container>
+
+	</container>
+
+</panel>

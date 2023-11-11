@@ -1,0 +1,39 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="main_subtle_box">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<container class="scrolling_box">
+
+			<container>
+				<layout class="vertical_arrange_autosize"/>
+
+				<!-- Contract Panel -->
+				<container file="player/fme/tabs/contract/contract subpanel"/>
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize"/>
+
+					<container draw_horizontal_dividers="true">
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="16"/>
+
+						<!-- Bonuses -->
+						<container file="player/fme/tabs/contract/contract subpanel bonuses options"/>
+
+						<!-- Clauses -->
+						<container file="player/fme/tabs/contract/contract subpanel clauses"/>
+
+					</container>
+
+					<widget class="player_salary_cap_impact_adjustment_panel" id="salc" auto_size="vertical" hidden="true" />
+
+				</container>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

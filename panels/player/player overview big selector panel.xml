@@ -1,0 +1,76 @@
+<!-- MODIFIED BY FMENHANCED -->
+<panel>
+	<container id="SUBP" class="inner_box_no_margin">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		<layout class="stick_to_sides_attachment" inset="8" />
+	</container>
+
+	<widget class="popup_button" id="popv" height="30" width="30" click_event="msis" appearance="buttons/custom/over state only/button" fixed="true" navigation_focus_target="true" secondary_icon_alignment="centre">
+		<layout class="stick_to_sides_attachment" alignment="right,top"/>
+	</widget>
+
+	<record id="default_properties" late_loading="true"/>
+
+	<!-- OVERVIEW -->
+
+		<!-- Attribute Polygon -->
+		<widget class="client_object_viewer_xml_panel" id="paAn" file="player/fme/big selector panel/overview/player attribute analyser">
+			<translation id="title" translation_id="334971" type="use" value="Attribute Analysis[COMMENT: player overview; title for a panel showing an attribute analyisis diagram]" />
+		</widget>
+        
+		<!-- hidden test -->
+	     <widget class="client_object_viewer_xml_panel" id="hidden" file="player/hidden" late_loading="true">
+		    <translation id="title" translation_id="348857" type="use" value="Hidden[COMMENT: steam workshop publishing panel; user can set the level of publicity for their steam workshop content]" />
+	    </widget>
+
+		<!-- Transfer Information -->
+	    <widget class="player_scout_reports_panel" id="ptrl" file="player/fme/top selector panel/player transfer information" valid_for_unemployed_player="false" valid_for_international_managers_other_team="false" valid_for_unemployed_managers="false" late_loading="true">
+		    <translation id="title" translation_id="251898" type="use" value="Transfer Information[COMMENT: scout report panel box heading]"/>
+	    </widget>
+
+	<!-- Player Report -->
+	<container class="player_scout_reports_panel" id="psRB" file="player/fme/top selector panel/player report" late_loading="true">
+		<translation id="title"  type="use" value="教练报告" />
+	</container>
+	
+	<!-- HISTORY -->
+
+		<!-- Biography -->
+		<widget class="person_history_biography_panel" id="phb1" file="player/fme/big selector panel/history/player biography">
+			<translation id="subtitle" translation_id="229719" type="use" value="History" />
+			<translation id="title" translation_id="295868" type="use" value="Biography[COMMENT: player history panel; title of biography titled box]" />
+		</widget>
+
+		<!-- Career Stats -->
+		<widget class="client_object_viewer_xml_panel" id="Pcrs" file="player/fme/big selector panel/history/player history">
+			<translation id="subtitle" translation_id="229719" type="use" value="History" />
+			<translation id="title" translation_id="247605" type="use" value="Career Stats" />
+		</widget>
+
+		<!-- Career Milestones -->
+		<widget class="player_history_achievements_panel" id="pac1" file="player/fme/big selector panel/history/player achievements">
+			<translation id="subtitle" translation_id="229719" type="use" value="History" />
+			<translation id="title" translation_id="435775" type="use" value="Career Milestones[COMMENT: was previously ID 329749 Career Achievements, rewording as it's a better term for the content on the screen]" />
+		</widget>
+
+	<!-- REPORTS -->
+
+		<!-- Comparison -->
+		<widget class="player_scout_reports_panel" id="pscR" file="player/fme/big selector panel/reports/player comparison" >
+			<translation id="subtitle" translation_id="257326" type="use" value="Reports" />
+			<translation id="title" translation_id="248428" type="use" value="Comparison" />
+		</widget>
+
+		<!-- Positives -->
+		<widget class="player_scout_reports_panel" id="ppos" file="player/fme/big selector panel/reports/player positives">
+			<translation id="subtitle" translation_id="257326" type="use" value="Reports" />
+			<translation id="title" translation_id="447605" type="use" value="Positives" />
+		</widget>
+
+		<!-- Negatives -->
+		<widget class="player_scout_reports_panel" id="pneg" file="player/fme/big selector panel/reports/player negatives">
+			<translation id="subtitle" translation_id="257326" type="use" value="Reports" />
+			<translation id="title" translation_id="447606" type="use" value="Negatives" />
+		</widget>
+
+</panel>

@@ -1,9 +1,9 @@
 ﻿<panel>
-    <attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="10"/>
+    <attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offest="10"/>
 
     <!-- answer list -->
     <container class="scrolling_box">
-        <container class="plain_box" appearance="boxes/custom/quick chat/user_quick_chat_speech" red_replacement="bg lighter">
+        <container class="plain_box" appearance="boxes/custom/quick chat/user_quick_chat_speech">
             <attachment_group class="vertical_arrange_autosize" vertical_alignment="top, extend"/>
 
             <container id="ancr">
@@ -12,10 +12,11 @@
                 <!--response group containers widgets added here-->
             </container>
 
-            <container class="spacer" height="3"/>
+            <container classs="spacer" height="3">
+            </container>
 
             <!-- additional comments -->
-            <container class="collapsable_box" id="adcC" collapsed="true" appearance="boxes/contrast/standard/paper" red_replacement="bg lighter" colour="text">
+            <container class="collapsable_box" id="adcC" collapsed="true" appearance="boxes/contrast/standard/paper" red_replacement="bg darker" colour="text">
                 <attachment_group class="vertical_arrange_autosize" vertical_offset="8"/>
                 <translation id="title" translation_id="515049" type="use" value="Additional Comments[COMMENT: AREA: Press Conference Panel; SUB-AREA: Footer section; FR-BN: 32500; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Label for button to display the text box for adding custom comments to an answer]"/>
 

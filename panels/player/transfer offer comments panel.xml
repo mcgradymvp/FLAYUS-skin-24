@@ -3,10 +3,10 @@
 
 	<boolean id="should_force_refresh" value="true"/>
 
-	<container class="inner_box">
+	<container class="main_box">
 		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
 
-		<widget class="table" id="cmtb" layout="-1" mode="" auto_size_rows="true" fixed_size_rows="false"  row_spacing="10" navigation_focus_target="true">
+		<widget class="table" id="cmtb" layout="-1" mode="" auto_size_rows="true" fixed_size_rows="false"  row_spacing="10">
 			<record id="default_properties">
 				<flags id="spec" value="text"/>
 				<flags id="colour" value="faded text"/>

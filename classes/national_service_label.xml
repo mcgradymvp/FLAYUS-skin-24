@@ -4,19 +4,19 @@
 <class class="national_service_label" parent="label" alignment="centre">
   <list id="value_list">
     <record value="-1">
-      <translation id="text" type="use" value="非征兵制"/>
-		  <translation id="hint" type="use" value="还没有入伍。"/>
+      <translation id="text" type="use" value="未服兵役"/>
+		  <translation id="hint" type="use" value="尚未服役的状态。"/>
     </record> 
     <record value="1">
       <translation id="text" type="use" value="服完兵役" />
-		  <translation id="hint" type="use" value="服完兵役。"/>
+		  <translation id="hint" type="use" value="服完兵役状态。"/>
     </record> 
     <record value="2">
       <translation id="text" type="use" value="免除兵役" />
-		  <translation id="hint" type="use" value="免除兵役。"/>
+		  <translation id="hint" type="use" value="免服兵役状态。"/>
     </record> 
     <record value="3">
-      <translation id="text" type="use" value="服务" />
+      <translation id="text" type="use" value="服役中" />
 		  <translation id="hint" type="use" value="目前正在服役。"/>
     </record> 
 

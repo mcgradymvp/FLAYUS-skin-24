@@ -1,0 +1,46 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="progress_graph_panel" file="none">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<record id="object_property" get_property="PpAH" set_property="value"/>
+
+		<container class="icon_box" icon="icons/custom/icon box/transfer">
+			<layout class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="8"/>
+
+			<container>
+				<layout class="vertical_arrange_autosize_all"/>
+
+				<string id="skin_style" value="title link" />
+
+				<!-- Linked header -->
+				<widget class="link_button" id="scBt" auto_size="all">
+					<translation id="text" translation_id="289978" type="use" value="Progress[COMMENT:person screen; achievements section; heading for achievements panel - cup progress]" />
+				</widget>
+
+			</container>
+
+			<widget class="graph" id="grap">
+
+				<record id="default_series_properties" colour="accent" type="line" line_width="2" />
+				<record id="instant_hint" file="generic/graph instant hint star rating" />
+				<record id="x_axis" hide_title="true" consistent_label_width="true" gap="3">
+					<record id="label_font" font="title"/>
+				</record>
+				<record id="y_axis" interval="2" show_labels="false"/>
+				<list id="grid_line_styles">
+					<record colour="transparent"/>
+					<record colour="transparent"/>
+				</list>
+			</widget>
+
+			<widget class="text" id="nprg" colour="faded white" alignment="centre" hidden="true">
+				<translation id="text" translation_id="242522" type="use" value="N/A" />
+			</widget>
+
+		</container>
+
+	</container>
+
+</panel>

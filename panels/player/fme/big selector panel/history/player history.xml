@@ -1,0 +1,130 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container>
+		<layout class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="4"/>
+
+		<container>
+			<layout class="vertical_arrange_autosize_all"/>
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" id="PHst" section="PHst" auto_size="horizontal">
+				<translation id="text" translation_id="247605" type="use" value="Career Stats" />
+			</widget>
+
+		</container>
+
+		<container class="vertical_arrange_container" layout="18,-1,19" gap="0">
+
+			<container>
+				<layout class="horizontal_arrange" horizontal_layout="50,-1,55,45" horizontal_gap="0"/>
+
+				<record id="default_properties" font="label" size="small"/>
+
+				<!-- Year -->
+				<widget class="text" alignment="left,centre_y">
+					<translation id="text" translation_id="229773" type="use" value="Year" />
+				</widget>
+
+				<!-- Team -->
+				<widget class="text" alignment="left,centre_y">
+					<translation id="text" translation_id="229408" type="use" value="Team" />
+				</widget>
+
+				<!-- Apps -->
+				<widget class="text" alignment="centre_x,centre_y">
+					<translation id="text" translation_id="229757" type="use" value="Apps" />
+				</widget>
+
+				<!-- Conceded -->
+				<widget class="text" alignment="centre_x,centre_y">
+					<record id="object_property" get_property="Pigo" set_property="Shwn"/>
+					<translation id="text" translation_id="534874" type="use" value="Conc" />
+				</widget>
+
+				<!-- Goals -->
+				<widget class="text" alignment="centre_x,centre_y">
+					<record id="object_property" get_property="Pigo" set_property="hidn"/>
+					<translation id="text" translation_id="534873" type="use" value="Gls" />
+				</widget>
+
+			</container>
+
+			<container class="scrolling_box" hide_scrollbars="true">
+
+				<container class="playing_history_summary_panel" file="none">
+					<layout class="vertical_arrange_autosize" vertical_offset="-20"/>
+
+					<record id="object_property" get_property="objt" set_property="objt"/>
+
+					<boolean id="smal" value="true"/>
+
+					<widget class="table" id="phst" mode="fill_rows" layout="50,10,10,-1,55,45" fixed_size_rows="true" auto_size_rows="false" row_height="24" row_spacing="0" column_spacing="0" auto_size="vertical" navigation_container_allow_empty="true">
+
+						<boolean id="should_force_refresh" value="true" />
+
+						<record id="default_properties" alignment="centre_x,centre_y"/>
+
+						<list id="column_table_properties">
+							<record index="0" sort_disabled="true">
+								<record id="widget_info" alignment="left,centre_y" colour="faded text" size="small"/>
+							</record>
+							<record index="1" hidden="true"/>
+							<record index="2" hidden="true"/>
+						</list>
+
+						<list id="column_widget_properties">
+							<record index="0" alignment="left,centre_y"/>
+							<record index="1" alignment="left,centre_y"/>
+							<record index="2" alignment="left,centre_y"/>
+							<record index="3" alignment="left,centre_y"/>
+							<record index="3" alignment="left,centre_y"/>
+							<record index="3" alignment="left,centre_y"/>
+							<record index="3" alignment="left,centre_y"/>
+						</list>
+
+					</widget>
+
+				</container>
+
+			</container>
+
+			<container>
+				<layout class="horizontal_arrange" horizontal_layout="-1,55,45" horizontal_gap="0"/>
+
+				<record id="default_properties" font="text" size="normal"/>
+
+				<!-- Overall -->
+				<widget class="text" alignment="left,centre_y">
+					<translation id="text" translation_id="232843" type="use" value="Overall" />
+				</widget>
+
+				<!-- Apps -->
+				<widget class="appearances_label" alignment="centre_x,centre_y">
+					<record id="object_property" get_property="PAla"/>
+				</widget>
+
+				<!-- Conceded -->
+				<widget class="dashed_number_label" alignment="centre_x,centre_y">
+					<record id="object_property">
+						<list id="get_properties">
+							<record get_property="Pigo" set_property="Shwn"/>
+							<record get_property="Poco"/>
+						</list>
+					</record>
+				</widget>
+
+				<!-- Goals -->
+				<widget class="dashed_number_label" alignment="centre_x,centre_y">
+					<record id="object_property" get_property="PAlg"/>
+				</widget>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

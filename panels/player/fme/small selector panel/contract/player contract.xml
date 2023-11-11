@@ -1,0 +1,65 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<integer id="format" value="10"/>
+
+	<container class="icon_box" icon="icons/custom/icon box/contract">
+		<layout class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="5"/>
+
+		<record id="widget_properties" type="6"/>
+
+		<container>
+			<layout class="vertical_arrange_autosize_all"/>
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" id="Pcnr" section="Pcnr" auto_size="all">
+				<translation id="text" translation_id="257347" type="use" value="Contract[COMMENT - transfer status filter text; offers at contract stage]" />
+			</widget>
+
+		</container>
+
+		<container class="scrolling_box">
+			<layout class="stick_to_sides_attachment" alignment="horizontal"/>
+
+			<container>
+				<layout class="vertical_arrange_autosize" vertical_gap="0"/>
+
+				<!-- Wage -->
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="left,top" apply_to_children="true"/>
+
+					<widget class="wage_label" id="wagw" auto_size="all" style="semi_bold" size="large"/>
+
+				</container>
+
+				<widget class="formatted_label" id="wagi" auto_size="vertical" multiline="true">
+					<string id="format" value="([%string#1])" />
+				</widget>
+
+				<!-- Bonuses / clasues -->
+				<widget id="cbcl" class="label" auto_size="vertical" />
+
+				<!-- Contract expiry -->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize"/>
+
+					<!-- Time to expiry -->
+					<widget id="ttex" class="label" auto_size="all" />
+
+					<!-- Expiry date -->
+					<widget class="editable_client_object_property_panel" id="expw" auto_size="vertical">
+						<record id="widget_properties" class="game_formatted_label" format="([%date#1-short])" auto_size="all" />
+					</widget>
+
+				</container>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

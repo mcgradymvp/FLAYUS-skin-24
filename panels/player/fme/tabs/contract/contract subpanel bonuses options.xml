@@ -1,0 +1,35 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_inset="0" />
+
+		<widget class="label" id="bonc" auto_size="vertical" font="title" colour="title">
+			<translation id="text" translation_id="242354" type="use" value="Bonuses" />
+		</widget>
+
+		<!-- Build in code -->
+		<widget class="table" id="bons" layout="-1, -1" mode="fill_rows,stripe_rows" auto_size="vertical" fixed_size_rows="true" row_height="20" row_spacing="0" column_spacing="0">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			<boolean id="fixed_size_rows" value="false" />
+			<boolean id="auto_size_rows" value="true" />
+
+			<!-- default properties for everything in a table -->
+			<record id="default_properties">
+			<flags id="alignment" value="left,centre_y" />
+			</record>
+
+			<!-- properies for specific columns in the table -->
+			<list id="column_widget_properties">
+			<record indx="0" spec="text" />
+			<record indx="1" alignment="right,centre_y" colour="faded text" />
+			</list>
+
+			<!-- table isn't sortable -->
+			<list id="column_table_properties">
+			<record index="0" sort_disabled="true" top="4" bottom="4" left="8"/>
+			<record index="1" sort_disabled="true" top="4" bottom="4" right="8"/>
+			</list>
+		</widget>
+	</container>
+</panel>

@@ -120,9 +120,7 @@
 
 		<!-- main area -->
 		<container draw_vertical_dividers="true">
-			<attachment_group class="horizontal_arrange" horizontal_layout="-2,-1" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" >
-				<global id="horizontal_gap" name="ui.main_box_gap"/>
-			</attachment_group>
+			<attachment_group class="horizontal_arrange" horizontal_layout="-2,-1" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" />
 
 			<container class="main_box">
 				<attachment_group class="vertical_arrange" vertical_layout="25, -1, 120"  horizontal_alignment="horizontal" horizontal_inset="0" />
@@ -137,7 +135,7 @@
 					<container id="RecT" hidden="true">
 						<attachment_group class="horizontal_arrange" horizontal_alignment="right" horizontal_gap="4" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" />
 
-						<widget class="button" auto_size="all" colour="white" appearance="labels/standard/label" red_replacement="injury_body_colour_recurring">
+						<widget class="button" auto_size="all" colour="white" appearance="labels/standard/label" red_replacement="purple 400">
 							<translation id="text" translation_id="441139" type="use" value="Recurring Injury[COMMENT: header for a column of recurring injuries]"/>
 						</widget>
 					</container>
@@ -223,7 +221,7 @@
 					<translation id="text" translation_id="450787" type="use" value="Injury History[COMMENT: FR20159; team injuries panel; panel title for player's historical injury list]"/>
 				</widget>
 
-				<widget class="table" id="InHi" layout="120, -2, -1" mode="fill_rows, select_rows, stripe_rows" sort_disabled="true" select_event="seli" fixed_size_rows="true" auto_size_rows="false" row_height="28" selected_appearance="none">
+				<widget class="table" id="InHi" layout="130, -2, -1" mode="fill_rows, select_rows, stripe_rows" sort_disabled="true" select_event="seli" fixed_size_rows="true" auto_size_rows="false" row_height="28" selected_appearance="none">
 					<list id="headings">
 						<record index="0">
 							<translation id="text" translation_id="230120" type="use" value="Date"/>

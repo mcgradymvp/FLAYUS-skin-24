@@ -1,0 +1,242 @@
+<!-- CREATED BY FMENHANCED -->
+<panel>
+    <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+    <container class="plain_box" appearance="fme/boxes/player profile card/paper">
+        <layout class="vertical_arrange" vertical_alignment="top,extend"/>
+
+        <!-- Player Portrait -->
+        <container height="228">
+            <layout class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="0"/>
+
+            <!-- Player Graphics -->
+            <container >
+                <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+                <!-- Player Portrait -->
+                <container>
+                    <layout class="stick_to_sides_attachment" apply_to_children="true" inset="4,100,0,0"/>
+
+                    <widget class="object_portrait_picture" image_alignment="middle" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+                        <record id="object_property" get_property="objt"/>
+                    </widget>
+
+                </container>
+
+                <container class="horizontal_arrange_container" alignment="left,extend">
+
+                    <!-- Nationality & Club -->
+                    <container width="116" class="horizontal_arrange_container" alignment="fill" offset="8">
+
+                        <container class="plain_box" appearance="tables/standard/row/alternate/row">
+                            <layout class="vertical_arrange" vertical_layout="-3,-4" vertical_gap="0" vertical_offset="10" horizontal_inset="12"/>
+
+                            <!-- Nationality -->
+                            <widget class="object_portrait_picture" height="47" width="77" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="true">
+                                <record id="object_property" get_property="PNat"/>
+                            </widget>
+
+                            <!-- Club -->
+                            <container>
+                                <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+                                <record id="default_properties" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+                                <!-- Employed -->
+                                <widget class="object_portrait_picture" wants_mouse_events="true">
+                                    <record id="object_property" get_property="Pclb" set_property="objt" dont_set_hint="true"/>
+                                </widget>
+
+                                <!-- Unemployed -->
+                                <widget class="value_based_picture" file="none">
+                                    <list id="value_list">
+                                        <record value="0" file="fme/icons/job/unemployed"/>
+                                    </list>
+                                    <record id="object_property" get_property="Pcjo" set_property="valu" dont_set_hint="true"/>
+                                </widget>
+
+                            </container>
+
+                        </container>
+
+                    </container>
+
+                    <!-- Player Status & Scout Grade -->
+                    <container class="horizontal_arrange_container" alignment="right">
+
+                        <container width="44" class="vertical_arrange_container" alignment="bottom,extend">
+
+                            <widget class="player_status_all_button" id="psAB" maximised="true" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6">
+                                <layout class="stick_to_sides_attachment" alignment="left,top" inset="6,8,0,0"/>
+
+                                <record id="object_property" get_property="Pnfa"/>
+
+                            </widget>
+
+                            <container class="player_scout_reports_panel" file="none" hidden="true">
+                                <layout class="vertical_arrange_autosize" vertical_offset="8"/>
+
+                                <boolean id="should_force_refresh" value="true" />
+                                <record id="object_property" get_property="objt" set_property="objt"/>
+
+                                <!-- No scout report -->
+                                <container id="nsrc"/>
+
+                                <container id="scou" height="32">
+                                    <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+                                    <container class="player_transfer_information_panel" file="none">
+                                        <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+                                        <record id="object_property" get_property="objt" set_property="objt"/>
+
+                                        <container id="hmCI"/>
+
+                                        <widget id="dclI" class="player_scout_recommendation_widget" alignment="left,centre_y" click_event="ltms" show_knowledge_bar="false" rMdo="2" show_hover_popup="true" showing_in_list="true" height="32">
+                                            <record id="object_property" get_property="PSrK" set_property="objt"/>
+                                        </widget>
+
+                                    </container>
+
+                                </container>
+
+                            </container>
+
+                        </container>
+
+                    </container>
+
+                </container>
+
+            </container>
+
+            <!-- Player Name -->
+            <container height="40" class="plain_box" appearance="boxes/name/paper" red_replacement="primary">
+                <layout class="stick_to_sides_attachment" apply_to_children="true" inset="0,8,0,8"/>
+
+                <widget class="text" font="bold" size="13" alignment="centre_x,centre_y,can_scale" colour="secondary" wants_mouse_events="false">
+                    <record id="object_property" get_property="titl" set_property="text"/>
+                </widget>
+                
+            </container>
+
+        </container>
+
+        <!-- Player Information Table -->
+        <widget class="table" mode="fill_rows" layout="-12,-20,-12,-20" auto_size_rows="false" fixed_size_rows="true" row_height="34" column_spacing="3.5">
+            <record id="object_property" get_property="objt" set_property="objt"/>
+
+            <record id="default_properties" font="text" size="normal"/>
+
+            <list id="row_properties">
+                <record index="0" row_height="49"/>
+                <record index="1">
+                    <flags id="appearance" value="tables/standard/row/alternate/row"/>
+                </record>
+                <record index="3">
+                    <flags id="appearance" value="tables/standard/row/alternate/row" />
+                </record>
+            </list>
+
+            <list id="column_table_properties">
+                <record index="0" left="12"/>
+                <record index="1" alignment="right,centre_y"/>
+                <record index="3" right="12"/>
+            </list>
+
+            <list id="column_widget_properties">
+                <record index="0" alignment="left,centre_y,can_scale" colour="faded text"/>
+                <record index="1" alignment="right,centre_y"/>
+                <record index="2" alignment="left,centre_y,can_scale" colour="faded text"/>
+                <record index="3" alignment="right,centre_y"/>
+            </list>
+
+            <!-- Nationality & Caps -->
+            <container class="vertical_arrange_container" layout="-25,-20" gap="-5" column_span="4" row="0" col="0">
+
+                <!-- Nationality -->
+                <container class="horizontal_arrange_container" alignment="fill" gap="0">
+
+                    <widget class="label" colour="faded text">
+                        <translation id="text" translation_id="227841" type="use" value="Nationality" />
+                    </widget>
+
+                    <widget class="nation_button" format="[%nation#1-nationality]" icon_alignment="right" alignment="right,centre_y">
+                        <record id="object_property" get_property="Pnat"/>
+                    </widget>
+
+                </container>
+
+                <!-- Caps -->
+                <widget class="international_appearances_label" alignment="right" size="small">
+                    <record id="object_property" dont_set_hint="true" get_property="Pist" />
+                </widget>
+
+            </container>
+
+            <!-- Age -->
+            <widget class="label" column_span="1" row="1" col="0">
+                <translation id="text" translation_id="458477" type="use" value="D.O.B" />
+            </widget>
+
+            <widget class="dob_label" column_span="3" row="1" col="1" display_format="1">
+                <record id="object_property" get_property="Pdob"/>
+            </widget>
+
+            <!-- Value -->
+            <widget class="label" row="2" col="0" column_span="2">
+                <translation id="text" translation_id="538841" type="use" value="Transfer Value[COMMENT: AREA: Transfers; SUB-AREA: Transfer Value; FR-BN: 34410; TONE: Formal; CHARLIMIT: Shortish, column header; REF-ID: 227806; NOTE: displays the player's estimated transfer value in a range]" />
+            </widget>
+
+            <widget class="transfer_value_label" row="2" col="1" column_span="3" auto_size="all">
+                <record id="object_property" get_property="Pdva" />
+            </widget>
+
+            <!-- Wages -->
+            <widget class="label" row="3" col="0">
+                <translation id="text" translation_id="227799" type="use" value="Wage" />
+            </widget>
+
+            <widget class="wage_label" row="3" col="1" format="2">
+                <record id="object_property" get_property="Pcww" />
+            </widget>
+
+            <!-- Contract Expires -->
+            <widget class="label" row="3" col="2">
+                <translation id="text" translation_id="227784" type="use" value="Expires" />
+            </widget>
+
+            <container class="player_contract_panel" file="none" row="3" col="3">
+                <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+                <record id="object_property" get_property="objt" set_property="objt" />
+
+                <widget class="editable_client_object_property_panel" id="expw" appearance="" size="normal">
+                    <record id="widget_properties" alignment="right,centre_y" />
+                </widget>
+
+            </container>
+
+            <!-- Ability -->
+            <widget class="label" row="4" col="0">
+                <translation id="text" translation_id="252139" type="use" value="Current Ability" />
+            </widget>
+
+            <widget class="scout_stars_label" row="4" col="1" hint_if_no_value="-">
+                <record id="object_property" get_property="Pcab" />
+            </widget>
+
+            <!-- Potential -->
+            <widget class="label" row="4" col="2">
+                <translation id="text" translation_id="252141" type="use" value="Potential Ability" />
+            </widget>
+
+            <widget class="scout_stars_label" row="4" col="3" hint_if_no_value="-">
+                <record id="object_property" get_property="Ppab" />
+            </widget>
+
+        </widget>
+
+    </container>
+
+</panel>

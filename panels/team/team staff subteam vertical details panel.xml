@@ -19,7 +19,8 @@
       <record id="ctrc">        
         <record id="view">          
           <record id="PcjN" auto_hide_priority="1" width="120"/>
-          <!-- short job text -->         
+          <!-- short job text -->
+<record id="port" auto_hide_priority="4" width="32" />           
           <record id="Psnm" auto_hide_priority="2" width="120"/>
           <!-- person name -->
           <!-- nationality -->
