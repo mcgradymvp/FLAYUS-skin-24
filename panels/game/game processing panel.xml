@@ -58,14 +58,15 @@
 					<translation id="text" translation_id="243215" type="use" value="Processing" />
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20" />
 				</widget>
-		<container width="175">
-        <!-- Note: Don't make this fit children as the button text changes and it causes unwanted movement of other items on the panel -->
-        <layout class="stick_to_sides_attachment" alignment="right" apply_to_children="true" inset="0" />
-		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="20,0,0,0" />
-			<widget class="primary_icon_button" id="canc" auto_size="all" controller_button="b_button">
-				<translation id="text" translation_id="229828" type="use" value="Cancel" />
-			</widget>
-		</container>
+			   
+			    <container width="175">
+                <!-- Note: Don't make this fit children as the button text changes and it causes unwanted movement of other items on the panel -->
+                    <layout class="stick_to_sides_attachment" alignment="right" apply_to_children="true" inset="0" />
+		            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="20,0,0,0" />
+			    <widget class="primary_icon_button" id="canc" auto_size="all" controller_button="b_button">
+				    <translation id="text" translation_id="229828" type="use" value="Cancel" />
+			    </widget>
+		        </container>
 			</container>
 		</container>
 
@@ -115,7 +116,7 @@
 				<container width="200" height="42">
 
 					<!-- Month and year -->
-					<widget class="date_cell" id="toda" format="[%date#1-month_year]" size="small" colour="text" font="title" alignment="left,centre_y">
+					<widget class="date_cell" id="toda" format="[%date#1-month_year]" size="normal" colour="text" font="title" alignment="left,centre_y">
 						<layout class="stick_to_sides_attachment" alignment="all" inset="0,40,0,56" />
 					</widget>
 
@@ -179,7 +180,6 @@
 				<widget class="text" id="hnt1" size="10" multiline="true" alignment="left,centre_y" colour="white"/>
 
 			</container>
-
 		</container>
 	</container>
 

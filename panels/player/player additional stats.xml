@@ -142,7 +142,7 @@
 		</record>
 	</list>
 
-	<container class="main_box">
+	<container class="inner_box_no_margin">
 		<translation id="title" translation_id="248440" type="use" value="Player Stats" />
 		<layout class="arrange_vertical_attachment" layout="-28,-68" offset="0" />
 		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />

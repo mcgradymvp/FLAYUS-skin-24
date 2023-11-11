@@ -1170,12 +1170,6 @@
 			<record id="widget_info">
 				<symbol id="class" value="squad_number_label" />
 			</record>
-        <record id="widget_edit_info">
-                <symbol id="class" value="number_edit_box" />
-                <flags id="edit_event" value="CDBd" />
-                <integer id="min_value" value="0" />
-                <integer id="max_value" value="99" />
-            </record>
 			<record id="column_widget_properties">
 				<flags id="alignment" value="left,centre_y" />
 			</record>
@@ -5618,88 +5612,7 @@
 			</record>
 
 		</record>
-    
-	<!--pie version of condition-->
-    <record>
-      <integer id="id" value="Pcon" />
-      <integer id="width" value="40" />
-      <flags id="fmc_width" value="65" />
-      <translation id="name" translation_id="394524" type="use" value="Overall Physical Condition[COMMENT: label for a player's overall physical condition, when taking every element of his game into account]" />
-      <flags id="customisation_context" value="play" />
-      <translation id="category" translation_id="247571" type="use" value="Fitness" />
-      <boolean id="sort_ascending" value="false" />
-      <integer id="auto_hide_priority" value="1200" />
-      <record id="widget_info">
-        <symbol id="class" value="pie_condition_label" />
-        <flags id="mode" value="0" />
-      </record>
 
-      <record id="widget_edit_info">
-        <symbol id="class" value="max_edit_box" />
-        <flags id="edit_event" value="CDBd" />
-        <flags id="mode" value="0" />
-        <integer id="min_value" value="1" />
-        <integer id="max_value" value="10000" />
-      </record>
-
-      <!-- Need the raw fitness to display this as we combine them slightly -->
-      <list id="dependent_properties">
-        <integer value="Pfit" />
-      </list>
-
-      <record id="column_properties">
-        <flags id="alignment" value="left, centre_y" />
-      </record>
-      <record id="column_heading">
-        <flags id="alignment" value="left, centre_y" />
-        <translation id="text" translation_id="227793" type="use" value="Condition" />
-        <translation id="hint" translation_id="396496" type="use" value="Overall Physical Condition represents the player's level of fitness. If he is fatigued, recently recovered from injury or just unfit he will have a low Overall Physical Condition rating. Playing matches when this is low risks injury as well as an even lower rating in future. Only rest from matches and/or training can help a player to recover.[COMMENT: hint explanation for Overall Conditioning label, use top ten matches, change to ID 396172 to add context]" />
-      </record>
-
-      <record id="search_filter">
-        <integer id="id" value="pfpc" />
-      </record>
-    </record>
-
-	<!--The label version of the physical condition-->
-    <record>
-      <integer id="id" value="PcOL" />
-      <integer id="aliased_property_id" value="Pcon" />
-      <integer id="width" value="45" />
-      <flags id="fmc_width" value="45" />
-      <translation id="name" translation_id="394524" type="use" value="Overall Physical Condition[COMMENT: label for a player's overall physical condition, when taking every element of his game into account]" />
-      <flags id="customisation_context" value="none" />
-      <boolean id="sort_ascending" value="false" />
-      <integer id="auto_hide_priority" value="1200" />
-      <record id="widget_info">
-        <symbol id="class" value="condition_label" />
-        <flags id="mode" value="0" />
-      </record>
-
-      <record id="widget_edit_info">
-        <symbol id="class" value="max_edit_box" />
-        <flags id="edit_event" value="CDBd" />
-        <flags id="mode" value="0" />
-        <integer id="min_value" value="1" />
-        <integer id="max_value" value="10000" />
-      </record>
-
-      <!-- Need the raw fitness to display this as we combine them slightly -->
-      <list id="dependent_properties">
-        <integer value="Pfit" />
-      </list>
-
-      <record id="column_properties">
-        <flags id="alignment" value="left, centre_y" />
-      </record>
-      <record id="column_heading">
-        <flags id="alignment" value="left, centre_y" />
-        <translation id="text" translation_id="227793" type="use" value="Condition" />
-        <translation id="hint" translation_id="396496" type="use" value="Overall Physical Condition represents the player's level of fitness. If he is fatigued, recently recovered from injury or just unfit he will have a low Overall Physical Condition rating. Playing matches when this is low risks injury as well as an even lower rating in future. Only rest from matches and/or training can help a player to recover.[COMMENT: hint explanation for Overall Conditioning label, use top ten matches, change to ID 396172 to add context]" />
-      </record>
-
-    </record>
-		
 		<!-- Used by the IGE only now -->
 		<record>
 			<integer id="id" value="Pcon" />
@@ -5729,9 +5642,10 @@
 				<integer id="min_value" value="5000" />
 				<integer id="max_value" value="10000" />
 			</record>
+
 		</record>
 
-	<!--The icon version of the match sharpness-->
+		<!--The icon version of the match sharpness-->
 		<record>
 			<integer id="id" value="PftI" />
 			<integer id="aliased_property_id" value="Pfit" />
@@ -5776,40 +5690,7 @@
 			</record>
 
 		</record>
-    
-	<!--The label version of match sharpness-->
-    <record>
-      <integer id="id" value="PFIT" />
-      <integer id="aliased_property_id" value="Pfit" />
-      <integer id="width" value="70" />
-      <flags id="fmc_width" value="65" />
-      <translation id="name" translation_id="388919" type="use" value="Match Sharpness[COMMENT: label for the player's match fitness, i.e. what condition he's currently in if he were to be selected for the next fixture]" />
-      <flags id="customisation_context" value="none" />
-      <boolean id="sort_ascending" value="false" />
-      <integer id="auto_hide_priority" value="1200" />
-      <record id="widget_info">
-        <symbol id="class" value="condition_label" />
-        <flags id="mode" value="1" />
-      </record>
 
-      <record id="widget_edit_info">
-        <symbol id="class" value="max_edit_box" />
-        <flags id="edit_event" value="CDBd" />
-        <flags id="mode" value="0" />
-        <integer id="min_value" value="1" />
-        <integer id="max_value" value="10000" />
-      </record>
-
-      <record id="column_properties">
-        <flags id="alignment" value="left, centre_y" />
-      </record>
-      <record id="column_heading">
-        <flags id="alignment" value="left, centre_y" />
-        <translation id="text" translation_id="388919" type="use" value="Match Sharpness[COMMENT: label for the player's match fitness, i.e. what condition he's currently in if he were to be selected for the next fixture]" />
-        <translation id="hint" translation_id="396491" type="use" value="Match Sharpness represents the player's readiness for competitive football. If he is lacking in recent game time this rating will suffer, but the only way to build it up is through minutes on the pitch. Players low in Match Sharpness will struggle to keep up with the pace of a competitive match and will also be more susceptible to injury.[COMMENT: hint explanation for Next Match Availability fitness label, use top ten matches, change to ID 396173 based on match team feedback]" />
-      </record>
-
-    </record>
 
 		<record>
 			<integer id="id" value="pTLV" />
@@ -28632,9 +28513,79 @@
 				<integer id="id" value="pftr" />
 			</record>
 		</record>
-		<!-- DEBUG ONLY -->
-   
+	<!--The label version of match sharpness-->
     <record>
+      <integer id="id" value="PFIT" />
+      <integer id="aliased_property_id" value="Pfit" />
+      <integer id="width" value="70" />
+      <flags id="fmc_width" value="65" />
+      <translation id="name" translation_id="388919" type="use" value="Match Sharpness[COMMENT: label for the player's match fitness, i.e. what condition he's currently in if he were to be selected for the next fixture]" />
+      <flags id="customisation_context" value="none" />
+      <boolean id="sort_ascending" value="false" />
+      <integer id="auto_hide_priority" value="1200" />
+      <record id="widget_info">
+        <symbol id="class" value="condition_label" />
+        <flags id="mode" value="1" />
+      </record>
+
+      <record id="widget_edit_info">
+        <symbol id="class" value="max_edit_box" />
+        <flags id="edit_event" value="CDBd" />
+        <flags id="mode" value="0" />
+        <integer id="min_value" value="1" />
+        <integer id="max_value" value="10000" />
+      </record>
+
+      <record id="column_properties">
+        <flags id="alignment" value="left, centre_y" />
+      </record>
+      <record id="column_heading">
+        <flags id="alignment" value="left, centre_y" />
+        <translation id="text" translation_id="388919" type="use" value="Match Sharpness[COMMENT: label for the player's match fitness, i.e. what condition he's currently in if he were to be selected for the next fixture]" />
+        <translation id="hint" translation_id="396491" type="use" value="Match Sharpness represents the player's readiness for competitive football. If he is lacking in recent game time this rating will suffer, but the only way to build it up is through minutes on the pitch. Players low in Match Sharpness will struggle to keep up with the pace of a competitive match and will also be more susceptible to injury.[COMMENT: hint explanation for Next Match Availability fitness label, use top ten matches, change to ID 396173 based on match team feedback]" />
+      </record>
+
+    </record>	
+	<!--The label version of the physical condition-->
+    <record>
+      <integer id="id" value="PcOL" />
+      <integer id="aliased_property_id" value="Pcon" />
+      <integer id="width" value="45" />
+      <flags id="fmc_width" value="45" />
+      <translation id="name" translation_id="394524" type="use" value="Overall Physical Condition[COMMENT: label for a player's overall physical condition, when taking every element of his game into account]" />
+      <flags id="customisation_context" value="none" />
+      <boolean id="sort_ascending" value="false" />
+      <integer id="auto_hide_priority" value="1200" />
+      <record id="widget_info">
+        <symbol id="class" value="condition_label" />
+        <flags id="mode" value="0" />
+      </record>
+
+      <record id="widget_edit_info">
+        <symbol id="class" value="max_edit_box" />
+        <flags id="edit_event" value="CDBd" />
+        <flags id="mode" value="0" />
+        <integer id="min_value" value="1" />
+        <integer id="max_value" value="10000" />
+      </record>
+
+      <!-- Need the raw fitness to display this as we combine them slightly -->
+      <list id="dependent_properties">
+        <integer value="Pfit" />
+      </list>
+
+      <record id="column_properties">
+        <flags id="alignment" value="left, centre_y" />
+      </record>
+      <record id="column_heading">
+        <flags id="alignment" value="left, centre_y" />
+        <translation id="text" translation_id="227793" type="use" value="Condition" />
+        <translation id="hint" translation_id="396496" type="use" value="Overall Physical Condition represents the player's level of fitness. If he is fatigued, recently recovered from injury or just unfit he will have a low Overall Physical Condition rating. Playing matches when this is low risks injury as well as an even lower rating in future. Only rest from matches and/or training can help a player to recover.[COMMENT: hint explanation for Overall Conditioning label, use top ten matches, change to ID 396172 to add context]" />
+      </record>
+
+    </record>	
+	<!-- DEBUG ONLY -->
+	<record>
       <integer id="id" value="Pnts" />
       <integer id="width" value="60" />
       <flags id="customisation_context" value="none" />
@@ -28679,8 +28630,8 @@
 
 	  <record id="column_heading">
 		<flags id="alignment" value="centre" />
-		<string id="text" value="服役状况" />
-		<string id="hint" value="检查服役状况" />
+		<string id="text" value="병역 상태" />
+		<string id="hint" value="병역 여부 확인" />
 	  </record>
 
 	 <record id="search_filter">
@@ -28694,7 +28645,7 @@
       <integer id="width" value="50" />
 	  <flags id="customisation_context" value="play" />
 	  <translation id="category" translation_id="466581" type="use" value="Fitness and Injuries[COMMENT: section title for player featuring info on 447669 Dynamics and player happiness]" />
-      <translation id="name" type="use" value="疲劳（N）" />
+      <translation id="name" type="use" value="피로도(N)" />
 	   <boolean id="sort_ascending" value="true" />
 			<record id="column_properties">
 		<flags id="alignment" value="centre" />
@@ -28719,8 +28670,8 @@
 			
 			<record id="column_heading">
 				<flags id="alignment" value="left,centre_y" />
-				<string id="text" value="疲劳（N）" />
-				<string id="hint" value="有关累积疲劳的数据。在保持高性能和低疲劳的同时进行轮转可以被视为理想的体力管理。高度疲劳意味着运动员过度劳累。" />
+				<string id="text" value="피로도(N)" />
+				<string id="hint" value="피로 누적에 관한 수치. 높은 경기력과 낮은 피로도를 유지하면서 로테이션시키는 것이 이상적인 체력관리라 볼 수 있다. 높은 피로도는 선수가 혹사당하고 있음을 뜻한다." />
 			</record>
 			
 		    <record id="search_filter">
@@ -28734,7 +28685,7 @@
       <integer id="width" value="100" />
 	  <flags id="customisation_context" value="play" />
 	  <translation id="category" translation_id="466581" type="use" value="Fitness and Injuries[COMMENT: section title for player featuring info on 447669 Dynamics and player happiness]" />
-      <translation id="name" type="use" value="疲劳（T）" />
+      <translation id="name" type="use" value="피로도(T)" />
 	  	<boolean id="sort_ascending" value="true" />
 			<record id="column_properties">
 		    <flags id="alignment" value="centre" />
@@ -28758,8 +28709,8 @@
 			
 			<record id="column_heading">
 				<flags id="alignment" value="left,centre_y" />
-				<string id="text" value="疲劳（T）" />
-				<string id="hint" value="有关累积疲劳的数据。在保持高性能和低疲劳的同时进行轮转可以被视为理想的体力管理。高度疲劳意味着运动员过度劳累。" />
+				<string id="text" value="피로도(T)" />
+				<string id="hint" value="피로 누적에 관한 수치. 높은 경기력과 낮은 피로도를 유지하면서 로테이션시키는 것이 이상적인 체력관리라 볼 수 있다. 높은 피로도는 선수가 혹사당하고 있음을 뜻한다." />
 			</record>
 		    <record id="search_filter">
 				<integer id="id" value="pftr" />
@@ -28819,7 +28770,7 @@
       <flags id="id" value="Phnp" />
       <integer id="width" value="60" />
       <flags id="customisation_context" value="none" />
-      <translation id="name" type="use" value="无需工作签证" />
+      <translation id="name" type="use" value="취업비자 필요 없음" />
       <record id="widget_edit_info">
         <symbol id="class" value="check_box" />
         <flags id="click_event" value="CDBd" />
@@ -28924,7 +28875,36 @@
 				</translation_list>
 			</record>
 		</record>
+	    <record>
+			<integer id="id" value="Gsnu" />
+			<flags id="aliased_property_id" value="Psnu" />
+			<integer id="width" value="30" />
+			<translation id="name" translation_id="229797" type="use" value="Squad Number" />
+			<flags id="customisation_context" value="play" />
+			<translation id="category" translation_id="248359" type="use" value="General" />
+			<integer id="minimum_width" value="30" />
+			<record id="widget_info">
+				<symbol id="class" value="squad_number_label" />
+			</record>
+            <record id="widget_edit_info">
+                <symbol id="class" value="number_edit_box" />
+                <flags id="edit_event" value="CDBd" />
+                <integer id="min_value" value="0" />
+                <integer id="max_value" value="99" />
+            </record>
+			<record id="column_widget_properties">
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+			<record id="column_heading">
+				<flags id="alignment" value="left,centre_y" />
+				<translation id="text" translation_id="247480" type="use" value="No.[COMMENT - squad number column on team squad panel]" />
+				<translation id="hint" translation_id="229797" type="use" value="Squad Number" />
+			</record>
 
+			<record id="search_filter">
+				<integer id="id" value="pftx" />
+			</record>
+		</record>
 	</list>
 
 	<list id="column_table_inherited_properties">

@@ -7,7 +7,6 @@
 		</widget>
 	</container>
 
-
 	<container class="scrolling_box" id="soma">
 		<container class="vertical_arrange_container" alignment="top" gap="4" inset="0" offset="0" auto_size="vertical" draw_horizontal_dividers="true">
 
