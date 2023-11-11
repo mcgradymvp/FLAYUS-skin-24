@@ -4,7 +4,7 @@
     <string id="tv_media_icon_file" value="icons/custom/match/waiting live tv"/>
     <string id="radio_media_icon_file" value="icons/custom/match/waiting live radio"/>
 
-    <animation class="fade_on_hide_animation" duration="0.4" end_mode="hold_auto_reverse" high_priority="true"/>
+    <animation class="fade_on_hide_animation" duration="0.4" end_mode="hold_auto_reverse"/>
 
     <container class="main_box" red_replacement="blue grey 700">
         <attachment_group class="vertical_arrange_horizontal_centre" vertical_alignment="middle" vertical_gap="20"/>
@@ -18,10 +18,6 @@
             <!-- The loading animation - GPU rendering -->
             <widget class="picture" id="anmG" file="progress/circular/spinner" auto_size="all" colour="white">
                 <animation class="rotate_animation" end_mode="repeat" start_value="0" end_value="360" tween="linear" apply_to_mouse="false" limit_frame_rate="true"/>
-
-                <attachment class="test_setting_attachment" get_setting="ui_rendering_mode" default_value="true" set_property="hidn">
-                    <integer id="value" value="1"/>
-                </attachment>
             </widget>
         </container>
 

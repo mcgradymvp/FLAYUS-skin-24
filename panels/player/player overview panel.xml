@@ -32,12 +32,6 @@
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget> 	
 
-				<!-- Stats -->
-				<widget class="player_personal_details_panel" id="gzpA" file="gunzo/gunzo player profile tab1" default_width="-1" priority="1">
-					<translation id="title" translation_id="247412" type="use" value="Stats" />
-					<record id="object_property" get_property="objt" set_property="objt"/>
-				</widget> 	
-
 				<!-- homegrown -->
 				<widget class="player_personal_details_panel" id="gzpD" file="gunzo/gunzo player profile tab4" default_width="-1" priority="1">
 					<translation id="title" translation_id="291490" type="use" value="Nation[COMMENT: nation the team is in]" />
@@ -116,24 +110,24 @@
 			<container minimum_height="130" default_height="190" priority="1" navigation_container="true" >
 				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
-					<widget class="player_additional_stats_panel" id="pcsp" file="gunzo/gunzo player additional stats small" late_loading="true">
-						<record id="object_property">
-							<list id="get_properties">
-								<!-- Hide this panel if player is in inactive league-->
-								<record id="object_property" get_property="objt" set_property="objt"/>
-								<record id="object_property" get_property="Pila" set_property="hidn"/>
-							</list>
-						</record>
-					</widget>
-					<widget class="player_stats_panel" id="pssp" file="player/player stats small" late_loading="true">
-						<record id="object_property">
-							<list id="get_properties">
-								<!-- Show this panel if player is in inactive league-->
-								<record id="object_property" get_property="Pila" set_property="Shwn"/>
-								<record id="object_property" get_property="objt" set_property="objt"/>
-							</list>
-						</record>
-					</widget>
+						<widget class="player_additional_stats_panel" id="pcsp" file="player/player additional stats small">
+							<record id="object_property">
+								<list id="get_properties">
+									<!-- Hide this panel if player is in inactive league-->
+									<record id="object_property" get_property="objt" set_property="objt"/>
+									<record id="object_property" get_property="Pila" set_property="hidn"/>
+								</list>
+							</record>
+						</widget>
+						<widget class="player_stats_panel" id="pssp" file="player/player stats small">
+							<record id="object_property">
+								<list id="get_properties">
+									<!-- Show this panel if player is in inactive league-->
+									<record id="object_property" get_property="Pila" set_property="Shwn"/>
+									<record id="object_property" get_property="objt" set_property="objt"/>
+								</list>
+							</record>
+						</widget>
 			</container> 	
 					<!-- 1 -->
 					<container class="horizontal_adaptive_container" offset="0" inset="0" gap="1" navigation_container="true" minimum_height="60" default_height="-1" priority="2" mode="distribute_equally">	      

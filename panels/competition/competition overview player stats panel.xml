@@ -14,32 +14,32 @@
 
 			<string id="skin_style" value="title link" />
 
-			<widget class="link_button" id="stit" alignment="left,centre_y" auto_size="all" colour="blue 500" red_replacement="blue 500" />
+			<widget class="link_button" id="stit" alignment="left,centre_y" auto_size="all" colour="title" red_replacement="text" />
 		</container>
 
 		<!-- Table showing the data-->
 		<widget class="object_list_table" id="stat" mode="hide_headings, no_scrolling, stripe_rows" row_height="42" fixed_size_rows="true" row_spacing="0" column_spacing="5">
 			<list id="column_table_properties">
-        <!-- Ranking -->
-        <record id="csRS" width="20" left="10">
-          <record id="widget_info" class="sortable_text" alignment="left, centre_y,can_scale"/>
-        </record>
-        <!-- Team -->
-        <record id="Ttea" width="25" dont_set_object="true">
-          <record id="widget_info" class="object_portrait_picture" scale_picture="true" image_alignment="centre"/>
-        </record>
-        <!-- Person portrait -->
-        <record id="Pers" width="45">
-          <record id="widget_info" class="object_portrait_picture" scale_picture="true" image_alignment="centre"/>
-        </record>
-        <!-- Person and team stacked labels -->
-        <record id="PTIf" width="-1" dont_set_object="true">
-          <record id="widget_info" class="property_list_viewer_xml_panel" file="competition/player and team label panel"/>
-        </record>
-        <!-- Short stat value -->
-        <record id="csSS" width="40" right="10">
-          <record id="widget_info" class="label" size="10" colour="gzc" alignment="right, centre_y,can_scale"/>
-        </record>
+				<!-- Ranking -->
+				<record id="csRS" width="40" left="5">
+					<record id="widget_info" class="sortable_text" style="bold" alignment="left,centre_y" />
+				</record>
+				<!-- Team -->
+				<record id="Ttea" width="20" dont_set_object="true">
+					<record id="widget_info" class="object_portrait_picture" scale_picture="true" image_alignment="centre" />
+				</record>
+				<!-- Person portrait -->
+				<record id="Pers" width="40">
+					<record id="widget_info" class="object_portrait_picture" scale_picture="true" image_alignment="centre" />
+				</record>
+				<!-- Person and team stacked labels -->
+				<record id="PTIf" width="-1" dont_set_object="true">
+					<record id="widget_info" class="property_list_viewer_xml_panel" file="competition/player and team label panel" />
+				</record>
+				<!-- Short stat value -->
+				<record id="csSS" width="35">
+					<record id="widget_info" class="label" style="bold" alignment="right,centre_y" colour="gzc"/>
+				</record>
 			</list>
 
 			<record id="viewed_property_ids">
