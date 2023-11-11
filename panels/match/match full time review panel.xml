@@ -7,7 +7,7 @@
 	<container>
 		<attachment_group class="horizontal_arrange" horizontal_layout="-1,550,-1" horizontal_offset="0" vertical_inset="0" horizontal_gap="0" />
 		<!--left side -->
-		<container class="bordered_box" appearance="boxes/custom/match/timeline stats/paper" default_width="530" minimum_width="500" priority="1">
+		<container class="bordered_box" appearance="boxes/custom/match/timeline stats/paper" default_width="500" minimum_width="500" priority="1">
 			<layout class="arrange_vertical_attachment" layout="-1,400" offset="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 
@@ -101,7 +101,7 @@
 		      </container>
 
 		<!--Right side -->
-		<container class="bordered_box" appearance="boxes/custom/match/timeline stats/paper" default_width="530" minimum_width="500" priority="1">
+		<container class="bordered_box" appearance="boxes/custom/match/timeline stats/paper" default_width="500" minimum_width="500" priority="1">
 			<layout class="arrange_vertical_attachment" layout="-1,400" offset="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 
@@ -143,6 +143,7 @@
 			</record>
 		</widget>
 	  </container>
+
 	 </container>
 	</container>
 </panel>

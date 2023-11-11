@@ -1,0 +1,10 @@
+<record>
+
+	<!-- resource manager options -->
+	<!-- preload the stuff in this folder -->
+	<boolean id="preload" value="true"/>
+  
+  <!-- cache the xml files in this folder -->
+  <boolean id="cache" value="true"/>
+
+</record>
