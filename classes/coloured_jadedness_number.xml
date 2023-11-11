@@ -3,19 +3,19 @@
 <class class="coloured_jadedness_number" parent="number_label" alignment="centre" format="[%number#1-nth]">
   <list id="value_list">
     <record min_value="-501" max_value="-301" colour="grey">
-		<translation id="hint" type="use" value="比赛场次明显不足。"/>
+		<translation id="hint" type="use" value="比赛的出场次数明显不足。"/>
     </record> 
     <record min_value="-300" max_value="-101" colour="cyan">
-		<translation id="hint" type="use" value="如果轮转得当，几乎不会有疲劳感。"/>
+		<translation id="hint" type="use" value="适当的轮换阵容,几乎没有任何疲劳。"/>
     </record> 
     <record min_value="-100" max_value="100" colour="yellow" >
-		<translation id="hint" type="use" value="由于频繁出场，存在一定程度的疲劳。"/>
+		<translation id="hint" type="use" value="因为频繁的出场,所以多少有些疲劳。"/>
     </record> 
     <record min_value="101" max_value="300" colour="orange" >
-		<translation id="hint" type="use" value="由于连续出场，很疲劳。"/>
+		<translation id="hint" type="use" value="因为连续出场,所以现在非常疲劳。"/>
     </record> 
     <record min_value="301" max_value="501" colour="red" >
-		<translation id="hint" type="use" value="球员过度劳累，需要休息一会儿"/>
+		<translation id="hint" type="use" value="球员不堪重负,需要休息。"/>
     </record> 
   
   </list>

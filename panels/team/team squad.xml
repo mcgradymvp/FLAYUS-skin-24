@@ -103,7 +103,9 @@
 								<record id="PtsL" auto_hide_priority="1" width="80" />           
 								<!-- status info -->
 								<record id="Pnfo" auto_hide_priority="3" width="30" />
-								<!-- person name -->
+								
+<record id="port" auto_hide_priority="4" width="32" />
+<!-- person name -->
 								<record id="PlSE" auto_hide_priority="2" width="160" />
 								<!-- age -->
 								<record id="PSag" auto_hide_priority="6" width="30" colour="gzc1" alignment="centre" />			
@@ -157,7 +159,9 @@
 								<record id="PtsL" auto_hide_priority="1" width="80" />           
 								<!-- status info -->
 								<record id="Pnfo" auto_hide_priority="3" width="30" />
-								<!-- person name -->
+								
+<record id="port" auto_hide_priority="4" width="32" />
+<!-- person name -->
 								<record id="PlSE" auto_hide_priority="2" width="160" />
 								<!-- age -->
 								<record id="PSag" auto_hide_priority="6" width="30" colour="gzc1" alignment="centre" />			
@@ -212,7 +216,8 @@
 								<record id="PtsL" auto_hide_priority="1" width="80" />           
 								<!-- status info -->
 								<record id="Pnfo" auto_hide_priority="3" width="30" />
-								<!-- squad number -->
+
+<record id="port" auto_hide_priority="4" width="32" />								<!-- squad number -->
 								<record id="Psnu" auto_hide_priority="4" width="22" alignment="centre" />
 								<!-- person name -->
 								<record id="Pnms" auto_hide_priority="2" width="160" />

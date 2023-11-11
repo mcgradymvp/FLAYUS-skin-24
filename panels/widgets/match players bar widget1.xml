@@ -14,15 +14,36 @@
 
 	<widget class="picture" id="bpic" scale_picture="true" keep_aspect_ratio="false" />
 
+	<!--The button that will get clicks-->
+	<widget class="popup_button" id="abtn" appearance="buttons/custom/over state only/square/button" down_arrow_appearance="" fixed="true" select_event="acsl" default_focus="true"/>
+
 	<container class="container_with_mouse_events" id="cefw">
 		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"  vertical_offset="0,0,0,0" horizontal_inset="0" vertical_gap="0"/>
 
 		<container>
 			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="2" vertical_gap="0"/>
+		
+		<container class="main_box_no_margin" appearance="switches/custom/team picker/button_showing" blue_replacement="bg info" height="16">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" vertical_inset="0" horizontal_gap="4"/>
 
-			<container  height="70">
-				<attachment_group class="horizontal_arrange" horizontal_layout="20,-1,20" horizontal_gap="0" horizontal_offset="0"/>
-			
+			<!-- Position-->
+				<widget class="client_object_property_panel" property="Pshp" alignment="top,centre_x" >
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+					<record id="object_property" get_property="objt" set_property="objt" />
+					<record id="widget_properties">
+						<string id="appearance" value=""/>
+						<boolean id="disabled" value="true"/>
+						<string id="auto_size" value="vertical"/>
+						<string id="size" value="xsmall"/>
+						<boolean id="wants_mouse_events" value="false"/>
+					</record>
+				</widget>
+
+        </container>
+
+		<container height="70">
+			<attachment_group class="horizontal_arrange" horizontal_layout="20,-1,20" horizontal_gap="0" horizontal_offset="0"/>
+
 			<container>
 				 <layout class="stick_to_sides_attachment" alignment="all" inset="0,0,60,0" apply_to_children="true"/>
 				<!--Goal icon if needed-->
@@ -37,16 +58,16 @@
 			</container>
 
 		<!-- Player picture -->
-		<widget class="object_portrait_picture" id="pict" scale_picture="true" image_alignment="top">
+		<widget class="object_portrait_picture" id="pipc" wants_mouse_events="false" scale_picture="true" image_alignment="top">
 			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
 			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
 
 			<record id="object_property">
 				<integer id="get_property" value="objt"/>
-				<integer id="set_property" value="objt"/>
+				<integer id="set_property" value="valu"/>
 			</record>
 		</widget>
-
+		
 			<container >
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,60,0" apply_to_children="true"/>
 				<!--injury/sub icon if needed-->
@@ -61,73 +82,70 @@
 			<container>
 				<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="2" vertical_inset="0"/>
 
-				<container width="150">
-				<attachment_group class="horizontal_arrange" horizontal_layout="16,120" horizontal_gap="0" horizontal_offset="0"/>
+			<container width="150">
+				<attachment_group class="horizontal_arrange" horizontal_layout="16,-1" horizontal_gap="0" horizontal_offset="0"/>
 	
-						<widget class="body_language_widget" id="Pmtc" label_disabled="true" width="16" icon_alignment="centre,can_scale" appearance="" navigation_focus_target="false"/>
+				<widget class="body_language_widget" id="Pmtc" label_disabled="true" width="20" icon_alignment="centre" appearance="" navigation_focus_target="false"/>
 			
-			<container height="16">	
-			<attachment_group class="vertical_arrange" vertical_layout="-1,-1" vertical_offset="5" horizontal_inset="0" vertical_gap="0"/>
-			<!-- Position-->
-				<widget class="client_object_property_panel" property="Pshp" alignment="top,centre_x" >
-					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
-					<record id="object_property" get_property="objt" set_property="objt" />
-					<record id="widget_properties">
-						<string id="appearance" value=""/>
-						<boolean id="disabled" value="true"/>
-						<string id="auto_size" value="vertical"/>
-						<string id="size" value="xxsmall"/>
-						<boolean id="wants_mouse_events" value="false"/>
-					</record>
-				</widget>
+		<container height="20">	
+			<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="20" horizontal_gap="0" vertical_inset="0"/>
+	
 			<!--name-->
-			
-			<widget class="person_button"  id="name" font="title" alignment="centre" auto_size="vertical" disable_link="true" size="small" format="[%person#1-shirt]" navigation_focus_target="false">
-				<record id="object_property" get_property="objt" set_property="valu" />
+			<widget class="person_button" size="8" auto_size="horizontal" format="[%person#1-initial_surname]" person_is_player="true" info_popup_enabled="true" icon_enabled="true">
+				<record id="object_property" get_property="objt" set_property="valu" />	
 			</widget>
-	        </container>
+        </container>
+
 					<container>
 						<layout class="stick_to_sides_attachment" alignment="top,right" inset="0" apply_to_children="true"/>
 
 						<!--injury/red/yellow card -->
 						<container class="inner_box_no_margin" id="inji" height="16" width="16" oSin="true">
 						</container>
-
 					</container>
 				</container>
-
 			</container>
-
 		</container>
 
-		<container class="main_box_no_margin" appearance="boxes/custom/darken/no margin/paper" height="20">
-			<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" vertical_inset="0" horizontal_gap="4"/>
+		<container class="main_box_no_margin" appearance="switches/custom/team picker/button_showing" blue_replacement="bg info" height="20">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_gap="0" horizontal_offset="0"/>
 
-				<!--condition icon-->
-				<widget class="client_object_property_panel" property="PcOI" width="30" navigation_focus_target="false" id="PcOI">
-					<record id="object_property" get_property="objt" set_property="objt" />
-					<record id="widget_properties">
-						<boolean id="label_disabled" value="true" />
-						<boolean id="show_hover_popup" value="false" />
-						<integer id="width" value="30" />
-						<flags id="icon_alignment" value="centre"/>
-					</record>
-				</widget>
-			<widget class="match_rating_label_formatted" id="rtIc" format="[%fraction#1-2.1]" dont_format_numeric_grouping="true" alignment="centre"  navigation_focus_target="false" auto_size="horizontal" wants_mouse_events="false">
+	<!--condition label-->
+		<widget class="pie_condition_label" file="widgets/pie condition label1" id="Pco1" mode="2" alignment="centre_x,centre_y,can_scale">  
+		    <boolean id="should_force_refresh" value="true" />
+			<record id="object_property">
+				<integer id="get_property" value="PRCF" />
+			</record>
+		</widget>
 
-			</widget>
-				<!--Match Sharps-->
-				<widget class="client_object_property_panel" property="PftI" width="30" navigation_focus_target="false" id="PftI">
-					<record id="object_property" get_property="objt" set_property="objt" />
-					<record id="widget_properties">
-						<boolean id="label_disabled" value="true" />
-						<boolean id="show_hover_popup" value="false" />
-						<integer id="width" value="16" />
-						<flags id="icon_alignment" value="centre"/>
-					</record>
-				</widget>
+		<widget class="client_object_property_panel" property="PcOI" navigation_focus_target="false" id="PcOI" width="20">
+			<record id="object_property" get_property="objt" set_property="objt" />
+			<record id="widget_properties">
+				<boolean id="label_disabled" value="true" />
+				<boolean id="show_hover_popup" value="false" />
+				<flags id="icon_alignment" value="centre"/>
+			</record>
+		</widget>
+		
+		<widget class="match_rating_label_formatted" id="rtIc" format="[%fraction#1-2.1]" dont_format_numeric_grouping="true" alignment="centre_x,centre_y" navigation_focus_target="false" auto_size="all" wants_mouse_events="false"/>
 
+		<!--Match Sharps-->
+		<widget class="client_object_property_panel" property="PftI" navigation_focus_target="false" id="PftI" width="20">
+			<record id="object_property" get_property="objt" set_property="objt" />
+			<record id="widget_properties">
+				<boolean id="label_disabled" value="true" />
+				<boolean id="show_hover_popup" value="false" />
+				<flags id="icon_alignment" value="centre"/>
+			</record>
+		</widget>
 
+		<!--Match Sharps-->
+		<widget class="pie_condition_label" file="widgets/pie condition label1" id="Pfi1" mode="1" alignment="centre_x,centre_y,can_scale">
+			<boolean id="should_force_refresh" value="true" />
+			<record id="object_property">
+				<integer id="get_property" value="Pfit" />
+			</record>
+		</widget>
 		</container>
 	</container>
 

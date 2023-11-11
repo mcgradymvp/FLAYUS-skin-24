@@ -28717,8 +28717,8 @@
 
 	  <record id="column_heading">
 		<flags id="alignment" value="centre" />
-		<string id="text" value="服役状况" />
-		<string id="hint" value="检查服役状况" />
+		<string id="text" value="兵役状态" />
+		<string id="hint" value="确认是否服兵役" />
 	  </record>
 
 	 <record id="search_filter">
@@ -28732,7 +28732,7 @@
       <integer id="width" value="50" />
 	  <flags id="customisation_context" value="play" />
 	  <translation id="category" translation_id="466581" type="use" value="Fitness and Injuries[COMMENT: section title for player featuring info on 447669 Dynamics and player happiness]" />
-      <translation id="name" type="use" value="疲劳（N）" />
+      <translation id="name" type="use" value="疲劳值(N)" />
 	   <boolean id="sort_ascending" value="true" />
 			<record id="column_properties">
 		<flags id="alignment" value="centre" />
@@ -28757,8 +28757,8 @@
 			
 			<record id="column_heading">
 				<flags id="alignment" value="left,centre_y" />
-				<string id="text" value="疲劳（N）" />
-				<string id="hint" value="有关累积疲劳的数据。在保持高性能和低疲劳的同时进行轮转可以被视为理想的体力管理。高度疲劳意味着运动员过度劳累。" />
+				<string id="text" value="疲劳值(N)" />
+				<string id="hint" value="疲劳累积的数值数据，轮换的同时保持高表现和低疲劳是理想的健康管理，高疲劳意味着球员正在过度劳累." />
 			</record>
 			
 		    <record id="search_filter">
@@ -28772,7 +28772,7 @@
       <integer id="width" value="100" />
 	  <flags id="customisation_context" value="play" />
 	  <translation id="category" translation_id="466581" type="use" value="Fitness and Injuries[COMMENT: section title for player featuring info on 447669 Dynamics and player happiness]" />
-      <translation id="name" type="use" value="疲劳（T）" />
+      <translation id="name" type="use" value="疲劳值(T)" />
 	  	<boolean id="sort_ascending" value="true" />
 			<record id="column_properties">
 		    <flags id="alignment" value="centre" />
@@ -28796,8 +28796,8 @@
 			
 			<record id="column_heading">
 				<flags id="alignment" value="left,centre_y" />
-				<string id="text" value="疲劳（T）" />
-				<string id="hint" value="有关累积疲劳的数据。在保持高性能和低疲劳的同时进行轮转可以被视为理想的体力管理。高度疲劳意味着运动员过度劳累。" />
+				<string id="text" value="疲劳值(T)" />
+				<string id="hint" value="疲劳累积的数值数据，轮换的同时保持高表现和低疲劳是理想的健康管理，高疲劳意味着球员正在过度劳累." />
 			</record>
 		    <record id="search_filter">
 				<integer id="id" value="pftr" />

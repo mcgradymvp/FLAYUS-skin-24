@@ -71,7 +71,7 @@
 								<record id="object_property" get_property="objt" set_property="objt"/>
 							</widget>	
 							 <widget class="person_information_panel" file="attributes/homegrown information" late_loading="true">
-								<translation id="title" type="use" value="本土信息" />
+								<translation id="title" type="use" value="青训信息" />
                                 <record id="object_property">
                                    <integer id="get_property" value="objt"/>
                                    <integer id="set_property" value="objt"/>
@@ -211,12 +211,12 @@
 			
                 <!-- Hidden2 -->
 				<widget class="player_personal_details_panel" id="gzh2" file="gunzo/gunzo player profile tabh1" default_width="-1" priority="1" late_loading="true">
-					<translation id="title" type="use" value="Attribute view" />
+					<translation id="title" type="use" value="数字显示" />
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>       
 				<!-- Hidden -->
 				<widget class="player_personal_details_panel" id="gzth" file="gunzo/gunzo player profile tabh" default_width="-1" priority="1" late_loading="true">
-					<translation id="title" type="use" value="Icon view" />
+					<translation id="title" type="use" value="图标显示" />
 					<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>    
 			  </container>  

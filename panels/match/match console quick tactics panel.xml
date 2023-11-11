@@ -43,7 +43,7 @@
 					<widget class="battery_power_indicator" width="20" height="20">
 					</widget>
 					<widget class="icon_button" appearance="buttons/custom/over state only/square/button" icon_alignment="left" click_event="Emmb" id="mmbt" >
-					   <translation id="text" type="use" value="球员信息窗口 On/Off" />
+					   <translation id="text" type="use" value="球员窗口 On/Off" />
                     </widget>
 				</container>
 
@@ -51,7 +51,7 @@
 					<attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_gap="0" horizontal_offset="2" />
 
 					<widget class="icon_button" appearance="buttons/custom/over state only/button" icon_alignment="left" icon="icons/16px/show me" id="Stab" width="150" height="30">
-						<translation id="text" type="use" value="比赛信息窗口 On/Off" />
+						<translation id="text" type="use" value="比赛窗口 On/Off" />
 						<record id="click_event">
 							<flags id="event_id" value="TtaV" />
 							<integer id="evfl" value="7" />

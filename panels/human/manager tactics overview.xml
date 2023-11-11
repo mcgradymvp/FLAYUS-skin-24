@@ -7,21 +7,6 @@
 		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="10" />
 		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 
-    <widget class="pitch_with_tactics" id="attp" vertical="true" icon_flags="show_selection_image,show_position_role_duty_suitability,show_position_level_tooltip"
-            pitch_alignment="centre_x,top" 
-            pitch_override_icon_size="3" 
-            pitch_dont_draw_indicators="true"
-            allow_y_score_adjustment_for_roles="false"
-			pitch_pattern_opacity="0"
-			pitch_detail_opacity="255"
-            pitch_is_read_only="true" >
-            <string id="pitch_kit_icon" value="pitch/icons/dots" />
-	  <record id="pitch_base_appearance">
-        <string id="condition_perfect" value="none"/>
-      </record>
-
-    </widget>
-
 		<widget class="table" id="tacT" layout="-1" mode="fill_rows" row_height="20">
 
             <record id="default_properties" col="0" />
