@@ -65,7 +65,7 @@
 			</widget>
 
 		</container>
-    <container id="cnt5">
+        <container id="cnt5">
             <translation id="title" translation_id="247571" type="use" value="Fitness" />
             <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
 

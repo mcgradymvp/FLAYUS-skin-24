@@ -37,28 +37,29 @@
 		</record>
 
 		<!-- overview view for FMT -->
-		<record id="ovwt">
+		<record id="emsv">
 			<record id="view_table_properties">
 				<integer id="row_height" value="60" />
 			</record>
-			<translation id="name" translation_id="247414" type="use" value="Overview" />
+				<translation id="name" type="use" value="Emon Scout View" />
 			<record id="view">
-				<flags id="PFrM" auto_hide_priority="100"/>
-				<!-- rf matches -->
-				<flags id="PSpi" auto_hide_priority="30"/>
-				<!-- player status/info -->
-				<record id="PNaC" auto_hide_priority="1" />
-				<!-- player name/club -->
-				<flags id="PpsP" auto_hide_priority="400"/>
-				<!-- person position-->
-				<flags id="PagR" auto_hide_priority="400"/>
-				<!-- player agent and relationship -->
-				<flags id="PSag" auto_hide_priority="10"/>
-				<!-- person age -->
-				<flags id="Pdva" auto_hide_priority="300" />
-				<!-- value -->
-				<flags id="PRpo" auto_hide_priority="40" />
-				<!-- recommended -->
+		        <record id="PFrM" width="150" auto_hide_priority="100"/> <!-- rf matches -->				
+                <record id="PSpi" auto_hide_priority="2" width="10"  /> <!-- player status/info -->
+                <record id="PNaN" auto_hide_priority="3" width="140" /> <!-- player name/nation -->                   
+				<record id="PCaD" auto_hide_priority="4" minimum_width="100"/> <!-- player club/division -->                    
+                <record id="PSag" auto_hide_priority="5" width="20" colour="yellow1"/> <!-- age -->
+                <record id="PpsP" auto_hide_priority="6" width="130"/> <!-- person position-->
+				<record id="Pfot" auto_hide_priority="1100" width="20"/> <!-- preferred feet -->   
+				<record id="Pcab" auto_hide_priority="10" width="30" /> <!-- currant ability -->
+                <record id="Ppab" auto_hide_priority="11" width="30" /> <!-- potential ability -->   					                              
+				<record id="Poav" auto_hide_priority="1070" colour="lime"  width="20"/> <!-- Average rating -->
+				<record id="PPaD" auto_hide_priority="100" /> <!-- agent feedback on player interest-->        			
+				<record id="Pdva" auto_hide_priority="7" width="100" /> <!-- player value -->
+				<record id="Pnar" auto_hide_priority="17" width="40" colour="yellow1" alignment="centre,centre_y" /> <!-- asking price -->			     				
+				<record id="Pced" auto_hide_priority="18" width="70" colour="gold" alignment="centre,centre_y" auto_size="horizontal"/> <!-- Contract Expiry -->
+				<record id="Phgs" auto_hide_priority="19" width="130" colour="blue 500" alignment="centre,centre_y" multiline="false" auto_size="horizontal"/> <!-- Home grown -->                 
+                <record id="PRpo" auto_hide_priority="3" width="40" /> <!-- recommended -->				    
+				<record id="PsKL" auto_hide_priority="1" width="50" /> <!-- knowledge level -->	    
 			</record>
 		</record>
 		

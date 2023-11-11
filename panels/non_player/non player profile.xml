@@ -1,35 +1,30 @@
-<panel>
-	<layout class="arrange_vertical_attachment" layout="-1" offset="0" />
-	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+<panel should_force_refresh="true">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 	<container>
 		<layout class="arrange_vertical_attachment" layout="-2,-1" offset="0" />
 		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 
 		<!-- MAIN AREA -->
-		<container class="horizontal_adaptive_container" offset="0" inset="0">
+		<container class="horizontal_adaptive_container" offset="0" inset="0" >
 
 			<!-- main box -->
 			<container default_width="-4" priority="1">
 				<layout class="arrange_horizontal_attachment" layout="460,-1" offset="0" />
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 	    
-		<container class="bordered_box">
-		<layout class="arrange_vertical_attachment" layout="350,10,80,90,90" offset="0" gap="0" />
+		<container class="main_box">
+		<layout class="arrange_vertical_attachment" layout="350,80,90,90" offset="0" gap="0" />
 		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 
 		<!-- Profile picture -->
-		<container>
-				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
-		<container class="client_object_viewer_selector_panel" id="cosA" file="non_player/gunzo non player profile selector panel" default_item="gzp1" save_session_state="true" save_default_state="true" priority="1" default_height="350">
-					<integer id="default_for_unemployed_managers" value="gzp1"/>
-					<integer id="default_for_international_managers_other_team" value="gzp1"/>
-					<integer id="default_for_everyone_else" value="gzp1"/>
-					<integer id="default_for_versus_mode" value="gzp1"/>
-				</container> 	
-			</container>
-        <container height="10"/>
-	
+		<container class="client_object_viewer_selector_panel" id="CosA" file="non_player/gunzo non player profile selector panel" default_item="gzn1" save_session_state="true" save_default_state="true" priority="1" default_height="350">
+			<integer id="default_for_unemployed_managers" value="gzn1"/>
+			<integer id="default_for_international_managers_other_team" value="gzn1"/>
+			<integer id="default_for_everyone_else" value="gzn1"/>
+			<integer id="default_for_versus_mode" value="gzn1"/>
+		</container> 	
+
 		<!-- Contract info etc-->
 		<container class="vertical_arrange_container" inset="0" offset="0" gap="0">
 
@@ -213,11 +208,18 @@
 			<widget class="label" id="coco" alignment="left" colour="faded text" auto_size="vertical" size="9"/>
 		       </container>
 		    </container>
-	
-				<container class="bordered_box">
-					<layout class="arrange_horizontal_attachment" offset="0" layout="-1" gap="12"/>
+			
+				<container class="main_box">
+					<layout class="arrange_horizontal_attachment" offset="0" layout="200,-1" gap="0"/>
 					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				
+				<container>	
+				    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
+			        <widget class="non_player_roles_panel" id="nprp" />
+					
+		        </container>
+				
 					<container>
 						<layout class="arrange_vertical_attachment" offset="0" alignment="bottom,extend" gap="0" />
 						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
@@ -262,6 +264,7 @@
 										</event>
 									</widget>
 								</container>
+
 								<container class="non_player_attributes_panel" id="patp" />
 							</container>
 
@@ -288,40 +291,36 @@
 								<widget class="languages_text" id="lngw" auto_size="vertical">
                                    <record id="object_property" dont_set_hint="true" get_property="Lang" />
                                 </widget>
-		                        
-								<widget class="horizontal_divider"/>
+		                       
+							    <widget class="horizontal_divider"/>
+
+								<widget class="label" id="coTi" font="fonts/title" colour="accent" auto_size="vertical">
+									<translation id="text" translation_id="329843" type="use" value="Coaching Qualifications[COMMENT: non-player profile; coaching qualification]" />
+								</widget>
+
+								<!--Coaching Qualifications-->
+								<widget class="label" id="coaq" auto_size="all" />
+
+								<widget class="label" id="coco" auto_size="all" />
+
+								<widget class="client_action_icon_button" id="SeCC" HiIA="true" auto_size="all" auto_size_maximum_width="230" click_event="GTss">
+									<string id="force_display_text" value="true" />
+									<string id="action_id" value="ccra" />
+									<record id="object_property">
+										<string id="set_property" value="objt" />
+										<string id="get_property" value="objt" />
+									</record>
+								</widget>
+								
+								<widget id="coHD" class="horizontal_divider" />
 
 								<container>
-									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
-									<widget class="non_player_knowledge_panel" id="npkn" file="none" height="400">
-										<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+									<widget class="non_player_knowledge_panel" id="npkn" />
 
-										<container class="titled_box" appearance="boxes/titled/compact/paper">
-											<translation id="title" translation_id="334387" type="use" value="World Knowledge[COMMENT: team scouts; information about range of knowledge]" />
-											<layout class="arrange_vertical_attachment" layout="-5,-4" offset="0" gap="0"/>
-											<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-
-											<container class="team_scouting_knowledge_map" id="npMp">
-												<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
-											</container>
-
-											<widget class="table" mode="fill_rows, stripe_rows" id="tabl" layout="-1, -1" auto_size_rows="false" row_height="22" save_session_state="true" save_default_state="true">
-												<list id="column_widget_properties">
-													<record indx="0" alignment="left,centre_y" />
-												</list>
-
-												<list id="column_table_properties">
-													<record indx="0" left="4" sort_disabled="true" />
-													<record indx="1"  right="4" sort_disabled="true" />
-												</list>
-											</widget>
-
-										</container>				
-									</widget>
-	
 									<container class="scrolling_box" id="nptp">
-										<container class="non_player_tendencies_panel"  should_force_refresh="true" file="none">
+										<container class="non_player_tendencies_panel" should_force_refresh="true" file="none">
 											<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" />
 
 											<!-- Property setting the path to use for 'high' tendencies (>10) -->
@@ -370,266 +369,105 @@
 											</record>
 										</container>
 									</container>
+
+									<container class="scrolling_box" id="npSB">
+
+										<widget class="container" id="npSP">
+											<attachment_group class="vertical_arrange_autosize" />
+
+											<list id="properties_to_forward">
+												<record get_property="SPdt" set_property="text" target="deli" />
+												<record get_property="SPpd" set_property="text" target="defp" />
+												<record get_property="SPaf" set_property="text" target="aimf" />
+												<record get_property="SPDm" set_property="text" target="defm" />
+												<record get_property="SPan" set_property="text" target="attn" />
+												<record get_property="SPdn" set_property="text" target="defn" />
+												<record get_property="Spdl" set_property="text" target="defl" />
+											</list>
+
+											<!--Title-->
+											<widget class="label" font="title" auto_size="vertical">
+												<translation id="text" translation_id="596039" type="use" value="Set Piece Preferences[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching details; FR: FM-22083; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Title for a coach's preferred style of set piece]" />
+											</widget>
+											
+											<!--Delivery-->
+											<widget class="label" font="label" auto_size="vertical">
+												<translation id="text" translation_id="468238" type="use" value="Delivery[COMMENT: training session calendar name for Set Piece Delivery, keep short 16 letters or under]" />
+											</widget>
+											<widget class="label" id="deli" auto_size="vertical">
+												<translation id="hint" translation_id="596038" type="use" value="Indicates whether the coach prefers corner-takers who can bend the ball towards or away from goal on the initial delivery[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-23919; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Hint for a coach's preferred style of set piece delivery]" />
+											</widget>
+											
+											<!--Defending Posts-->
+											<widget class="label" font="label" auto_size="vertical">
+												<translation id="text" translation_id="596028" type="use" value="Defending Posts[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-22083; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Title for a coach's preferred style of defending posts in a set piece]" />
+											</widget>
+											<widget class="label" id="defp" auto_size="vertical">
+												<translation id="hint" translation_id="596034" type="use" value="This is the tendency for the coach to place defenders on both posts, one post, or not at all.[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-23919; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Hint for a coach's preferred style of set piece defending posts]" />
+											</widget>
+											
+											<!--Aim For-->
+											<widget class="label" font="label" auto_size="vertical">
+												<translation id="text" translation_id="596026" type="use" value="Aim For[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-22083; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Title for a coach's preferred style of aiming a set piece]" />
+											</widget>
+											<widget class="label" id="aimf" auto_size="vertical">
+												<translation id="hint" translation_id="597244" type="use" value="When taking attacking corners and crossing free kicks, this is where the coach prefers the initial delivery to be aimed[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-23919; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Hint for a coach's preferred style of set piece aimed delivery]" />
+											</widget>
+											
+											<!--Defensive Marking-->
+											<widget class="label" font="label" auto_size="vertical">
+												<translation id="text" translation_id="596030" type="use" value="Defensive Marking[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-22083; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Title for a coach's preferred style of defensive marking during a set piece]" />
+											</widget>
+											<widget class="label" id="defm" auto_size="vertical">
+												<translation id="hint" translation_id="596036" type="use" value="This indicates whether the coach prefers to mark zonally, player-to-player, or a hybrid of the two approaches in a defensive set piece scenario.[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-23919; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Hint for a coach's preferred style of set piece defensive marking]" />
+											</widget>
+											
+											<!--Attacking Numbers-->
+											<widget class="label" font="label" auto_size="vertical">
+												<translation id="text" translation_id="596027" type="use" value="Attacking Numbers[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-22083; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Title for a coach's preferred style of attacking setup during a set piece]" />
+											</widget>
+											<widget class="label" id="attn" auto_size="vertical">
+												<translation id="hint" translation_id="596033" type="use" value="For attacking set pieces, this is the coach's willingness to commit players forward as part of the offensive.[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-23919; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Hint for a coach's preferred style of set piece attacking numbers]" />
+											</widget>
+											
+											<!--Defensive Numbers-->
+											<widget class="label" font="label" auto_size="vertical">
+												<translation id="text" translation_id="596031" type="use" value="Defensive Numbers[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-22083; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Title for a coach's preferred style of defensive setup during a set piece]" />
+											</widget>
+											<widget class="label" id="defn" auto_size="vertical">
+												<translation id="hint" translation_id="596037" type="use" value="Indicates the coach's approach to counter attacking scenarios resulting from an opposition set piece.[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-23919; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Hint for a coach's preferred style of set piece defensive numbers]" />
+											</widget>
+											
+											<!--Defensive Line-->
+											<widget class="label" font="label" auto_size="vertical">
+												<translation id="text" translation_id="596032" type="use" value="Defensive Line[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-23622; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Title for a coach's preferred style of defensive line depth during a set piece]" />
+											</widget>
+											<widget class="label" id="defl" auto_size="vertical">
+												<translation id="hint" translation_id="596035" type="use" value="This is the coach's preference for the defensive line height of the team when facing a opposition set piece.[COMMENT: AREA: Non-player profile; SUB-AREA: Coaching Details Set Piece Preferences; FR: FM-23919; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Hint for a coach's preferred style of set piece defensive line depth]" />
+											</widget>
+
+										</widget>
+									</container>
 								</container>
 							</container>
-						</container>
-	  					
-						<container height="60">
-							<translation id="title" translation_id="230056" type="use" value="Tactics" />
-							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
-
-							<widget class="table" mode="fill_rows, printable" id="nptt" layout="130,130,130,130" auto_size_rows="true" auto_size="vertical" row_spacing="0">
-								<record id="default_properties" alignment="left,top" />
-
-								<list id="column_table_properties">
-									<record indx="0" auto_hide_priority="1" sort_disabled="true" />
-									<record indx="1" auto_hide_priority="2" sort_disabled="true" />
-									<record indx="2" auto_hide_priority="3" sort_disabled="true" />
-									<record indx="3" auto_hide_priority="4" sort_disabled="true" />
-								</list>
-							</widget>
-						</container>  
-						
-		<container id="cocr" height="120"> 
-		    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
-			<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
-     
-				<!-- Current Club Match Stats -->
-				<widget class="table" mode="fill_rows, stripe_rows, printable" id="clst" layout="-3,-2,-3,-2,-3,-2" row_height="23">
-				<boolean id="save_session_state" value="true" />
-		        <boolean id="sdst" value="true" />
-				
-					<list id="headings">
-						<record alignment="left,centre_y" column_span="5" auto_size_minimum_height="20">
-							<translation id="text" type="use" value="俱乐部生涯记录" />
-						</record>
-					</list>
-					
-				<!-- disable sorting on all columns -->
-				<list id="column_table_properties">
-					<record indx="0">
-						<boolean id="sort_disabled" value="true" />
-					</record>
-					<record indx="1">
-						<boolean id="sort_disabled" value="true" />
-						<flags id="alignment" value="centre_y" />
-					</record>
-					<record indx="2">
-						<boolean id="sort_disabled" value="true" />
-					</record>
-					<record indx="3">
-						<boolean id="sort_disabled" value="true" />
-						<flags id="alignment" value="centre_y" />
-					</record>
-				</list>
-
-				<record id="object_property">
-					<integer id="get_property" value="objt" />
-					<integer id="set_property" value="objt" />
-				</record>
-
-					<!--Game Played - Club -->
-					<widget class="label" id="Lcgp" row="0" col="0">
-						<record id="object_property">
-							<integer id="get_property" value="Ccmp" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<widget class="dashed_number_label" id="Vcgp" row="0" col="1" auto_size="all" spec="text" size="normal">
-						<record id="object_property">
-							<integer id="get_property" value="Ccmp" />
-						</record>
-					</widget>
-
-					<!--Games Won - Club -->
-					<widget class="label" id="Lcgw" row="1" col="0">
-						<record id="object_property">
-							<integer id="get_property" value="Ccmw" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<widget class="dashed_number_label" id="Vcgw" row="1" col="1" auto_size="all" spec="text" size="normal">
-						<record id="object_property">
-							<integer id="get_property" value="Ccmw" />
-						</record>
-					</widget>
-
-					<!--Games Drawn - Club -->
-					<widget class="label" id="Lcgd" row="2" col="0">
-						<record id="object_property">
-							<integer id="get_property" value="Ccmd" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<widget class="dashed_number_label" id="Vcgd" row="2" col="1" auto_size="all" spec="text" size="normal">
-						<record id="object_property">
-							<integer id="get_property" value="Ccmd" />
-						</record>
-					</widget>
-
-					<!--Games Lost - Club -->
-					<widget class="label" id="Lcgl" row="3" col="0">
-						<record id="object_property">
-							<integer id="get_property" value="Ccml" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<widget class="dashed_number_label" id="Vcgl" row="3" col="1" auto_size="all" spec="text" size="normal">
-						<record id="object_property">
-							<integer id="get_property" value="Ccml" />
-						</record>
-					</widget>
-
-					<!--Goals Scored - Club -->
-					<widget class="label" id="Lcgf" row="0" col="2">
-						<record id="object_property">
-							<integer id="get_property" value="Cclf" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<widget class="dashed_number_label" id="Vcgf" row="0" col="3" auto_size="all" spec="text" size="normal">
-						<record id="object_property">
-							<integer id="get_property" value="Cclf" />
-						</record>
-					</widget>
-
-					<!--Goals Conceded - Club -->
-					<widget class="label" id="Lcgc" row="1" col="2">
-						<record id="object_property">
-							<integer id="get_property" value="Ccla" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<widget class="dashed_number_label" id="Vcgc" row="1" col="3" auto_size="all" spec="text" size="normal">
-						<record id="object_property">
-							<integer id="get_property" value="Ccla" />
-						</record>
-					</widget>
-
-					<!--Goal Difference - Club-->
-					<widget class="label" id="Lcdi" row="2" col="2">
-						<record id="object_property">
-							<integer id="get_property" value="Ccdf" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<widget class="dashed_number_label" id="Vcdi" row="2" col="3" auto_size="all" spec="text" size="normal">
-						<record id="object_property">
-							<integer id="get_property" value="Ccdf" />
-						</record>
-					</widget>
-
-					<!-- Win Ratio - Club-->
-					<widget class="label" id="Lcwr" row="3" col="2">
-						<record id="object_property">
-							<integer id="get_property" value="Ccwr" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<widget class="dashed_record_percentage_label" id="Vcwr" row="3" col="3" auto_size="all" spec="text" size="normal">
-						<record id="object_property">
-							<integer id="get_property" value="Ccwr" />
-						</record>
-					</widget>
-
-					<!--Cup Wins - Club-->
-					<widget class="label" id="Lccu" row="0" col="4">
-						<record id="object_property">
-							<integer id="get_property" value="Cccw" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<widget class="text" id="Vccu" row="0" col="5" auto_size="all" spec="text" size="normal">
-						<record id="object_property">
-							<integer id="get_property" value="Cccw" />
-						</record>
-					</widget>
-
-					<!--League Wins - Club-->
-					<widget class="label" id="Lcle" row="1" col="4">
-						<record id="object_property">
-							<integer id="get_property" value="Cclw" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<widget class="text" id="Vcle" row="1" col="5" auto_size="all" spec="text" size="normal">
-						<record id="object_property">
-							<integer id="get_property" value="Cclw" />
-						</record>
-					</widget>
-
-					<!--Promotions - Club-->
-					<widget class="label" id="Lcpr" row="2" col="4">
-						<record id="object_property">
-							<integer id="get_property" value="Ccnp" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<widget class="text" id="Vcpr" row="2" col="5" auto_size="all" spec="text" size="normal">
-						<record id="object_property">
-							<integer id="get_property" value="Ccnp" />
-						</record>
-					</widget>
-
-					<!--Relegations - Club-->
-					<widget class="label" id="Lcrl" row="3" col="4">
-						<record id="object_property">
-							<integer id="get_property" value="Ccnr" />
-							<boolean id="name" value="true" />
-						</record>
-					</widget>
-					<widget class="text" id="Vcrl" row="3" col="5" auto_size="all" spec="text" size="normal">
-						<record id="object_property">
-							<integer id="get_property" value="Ccnr" />
-						</record>
-					</widget>
-
-					<!-- everything should be left aligned -->
-					<record id="default_properties">
-						<flags id="alignment" value="left,centre_y"  />
-					</record>
-				  </widget>
-	        	</container>					
-					
+						</container>	
 					</container>
 				</container>				
 			</container>
 
-			<container class="bordered_box" minimum_width="300" default_width="-1" priority="2">
-			    <attachment_group class="vertical_arrange" vertical_layout="-1,230" vertical_offset="0" vertical_gap="10" horizontal_inset="0" />
+			<container class="main_box" minimum_width="300" default_width="-1" priority="2">
+			    <attachment_group class="vertical_arrange" vertical_layout="-1" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
 				
 				<container class="person_history_biography_panel" file="person/person history biography no title" id="biog">
 					<record id="object_property">
 						<integer id="get_property" value="objt" />
 						<integer id="set_property" value="objt" />
 					</record>
-				</container>
-											
-			<container minimum_width="300" default_width="300" priority="1">
-				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
-
-				<widget class="player_history_achievements_panel" id="pac1" file="non_player/non player history">
-					<record id="object_property">
-						<list id="get_properties">
-							<record>
-								<integer id="get_property" value="objt" />
-								<integer id="set_property" value="objt" />
-							</record>
-						</list>
-					</record>
-				</widget>
-			</container>
-			</container>
+				</container>							
+		  </container>
 		</container>
 
 		<container class="horizontal_adaptive_container" offset="0" inset="0" >
-			
-			<container class="main_box" minimum_width="300" default_width="-1" priority="1">
-				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
-					
-					<widget class="non_player_roles_panel" file="non_player/non player roles popup panel1" id="nprp" />
-								
-			</container>
 
 			<!-- Tactics -->
 			<container minimum_width="300" default_width="-1" priority="2">
@@ -642,28 +480,7 @@
 					</record>
 				</widget>
 			</container>
-
-			<!-- Plans -->
-			<container class="tabbed_container" id="tpp1" appearance="boxes/bordered/no margin/paper" default_item="phap" offset="0" inset="0" gap="0" save_session_state="true" save_default_state="true" default_width="-1" minimum_height="590" priority="2">
-				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
-		  
-				<widget class="person_happiness_panel" id="phap" file="person/person happiness profile plans">
-				    <translation id="title" translation_id="365298" type="use" value="Plans[COMMENT: FR 512; person happiness panel; title for person future plans section]" />
-					<record id="object_property">
-						<integer id="get_property" value="objt" />
-						<integer id="set_property" value="objt" />
-					</record>
-				</widget>
-			
-			<!-- Hidden -->
-				    <widget class="client_object_viewer_xml_panel" id="gzth" file="non_player/gunzo non player profile h" default_height="-1" priority="1">
-					    <translation id="title" translation_id="348857" type="use" value="Hidden[COMMENT: steam workshop publishing panel; user can set the level of publicity for their steam workshop content]" />
-					    <record id="object_property" get_property="objt" set_property="objt"/>
-				    </widget>
-			</container>
-
-	<container class="bordered_box" id="coar" minimum_width="300" default_width="-1">
+	<container class="main_box" id="coar" minimum_width="300" default_width="-1">
 		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 		<container class="icon_box" icon="icons/custom/icon box/achivements">
 			<attachment_group class="vertical_arrange" vertical_layout="20,-1" vertical_offset="0" vertical_gap="10" horizontal_inset="0" />
@@ -886,6 +703,41 @@
 	
 		  </container>
 	    </container>	
+			<!-- Plans -->
+			<container class="tabbed_container" id="tpp1" appearance="boxes/bordered/no margin/paper" default_item="phap" offset="0" inset="0" gap="0" save_session_state="true" save_default_state="true" default_width="-1" minimum_height="590" priority="2">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+		  
+				<widget class="person_happiness_panel" id="phap" file="person/person happiness profile plans">
+				    <translation id="title" translation_id="365298" type="use" value="Plans[COMMENT: FR 512; person happiness panel; title for person future plans section]" />
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			
+			<!-- Hidden -->
+				    <widget class="client_object_viewer_xml_panel" id="gzth" file="non_player/gunzo non player profile h" default_height="-1" priority="1">
+					    <translation id="title" translation_id="348857" type="use" value="Hidden[COMMENT: steam workshop publishing panel; user can set the level of publicity for their steam workshop content]" />
+					    <record id="object_property" get_property="objt" set_property="objt"/>
+				    </widget>
+			</container>
+			
+			<container class="main_box" minimum_width="300" default_width="-1" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="player_history_achievements_panel" id="pac1" file="non_player/non player history">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+				</widget>
+			</container>
+
 	  </container>
 	</container>
 

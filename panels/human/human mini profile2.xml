@@ -11,7 +11,7 @@
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
 			<!-- profile picture -->
-			<widget class="picture" id="prop" scale_picture="false" keep_aspect_ratio="true" image_alignment="centre_x,centre_y">
+			<widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x,centre_y">
 				<record id="object_property">
 					<list id="get_properties">
 						<!--Facegen data request-->

@@ -8,7 +8,7 @@
 				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1" horizontal_gap="15"/>
 				
 			<container class="main_box" height="520">
-					<translation id="title" type="use" value="히트맵-패스맵" />
+					<translation id="title" type="use" value="热力图-传球图" />
 					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
     	       <widget class="preselected_match_chalkboard_panel" id="hMnt" aHiL="false" pitch_draw_arrows="true" vertical="true" maximum_player_size="0.25" pitch_alignment="can_scale,centre_x" pitch_dont_draw_indicators="false" force_left_to_right_events="true" average_position_filter="0" maxenable_popup="ture">

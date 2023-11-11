@@ -47,6 +47,7 @@
 					<integer id="get_property" value="objt" />
 					<integer id="set_property" value="objt" />
 				</record>
+				
 				<list id="viewed_property_ids">
 					<integer value="Pcst" />
 					<integer value="Pcex" colour="white"/>
@@ -60,10 +61,9 @@
 					<integer value="Plec" />
 					<integer value="Prdc" />
 				</list>
-
 			</widget>
-
 		</container>
+
 		<container id="cpe2">
 			<translation id="title" translation_id="376545" type="use" value="Player Bonuses[COMMENT: club contract editing]" />
 			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
