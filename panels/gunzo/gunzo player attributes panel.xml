@@ -151,7 +151,6 @@
 							<record id="widget_properties" alignment="right, centre_y"/>
 							<record id="object_property" get_property="Pfit"/>
 						</widget>
-
 						<!-- Nationality -->
                         <widget class="editable_client_object_property_panel" id="pfna" col="0" row="4" column_span="2">
                             <record id="object_property">
@@ -159,22 +158,20 @@
                             </record>
                         <record id="widget_properties" icon_alignment="left" display_format="1" font="fonts/letterpressed" size="10" />
                         </widget>
-					
+						<!-- age -->
+						<widget class="editable_client_object_property_panel" id="agea" alignment="left,centre_y,can_scale" col="0" row="5" column_span="2" style="semi_bold" font="gzmain" colour="gzk" size="10">
+							<record id="object_property">
+								<integer id="get_property" value="Pdob"/>
+							</record>
+							<record id="widget_properties" display_format="1" />
+						</widget>
 						<!--morale-->
-						<widget class="editable_client_object_property_panel" id="mora" row="5" column="0" colour="gzk" font="gzmain"  alignment="left,centre_y,can_scale" should_recolour="true">
+						<widget class="editable_client_object_property_panel" id="mora" row="6" column="0" colour="gzk" font="gz_title" alignment="left,centre_y,can_scale" should_recolour="true">
 							<record id="widget_info" class="morale_label"/>
 							<record id="object_property">
 								<integer id="get_property" value="Pmor" />
 							</record>
 						</widget>	
-
-						<!-- Squad Status -->
-						<widget class="squad_status_label" id="sqst" col="1" row="5" alignment="right,centre_y,can_scale" style="semi_bold" font="gzmain"  colour="accent" size="10">
-							<record id="object_property">
-								<integer id="get_property" value="Pccs" />
-							</record>
-						</widget>	
-
 						<!--jadedness-->
 						<widget class="label" row="7" column="0" style="semi_bold" alignment="left,centre_y,can_scale">
 							<translation id="text" type="use" value="疲劳" />
@@ -185,7 +182,6 @@
 								<integer id="get_property" value="Pjad" />
 							</record>
 						</widget>
-
 						<!--Asking Price-->
 						<widget class="label" row="8" column="0" style="semi_bold" alignment="left,centre_y,can_scale">
 							<translation id="text"  type="use"  translation_id="227778" value="Asking Price" />

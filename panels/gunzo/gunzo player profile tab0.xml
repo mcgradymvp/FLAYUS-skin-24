@@ -54,7 +54,8 @@
 							</record>
 						</widget>	
 					</container>
-							<widget class="player_scout_reports_panel" id="gsra" file="gunzo/gunzo player scout rating small2" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
+				
+				<widget class="player_scout_reports_panel" id="gsra" file="gunzo/gunzo player scout rating small2" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
                   <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 				  <record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>	

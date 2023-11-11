@@ -5729,45 +5729,7 @@
 				<integer id="min_value" value="5000" />
 				<integer id="max_value" value="10000" />
 			</record>
-
 		</record>
-    
-	<!--pie version of match sharpness-->
-    <record>
-      <integer id="id" value="Pfit" />
-      <integer id="width" value="40" />
-      <flags id="fmc_width" value="58" />
-      <translation id="name" translation_id="388919" type="use" value="Match Sharpness[COMMENT: label for the player's match fitness, i.e. what condition he's currently in if he were to be selected for the next fixture]" />
-      <flags id="customisation_context" value="play" />
-      <translation id="category" translation_id="247571" type="use" value="Fitness" />
-      <boolean id="sort_ascending" value="false" />
-      <integer id="auto_hide_priority" value="1200" />
-      <record id="widget_info">
-        <symbol id="class" value="pie_condition_label" />
-        <flags id="mode" value="1" />
-      </record>
-
-      <record id="widget_edit_info">
-        <symbol id="class" value="max_edit_box" />
-        <flags id="edit_event" value="CDBd" />
-        <flags id="mode" value="1" />
-        <integer id="min_value" value="1" />
-        <integer id="max_value" value="10000" />
-      </record>
-
-      <record id="column_properties">
-        <flags id="alignment" value="left, centre_y" />
-      </record>
-      <record id="column_heading">
-        <flags id="alignment" value="left, centre_y" />
-        <translation id="text" translation_id="452010" type="use" value="Mtc Shp[COMMENT: abbreviated label for the player's match sharpness (ID 388919), i.e. what condition he's currently in if he were to be selected for the next fixture]" />
-        <translation id="hint" translation_id="396491" type="use" value="Match Sharpness represents the player's readiness for competitive football. If he is lacking in recent game time this rating will suffer, but the only way to build it up is through minutes on the pitch. Players low in Match Sharpness will struggle to keep up with the pace of a competitive match and will also be more susceptible to injury.[COMMENT: hint explanation for Next Match Availability fitness label, use top ten matches, change to ID 396173 based on match team feedback]" />
-      </record>
-
-      <record id="search_filter">
-        <integer id="id" value="pfpc" />
-      </record>
-    </record>
 
 	<!--The icon version of the match sharpness-->
 		<record>

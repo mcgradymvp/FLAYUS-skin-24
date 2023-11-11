@@ -46,21 +46,21 @@
 					<container navigation_focus_target="false">
 						<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_gap="2" horizontal_offset="0" vertical_inset="0" />
 
-						<widget class="text" id="T1sc" size="xxlarge" font="title" alignment="right,centre_y" colour="white" auto_size="horizontal"/>
+						<widget class="text" id="T1sc" size="xlarge" font="text" alignment="right,centre_y" colour="white" auto_size="horizontal"/>
 
-						<widget class="text" size="xlarge" font="title" alignment="centre" text="-" colour="white" auto_size="horizontal"/>
+						<widget class="text" size="xlarge" font="text" alignment="centre" text="-" colour="white" auto_size="horizontal"/>
 
-						<widget class="text" id="T2sc" size="xxlarge" font="title" alignment="left,centre_y" colour="white" auto_size="horizontal"/>
+						<widget class="text" id="T2sc" size="xlarge" font="text" alignment="left,centre_y" colour="white" auto_size="horizontal"/>
 
 					</container>
 
 					<container id="asco">
 						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" horizontal_gap="2" horizontal_offset="0" vertical_inset="0" />
-						<widget class="text" id="T1as" font="title" alignment="right,centre_y" auto_size="all"/>
+						<widget class="text" id="T1as" font="text" alignment="right,centre_y" auto_size="all"/>
 
-						<widget class="text" font="title" alignment="centre" text="-" auto_size="all"/>
+						<widget class="text" font="text" alignment="centre" text="-" auto_size="all"/>
 
-						<widget class="text" id="T2as" font="title" alignment="left,centre_y" auto_size="all"/>
+						<widget class="text" id="T2as" font="text" alignment="left,centre_y" auto_size="all"/>
 
 					</container>
 				</container>
