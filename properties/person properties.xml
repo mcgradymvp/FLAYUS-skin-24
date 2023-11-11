@@ -5634,6 +5634,33 @@
         <flags id="mode" value="0" />
       </record>
 
+      <record id="widget_edit_info">
+        <symbol id="class" value="max_edit_box" />
+        <flags id="edit_event" value="CDBd" />
+        <flags id="mode" value="0" />
+        <integer id="min_value" value="1" />
+        <integer id="max_value" value="10000" />
+      </record>
+
+      <!-- Need the raw fitness to display this as we combine them slightly -->
+      <list id="dependent_properties">
+        <integer value="Pfit" />
+      </list>
+
+      <record id="column_properties">
+        <flags id="alignment" value="left, centre_y" />
+      </record>
+      <record id="column_heading">
+        <flags id="alignment" value="left, centre_y" />
+        <translation id="text" translation_id="227793" type="use" value="Condition" />
+        <translation id="hint" translation_id="396496" type="use" value="Overall Physical Condition represents the player's level of fitness. If he is fatigued, recently recovered from injury or just unfit he will have a low Overall Physical Condition rating. Playing matches when this is low risks injury as well as an even lower rating in future. Only rest from matches and/or training can help a player to recover.[COMMENT: hint explanation for Overall Conditioning label, use top ten matches, change to ID 396172 to add context]" />
+      </record>
+
+      <record id="search_filter">
+        <integer id="id" value="pfpc" />
+      </record>
+    </record>
+
 	<!--The label version of the physical condition-->
     <record>
       <integer id="id" value="PcOL" />
@@ -5686,7 +5713,7 @@
 				<integer id="min_value" value="5000" />
 				<integer id="max_value" value="10000" />
 			</record>
-			
+
 		</record>
 
 		<!-- Used by the IGE only now -->
@@ -5703,7 +5730,7 @@
 				<integer id="max_value" value="10000" />
 			</record>
 		</record>
-    
+
 	<!--The icon version of the match sharpness-->
 		<record>
 			<integer id="id" value="PftI" />
