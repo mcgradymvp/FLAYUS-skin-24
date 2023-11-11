@@ -1,0 +1,32 @@
+<!-- CREATED BY FMENHANCED -->
+<panel>
+	<container id="SUBP" class="main_subtle_box">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+
+	<widget class="popup_button" id="popv" height="30" width="30" click_event="msis" appearance="buttons/custom/over state only/button" fixed="true" navigation_focus_target="true" secondary_icon_alignment="middle">
+		<layout class="stick_to_sides_attachment" alignment="right,top"/>
+	</widget>
+
+	<!-- Back of Shirt -->
+	<widget class="kit_icon" id="cKit" file="player/fme/top selector panel/player shirt" image_alignment="centre" scale_picture="true" kit_path="zoomed/large" kit_number_path="large" late_loading="true">
+		<translation id="title" translation_id="393155" type="use" value="Back of Shirt[COMMENT: FR 10982, content for Finances Screen denoting a type of sponsorship]"/>
+	</widget>
+
+	<!-- Transfer Information -->
+	<widget class="player_scout_reports_panel" id="ptrl" file="player/fme/top selector panel/player transfer information" valid_for_unemployed_player="false" valid_for_international_managers_other_team="false" valid_for_unemployed_managers="false" late_loading="true">
+		<translation id="title" translation_id="251898" type="use" value="Transfer Information[COMMENT: scout report panel box heading]"/>
+	</widget>
+
+	<!-- Player Report -->
+	<!-- <container class="player_scout_reports_panel" id="psRB" file="player/fme/top selector panel/player report" late_loading="true">
+		<translation id="title" translation_id="542604" type="use" value="Player Report" />
+	</container> -->
+
+	<!-- Attribute Polygon -->
+	<widget file="player/fme/top selector panel/player attribute analyser" id="paAn" class="client_object_viewer_xml_panel" late_loading="true">
+		<translation id="title" translation_id="334971" type="use" value="Attribute Analysis[COMMENT: player overview; title for a panel showing an attribute analyisis diagram]" />
+	</widget>
+
+</panel>

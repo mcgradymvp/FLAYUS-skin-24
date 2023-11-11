@@ -1,0 +1,24 @@
+<panel>
+    <layout class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
+
+    <!-- Contract -->
+    <widget class="player_contract_panel" hidden="true" file="player/fme/tabs/contract/contract">
+        <record id="object_property">
+            <list id="get_properties">
+                <record get_property="Popj" set_property="Shwn"/>
+                <record get_property="objt" set_property="objt"/>
+            </list>
+        </record>
+    </widget>
+
+    <!-- Loan Contract -->
+    <widget class="player_contract_panel" id="2cnt" pUOC="true" hidden="true" file="player/fme/tabs/contract/contract">
+        <record id="object_property">
+            <list id="get_properties">
+                <record get_property="Popj" set_property="Shwn"/>
+                <record get_property="objt" set_property="objt"/>
+            </list>
+        </record>
+    </widget>
+
+</panel>

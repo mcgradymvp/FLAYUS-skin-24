@@ -1,0 +1,38 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+  
+	<boolean id="should_force_refresh" value="true" />
+
+	<container class="icon_box" icon="icons/custom/icon box/transfer">
+		<layout class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="4"/>
+
+		<container>
+			<layout class="vertical_arrange_autosize_all"/>
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" id="Ptin" section="Ptin" auto_size="horizontal">
+				<translation id="text" translation_id="227953" type="use" value="Transfer Status" />
+			</widget>
+		</container>
+
+		<container class="scrolling_box">
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- Transfer status -->
+				<widget class="transfer_status_label" id="trnc" format="1" auto_size="vertical" size="large" style="semi_bold"/>
+
+				<!-- Loan status -->
+				<widget class="loan_status_label" id="lonc" format="1" auto_size="vertical" />
+
+				<!-- Automatic response setting -->
+				<widget class="label" id="ofop" auto_size="vertical" />
+
+				<!-- Manager of football instructions-->
+				<widget class="label" id="dofl" auto_size="vertical" />
+			</container>
+		</container>
+	</container>
+</panel>

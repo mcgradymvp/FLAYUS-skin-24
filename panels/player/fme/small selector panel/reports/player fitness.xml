@@ -1,0 +1,166 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<boolean id="should_force_refresh" value="true" />
+
+	<container class="icon_box" icon="icons/custom/icon box/fitness">
+		<layout class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="4"/>
+
+		<container>
+			<layout class="vertical_arrange_autosize"/>
+
+			<!-- Human Controlled -->
+			<container>
+				<attachment class="vertical_arrange_autosize_all"/>
+
+				<record id="object_property" get_property="piHc" set_property="Shwn"/>
+
+				<!-- At Club -->
+				<container>
+					<attachment class="vertical_arrange_autosize_all"/>
+
+					<record id="object_property" get_property="Pion" set_property="hidn"/>
+
+					<string id="skin_style" value="title link" />
+
+					<widget class="link_button" id="link" section="PInj" auto_size="horizontal">
+						<translation id="text" translation_id="247571" type="use" value="Fitness" />
+					</widget>
+
+				</container>
+
+				<!-- On Loan -->
+				<container>
+					<attachment class="vertical_arrange_autosize_all"/>
+
+					<record id="object_property" get_property="Pion" set_property="Shwn"/>
+
+					<string id="skin_style" value="title link" />
+
+					<widget class="link_button" show_button_appearance="false" wants_mouse_events="false" font="title" auto_size="horizontal">
+						<translation id="text" translation_id="247571" type="use" value="Fitness" />
+					</widget>
+
+				</container>
+
+			</container>
+
+			<!-- Not Human Controlled -->
+			<container>
+				<attachment class="vertical_arrange_autosize_all"/>
+
+				<record id="object_property" get_property="piHc" set_property="hidn"/>
+
+				<string id="skin_style" value="title link" />
+
+				<widget class="link_button" show_button_appearance="false" wants_mouse_events="false" font="title" auto_size="horizontal">
+					<translation id="text" translation_id="247571" type="use" value="Fitness" />
+				</widget>
+
+			</container>
+
+		</container>
+
+		<container class="scrolling_box" navigation_container="true" hide_scrollbars="true">
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize"/>
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,as_needed" />
+					<!-- Fitness text -->
+					<widget class="fitness_label" id="fitL" multiline="false" auto_size="all" style="semi_bold" size="large"/>
+
+				</container>
+
+				<container draw_vertical_dividers="true">
+					<layout class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_gap="16"/>
+
+					<!-- Condition -->
+					<container>
+						<layout class="vertical_arrange_autosize" vertical_gap="0"/>
+
+						<widget class="label" auto_size="vertical" font="label">
+							<translation id="text" translation_id="227793" type="use" value="Condition"/>
+						</widget>
+
+						<container>
+							<layout class="horizontal_arrange_vertical_autosize"/>
+
+							<widget class="client_object_property_panel" property="PcOI" height="25" width="25">
+								<record id="object_property" get_property="objt" set_property="objt" />
+							</widget>
+
+						</container>
+
+					</container>
+
+					<!-- Sharpness -->
+					<container>
+						<layout class="vertical_arrange_autosize" vertical_gap="0"/>
+
+						<widget class="label" auto_size="vertical" font="label">
+							<translation id="text" translation_id="395316" type="use" value="Sharpness"/>
+						</widget>
+
+						<container>
+							<layout class="horizontal_arrange_vertical_autosize"/>
+
+							<widget class="client_object_property_panel" property="PftI" height="25" width="25">
+								<record id="object_property" get_property="objt" set_property="objt" />
+							</widget>
+
+						</container>
+
+					</container>
+
+					<!-- Treatment | Injury Risk -->
+					<container>
+						<layout class="vertical_arrange_autosize" vertical_gap="0"/>
+
+						<!-- Treatment -->
+						<container id="treC">
+							<layout class="vertical_arrange_autosize" vertical_gap="0"/>
+
+							<widget class="label" auto_size="vertical" font="label">
+								<translation id="text" translation_id="447652" type="use" value="Treatment[COMMENT: FR 20159; player injury table; treatment type player is receiving column header]"/>
+							</widget>
+
+							<widget class="label" id="trea" auto_size="vertical" size="large" style="semi_bold"/>
+
+						</container>
+
+						<!-- Injury Risk -->
+						<container id="inrC">
+							<layout class="vertical_arrange_autosize" vertical_gap="0"/>
+
+							<widget class="label" auto_size="vertical" font="label">
+								<translation id="text" translation_id="450118" type="use" value="Injury Risk[COMMENT: player injury panel section detailing susceptibility to injury, title]" />
+							</widget>
+
+							<widget class="injury_risk_label" id="injR" auto_size="vertical" size="large" style="semi_bold"/>
+
+						</container>
+
+					</container>
+
+				</container>
+
+				<container class="player_injury_panel" file="none">
+					<layout class="vertical_arrange_autosize" vertical_offset="4"/>
+
+					<record id="object_property" get_property="objt" set_property="objt"/>
+
+					<widget class="text" id="AsQt" auto_size="vertical">
+						<record id="object_property" get_property="Pion" set_property="hidn"/>
+					</widget>
+
+				</container>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

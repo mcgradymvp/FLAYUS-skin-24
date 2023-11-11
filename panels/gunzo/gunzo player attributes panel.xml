@@ -20,7 +20,7 @@
 				<record id="widget_info" class="training_improvement" />
 			</record>
 			<!-- Attribute value -->
-			<record index="2" id="val " sort_disabled="true" column_alignment="centre" right="0">
+			<record index="2" id="val " sort_disabled="true" column_alignment="centre" right="8">
 				<record id="widget_info" class="attribute_label" font="gz_attribute" size="13" style="bold" alignment="centre_x,centre_y" multiline="false"/>
 			</record>
 			<!-- Attribute edit widget -->

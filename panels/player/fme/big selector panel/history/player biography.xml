@@ -1,0 +1,38 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container>
+		<layout class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="5"/>
+
+		<container>
+			<layout class="vertical_arrange_autosize_all"/>
+
+			<string id="skin_style" value="title link" />
+
+			<widget class="link_button" section="PBio" auto_size="all" navigation_focus_target="true">
+				<translation id="text" translation_id="295868" type="use" value="Biography[COMMENT: player history panel; title of biography titled box]" />
+			</widget>
+
+		</container>
+
+		<container>
+			<layout class="stick_to_sides_attachment" apply_to_children="true" />
+
+			<container class="scrolling_box" navigation_container="true">
+				<widget class="person_bio_text" id="biot" spec="text"  auto_size="vertical" size="normal"/>
+			</container>
+
+			<container id="nbct" hidden="true">
+				<layout class="vertical_arrange"/>
+
+				<widget class="text" colour="faded text" auto_size="vertical">
+					<translation id="text" translation_id="328535" type="use" value="This person does not have a biography yet.[COMMENT: person history biography; string telling the user why the biography is not shown]" />
+				</widget>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

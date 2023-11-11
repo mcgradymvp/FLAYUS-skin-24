@@ -1,0 +1,88 @@
+<panel>
+    <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+    <widget class="table" mode="fill_rows,stripe_rows" layout="38,-1" fixed_size_rows="true" row_height="40.9" column_spacing="8">
+
+        <record id="object_property" get_property="objt" set_property="objt"/>
+        <record id="default_properties" red_replacement="primary" blue_replacement="secondary" scale_picture="true" image_alignment="centre_x,centre_y"/>
+
+        <list id="column_table_properties">
+            <record index="0" left="8"/>
+            <record index="1" top="2" bottom="5"/>
+        </list>
+
+        <!-- Player Value Icon -->
+        <widget class="picture" file="fme/icons/transfer/cost" row="0" col="0"/>
+
+        <!-- Player Value -->
+        <container row="0" col="1">
+            <layout class="vertical_arrange" vertical_alignment="fill" vertical_gap="0"/>
+
+            <widget class="text" font="label" colour="faded text" alignment="left,bottom">
+                <translation id="text" translation_id="227806" type="use" value="Value" />
+            </widget>
+
+            <widget class="transfer_value_label" show_button_appearance="false" font="value" size="small" auto_size="all" alignment="left, centre_y">
+                <record id="object_property" get_property="Pdva"/>
+            </widget>
+
+        </container>
+
+        <!-- Asking Price Icon -->
+        <widget class="picture" file="fme/icons/transfer/wages" row="1" col="0"/>
+
+        <!-- Asking Price -->
+        <container row="1" col="1">
+            <layout class="vertical_arrange" vertical_alignment="fill" vertical_gap="0"/>
+
+            <widget class="text" font="label" colour="faded text" alignment="left,bottom">
+                <translation id="text" translation_id="227778" type="use" value="Asking Price" />
+            </widget>
+
+            <widget class="value_label" font="value" size="small" auto_size="all" alignment="left, centre_y">
+                <record id="object_property" get_property="Papr"/>
+            </widget>
+
+        </container>
+
+        <!-- Transfer Status Icon -->
+        <widget class="picture" file="fme/icons/transfer/exit" row="2" col="0"/>
+
+        <!-- Transfer Status -->
+        <container row="2" col="1">
+            <layout class="vertical_arrange" vertical_alignment="fill" vertical_gap="0"/>
+
+            <widget class="text" font="label" colour="faded text" alignment="left,bottom">
+                <translation id="text" translation_id="227953" type="use" value="Transfer Status" />
+            </widget>
+
+            <container>
+                <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+                <widget class="info_icon_hint_text" id="TStR" secondary_icon=""/>
+                <widget class="transfer_status_label" id="TSta" font="value" size="small" alignment="left,centre_y" auto_size="all"/>
+            </container>
+
+        </container>
+
+        <!-- Loan Status Icon -->
+        <widget class="picture" file="fme/icons/transfer/loan" row="3" col="0"/>
+
+        <!-- Loan Status -->
+        <container row="3" col="1">
+            <layout class="vertical_arrange" vertical_alignment="fill" vertical_gap="0"/>
+
+            <widget class="text" font="label" colour="faded text" alignment="left,bottom">
+                <translation id="text" translation_id="247489" type="use" value="Loan Status" />
+            </widget>
+
+            <container>
+                <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+                <widget class="info_icon_hint_text" id="LStR" secondary_icon=""/>
+                <widget class="loan_status_label" id="LSta" font="value" size="small" alignment="left,centre_y" auto_size="all"/>
+            </container>
+
+        </container>
+
+    </widget>
+
+</panel>

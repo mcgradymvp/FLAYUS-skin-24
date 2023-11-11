@@ -1,0 +1,173 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true" />
+
+	<string id="skin_style" value="title link"/>
+
+	<container>
+		<layout class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="8"/>
+
+		<container>
+			<layout class="vertical_arrange_autosize" horizontal_alignment="left"/>
+
+			<widget class="link_button" section="Ptin" auto_size="all">
+				<translation id="text" translation_id="251898" type="use" value="Transfer Information[COMMENT: scout report panel box heading]"/>
+			</widget>
+
+		</container>
+
+		<container>
+			<layout class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+
+			<container>
+				<layout class="stick_to_sides_attachment" apply_to_children="true" inset="0,0,0,0"/>
+
+				<container>
+					<layout class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+
+					<!-- No scout report -->
+					<widget id="nsrc" class="player_transfer_information_panel" file="player/fme/top selector panel/player transfer information labels">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+
+					<!-- Already being scounted -->
+					<widget id="Arbs" class="player_transfer_information_panel" file="player/fme/top selector panel/player transfer information labels">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+
+					<!-- Already being scouted by pool -->
+					<widget id="Pool" class="player_transfer_information_panel" file="player/fme/top selector panel/player transfer information labels">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+
+				</container>
+
+			</container>
+
+			<!-- Scout Report -->
+			<container id="scou">
+				<layout class="stick_to_sides_attachment" apply_to_children="true" inset="0,0,0,0"/>
+
+				<container class="player_reports_overview_summary_panel" always_recolour_wage_cost_text="true" recommendation_widget_mode="0" mode="1" file="none">
+					<layout class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="0"/>
+
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="Pspc" />
+								<integer id="set_property" value="Pspc" />
+							</record>
+							<record>
+								<integer id="get_property" value="Shlo" />
+								<integer id="set_property" value="Shlo" />
+							</record>
+							<record>
+								<integer id="get_property" value="Pers" />
+								<integer id="set_property" value="objt" />
+							</record>
+							<record>
+								<integer id="get_property" value="hpde" />
+								<integer id="set_property" value="hidn" />
+							</record>
+						</list>
+					</record>
+
+					<!-- Human Owned -->
+					<widget id="strS" class="player_transfer_information_panel" file="player/fme/top selector panel/player transfer information labels">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+
+					<!-- AI Owned -->
+					<container id="trif">
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+						<widget class="table" mode="fill_rows,stripe_rows" layout="38,-1" fixed_size_rows="true" row_height="40.9" column_spacing="8">
+
+							<record id="object_property" get_property="objt" set_property="objt"/>
+							<record id="default_properties" red_replacement="primary" blue_replacement="secondary" scale_picture="true" image_alignment="centre_x,centre_y"/>
+
+							<list id="column_table_properties">
+								<record index="0" left="8"/>
+								<record index="1" top="5" bottom="5"/>
+							</list>
+
+							<!-- Transfer Value Label -->
+							<widget class="picture" file="fme/icons/transfer/cost" row="0" col="0"/>
+
+							<!-- Transfer Value -->
+							<container row="0" col="1">
+								<layout class="vertical_arrange_autosize" vertical_gap="0"/>
+
+								<record id="default_properties" multiline="false" auto_size="all"/>
+
+								<widget class="text" font="label" colour="faded text" alignment="left,bottom">
+									<translation id="text" translation_id="315461" type="use" value="Transfer Value" />
+								</widget>
+
+								<widget class="text" id="cosw" font="value" size="small" alignment="left,centre_y"/>
+
+							</container>
+
+							<!-- Estimated Wage Label -->
+							<widget class="picture" file="fme/icons/transfer/wages" row="1" col="0"/>
+
+							<!-- Estimated Wage -->
+							<container row="1" col="1">
+								<layout class="vertical_arrange_autosize" vertical_gap="0"/>
+
+								<record id="default_properties" multiline="false" auto_size="all"/>
+
+								<widget class="text" font="label" colour="faded text" alignment="left,bottom">
+									<translation id="text" translation_id="450789" type="use" value="Estimated Wage[COMMENT: FR 21116, scout report panel label]" />
+								</widget>
+
+								<widget class="text" id="ewaw" font="value" size="small" alignment="left,centre_y"/>
+
+							</container>
+
+							<!-- Transfer Interest Label -->
+							<widget class="picture" file="fme/icons/transfer/exit" row="2" col="0"/>
+
+							<!-- Transfer Interest -->
+							<container row="2" col="1">
+								<layout class="vertical_arrange_autosize" vertical_gap="0"/>
+
+								<record id="default_properties" multiline="false" auto_size="all"/>
+
+								<widget class="text" font="label" colour="faded text" alignment="left,bottom">
+									<translation id="text" translation_id="450790" type="use" value="Transfer Interest[COMMENT: FR 21116, scout report panel label]" />
+								</widget>
+
+								<widget class="text" id="triw" font="value" size="small" alignment="left,centre_y"/>
+
+							</container>
+
+							<!-- Loan Interest Label -->
+							<widget class="picture" file="fme/icons/transfer/loan" row="3" col="0"/>
+
+							<!-- Loan Interest -->
+							<container row="3" col="1">
+								<layout class="vertical_arrange_autosize" vertical_gap="0"/>
+
+								<record id="default_properties" multiline="false" auto_size="all"/>
+
+								<widget class="text" font="label" colour="faded text" alignment="left,bottom">
+									<translation id="text" translation_id="450791" type="use" value="Loan Interest[COMMENT: FR 21116, scout report panel label]" />
+								</widget>
+
+								<widget class="text" id="loiw" font="value" size="small" alignment="left,centre_y"/>
+
+							</container>
+
+						</widget>
+
+					</container>
+
+				</container>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

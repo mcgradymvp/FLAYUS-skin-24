@@ -1,0 +1,487 @@
+<panel>
+    <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+    <!-- Required to Function -->
+    <container id="agnL"/>
+    <container id="cntI"/>
+    <container id="bosT"/>
+    <container id="loaT"/>
+    <container id="valT"/>
+    <container id="aspV"/>
+
+    <!-- Main panel and sidebar -->
+    <container class="horizontal_arrange_container" id="tstE" navigation_container="true" gap="8" layout="-1,-1,-1">
+
+        <!-- Squad Selection Rules & Interested Clubs -->
+        <container class="main_subtle_box">
+            <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+            <container class="scrolling_box">
+
+                <container>
+                    <attachment class="vertical_arrange_autosize" vertical_gap="8"/>
+
+                    <container>
+                        <attachment class="vertical_arrange_autosize"/>
+
+                        <widget class="text" font="title" auto_size="vertical">
+                            <translation id="text" translation_id="510402" type="use" value="Interested Clubs[COMMENT: AREA: Player Transfer Information panel; FR-BN: 32754; NOTE: Interested clubs subpanel title]" />
+                        </widget>
+
+                        <container class="player_transfer_interest_panel" id="Pint" file="none">
+
+                            <record id="object_property" get_property="objt" set_property="objt"/>
+
+                            <attachment_group class="vertical_arrange_autosize" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" vertical_gap="8"/>
+
+                            <container id="manC">
+                                <attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_gap="10" vertical_offset="0" />
+
+                                <!-- Team badge -->
+                                <widget class="object_portrait_picture" id="manP" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" height="60" width="60" />
+
+                                <!-- Main interest text -->
+                                <container>
+                                    <attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0"/>
+
+                                    <widget class="label" spec="text" style="bold" auto_size="vertical">
+                                        <translation id="text" translation_id="350859" type="use" value="Main Interest[COMMENT: transfer interest panel]" />
+                                    </widget>
+                                    <widget class="text" id="manT" auto_size="vertical" />
+                                </container>
+
+                            </container>
+
+                            <container>
+                                <attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0"/>
+
+                                <!-- Transfer Offers -->
+                                <widget class="table" id="TraT" layout="-7,-4,65,75" mode="fill_rows, stripe_rows" auto_size="vertical">
+                                    <boolean id="fixed_size_rows" value="false" />
+                                    <boolean id="auto_size_rows" value="true" />
+                                    <list id="default_sort_column">
+                                        <integer value="3" />
+                                        <integer value="0" />
+                                    </list>
+
+                                    <!-- Title of box -->
+                                    <list id="headings">
+                                        <record column_span="3" alignment="left,centre_y" id="rcof">
+                                            <translation id="text" translation_id="306802" type="use" value="Recent Offers" />
+                                        </record>
+                                        <record alignment="left,centre_y" id="ofdt">
+                                            <translation id="text" translation_id="329373" type="use" value="Offer Date[COMMENT: player_transfer_interest_panel; table header text indicating the date a transfer offer was made for a player]" />
+                                        </record>
+                                    </list>
+
+                                    <!-- table isn't sortable -->
+                                    <list id="column_table_properties">
+                                        <record index="1" sort_disabled="true" />
+                                    </list>
+                                </widget>
+
+                                <!-- Major club interest -->
+                                <widget class="table" id="MajT" layout="-1,-1,65,100" row_height="18" mode="fill_rows, stripe_rows" auto_size="vertical">
+                                    <boolean id="fixed_size_rows" value="false" />
+                                    <boolean id="auto_size_rows" value="true" />
+                                    <list id="default_sort_column">
+                                        <integer value="0" />
+                                    </list>
+
+                                    <!-- Title of box -->
+                                    <list id="headings">
+                                        <record column_span="4" alignment="left,centre_y">
+                                            <translation id="text" translation_id="306803" type="use" value="Major Interest From Clubs" />
+                                        </record>
+                                    </list>
+
+                                    <list id="column_table_properties">
+                                        <record index="0" auto_hide_priority="1" minimum_width="150" />
+                                        <record index="1" auto_hide_priority="600" />
+                                        <record index="2" auto_hide_priority="1"/>
+                                        <record index="3" auto_hide_priority="1"/>
+                                    </list>
+                                </widget>
+
+                                <!-- Minor club interest -->
+                                <widget class="table" id="MinT" layout="-1,-1,65,100" row_height="18" mode="fill_rows, stripe_rows" auto_size="vertical">
+                                    <boolean id="fixed_size_rows" value="false" />
+                                    <boolean id="auto_size_rows" value="true" />
+                                    <list id="default_sort_column">
+                                        <integer value="0" />
+                                    </list>
+                                    <!-- Title of box -->
+                                    <list id="headings">
+                                        <record column_span="4" alignment="left,centre_y">
+                                            <translation id="text" translation_id="306804" type="use" value="Minor Interest From Clubs" />
+                                        </record>
+                                    </list>
+
+                                    <list id="column_table_properties">
+                                        <record index="0" auto_hide_priority="1" minimum_width="150" />
+                                        <record index="1" auto_hide_priority="600" />
+                                        <record index="2" auto_hide_priority="1"/>
+                                        <record index="3" auto_hide_priority="1" />
+                                    </list>
+                                </widget>
+                            </container>
+
+                        </container>
+
+                    </container>
+
+                </container>
+
+            </container>
+
+        </container>
+
+        <!-- Owned by Human -->
+        <container class="main_subtle_box" id="hmCI" hidden="true">
+            <layout class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="8"/>
+
+            <widget class="text" font="title" auto_size="vertical">
+                <translation id="text" translation_id="251898" type="use" value="Transfer Information[COMMENT: scout report panel box heading]" />
+            </widget>
+
+            <widget class="set_transfer_status_panel" file="none">
+                <attachment class="vertical_arrange" vertical_layout="-1,33" vertical_gap="8"/>
+                <record id="object_property" get_property="objt" set_property="objt" />
+
+                <container class="scrolling_box">
+
+                    <container>
+                        <attachment_group class="vertical_arrange_autosize" vertical_alignment="top, extend" vertical_offset="0" vertical_gap="12" horizontal_inset="0"/>
+
+                        <!-- Agent feedback -->
+                        <container class="agent_transfer_feedback_panel" id="AgFt" height="50">
+                            <string id="remove_if" value="is_fmt"/>
+                        </container>
+
+                        <!-- Retiring -->
+                        <widget class="person_happiness_panel" file="none">
+                            <attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="4" horizontal_inset="0"/>
+
+                            <record id="object_property" get_property="Prtg" set_property="Shwn" />
+
+                            <widget class="text" id="splw" auto_size="vertical"/>
+
+                        </widget>
+
+                        <!-- Loan/transfer status -->
+                        <container>
+                            <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="10" vertical_inset="0"/>
+
+                            <record id="object_property" get_property="Prtg" set_property="hidn" />
+
+                            <container id="trnC">
+                                <attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="4" horizontal_inset="0"/>
+
+                                <widget class="label" spec="text" auto_size="vertical" font="label">
+                                    <translation id="text" translation_id="227953" type="use" value="Transfer Status"/>
+                                </widget>
+
+                                <widget class="popup_button" id="trnS" auto_size="vertical" auto_tick_exclusive="true"/>
+
+                            </container>
+
+                            <container id="loaC">
+                                <attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="4" horizontal_inset="0"/>
+
+                                <widget class="label" spec="text" auto_size="vertical" font="label">
+                                    <translation id="text" translation_id="247489" type="use" value="Loan Status"/>
+                                </widget>
+
+                                <widget class="popup_button" id="loaS" auto_size="vertical" auto_tick_exclusive="true"/>
+
+                            </container>
+
+                        </container>
+
+                        <!-- Separator -->
+                        <widget class="horizontal_divider">
+                            <record id="object_property" get_property="Prtg" set_property="hidn" />
+                        </widget>
+
+                        <!-- Agent feedback -->
+                        <container class="agent_transfer_feedback_panel" id="AgFp" height="50"/>
+
+                        <container id="askC">
+                            <attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="5" horizontal_inset="0"/>
+
+                            <!-- Set asking price and transfer offer response -->
+                            <container>
+                                <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="10" vertical_inset="0"/>
+
+                                <!-- Asking price -->
+                                <container>
+                                    <attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="5" horizontal_inset="0"/>
+
+                                    <widget class="label" spec="text" auto_size="vertical" font="label">
+                                        <translation id="text" translation_id="227778" type="use" value="Asking Price"/>
+                                    </widget>
+                                    <widget class="cash_selection_list" id="askp" cash_round_style="4" cash_min_value="0" cash_max_value="200000000" select_event="cask" auto_size="vertical"/>
+                                </container>
+
+                                <!-- Offer response -->
+                                <container>
+                                    <attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="5" horizontal_inset="0"/>
+
+                                    <widget class="label" spec="text" auto_size="vertical" font="label">
+                                        <translation id="text" translation_id="352477" type="use" value="When a transfer offer is received...[COMMENT: Transfer aststus/information; Label for widget that allow the user to choose what should happen if an offer is received for a player. Example option: 'I'll respond to it myself']"/>
+                                    </widget>
+                                    <widget class="popup_button" id="inst" auto_size="vertical" auto_tick_exclusive="true" select_event="inst">
+                                        <integer id="selection" value="none"/>
+                                    </widget>
+                                </container>
+                            </container>
+                        </container>
+
+                        <container id="lopc">
+                            <attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="5" horizontal_inset="0"/>
+
+                            <container>
+                                <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="10" vertical_inset="0"/>
+
+                                <!-- Asking price -->
+                                <container>
+                                    <attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="5" horizontal_inset="0"/>
+
+                                    <widget class="label" id="wppl" alignment="left, centre_y" colour="faded text" font="label" auto_size="vertical" size="small">
+                                        <translation id="text" translation_id="420694" type="use" value="Playing Wage Percentage[COMMENT: FR 14469; transfer offer; wages paid to loaning club when the player is playing]" />
+                                        <translation id="label_hint" translation_id="469785" type="use" value="A proportion of the player's wage to be paid by the loaning club when the player is playing in the first team[COMMENT: FR 14469; transfer offer; wages paid to loaning club when the player is playing]" />
+                                    </widget>
+
+                                    <widget class="popup_button" id="wppb" alignment="left, centre_y" style="bold" size="10" auto_size="vertical" select_event="eLWP"/>
+                                </container>
+
+                                <!-- Offer response -->
+                                <container>
+                                    <global id="hidden" name="is_fmt"/>
+                                    <attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="5" horizontal_inset="0"/>
+
+                                    <widget class="label" alignment="left, centre_y" colour="faded text" font="label" auto_size="vertical" size="small">
+                                        <translation id="text" translation_id="420695" type="use" value="Unused Wage Percentage[COMMENT: FR 14469; transfer offer; wages paid to loaning club when the player is not playing]"/>
+                                        <translation id="label_hint" translation_id="469786" type="use" value="A proportion of the player's wage to be paid by the loaning club when the player is not playing in the first team[COMMENT: FR 14469; transfer offer; wages paid to loaning club when the player is not playing]"/>
+                                    </widget>
+
+                                    <widget class="popup_button" id="nwpb" alignment="left, centre_y" style="bold" size="10" auto_size="vertical" select_event="eNWP"/>
+                                </container>
+                            </container>
+                        </container>
+
+                        <container id="UnwS">
+                            <global id="hidden" name="is_fmt"/>
+
+                            <attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="0" vertical_gap="5" horizontal_inset="0"/>
+
+                            <!-- Separator -->
+                            <widget class="horizontal_divider"/>
+
+                            <!-- Title. Something like 'Instructions for Director of Football' but job name can vary -->
+                            <widget class="label" id="Utit" spec="text" auto_size="vertical" font="label"/>
+
+                            <!-- Unwanted list -->
+                            <container>
+                                <attachment_group class="vertical_arrange_autosize" vertical_gap="8"/>
+
+                                <!-- Choose shortlist type-->
+                                <container>
+                                    <attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="8" horizontal_inset="0"/>
+
+                                    <!-- Description - 'You can give your Directory of football instructions etc.' -->
+                                    <widget class="text" id="Udsc" spec="text" auto_size="vertical" colour="faded text"/>
+
+                                    <container>
+                                        <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="25" vertical_inset="0">
+                                            <global id="horizontal_gap" name="ui.button_row_gap"/>
+                                        </attachment_group>
+
+                                        <!-- Shortlist type menu -->
+                                        <widget class="popup_button" id="dofS" auto_size="vertical"/>
+
+                                        <widget class="link_button" id="unwK" auto_size="vertical">
+                                            <translation id="text" translation_id="336073" type="use" value="Unwanted List[COMMENT: transfer lists; type of transfer list, used for getting rid of players in your squad]"/>
+                                        </widget>
+
+                                        <widget class="link_button" id="devK" auto_size="vertical">
+                                            <translation id="text" translation_id="335031" type="use" value="Development List"/>
+                                        </widget>
+                                    </container>
+                                </container>
+
+                                <container class="inner_subtle_box" id="uwnt" hidden="true">
+                                    <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-2, -1" horizontal_gap="8"/>
+
+                                    <!-- Table with the widgets for editing the listing -->
+                                    <widget class="table" mode="fill_rows" layout="-3, -2" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical">
+                                        <list id="column_table_properties">
+                                            <record indx="0"/>
+                                            <record indx="1" left="10"/>
+                                        </list>
+
+                                        <widget class="label" col="0" row="0" spec="text" auto_size="vertical" font="label">
+                                            <translation id="text" translation_id="336009" type="use" value="Minimum Acceptable Amount[COMMENT: transfers unwanted list; column header, mimimum bid to sell for if delegated to a member of staff]"/>
+                                        </widget>
+                                        <widget class="cash_selection_list" col="0" row="1" id="maap" spec="text" cash_round_style="4" cash_min_value="0" cash_max_value="200000000" select_event="maap" height="26"/>
+
+                                        <widget class="label" col="1" row="0" spec="text" auto_size="vertical" font="label">
+                                            <translation id="text" translation_id="335979" type="use" value="Expiry Date[COMMENT: transfers unwanted list; column header, expiry date of bid]"/>
+                                        </widget>
+                                        <widget class="date_select_panel" col="1" row="1" id="eDat" event_id="eDat" spec="text" height="26" icon="icons/16px/schedule"/>
+                                    </widget>
+
+                                    <!-- Status -->
+                                    <container>
+                                        <attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+
+                                        <widget class="label" spec="text" auto_size="vertical" font="label">
+                                            <translation id="text" translation_id="350959" type="use" value="Status:[COMMENT: transfer status panel; label for ongoing progress of a director of football action]"/>
+                                        </widget>
+                                        <widget class="label" id="stat" spec="text" height="30" alignment="left, centre_y" font="value">
+                                            <translation id="text" translation_id="339793" type="use" value="Not Started[COMMENT: transfer target list screen, status of transfer target]"/>
+                                        </widget>
+                                    </container>
+                                </container>
+                            </container>
+
+                            <widget class="spacer" height="4"/>
+                            <widget class="horizontal_divider"/>
+
+                            <widget class="player_pending_contract_discussion_panel" id="CoDO">
+                                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="-8"/>
+                            </widget>
+
+                        </container>
+
+                    </container>
+
+                </container>
+
+                <!-- Confirm/undo buttons -->
+                <container file="player/set transfer status buttons"/>
+
+            </widget>
+
+        </container>
+
+        <container class="main_subtle_box" id="dclI">
+            <attachment class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="8"/>
+
+            <!-- Non-Human Owned & Has Agent  -->
+            <container class="scrolling_box">
+
+                <container draw_horizontal_dividers="true">
+                    <attachment_group class="vertical_arrange_autosize" horizontal_offset="0" vertical_gap="8"/>
+
+                    <container id="mnBX" class="main_box">
+                        <translation id="title" translation_id="539642" type="use" value="Agent Feedback[COMMENT: AREA: Transfers; SUB-AREA: Loan Back Offer; FR-BN: 32237; TONE: Formal; CHARLIMIT: Shortish; REF-ID: n/a; NOTE: title for loan back offer news item, the agent's feedback on the player]" />
+                        <attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" />
+
+                        <container id="pinT">
+                            <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="10" />
+                            <layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="10" />
+                            <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+                            <!--Player interest text summary-->
+                            <widget class="text" id="intT" auto_size="vertical" multiline="true">
+                                <layout class="stick_to_sides_attachment" id="s2sh" alignment="horizontal" />
+                            </widget>
+
+                            <!--Speak to agent button-->
+                            <widget class="client_action_icon_button" id="intB" auto_size="all">
+                                <layout class="stick_to_sides_attachment" alignment="left" />
+                                <translation id="text" translation_id="510405" type="use" value="Discuss Interest with Agent[COMMENT: AREA: Player Transfer Information panel; FR-BN: 32754; NOTE: Discuss interest button text]" />
+                                <string id="ignore_top_level_submenus" value="true" />
+                                <string id="force_display_text" value="true" />
+                                <string id="action_id" value="apaa" />
+                            </widget>
+                        </container>
+
+                        <container id="ageF">
+                            <attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" />
+
+                            <!--agent discussion information-->
+                            <widget class="text" id="AgDI" auto_size="vertical" colour="faded text" />
+
+                            <!--player demands as supplied by agent-->
+                            <widget class="player_demands_icon_list" id="PlEx" auto_size="vertical" apd_string_mode="panel">
+                                <record id="object_property" get_property="objt" set_property="objt" />
+                            </widget>
+
+                        </container>
+
+                        <container class="spacer" height="10" />
+
+                        <widget class="horizontal_divider" />
+
+                    </container>
+
+                    <container>
+                        <attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal"/>
+
+                        <container class="player_pending_contract_discussion_panel" id="CoDi" file="none">
+                            <attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal"/>
+
+                            <boolean id="should_force_refresh" value="true" />
+
+                            <container class="inner_box">
+                                <attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" />
+                                <translation id="title" translation_id="516463" type="use" value="Discuss Contract[COMMENT: AREA: Player Transfer Information panel; FR-BN: 32244; NOTE: Discuss contract decision section title]" />
+
+                                <container>
+                                    <attachment_group class="vertical_arrange_autosize"/>
+
+                                    <!--Player interest text summary-->
+                                    <widget class="text" id="Inft" auto_size="vertical" multiline="true">
+                                        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+                                    </widget>
+
+                                    <!--Speak to agent button-->
+                                    <widget class="button" id="Disb" auto_size="all">
+                                        <layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+                                        <translation id="text" translation_id="516464" type="use" value="Discuss making a quicker decision[COMMENT: AREA: Player Transfer Information panel; FR-BN: 32244; NOTE: Discuss contract decision button text]" />
+                                    </widget>
+
+                                </container>
+
+                            </container>
+
+                        </container>
+
+                    </container>
+
+                </container>
+
+            </container>
+
+            <!--Transfer action buttons-->
+            <container id="trnB">
+                <attachment class="horizontal_arrange_vertical_autosize" horizontal_alignment="right" vertical_alignment="top" horizontal_offset="0" horizontal_gap="4" />
+
+                <widget class="client_action_popup_button" id="asBT" auto_size="horizontal">
+                    <string id="ignore_top_level_submenus" value="true" />
+                    <string id="force_display_text" value="true" />
+                    <string id="action_id" value="AtSo" />
+                </widget>
+
+                <widget class="client_action_popup_button" id="atBT" auto_size="horizontal">
+                    <string id="ignore_top_level_submenus" value="true" />
+                    <string id="force_display_text" value="true" />
+                    <string id="action_id" value="ApTt" />
+                </widget>
+
+                <widget class="client_action_icon_button" id="ofBT" auto_size="horizontal">
+                    <translation id="text" translation_id="242212" type="use" value="Make Offer" />
+                    <string id="ignore_top_level_submenus" value="true" />
+                    <string id="force_display_text" value="true" />
+                    <string id="action_id" value="offr" />
+                </widget>
+
+            </container>
+
+        </container>
+
+    </container>
+
+</panel>

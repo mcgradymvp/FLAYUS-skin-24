@@ -1,0 +1,193 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+	<string id="skin_style" value="title link"/>
+	<string id="history_table_selected_row_appearance" value="tables/custom/attributes/required/row"/>
+
+	<!-- main area -->
+	<container class="horizontal_adaptive_container" gap="8">
+
+		<record id="default_properties" default_width="-1" minimum_width="450"/>
+
+		<container class="main_subtle_box" draw_horizontal_dividers="true" priority="2">
+			<attachment class="vertical_arrange" vertical_layout="-3,-2" vertical_gap="0"/>
+
+			<!-- Injury History -->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<container>
+					<layout class="horizontal_arrange_vertical_autosize"/>
+					<widget class="link_button" section="PHin" auto_size="all" id="injh">
+						<translation id="text" translation_id="450787" type="use" value="Injury History[COMMENT: FR20159; team injuries panel; panel title for player's historical injury list]"/>
+					</widget>
+				</container>
+
+				<widget class="table" id="InHi" layout="85, -2, -1" mode="fill_rows, select_rows, stripe_rows" sort_disabled="true" select_event="seli" fixed_size_rows="true" auto_size_rows="false" row_height="28" selected_appearance="none">
+					<list id="headings">
+						<record index="0">
+							<translation id="text" translation_id="230120" type="use" value="Date"/>
+						</record>
+						<record index="1">
+							<translation id="text" translation_id="247523" type="use" value="Injury[COMMENT: Player Injury name, table header]"/>
+						</record>
+						<record index="2">
+							<translation id="text" translation_id="247527" type="use" value="Time Out[COMMENT: Player Injury time out, table header]"/>
+						</record>
+					</list>
+
+					<record id="default_properties">
+						<flags id="auto_size" value="vertical"/>
+						<boolean id="multiline" value="false"/>
+						<flags id="alignment" value="left, centre_y"/>
+					</record>
+
+					<list id="row_properties">
+						<record indx="0" />
+					</list>
+
+					<list id="column_table_properties">
+						<record index="0" left="4" alignment="left, centre_y"/>
+						<record index="1" alignment="left, centre_y"/>
+						<record index="2" alignment="left, centre_y"/>
+					</list>
+				</widget>
+
+			</container>
+
+			<!-- current injury details -->
+			<container id="CIct" hidden="true" draw_vertical_dividers="true">
+				<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_gap="0"/>
+
+				<container class="main_box">
+					<attachment_group class="vertical_arrange" vertical_alignment="top, extend" horizontal_alignment="horizontal" horizontal_inset="" />
+
+					<widget class="text" auto_size="all" font="title">
+						<translation id="text" translation_id="447652" type="use" value="Treatment[COMMENT: FR 20159; player injury table; treatment type player is receiving column header]"/>
+					</widget>
+
+					<widget class="text" id="CItr" auto_size="none" multiline="true" size="large" style="bold"/>
+
+				</container>
+
+				<container class="main_box">
+					<attachment_group class="vertical_arrange" vertical_alignment="top, extend" horizontal_alignment="horizontal" horizontal_inset="4" />
+
+					<widget class="text" auto_size="all" font="title">
+						<translation id="text" translation_id="247182" type="use" value="Expected Return"/>
+					</widget>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="top, extend" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="text" id="CIrt" auto_size="vertical" multiline="true" size="large" style="bold"/>
+						<widget class="text" id="CIto" auto_size="vertical" multiline="true"/>
+
+					</container>
+
+				</container>
+
+			</container>
+
+			<!-- injury risk details -->
+			<container class="main_box" id="IRct" hidden="true">
+				<attachment_group class="vertical_arrange" vertical_alignment="top, extend" horizontal_alignment="horizontal" vertical_offset="4" horizontal_inset="0" />
+
+				<widget class="text" id="IRnm" auto_size="vertical" multiline="true" colour="attention" font="capitals_bold"/>
+				<widget class="text" id="IRde" auto_size="none" multiline="true"/>
+			</container>
+
+			<!-- historic injury details -->
+			<container class="main_box" id="HIct" hidden="true">
+				<attachment_group class="vertical_arrange" vertical_alignment="top, extend" horizontal_alignment="horizontal" vertical_offset="4" horizontal_inset="0" />
+
+				<widget class="text" id="HInm" auto_size="vertical" multiline="true" colour="injury_body_colour_past_injury" font="capitals_bold"/>
+				<widget class="text" id="HIde" auto_size="none" multiline="true"/>
+			</container>
+
+			<!-- no injury risk -->
+			<container class="main_box" id="NpRk" hidden="true">
+				<attachment_group class="vertical_arrange" vertical_alignment="top, extend" horizontal_alignment="horizontal" vertical_offset="4" horizontal_inset="0" />
+
+				<widget class="text" id="InRn" auto_size="vertical" multiline="true" colour="text" font="capitals_bold"/>
+				<widget class="text" id="InRd" auto_size="none" multiline="true"/>
+			</container>
+
+		</container>
+
+		<!-- Fitness Blocks -->
+		<container class="main_subtle_box" draw_horizontal_dividers="true" priority="1">
+			<attachment_group class="vertical_arrange" vertical_layout="-1,-1" vertical_gap="0"/>
+
+			<container draw_vertical_dividers="true">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="0"/>
+
+				<!-- match load box -->
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="8" />
+
+					<widget class="text" auto_size="all" font="title" colour="accent">
+						<translation id="text" translation_id="450783" type="use" value="Match Load[COMMENT: FR 20159; team injury risk assessment; table column header for player's recent match workload]"/>
+					</widget>
+
+					<widget class="client_object_viewer_xml_panel" file="player/player risk assessment match load widget" id="MLdw" auto_size="vertical"/>
+				</container>
+
+				<!-- training load box -->
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="8" />
+
+					<widget class="text" auto_size="all" font="title" colour="accent">
+						<translation id="text" translation_id="450784" type="use" value="Training Load[COMMENT: FR 20159; team injury risk assessment; table column header for player's recent training workload]"/>
+					</widget>
+
+					<widget class="client_object_viewer_xml_panel" file="player/player risk assessment training load widget" id="TLdw" auto_size="vertical"/>
+
+				</container>
+
+			</container>
+
+			<container draw_vertical_dividers="true">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" hhorizontal_gap="0"/>
+
+				<!-- injury proneness box -->
+				<container id="IPBx">
+					<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="8" horizontal_alignment="horizontal" horizontal_inset="8" />
+
+
+					<widget class="text" auto_size="all" font="title" colour="accent">
+						<translation id="text" translation_id="450785" type="use" value="Injury Susceptibility[COMMENT: FR 20159; player injury panel; table column header for player's susceptibility to injury]"/>
+					</widget>
+
+					<widget class="client_object_viewer_xml_panel" file="player/player risk assessment injury proneness widget" id="IPrw" auto_size="vertical"/>
+
+				</container>
+
+				<!-- fitness box -->
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="8" horizontal_alignment="horizontal" horizontal_inset="8" />
+
+					<widget class="text" auto_size="vertical" font="title" colour="accent">
+						<translation id="text" translation_id="247571" type="use" value="Fitness"/>
+					</widget>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_layout="-1,-1, 1, -1" vertical_offset="0" vertical_gap="3" horizontal_inset="0" />
+
+						<widget class="client_object_property_panel" property="Pjad">
+							<record id="object_property" get_property="objt" set_property="objt" />
+							<boolean id="hide_detail_text" value="false" />
+						</widget>
+
+					</container>
+
+				</container>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

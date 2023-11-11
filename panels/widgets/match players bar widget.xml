@@ -109,10 +109,9 @@
 			<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_gap="0" horizontal_offset="0"/>
 
 		<!--condition label-->
-		<widget class="pie_condition_label" file="widgets/pie condition label1" id="Pco1" mode="2" alignment="centre_x,centre_y,can_scale">  
-		    <boolean id="should_force_refresh" value="true" />
+		<widget class="pie_condition_label" id="pco1" file="widgets/pie condition label1" show_hover_popup="false" mode="2" alignment="centre_x,centre_y">
 			<record id="object_property">
-				<integer id="get_property" value="PRCF" />
+				<integer id="get_property" value="Pcon" />
 			</record>
 		</widget>
 
@@ -138,8 +137,8 @@
 		</widget>
 
 		<!--Match Sharps-->
-		<widget class="pie_condition_label" file="widgets/pie condition label1" id="Pfi1" mode="1" alignment="centre_x,centre_y,can_scale">
-			<boolean id="should_force_refresh" value="true" />
+		<widget class="pie_condition_label" file="widgets/pie condition label1" id="Pfi1" alignment="centre_x,centre_y">
+				<boolean id="should_force_refresh" value="true" />
 			<record id="object_property">
 				<integer id="get_property" value="Pfit" />
 			</record>

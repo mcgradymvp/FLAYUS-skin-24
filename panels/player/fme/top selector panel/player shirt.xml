@@ -1,0 +1,32 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<!-- Shirt -->
+	<widget class="picture" id="bSHR" image_alignment="centre" scale_picture="true" keep_aspect_ratio="false"/>
+
+	<container class="vertical_arrange_container" alignment="top,extend" offset="16" gap="0">
+
+		<!-- Player Name -->
+		<!-- <widget class="label" id="bNAM" size="14" alignment="top,can_scale" font="fonts/kit name"/> -->
+
+		<!-- Player Number -->
+		<!-- <widget class="picture" id="bNUM" image_alignment="centre" scale_picture="true"/> -->
+
+		<widget class="label" id="bNAM" size="15" alignment="top,can_scale" font="fonts/kit name">
+			<layout class="stick_to_sides_attachment" alignment="top" inset="30"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10"/>
+		</widget>
+		
+		<!-- player number -large -->
+		<widget class="picture" id="bNUM" image_alignment="middle" scale_picture="false" keep_aspect_ratio="true">
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="15"/>
+		</widget>
+
+	</container>
+
+	<!-- Overlay Effect -->
+	<widget class="picture" id="bOVR" image_alignment="centre" scale_picture="true" keep_aspect_ratio="false">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+
+</panel>

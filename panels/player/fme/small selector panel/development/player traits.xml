@@ -1,0 +1,29 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="icon_box" icon="icons/custom/icon box/plans">
+		<layout class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="4"/>
+
+		<container>
+			<layout class="vertical_arrange_autosize_all"/>
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" section="Ptac" auto_size="all">
+				<translation id="text" translation_id="402385" type="use" value="Player Traits[COMMENT: label for the previously named 'Preferred Moves' section (ID 229993), changed to Player Traits because it fits all potential options more suitably]" />
+			</widget>
+
+		</container>
+
+		<container class="scrolling_box">
+
+			<widget class="client_object_viewer_xml_panel" file="player/player information preferred moves" id="pfmp" auto_size="vertical">
+				<record id="object_property" get_property="objt" set_property="objt" />
+			</widget>
+
+		</container>
+
+	</container>
+
+</panel>

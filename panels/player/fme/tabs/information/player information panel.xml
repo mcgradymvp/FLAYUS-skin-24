@@ -1,0 +1,202 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="horizontal_adaptive_container" gap="8">
+
+		<container class="main_subtle_box" priority="2" default_width="-1">
+			<layout class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="8"/>
+
+			<widget class="link_button_title" id="ptes" section="Ppin" auto_size="all">
+				<translation id="text" translation_id="333981" type="use" value="Personal Information[COMMENT: Player information; section title]" />
+			</widget>
+
+			<container class="person_personal_information_panel" file="none" vertical="true">
+				<layout class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
+
+				<record id="object_property" get_property="Pers"/>
+
+				<widget class="table" id="left" layout="-1" mode="fill_rows" auto_size_rows="true" fixed_size_rows="false">
+
+					<!-- full name -->
+					<widget class="label" col="0" row="0" font="label">
+						<translation id="text" translation_id="247452" type="use" value="Full Name" />
+					</widget>
+					<widget class="text" id="namw" col="0" row="1" auto_size="vertical" spec="text" />
+
+					<!-- personality -->
+					<widget class="label" col="0" row="2" font="label">
+						<translation id="text" translation_id="247713" type="use" value="Personality" />
+					</widget>
+					<widget class="text" id="perw" col="0" row="3" auto_size="vertical" spec="text" />
+
+					<!-- favoured clubs -->
+					<widget class="label" col="0" row="6" font="label">
+						<translation id="text" translation_id="247453" type="use" value="Favoured Clubs" />
+					</widget>
+					<widget class="favourite_clubs_text" id="fvcw" col="0" row="7" auto_size="vertical" spec="text" />
+
+					<!-- media description -->
+					<widget class="label" col="0" row="4" font="label">
+						<translation id="text" translation_id="319499" type="use" value="Media Description[COMMENT: personal information screen; text indicating a person's media description]" />
+					</widget>
+					<widget class="text" id="desw" col="0" row="5" auto_size="vertical" spec="text" />
+
+					<!-- similar players "dubbed the new Ronaldo!" -->
+					<widget class="label" col="0" row="8" font="label">
+						<translation id="text" translation_id="247714" type="use" value="Media Comparison[COMMENT: player_profile_panel_title; current legendary player this player is similar to]" />
+					</widget>
+					<widget class="text" id="meco" col="0" row="9" auto_size="vertical" spec="text" />
+
+				</widget>
+
+				<widget class="table" id="rigt" layout="-1" mode="" auto_size_rows="true" fixed_size_rows="false">
+
+					<!-- reputation -->
+					<widget class="label" col="0" row="0" font="label">
+						<translation id="text" translation_id="227963" type="use" value="Reputation" />
+					</widget>
+					<widget class="global_reputation_stars_label" id="repw" col="0" row="1" auto_size="vertical" spec="text" alignment="left" subject_is_person="true" navigation_focus_target="false"/>
+
+					<!-- Media handling -->
+					<widget class="label" col="0" row="2" font="label">
+						<translation id="text" translation_id="291327" type="use" value="Media Handling Style[COMMENT: player transfer panel; how staff handles media]" />
+					</widget>
+					<widget class="media_handling_label" id="mhst" col="0" row="3" auto_size="vertical" spec="text" />
+
+					<!-- Agent -->
+					<widget class="label" col="0" row="4" font="label">
+						<translation id="text" translation_id="308473" type="use" value="Agent" />
+					</widget>
+					<widget class="text" id="agne" col="0" row="5" auto_size="vertical" spec="text" />
+
+					<!-- favoured persons -->
+					<widget class="label" col="0" row="6" font="label">
+						<translation id="text" translation_id="247454" type="use" value="Favoured Personnel" />
+					</widget>
+					<widget class="favourite_personel_text" id="fvpw" col="0" row="7" auto_size="vertical" spec="text" />
+
+					<!-- similar players "similar type of player to" -->
+					<widget class="label" col="0" row="8" font="label">
+						<translation id="text" translation_id="255081" type="use" value="Team-mate Comparison[COMMENT: player_profile_panel_title; team-mate who is a similar type of player]" />
+					</widget>
+					<widget class="text" id="teco" col="0" row="9" auto_size="vertical" spec="text" />
+
+					<!-- past experience -->
+					<widget class="label" col="0" row="10" font="label">
+						<translation id="text" translation_id="319440" type="use" value="Past Playing Experience[COMMENT: add_manager_panel; select starting reputation; define past football experience]" />
+					</widget>
+					<widget class="text" id="paex" col="0" row="11" auto_size="vertical" spec="text" />
+
+					<!-- offers (only shown here for non players) -->
+					<widget class="label" col="0" row="12" font="label">
+						<translation id="text" translation_id="247457" type="use" value="Offers" />
+					</widget>
+					<widget class="text" id="offw" col="0" row="13" auto_size="vertical" spec="text" />
+
+					<!-- manager relationship with you (only shown here for non players -->
+					<widget class="label" col="0" row="14" font="label">
+						<translation id="text" translation_id="243508" type="use" value="Relationship With You" />
+					</widget>
+					<widget class="relationship_label" id="mryw" display_format="0" col="0" row="15" auto_size="vertical" spec="text" />
+				</widget>
+
+			</container>
+
+		</container>
+
+		<container class="main_subtle_box" priority="1" minimum_width="450" default_width="-2">
+			<layout class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="8"/>
+
+			<widget class="link_button_title" id="ptes" section="Ppin" auto_size="all">
+				<translation id="text" translation_id="333939" type="use" value="Nationalities[COMMENT: Player information; section title for a box displaying information about a player's nationality, elligibility and languages spoken]" />
+			</widget>
+
+			<container class="person_personal_information_panel" file="none" vertical="false">
+				<layout class="vertical_arrange"/>
+
+				<record id="object_property" get_property="Pers"/>
+
+				<widget class="table" id="left" layout="-1,-2" mode="fill_rows,stripe_rows" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical">
+
+					<list id="column_table_properties">
+						<record indx="0" left="8" sort_disabled="true" alignment="left,top"/>
+						<record indx="1" left="8" sort_disabled="true" alignment="left,centre_y" />
+					</list>
+
+					<widget class="label" col="0" row="0" font="label">
+						<translation id="text" translation_id="227841" type="use" value="Nationality" />
+					</widget>
+
+					<container col="1" row="0">
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_gap="2"/>
+
+						<widget class="person_nationality_button" id="natw" auto_size="all" alignment="left,centre_y" icon_alignment="left,centre_y" multiline="true"/>
+						<widget class="text" auto_size="all" alignment="left,centre_y" spec="text" value="-"/>
+						<widget class="international_appearances_label" id="inta" auto_size="all" alignment="left,centre_y" spec="text" multiline="true" colour="title"/>
+					</container>
+
+					<widget class="label" col="0" row="4" alignment="left,centre_y" font="label">
+						<translation id="text" translation_id="230158" type="use" value="Other Nationalities" />
+					</widget>
+
+					<widget class="table" col="1" row="4" id="otnt" layout="-1" auto_size_rows="true" fixed_size_rows="true" auto_size="vertical" row_spacing="2">
+
+						<list id="row_properties">
+							<record indx="1" hidden="true"/>
+						</list>
+
+						<list id="column_table_properties">
+							<record index="0" sort_disabled="true" alignment="left,centre_y" />
+						</list>
+					</widget>
+
+					<widget class="label" id="cobp" col="0" row="2" alignment="left,centre_y" font="label">
+						<translation id="text" translation_id="227960" type="use" value="Place Of Birth" />
+					</widget>
+
+					<widget class="place_of_birth_label" id="cobw" col="1" row="2" alignment="left,centre_y" auto_size="vertical" spec="text" />
+
+					<widget class="label" id="nefl" col="0" row="1" alignment="left,centre_y" font="label">
+						<translation id="text" translation_id="282077" type="use" value="Nations Eligible For[COMMENT - player profile panel; list of nations this player is eligible for]" />
+					</widget>
+
+					<widget class="container" id="neft" col="1" row="1" auto_size="vertical" alignment="left,centre_y">
+						<layout class="fit_children_attachment" alignment="vertical,extend" offset="0" gap="2"/>
+						<layout class="arrange_horizontal_attachment" alignment="left" offset="0" wrap_widgets="true"/>
+					</widget>
+
+					<widget class="label" col="0" row="3" alignment="left,centre_y" font="label">
+						<translation id="text" translation_id="295874" type="use" value="Languages Spoken" />
+					</widget>
+
+					<widget class="languages_text" id="lngw" col="1" row="3" alignment="left,centre_y" auto_size="vertical" spec="text" />
+
+					<widget class="label" col="0" row="5" alignment="left,centre_y" font="label">
+						<translation id="text" translation_id="312493" type="use" value="National Service Status[COMMENT; editor field]" />
+					</widget>
+					<widget class="text" id="ntst" col="1" row="5" auto_size="horizontal" alignment="left,centre_y" icon_alignment="left,centre_y" spec="text" />
+
+
+					<widget class="label" col="0" row="6" alignment="left,centre_y" multiline="true" font="label">
+						<translation id="text" translation_id="289169" type="use" value="International Debut Against[COMMENT: column heading; displayed on player personal panel]" />
+					</widget>
+					<widget class="nation_button" id="intd" col="1" row="6" auto_size="all" alignment="left,centre_y" icon_alignment="left,centre_y" />
+
+					<widget class="label" col="0" row="7" alignment="left,centre_y" multiline="true" font="label">
+						<translation id="text" translation_id="291326" type="use" value="First International Goal Against[COMMENT: column heading; displayed on player personal panel]" />
+					</widget>
+					<widget class="nation_button" id="intg" col="1" row="7" alignment="left,centre_y" auto_size="all" icon_alignment="left,centre_y" />
+
+				</widget>
+
+				<widget class="player_nation_qualifications_panel" id="pnqu" auto_size="vertical">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

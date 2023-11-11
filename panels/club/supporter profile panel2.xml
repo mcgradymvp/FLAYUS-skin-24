@@ -30,7 +30,7 @@
 
 
 			<container>
-				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1, 5, -1" vertical_inset="0" horizontal_offset="12" />
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1, 5, -1" vertical_inset="0" horizontal_offset="0" />
 
 				<container class="supporter_percentage_panel" id="spcp" file="club/supporter percentage panel1" pitch_inset="36,36,40,36" />
 

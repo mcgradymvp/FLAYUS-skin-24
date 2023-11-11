@@ -29,7 +29,7 @@
 	<widget class="person_happiness_panel" file="person/person happiness profile plans1" id="Ppl1" late_loading="true">
 		<translation id="title" translation_id="365298" type="use" value="Plans[COMMENT: FR 512; person happiness panel; title for person future plans section]" />
 	</widget>
-  <widget class="person_chemistry_relationship_panel" file="person/person playing time pathway profile1" id="PPtp" late_loading="true" valid_for_unemployed_player="false" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
+  <widget class="person_chemistry_relationship_panel" file="person/person playing time pathway profile" id="PPtp" late_loading="true" valid_for_unemployed_player="false" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
     <translation id="title" type="use" value="安排上场时间" />
   </widget>
 	<widget class="player_form_summary_panel" id="Pfor" file="player/player form summary panel profile" late_loading="true">
