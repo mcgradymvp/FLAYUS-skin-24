@@ -1,0 +1,30 @@
+<!-- A panel with selectors that can be costomised to give the user an overview of any active league -->
+<panel id="LiFP">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="vertical_adaptive_container" inset="0" offset="0" mode="distribute_equally" id="Pnlf" draw_horizontal_dividers="true">
+		<global id="gap" name="ui.main_box_gap"/>
+
+		<container class="horizontal_adaptive_container" inset="0" offset="0" minimum_height="100" priority="1" mode="distribute_equally" draw_vertical_dividers="true">
+			<global id="gap" name="ui.main_box_gap"/>
+
+			<record id="default_properties" file="competition/leagues in focus overview selector panel" minimum_width="470">
+				<record id="object_property" get_property="objt" set_property="Nnat"/>
+			</record>
+			<container class="competition_news_league_overview_selector_panel" id="pan1" index="0" priority="1" />
+			<container class="competition_news_league_overview_selector_panel" id="pan2" index="1" priority="2" />
+			<container class="competition_news_league_overview_selector_panel" id="pan3" index="4" priority="3" />
+		</container>
+
+		<container class="horizontal_adaptive_container" inset="0" offset="0" minimum_height="100" priority="2" mode="distribute_equally" draw_vertical_dividers="true">
+			<global id="gap" name="ui.main_box_gap"/>
+
+			<record id="default_properties" file="competition/leagues in focus overview selector panel" minimum_width="470">
+				<record id="object_property" get_property="objt" set_property="Nnat"/>
+			</record>
+			<container class="competition_news_league_overview_selector_panel" id="pan4" index="2" priority="1" />
+			<container class="competition_news_league_overview_selector_panel" id="pan5" index="3" priority="2" />
+			<container class="competition_news_league_overview_selector_panel" id="pan6" index="5" priority="3" />
+		</container>
+	</container>
+</panel>

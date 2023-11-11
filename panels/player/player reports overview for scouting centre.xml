@@ -1,0 +1,150 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom" horizontal_inset="0" vertical_offset="0" vertical_gap="0"/>
+
+	<container height="68" id="estC">
+		<layout class="grid_layout_attachment" row_layout="18,21,20" vertical_gap="0" vertical_offset="0" mode="auto">
+
+			<list id="column_layout">
+				<record>
+					<string id="column_layout" value="-1, -1" />
+					<integer id="horizontal_offset" value="0" />
+					<integer id="horizontal_gap" value="6" />
+				</record>
+				<record>
+					<string id="column_layout" value="-1, -1" />
+					<integer id="horizontal_offset" value="0" />
+					<integer id="horizontal_gap" value="6" />
+				</record>
+				<record>
+					<string id="column_layout" value="-1,-1" />
+					<integer id="horizontal_offset" value="0" />
+					<integer id="horizontal_gap" value="6" />
+				</record>
+			</list>
+		</layout>
+
+		<widget class="text" id="ewat" font="title" size="medium" alignment="left,centre" colour="scout card text" >
+			<translation id="text" translation_id="450789" type="use" value="Estimated Wage[COMMENT: FR 21116, scout report panel label]" />
+		</widget>
+
+		<widget class="text" id="cost" font="title" size="medium" alignment="left,centre"  colour="scout card text">
+			<translation id="text" translation_id="335037" type="use" value="Estimated Cost[COMMENT: scout report panel label]" />
+		</widget>
+
+		<widget class="text" id="ewaw" size="large" style="semi_bold" multiline="false" colour="scout card text">
+		</widget>
+
+		<widget class="text" id="cosw" size="large" style="semi_bold"  multiline="false" colour="scout card text">
+		</widget>
+
+		<widget class="text" id="wagw" colour="scout card text">
+		</widget>
+
+
+		<widget class="text" id="valw" colour="scout card text">
+		</widget>
+
+
+	</container>
+
+	<widget class="horizontal_divider" red_replacement="scout card text"/>
+
+	<container height="35">
+		<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1,-1" vertical_inset="5" horizontal_gap="8" horizontal_offset="8"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+			<widget class="text" id="trit" auto_size="vertical" size="large" style="semi_bold" font="title" colour="scout card text" >
+				<translation id="text" translation_id="450790" type="use" value="Transfer Interest[COMMENT: FR 21116, scout report panel label]" />
+			</widget> 
+
+	    <widget class="text" id="triw" auto_size="vertical" size="normal" style="semi_bold" multiline="false" colour="blue grey 500">
+			</widget>
+
+
+			<widget class="text" id="loit" auto_size="vertical" size="large" style="semi_bold" font="title" colour="scout card text">
+				<translation id="text" translation_id="450791" type="use" value="Loan Interest[COMMENT: FR 21116, scout report panel label]" />
+			</widget>
+
+				<widget class="text" id="loiw" size="normal" style="semi_bold" auto_size="vertical" multiline="false" colour="blue grey 500">
+			</widget>
+	</container>
+
+	<container height="125">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<container class="inner_contrast_box_no_margin" id="SMbx" appearance="boxes/custom/darken/rounded/no margin/paper">
+			<attachment_group class="vertical_arrange" vertical_layout="24,-1,30" horizontal_inset="8" vertical_offset="4" vertical_gap="0"/>
+
+			<container>
+				<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0" />
+				<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="4" />
+
+				<widget class="text" font="title" auto_size="vertical" alignment="left,centre_y" colour="scout card text">
+					<translation id="text" translation_id="361263" type="use" value="Recommendation[COMMENT: FR 8316]" />
+				</widget>
+
+				<container class="inner_subtle_box" id="klba" appearance="boxes/custom/scouting knowledge/paper" width="55" height="12">
+					<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<widget class="horizontal_percentage_bar" height="4" maximum_value="100" bar_value_colour="knowledge level" show_label_on_bar="false" label_width="0" appearance="charts/bar/custom/knowledge" id="kbar" />
+
+				</container>
+
+				<widget class="text" id="knot" auto_size="all" style="semi_bold" colour="scout card text">
+				</widget>
+
+
+			</container>
+
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" vertical_inset="0" horizontal_gap="4" horizontal_offset="4"/>
+
+				<widget class="player_scout_recommendation_widget" width="35" show_knowledge_bar="false" navigation_focus_target="true" recommendation_mode="0">
+					<record id="object_property" get_property="Psrk" set_property="objt" />
+				</widget>
+
+				<widget class="text" id="recw" alignment="left,centre_y" multiline="true" colour="scout card text">
+
+				</widget>
+
+			</container>
+
+			<container class="inner_contrast_box_no_margin" appearance="boxes/custom/darken/rounded/no margin/paper">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle,fill" vertical_inset="0" horizontal_gap="8" horizontal_offset="8"/>
+
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" vertical_inset="0" horizontal_gap="8" horizontal_offset="0"/>
+
+					<widget class="text" alignment="left,centre_y" font="label">
+						<translation id="text" translation_id="251893" type="use" value="Current Ability[COMMENT: scout report panel box heading]" />
+					</widget>
+
+					<widget class="scout_stars_label" id="cawi" alignment="right,centre_y" auto_size="horizontal" navigation_focus_target="false" colour="scout card text">
+
+					</widget>
+
+				</container>
+
+
+				<widget class="vertical_divider"/>
+
+
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" vertical_inset="0" horizontal_gap="8" horizontal_offset="0"/>
+
+					<widget class="text" alignment="left,centre_y" font="label">
+						<translation id="text" translation_id="251894" type="use" value="Potential Ability[COMMENT: scout report panel box heading]" />
+					</widget>
+
+					<widget class="scout_stars_label" id="pawi" alignment="right,centre_y" auto_size="horizontal" navigation_focus_target="false" colour="scout card text">
+
+					</widget>
+
+				</container>
+
+			</container>
+
+		</container>
+	</container>
+
+</panel>

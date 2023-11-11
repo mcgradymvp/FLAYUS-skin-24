@@ -1,0 +1,235 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_layout="-1,550,-1" horizontal_offset="0" vertical_inset="0" horizontal_gap="0" />
+		<!--left side -->
+		<container class="bordered_box" appearance="boxes/custom/match/timeline stats/paper" default_width="530" minimum_width="500" priority="1">
+			<layout class="arrange_vertical_attachment" layout="-1,400" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container class="bordered_box">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--name and kit-->
+				<container class="home_match_incidents_panel" file="match/match incidents left in between highlights1" height="60">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</container>
+
+				<!--stats list-->
+				<widget class="match_team_stats_panel" id="HMts" file="match/match team stats popup" team_index="0">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+			
+		<container>
+        <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+		
+		<!--in-between highlights summary panel-->
+        <widget class="match_view_selector_panel" id="sel3" save_session_state="true" default_item="mazp" file="client_object/client object viewer selector match">
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+
+		  <widget class="match_action_zones_panel" id="mazp" file="match/match action zones small">
+			<translation id="title" translation_id="247327" type="use" value="Action Zones" />
+			<colour id="ptlc" name="white" />
+		  </widget>
+
+          <widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis small">
+            <translation id="title" translation_id="281395" type="use" value="Home Analysis" />
+          </widget>
+
+          <widget class="match_away_analysis_panel" id="Maan" file="match/match analysis small">
+            <translation id="title" translation_id="281396" type="use" value="Away Analysis" />
+          </widget>
+
+          <widget class="events_match_chalkboard_panel" id="mecp">
+            <translation id="title" translation_id="247381" type="use" value="Shots" />
+          </widget>
+
+          <widget class="preselected_match_chalkboard_panel" id="prmC" display_event_time_window="5">
+            <translation id="title" translation_id="450750" type="use" value="Recent Events[COMMENT: match chalkboard option to display recent noteworth events whilst in the middle of playing a match]" />
+            <list id="chalkboard_events_to_display">
+              <!-- Shot gone in -->
+              <integer value="1" />
+
+              <!-- Shot missed target -->
+              <integer value="2" />
+
+              <!-- Shot hit woodwork -->
+              <integer value="3" />
+
+              <!-- Shot saved -->
+              <integer value="4" />
+
+              <!-- Shot blocked -->
+              <integer value="5" />
+
+              <!-- Foul against -->
+              <integer value="14" />
+
+              <!-- Foul called -->
+              <integer value="15" />
+
+              <!-- Yellow card -->
+              <integer value="16" />
+
+              <!-- Red card -->
+              <integer value="17" />
+
+              <!-- Foul penalty -->
+              <integer value="18" />
+
+              <!-- Offside -->
+              <integer value="19" />
+            </list>
+          </widget>
+          
+        <widget class="match_report_panel" id="mtrp" file="match/match report small">
+          <translation id="title" translation_id="248079" type="use" value="Report" />
+        </widget>
+
+				<widget class="match_action_zones_panel" id="foap" file="match/focus of attacks panel">
+					<translation id="title" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+				</widget>
+
+        <widget class="match_goal_update_panel" id="mgup" file="match/match goal update small">
+          <translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+        </widget>
+
+        <widget class="match_league_table_panel" id="mltp" MLTs="true">
+					<translation id="title" translation_id="248082" type="use" value="League Table" />
+				</widget>
+
+      </widget>
+
+		<!--in-between highlights summary panel-->
+			<widget class="match_view_selector_panel" id="selR" pause_match_on_menu_opening="true" default_item="amtt" file="client_object/client object viewer selector match">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+				          <widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis small">
+            <translation id="title" translation_id="281395" type="use" value="Home Analysis" />
+          </widget>
+
+          <widget class="match_away_analysis_panel" id="Maan" file="match/match analysis small">
+            <translation id="title" translation_id="281396" type="use" value="Away Analysis" />
+          </widget>
+
+        <widget class="match_goal_update_panel" id="mgup" file="match/match goal update small">
+          <translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+        </widget>
+				<widget class="match_action_zones_panel" id="mazp" file="match/match action zones small">
+					<translation id="title" translation_id="247327" type="use" value="Action Zones" />
+					<colour id="ptlc" name="white" />
+				</widget>
+				<widget class="match_action_zones_panel" id="foap" file="match/focus of attacks panel">
+					<translation id="title" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+				</widget>
+
+				<widget class="match_latest_scores_panel" id="mlsp" file="match/match latest scores small" save_session_state="true">
+					<translation id="title" translation_id="243219" type="use" value="Latest Scores" />
+				</widget>
+					<widget class="match_league_table_panel" id="mltp" MLTs="true">
+					<translation id="title" translation_id="248082" type="use" value="League Table" />
+				</widget>
+			</widget>
+        </container>
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+			
+		<container class="main_box" appearance="boxes/custom/match/timeline stats/paper" red_replacement="bg">
+            <layout class="arrange_vertical_attachment" layout="240,320,-1,-1" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="0.4" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top" />
+				<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="0.2" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top" trigger_id="hidden" trigger_value="false" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="8" apply_to_children="true" />
+        
+		<widget class="match_info_panel" id="bmin" file="match/match info overview1" small_version="true">
+          <translation id="title" translation_id="292788" type="use" value="Overview[COMMENT: match screen; match overview panel title]" />
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+        </widget>
+
+        <widget class="match_stats_panel" id="mtst" file="match/match stats overview ibh">
+          <translation id="title" translation_id="247439" type="use" value="Match Stats" />
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+        </widget>
+
+			 	<widget class="match_analysis_panel" id="mahm" default_height="130" minimum_height="100" priority="1" file="match/match analysis home mid1">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+				<widget class="match_analysis_panel" id="maam" default_height="130" minimum_height="100" priority="1" file="match/match analysis away mid1">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+		</container>
+
+		<!--Right side -->
+		<container class="bordered_box" appearance="boxes/custom/match/timeline stats/paper" default_width="530" minimum_width="500" priority="1">
+			<layout class="arrange_vertical_attachment" layout="-1,400" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container class="bordered_box">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--name and kit-->
+				<container class="away_match_incidents_panel" file="match/match incidents right in between highlights1" height="60">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</container>
+
+				<!--stats list-->
+				<widget class="match_team_stats_panel" id="AMts" file="match/match team stats popup" team_index="1">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+
+			<!--best/worst players-->
+			<container priority="1">
+                  <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+                  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />			
+	
+					<widget class="post_match_report_widget" file="widgets/match/post match report widget1" id="pstL">
+					<translation id="title" type="use" value="기대 득점 내역" />
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+				    <widget class="post_match_report_widget" file="widgets/match/post match report widget2" id="pst2">
+	                   <translation id="title" type="use" value="슈팅맵" />
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+			     </container>
+             </container>
+	 </container>
+
+</panel>

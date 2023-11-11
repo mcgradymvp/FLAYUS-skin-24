@@ -1,0 +1,14 @@
+<panel>
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+  <flags id="MLSs" value="true"/>
+  <boolean id="save_immediate_state" value="true"/>
+
+  <widget class="table" id="mlst" mode="fill_rows" auto_size_rows="true" fixed_size_rows="false" layout="-1, 20, 60, 20, -1, 37, 20" row_spacing="2">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+    <record id="default_properties" auto_size_minimum_height="20" spec="text"/>
+  </widget>
+
+</panel>

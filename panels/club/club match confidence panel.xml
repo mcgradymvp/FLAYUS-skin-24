@@ -1,0 +1,79 @@
+<panel>
+    <attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_inset="0" vertical_gap="12"/>
+
+
+    <boolean id="save_session_state" value="true" />
+
+    <!-- board / fans tabs -->
+    <container class="main_box">
+        <attachment_group class="horizontal_arrange_vertical_autosize" />
+
+        <!-- TODO selections -->
+        <widget class="radio_button" id="BdTb" appearance="tabs/subsection/normal/top/button" icon_enabled="false" show_button_appearance="true" secondary_icon_enabled="true" secondary_icon="icons/26px/board" secondary_icon_alignment="left" auto_size="horizontal" font="title" size="large" colour="performance board tag" secondary_icon_colour="performance board tag" red_replacement="performance board tag">
+            <translation id="text" translation_id="557639" type="use" value="Board Feedback - Matches[COMMENT: AREA: Club Vision; SUB-AREA: Match performance; FR 3635; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Section title for board feedback on your match performances]" />
+            <event id="click_event">
+                <flags id="event_id" value="vchd" />
+                <flags id="mode" value="0" />
+            </event>
+        </widget>
+        <widget class="radio_button" id="SuTb" appearance="tabs/subsection/normal/top/button" icon_enabled="false" show_button_appearance="true" secondary_icon_enabled="true" secondary_icon="icons/26px/fans" secondary_icon_alignment="left" auto_size="horizontal" font="title" size="large" colour="performance fans tag" secondary_icon_colour="performance fans tag" red_replacement="performance fans tag">
+            <translation id="text" translation_id="557640" type="use" value="Supporter Feedback - Matches[COMMENT: AREA: Club Vision; SUB-AREA: Match performance; FR 3635; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Section title for fan feedback on your match performances]" />
+            <event id="click_event">
+                <flags id="event_id" value="vchd" />
+                <flags id="mode" value="1" />
+            </event>
+        </widget>
+    </container>
+
+    <!-- panel content-->
+    <container class="horizontal_adaptive_container" draw_vertical_dividers="true" gap="20">
+        <attachment_group class="horizontal_arrange" horizontal_gap="12" />
+
+        <container class="main_box" minimum_width="400" default_width="400" priority="1">
+            <attachment_group class="vertical_arrange" vertical_alignment="top, extend" horizontal_alignment="horizontal" vertical_gap="6" />
+
+            <widget class="performance_grade_box" id="smgb" auto_size="vertical" />
+
+            <widget class="text" font="title" colour="text" auto_size="vertical">
+                <translation id="text" translation_id="467045" type="use" value="Upcoming Match[COMMENT: Training Session Selector - Match Boost Impact Category header]" />
+            </widget>
+
+            <widget class="table" id="UpCm" mode="fill_rows, select_rows" layout="-1" auto_size_rows="true" fixed_size_rows="false" row_spacing="6" column_spacing="6" auto_size="vertical" select_event="UMSe">
+                <list id="column_table_properties">
+                    <record index="0">
+                        <record id="widget_info">
+                            <symbol id="class" value="container" />
+                            <string id="file" value="widgets/match performance upcoming widget" />
+                        </record>
+                    </record>
+                </list>
+            </widget>
+
+            <widget class="text" font="title" colour="text" auto_size="vertical">
+                <translation id="text" translation_id="348267" type="use" value="Recent Results[COMMENT: competition news panel; title for section showing recent transfers in the division]" />
+            </widget>
+
+            <widget class="table" id="PMTa" mode="fill_rows, select_rows" layout="-1" auto_size_rows="true" fixed_size_rows="false" row_spacing="6" column_spacing="6" select_event="PMSe">
+                <list id="column_table_properties">
+                    <record index="0">
+                        <record id="widget_info">
+                            <symbol id="class" value="container" />
+                            <string id="file" value="widgets/match performance list widget" />
+                        </record>
+                    </record>
+                </list>
+            </widget>
+        </container>
+
+        <container class="main_box" minimum_width="600" default_width="-1" priority="1">
+            <attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_gap="6" />
+
+            <container class="club_match_reaction_panel" id="PRMp" />
+            <container class="club_match_confidence_upcoming_panel" id="UPCp" />
+        </container>
+  <container class="main_box" minimum_width="400" maximum_width="400" default_width="400" priority="2" >
+            <attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_gap="6" />
+        <container class="club_match_confidence_previous_lineup_panel" id="PRlu" />
+    </container>
+     </container>
+</panel>

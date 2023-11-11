@@ -1,0 +1,69 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="1"  />
+	<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="1"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<widget class="object_portrait_picture" id="plpc" image_alignment="centre" scale_picture="true" height="80">
+		<record id="object_property">
+			<list id="get_properties">
+				<record>
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="valu" />
+				</record>
+			</list>
+		</record>
+	</widget>
+
+	
+	<widget class="person_button" id="psbs" auto_size="vertical" alignment="centre" style="bold" size="large">
+		<record id="object_property">
+			<list id="get_properties">
+				<record>
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="valu" />
+				</record>
+			</list>
+		</record>
+	</widget>
+	<container>
+		<layout class="arrange_horizontal_attachment" offset="0" gap="2" alignment="middle" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="2"/>
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+		<widget class="age_label" auto_size="all">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="PSag" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</list>
+			</record>
+		</widget>
+
+		<widget class="text" auto_size="all" alignment="left,centre_y">
+			<translation id="text" translation_id="420757" type="use" value="year-old[COMMENT: appended next to or underneath a player's age displayed solely as a numeric, part of a UI panel, translate accordingly]" />
+		</widget>
+	</container>
+
+	<widget class="player_description_text" auto_size="vertical" alignment="centre">
+		<record id="object_property" get_property="Pdes" />
+	</widget>
+
+	<widget class="club_button" auto_size="vertical" alignment="centre" icon_alignment="centre">
+		<record id="object_property" get_property="Pclb" />
+	</widget>
+
+	<!--<container height="6" />-->
+
+	<widget class="nation_button" id="natb" auto_size="vertical" alignment="centre" icon_alignment="centre" format="[%nation#1-nationality]">
+		<record id="object_property">
+			<list id="get_properties">
+				<record>
+					<integer id="get_property" value="Pnat" />
+					<integer id="set_property" value="valu" />
+				</record>
+			</list>
+		</record>
+	</widget>
+</panel>

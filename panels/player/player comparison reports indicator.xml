@@ -1,0 +1,236 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<!---No scout/coach report-->
+	<container id="norp" height="80">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<record id="default_properties" hidden="true" />
+
+		<!-- No scout report -->
+		<container id="nsrc" height="120">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="6" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20" apply_to_children="true" />
+
+			<widget class="spacer" height="10" />
+
+			<container id="nocs" height="100">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<!--explanatory text-->
+				<widget class="text" alignment="centre" spec="text" size="11" auto_size="vertical">
+					<translation id="text" translation_id="320496" type="use" value="You need to request a member of your scouting staff to compile a report on this player.[COMMENT: scout report; need to scout advice]" />
+				</widget>
+
+				<container height="30">
+					<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="8" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<widget class="button" id="sctP" click_event="sctc" alignment="centre" auto_size="horizontal" height="30">
+						<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+					</widget>
+
+				</container>
+			</container>
+
+			<widget id="nocn" class="label" spec="text" size="11" alignment="centre" auto_size="vertical" />
+
+			<widget class="spacer" height="10" />
+
+		</container>
+
+		<!-- No Coach Report-->
+		<container id="ncrc" height="150">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="5" gap="1" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold" auto_size="vertical">
+				<translation id="text" translation_id="320498" type="use" value="You need to have at least one coach at your team to compile a report on this player.[COMMENT: coach report; need staff advice]" />
+			</widget>
+			<widget class="text" auto_size="vertical" spec="text" size="large" alignment="centre" colour="faded text">
+				<translation id="text" translation_id="326089" type="use" value="You can find staff to hire via the Staff Search.[COMMENT: team report; need to scout sub advice]" />
+			</widget>
+
+			<container height="5" />
+
+			<container>
+				<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<widget class="link_appearance_button" click_event="gtsp">
+					<translation id="text" translation_id="320500" type="use" value="Staff Search[COMMENT: team report; link to the staff search]" />
+					<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" />
+					<layout class="centre_in_parent_attachment" alignment="horizontal" />
+				</widget>
+			</container>
+
+		</container>
+
+		<!-- No national report-->
+		<container id="nnrc" height="80">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20" apply_to_children="true" />
+
+			<widget class="spacer" height="10" />
+
+			<!--explanatory text-->
+			<widget class="text" id="info" alignment="centre" spec="text" size="11" auto_size="vertical" />
+
+			<widget class="spacer" height="10" />
+
+		</container>
+
+		<!-- Already being scouted -->
+		<container id="arbs" height="80">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="6" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20" apply_to_children="true" />
+
+			<widget class="spacer" height="15" />
+
+			<!--explanatory text-->
+			<widget class="text" id="arbt" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+			</widget>
+
+			<widget class="spacer" height="15" />
+
+		</container>
+
+		<!-- Already being scouted by pool-->
+		<container id="pool" height="80">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="6" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20" apply_to_children="true" />
+
+			<widget class="spacer" height="15" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]" />
+			</widget>
+
+			<widget class="spacer" height="15" />
+
+		</container>
+
+	</container>
+
+	<!--Main report container-->
+	<container id="main">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+			<!--Coach/Scout report label-->
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" vertical_offset="0" />
+
+				<widget class="label" id="prl1" font="title" alignment="left,centre_y" multiline="true" size="small" auto_size="all">
+					<translation id="text" translation_id="361267" type="use" value="Scout Report by[COMMENT: FR 8316 scout report panel box heading]" />
+				</widget>
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_offset="0" vertical_inset="0" />
+
+					<widget class="view_menu_popup" id="prs1" select_event="repe" auto_tick_exclusive="true" fixed="true" auto_size_restricted_to_parent_width="true" embed_in_frame="false" />
+				</container>
+			</container>
+
+			<!--Coach/Scout CA/PA reccomendation star-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+				<container height="50">
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+						<widget class="label" alignment="centre" spec="text" auto_size="vertical">
+							<translation id="text" translation_id="293291" type="use" value="Current Ability" />
+						</widget>
+
+						<widget class="scout_stars_label" id="CAc1" alignment="centre" height="24" navigation_focus_target="false" />
+					</container>
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+						<widget class="label" alignment="centre" spec="text" auto_size="vertical">
+							<translation id="text" translation_id="293292" type="use" value="Potential Ability" />
+						</widget>
+
+						<widget class="scout_stars_label" id="PAc1" alignment="centre" height="24" navigation_focus_target="false" />
+
+					</container>
+				</container>
+
+				<!--reccomendation-->
+				<container id="recC">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="label" alignment="centre" auto_size="vertical" spec="text">
+						<translation id="text" translation_id="361263" type="use" value="Recommendation[COMMENT: FR 8316]" />
+					</widget>
+
+					<widget class="player_scout_recommendation_widget" id="RCc1" height="50" show_knowledge_bar="false" show_hover_popup="true">
+						<record id="object_property" get_property="Psrk" set_property="objt" />
+					</widget>
+
+				</container>
+			</container>
+
+			<!--Coach Summary-->
+			<container class="main_contrast_box" id="SMbx" height="50">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<widget class="text" id="SMx1" spec="text" size="11" alignment="centre" colour="bg" />
+			</container>
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="1" vertical_inset="0" />
+
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="10" horizontal_inset="0" />
+
+					<container class="main_contrast_box" red_replacement="pro high">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+						<widget class="label" font="text" size="12" alignment="centre" colour="white" auto_size="vertical">
+							<translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]" />
+						</widget>
+					</container>
+
+                    <widget class="table" mode="fill_rows" id="tpro" layout="-1" inset="0" fixed_size_rows="false" auto_size_rows="true" navigation_container="true" default_sort_column="0">
+                        <list id="column_table_properties">
+                            <record index="0" sort_ascending="false"/>
+                        </list>
+                    </widget>
+				</container>
+
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="10" horizontal_inset="0" />
+
+					<container class="main_contrast_box" red_replacement="con high">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+						<widget class="label" font="text" alignment="centre" size="12" colour="white" auto_size="vertical">
+							<translation id="text" translation_id="361094" type="use" value="Cons[COMMENT: FR 8316 ]" />
+						</widget>
+					</container>
+
+                    <widget class="table" mode="fill_rows" id="tcon" layout="-1" inset="0" fixed_size_rows="false" auto_size_rows="true" navigation_container="true" default_sort_column="0">
+                        <list id="column_table_properties">
+                            <record index="0" sort_ascending="false"/>
+                        </list>
+                    </widget>
+				</container>
+
+			</container>
+		</container>
+	</container>
+</panel>

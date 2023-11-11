@@ -1,0 +1,350 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+	<boolean id="should_force_refresh" value="true" />
+
+	<string id="player_position_divider_row_appearance" value="" />
+	<string id="normal_offer_row_appearance" value="tables/custom/filled/selected/row" />
+	<string id="expanded_offer_row_appearance" value="tables/custom/filled/selected/row" />
+
+	<string id="human_offer_status_box_appearance" value="boxes/custom/transfer centre/status/left/paper" />
+	<string id="other_offer_status_box_appearance" value="boxes/custom/transfer centre/status/normal/paper" />
+
+	<string id="accept_button_appearance" value="buttons/subtle/flex/button" />
+	<string id="accept_button_icon" value="icons/16px/tick" />
+	<string id="stall_button_appearance" value="buttons/subtle/flex/button" />
+	<string id="stall_button_icon" value="icons/16px/time" />
+	<string id="ask_confirm_button_appearance" value="buttons/subtle/flex/button" />
+	<string id="ask_confirm_button_icon" value="icons/16px/thumbs up" />
+	<string id="reject_button_appearance" value="buttons/subtle/flex/button" />
+	<string id="reject_button_icon" value="icons/16px/cross" />
+	<string id="reject_button_single_appearance" value="buttons/subtle/flex/button" />
+	<string id="reject_button_single_icon" value="icons/16px/cross" />
+	<string id="contract_decision_date_button_appearance" value="buttons/subtle/flex/button" />
+	<string id="contract_decision_date_button_icon" value="icons/16px/speech bubble" />
+
+	<flags id="multiple_offers_row_colour" value="subtle_box_background" />
+
+	<!-- budget info -->
+	<widget class="person_search_info_panel" id="psip">
+		<string id="remove_if" value="use_simplified_scouting" />
+	</widget>
+
+	<!--FMT top bar-->
+	<widget class="scouting_top_panel" id="fmtT">
+		<string id="create_if" value="use_simplified_scouting" />
+		<list id="visible_items">
+			<flags value="scrc" />
+			<flags value="scfc" />
+			<flags value="trwd" />
+			<flags value="trbc" />
+		</list>
+	</widget>
+
+	<container class="main_box" id="tcmn" draw_horizontal_dividers="true">
+		<attachment_group class="vertical_arrange" vertical_alignment="top, extend">
+			<global id="vertical_gap" name="ui.main_box_gap" />
+		</attachment_group>
+
+		<!-- clauses -->
+		<container  id="ClTb" navigation_container="true">
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" />
+
+			<container height="28">
+				<layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<widget class="link_button_title" auto_size="horizontal" section="tcft">
+					<translation id="text" translation_id="281353" type="use" value="Clauses[COMMENT: team screen section; section showing active clauses for players]" />
+				</widget>
+				<widget class="label" id="ClNm" spec="title" alignment="left, centre_y" />
+			</container>
+
+			<container height="60" id="ClBx">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<container class="horizontal_adaptive_container" id="ClLt" gap="4" inset="0" offset="0" />
+			</container>
+		</container>
+
+		<!-- main area -->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="right, extend" offset="0">
+					<global id="gap" name="ui.main_box_gap" />
+				</layout>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<!-- overall titled box -->
+				<container navigation_container="true" default_focus="true">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="0" gap="8" />
+					<translation id="title" translation_id="330721" type="use" value="Transfer Activity[COMMENT: how to system; help string]" />
+
+					<!-- embedded filter button -->
+					<container embed_in_frame="true">
+						<attachment_group class="title_embedded_panel_right" />
+
+						<widget class="check_box" id="HdIn" auto_size="all" click_event="HdIn" alignment="left,centre_y" embed_in_frame="true">
+							<translation id="text" translation_id="441047" type="use" value="Hide Inactive Deals[COMMENT: FR 19770; transfer centre panel; checkbox label for hiding finished transfer offers]" />
+						</widget>
+
+						<widget class="subtle_button" id="shfl" auto_size="all" click_event="shfl" save_session_state="true" embed_in_frame="true">
+							<translation id="text" translation_id="247166" type="use" value="Show Filters" />
+						</widget>
+					</container>
+
+					<!-- panel containing table of transfers and action buttons -->
+					<container class="tabbed_container" id="tabs" default_item="trap" save_session_state="true" appearance="" navigation_container="true">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+						<container id="trap" icon="icons/16px/all">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+							<translation id="title" translation_id="316757" type="use" value="All[COMMENT - Transfer Centre; title of all transfers tab; limited space for text here, 5 characters maximum]" />
+
+							<!-- table containing transfer offer details -->
+							<widget class="table" id="trat" layout="16, 55, -14, -12, -13, 110, -9, 135, 30, 32, 32, 32, 35" mode="select_rows, fill_rows, show_bullets, dont_allow_click_unselect_single" select_event="XrwT" auto_size_rows="true" all_content_same_height="false" fixed_size_rows="false" column_spacing="0" row_spacing="2" save_session_state="true" save_default_state="true">
+								<global id="override_select_row_flags" name="ui.is_fmt_controller_skin" />
+								<list id="headings">
+									<record index="0" navigation_focus_target="false" />
+									<record index="1" navigation_focus_target="false" />
+									<record index="2" navigation_focus_target="false">
+										<translation id="text" translation_id="229689" type="use" value="Name" />
+									</record>
+									<record index="3" navigation_focus_target="false">
+										<translation id="text" translation_id="227737" type="use" value="Club" />
+									</record>
+									<record index="4" navigation_container="false">
+										<translation id="text" translation_id="227884" type="use" value="Position" />
+									</record>
+									<record index="5" navigation_container="false">
+										<translation id="text" translation_id="596805" type="use" value="Intermediary Fee[COMMENT: AREA: Transfer Centre; SUB-AREA: Ongoing transfers table; FR-BN: 22979; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Table column heading for the agent intermediary fee percentage]" />
+									</record>
+									<record index="6" navigation_focus_target="false">
+										<translation id="text" translation_id="242853" type="use" value="Status" />
+									</record>
+									<record index="7" navigation_focus_target="false">
+										<translation id="text" translation_id="333752" type="use" value="Cost[COMMENT: store dialog; text indicating how much a purchasable item costs]" />
+									</record>
+									<record index="8" navigation_focus_target="false" />
+									<record index="9" navigation_focus_target="false" />
+									<record index="10" navigation_focus_target="false" />
+									<record index="11" navigation_focus_target="false" />
+									<record index="12" navigation_focus_target="false" />
+								</list>
+
+								<list id="column_table_properties">
+									<record index="0" id="Cmur" alignment="left, centre_y" />
+									<record index="1" id="Cppo" alignment="centre" />
+									<record index="2" id="Cpli" alignment="left, centre_y" />
+									<record index="3" id="Coth" alignment="left, centre_y" right="4" />
+									<record index="4" id="Cpso" />
+									<record index="5" id="Cinf" alignment="centre" />
+									<record index="6" id="Csta" sort_ascending="false" />
+									<record index="7" id="Cval" />
+									<record index="8" id="Cacc" alignment="centre" left="3" />
+									<record index="9" id="Cstl" alignment="right, centre_y" left="2" />
+									<record index="10" id="Crej" alignment="centre" left="2" />
+									<record index="11" id="Cdda" alignment="centre" left="2" />
+									<record index="12" id="Cexr" />
+								</list>
+							</widget>
+						</container>
+
+						<container id="trip" icon="icons/16px/transfer in">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+							<translation id="title" translation_id="316758" type="use" value="In[COMMENT - Transfer Centre; title of incoming transfers tab; limited space for text here, 5 characters maximum]" />
+
+							<!-- table containing transfer offer details -->
+							<widget class="table" id="trit" layout="16, 55, -14, -12, -13, -9, 135, 30, 32, 32, 32, 35" mode="select_rows, fill_rows, show_bullets, dont_allow_click_unselect_single" select_event="XrwT" auto_size_rows="true" all_content_same_height="false" fixed_size_rows="false" column_spacing="0" row_spacing="2" save_session_state="true" save_default_state="true">
+								<global id="override_select_row_flags" name="ui.is_fmt_controller_skin" />
+								<list id="headings">
+									<record index="0" navigation_focus_target="false" />
+									<record index="1" navigation_focus_target="false" />
+									<record index="2" navigation_focus_target="false">
+										<translation id="text" translation_id="229689" type="use" value="Name" />
+									</record>
+									<record index="3" navigation_focus_target="false">
+										<translation id="text" translation_id="227737" type="use" value="Club" />		
+									</record>
+									<record index="4" navigation_focus_target="false">
+										<translation id="text" translation_id="227884" type="use" value="Position" />
+									</record>
+									<record index="6" navigation_focus_target="false">
+										<translation id="text" translation_id="242853" type="use" value="Status" />
+									</record>
+									<record index="7" navigation_focus_target="false">
+										<translation id="text" translation_id="333752" type="use" value="Cost[COMMENT: store dialog; text indicating how much a purchasable item costs]" />
+									</record>
+									<record index="8" navigation_focus_target="false" />
+									<record index="9" navigation_focus_target="false" />
+									<record index="10" navigation_focus_target="false" />
+									<record index="11" navigation_focus_target="false" />
+									<record index="12" navigation_focus_target="false" />
+								</list>
+
+								<list id="column_table_properties">
+									<record index="0" id="Cmur" alignment="left, centre_y" />
+									<record index="1" id="Cppo" alignment="centre" />
+									<record index="2" id="Cpli" alignment="left, centre_y" />
+									<record index="3" id="Coth" alignment="left, centre_y" right="4" />
+									<record index="4" id="Cpso" />
+									<record index="5" id="Csta" sort_ascending="false" />
+									<record index="6" id="Cval" alignment="centre" left="3" />
+									<record index="7" id="Cacc" alignment="right, centre_y" left="2" />
+									<record index="8" id="Cstl" alignment="right, centre_y" left="2" />
+									<record index="9" id="Crej" alignment="centre" left="2" />
+									<record index="10" id="Cdda" alignment="centre" left="2" />
+									<record index="11" id="Cexr" />
+								</list>
+							</widget>
+						</container>
+
+						<container id="trop" icon="icons/16px/transfer out">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+							<translation id="title" translation_id="316759" type="use" value="Out[COMMENT - Transfer Centre; title of outgoing transfers tab; limited space for text here, 5 characters maximum]" />
+
+							<!-- table containing transfer offer details -->
+							<widget class="table" id="trot" layout="16, 55, -14, -12, -13, 110, -9, 135, 30, 32, 32, 32, 35" mode="select_rows, fill_rows, show_bullets, dont_allow_click_unselect_single" select_event="XrwT" auto_size_rows="true" all_content_same_height="false" fixed_size_rows="false" column_spacing="0" row_spacing="2" save_session_state="true" save_default_state="true">
+								<global id="override_select_row_flags" name="ui.is_fmt_controller_skin" />
+								<list id="headings">
+									<record index="0" navigation_focus_target="false" />
+									<record index="1" navigation_focus_target="false" />
+									<record index="2" navigation_focus_target="false">
+										<translation id="text" translation_id="229689" type="use" value="Name" />
+									</record>
+									<record index="3" navigation_focus_target="false">
+										<translation id="text" translation_id="441048" type="use" value="Offer From[COMMENT: FR 19970; transfer centre; table column title for team making offer for your player]" />
+									</record>
+									<record index="4" navigation_focus_target="false">
+										<translation id="text" translation_id="227884" type="use" value="Position" />
+									</record>
+									<record index="5" navigation_container="false">
+										<translation id="text" translation_id="596805" type="use" value="Intermediary Fee[COMMENT: AREA: Transfer Centre; SUB-AREA: Ongoing transfers table; FR-BN: 22979; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Table column heading for the agent intermediary fee percentage]" />
+									</record>
+									<record index="6" navigation_focus_target="false">
+										<translation id="text" translation_id="242853" type="use" value="Status" />
+									</record>
+									<record index="7" navigation_focus_target="false">
+										<translation id="text" translation_id="333752" type="use" value="Cost[COMMENT: store dialog; text indicating how much a purchasable item costs]" />
+									</record>
+									<record index="8" navigation_focus_target="false" />
+									<record index="9" navigation_focus_target="false" />
+									<record index="10" navigation_focus_target="false" />
+									<record index="11" navigation_focus_target="false" />
+									<record index="12" navigation_focus_target="false" />
+								</list>
+
+								<list id="column_table_properties">
+									<record index="0" id="Cmur" alignment="left, centre_y" />
+									<record index="1" id="Cppo" alignment="centre" />
+									<record index="2" id="Cpli" alignment="left, centre_y" />
+									<record index="3" id="Coth" alignment="left, centre_y" right="4" />
+									<record index="4" id="Cpso" />
+									<record index="5" id="Cinf" alignment="centre" />
+									<record index="6" id="Csta" sort_ascending="false" />
+									<record index="7" id="Cval" />
+									<record index="8" id="Cacc" alignment="centre" left="3" />
+									<record index="9" id="Cstl" alignment="right, centre_y" left="2" />
+									<record index="10" id="Crej" alignment="centre" left="2" />
+									<record index="11" id="Cdda" alignment="centre" left="2" />
+									<record index="12" id="Cexr" />
+								</list>
+							</widget>
+						</container>
+
+						<container id="trdp" icon="icons/16px/trade">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+							<translation id="title" translation_id="351068" type="use" value="Trades[COMMENT: transfer centre section; List of MLS type trades]" />
+
+							<!-- table containing trade offer details -->
+							<widget class="table" id="trdt" mode="fill_rows, stripe_rows" layout="16, -2, -1, -2, 150, 28, 30" auto_size_rows="true" all_content_same_height="false" fixed_size_rows="false" column_spacing="0" row_spacing="2" navigation_container="true">
+								<list id="headings">
+									<record index="0" />
+									<record index="1">
+										<translation id="text" translation_id="447501" type="use" value="Offered[COMMENT: FR 19970; mls trade panel; table header for items being offered in trade]" />
+									</record>
+									<record index="2">
+										<translation id="text" translation_id="447502" type="use" value="Trading With[COMMENT: FR 19970; mls trade panel; table header for team involved in trade]" />
+									</record>
+									<record index="3">
+										<translation id="text" translation_id="447503" type="use" value="Receiving[COMMENT: FR 19970; mls trade panel; table header for items being recieved in trade]" />
+									</record>
+									<record index="4">
+										<translation id="text" translation_id="447504" type="use" value="Status[COMMENT: FR 19970; mls trade panel; table header for status of an ongoing trade offer]" />
+									</record>
+									<record index="5" />
+									<record index="6" />
+								</list>
+
+								<!-- Properties to apply to set on all widgets-->
+								<record id="default_properties" auto_size="vertical" />
+
+								<list id="column_table_properties">
+									<record index="1" id="Cmur" alignment="centre" sort_disabled="true" />
+									<record index="2" id="CToc" alignment="left, centre_y" />
+									<record index="3" id="CTri" alignment="left, centre_y" sort_disabled="true" />
+									<record index="4" id="CTst" sort_ascending="false" />
+									<record index="5" id="CTac" alignment="centre" left="2" right="2" sort_disabled="true" />
+									<record index="6" id="CTrj" alignment="centre" left="2" right="4" sort_disabled="true" />
+								</list>
+							</widget>
+						</container>
+					</container>
+				</container>
+
+				<!-- filter editing panel -->
+				<container class="filter_panel" id="filp" width="200" hidden="true" exclude_from_find="true" navigation_container="true">
+					<layout class="stick_to_sides_attachment" alignment="right, vertical" inset="0" />
+
+					<!-- buttons area -->
+					<container embed_in_frame="true">
+						<attachment_group class="title_embedded_panel_right" />
+
+						<widget class="subtle_button" id="hdfl" click_event="hdfl" auto_size="all" embed_in_frame="true" save_session_state="true">
+							<translation id="text" translation_id="247168" type="use" value="Hide Filters" />
+						</widget>
+					</container>
+				</container>
+			</container>
+
+			<container class="inner_subtle_box">
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right" vertical_offset="0 " />
+
+				<record id="default_properties">
+					<flags id="auto_size" value="all" />
+					<boolean id="hidden" value="true" />
+				</record>
+
+				<widget class="label" id="TWcl">
+					<translation id="text" translation_id="441049" type="use" value="Potential Cost of Wages Offered:[COMMENT: FR 19770; transfer centre panel; label to describe total cost of wages for all incoming transfer offers]" />
+				</widget>
+				<widget class="label" id="TlWc" style="bold" size="large" />
+
+				<widget class="label" id="TWsl">
+					<translation id="text" translation_id="441051" type="use" value="Potential Wages Saved:[COMMENT: FR 19770; transfer centre panel; label to describe total cost of wages for all outgoing transfer offers]" />
+				</widget>
+				<widget class="label" id="TlWs" style="bold" size="large" />
+
+				<widget class="spacer" width="10" />
+
+				<widget class="label" id="TTcl">
+					<translation id="text" translation_id="441050" type="use" value="Potential Total Transfer Cost:[COMMENT: FR 19770; transfer centre panel; label to describe total value for all incoming transfer offers]" />
+				</widget>
+				<widget class="label" id="TlTc" style="bold" size="large" />
+
+				<widget class="label" id="TTsl">
+					<translation id="text" translation_id="441052" type="use" value="Potential Total Transfer income:[COMMENT: FR 19770; transfer centre panel; label to describe total value for all outgoing transfer offers]" />
+				</widget>
+				<widget class="label" id="TlTs" style="bold" size="large" />
+			</container>
+		</container>
+	</container>
+
+</panel>

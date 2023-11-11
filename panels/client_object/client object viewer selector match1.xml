@@ -1,0 +1,17 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+ 
+	<container class="inner_box" id="SUBP" colour="text" alignment="centre">
+		<!-- this panel contains a panel that will be decided at run-time from code, decided by the state / setting for the particular sub-panel on the manager snapshot/home main panel -->
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+ 
+		<widget class="popup_button" id="popv" width="25" click_event="msis" height="20" appearance="buttons/custom/customise panel" fixed="true" embed_in_frame="true" cancel_mouse_hide="true" default_focus="true">
+			<layout class="arrange_horizontal_attachment" alignment="right" embed_in_frame="true" gap="0" offset="8"/>
+			<layout class="stick_to_sides_attachment" alignment="right" embed_in_frame="true" inset="10"/>
+			<layout class="stick_to_sides_attachment" alignment="top" embed_in_frame="true" inset="6"/>
+ 
+		</widget>
+ 
+	</container>
+ 
+</panel>

@@ -1,0 +1,44 @@
+﻿<panel save_session_state="true">
+	<container class="main_box_no_margin">
+		<layout class="arrange_horizontal_attachment" layout="-1,40" offset="0" gap="12" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1, 20" offset="12" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<widget class="text" id="sltP" size="xlarge" height="25" font="title" colour="accent"/>
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0" gap="5"/>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="5"/>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+					
+						<widget class="text" auto_size="all" colour="faded text" alignment="left, centre_y">
+							<translation id="text" translation_id="383263" type="use" value="Best Role[COMMENT - person list view column heading - abbreviation of Best Role - an opinion of the best role for this player]" />
+						</widget>
+						
+						<widget class="info_icon_hint_text" id="hnt1" width="20" height="18" />
+						
+						<widget class="text" id="roL1" auto_size="vertical" multiline="false" colour="text" alignment="left, centre_y"/>
+					</container>
+				</container>
+				
+				<widget class="position_popup" id="posm" height="20" short_position_string="false" fixed="true" text="" show_button_appearance="false" display_compound_positions="false" alignment="left" sele="PosS" skip_no_position_string="true">
+					<layout class="stick_to_sides_attachment" alignment="right" inset="4" />
+				</widget>
+			</container>
+		</container>
+	</container>
+
+
+</panel>

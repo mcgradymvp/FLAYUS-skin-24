@@ -1,0 +1,52 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container id="popt">
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" >
+			<global id="horizontal_gap" name="ui.main_box_gap"/>
+		</layout>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+		<!--roundup statement/results-->
+		<container class="main_box">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="text" multiline="false" auto_size="vertical" size="large" font="title" colour="accent">
+					<translation id="text" translation_id="441159" type="use" value="Competition Review[COMMENT: title for competition review panel at the end of the match]" />
+				</widget>
+
+				<!--comment-->
+				<widget class="text" id="blub" multiline="true" auto_size="vertical"/>
+
+				<!--journalist-->
+				<widget class="text" id="jour" multiline="true" auto_size="vertical" size="small" colour="faded text"/>
+			</container>
+
+			<!--results-->
+			<container>
+
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+				<widget class="competition_fixtures_panel" id="resu" file="competition/competition fixtures roundup" svsl="false" display_mode="3" popup_parent="popt">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+			</container>
+		</container>
+
+		<!--league table-->
+		<container class="main_box" id="leag">
+			<translation id="text" translation_id="247175" type="use" value="Stages" />
+
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+			<widget class="competition_stage_panel" id="LTbl" file="competition/competition overview roundup">
+				<record id="object_property" get_property="objt" set_property="objt" />
+			</widget>
+		</container>
+	</container>
+
+</panel>

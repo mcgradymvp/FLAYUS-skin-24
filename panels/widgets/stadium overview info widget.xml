@@ -1,0 +1,162 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="main_box">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<container class="tabbed_container" id="tabb">	
+
+			<!--matches-->
+			<container id="matc">
+				<translation id="title" translation_id="257238" type="use" value="Matches" />
+
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+				<widget class="client_object_list_table" id="FixL" database_table_type="53" fixed_size_rows="false" auto_size_rows="true" mode="fill_rows, stripe_rows, printable, store_sort_state">
+					<record id="object_property">
+						<integer id="get_property" value="Slym" />
+						<integer id="set_property" value="objt"/>
+					</record>
+
+					<!-- default sort -->
+					<list id="default_sort_column">
+						<integer value="fxdt" />
+					</list>
+
+					<!--default view from the view list-->
+					<flags id="default_view" value="gene" />
+
+					<!--list of all available views-->
+					<record id="viewed_property_ids">
+						<flags id="home" />
+						<flags id="FxRs" />
+						<flags id="away" />
+					</record>
+
+				</widget>
+			</container>
+
+			<!--competitions-->
+			<container id="comp">
+				<translation id="title" translation_id="227741" type="use" value="Competitions" />
+
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+				<widget class="client_object_list_table" id="CmPs" database_table_type="57" fixed_size_rows="false" auto_size_rows="true" row_spacing="4" mode="fill_rows, stripe_rows, printable, store_sort_state">
+					<record id="object_property">
+						<integer id="get_property" value="Scom" />
+						<integer id="set_property" value="objt"/>
+					</record>
+
+					<record id="viewed_property_ids">
+						<record id="dref" />
+					</record>
+				</widget>
+			</container>
+
+			<!--teams-->
+			<container class="scrolling_box" id="team" >
+				<translation id="title" translation_id="229362" type="use" value="Teams" />
+
+				<container class="simple_data_list" id="tems" set_property="objt" auto_size="vertical" gap="6">
+					<record id="object_property">
+						<integer id="get_property" value="Susr" />
+					</record>
+
+					<record id="widget_properties" class="client_object_viewer_xml_panel" file="team/team item panel" />
+				</container>
+			</container>
+
+			<!--debug-->
+			<container class="scrolling_box" id="debT">
+				<string id="title" value="Debug" />
+				<widget class="client_object_label_value_table" height="800">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt"/>
+					</record>
+
+					<record id="table_properties" mode="fill_rows, stripe_rows" fixed_size_rows="false" auto_size_rows="true" />
+					<list id="viewed_property_ids">
+						<record id="Snat" spec="large"/>
+						<!--Nation-->
+						<record id="SctI" spec="large"/>
+						<!--City-->
+						<record id="SctW" spec="large"/>
+						<!--City weather-->
+						<record id="Slat" spec="large"/>
+						<!--Latitude-->
+						<record id="Slon" spec="large"/>
+						<!--Longitude-->
+						<record id="Sext" spec="large"/>
+						<!--Extinct-->
+						<record id="Sitg" spec="large"/>
+						<!--Training Ground-->
+						<record id="Snew" spec="large"/>
+						<!--Under Construction-->
+						<record id="SblC" spec="large"/>
+						<!--Cost of new stadium-->
+						<record id="SblS" spec="large"/>
+						<!--Build start date-->
+						<record id="SblC" spec="large"/>
+						<!--Build end date-->
+						<record id="Sbdy" spec="large"/>
+						<!--Year built-->
+						<record id="Srby" spec="large"/>
+						<!--Year rebuilt-->
+						<record id="Scpy" spec="large"/>
+						<!--Capacity-->
+						<record id="Sscy" spec="large"/>
+						<!--Seated Capacity-->
+						<record id="Sucy" spec="large"/>
+						<!--Used Capacity-->
+						<record id="Scas" spec="large"/>
+						<!--Capacity for all seated games-->
+						<record id="Secy" spec="large"/>
+						<!--Expansion capacity-->
+						<record id="TstD" spec="large"/>
+						<!--Stadium capacity description -->
+						<record id="Soty" spec="large"/>
+						<!--Owner type-->
+						<record id="Sown" spec="large"/>
+						<!--Owning club-->
+						<record id="Doco" spec="large"/>
+						<!--Date of ownership-->
+						<record id="Snft" spec="large"/>
+						<!--Named after reason-->
+						<record id="Sren" spec="large"/>
+						<!--Rent-->
+						<record id="SsfT" spec="large"/>
+						<!--Surface type-->
+						<record id="Splr" spec="large"/>
+						<!--Pitch last relaid-->
+						<record id="Sdcy" spec="large"/>
+						<!--Stadium condition-->
+						<record id="Senv" spec="large"/>
+						<!--Stadium environment state-->
+						<record id="Snbs" spec="large"/>
+						<!--Stadium nearby stadium-->
+						<record id="Sush" spec="large"/>
+						<!--Under soil heating-->
+						<record id="Scov" spec="large"/>
+						<!--Roof-->
+						<record id="Srrf" spec="large"/>
+						<!--Retractable roof-->
+						<record id="Sdah" spec="large"/>
+						<!--Digital ad hoardings-->
+						<record id="Sovl" spec="large"/>
+						<!--Oval-->
+						<record id="Sunt" spec="large"/>
+						<!--Used by national team-->
+						<record id="Su21" spec="large"/>
+						<!--Used by national u21 team-->
+						<record id="Su19" spec="large"/>
+						<!--Used by national u19 team-->
+					</list>
+				</widget>
+			</container>
+
+		</container>
+	</container>
+
+</panel>

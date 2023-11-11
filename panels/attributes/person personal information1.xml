@@ -1,0 +1,22 @@
+<panel>
+	<translation id="title" type="new" value="Player Information Panel" />
+	<attachment_group class="horizontal_arrange" horizontal_layout="-1"/>
+
+	<!-- Personal Information on the left -->
+	<container draw_horizontal_dividers="true">
+		<attachment_group class="vertical_arrange" vertical_layout="-1" />
+
+		<container navigation_container="true">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+
+				<widget class="person_personal_information_panel" file="player/player information nationalities" id="Nati" vertical="false">
+					<translation id="title" translation_id="333939" type="use" value="Nationalities[COMMENT: Player information; section title for a box displaying information about a player's nationality, elligibility and languages spoken]" />
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+		</container>
+	</container>
+</panel>

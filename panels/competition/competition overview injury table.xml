@@ -1,0 +1,50 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!-- titled box -->
+	<container class="main_box">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+
+			<widget class="link_button_title" id="inTl" section="csin">
+				<translation id="text" translation_id="247965" type="use" value="Injury Table" />
+			</widget>
+		</container>
+
+		<!-- main table -->
+		<widget class="table" id="hptb" mode="fill_rows, stripe_rows" layout="-1, 60" auto_size_rows="true" fixed_size_rows="false" row_spacing="0" navigation_container="true">
+
+			<list id="default_sort_column">
+				<integer value="inju" />
+				<integer value="club" />
+			</list>
+
+			<!-- headings -->
+			<list id="headings">
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="229408" type="use" value="Team" />
+				</record>
+				<record alignment="centre">
+					<translation id="text" translation_id="256674" type="use" value="Injuries[COMMENT: competition_injury_table; column header; 8 character maximum]" />
+				</record>
+			</list>
+
+			<!-- column display properties -->
+			<list id="column_table_properties">
+				<record indx="0" id="club" />
+				<record indx="1" id="inju" sort_disabled="false" sort_ascending="false" />
+			</list>
+
+			<list id="column_widget_properties">
+				<record indx="0" alignment="left,centre_y" navigation_focus_target="true"/>
+				<record indx="1" alignment="centre" spec="text" />
+			</list>
+		</widget>
+
+	</container>
+</panel>

@@ -1,0 +1,36 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!-- titled box containing pitch-->
+	<widget class="main_transparent_box" id="tlBX">
+
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!--debug-->
+		<widget class="table" id="debg" layout="-1,5,-1" mode="0" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false">
+
+			<widget class="label" alignment="right" auto_size="vertical" row="0" column="0">
+				<translation id="text" translation_id="348204" type="use" value="Mentality[Comment: prefix used before mentality type text on quick tactical instruction button during match]" />
+			</widget>
+			<widget class="mentality_label" id="menT" auto_size="vertical" row="0" column="2" colour="text" navigation_focus_target="false"/>
+
+			<widget class="label" alignment="right" auto_size="vertical" row="1" column="0">
+				<translation id="text" translation_id="465563" type="use" value="Team Fluidity[COMMENT: team tactical instruction, reference ID 364787, team shape is now team fluidity]" />
+			</widget>
+			<widget class="fluidity_label" id="fluI" auto_size="vertical" row="1" column="2" colour="text" navigation_focus_target="false"/>
+
+		</widget>
+
+		<!-- the pitch-->
+		<widget class="pitch_with_tactics" id="pwtc" player_icon_file="tactics/tactics icon preview info panel5" icon_flags="show_number,show_name,use_player_kits_back,show_extra_details">
+			<boolean id="vertical" value="true" />
+			<boolean id="pitch_dont_draw_indicators" value="true" />
+			<integer id="pitch_kit_height" value="40" />
+			<integer id="pitch_vertical_padding" value="10" />
+			<flags id="pitch_alignment" value="centre_x,top" />
+
+		</widget>
+
+	</widget>
+</panel>

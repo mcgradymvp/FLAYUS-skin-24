@@ -1,0 +1,137 @@
+<panel>
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+
+<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+
+	<!-- titled box -->
+	<container class="main_box" id="fxtt" force_title_borders="true">
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0"/>
+	
+		<!-- embedded buttons -->
+		<container embed_in_frame="true" id="emdb" navigation_container="true">
+
+			<global id="hidden" name="ui.is_fmt_pc_skin"/>
+
+			<attachment_group class="title_embedded_panel_left" vertical_inset="0"/>
+
+			<widget class="view_menu_label" id="TitL">
+				<translation id="text" translation_id="247326" type="use" value="Fixtures &amp; Results" />
+			</widget>
+			<widget class="view_menu_popup" id="vity" sele="vtvm" fixed="false" />
+		</container>
+
+		<!-- embedded buttons -->
+		<container id="btns" embed_in_frame="true" navigation_container="true" default_focus="true">
+			<attachment_group class="title_embedded_panel_right" vertical_inset="0">
+				<global id="horizontal_gap" name="ui.button_row_gap" />
+			</attachment_group>
+
+			<record id="default_properties" embed_in_frame="true" />
+
+			<widget class="embedded_left_right_list" id="fdat" sele="fdat" height="30" width="260">
+				<translation id="text" translation_id="247161" type="use" value="Dates" />
+			</widget>
+			<widget class="embedded_popup_button" id="fyar" sele="fyar" height="30" width="90" auto_size="none" fixed="false" />
+
+			<widget class="subtle_button" id="lrbt" click_event="fdtl" auto_size="horizontal">
+				<translation id="text" translation_id="247162" type="use" value="Latest Results" />
+			</widget>
+			<widget class="subtle_button" id="nfbt" click_event="fdtr" auto_size="horizontal">
+				<translation id="text" translation_id="247163" type="use" value="Next Fixtures" />
+			</widget>
+		</container>
+
+		<!-- No fixtures panel-->
+		<container id="nomt" hidden="true">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+			<widget class="spacer" height="10" />
+
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="all">
+				<translation id="text" translation_id="242251" type="use" value="No fixtures scheduled yet[COMMENT competition fixtures panel, no fixtures set up yet]" />
+			</widget>
+		</container>
+
+		<container id="fxsb" hidden="true" >
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" vertical_inset="4">
+				<global id="horizontal_gap" name="ui.main_contrast_box_gap"/>
+			</attachment_group>
+
+			<!-- scrolling box - used if more than 1 table-->
+			<container class="scrolling_box" save_session_state="true" navigation_container="true" >
+				<container id="fsbg">
+					<attachment_group class="vertical_arrange_autosize"/>
+				</container>
+			</container>
+					
+			<container class="inner_subtle_box" id="tltB" navigation_container="true">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,2,0,2"/>
+
+				<attachment class="test_screen_size_attachment" skip_if_false="true">
+					<list id="properties">
+						<record>
+							<flags id="alignment" value="horizontal" />
+							<integer id="min_value" value="0" />
+							<integer id="max_value" value="1365" />
+							<symbol id="set_property" value="width" />
+							<integer id="true_value" value="290" />
+							<integer id="false_value" value="290" />
+						</record>
+						<record>
+							<flags id="alignment" value="horizontal" />
+							<integer id="min_value" value="1366" />
+							<integer id="max_value" value="1919" />
+							<symbol id="set_property" value="width" />
+							<integer id="true_value" value="360" />
+							<integer id="false_value" value="360" />
+						</record>
+						<record>
+							<flags id="alignment" value="horizontal" />
+							<integer id="min_value" value="1920" />
+							<integer id="max_value" value="10000" />
+							<symbol id="set_property" value="width" />
+							<integer id="true_value" value="500" />
+							<integer id="false_value" value="500" />
+						</record>
+					</list>
+				</attachment>
+
+				<widget class="opponents_league_table" id="tlta">
+
+				</widget>
+
+			</container>
+		</container>
+
+		<container id="acbt" navigation_container="true">
+			<attachment_group class="horizontal_arrange_vertical_autosize"/>
+
+			<widget class="popup_button" id="vwgl" select_event="vwmt" auto_size="all" fixed="true">
+				<translation id="text" translation_id="251846" type="use" value="Replays[COMMENT: competition fixtures panel; popup menu button text; goals and highlights are the two options]" />
+				<list id="items">
+					<record id="6">
+						<translation id="text" translation_id="227857" type="use" value="Goals" />
+					</record>
+					<!-- MHTM_GOALS -->
+					<record id="3">
+						<translation id="text" translation_id="247164" type="use" value="Highlights" />
+					</record>
+					<!-- MHTM_KEY -->
+				</list>
+			</widget>
+
+			<widget class="widget_popup_button" id="frpu" auto_size="all" appearance="buttons/subtle/normal/button" needs_width="true" needs_height="true" hidden="true">
+				<string id="icon" value="icons/16px/staff respo" />
+				<translation id="text" translation_id="335274" type="use" value="Responsibilities[COMMENT: Manager main/top menu: national team options when team name is not visible]" />
+				<string id="popup_alignment" value="centre_x, top" />
+				<string id="widget_type" value="group_responsibility_list_widget" />
+				<record id="widget_properties" file="team/friendly responsibility popup panel" width="850" height="200" />
+				<record id="modal_popup_properties" file="modal popup panel auto sized" />
+			</widget>
+		</container>
+		
+	</container>
+</panel>

@@ -1,0 +1,482 @@
+<panel>
+    <attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="0" />
+
+    <boolean id="should_force_refresh" value="true" />
+
+    <container>
+
+        <!--<animation class="fade_animation" start_value="0" end_value="1" duration="1" delay="0" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true"/>-->
+
+        <attachment_group class="vertical_arrange" vertical_layout="75,-1" vertical_gap="4">
+            <global id="vertical_offset" name="ui.main_box_gap" />
+            <global id="horizontal_inset" name="ui.main_box_gap" />
+        </attachment_group>
+    
+        <!-- top row of players - numbers 8-11 -->
+        <container id="topP">
+            <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" horizontal_gap="3" vertical_inset="0" />
+
+            <widget class="match_team_talk_person_info_panel" id="7">
+                <attachment class="test_screen_size_attachment" skip_if_false="true">
+                    <list id="properties">
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="1366" />
+                            <integer id="max_value" value="1365" />
+                            <symbol id="set_property" value="width" />
+                            <integer id="true_value" value="230" />
+                            <integer id="false_value" value="220" />
+                        </record>
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="1366" />
+                            <integer id="max_value" value="1600" />
+                            <symbol id="set_property" value="width" />
+                            <integer id="true_value" value="300" />
+                            <integer id="false_value" value="300" />
+                        </record>
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="1600" />
+                            <integer id="max_value" value="10000" />
+                            <symbol id="set_property" value="width" />
+                            <integer id="true_value" value="350" />
+                            <integer id="false_value" value="350" />
+                        </record>
+                    </list>
+                </attachment>
+            </widget>
+            <widget class="match_team_talk_person_info_panel" id="8">
+                <attachment class="test_screen_size_attachment" skip_if_false="true">
+                    <list id="properties">
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="0" />
+                            <integer id="max_value" value="1366" />
+                            <symbol id="set_property" value="width" />
+                            <integer id="true_value" value="230" />
+                            <integer id="false_value" value="220" />
+                        </record>
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="1366" />
+                            <integer id="max_value" value="1600" />
+                            <symbol id="set_property" value="width" />
+                            <integer id="true_value" value="300" />
+                            <integer id="false_value" value="300" />
+                        </record>
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="1600" />
+                            <integer id="max_value" value="10000" />
+                            <symbol id="set_property" value="width" />
+                            <integer id="true_value" value="350" />
+                            <integer id="false_value" value="350" />
+                        </record>
+                    </list>
+                </attachment>
+            </widget>
+            <widget class="match_team_talk_person_info_panel" id="9">
+                <attachment class="test_screen_size_attachment" skip_if_false="true">
+                    <list id="properties">
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="0" />
+                            <integer id="max_value" value="1366" />
+                            <symbol id="set_property" value="width" />
+                            <integer id="true_value" value="230" />
+                            <integer id="false_value" value="220" />
+                        </record>
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="1366" />
+                            <integer id="max_value" value="1600" />
+                            <symbol id="set_property" value="width" />
+                            <integer id="true_value" value="300" />
+                            <integer id="false_value" value="300" />
+                        </record>
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="1600" />
+                            <integer id="max_value" value="10000" />
+                            <symbol id="set_property" value="width" />
+                            <integer id="true_value" value="350" />
+                            <integer id="false_value" value="350" />
+                        </record>
+                    </list>
+                </attachment>
+            </widget>
+            <widget class="match_team_talk_person_info_panel" id="10">
+                <attachment class="test_screen_size_attachment" skip_if_false="true">
+                    <list id="properties">
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="0" />
+                            <integer id="max_value" value="1366" />
+                            <symbol id="set_property" value="width" />
+                            <integer id="true_value" value="230" />
+                            <integer id="false_value" value="220" />
+                        </record>
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="1366" />
+                            <integer id="max_value" value="1600" />
+                            <symbol id="set_property" value="width" />
+                            <integer id="true_value" value="300" />
+                            <integer id="false_value" value="300" />
+                        </record>
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="1600" />
+                            <integer id="max_value" value="10000" />
+                            <symbol id="set_property" value="width" />
+                            <integer id="true_value" value="350" />
+                            <integer id="false_value" value="350" />
+                        </record>
+                    </list>
+                </attachment>
+            </widget>
+
+        </container>
+
+        <container>
+            <attachment_group class="horizontal_arrange" horizontal_alignment="middle,extend" />
+
+           <container width="70">
+              <layout class="show_medium_horizontal" min_value="1920" />
+           </container>
+
+            <!-- left hand side column of players - numbers 1-7 -->
+            <container id="left">
+
+                <attachment class="test_screen_size_attachment" skip_if_false="true">
+                    <list id="properties">
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="0" />
+                            <integer id="max_value" value="1366" />
+                            <symbol id="set_property" value="width" />
+                            <integer id="true_value" value="230" />
+                            <integer id="false_value" value="230" />
+                        </record>
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="1366" />
+                            <integer id="max_value" value="1600" />
+                            <symbol id="set_property" value="width" />
+                            <integer id="true_value" value="300" />
+                            <integer id="false_value" value="300" />
+                        </record>
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="1600" />
+                            <integer id="max_value" value="10000" />
+                            <symbol id="set_property" value="width" />
+                            <integer id="true_value" value="350" />
+                            <integer id="false_value" value="350" />
+                        </record>
+                    </list>
+                </attachment>
+
+                <attachment_group class="vertical_arrange_autosize" vertical_gap="3" />
+
+                <widget class="match_team_talk_person_info_panel" id="6" />
+                <widget class="match_team_talk_person_info_panel" id="5" />
+                <widget class="match_team_talk_person_info_panel" id="4" />
+                <widget class="match_team_talk_person_info_panel" id="3" />
+                <widget class="match_team_talk_person_info_panel" id="2" />
+                <widget class="match_team_talk_person_info_panel" id="1" />
+                <widget class="match_team_talk_person_info_panel" id="0" />
+            </container>
+
+            <container>
+                <attachment_group class="horizontal_arrange" horizontal_alignment="middle" />
+
+                <container>
+                    <attachment class="test_screen_size_attachment" skip_if_false="true">
+                        <list id="properties">
+                            <record>
+                                <flags id="alignment" value="horizontal" />
+                                <integer id="min_value" value="0" />
+                                <integer id="max_value" value="1366" />
+                                <!-- This is a very large value as we want our widget to show if > the min_value.  The attachment itself only does values between a range so we set the max arbitrarily high to make this work -->
+                                <symbol id="set_property" value="width" />
+                                <integer id="true_value" value="500" />
+                                <integer id="false_value" value="500" />
+                            </record>
+                            <record>
+                                <flags id="alignment" value="horizontal" />
+                                <integer id="min_value" value="1366" />
+                                <integer id="max_value" value="1466" />
+                                <!-- This is a very large value as we want our widget to show if > the min_value.  The attachment itself only does values between a range so we set the max arbitrarily high to make this work -->
+                                <symbol id="set_property" value="width" />
+                                <integer id="true_value" value="675" />
+                                <integer id="false_value" value="675" />
+                            </record>
+                             <record>
+                                <flags id="alignment" value="horizontal" />
+                                <integer id="min_value" value="1466" />
+                                <integer id="max_value" value="1600" />
+                                <!-- This is a very large value as we want our widget to show if > the min_value.  The attachment itself only does values between a range so we set the max arbitrarily high to make this work -->
+                                <symbol id="set_property" value="width" />
+                                <integer id="true_value" value="750" />
+                                <integer id="false_value" value="750" />
+                            </record>
+                            <record>
+                                <flags id="alignment" value="horizontal" />
+                                <integer id="min_value" value="1600" />
+                                <integer id="max_value" value="10000" />
+                                <!-- This is a very large value as we want our widget to show if > the min_value.  The attachment itself only does values between a range so we set the max arbitrarily high to make this work -->
+                                <symbol id="set_property" value="width" />
+                                <integer id="true_value" value="850" />
+                                <integer id="false_value" value="850" />
+                            </record>
+                        </list>
+                    </attachment>
+
+                    <attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="0" vertical_offset="0" />
+
+                    <!-- what was said -->
+                    <container>
+                        <attachment_group class="vertical_arrange" vertical_alignment="middle" horizontal_alignment="horizontal" horizontal_inset="20"/>
+
+                        <container class="inner_subtle_box" appearance="boxes/custom/speech bubble/bottom/paper" id="prev" hidden="true" red_replacement="bg accent">
+                            <attachment_group class="vertical_arrange_autosize"/>
+
+                            <widget class="text" id="cnvr" alignment="centre" auto_size="vertical" colour="accent button text"/>
+                        </container>
+                    </container>
+
+                <!-- main response box -->
+                    <container class="main_transparent_box" id="cntr" navigation_container="true" default_focus="true">
+                        <attachment class="test_screen_size_attachment" skip_if_false="true">
+                            <list id="properties">
+                                <record>
+                                    <flags id="alignment" value="vertical"/>
+                                    <integer id="min_value" value="0"/>
+                                    <integer id="max_value" value="875"/>
+                                    <!-- This is a very large value as we want our widget to show if > the min_value.  The attachment itself only does values between a range so we set the max arbitrarily high to make this work -->
+                                    <symbol id="set_property" value="height"/>
+                                    <integer id="true_value" value="475"/>
+                                    <integer id="false_value" value="475"/>
+                                </record>
+                                <record>
+                                    <flags id="alignment" value="vertical"/>
+                                    <integer id="min_value" value="875"/>
+                                    <integer id="max_value" value="968"/>
+                                    <!-- This is a very large value as we want our widget to show if > the min_value.  The attachment itself only does values between a range so we set the max arbitrarily high to make this work -->
+                                    <symbol id="set_property" value="height"/>
+                                    <integer id="true_value" value="575"/>
+                                    <integer id="false_value" value="575"/>
+                                </record>
+                                <record>
+                                    <flags id="alignment" value="vertical"/>
+                                    <integer id="min_value" value="968"/>
+                                    <integer id="max_value" value="1080"/>
+                                    <!-- This is a very large value as we want our widget to show if > the min_value.  The attachment itself only does values between a range so we set the max arbitrarily high to make this work -->
+                                    <symbol id="set_property" value="height"/>
+                                    <integer id="true_value" value="675"/>
+                                    <integer id="false_value" value="675"/>
+                                </record>
+                                <record>
+                                    <flags id="alignment" value="vertical"/>
+                                    <integer id="min_value" value="1080"/>
+                                    <integer id="max_value" value="1200"/>
+                                    <!-- This is a very large value as we want our widget to show if > the min_value.  The attachment itself only does values between a range so we set the max arbitrarily high to make this work -->
+                                    <symbol id="set_property" value="height"/>
+                                    <integer id="true_value" value="750"/>
+                                    <integer id="false_value" value="750"/>
+                                </record>
+                                <record>
+                                    <flags id="alignment" value="vertical"/>
+                                    <integer id="min_value" value="1200"/>
+                                    <integer id="max_value" value="10000"/>
+                                    <!-- This is a very large value as we want our widget to show if > the min_value.  The attachment itself only does values between a range so we set the max arbitrarily high to make this work -->
+                                    <symbol id="set_property" value="height"/>
+                                    <integer id="true_value" value="850"/>
+                                    <integer id="false_value" value="850"/>
+                                </record>
+                            </list>
+                        </attachment>
+
+                        <attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_gap="8"/>
+
+                        <!-- who to talk to -->
+                        <container id="whot">
+                            <attachment_group class="horizontal_arrange_wrapped" horizontal_alignment="left" horizontal_gap="0"/>
+
+                            <widget class="text" auto_size="all" alignment="left, centre_y">
+                                <translation id="text" translation_id="515086" type="use" value="Talk to:[COMMENT: AREA: Team talk; SUB-AREA: Team talk; FR-BN: 30896; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: Initial string to select which group of players to talk to]"/>
+                            </widget>
+
+                            <widget class="spacer" width="25"/>
+
+                            <widget class="radio_button" show_button_appearance="true" icon="none" id="ttRm" auto_size="all" click_event="ttRm" appearance="switches/toggle/left/button">
+                                <translation id="text" translation_id="515087" type="use" value="Room[COMMENT: AREA: Team talk; SUB-AREA: Team talk; FR-BN: 30896; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: Button label to select which group of players to talk to]"/>
+                            </widget>
+
+                            <widget class="radio_button" show_button_appearance="true" icon="none" id="ttDf" auto_size="all" click_event="ttDf" appearance="switches/toggle/middle/button">
+                                <translation id="text" translation_id="231452" type="use" value="Defenders"/>
+                            </widget>
+
+                            <widget class="radio_button" show_button_appearance="true" icon="none" id="ttMd" auto_size="all" click_event="ttMd" appearance="switches/toggle/middle/button">
+                                <translation id="text" translation_id="231453" type="use" value="Midfielders"/>
+                            </widget>
+
+                            <widget class="radio_button" show_button_appearance="true" icon="none" id="ttAt" auto_size="all" click_event="ttAt" appearance="switches/toggle/middle/button">
+                                <translation id="text" translation_id="231454" type="use" value="Attackers"/>
+                            </widget>
+
+                            <widget class="radio_button" show_button_appearance="true" icon="none" id="ttIn" auto_size="all" click_event="ttIn" appearance="switches/toggle/right/button">
+                                <translation id="text" translation_id="515088" type="use" value="Individuals[COMMENT: AREA: Team talk; SUB-AREA: Team talk; FR-BN: 30896; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: Button label to select which group of players to talk to]"/>
+                            </widget>
+                        </container>
+
+                        <widget class="horizontal_divider"/>
+
+                        <!-- gestures -->
+                        <container class="interaction_gesture_selector_panel" id="gest"/>
+
+                        <!-- statements -->
+                        <container id="stat">
+                            <attachment_group class="vertical_arrange" vertical_alignment="top, extend"/>
+
+                            <widget class="text" font="title" auto_size="vertical">
+                                <translation id="text" translation_id="515074" type="use" value="Statement[COMMENT: AREA: Team talk; SUB-AREA: Team talk statements list; FR-BN: 30896; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title for list of available statements to make to the team]"/>
+                            </widget>
+
+                            <widget class="table" id="resp" layout="-1, -1" mode="fill_rows, select_rows, highlight_on_scroll" auto_size_rows="true" fixed_size_rows="false" all_content_same_height="false" row_spacing="2" navigation_focus_target="true" select_event="tTSl">
+                                <flags id="row_appearance" value="buttons/subtle/flex/button"/>
+                                <list id="column_widget_properties">
+                                    <record index="0" alignment="left, centre_y" auto_size="vertical"/>
+                                    <record index="1" alignment="centre"/>
+                                </list>
+                                <list id="column_table_properties">
+                                    <record index="0" left="10" top="8" bottom="8" right="0"/>
+                                    <record index="1" left="8" top="8" bottom="8" right="0">
+                                        <record id="widget_info" class="button" font="title" colour="accent button text" size="small" auto_size="all" red_replacement="bg accent" appearance="labels/standard/label"/>
+                                    </record>
+                                </list>
+                            </widget>
+                        </container>
+
+                        <container height="250" id="donc">
+                            <attachment_group class="vertical_arrange_horizontal_centre" vertical_alignment="middle" vertical_gap="2"/>
+
+                            <widget class="text" size="xlarge" style="bold" auto_size="all">
+                                <translation id="text" translation_id="515075" type="use" value="Team Talk Complete[COMMENT: AREA: Team talk; SUB-AREA: Team talk; FR-BN: 30896; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Information text indicating team talk is complete]"/>
+                            </widget>
+
+                            <widget class="text" id="dont" auto_size="all"/>
+                        </container>
+                    </container>
+
+                    <widget class="picture" file="icons/16px/bubble point" height="16" image_alignment="centre"/>
+                </container>
+            </container>
+
+            <!-- right hand side column of players - substitutes -->
+            <container class="scrolling_box">
+
+                <attachment class="test_screen_size_attachment" skip_if_false="true">
+                    <list id="properties">
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="0" />
+                            <integer id="max_value" value="1366" />
+                            <symbol id="set_property" value="width" />
+                            <integer id="true_value" value="230" />
+                            <integer id="false_value" value="230" />
+                        </record>
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="1366" />
+                            <integer id="max_value" value="1600" />
+                            <symbol id="set_property" value="width" />
+                            <integer id="true_value" value="300" />
+                            <integer id="false_value" value="300" />
+                        </record>
+                        <record>
+                            <flags id="alignment" value="horizontal" />
+                            <integer id="min_value" value="1600" />
+                            <integer id="max_value" value="10000" />
+                            <symbol id="set_property" value="width" />
+                            <integer id="true_value" value="350" />
+                            <integer id="false_value" value="350" />
+                        </record>
+                    </list>
+                </attachment>
+
+                <container>
+                    <attachment_group class="vertical_arrange_autosize" vertical_gap="3" />
+
+                    <widget class="match_team_talk_person_info_panel" id="11" />
+                    <widget class="match_team_talk_person_info_panel" id="12" />
+                    <widget class="match_team_talk_person_info_panel" id="13" />
+                    <widget class="match_team_talk_person_info_panel" id="14" />
+                    <widget class="match_team_talk_person_info_panel" id="15" />
+                    <widget class="match_team_talk_person_info_panel" id="16" />
+                    <widget class="match_team_talk_person_info_panel" id="17" />
+                    <widget class="match_team_talk_person_info_panel" id="18" />
+                    <widget class="match_team_talk_person_info_panel" id="19" />
+                    <widget class="match_team_talk_person_info_panel" id="20" />
+                    <widget class="match_team_talk_person_info_panel" id="21" />
+                    <widget class="match_team_talk_person_info_panel" id="22" />
+                </container>
+            </container>
+
+            <container width="70">
+                <layout class="show_medium_horizontal" min_value="1920" />
+            </container>
+        </container>
+
+    </container>
+
+     <container background_colour="bg" height="50" navigation_container="true">
+        <attachment_group class="horizontal_arrange" horizontal_alignment="middle, fill" horizontal_offset="4"/>
+        <animation class="translate_animation" start_value="0, 1" end_value="0, 0" duration="0.3" delay="0" end_mode="hold_end" tween="ease_out_4" coord_mode="relative_to_target" trigger_id="hidden" trigger_start="false" trigger_end="true" no_clipping="true"/>
+
+        <container>
+            <attachment_group class="horizontal_arrange_vertical_centre" horizontal_alignment="left" vertical_alignment="vertical" horizontal_gap="0"/>
+            
+            <!-- back to 1st half/full time review -->
+            <widget class="icon_button" id="HaRv" auto_size="all" click_event="HaRv" appearance="buttons/subtle/normal/button" icon="icons/26px/back" hidden="true"/>
+                
+            <!-- tactics link -->
+            <widget class="icon_button" id="TcLk" auto_size="all" click_event="ShTD" appearance="buttons/subtle/normal/button" icon="icons/16px/tactics" secondary_icon_enabled="true" secondary_icon="icons/16px/maximise">
+                <translation id="text" translation_id="230056" type="use" value="Tactics"/>
+            </widget>
+
+            <!-- team talk staff responsibility widget -->
+            <widget class="widget_popup_button" id="ttRs" auto_size="horizontal" appearance="buttons/subtle/normal/button" icon="icons/16px/staff">
+                <translation id="text" translation_id="515090" type="use" value="Responsibility[COMMENT: AREA: Team talk; SUB-AREA: Team talk; FR-BN: 30896; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: text showing who has the responsibility for delivering team talks]"/>
+                <string id="popup_alignment" value="centre_x, top"/>
+                <string id="widget_type" value="group_responsibility_list_widget"/>
+                <record id="WdgP" file="team/staff responsibility summary popup panel" width="800" height="150" hide_multi_select_button="true"/>
+                <record id="mopp" file="modal popup panel auto sized"/>
+            </widget>
+
+            <!--debug player reactions toggle button-->
+            <widget class="subtle_button" id="debT" auto_size="all" click_event="debT" hidden="true">
+                <string id="text" value="Debug Info"/>
+            </widget>
+
+        </container>
+
+        <!-- human description -->
+        <widget class="interaction_person_info_panel" id="humd" interaction_person_type="human" width="200" talk="true" disable_link="true">
+            <layout class="centre_in_parent_attachment" alignment="horizontal"/>
+        </widget>
+
+        <container>
+            <attachment_group class="horizontal_arrange_vertical_centre" horizontal_alignment="right" vertical_alignment="vertical" horizontal_gap="8"/>
+
+            <!-- handover widget -->
+            <widget class="match_hand_over_widget" id="hdOa" height="50" select_event="TmTl">
+                <record id="object_property" get_property="objt" set_property="objt"/>
+            </widget>
+        </container>
+    </container>
+
+
+</panel>

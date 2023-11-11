@@ -1,0 +1,59 @@
+<panel>
+	<attachment class="get_global_attachment" get_property="Dmen" set_property="coni" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<!--header with selected team in (can be hidden)-->
+	<container class="main_box" id="tehe">
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="10" gap="16" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<!--nation logo-->
+		<widget class="picture" id="nalo" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre" width="50">
+		</widget>
+
+		<!--logo-->
+		<widget class="picture" id="telo" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre" width="50">
+		</widget>
+
+		<!--blurb-->
+		<container id="tebl" navigation_container="true">
+			<attachment_group class="horizontal_arrange" horizontal_gap="16" alignment="left, centre_y"/>
+
+			<widget class="text" id="tela" alignment="left,centre_y" font="text" style="bold" size="large" auto_size="horizontal" height="30" />
+
+			<widget class="subtle_button" appearance="buttons/standard/normal/button" id="chte" click_event="chte" auto_size="horizontal" height="30" colour="fg">
+				<translation id="text" translation_id="295066" type="use" value="Change[COMMENT: button for changing a kit style]" />
+			</widget>
+
+		</container>
+	</container>
+
+	<!--header with no selected team (can be hidden)-->
+	<container id="nthe">
+		<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" apply_to_children="true" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+
+			<!--team name-->
+			<widget class="text" alignment="left,centre_y" size="large" style="bold" auto_size="horizontal" height="30">
+				<translation id="text" translation_id="420641" type="use" value="No team picked[COMMENT: game information screen; label for showing that the user has not picked a team to start the game with]" />
+			</widget>
+
+			<!--change button-->
+			<widget class="subtle_button" appearance="buttons/standard/normal/button" id="chte" click_event="chte" auto_size="horizontal" height="30" colour="fg">
+				<translation id="text" translation_id="295066" type="use" value="Change[COMMENT: button for changing a kit style]" />
+			</widget>
+
+		</container>
+
+		<widget class="label" alignment="left,top">
+			<translation id="text" translation_id="420642" type="use" value="You can pick your team after starting the game if you wish to see more information about teams before deciding who to manage.[COMMENT: game information screen; help text, cannot be feminised]" />
+		</widget>
+
+	</container>
+
+</panel>

@@ -1,0 +1,48 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<widget class="data_hub_splashscreen" is_last_match_analysis="true">
+		<record id="object_property" get_property="Ttea" dont_set_hint="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container class="main_box" id="dflt">
+			<attachment_group class="horizontal_arrange" horizontal_layout="-2,1,-1" horizontal_offset="0" horizontal_gap="8" />
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="4" horizontal_inset="4" />
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_offset="0" horizontal_gap="10" />
+
+					<widget class="text" id="tmRp" alignment="centre_y,left" auto_size="all" font="title" size="large">
+						<translation id="text" translation_id="316854" type="use" value="Last Match" />
+					</widget>
+					<widget class="text" alignment="centre_y,left" auto_size="all" id="cmpT" colour="faded text">
+						<string id="remove_if" value="is_fmt" />
+					</widget>
+				</container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<widget class="data_analyst_match_report_widget" id="repM" />
+
+				<widget class="text" alignment="centre" hidden="true" id="noDa" colour="accent" font="title" size="large">
+					<translation id="text" translation_id="538896" type="use" value="No report to display[COMMENT: AREA: Data Hub; SUB-AREA: Team report overview; FR: 31585; TONE: Formal; CHARLIMIT: None NOTES: Team report hasn't been geenrated]" />
+				</widget>
+			</container>
+			<widget class="vertical_divider">
+				<string id="image_alignment" value="centre_x" />
+			</widget>
+			<container id="prmR" navigation_container="true" navigation_container_allow_empty="true">
+				<translation id="title" translation_id="538897" type="use" value="Previous Match Reports[COMMENT: AREA: Data Hub; SUB-AREA: Match Report Panel; FR: ; TONE: Formal; CHARLIMIT: None NOTES: Header for list of previous match reports to look at]" />
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="4" vertical_gap="10" />
+				<container height="320">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<container class="vertical_arrange_container" id="repF" gap="6" />
+					<widget class="text" alignment="centre_x,centre_y" id="notT" colour="accent" font="title" size="large">
+						<translation id="text" translation_id="538898" type="use" value="No previous reports[COMMENT: AREA: Data Hub; SUB-AREA:Match report overview; FR: 31585; TONE: Formal; CHARLIMIT: None NOTES: No past matches to display in list]" />
+					</widget>
+				</container>
+
+				<container class="tactics_recent_match_analysis_panel" id="anLy" navigation_container="true" />
+			</container>
+		</container>
+	</widget>
+</panel>

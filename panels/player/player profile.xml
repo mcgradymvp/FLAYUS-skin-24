@@ -1,0 +1,101 @@
+<panel>
+  <translation id="title" type="new" value="Player Profile Panel" />
+  <!-- Set Current View -->
+  <integer id="current_view_menu" value="attv" />
+
+  <attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+  <!-- Row 1 -Details and attributes -->
+  <container class="main_box" height="370" navigation_container="true">
+        <layout class="arrange_horizontal_attachment" offset="0" layout="-8, 2, -13">
+        </layout>
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+        <!-- Personal Details -->
+        <container class="player_personal_details_panel" file="player/player profile personal details2">
+          <record id="object_property" get_property="object" set_property="object"/>
+        </container>
+
+        <widget class="vertical_subtle_divider"/>
+
+        <!-- Attributes Container -->
+        <container class="inner_box">
+          <translation id="title" translation_id="229822" type="use" value="Attributes" />
+          <!-- buttons area -->
+          <container id="btna" embed_in_frame="true">
+            <attachment_group class="title_embedded_panel_right" horizontal_offset="0"/>
+
+            <widget class="check_box" id="shtr" click_event="shtc" alignment="centre" auto_size="all" save_session_state="true" save_default_state="true" embed_in_frame="true">
+              <translation id="text" translation_id="258284" type="use" value="Show recent attribute changes[COMMENT: text on player_profile panel to toggle the attribute change arrows RE-TRANSLATE FOR FM2008]" />
+            </widget>
+            <widget class="player_roles_popup_button" id="skpa" show_attribute_highlight_colours="true" show_clear_item="true"  alignment="centre" appearance="buttons/subtle/normal/button" auto_size="horizontal" height="30" fixed="true" spec="text" show_selected_role="true" embed_in_frame="true">
+              <translation id="text" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]" />
+            </widget>
+          </container>
+
+          <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+          <container class="player_attributes_panel" id="patp" file="player/player attributes panel profile" highlight_attributes="true" show_attribute_offsets="false" dont_allow_custom_attribute_change_ranges="true"/>
+        </container>
+  </container>
+
+  <!-- MAIN AREA -->
+  <container cid="atit" draw_horizontal_dividers="true" navigation_container="true">
+    <attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" >
+    </attachment_group>
+
+    <container class="vertical_adaptive_container" id="PLPR" inset="0" offset="0" draw_horizontal_dividers="true">
+
+      <!-- Row 2 - Positions and availability / status -->
+      <container default_height="-5" minimum_height="70" priority="1" draw_vertical_dividers="true">
+        <attachment_group class="horizontal_arrange" horizontal_layout="-8, -13" >
+        </attachment_group>
+
+        <!-- Positions -->
+        <container class="main_box">
+          <translation id="title" translation_id="230082" type="use" value="Positions" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+          <widget class="player_positions_indicator_panel" id="ppip" file="player/player positions indicator tiny with pitch" embed_in_frame="true">
+            <!-- This layout black magic is to make the indicator fit at min.res -->
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="false" inset="26,18, 4, 4" />
+          </widget>
+          <widget class="player_positions_indicator_panel" id="ppi1" file="player/player positions indicator small">
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="false" inset="-8,0" />
+          </widget>
+        </container>
+
+        <!-- Player status flags -->
+        <container class="player_availability_panel" id="pavl" />
+      </container>
+
+      <container class="main_box"  minimum_height="155" priority="2">
+          <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" /><!-- Row 3 - Selector panels. By default fitness, dynamics and plans -->
+      <container class="horizontal_adaptive_container" offset="0" inset="0" draw_vertical_dividers="true">
+        <record id="default_properties" file="player/player overview small selector panel" save_session_state="true" minimum_width="310" default_width="-1">
+          <record id="object_property" get_property="objt" set_property="objt"/>
+        </record>
+        <container class="client_object_viewer_selector_panel" priority="1" id="aos1">
+          <integer id="default_widget" value="ppsp"/>
+        </container>
+        <container class="client_object_viewer_selector_panel" priority="2" id="aos2">
+          <integer id="default_widget" value="Phap"/>
+        </container>
+        <container class="client_object_viewer_selector_panel" priority="3" id="aos3">
+          <integer id="default_widget" value="Ppla"/>
+        </container>
+      </container>
+    </container>
+</container>
+    <!-- Row 4 - Player stats panel -->
+    <container class="player_stats_panel" id="pstp" should_show_overall_last="true">
+      <list id="properties_to_forward">
+        <record target="pstt" set_property="default_properties">
+          <record id="value" alignment="centre" colour="red"/>
+        </record>
+      </list>
+    </container>
+  </container>
+
+</panel>

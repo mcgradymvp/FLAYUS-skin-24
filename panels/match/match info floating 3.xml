@@ -1,0 +1,51 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<!--home heat map-->
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+	
+	<container>
+		<layout class="arrange_vertical_attachment" layout="60,-1" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+		<container class="home_match_incidents_panel" file="match/match left in between1" height="60">
+		    <record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</container>
+
+	    <widget class="preselected_match_chalkboard_panel" pitch_draw_arrows="true" vertical="true" pitch_dont_draw_indicators="false" force_left_to_right_events="true" id="pChk" team_to_display="0" average_position_filter="0" enable_popup="ture">
+			<record id="object_property" get_property="objt" set_property="objt" />
+				<list id="chalkboard_events_to_display">
+					<!-- Pass Combinations -->
+					<integer value="63" />
+					<!--Key Pass -->
+					<integer value="43" /> 
+				</list>
+		</widget>		
+	</container>
+	
+	<container>
+		<layout class="arrange_vertical_attachment" layout="60,-1" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+		<container class="away_match_incidents_panel" file="match/match right in between1" height="60">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</container>
+		
+	    <widget class="preselected_match_chalkboard_panel" pitch_draw_arrows="true" vertical="true" pitch_dont_draw_indicators="false" force_left_to_right_events="true" id="pCak" team_to_display="1" average_position_filter="1" enable_popup="ture">
+			<record id="object_property" get_property="objt" set_property="objt" />
+				<list id="chalkboard_events_to_display">
+					<!-- Pass Combinations -->
+					<integer value="63" />
+					<!--Key Pass -->
+					<integer value="43" /> 
+				</list>
+		</widget>
+	</container>
+	</container>
+</panel>

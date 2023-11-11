@@ -1,0 +1,88 @@
+﻿<panel>
+    <attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_gap="8" />
+
+    <!-- text to display if no transfers -->
+    <widget class="text" id="NoHL" colour="text" size="large" style="bold" auto_size="horizontal" height="110" alignment="centre" hidden="true">
+        <translation id="text" translation_id="538890" type="use" value="No transfer activity to display[COMMENT: AREA: UI; SUB-AREA: Transfer Deadline Day Transfer News Panel; FR: 34759; TONE: Formal; CHARLIMIT: None; REF-ID: ; NOTE: String to indicate there has been no transfer activity so far]" />
+    </widget>
+
+    <widget class="text" auto_size="all" font="title">
+        <translation id="text" translation_id="330721" type="use" value="Transfer Activity[COMMENT: how to system; help string]" />
+    </widget>
+
+    <widget class="table" id="tabl" mode="fill_rows, stripe_rows" layout="400, 50, 50, 200, 200, 120, 120, 120" save_session_state="true" row_spacing="12" row_height="38" column_spacing="8">
+        <list id="column_table_properties">
+            <record index="0" id="name">
+                <record id="column_heading">
+                    <translation id="text" translation_id="227737" type="use" value="Club" />
+                    <flags id="column" value="0" />
+                </record>
+                <boolean id="sort_ascending" value="false" />
+            </record>
+            <record index="1" id="in  ">
+                <record id="column_heading">
+                    <translation id="text" translation_id="316758" type="use" value="In[COMMENT - Transfer Centre; title of incoming transfers tab; limited space for text here, 5 characters maximum]" />
+                    <flags id="column" value="1" />
+                    <flags id="alignment" value="centre" />
+                </record>
+                <boolean id="sort_ascending" value="false" />
+            </record>
+            <record index="2" id="out ">
+                <record id="column_heading">
+                    <translation id="text" translation_id="316759" type="use" value="Out[COMMENT - Transfer Centre; title of outgoing transfers tab; limited space for text here, 5 characters maximum]" />
+                    <flags id="column" value="2" />
+                    <flags id="alignment" value="centre" />
+                </record>
+            </record>
+            <record index="3" id="bgsg">
+                <record id="column_heading">
+                    <translation id="text" translation_id="420589" type="use" value="Biggest Signing[COMMENT - FR 15125, competition transfer window panel section, biggest here means most expensive]" />
+                    <flags id="column" value="3" />
+                </record>
+                <boolean id="sort_ascending" value="false" />
+            </record>
+            <record index="4" id="bgsl">
+                <record id="column_heading">
+                    <translation id="text" translation_id="420590" type="use" value="Biggest Sale[COMMENT - FR 15125, competition transfer window panel section, biggest here means most expensive]" />
+                    <flags id="column" value="4" />
+                </record>
+                <boolean id="sort_ascending" value="false" />
+            </record>
+            <record index="5" id="spen">
+                <record id="column_heading">
+                    <translation id="text" translation_id="336037" type="use" value="Spent" />
+                    <flags id="column" value="5" />
+                    <flags id="alignment" value="right, centre_y" />
+                </record>
+                <boolean id="sort_ascending" value="false" />
+            </record>
+            <record index="6" id="rece">
+                <record id="column_heading">
+                    <translation id="text" translation_id="420591" type="use" value="Received[COMMENT - FR 15125, competition transfer window panel section for money received]" />
+                    <flags id="column" value="6" />
+                    <flags id="alignment" value="right, centre_y" />
+                </record>
+                <boolean id="sort_ascending" value="false" />
+            </record>
+            <record index="7" id="net ">
+                <record id="column_heading">
+                    <translation id="text" translation_id="420588" type="use" value="Net[COMMENT - FR 15125, a Net figure for a financial value e.g. transfer or wage expenditure]" />
+                    <flags id="column" value="7" />
+                    <flags id="alignment" value="right, centre_y" />
+                </record>
+                <boolean id="sort_ascending" value="false" />
+            </record>
+        </list>
+
+        <list id="column_widget_properties">
+            <record index="0" navigation_focus_target="true" />
+            <record index="1" alignment="right, centre_y" navigation_focus_target="false" />
+            <record index="2" alignment="right, centre_y" navigation_focus_target="false" />
+            <record index="3" alignment="left, centre_y" />
+            <record index="4" alignment="left, centre_y" />
+            <record index="5" alignment="right, centre_y" />
+            <record index="6" alignment="right, centre_y" />
+            <record index="7" alignment="right, centre_y" />
+        </list>
+    </widget>
+</panel>

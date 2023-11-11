@@ -1,0 +1,21 @@
+<panel >
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<container>
+		<attachment group="" class="horizontal_arrange_vertical_autosize" horizontal_layout="80,-1" vertical_offset="0" />
+
+		<!-- some pictures -->
+		<widget class="object_portrait_picture" id="plpc" height="80" width="80" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" />
+
+		<container class="bordered_box" id="cbox" rthr="85">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="0" vertical_offset="20" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<!-- person name -->
+			<widget class="person_button" id="pnam" style="semi_bold" colour="text" alignment="left,centre_y" size="10" auto_size="vertical"/>
+
+			<!-- person description -->
+			<widget class="label" id="ppos" spec="text" colour="text" alignment="left,centre_y" size="10" auto_size="vertical"/>
+		</container>
+	</container>
+
+</panel>

@@ -1,0 +1,83 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<!-- Comp name, stadium details and weather-->
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="1" />
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,as_needed" horizontal_offset="0" vertical_offset="0" />
+
+			<widget class="stadium_button" id="stad" auto_size="all" size="small" auto_size_restricted_to_parent_width="true"/>
+			<widget class="text" id="stdD" alignment="left,centre_y" size="small" auto_size="all" />
+		</container>
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-10,-6" horizontal_offset="0" vertical_offset="0" />
+
+			<widget class="text" id="comp" size="large" style="semi_bold" multiline="true" auto_size="vertical" auto_size_maximum_height="64"/>
+			
+			<container class="weather_indicator_panel_horizontal" id="weat" file="match/weather indicator horizontal auto sized">
+				<boolean id="show_weather_label" value="true" />
+				<boolean id="show_weather_icon" value="true" />
+				<boolean id="show_temperature_on_icon" value="true" />
+				<boolean id="weather_icon_size" value="10" />
+			</container>
+		</container>
+	</container>
+
+
+	<container class="client_object_viewer_xml_panel" file="team/team upcoming fixture badges" id="tmbp" height="90" />
+
+	<!-- Team names. Need lots of vertical space here as for cup matches there could be 2 teams on the right-->
+	<container height="42">
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="30" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<widget class="text" id="homt" alignment="centre_x,top" size="large" />
+		<widget class="text" id="awyt" alignment="centre_x,top" size="large" />
+	</container>
+
+	<widget class="horizontal_divider" />
+
+	<!-- Opposition info -->
+	<container height="80">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="5" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- [Team Name] information -->
+		<widget class="text" id="oppT" height="20" size="large" style="semi_bold" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="40" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="-5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--opposition manager-->
+				<widget class="label" alignment="left,bottom" size="9">
+					<translation id="text" translation_id="227980" type="use" value="Manager[COMMENT - manager, short text]" />
+				</widget>
+				<widget class="person_button" id="mang" spec="text" size="large">
+					<translation id="no_object_text" translation_id="424586" type="use" value="None[COMMENT: string indicating a club has no manager, different to the previously used ID 227487 so translate accordingly if needed]" />
+				</widget>
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="-5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--previous meetings-->
+				<widget class="label" alignment="left,bottom" size="9">
+					<translation id="text" translation_id="344616" type="use" value="Previous Meetings[COMMENT: title for a box containing information on previous meetings between two sides]" />
+				</widget>
+				<widget class="team_recent_form_widget" id="pmet">
+				</widget>
+			</container>
+
+		</container>
+
+	</container>
+</panel>

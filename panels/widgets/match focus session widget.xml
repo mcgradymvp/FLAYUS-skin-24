@@ -1,0 +1,64 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="top,horizontal" apply_to_children="true" inset="0" />
+	<container class="main_box" id="nxOp">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="6" vertical_gap="12" />
+		<widget class="icon_button" id="desc" auto_size_restricted_to_parent_width="true" icon="icons/custom/more/button" icon_enabled="true" appearance="" font="title" icon_colour="white" auto_size="vertical" alignment="centre" icon_alignment="centre" size="large" multiline="true">
+			<translation id="hint" translation_id="596792" type="use" value="Match Focus Session[COMMENT: AREA: Training; SUB-AREA: Match Focus; FR-BN: ; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; header for match focus session widget]" />
+			<translation id="text" translation_id="596792" type="use" value="Match Focus Session[COMMENT: AREA: Training; SUB-AREA: Match Focus; FR-BN: ; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; header for match focus session widget]" />
+		</widget>
+		<widget class="text" id="nxtM" auto_size="vertical" colour="faded text" alignment="centre" />
+
+
+		<container draw_vertical_dividers="true" height="300">
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="12" />
+			<!--Tactical Preparation-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="4" vertical_gap="6" />
+				<container height="20">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="6" horizontal_offset="0" vertical_inset="0" />
+					<widget class="picture" file="icons/16px/tactics" red_replacement="faded text" auto_size="horizontal" image_alignment="centre" scale_picture="false" />
+					<widget class="text" font="title" colour="text" alignment="left, centre_y">
+						<translation id="text" translation_id="596794" type="use" value="Tactical Preparation[COMMENT: AREA: Training; SUB-AREA: Match Focus; FR-BN: ; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Match focus title for Tactical Prepraration]" />
+					</widget>
+				</container>
+				<!--Tactical Prep popup-->
+				<widget class="widget_popup_button" id="ttpp" fixed="false" widget_type="match_focus_selection_popup" auto_size="vertical">
+					<record id="modal_popup_properties" file="modal popup panel auto sized" attempt_to_reposition="true"/>
+				</widget>
+				<widget class="text" id="tctL" colour="faded text" size="small" auto_size="vertical" alignment="left, centre_y" />
+					
+			</container>
+			<!--Set Piece Preparation-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="6" />
+				<container height="20">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="6" horizontal_offset="0" vertical_inset="0" />
+					<widget class="picture" file="icons/16px/training set pieces" red_replacement="faded text" auto_size="horizontal" image_alignment="centre" scale_picture="false" />
+					<widget class="text" font="title" colour="text" alignment="left, centre_y">
+						<translation id="text" translation_id="596793" type="use" value="Set Piece Preparation[COMMENT: AREA: Training; SUB-AREA: Match Focus; FR-BN: ; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Match focus title for Set Piece Prepraration]" />
+					</widget>
+				</container>
+					<!--Set Piece First Prep popup-->
+				<widget class="widget_popup_button" id="spCp" widget_type="match_focus_selection_popup" fixed="false" auto_size="vertical">
+					<record id="modal_popup_properties" file="modal popup panel auto sized" attempt_to_reposition="true"/>
+				</widget>
+				<widget class="text" id="fspL" colour="faded text" size="small" auto_size="vertical" alignment="left, centre_y" />
+				
+				<!--set Piece Second Prep popup-->
+				<widget class="widget_popup_button" id="spFp" widget_type="match_focus_selection_popup" fixed="false" auto_size="vertical">
+					<record id="modal_popup_properties" file="modal popup panel auto sized" attempt_to_reposition="true"/>
+				</widget>
+				<widget class="text" id="sspL" colour="faded text" size="small" auto_size="vertical" alignment="left, centre_y" />
+					
+			</container>
+
+		</container>
+	</container>
+
+	<container class="main_contrast_box" id="noOp" height="300" hidden="true">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<widget class="text" colour="text" alignment="centre">
+			<translation id="text" translation_id="242251" type="use" value="No fixtures scheduled yet[COMMENT competition fixtures panel, no fixtures set up yet]" />
+		</widget>
+	</container>
+</panel>

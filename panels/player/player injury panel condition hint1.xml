@@ -1,0 +1,17 @@
+﻿<panel draw_horizontal_dividers="true">
+	<attachment_group class="vertical_arrange_autosize" horizontal_inset="8" vertical_gap="15"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+	<string id="skin_style" value="title link"/>
+
+	<!-- overall status -->
+	<container id="OAct" red_replacement="injury_body_colour_injured">
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+
+		<widget class="label" id="OAtl" font="label" auto_size="vertical" colour="fg"/>
+		<widget class="label" id="OAnm" font="value" auto_size="vertical" colour="white"/>
+		<widget class="label" id="OAlb" auto_size="vertical" colour="white"/>
+	</container>
+
+
+</panel>

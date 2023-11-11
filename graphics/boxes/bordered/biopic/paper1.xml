@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE propertylist SYSTEM "http://www.sigames.com/dtds/sios/properties.dtd">
+
+<!-- image properties -->
+<properties>
+
+	<!-- image borders -->
+	<!-- these determine how many pixels any content is inset from each side of the image -->
+	<!-- (for example, in the case of a button, the content would be the text label) -->
+	<record id="image_borders" left="8" right="10" top="35" bottom="10"/>
+
+	<!-- image slices determine the points at which the image will be sliced to enable scaling -->
+	<!-- the image will only slice in the directions slicing values are provided for-->
+	<record id="image_slices" left="8" right="8" top="8" bottom="8"/>
+
+	<!-- title insets -->
+	<!-- these determine how many pixels the title is inset from the top/bottom/left/right of the box -->
+	<integer id="title_top_inset" value="7"/>
+	<integer id="title_bottom_inset" value="0"/>
+	<integer id="title_left_inset" value="10"/>
+	<integer id="title_right_inset" value="14"/>
+
+	<!-- title properties -->
+	<!-- title properties -->
+	<record id="font_spec">
+		 
+		<integer id="size" value="12"/>
+		<integer id="font" value="gzmain"/>
+		<colour id="colr" name="gold1"/>
+	</record>
+		
+	<colour id="red_replacement" name=""/>
+	<colour id="green_replacement" name=""/>
+	<colour id="blue_replacement" name=""/>
+	
+</properties>

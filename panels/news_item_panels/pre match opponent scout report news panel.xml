@@ -1,0 +1,209 @@
+﻿<panel height="620" draw_horizontal_dividers="true">
+	<layout class="arrange_vertical_attachment" layout="40, -1" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+		<container class="client_object_viewer_xml_panel">
+
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" do_not_size="true" />
+			<layout class="fit_children_attachment" alignment="horizontal,fill" />
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0"  />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"  />
+
+			<widget class="object_portrait_picture" height="40" width="40" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+				</record>
+			</widget>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+				<layout class="fit_children_attachment" alignment="horizontal" />
+				<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0"  />
+
+				<widget class="team_button" icon_enabled="false" mode="1" size="11" auto_size="all" spec="semi_bold" alignment="left, centre_y">
+					<record id="object_property">
+						<integer id="get_property" value="objt"/>
+					</record>
+				</widget>
+
+				<widget class="division_position_button" display_format="1" size="10" auto_size="all" alignment="left, centre_y">
+					<record id="object_property">
+						<integer id="get_property" value="Tpos" />
+					</record>
+				</widget>
+			</container>
+		</container>
+
+		<container class="client_object_viewer_xml_panel" id="fbin">
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" do_not_size="true" />
+			<layout class="fit_children_attachment" alignment="horizontal,fill" />
+			<layout class="stick_to_sides_attachment" alignment="right" inset="0"  />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"  />
+
+			<widget class="stadium_button" id="fxsd" icon_alignment="centre" alignment="centre" auto_size="horizontal" colour="text" style="bold" font="text" >
+				<record id="object_property">
+					<integer id="get_property" value="stad" />
+				</record>
+			</widget>
+
+			<widget class="weather_indicator_panel" alignment="left,centre_y" width="80" file="match/weather indicator with temp">
+				<record id="object_property">
+					<integer id="get_property" value="FxWe" />
+				</record>
+			</widget>
+
+		</container>
+
+	</container>
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1,1,-1" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-1,-2" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="170,-1" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="5" />
+          
+			<widget class="person_snapshot_club_overview_panel" id="mana" file="person/person snapshot club overview2">
+				<record id="object_property">
+					<integer id="get_property" value="TMnR" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="4" gap="0"/>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="4" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		    <container id="info">
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="4" gap="0"/>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="4" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+				
+				<widget class="text" auto_size="vertical" font="title" colour="faded white">
+					<translation id="text" type="use" value="감독" />
+				</widget>
+			    
+				<widget class="person_button" id="perM" auto_size="vertical" font="semibold" colour="white">
+				  <record id="object_property">
+					<integer id="get_property" value="TMnR" />
+					<integer id="set_property" value="valu" />
+				  </record>
+			    </widget>
+			  
+			  <widget class="label" id="nofo" hidden="true" alignment="centre,top,can_scale">
+			     <translation id="text" translation_id="320493" type="use" value="None currently[COMMENT: text indicating that there is no person to view here currently (e.g. a manager, captain, vice captain etc.)]" />
+		      </widget>
+		    </container>
+
+				<widget class="text" auto_size="vertical" font="title" colour="faded white">
+					<translation id="text" translation_id="348204" type="use" value="Mentality[Comment: prefix used before mentality type text on quick tactical instruction button during match]" />
+				</widget>
+
+				<widget class="mentality_label" id="ment" auto_size="vertical" font="semibold" colour="white">
+					<record id="primary_icon_properties" red_replacement="white" />
+				</widget>
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="4" gap="0"/>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="4" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+				<widget class="text" auto_size="vertical" font="title" colour="faded white">
+					<translation id="text" translation_id="364787" type="use" value="Team Shape[COMMENT: team tactical instruction, very fluid to highly structured]" />
+				</widget>
+
+				<widget class="fluidity_label" id="flui" auto_size="vertical" font="semibold" colour="white">
+					<record id="primary_icon_properties" red_replacement="white" />
+				</widget>
+	        <!--media prediction-->
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="4" gap="0"/>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="4" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+                    <widget class="text" id="CmeL" font="title" auto_size="vertical" colour="faded text">
+					<translation id="text" type="use" value="언론의 예상" />
+					</widget>
+					<widget class="media_expectation_text" id="CmeV" size="11" font="semibold" colour="white" auto_size="vertical">
+						<boolean id="NumF" value="0" />
+						<record id="object_property">
+							<integer id="get_property" value="CmeD" />
+						</record>
+					</widget>
+				</container> 	 				
+			   </container>
+			  </container>	
+	        </container>			
+				
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+			<container class="titled_box">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+				<string id="skin_style" value="title link" />
+
+				<widget class="link_button" id="scln" auto_size="all" alignment="left, centre_y" embed_in_frame="true">
+					<translation id="text" translation_id="316845" type="use" value="Scout Report[COMMENT: Panel title for when viewing a scout report]" />
+					<layout class="stick_to_sides_attachment" alignment="left" embed_in_frame="true" inset="10"/>
+					<layout class="stick_to_sides_attachment" alignment="top" embed_in_frame="true" inset="8"/>
+				</widget>
+
+				<widget class="team_pro_con_summary_panel">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+			</container>
+		 </container>
+		</container>
+	 <widget class="vertical_divider" />
+	<container>
+	<layout class="arrange_vertical_attachment" layout="150,1,-1" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<container class="titled_box">
+        <layout class="arrange_horizontal_attachment" alignment="top,extend" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+		    <translation id="text" type="use" value="선수 기록" />
+			      	
+		<!-- player stats -->
+			<widget class="team_report_summary_panel" id="ress" file="team/team report summary scout panel2">				
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+        </container>	
+	<widget class="horizontal_divider" />
+		<!-- formation -->
+			<container class="titled_box">	 
+		   	<translation id="title" type="use" value="포메이션" /> 
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="-10" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			      
+						<widget class="client_object_viewer_xml_panel" id="msop" file="tactics/tactics opposition predicted team2">   	
+				      <record id="object_property">
+					      <integer id="get_property" value="TMnR" />
+				        <integer id="set_property" value="objt" />
+				      </record>
+			      </widget>
+
+        </container>
+		  </container>
+  </container>
+</panel>

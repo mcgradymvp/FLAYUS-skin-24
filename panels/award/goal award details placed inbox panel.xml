@@ -1,0 +1,81 @@
+<panel>
+
+  <string id="skin_style" value="subtle box"/>
+
+	<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="top, horizontal" apply_to_children="true" inset="0"/>
+  
+  <boolean id="is_in_inbox" value="true"/>
+
+  <container class="inner_box" >
+	  <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="8"/>
+	  <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="8"/>
+	  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+    
+      <!-- placing -->
+      <container class="bordered_box" appearance="boxes/custom/darken/no margin/paper" height="26" width="26" embed_in_frame="true">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="1" apply_to_children="true" embed_in_frame="true" />
+        <layout class="stick_to_sides_attachment" alignment="top, left" inset="0" embed_in_frame="true" />
+
+        <widget class="label" id="posl" alignment="centre" style="bold" colour="white" size="12" embed_in_frame="true" auto_size="none"/>
+
+      </container>
+    
+    <container>
+      <layout class="fit_children_attachment" alignment="vertical" offset="6"/>
+      <layout class="arrange_horizontal_attachment" layout="-1, -1" offset="6"/>
+      <layout class="stick_to_sides_attachment" alignment="top" inset="6" apply_to_children="true"/>
+    
+      <!-- Player Picture -->
+      <widget class="competition_news_image_panel" id="ptpc" file="competition/competition news image panel2" height="170">
+        <layout class="centre_in_parent_attachment" alignment="vertical"/>
+      </widget>
+
+      <widget class="table" id="pitb" layout="-1" auto_size_rows="true" auto_size="vertical" all_content_same_height="true" row_spacing="1">
+        <layout class="centre_in_parent_attachment" alignment="vertical"/>
+      
+        <list id="column_display_properties">
+          <record index="0" right="20"/>
+        </list>
+
+        <!-- Name -->
+        <widget class="person_button" id="apfn" col="0" row="0" style="bold" alignment="left, centre_y"/>
+
+        <!-- Team -->
+        <widget class="team_button" id="apcb" col="0" row="1" icon_enabled="false" alignment="left, centre_y" colour="faded text"/>
+
+        <!-- Loaning team -->
+        <widget class="label" id="alcb" col="0" row="2" alignment="left, centre_y" colour="faded text"/>
+
+        <!-- Position -->
+        <widget class="position_label" id="appo" col="0" row="2" alignment="left, centre_y" colour="faded text"/>
+      
+        <!-- Age -->
+        <widget class="label" col="0" row="3" id="apag" colour="faded text"/>
+      </widget>
+    </container>
+  
+    <container class="plain_box" height="100">
+      <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="2"/>
+      <layout class="stick_to_sides_attachment" alignment="top, horizontal" apply_to_children="true" inset="0"/>
+    
+      <container id="cock">
+        <layout class="fit_children_attachment" alignment="vertical, extend" offset="0"/>
+        <layout class="arrange_vertical_attachment" alignment="middle" offset="0"/>
+        <layout class="stick_to_sides_attachment" alignment="top, horizontal" apply_to_children="true" inset="0"/>
+    
+        <widget class="text" id="fixl" col="0" row="0" auto_size="all" style="bold"/>
+      </container>
+    
+      <container>
+        <layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+        <layout class="stick_to_sides_attachment" alignment="top, horizontal" apply_to_children="true" inset="0"/>
+    
+        <widget class="text" id="gdsc" col="0" row="1" colour="faded text">
+          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+        </widget>
+      </container>
+    </container>
+  </container>
+
+</panel>

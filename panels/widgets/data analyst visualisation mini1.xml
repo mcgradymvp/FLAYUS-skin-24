@@ -1,0 +1,37 @@
+﻿<panel height="290" width="290">
+	<string id="use_mini_visualisation" value="false" />
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_offset="0" vertical_alignment="top,extend" horizontal_inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<container height="40">
+			<attachment_group class="vertical_arrange" vertical_offset="0" horizontal_inset="0" />
+			<widget class="text" auto_size="vertical" id="visH" size="large" font="title" style="bold" />
+			<widget class="text" id="visS" auto_size="vertical">
+				<string id="colour" value="faded text" />
+			</widget>
+		</container>
+		<container>
+			<attachment_group class="vertical_arrange" vertical_offset="0" vertical_alignment="bottom,extend" horizontal_inset="0" />
+			<container class="vertical_arrange_container" inset="4" alignment="fill" id="visC" />
+			<container id="cpCO" hidden="true" height="30">
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" offset="0" />
+				<widget class="popup_button" id="cmpP" select_event="cmpC" auto_size="horizontal" />
+			</container>
+			<widget class="text" id="txtW" auto_size="vertical" />
+		</container>
+	</container>
+	<container id="noDa" hidden="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<widget class="text" alignment="centre" style="semi_bold" colour="faded text">
+			<translation id="text" translation_id="515107" type="use" value="Not enough data available to create visualisation[COMMENT: AREA: Visualisation; SUB-AREA:; FR : 32932; TONE: Formal; CHARLIMIT: None; NOTE: warning to display when not enough data available to create a visualisation]" />
+		</widget>
+	</container>
+	<widget class="icon_button" icon_alignment="centre_x,centre_y" id="expB" height="25" width="25" appearance="buttons/custom/over state only/button">
+		<string id="click_event" value="clkk" />
+		<string id="icon" value="icons/16px/maximise" />
+		<layout class="stick_to_sides_attachment" alignment="top,right" inset="3" />
+	</widget>
+</panel>

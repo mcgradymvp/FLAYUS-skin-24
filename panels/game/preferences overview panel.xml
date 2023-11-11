@@ -1,0 +1,273 @@
+﻿<panel height="770">
+	<boolean id="should_force_refresh" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container id="main">
+			<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container class="scrolling_box">
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+					<!-- General -->
+					<widget class="inner_titled_box" red_replacement="bg darker">
+						<translation id="title" translation_id="329984" type="use" value="General[COMMENT: preferences: General settings section title]" />
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+						<widget class="game_settings_viewer_panel" id="set1">
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<record id="table_properties">
+								<integer id="row_spacing" value="4" />
+							</record>
+							<list id="viewed_property_ids">
+								<symbol value="current_language" />
+								<symbol value="current_db_language" />
+							</list>
+						</widget>
+
+						<widget class="game_settings_viewer_panel" id="set2">
+							<layout class="fit_children_attachment" alignment="vertical" offset="3" />
+							<record id="table_properties">
+								<integer id="row_spacing" value="4" />
+							</record>
+							<list id="viewed_property_ids">
+								<symbol value="selected_currency" />
+								<symbol value="wage_string_type" />
+							</list>
+						</widget>
+    
+						<widget class="game_settings_viewer_panel" id="set3">
+							<layout class="fit_children_attachment" alignment="vertical" offset="3" />
+							<record id="table_properties">
+								<integer id="row_spacing" value="5" />
+							</record>
+							<list id="viewed_property_ids">
+								<symbol value="skin" />
+							</list>
+						</widget>
+
+						<container>
+							<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="3" />
+
+							<widget class="label" auto_size="vertical">
+								<translation id="text" translation_id="330793" type="use" value="Window Mode &amp; Resolution[COMMENT: game preferences; options to control and customise the resolution and display of the game]" />
+							</widget>
+							<widget class="display_mode_popup_button" id="mode" auto_size="vertical" />
+						</container>
+
+						<widget class="game_settings_viewer_panel" id="set4">
+							<layout class="fit_children_attachment" alignment="vertical" offset="3" />
+							<record id="table_properties">
+								<integer id="row_spacing" value="5" />
+							</record>
+							<list id="viewed_property_ids">
+								<symbol value="ui_zoom_level" />
+							</list>
+						</widget>
+							<container>
+							<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+								<layout class="arrange_horizontal_attachment" layout="180,-1" offset="0" gap="1" />
+								<layout class="fit_children_attachment" alignment="vertical" offset="3" />
+							<widget class="label" auto_size="vertical">
+								<translation id="text" translation_id="329791" type="use" value="캐시 초기화" />
+							</widget>
+	                        <widget class="button" id="rels" click_event="CnfR" auto_size="all">
+                                <translation id="text" type="use" value="캐시 초기화 하기" />
+                            </widget>
+							</container>
+					</widget>
+
+	<!-- Skinning -->
+    <container class="inner_titled_box" red_replacement="bg darker">
+      <translation id="text" translation_id="230230" type="use" value="Skin" />
+      <attachment_group class="vertical_arrange_autosize" vertical_offset="0" />
+
+      <container id="cache_skin" file="game/preferences item"  >
+        <list id="viewed_property_ids">
+          <symbol value="cache_skin" />
+        </list>
+      </container>
+
+      <container id="always_reload_skin" file="game/preferences item"  >
+        <list id="viewed_property_ids">
+          <symbol value="always_reload_skin" />
+        </list>
+      </container>
+
+      <container id="show_unique_ids" file="game/preferences item"  >
+        <list id="viewed_property_ids">
+          <symbol value="show_unique_ids" />
+        </list>
+      </container>
+	<container id="show_in_game_editor" file="game/preferences item"  >
+        <list id="viewed_property_ids">
+          <symbol value="show_in_game_editor" />
+        </list>
+      </container>
+    <container id="force_small_sidebar" file="game/preferences item"  >
+        <list id="viewed_property_ids">
+          <symbol value="force_small_sidebar" />
+        </list>
+      </container>
+	
+				<container class="inner_subtle_box" height="70" red_replacement="bg darker">
+                  <layout class="arrange_horizontal_attachment" layout="-3,-1" offset="0" />
+                  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+                  <container>
+                    <layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+                    <widget class="text" style="bold">
+                      <translation id="text" translation_id="491914" type="use" value="Custom Skin Colour[COMMENT: AREA: Preferences; SUB-AREA: preferences description; FR-BN: 28565; TONE: Formal; CHARLIMIT: None; REF-ID: 343477; NOTE: refers to UI colours, not in-game avatar persons]" />
+                    </widget>
+
+                    <widget class="text">
+                      <translation id="text" translation_id="491915" type="use" value="Customise skin colours for the current skin[COMMENT: AREA: Preferences; SUB-AREA: preferences description; FR-BN: 28565; TONE: Formal; CHARLIMIT: None; REF-ID: 343477; NOTE: refers to UI colours, not in-game avatar persons]" />
+                    </widget>
+
+                  </container>
+
+                  <widget class="button">
+                    <record id="click_event">
+                      <integer id="event_id" value="shSa" />
+                      <integer id="index" value="2" />
+                    </record>
+                    <translation id="text" translation_id="325857" type="use" value="Skin Colours[COMMENT: preferences screen panel title, used for UI skin colours rather than player skin colours]" />
+                  </widget>
+
+                </container>
+    </container>
+	</container>
+    </container>
+
+			<container class="scrolling_box">
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="inner_titled_box" id="cura" red_replacement="bg darker">
+						<translation id="title" translation_id="330420" type="use" value="Saving[COMMENT: scout report panel box heading]" />
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="game_settings_viewer_panel" id="set2">
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<record id="table_properties">
+								<integer id="row_spacing" value="5" />
+							</record>
+							<list id="viewed_property_ids">
+								<symbol value="use_auto_saves" />
+								<symbol value="use_auto_save_mode_for_manual_save" />
+								<symbol value="auto_save_interval" />								
+								<symbol value="auto_save_mode" />								
+								<symbol value="user_data_location" />
+							</list>
+						</widget>
+					</widget>
+                
+					<!-- Match -->
+					<widget class="inner_titled_box" id="cura" red_replacement="bg darker">
+						<translation id="title"  type="use" value="경기 그래픽/사운드 설정" />
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<container height="28">
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" gap="0" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+							<widget class="label">
+								<translation id="text" translation_id="348427" type="use" value="This PC's 3D Graphics Capability[COMMENT: game preferences; label text indicating the user's capacity to accomodate the 3D match display]" />
+							</widget>
+							<widget class="graphical_level_stars_label" stars_type="3" />
+						</container>
+					    <widget class="match_settings_viewer_panel" id="set2">
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		                      <list id="viewed_property_ids">
+			                <symbol id="a_button" value="graphical_detail" />
+		                </list>
+						</widget>
+
+						<container height="30" id="SOUN">
+							<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
+
+							<widget class="game_settings_viewer_panel" id="setZ">
+								<record id="table_properties">
+									<integer id="row_spacing" value="5" />
+								</record>
+								<list id="viewed_property_ids">
+									<symbol value="play_sounds" />
+				                    <symbol value="play_music" />
+				                    <symbol value="sound_volume" />
+								</list>
+							</widget>
+						</container>
+	</widget>
+	<!-- etc -->
+    <container class="inner_titled_box" red_replacement="bg darker">
+      <translation id="text" type="use" value="기타" />
+      <attachment_group class="vertical_arrange_autosize" vertical_offset="0" />	
+			
+	  	<container id="show_all_player_names" file="game/preferences match item" navigation_container="true" >
+			<list id="viewed_property_ids">
+				<symbol value="show_all_player_names" />
+			</list>
+		</container>
+
+		<container id="show_pre_match_intro" file="game/preferences match item" navigation_container="true" >
+            <list id="viewed_property_ids">
+              <symbol value="show_pre_match_intro" />
+            </list>
+        </container>	
+					
+               <container class="inner_subtle_box" height="50">
+                  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+					<widget class="preferences_profile_panel" id="genm" file="game/preferences profile panel match overview" />
+				</container>	
+               <container class="inner_subtle_box" height="70">
+                  <layout class="arrange_horizontal_attachment" layout="-1,260" offset="0" />
+                  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+                <container>
+                    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+                    <widget class="text" style="bold" alignment="left, centre_y">
+                          <translation id="text" translation_id="395977" type="use" value="Change Profile Picture[COMMENT: Minor wording change, meaing the same, us etop 10 matches; Add Manager Wizard - Button that lets the manager select a picture of himself for his ingame manager profile]" />
+                    </widget>
+                </container>
+
+			    <container class="preferences_profile_panel" file="none">
+                    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+                <container class="manager_profile_panel" id="mpmp" file="none" >
+                    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				
+				<container>
+                    <layout class="arrange_horizontal_attachment" layout="-1,40" offset="0" gap="0" />
+                    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			    <widget class="button" id="slpc" click_event="sepi" alignment="left,centre_y" icon="icons/actions/select picture">
+                   <translation id="text" translation_id="249631" type="use" value="Select" />
+                </widget>
+
+                <widget class="icon_button" disabled="true" id="clpc" click_event="clpc" alignment="left,centre_y" icon="icons/16px/cross" icon_alignment="centre">
+                </widget>
+				</container>
+                </container>
+				</container>
+                </container>	
+              </container>
+			</container>
+		  </container>
+	   </container>
+	</container>
+
+</panel>

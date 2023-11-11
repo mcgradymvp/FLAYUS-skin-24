@@ -1,0 +1,43 @@
+<panel info_panel_type="2">
+
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+    <widget class="table" layout="-1" mode="none" auto_size_rows="true" all_content_same_height="false" fixed_size_rows="false" row_spacing="0" height="86">
+
+      <widget class="date_cell" id="date" format="[%date#1-short] [%date#1-time]" row="0" col="0" height="20" size="small" colour="faded text" alignment="centre">
+        <record id="object_property">
+          <integer id="get_property" value="fxdt" />
+        </record>
+      </widget>
+
+      <widget class="fixture_name_text" id="fxnm" row="1" col="0" height="26" style="semi_bold" size="large" alignment="centre">
+        <record id="object_property">
+          <integer id="get_property" value="FxNm" />
+        </record>
+      </widget>
+
+      <widget class="text" id="stad" row="2" col="0" height="20" alignment="centre" size="small" colour="faded text"/>
+      <widget class="referee_strictness_label" id="reff" row="3" col="0" height="20" alignment="centre" size="small" colour="faded text">
+        <translation id="format" translation_id="332843" type="use" value="Referee: [%string#1][COMMENT: string to how strict the referee is]" />
+      </widget>
+    </widget>
+
+    <!-- Table containing attendance, referee, weather and half time score details -->
+    <widget class="table" layout="-1" mode="none" auto_size_rows="true" all_content_same_height="false" fixed_size_rows="false">
+
+      <widget class="label" id="hfts" row="0" col="0" height="20" alignment="centre" size="small" colour="faded text"/>
+      <widget class="label" id="attl" row="1" col="0" height="20" alignment="centre" size="small" colour="faded text"/>
+
+      <widget class="weather_indicator_panel" id="weic" row="2" col="0" height="30" spec="text" alignment="top">
+        <boolean id="show_weather_label" value="true" />
+        <boolean id="show_weather_icon" value="true" />
+        <boolean id="show_temperature_on_icon" value="false" />
+        <boolean id="weather_icon_size" value="10" />
+      </widget>
+      <widget class="weather_forecast_label" id="weal" row="3" col="0" height="20" alignment="centre" size="small" colour="faded text"/>
+    </widget>
+
+
+</panel>

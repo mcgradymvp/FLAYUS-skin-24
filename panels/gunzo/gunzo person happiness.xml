@@ -1,0 +1,186 @@
+﻿<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="scrolling_box">
+  <container >
+  <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="2" />
+  <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+  	<!-- Player status icon with a fitness donut as first item-->
+		<widget class="player_status_all_button" id="secw" appearance="buttons/custom/status round" auto_size="all" alignment="bottom" offset_x="0" offset_y="4" gap="2" maximised="false" max_items_per_row_or_column="3" embed_in_frame="true">
+			<layout class="stick_to_sides_attachment" alignment="top, left" inset="0" embed_in_frame="true" />
+			<!-- Get player status flags-->
+			<record id="object_property" get_property="Pnfo" dont_set_hint="true"/>
+			<!-- Set icon to only show: Unh, PR, Slt -->
+			<integer id="type" value="4"/>
+
+			<!-- Morale label -->
+			<widget class="morale_label" id="fmor" ShTx="false" icon_alignment="left,top" width="36" height="36" embed_in_frame="true" default_path="icons/custom/morale/large/default" path="icons/custom/morale/large" should_recolour="true">
+				<record id="object_property" get_property="Pmor"/>
+			</widget>
+		</widget>
+   
+      <container height="18">
+      <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="40" gap="4" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+      <string id="skin_style" value="title link" />
+
+      <!-- Linked header -->
+     <widget class="link_button" section="Ppin" auto_size="all">
+        <translation id="text" translation_id="247463" type="use" value="Happiness"/>
+      </widget>
+
+      <!-- Overall Happiness Level
+      <widget class="label" alignment="right,centre_y" colour="faded text" font="title" auto_size="all">
+        <record id="object_property" get_property="Pohl" name="true"/>
+      </widget> -->
+      <widget class="person_happiness_icon_widget" alignment="centre">
+        <boolean id="use_morale_icon" value="false" />
+        <integer id="happiness_type" value="6" />
+        <record id="object_property" get_property="Pohl"/>
+      </widget>
+
+    </container>
+		<container height="25" navigation_container="true">
+		  <attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left, extend" horizontal_offset="40" horizontal_gap="10" vertical_offset="0"/>
+			<!-- Morale-->
+			<widget class="editable_client_object_property_panel" id="mora"  size="large" style="semi_bold" auto_size="vertical">
+				<record id="object_property">
+					<integer id="get_property" value="Pmor" />
+				</record>
+				<record id="widget_properties" auto_size="all" icon_enabled="false" should_recolour="true" />
+			</widget>
+
+			<!--dyanmics-->
+			<container id="dyLC">
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend"/>
+
+				<widget class="text" id="dynL" auto_size="all" />
+				<widget class="text" id="dynS" colour="faded text" auto_size="vertical" multiline="false"/>
+			</container>
+		</container>
+  
+  <container id="hapC" >
+    <translation id="title" translation_id="247463" type="use" value="Happiness" />
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="1" />
+    <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="1" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+    <!-- No data label -->
+    <widget class="label" id="labl" hidden="true">
+      <translation id="text" translation_id="330275" type="use" value="Not available[COMMENT: happiness panel; text displayed when no happiness information is available]" />
+    </widget>
+
+    <!-- Morale and general happiness -->
+    <container id="hcon" >
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+    <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+      <!-- Positives -->
+      <container>
+        <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2" />
+        <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+        <widget class="label" font="title" colour="positive" auto_size="vertical">
+          <translation id="text" translation_id="365300" type="use" value="Positives[COMMENT: FR 512; person happiness panel; section listing things that have a positive impact on the person's happiness]" />
+        </widget>
+        <widget class="table" id="genw" layout="20,-1" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false" >
+          <list id="column_table_properties">
+            <record id="bull">
+              <record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" height="14"/>
+            </record>
+            <record id="text">
+              <record id="widget_info" class="text" auto_size="vertical"/>
+            </record>
+          </list>
+        </widget>
+      </container>
+
+      <!-- Negatives -->
+      <container>
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+    <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+        <widget class="label" font="title" colour="negative" auto_size="vertical">
+          <translation id="text" translation_id="365291" type="use" value="Negatives[COMMENT: FR 512; person happiness panel; section listing things that have a negative impact on the person's happiness]" />
+        </widget>
+        <widget class="table" id="geni" layout="20,-1" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false">
+          <list id="column_table_properties">
+            <record id="bull">
+              <record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" height="14"/>
+            </record>
+            <record id="text">
+              <record id="widget_info" class="text" auto_size="vertical"/>
+            </record>
+          </list>
+        </widget>
+      </container>
+
+    </container>
+  </container>
+
+  <!-- separator image -->
+  <widget class="picture" file="dividers/standard/horizontal/line" id="hdiv" height="2"/>
+  
+  <container class="titled_box" appearance="boxes/titled/compact/paper">
+    <translation id="title" translation_id="365298" type="use" value="Plans[COMMENT: FR 512; person happiness panel; title for person future plans section]" />
+
+    <layout class="arrange_vertical_attachment" alignment="top" offset="2" gap="2" />
+    <layout class="fit_children_attachment" alignment="vertical,fill" offset="2" gap="2" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+    <!-- short term future / long term future -->
+    <!-- short term plans -->
+    <container>
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+      <layout class="fit_children_attachment" alignment="vertical,fill" gap="0" offset="2" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+
+      <widget class="label" auto_size="vertical" alignment="left, bottom" font="title" colour="faded text">
+        <translation id="text" translation_id="251277" type="use" value="Short-term Plans[COMMENT: player happiness panel]" />
+      </widget>
+
+      <widget class="table" id="futt" layout="20,-1" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false">
+        <list id="column_table_properties">
+          <record id="bull">
+            <record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" height="16" />
+          </record>
+          <record id="text">
+            <record id="widget_info" class="text" auto_size="vertical"/>
+          </record>
+        </list>
+      </widget>
+
+    </container>
+    <!-- Long term plans -->
+    <container>
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+      <layout class="fit_children_attachment" alignment="vertical,fill" gap="0" offset="2" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+      <widget class="label" auto_size="vertical" alignment="left, bottom" font="title" colour="faded text">
+        <translation id="text" translation_id="251278" type="use" value="Long-term Plans[COMMENT: player happiness panel]" />
+      </widget>
+
+      <widget class="table" id="lftt" layout="20,-1" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false" >
+        <list id="column_table_properties">
+          <record id="bull">
+            <record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" height="16" />
+          </record>
+          <record id="text">
+            <record id="widget_info" class="text" auto_size="vertical"/>
+          </record>
+        </list>
+      </widget>
+    </container>
+  </container>
+  </container>
+  </container>
+
+</panel>

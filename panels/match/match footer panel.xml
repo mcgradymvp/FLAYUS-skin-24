@@ -1,0 +1,15 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+	
+	<widget id="Htbu" class="match_console_quick_tactics_panel" auto_size="vertical">
+		<record id="object_property" get_property="objt" set_property="objt" />
+		<attachment class="test_multiple_globals_attachment" default_value="false">
+				<list id="get_properties">
+					<record get_property="hide_match_bar" test_mode="equal" value="true" skip_if_null="false" />
+					<record get_property="hide_match_bar_during_cutscene" test_mode="equal" comparison_mode="or" value="true" skip_if_null="false" />
+				</list>
+			<integer id="set_property" value="hidn" />
+		</attachment>
+	</widget>
+
+</panel>

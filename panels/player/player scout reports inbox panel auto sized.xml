@@ -1,0 +1,522 @@
+<panel save_session_state="true">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<boolean id="is_in_inbox" value="true" />
+
+	<!--loan player info-->
+	<container class="inner_subtle_box" id="lnmn">
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="170,-1,-1" horizontal_offset="0" vertical_offset="0" />
+
+		<!--picture-->
+		<container height="80">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<widget class="object_portrait_picture" width="80" image_alignment="centre" scale_picture="true">
+				<record id="object_property" get_property="Pcte" set_property="objt" />
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+			</widget>
+			<widget class="object_portrait_picture" width="80" image_alignment="centre" scale_picture="true">
+				<record id="object_property" get_property="objt" set_property="objt" />
+				<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+			</widget>
+
+		</container>
+
+		<!--name/nationality etc-->
+		<container class="vertical_arrange_container" auto_size="vertical">
+
+			<record id="default_properties" alignment="left,centre_y" auto_size="vertical" />
+
+			<widget class="person_button" style="bold" size="large" person_is_player="true" info_popup_enabled="true" icon_enabled="true">
+				<record id="object_property" get_property="objt" set_property="valu" />
+			</widget>
+			<widget class="player_description_text" spec="text" display_format="0" multiline="false" colour="faded text">
+				<record id="object_property" get_property="Pdes" set_property="valu" />
+			</widget>
+			<widget class="nation_button" format="[%nation#1-nationality]">
+				<record id="object_property" get_property="Pnat" set_property="valu" />
+			</widget>
+		</container>
+
+		<!--contract-->
+		<container class="vertical_arrange_container" auto_size="vertical">
+			<record id="default_properties" alignment="left" auto_size="vertical" />
+			<widget class="label" id="OLAl" />
+			<widget class="label" id="Plva" />
+			<widget class="label" id="Cuwa" />
+		</container>
+	</container>
+
+	<!-- match report -->
+	<container class="inner_subtle_box" id="mtrp">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="6" horizontal_inset="0" />
+
+		<!--title-->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="left" horizontal_inset="0" />
+
+			<widget class="link_button_title" id="mrln">
+				<translation id="text" translation_id="242329" type="use" value="Match Report" />
+			</widget>
+
+			<widget class="text" id="mrla" hidden="true" auto_size="horizontal" font="title" height="28" alignment="centre">
+				<translation id="text" translation_id="242329" type="use" value="Match Report" />
+			</widget>
+		</container>
+
+		<container draw_vertical_dividers="true">
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,200,200" horizontal_gap="6" vertical_inset="0" vertical_alignment="top" />
+
+			<container draw_horizontal_dividers="true">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_inset="0" />
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="middle,fill" horizontal_gap="4" />
+
+					<widget class="team_button" id="htnm" auto_size="vertical" alignment="right,centre_y" icon_alignment="left,centre_y" alternate_format="[%team#1-six_letter]" icon_spacing="0" show_button_appearance="false"/>
+					<widget class="fixture_button" id="rstx" spec="text" size="large" alignment="centre" auto_size="all"/>
+					<widget class="team_button" id="atnm" auto_size="vertical" alignment="left,centre_y" icon_alignment="right,centre_y" alternate_format="[%team#1-six_letter]" icon_spacing="0" show_button_appearance="false"/>
+				</container>
+
+				<widget class="text" id="rptx" auto_size="vertical" colour="text" font="fonts/inbox_body" setup_hint_for_overrun="false">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+				</widget>
+			</container>
+
+
+			<!--Position played last match - pitch-->
+			<container id="lala" height="170">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0"/>
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="8" />
+
+					<widget class="text" alignment="left" font="title" auto_size="vertical">
+						<translation id="text" translation_id="447609" type="use" value="Played As[COMMENT: Player Match Stats - Position Player played header]" />
+					</widget>
+
+					<widget class="tactical_role_label" id="tdut" auto_size="vertical" alignment="left,top" spec="text" />
+					<translation id="text" type="use" translation_id="227378" value="Unknown" />
+				</container>
+				<!-- Pitch -->
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<widget class="pitch_with_played_position" id="pmtp" icon_flags="show_selection_image,dont_allow_player_links,dont_use_player_instructions_menu" pitch_line_colour="text" pitch_touchline_width_percentage="100" pitch_touchline_length_percentage="100" pitch_perspective="0.0" pitch_override_icon_size="1" line_width="1">
+						<flags id="pitch_alignment" value="centre,can_scale" />
+						<boolean id="vertical" value="false" />
+						<string id="player_icon_file" value="tactics/tactics icon info panel basic scaled" />
+						<boolean id="show_position_strength" value="false" />
+						<boolean id="hide_player_positions" value="false" />
+						<boolean id="pitch_is_read_only" value="true" />
+						<boolean id="pitch_show_names" value="false" />
+						<boolean id="pitch_draw_grass" value="false" />
+						<integer id="maximum_player_size" value="0.1" />
+					</widget>
+					<container wants_mouse_events="true" />
+				</container>
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" />
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-1,40,55" vertical_offset="0"/>
+
+					<widget class="text" alignment="left,centre_y" style="bold" size="small" auto_size="vertical">
+						<translation id="text" translation_id="291566" type="use" value="Match Stats[COMMENT: item on fixture context menu]" />
+					</widget>
+					<widget class="picture" file="icons/48px/time" image_alignment="right,centre_y" scale_picture="true" red_replacement="text" height="35"/>
+					<widget class="text" id="tmop" alignment="left,centre_y" auto_size="vertical" size="xlarge" style="bold" />
+				</container>
+
+				<widget class="horizontal_divider">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+				</widget>
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-1,65" vertical_offset="0"/>
+
+					<widget class="text" id="ms1t" alignment="left,centre_y" auto_size="vertical">
+						<translation id="text" translation_id="319558" type="use" value="Rating[COMMENT: Player rating for the match]" />
+					</widget>
+					<widget class="dashed_formatted_label" id="ms1v" alignment="left,centre_y" style="bold" format="[%fraction#1-2.1]" auto_size="vertical"/>
+				</container>
+
+				<set_var name="key_value_container">
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-1,65" vertical_offset="0"/>
+						<widget class="text" auto_size="vertical">
+							<var id="widget_id" name="key_id" />
+						</widget>
+						<widget class="text" style="bold" auto_size="vertical">
+							<var id="widget_id" name="value_id" />
+						</widget>
+					</container>
+
+				</set_var>
+
+				<var name="key_value_container">
+					<set_var name="key_id">
+						<flags value="ms2t" />
+					</set_var>
+					<set_var name="value_id">
+						<flags value="ms2v" />
+					</set_var>
+				</var>
+
+				<var name="key_value_container">
+					<set_var name="key_id">
+						<flags value="ms3t" />
+					</set_var>
+					<set_var name="value_id">
+						<flags value="ms3v" />
+					</set_var>
+				</var>
+
+				<var name="key_value_container">
+					<set_var name="key_id">
+						<flags value="ms4t" />
+					</set_var>
+					<set_var name="value_id">
+						<flags value="ms4v" />
+					</set_var>
+				</var>
+
+				<var name="key_value_container">
+					<set_var name="key_id">
+						<flags value="ms5t" />
+					</set_var>
+					<set_var name="value_id">
+						<flags value="ms5v" />
+					</set_var>
+				</var>
+
+				<var name="key_value_container">
+					<set_var name="key_id">
+						<flags value="ms6t" />
+					</set_var>
+					<set_var name="value_id">
+						<flags value="ms6v" />
+					</set_var>
+				</var>
+
+			</container>
+		</container>
+	</container>
+
+	<!--loan info-->
+	<widget class="player_loan_information_panel" id="plip" />
+
+	<!-- knowledge -->
+	<container class="inner_subtle_box" id="kbox" height="50">
+		<attachment_group class="vertical_arrange" vertical_offset="0" vertical_gap="0" horizontal_inset="0"/>
+
+		<container height="24">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0" />
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="left,vertical" inset="0" apply_to_children="true" />
+
+				<widget class="link_button" appearance="buttons/link/title/button" auto_size="horizontal" alignment="left,centre_y" section="Pssr">
+					<translation id="text" translation_id="316845" type="use" value="Scout Report[COMMENT: Panel title for when viewing a scout report]" />
+				</widget>
+			</container>
+			<widget class="label" id="ktxt" alignment="right,centre_y"  />
+		</container>
+
+		<widget class="horizontal_percentage_bar" id="kbar" height="10" />
+	</container>
+
+		<!--main info-->
+	<container class="inner_box" id="main" height="540">
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<!--profile/position/wages/cost-->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<!--mugshot and profile info-->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="arrange_horizontal_attachment" layout="120, -1, -2" gap="15" />
+
+				<!-- player pic -->
+				<widget class="object_portrait_picture" id="ppic" image_alignment="centre" scale_picture="true" />
+
+				<container class="vertical_arrange_container" auto_size="vertical" gap="1" offset="10">
+
+					<record id="default_properties" alignment="left,centre_y" auto_size="vertical" />
+
+					<widget class="person_button" id="plnm" style="bold" size="large" />
+					<widget class="nation_button" id="ntfl" />
+					<widget class="dob_label" id="agtx" display_format="2" colour="faded text" />
+					<widget class="club_button" id="cltx" colour="faded text" />
+					<widget class="comp_button" id="cptx" icon_enabled="false" colour="faded text" />
+				</container>
+        
+      <!--position-->
+      <container >
+        <layout class="arrange_horizontal_attachment" layout="-1,-2" offset="0"/>
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="10" apply_to_children="true" />
+       
+		<!-- Pitch -->
+        <widget class="pitch_with_player_positions" id="ppip" pitch_allow_player_selection="false" pitch_alignment="left" pitch_draw_goals="false" pitch_draw_markings="false" show_position_strength="false" pitch_show_names="false" pitch_show_names_as_hint="true" pitch_draw_grass="false" pitch_line_colour="disabled" pitch_touchline_width_percentage="0.5" pitch_perspective="0.10" pitch_override_icon_size="1" line_width="1" pitch_vertical_padding="10">
+          <string id="pitch_kit_icon" value="pitch/icons/dots" />
+        </widget>
+      
+		<!--position info-->
+		<container class="vertical_arrange_container" alignment="top" offset="10">
+			<widget class="player_description_text" id="pdtx" alignment="left,centre_y" spec="text" auto_size="vertical" display_format="0" multiline="false" colour="faded text" />
+			<widget class="position_label" id="pstx" alignment="left,centre_y" spec="text" auto_size="vertical" display_format="0" multiline="false" colour="faded text" />
+			<widget class="foot_label" id="foot" mode="1" alignment="left,centre_y" spec="text" auto_size="vertical" display_format="0" multiline="false" colour="faded text" />
+		</container>
+         </container>
+		</container>
+
+		<widget class="horizontal_divider" />
+       
+        <container height="280" class="player_attributes_panel" id="patp" file="player/player attributes panel profile1">
+            <record id="object_property" get_property="objt" set_property="objt"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />              
+        </container>
+		
+		<!-- recommendation box-->
+		<container class="main_contrast_box" id="SMbx" height="30">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+              <widget class="text" id="SMtx" spec="text" size="normal" alignment="centre" colour="white" multiline="true" />
+		</container>
+
+		<container height="60">
+            <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0"/>
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+			<!--value/cost-->
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1,-1,-1" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="label" alignment="left" font="label">
+					<translation id="text" translation_id="335037" type="use" value="Estimated Cost[COMMENT: scout report panel label]" />
+				</widget>
+				<widget class="label" id="esco" font="value" alignment="left" />
+				<widget class="label" id="plva" alignment="left" />
+			</container>
+
+			<!--wages/demands-->
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1,-1,-1" offset="0" gap="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="label" font="label">
+					<translation id="text" translation_id="335516" type="use" value="Wage Demands[COMMENT: scout report panel label]" />
+				</widget>
+				<widget class="label" id="wade" font="value" />
+				<widget class="label" id="cuwa" />
+			</container>
+          </container>
+	    </container>
+	
+	<!--recommendations/pros/cons-->
+    <container>
+      <layout class="arrange_vertical_attachment" layout="65,40,-1,35" offset="0" gap="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<container class="bordered_box">
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+						<layout class="arrange_horizontal_attachment" layout="-1, 1, -1" offset="0" gap="5"/>
+
+						<container>
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="5"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+							<record id="help" help_translation_id="inTR" alignment="left, top"/>
+
+							<!-- Individual Training -->
+							<widget class="text" font="title" colour="accent" height="16">
+								<translation id="text" translation_id="394545" type="use" value="Position/Role[COMMENT: individual player training header text]"/>
+							</widget>
+
+							<widget class="individual_position_training_popup" show_table_legend="true" fixed="false" appearance="buttons/standard/normal/button" id="itpu" alignment="left,centre_y" height="32">
+
+								<record id="object_property">
+									<list id="get_properties">
+										<record>
+											<integer id="get_property" value="PTif"/>
+											<integer id="set_property" value="valu"/>
+										</record>
+									</list>
+								</record>
+							</widget>
+						</container>
+
+						<!-- Vertical separator line -->
+						<widget class="picture" file="dividers/standard/vertical/line" scale_picture="false"/>
+
+						<container>
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="5"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+							<record id="help" help_translation_id="inTR" alignment="left, top"/>
+
+							<widget class="text" height="16" font="title" colour="accent">
+								<translation id="text" translation_id="394317" type="use" value="Additional Focus[COMMENT - individual training popup menu; specific focus training]"/>
+							</widget>
+
+							<widget class="individual_training_popup" show_table_legend="true" is_attribute_training="true" fixed="false" appearance="buttons/standard/normal/button" id="itat" alignment="left,centre_y" height="32">
+								<record id="object_property">
+									<list id="get_properties">
+										<record>
+											<integer id="get_property" value="PTaf"/>
+											<integer id="set_property" value="valu"/>
+										</record>
+									</list>
+								</record>
+							</widget>
+						</container>		
+			          </container>
+			
+			<container class="bordered_box"  navigation_container="true">		  
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" />
+            <widget class="player_training_panel" id="ptsp" file="attributes/player training speach">
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</list>
+				</record>
+			</widget>
+			</container>
+      <!--CA/PA/rec/pros/cons-->
+      <container class="inner_box" appearance="boxes/inner/no margin/paper">
+        <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+      <!--CA/PA-->
+      <container height="90">
+          <layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1" offset="0" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+        <!-- Nations -->
+            <container>
+              <layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="4" />
+              <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+              <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+              <widget class="label" font="text" alignment="centre" size="normal" auto_size="vertical">
+                <translation id="text" translation_id="363691" type="use" value="Nation trained in[COMMENT: player information; nation player trained at for purposes of domestic eligibility]" />
+              </widget>
+              <container class="simple_data_list" id="nats" set_property="objt" alignment="horizontal, fill" height="60">
+                <record id="object_property">
+                  <integer id="get_property" value="PhgN" />
+                </record>
+                <record id="widget_properties" class="client_object_viewer_xml_panel" file="generic/club or nation logo panel" />
+              </container>
+            </container>
+
+            <!-- Clubs -->
+            <container>
+              <layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="4" />
+              <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+              <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+              <widget class="label" font="text" alignment="centre" size="normal" auto_size="vertical">
+                <translation id="text" translation_id="363611" type="use" value="Club trained at[COMMENT: player information; nation player trained at for purposes of domestic eligibility]" />
+              </widget>
+              <container class="simple_data_list" id="clbs" set_property="objt" alignment="horizontal, fill" height="80">
+                <record id="object_property">
+                  <integer id="get_property" value="PhgC" />
+                </record>
+                <record id="widget_properties" class="property_list_viewer_xml_panel" file="person/eligibility logo panel" />
+              </container>
+            </container>
+          
+          <!--CA-->
+          <container>
+            <layout class="arrange_vertical_attachment" layout="20, -1" offset="10" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+            <widget class="label" alignment="centre_y, bottom" spec="text" size="small">
+              <translation id="text" translation_id="293291" type="use" value="Current Ability" />
+            </widget>
+            <widget class="scout_stars_label" id="CAIC" lrge="true" alignment="centre" auto_size="horizontal">
+              <layout class="centre_in_parent_attachment" alignment="horizontal" />
+            </widget>
+          </container>
+
+          <!--PA-->
+          <container>
+            <layout class="arrange_vertical_attachment" layout="20, -1" offset="10" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+            <widget class="label" alignment="centre_y, bottom" spec="text" size="small">
+              <translation id="text" translation_id="293292" type="use" value="Potential Ability" />
+            </widget>
+            <widget class="scout_stars_label" id="PAic" lrge="true" alignment="centre" auto_size="horizontal">
+              <layout class="centre_in_parent_attachment" alignment="horizontal" />
+            </widget>
+          </container>
+        </container>
+
+      <container height="1"/>
+
+				<!-- pros / cons -->
+				<container>
+					<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<!-- Pros icons -->
+					<container class="inner_box" appearance="boxes/inner/no margin/paper">
+						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<!--title-->
+						<container class="plain_box" height="32" appearance="boxes/custom/solid/paper" red_replacement="pro high">
+							<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="6" />
+
+							<widget class="label" size="11" style="bold" colour="white" auto_size="vertical">
+								<translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]" />
+							</widget>
+						</container>
+
+						<!-- Icons get inserted into here. The 'size' attribute is the size in pixels of each icon -->
+						<container class="scrolling_box">
+							<container id="mprT">
+								<attachment_group class="vertical_arrange_autosize" horizontal_inset="2" />
+								<integer id="size" value="35" />
+								<record id="default_properties" multiline="true" colour="text" />
+							</container>
+						</container>
+					</container>
+
+					<!-- Cons icons -->
+					<container class="inner_box" appearance="boxes/inner/no margin/paper">
+						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<!--title-->
+						<container class="plain_box" height="32" appearance="boxes/custom/solid/paper" red_replacement="con high">
+							<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="6" />
+
+							<widget class="label" size="11" style="bold" colour="white" auto_size="vertical">
+								<translation id="text" translation_id="361094" type="use" value="Cons[COMMENT: FR 8316 ]" />
+							</widget>
+						</container>
+
+						<!-- Icons get inserted into here. The 'size' attribute is the size in pixels of each icon -->
+						<container class="scrolling_box">
+							<container id="mcoT">
+								<attachment_group class="vertical_arrange_autosize" horizontal_inset="2" />
+								<integer id="size" value="35" />
+								<record id="default_properties" multiline="true" colour="text" />
+							</container>
+						</container>
+					</container>
+				</container>
+			  </container>
+		   </container>
+		</container>
+</panel>

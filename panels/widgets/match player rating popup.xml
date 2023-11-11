@@ -1,0 +1,28 @@
+﻿<panel width="240">
+	<list id="properties_to_forward">
+		<record get_property="plyr" set_property="objt" target="rtIc"/>
+		<record get_property="plyr" set_property="valu" target="pnam"/>
+	</list>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="0"/>
+	<container class="main_contrast_box" red_replacement="blue grey 900" >
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="4"/>
+		<container  height="28">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" vertical_inset="0" horizontal_gap="4"/>
+
+
+			<widget class="client_object_property_panel" property="MPrt" id="rtIc" alignment="centre" auto_size="horizontal">
+				<record id="widget_properties">
+					<flags id="auto_size" value="horizontal" />
+					<boolean id="wants_mouse_events" value="false"/>
+				</record>
+			</widget>
+
+			<widget class="person_button" id="pnam" font="title" alignment="left, centre_y" disable_link="true" size="small">
+			</widget>
+		</container>
+
+		<widget class="horizontal_divider" />
+		<widget class="table" id="sumT" mode="fill_rows" auto_size="vertical" layout="-1" fixed_size_rows="true" auto_size_rows="false" row_height="24" row_spacing="0" />
+	</container>
+</panel>

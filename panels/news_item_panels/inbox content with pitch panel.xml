@@ -1,0 +1,59 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<list id="properties_to_forward">
+		<record get_property="tact" set_property="tact" target="ptch"/>
+		<record get_property="icon_flags" set_property="icon_flags" target="ptch"/>
+		<record get_property="subs" set_property="valu" target="subs"/>
+	</list>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<!-- content area -->
+	<container class="scrolling_box">
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="inbox_body_text" id="bdtx"/>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- The pitch doesn't plays nicely with the news item 'smart' resize code since it was made a continer. This dummy container makes it size correctly -->
+				<widget class="spacer" />
+
+				<widget	class="pitch_with_tactics" id="ptch" icon_flags="show_name,use_player_kits_front,show_team_name" player_icon_file="tactics/tactics icon preview info panel11" height="410"
+					   pitch_is_read_only="true"
+					   pitch_dont_draw_indicators="true"
+					   pitch_draw_goals="false"
+					   pitch_draw_grass="false"
+					   maximum_player_size="0.20"
+					   pitch_kit_height="12"
+					   pitch_touchline_width_percentage="0"
+					   pitch_width_percentage="80"
+					   vertical="false"
+					   alignment="centre"
+					   allow_y_score_adjustment_for_roles="false"/>
+
+				<!-- Subs -->
+				<container class="titled_box">
+					<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0"/>
+					<layout class="arrange_vertical_attachment" alignment="top" gap="0" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+					<attachment class="hide_empty_container_attachment"/>
+
+					<translation id="title" translation_id="318313" type="use" value="Substitutes[COMMENT: subs bench panel; subsection box which will list any designated substitutes]" />
+
+					<widget class="simple_data_list" id="subs" set_property="properties" alignment="left">
+						<layout class="fit_children_attachment" alignment="vertical,extend" gap="6"/>
+						<layout class="arrange_horizontal_attachment" wrap="true" alignment="left" gap="6"/>
+						<attachment class="hide_empty_container_attachment"/>
+						<record id="widget_properties" class="tactics_icon_info_panel" file="tactics/tactics icon preview info panel11" width="80" height="80"/>
+					</widget>
+					
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

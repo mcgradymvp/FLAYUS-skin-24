@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<boolean id="save_session_state" value="true" />
+	<layout class="arrange_vertical_attachment" layout="200,-1" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container class="bordered_box">
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+		<layout class="arrange_horizontal_attachment" layout="-1,-1,-2" offset="0" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="5" apply_to_children="true" />
+
+			<widget class="label" font="title" auto_size="vertical" alignment="centre">
+				<translation id="text" translation_id="383558" type="use" value="Net Debt[COMMENT: FR 10982, content for Finances Screen]" />
+			</widget>
+
+			<widget id="nedl" class="cash_cell" alignment="centre" size="xlarge"  auto_size="vertical">
+
+			</widget>
+
+		</container>
+
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="5" apply_to_children="true" />
+
+			<widget class="label" font="title" auto_size="vertical" alignment="centre">
+				<translation id="text" translation_id="383817" type="use" value="Transfer Debt[COMMENT: FR 10982, content for Finances Screen]" />
+			</widget>
+
+			<widget id="tdel" class="cash_cell" alignment="centre" size="xlarge"  auto_size="vertical">
+
+			</widget>
+
+		</container>
+
+
+		<container id="pcht" class="pie_chart">
+			<record id="pie_chart_properties">
+				<boolean id="draw_instant_hint" value="true" />
+				<integer id="highlight_value" value="10" />
+			</record>
+		</container>
+	</container>
+
+	<container class="bordered_box">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<widget class="table" id="txtG" layout="40,-1, 90,90,120,120,120,120" row_height="28" row_spacing="0" auto_size="vertical" mode="fill_rows,select_rows" msov="itSL" msex="itUL">
+
+			<!-- table headings -->
+			<list id="headings">
+				<record indx="0" column_span="2">
+					<translation id="text" translation_id="229400" type="use" value="Type" />
+				</record>
+				<record>
+					<translation id="text" translation_id="383590" type="use" value="Original Debt[COMMENT: FR 10982, content for Finances Screen]" />
+				</record>
+				<record>
+					<translation id="text" translation_id="383623" type="use" value="Remaining[COMMENT: FR 10982, content for Finances Screen]" />
+				</record>
+				<record>
+                    <translation id="text" translation_id="447499" type="use" value="Rem. Interest Payable[COMMENT: FR 10982, content for Finances Screen, change to ID 436056 to shortern string length due to screen space, please translate concisely accordingly]" />
+				</record>
+				<record>
+					<translation id="text" translation_id="293013" type="use" value="Start Date" />
+				</record>
+				<record>
+					<translation id="text" translation_id="383593" type="use" value="Payable (per month)[COMMENT: FR 10982, content for Finances Screen]" />
+				</record>
+				<record>
+					<translation id="text" translation_id="383823" type="use" value="Until[COMMENT: FR 10982, content for Finances Screen]" />
+				</record>
+			</list>
+			
+		<!-- column properties -->
+			<list id="column_widget_properties">
+				<record indx="5">
+					<flags id="navigation_focus_target" value="false" />
+				</record>
+				<record indx="7">
+					<flags id="navigation_focus_target" value="false" />
+				</record>
+			</list>
+		</widget>
+
+			<widget class="table" id="ovrt" layout="-1,90,90,120,120,120,120" row_height="28" row_spacing="0" auto_size="vertical">
+
+			</widget>
+
+	</container>
+
+
+
+</panel>

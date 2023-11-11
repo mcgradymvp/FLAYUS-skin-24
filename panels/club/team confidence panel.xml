@@ -1,0 +1,64 @@
+<panel draw_vertical_dividers="true">
+	<attachment_group class="horizontal_arrange" horizontal_layout="-1, -1" vertical_offset="0" horizontal_inset="0" horizontal_gap="16" />
+
+	<container class="main_box" draw_horizontal_dividers="true">
+		<attachment_group class="vertical_arrange" vertical_layout="-2, -1" vertical_gap="16" />
+
+		<!-- board confidence-->
+		<container class="board_confidence_panel" id="BCbd" type="0" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" />
+
+			<widget class="link_button" section="BoPr" appearance="buttons/link/title/button" alignment="left, centre_y" size="large" auto_size="all">
+				<translation id="text" translation_id="557622" type="use" value="Board Members[COMMENT: AREA: Club vision; SUB-AREA: Board profile; FR: 3266; TONE: Formal; CHARLIMIT: None; NOTE: Title for section listing current board members]" />
+			</widget>
+
+			<container class="horizontal_adaptive_container" id="BdMb" mode="distribute_equally" height="60">
+				<record id="default_properties" file="person/person details panel small" width="150" />
+			</container>
+		</container>
+
+	</container>
+
+	<container class="main_box" draw_horizontal_dividers="true">
+		<attachment_group class="vertical_arrange" vertical_layout="-2, -1" vertical_gap="16" />
+
+		<!-- fans confidence-->
+		<container class="board_confidence_panel" id="BCsu" type="1" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="8" horizontal_inset="8" />
+
+			<widget class="text" font="title" size="large" auto_size="vertical">
+				<translation id="text" translation_id="558913" type="use" value="Supporters' Influence On The Board[COMMENT:AREA: Club vision; SUB - AREA: Supporter profile panel FR - BN : FM - 3272; TONE: Formal; CHARLIMIT: None; REF - ID: n / a; NOTE: Shown above Relationship with board string.]" />
+			</widget>
+
+			<container height="15">
+				<attachment_group class="horizontal_arrange_autosize" horizontal_gap="8" />
+
+				<widget class="value_based_picture" id="SRic" scale_picture="true" image_alignment="left" keep_aspect_ratio="true" width="73">
+					<list id="value_list">
+						<record min_value="16" max_value="10000" file="icons/custom/supporter/very high" red_replacement="white" />
+						<record min_value="12" max_value="15" file="icons/custom/supporter/high" red_replacement="white" />
+						<record min_value="9" max_value="11" file="icons/custom/supporter/moderate" red_replacement="white" />
+						<record min_value="5" max_value="8" file="icons/custom/supporter/low" red_replacement="white" />
+						<record min_value="0" max_value="7" file="icons/custom/supporter/very low" red_replacement="white" />
+					</list>
+				</widget>
+
+				<widget class="text" id="SRlv" auto_size="horizontal" style="bold" />
+				
+			</container>
+
+			<container height="1">
+				<attachment_group class="horizontal_arrange_autosize" />
+
+				<widget class="horizontal_divider" width="55" />
+				
+			</container>
+
+			<widget class="text" id="SRtx" auto_size="vertical" />
+		</container>
+	</container>
+</panel>

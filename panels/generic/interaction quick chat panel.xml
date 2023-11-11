@@ -1,0 +1,113 @@
+﻿<panel>
+    <attachment_group class="vertical_arrange" vertical_layout="40, -1" vertical_offset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="all"/>
+
+    <string id="speaking_box_appearance" value="icons/custom/quick chat/quick_chat_speaking_mask_square"/>
+    <flags id="speaking_box_colour" value="text"/>
+
+    <!-- title area -->
+    <container height="40">
+        <attachment_group class="horizontal_arrange_vertical_centre" horizontal_alignment="right, extend"/>
+
+        <container>
+            <attachment_group class="horizontal_arrange_autosize_all_centre_centered_in_parent" horizontal_gap="10"/>
+
+            <widget class="picture" id="titi" red_replacement="fg" scale_picture="true" image_alignment="left" width="20" height="20"/>
+            <widget class="text" id="titl" font="title" size="xlarge" colour="fg" auto_size="all" auto_size_maximum_width="500" alignment="left, centre_y"/>
+        </container>
+
+        <!-- leave -->
+        <widget class="button" id="EndC" click_event="ENDc" auto_size="all">
+            <translation id="text" translation_id="516202" type="use" value="End Quick Chat[COMMENT: AREA: Interaction; SUB-AREA: Quick chat panel; FR : 32639; TONE: Formal; CHARLIMIT: None; AREA: Button label to leave the conversation]"/>
+            <layout class="stick_to_sides_attachment" alignment="right"/>
+        </widget>
+    </container>
+
+    <container>
+        <attachment_group class="horizontal_arrange" horizontal_layout="200, -1, 200" vertical_alignment="vertical" horizontal_gap="10"/>
+
+        <!-- left panel - interactee info -->
+        <container class="main_transparent_box" red_replacement="bg darker">
+            <attachment_group class="vertical_arrange" vertical_alignment="top, fill" vertical_offset="0"/>
+
+            <widget class="interaction_person_info_panel" id="MnPr" width="200">
+                <layout class="centre_in_parent_attachment" alignment="horizontal"/>
+            </widget>
+
+            <container class="scrolling_box">
+                <container id="plai" hidden="true">
+                    <attachment_group class="vertical_arrange_autosize" vertical_alignment="bottom, fill"/>
+
+                </container>
+            </container>
+        </container>
+
+        <!-- conversation section -->
+        <container>
+            <attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0" vertical_gap="5"/>
+
+            <!-- move the icons and question into seperate panel to fill dynamically so we can scroll through? -->
+            <!-- interactee icon -->
+            <widget class="interaction_person_info_panel" id="tpep" talk="true">
+                <layout class="stick_to_sides_attachment" alignment="left"/>
+            </widget>
+
+            <!-- interactee question -->
+            <container class="interaction_speech_bubble_panel" id="queb" show_minimise_icon="false" speech_bubble_appearance_override="boxes/custom/quick chat/ai_quick_chat_speech"/>
+
+            <!-- greeting gestures -->
+            <container class="interaction_gesture_selector_panel" id="gest" file="generic/interaction gesture selector greetings panel" hidden="true"/>
+
+            <!-- interactee greeting response -->
+            <container id="IreC" hidden="true">
+                <attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left, extend" horizontal_offset="10" vertical_offset="10" horizontal_gap="10"/>
+
+                <widget class="picture" id="IreI" scale_picture="true" image_alignment="centre" height="26" width="26"/>
+                <widget class="text" id="IreT" auto_size="vertical" alignment="left, centre_y" colour="text"/>
+            </container>
+
+            <!-- human icon -->
+            <container>
+                <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right"/>
+
+                <widget class="interaction_person_info_panel" id="hpep" interaction_person_type="human_tiny" talk="true"/>
+            </container>
+
+            <!-- human responses -->
+            <container class="interaction_grouped_response_selector_panel" id="resp" file="generic/interaction grouped response selector vertical panel"/>
+
+            <!-- conversation summary -->
+            <container id="Csum" class="main_transparent_box" red_replacement="bg darker" hidden="true">
+                <attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="10" vertical_gap="10"/>
+
+                <widget class="text" font="title" auto_size="all">
+                    <translation id="text" translation_id="515045" type="use" value="Conversation Summary[COMMENT: AREA: Interaction; SUB-AREA: Quick chat panel; FR : 32639; TONE: Formal; CHARLIMIT: None; AREA: Title for summary panel displayed at the end of the conversation]"/>
+                </widget>
+
+                <container id="Prom" draw_horizontal_dividers="true">
+                    <attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="10"/>
+                    <!-- promises added here -->
+                </container>
+            </container>
+
+            <container id="ExtC" hidden="true">
+                <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true"/>
+
+                <!-- exit button -->
+                <widget class="button" click_event="ENDc" auto_size="all">
+                    <layout class="centre_in_parent_attachment" alignment="horizontal"/>
+                    <translation id="text" translation_id="516203" type="use" value="End Quick Chat[COMMENT:AREA: Interaction; SUB - AREA: Quick chat panel; FR : 32639; TONE: Formal; CHARLIMIT: Button label to finish the conversation]"/>
+                </widget>
+            </container>
+        </container>
+
+        <!-- right panel - manager info -->
+        <container class="main_transparent_box" red_replacement="bg darker">
+            <attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="0"/>
+
+            <widget class="interaction_person_info_panel" id="humd" interaction_person_type="human_detailed" width="200" talk="true">
+                <layout class="centre_in_parent_attachment" alignment="horizontal"/>
+            </widget>
+        </container>
+    </container>
+</panel>

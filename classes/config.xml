@@ -1,0 +1,7 @@
+﻿<record>
+	<!-- resource manager options -->
+
+	<!-- preload the stuff in this folder -->
+	<boolean id="preload" value="true"/>
+
+</record>

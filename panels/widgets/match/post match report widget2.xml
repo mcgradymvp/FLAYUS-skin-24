@@ -1,0 +1,32 @@
+﻿<container>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" show_dividers="true" vertical_gap="0" />
+	<!-- The summary information -->
+		<widget class="text" id="ReSu" auto_size="vertical" multiline="true" alignment="centre" />		
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="middle,extend" vertical_gap="0" />
+
+				<container>
+					<attachment_group class="horizontal_arrange_wrapped" horizontal_alignment="middle,fill" horizontal_gap="0" />
+					<widget class="data_analyst_visualisation_widget" height="5" id="vis2"  can_pin_visualisation="false" visualisation_type="shot_map" data_type="fixture" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false">
+						<record id="widget_properties" type="0" />
+						<translation id="text_no_data_available" translation_id="540248" type="use" value="Not enough data loaded to create visualisation. Please use the Analytical Data button below and wait while it generates the match report.[COMMENT: AREA: Visualisation; SUB-AREA:; FR : 32932; TONE: Formal; CHARLIMIT: None; NOTE: warning to display when data available but not loaded to create the visualisation]" />
+					</widget>
+				</container>
+
+			<container>
+				<attachment_group class="horizontal_arrange_wrapped" horizontal_alignment="middle">
+					<global id="horizontal_gap" name="ui.button_row_gap" />
+				</attachment_group>
+				<widget class="icon_button" id="psbt" auto_size="all" alignment="centre" click_event="FpsD" icon="icons/16px/man" secondary_icon_enabled="true" secondary_icon="icons/16px/maximise" secondary_icon_alignment="right" appearance="buttons/subtle/normal/button">
+						<translation id="text" translation_id="515058" type="use" value="Player Statistics[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for showing player statistics from the match just finished]" />
+					</widget>
+
+				<widget class="icon_button" auto_size="all" alignment="centre" click_event="AnDD" icon="icons/16px/stats" secondary_icon_enabled="true" secondary_icon="icons/16px/maximise" appearance="buttons/subtle/normal/button">
+					<string id="remove_if" value="platform_is_switch" />
+					<translation id="text" translation_id="515054" type="use" value="Analytical Data[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for showing key analytics data post-match]" />
+				</widget>
+			</container>
+		</container>
+
+</container>

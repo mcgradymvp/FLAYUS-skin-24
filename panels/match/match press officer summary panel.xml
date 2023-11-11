@@ -1,0 +1,289 @@
+﻿<panel>
+
+	<attachment_group class="vertical_arrange" vertical_alignment="middle" />
+
+	<container id="paFP">
+
+		<animation class="fade_animation" start_value="0" end_value="1" duration="0.5" delay="1" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" />
+
+		<attachment_group class="horizontal_arrange" horizontal_alignment="middle"/>
+
+		<attachment class="test_screen_size_attachment" skip_if_false="true">
+			<list id="properties">
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="0" />
+					<integer id="max_value" value="720" />
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="560" />
+					<integer id="false_value" value="560" />
+				</record>
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="720" />
+					<integer id="max_value" value="850" />
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="650" />
+					<integer id="false_value" value="650" />
+				</record>
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="850" />
+					<integer id="max_value" value="950" />
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="750" />
+					<integer id="false_value" value="750" />
+				</record>
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="950" />
+					<integer id="max_value" value="10000" />
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="950" />
+					<integer id="false_value" value="950" />
+				</record>
+			</list>
+		</attachment>
+
+		<container class="main_transparent_box" size="large" colour="title" id="aaaa">
+
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<attachment class="test_screen_size_attachment" skip_if_false="true">
+				<list id="properties">
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="0" />
+						<integer id="max_value" value="1450" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="325" />
+						<integer id="false_value" value="325" />
+					</record>
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="1450" />
+						<integer id="max_value" value="1600" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="340" />
+						<integer id="false_value" value="340" />
+					</record>
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="1600" />
+						<integer id="max_value" value="1800" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="380" />
+						<integer id="false_value" value="380" />
+					</record>
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="1800" />
+						<integer id="max_value" value="10000" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="420" />
+						<integer id="false_value" value="420" />
+					</record>
+				</list>
+			</attachment>
+
+			<translation id="title" translation_id="515066" type="use" value="Elsewhere today[COMMENT: AREA: Match; SUB-AREA: Team News; FR: 30889; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title for post match flow screen that shows latest scores]" />
+
+			<widget class="competition_fixtures_panel" file="competition/competition fixtures roundup post match summary" id="lasp" display_mode="2" hide_table_title="true" />
+
+		</container>
+
+		<container class="main_transparent_box" size="large" colour="title" id="LtbC">
+
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+
+			<attachment class="test_screen_size_attachment" skip_if_false="true">
+				<list id="properties">
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="0" />
+						<integer id="max_value" value="1450" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="325" />
+						<integer id="false_value" value="325" />
+					</record>
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="1450" />
+						<integer id="max_value" value="1600" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="340" />
+						<integer id="false_value" value="340" />
+					</record>
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="1600" />
+						<integer id="max_value" value="1800" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="380" />
+						<integer id="false_value" value="380" />
+					</record>
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="1800" />
+						<integer id="max_value" value="10000" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="560" />
+						<integer id="false_value" value="560" />
+					</record>
+				</list>
+			</attachment>
+			<translation id="title" translation_id="515067" type="use" value="How the table looks[COMMENT: AREA: Match; SUB-AREA: Team News; FR: 30889; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title for post match flow screen that shows league table]" />
+
+			<widget class="competition_stage_panel" id="letp" file="competition/competition stage post match summary" />
+		</container>
+
+		<!--combined news + social in small res-->
+		<container class="main_transparent_box" colour="title" size="large" id="bbbb">
+
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+
+			<attachment class="test_screen_size_attachment" skip_if_false="true">
+				<list id="properties">
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="0" />
+						<integer id="max_value" value="1450" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="325" />
+						<integer id="false_value" value="325" />
+					</record>
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="1450" />
+						<integer id="max_value" value="1600" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="340" />
+						<integer id="false_value" value="340" />
+					</record>
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="1600" />
+						<integer id="max_value" value="1800" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="380" />
+						<integer id="false_value" value="380" />
+					</record>
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="1800" />
+						<integer id="max_value" value="10000" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="420" />
+						<integer id="false_value" value="420" />
+					</record>
+				</list>
+			</attachment>
+
+			<layout class="hide_medium_horizontal" min_value="1366" />
+			<translation id="title" translation_id="515068" type="use" value="How the media and fans have reacted[COMMENT: AREA: Match; SUB-AREA: Team News; FR: 30889; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title for post match flow screen that shows news items]" />
+
+			<widget class="news_feed_panel" id="nwsp" file="human/news feed embedded social panel" social_item_file="human/news feed social item content panel for match" parent_id_for_popup="paFP" news_item_file="human/news feed news item panel for match" hide_image_except_for_first_item="true" />
+
+		</container>
+
+		<!--news and social get separate panels in higher res-->
+		<container class="main_transparent_box" size="large" colour="title" id="cccc">
+
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<attachment class="test_screen_size_attachment" skip_if_false="true">
+				<list id="properties">
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="0" />
+						<integer id="max_value" value="1450" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="325" />
+						<integer id="false_value" value="325" />
+					</record>
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="1450" />
+						<integer id="max_value" value="1600" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="340" />
+						<integer id="false_value" value="340" />
+					</record>
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="1600" />
+						<integer id="max_value" value="1800" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="380" />
+						<integer id="false_value" value="380" />
+					</record>
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="1800" />
+						<integer id="max_value" value="10000" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="420" />
+						<integer id="false_value" value="420" />
+					</record>
+				</list>
+			</attachment>
+
+			<layout class="show_medium_horizontal" min_value="1366" />
+		<translation id="title" translation_id="515069" type="use" value="How the media reacted[COMMENT: AREA: Match; SUB-AREA: Team News; FR: 30889; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title for post match flow screen that shows news items and social media from the media' perspective]" />
+
+			<widget class="news_feed_panel" id="newp" filter="Fnwo" file="human/news feed embedded social panel" parent_id_for_popup="paFP" news_item_file="human/news feed news item panel for match" hide_image_except_for_first_item="true" />
+		</container>
+
+		<container class="main_transparent_box" size="large" colour="title" id="dddd">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<attachment class="test_screen_size_attachment" skip_if_false="true">
+				<list id="properties">
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="0" />
+						<integer id="max_value" value="1450" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="325" />
+						<integer id="false_value" value="325" />
+					</record>
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="1450" />
+						<integer id="max_value" value="1600" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="340" />
+						<integer id="false_value" value="340" />
+					</record>
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="1600" />
+						<integer id="max_value" value="1800" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="380" />
+						<integer id="false_value" value="380" />
+					</record>
+					<record>
+						<flags id="alignment" value="horizontal" />
+						<integer id="min_value" value="1800" />
+						<integer id="max_value" value="10000" />
+						<symbol id="set_property" value="width" />
+						<integer id="true_value" value="420" />
+						<integer id="false_value" value="420" />
+					</record>
+				</list>
+			</attachment>
+
+			<layout class="show_medium_horizontal" min_value="1366" />
+
+			<translation id="title" translation_id="515070" type="use" value="How the fans have reacted[COMMENT: AREA: Match; SUB-AREA: Team News; FR: 30889; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title for post match flow screen that shows news items and social media from the fans' perspective]" />
+			<widget class="news_feed_panel" id="socp" filter="Fsco" file="human/news feed embedded social panel" social_item_file="human/news feed social item content panel for match" />
+
+		</container>
+
+	</container>
+
+
+</panel>

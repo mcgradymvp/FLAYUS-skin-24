@@ -1,0 +1,252 @@
+﻿<panel>
+    <attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="0"/>
+
+    <boolean id="save_immediate_state" value="true"/>
+    <boolean id="should_force_refresh" value="true"/>
+
+    <!-- the window width at which the action buttons combine into a popup -->
+    <integer id="combine_buttons_window_width" value="1350"/>
+
+    <container>
+        <layout class="arrange_vertical_attachment" layout="-1, 70" offset="0" gap="5"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0, 0, 0, 0"/>
+
+        <container>
+            <layout class="arrange_vertical_attachment" alignment="bottom, extend"/>
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+            <animation class="fade_animation" start_value="0" end_value="1" duration="0.6" delay="0" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true"/>
+
+            <!-- journos box -->
+            <container>
+                <container>
+                    <attachment_group class="vertical_arrange" vertical_alignment="middle, extend" horizontal_inset="220"/>
+                    <layout class="stick_to_sides_attachment" alignment="all" inset="0, 0, 0, 0"/>
+
+                    <container>
+                        <attachment class="test_screen_size_attachment" skip_if_false="true">
+                            <list id="properties">
+                                <record>
+                                    <flags id="alignment" value="vertical"/>
+                                    <integer id="min_value" value="0"/>
+                                    <integer id="max_value" value="770"/>
+                                    <!-- This is a very large value as we want our widget to show if > the min_value.  The attachmen itself only does values between a range so we set the max arbitrarily high to make this work -->
+                                    <symbol id="set_property" value="height"/>
+                                    <integer id="true_value" value="10"/>
+                                </record>
+                                <record>
+                                    <flags id="alignment" value="vertical"/>
+                                    <integer id="min_value" value="770"/>
+                                    <integer id="max_value" value="900"/>
+                                    <!-- This is a very large value as we want our widget to show if > the min_value.  The attachmen itself only does values between a range so we set the max arbitrarily high to make this work -->
+                                    <symbol id="set_property" value="height"/>
+                                    <integer id="true_value" value="30"/>
+                                </record>
+                                <record>
+                                    <flags id="alignment" value="vertical"/>
+                                    <integer id="min_value" value="900"/>
+                                    <integer id="max_value" value="1080"/>
+                                    <!-- This is a very large value as we want our widget to show if > the min_value.  The attachmen itself only does values between a range so we set the max arbitrarily high to make this work -->
+                                    <symbol id="set_property" value="height"/>
+                                    <integer id="true_value" value="80"/>
+                                </record>
+                                <record>
+                                    <flags id="alignment" value="vertical"/>
+                                    <integer id="min_value" value="1080"/>
+                                    <integer id="max_value" value="1200"/>
+                                    <!-- This is a very large value as we want our widget to show if > the min_value.  The attachmen itself only does values between a range so we set the max arbitrarily high to make this work -->
+                                    <symbol id="set_property" value="height"/>
+                                    <integer id="true_value" value="200"/>
+                                </record>
+                                <record>
+                                    <flags id="alignment" value="vertical"/>
+                                    <integer id="min_value" value="1200"/>
+                                    <integer id="max_value" value="1377"/>
+                                    <!-- This is a very large value as we want our widget to show if > the min_value.  The attachmen itself only does values between a range so we set the max arbitrarily high to make this work -->
+                                    <symbol id="set_property" value="height"/>
+                                    <integer id="true_value" value="300"/>
+                                </record>
+                                <record>
+                                    <flags id="alignment" value="vertical"/>
+                                    <integer id="min_value" value="1377"/>
+                                    <integer id="max_value" value="1440"/>
+                                    <!-- This is a very large value as we want our widget to show if > the min_value.  The attachmen itself only does values between a range so we set the max arbitrarily high to make this work -->
+                                    <symbol id="set_property" value="height"/>
+                                    <integer id="true_value" value="210"/>
+                                </record>
+                                <record>
+                                    <flags id="alignment" value="vertical"/>
+                                    <integer id="min_value" value="1440"/>
+                                    <integer id="max_value" value="10000"/>
+                                    <!-- This is a very large value as we want our widget to show if > the min_value.  The attachmen itself only does values between a range so we set the max arbitrarily high to make this work -->
+                                    <symbol id="set_property" value="height"/>
+                                    <integer id="true_value" value="250"/>
+                                </record>
+                            </list>
+                        </attachment>
+                    </container>
+
+                    <container class="scrolling_box" id="tobx" hidden="false" scroll_value_changed_event="ScSc" alignment="top" navigation_container="false">
+                        <container>
+                            <layout class="fit_children_attachment" alignment="vertical"/>
+                            <layout class="stick_to_sides_attachment" alignment="top, horizontal" inset="0" apply_to_children="true"/>
+
+                            <container id="intB">
+                                <attachment_group class="horizontal_arrange_wrapped" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="5"/>
+                                <record id="default_properties" width="185"/>
+
+                                <!-- journo info widgets get added here -->
+                            </container>
+                        </container>
+                    </container>
+
+                    <container height="10"/>
+                </container>
+
+                <!-- question -->
+                <!-- the parent is stick to sides all, then the child 'queb' can be moved around within it to locate it next to the speaking journalist -->
+                <container>
+                    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+                    <container class="interaction_speech_bubble_panel" id="queb" width="475"/>
+                </container>
+            </container>
+
+            <!-- main human response box -->
+            <container id="mnrs">
+                <attachment_group class="vertical_arrange_autosize" vertical_alignment="bottom, extend" horizontal_inset="20"/>
+
+                <container class="main_transparent_box" red_replacement="grey 900" navigation_container="true" default_focus="true">
+                    <attachment_group class="vertical_arrange_autosize" vertical_alignment="bottom"/>
+
+                    <!-- gestures -->
+                    <container class="interaction_gesture_selector_panel" id="gest" hidden="true"/>
+
+                    <!-- human responses -->
+                    <container class="scrolling_box" auto_size="vertical" auto_size_maximum_height="300">
+                        <container class="interaction_grouped_response_selector_panel" id="resp"/>
+                    </container>
+                </container>
+            </container>
+        </container>
+
+        <container class="main_transparent_box_no_margin" height="70" appearance="boxes/custom/solid/paper" navigation_container="true">
+
+            <animation class="translate_animation" start_value="0, 1" end_value="0, 0" duration="0.3" delay="0" end_mode="hold_end" tween="ease_out_4" coord_mode="relative_to_target" trigger_id="hidden" trigger_start="false" trigger_end="true" no_clipping="true"/>
+
+            <attachment_group class="horizontal_arrange" horizontal_layout="-1, 200, -1" vertical_inset="2"/>
+
+            <container>
+                <attachment_group class="horizontal_arrange_vertical_centre" horizontal_alignment="left" vertical_alignment="vertical"/>
+                <layout class="stick_to_sides_attachment" alignment="left" inset="8"/>
+
+                <!-- actions in a popup -->
+                <widget class="popup_button" id="ComL" height="36" width="65" hidden="false">
+                    <string id="icon" value="icons/16px/additional_Comments"/>
+                    <list id="items">
+                        <record id="adcb" event_id="adcs">
+                            <translation id="text" translation_id="515049" type="use" value="Additional Comments[COMMENT: AREA: Press Conference Panel; SUB-AREA: Footer section; FR-BN: 32500; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Label for button to display the text box for adding custom comments to an answer]"/>
+                        </record>
+                        <record id="ncbu" event_id="noco">
+                            <translation id="text" translation_id="284304" type="use" value="No Comment[Press Conference; don't want to give an answer]"/>
+                        </record>
+                        <!-- label set in code -->
+                        <record id="sast" event_id="send"/>
+                    </list>
+                </widget>
+
+                <!-- actions as seperate buttons -->
+
+                <!-- additional comments -->
+                <widget class="subtle_button" id="adcb" click_event="adcs" auto_size="all" hidden="true">
+                    <translation id="text" translation_id="515049" type="use" value="Additional Comments[COMMENT: AREA: Press Conference Panel; SUB-AREA: Footer section; FR-BN: 32500; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Label for button to display the text box for adding custom comments to an answer]"/>
+                </widget>
+
+                <!-- no comment -->
+                <widget class="subtle_button" id="ncbu" click_event="noco" auto_size="all" hidden="true">
+                    <translation id="text" translation_id="284304" type="use" value="No Comment[Press Conference; don't want to give an answer]"/>
+                </widget>
+
+                <!-- send assistant/decline -->
+                <widget class="subtle_button" id="sast" click_event="send" auto_size="all" hidden="true"/>
+
+                <container id="OPat" height="70">
+                    <attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_alignment="right" vertical_alignment="vertical"/>
+                    <layout class="stick_to_sides_attachment" alignment="right" inset="8"/>
+                    <record id="default_properties" width="200"/>
+
+                    <!-- other attendees with manager added here (press officer) -->
+                </container>
+            </container>
+
+            <!-- human description -->
+            <widget class="interaction_person_info_panel" id="humd" interaction_person_type="human" width="200" talk="true" disable_link="true">
+                <layout class="centre_in_parent_attachment" alignment="horizontal"/>
+            </widget>
+
+            <container>
+                <attachment_group class="horizontal_arrange_vertical_centre" horizontal_alignment="left" vertical_alignment="vertical"/>
+
+                <container id="OSat">
+                    <attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="left" vertical_alignment="vertical"/>
+                    <layout class="stick_to_sides_attachment" alignment="left" inset="8"/>
+                    <record id="default_properties" width="200"/>
+
+                    <!-- other attendees with manager added here (team captain/new signings) -->
+                </container>
+
+                <container height="70">
+                    <attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_alignment="right" vertical_alignment="vertical"/>
+                    <layout class="stick_to_sides_attachment" alignment="right" inset="10"/>
+
+                    <!-- actions in a popup -->
+                    <widget class="popup_button" id="ComR" height="36" width="65">
+                        <string id="icon" value="icons/16px/exit_meeting"/>
+                        <list id="items">
+                            <record id="EndP" event_id="EndE">
+                                <translation id="text" translation_id="515050" type="use" value="End Press Conference[COMMENT: AREA: Press Conference Panel; SUB-AREA: Footer section; FR-BN: 32500; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Button label to finish the current press conference early]"/>
+                            </record>
+                            <record id="sobu" event_id="sobu">
+                                <translation id="text" translation_id="284305" type="use" value="Storm Out[Press Conference; angrily leave conference early]"/>
+                            </record>
+                        </list>
+                    </widget>
+
+                    <!-- actions as seperate buttons -->
+
+                    <!-- end press conference, shown after 5 questions -->
+                    <widget class="subtle_button" id="EndP" click_event="EndE" auto_size="all" hidden="true">
+                        <translation id="text" translation_id="515050" type="use" value="End Press Conference[COMMENT: AREA: Press Conference Panel; SUB-AREA: Footer section; FR-BN: 32500; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Button label to finish the current press conference early]"/>
+                    </widget>
+
+                    <!-- storm out -->
+                    <widget class="subtle_button" id="sobu" click_event="stor" auto_size="all" hidden="true">
+                        <translation id="text" translation_id="284305" type="use" value="Storm Out[Press Conference; angrily leave conference early]"/>
+                    </widget>
+                </container>
+            </container>
+        </container>
+    </container>
+
+    <!-- press officer openening/closing statements speech bubble -->
+    <container id="POqb" hidden="true" navigation_container="true" default_focus="true">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+        <animation class="fade_animation" start_value="0" end_value="1" duration="0.6" delay="0.2" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true"/>
+
+        <container class="interaction_speech_bubble_panel" id="POqu" show_minimise_icon="false" arrow_alignment="bottom" width="300"/>
+    </container>
+
+    <!-- featured object profile -->
+    <container>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+       <animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="0.2" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top" />
+        <animation class="fade_animation" start_value="0" end_value="1" duration="0.3" delay="0.2" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true"/>
+
+        <container class="interaction_featured_object_container" id="FObP" width="220" show_dynamic_image="false">
+            <layout class="stick_to_sides_attachment" alignment="right, top" inset="0"/>
+        </container>
+    </container>
+</panel>

@@ -1,0 +1,62 @@
+<!-- A panel used for displaying a ranked list of stats about players in a competition -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<boolean id="save_session_state" value="true" />
+
+	<container class="inner_box">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- Header with stat type string and stat selector button -->
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="left,top" apply_to_children="true" inset="0" />
+
+			<string id="skin_style" value="title link" />
+
+			<widget class="link_button" id="stit" alignment="left,centre_y" auto_size="all" />
+		</container>
+
+    <!-- Table showing the data-->
+    <widget class="object_list_table" id="stat" mode="hide_headings, no_scrolling, stripe_rows" row_height="46" fixed_size_rows="true" row_spacing="0" columns_spacing="5">
+      <list id="column_table_properties">
+        <!-- Ranking -->
+        <record id="csRS" width="20" left="10">
+          <record id="widget_info" class="sortable_text" alignment="left, centre_y,can_scale"/>
+        </record>
+        <!-- Team -->
+        <record id="Ttea" width="25" dont_set_object="true">
+          <record id="widget_info" class="object_portrait_picture" scale_picture="true" image_alignment="centre"/>
+        </record>
+        <!-- Person portrait -->
+        <record id="Pers" width="45">
+          <record id="widget_info" class="object_portrait_picture" scale_picture="true" image_alignment="centre"/>
+        </record>
+        <!-- Person and team stacked labels -->
+        <record id="PTIf" width="-1" dont_set_object="true">
+          <record id="widget_info" class="property_list_viewer_xml_panel" file="competition/player and team label panel"/>
+        </record>
+        <!-- Short stat value -->
+        <record id="csSS" width="40" right="10">
+          <record id="widget_info" class="label" size="10" colour="gzc" alignment="right, centre_y,can_scale"/>
+        </record>
+      </list>
+
+      <record id="viewed_property_ids">
+        <record id="csRS" />
+        <record id="Ttea" />
+        <record id="Pers" />
+        <record id="PTIf" />
+        <record id="csSS" />
+      </record>
+    </widget>
+	
+		<widget class="text" id="nomt" alignment="centre_x,top" hidden="true">
+			<translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+		</widget>
+		<widget class="text" id="nory" alignment="centre_x,top" hidden="true">
+			<translation id="text" translation_id="447506" type="use" value="No records set yet[COMMENT comp player stats panel: no records set but matches have started: title]" />
+		</widget>
+	</container>
+</panel>

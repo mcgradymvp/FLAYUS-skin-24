@@ -1,0 +1,34 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<container class="main_box">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+
+		<widget class="button" id="rplk" auto_size="horizontal" appearance="buttons/link/title/button">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+		</widget>
+
+		<container id="rpcn" height="300">
+			<layout class="arrange_horizontal_attachment" layout="-3, -5" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+			<widget class="graph" id="grph" inset="5,4,5,4">
+				<record id="default_series_properties" type="line" colour="title"/>
+				<record id="instant_hint" format="[%number#1] - [%number#2-nth]"/>
+				<record id="x_axis" hidden="true"/>
+				<record id="y_axis" hidden="true"/>
+				<list id="grid_line_styles">
+					<record colour="graph row"/>
+					<record colour="graph row"/>
+				</list>
+				<list id="border_line_styles">
+					<record colour="graph row"/>
+					<record colour="graph row"/>
+					<record colour="graph row"/>
+					<record colour="graph row"/>
+				</list>
+			</widget>
+			<widget class="table" id="tabl" auto_size_rows="false" select_event="dcrp" mode="fill_rows, select_rows" layout="-1" row_spacing="0" save_session_state="true" dont_restore_selection="true" />
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,89 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<widget class="table" id="Live" mode="fill_rows" auto_size="vertical" row_height="31" layout="-5, -1, -4" row_spacing="0">
+			<translation id="title" translation_id="289352" type="use" value="Live[COMMENT: match_time_slider; instruction to set the action back to live]" />
+	<widget class="label" row="0" col="1">
+				<translation id="text" translation_id="348201" type="use" value="Match[COMMENT: label for a popup showing where to show match highlights when in split view]" />
+			</widget>
+			<widget class="label" row="1" col="0">
+				<translation id="text" translation_id="247336" type="use" value="Highlight Mode" />
+			</widget>
+			<widget class="selection_list" row="1" col="1" id="hgmd" select_event="hmsl" auto_size="vertical" column_span="2" hide_alternative_widget="true" hide_plus_minus_buttons="true" appearance="buttons/standard/normal/button">
+				<list id="items">
+					<record id="0">
+						<translation id="name" translation_id="247337" type="use" value="Full Match" />
+					</record>
+					<record id="1">
+						<translation id="name" translation_id="329863" type="use" value="Comprehensive[COMMENT: match highlights type]" />
+					</record>
+					<record id="2">
+						<translation id="name" translation_id="329930" type="use" value="Extended[COMMENT: match highlights type]" />
+					</record>
+					<record id="3">
+						<translation id="name" translation_id="330180" type="use" value="Key[COMMENT: match highlights type]" />
+					</record>
+					<record id="4">
+						<translation id="name" translation_id="247340" type="use" value="Only Commentary" />
+					</record>
+				</list>
+				<translation id="hint" translation_id="350758" type="use" value="Choose the highlight mode to use during matches[COMMENT: match preferences hint]" />
+			</widget>
+
+			<widget class="label" row="2" col="0">
+				<translation id="text" translation_id="306797" type="use" value="Camera[COMMENT: button which offers the user options to change the camera angle]" />
+			</widget>
+			<widget class="popup_button" row="2" col="1" id="pvcm" fixed="true" select_event="cmsl" auto_size="vertical" column_span="2">
+				<translation id="hint" translation_id="356824" type="use" value="Choose the style of Camera to use[COMMENT: match preferences hint]" />
+			</widget>
+
+			<widget class="label" row="3" col="0">
+				<translation id="text" translation_id="348200" type="use" value="Match Speed During Highlights[COMMENT:highlights speed control on match screen]" />
+			</widget>
+			<widget class="slider_horizontal" row="3" col="1" id="masp" final_changed_event="msch" max_value="15" min_value="1" value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" column_span="2">
+				<translation id="hint" translation_id="356822" type="use" value="Choose the speed at which match action is played when highlights are being shown[COMMENT: match preferences hint]" />
+			</widget>
+
+			<widget class="label" row="4" col="0">
+				<translation id="text" translation_id="491930" type="use" value="Match Speed During Text-Only Highlights[COMMENT: AREA: Preferences; SUB-AREA: In-Game Preferences; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: 348200; NOTE: preference strings and explanations]" />
+			</widget>
+			<widget class="slider_horizontal" row="4" col="1" id="tasp" final_changed_event="mtch" max_value="15" min_value="1" value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" column_span="2">
+				<translation id="hint" translation_id="491931" type="use" value="Choose the speed at which match action is played when text-only highlights are being shown[COMMENT: AREA: Preferences; SUB-AREA: In-Game Preferences; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: 356822; NOTE: preference strings and explanations]" />
+			</widget>
+
+			<widget class="label" row="5" col="0">
+				<translation id="text" translation_id="348199" type="use" value="Match Speed Between Highlights[COMMENT:match text speed control on match screen for when no highlights are being shown]" />
+			</widget>
+			<widget class="slider_horizontal" row="5" col="1" id="casp" final_changed_event="csch" max_value="5" min_value="1" value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" column_span="2">
+				<translation id="hint" translation_id="356823" type="use" value="Choose the speed at which the match progresses when there is no action being shown[COMMENT: match preferences hint]" />
+			</widget>
+		</widget>
+
+		<widget class="table" id="Repl" mode="fill_rows" auto_size="vertical" row_height="30" layout="-1, -1" row_spacing="0">
+			<translation id="title" translation_id="247332" type="use" value="Replays[COMMENT - match screen; replays popup menu on side panel]" />
+			<widget class="label" row="0" col="0">
+				<translation id="text" translation_id="348308" type="use" value="Show replays for[COMMENT: Label for selecting highlights mode]" />
+			</widget>
+			<widget class="widget_popup_button" row="0" col="1" id="shrp" widget_type="settings_replay_types_panel" popup_alignment="right,top" auto_size="all" appearance="buttons/standard/normal/button">
+				<translation id="text" translation_id="441079" type="use" value="Replay Events...[COMMENT: FR21688, title for a button to allow the user to choose which events are replayed automatically]" />
+				<translation id="hint" translation_id="350762" type="use" value="Choose when to show replays[COMMENT: Label for selecting highlights mode]" />
+			</widget>
+
+			<!--<widget class="popup_button" row="0" col="1" id="shrp" select_event="rpsl" height="30">
+				<translation id="hint" translation_id="350762" type="use" value="Choose when to show replays[COMMENT: Label for selecting highlights mode]" />
+			</widget>-->
+
+			<widget class="label" row="1" col="0">
+				<translation id="text" translation_id="306797" type="use" value="Camera[COMMENT: button which offers the user options to change the camera angle]" />
+			</widget>
+			<widget class="popup_button" row="1" col="1" id="rvcm" fixed="true" select_event="rcms" height="30">
+				<translation id="hint" translation_id="356824" type="use" value="Choose the style of Camera to use[COMMENT: match preferences hint]" />
+			</widget>
+
+			<widget class="label" row="2" col="0">
+				<translation id="text" translation_id="348320" type="use" value="Speed[COMMENT: replay speed control on match screen]" />
+			</widget>
+			<widget class="slider_horizontal" row="2" col="1" id="rpsp" final_changed_event="rsch" max_value="15" min_value="1" value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" />
+		</widget>
+
+</panel>

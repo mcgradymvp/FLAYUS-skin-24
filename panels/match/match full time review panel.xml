@@ -1,0 +1,144 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_layout="-1,500,-1" horizontal_offset="0" vertical_inset="0" horizontal_gap="0" />
+		<!--left side -->
+		<container class="bordered_box" appearance="boxes/custom/match/timeline stats/paper" default_width="530" minimum_width="500" priority="1">
+			<layout class="arrange_vertical_attachment" layout="-1,400" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container class="bordered_box">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+
+				<!--name and kit-->
+				<container class="home_match_incidents_panel" file="match/match incidents left in between highlights1" height="60">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</container>
+
+				<!--stats list-->
+				<widget class="match_team_stats_panel" id="HMts" file="match/match team stats popup" team_index="0">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+		
+	<container id="bmf1">
+ 	    <translation id="title" type="use" value="홈팀 포메이션-패스맵" />
+            <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="1" />
+            <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		    <boolean id="save_session_state" value="true" />
+	        <boolean id="save_default_state" value="true" />
+
+    <widget class="match_formation_panel" id="hfor" file="match/match formation small panel2" team_index="0" >
+    	<record id="object_property" get_property="objt" set_property="objt" />
+	</widget>    
+		
+	<widget class="match_analysis_panel" id="mahm" default_height="350" minimum_height="300" priority="1" file="match/match analysis home full2">
+	    <record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+		</record>
+	</widget>
+      </container>
+	 </container>
+	</container>
+		
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+			
+		<container class="main_box" appearance="boxes/custom/match/timeline stats/paper" red_replacement="bg">
+        <layout class="arrange_vertical_attachment" layout="230,310,-1" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+        <widget class="match_info_panel" id="bmin" file="match/match info overview1" small_version="true">
+          <translation id="title" translation_id="292788" type="use" value="Overview[COMMENT: match screen; match overview panel title]" />
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+        </widget>
+
+        <widget class="match_stats_panel" id="mtst" file="match/match stats overview ibh">
+          <translation id="title" translation_id="247439" type="use" value="Match Stats" />
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+        </widget>
+
+			<widget class="match_view_selector_panel" id="selR" save_session_state="true" default_item="pstL" file="client_object/client object viewer selector match1">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+					<widget class="post_match_report_widget" file="widgets/match/post match report widget1" id="pstL">
+					<translation id="title" type="use" value="기대 득점 내역" />
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+				    <widget class="post_match_report_widget" file="widgets/match/post match report widget2" id="pst2">
+	                   <translation id="title" type="use" value="슈팅맵" />
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+				</widget>
+				</container>
+		      </container>
+
+		<!--Right side -->
+		<container class="bordered_box" appearance="boxes/custom/match/timeline stats/paper" default_width="530" minimum_width="500" priority="1">
+			<layout class="arrange_vertical_attachment" layout="-1,400" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container class="bordered_box">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--name and kit-->
+				<container class="away_match_incidents_panel" file="match/match incidents right in between highlights1" height="60">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</container>
+
+				<!--stats list-->
+				<widget class="match_team_stats_panel" file="match/match team stats popup" team_index="1">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+
+	<container id="bmf2">
+ 	    <translation id="title" type="use" value="원정팀 포메이션-패스맵" />
+            <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="1" />
+            <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		    <boolean id="save_session_state" value="true" />
+	        <boolean id="save_default_state" value="true" />
+			
+	<widget class="match_formation_panel" id="afor" file="match/match formation small panel2" team_index="1" >
+   		<record id="object_property" get_property="objt" set_property="objt" />
+	</widget>
+		<widget class="match_analysis_panel" id="maam" default_height="350" minimum_height="300" priority="1" file="match/match analysis away full2">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+	  </container>
+	 </container>
+	</container>
+</panel>

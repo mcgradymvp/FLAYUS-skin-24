@@ -1,0 +1,113 @@
+﻿<panel save_session_state="true">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box">
+		<layout class="arrange_vertical_attachment" layout="30, -1" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<widget class="subtle_popup_button" id="pfdd" auto_size="all" alignment="left,centre_y" select_event="slpf" fixed="false" />
+		
+		<container id="pmdc">
+			<layout class="arrange_vertical_attachment" layout="-1, 30, -1" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<container class="tabbed_container" id="tabC" default="LiUp">
+
+				<container id="LiUp">
+					<translation id="title" translation_id="247239" type="use" value="Line Up" />
+
+					<attachment_group class="vertical_arrange" vertical_layout="200,-1" />
+					<container class="client_object_viewer_xml_panel" file="team/team opposition report previous result score panel" id="opmr" />
+
+					<widget class="pitch_with_tactics" id="plin" pitch_alignment="centre,can_scale" vertical="true" player_icon_file="tactics/tactics icon opposition match analysis" icon_flags="show_name,show_number,show_extra_details,dont_colour_names,dont_fade_icons" pitch_vertical_padding="0" pitch_draw_grass="false" pitch_line_colour="faded text">
+						<real id="maximum_player_size" value="0.165" />
+					</widget>
+				</container>
+
+				<container id="HeMa" class="main_box">
+					<translation id="title" translation_id="420623" type="use" value="Heat Map[COMMENT: match analysis, graphic to display the frequency of activity and touches in each area of the pitch]" />
+
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+					<widget class="preselected_match_chalkboard_panel" vertical="true" force_left_to_right_events="true" id="hMnt" enable_popup="false">
+						<list id="chalkboard_events_to_display">
+							<!-- Heatmap -->
+								<integer value="42" />
+								<!--Average position-->
+								<integer value="62" />
+						</list>
+					</widget>
+				</container>
+
+				<container id="Pass">
+					<translation id="title" translation_id="242528" type="use" value="Passing[COMMENT non-player favourite playing style]" />
+
+					<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+					<widget class="preselected_match_chalkboard_panel" vertical="true" force_left_to_right_events="true" id="pChk" enable_popup="false">
+						<list id="chalkboard_events_to_display">
+							<!-- Pass Combinations -->
+								<integer value="63"/>
+						</list>
+					</widget>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+						<container id="facn">
+							<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="label" font="label" auto_size="vertical">
+								<translation id="text" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+							</widget>
+
+							<widget class="focus_of_attacks_widget" id="foca" />
+						</container>
+
+						<container id="plcn">
+							<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="horizontal_divider" />
+
+							<widget class="label" font="label" auto_size="vertical">
+								<translation id="text" translation_id="420704" type="use" value="Length of Passes[COMMENT: match analysis, label referencing how long passes were]" />
+							</widget>
+
+							<widget class="pie_chart_with_guide" id="lpie" mode="1" file="widgets/pass combo pie chart" text_guide_file="generic/guide item with small circle" />
+						</container>
+
+						<container id="pdcn">
+							<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="horizontal_divider" />
+
+							<widget class="label" font="label" auto_size="vertical">
+								<translation id="text" translation_id="420705" type="use" value="Direction of Passes[COMMENT: match analysis, label referencing the direction of passes]" />
+							</widget>
+
+							<widget class="pie_chart_with_guide" id="dpie" mode="1" file="widgets/pass combo pie chart" text_guide_file="generic/guide item with small circle" />
+						</container>
+					</container>
+				</container>
+
+				<container id="KeyM" class="main_box">
+					<translation id="title" translation_id="483633" type="use" value="Key Moments[COMMENT: Refers to events within a match that were critical to the match result]" />
+
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+					<widget class="preselected_match_chalkboard_panel" vertical="true" id="kPms">
+						<list id="chalkboard_events_to_display">
+								<!--Key Pass -->
+								<integer value="43"/> 
+								<!--Mistake leading to goal-->
+								<integer value="49"/>
+								<!--Key Tackle -->
+								<integer value="45"/>
+								<!--Key Header -->
+								<integer value="47"/>
+						</list>
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,478 @@
+<panel class="client_object_viewer_xml_panel" id="CcEd">
+    <attachment_group class="vertical_arrange_autosize"/>
+
+	<container class="tabbed_container" default_item="cpe0" height="600">
+	<container id="cpe0">
+			<translation id="title" translation_id="248359" type="use" value="General" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<widget class="client_object_label_value_table" id="cctb" edit_mode="true">
+				<record id="table_properties">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+					<string id="layout" value="30, -5, -4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" />
+						<record indx="2" alignment="left,centre_y" auto_size="vertical" spec="text" colour="selection" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="4" />
+						</record>
+						<record indx="1">
+							<integer id="left" value="5" />
+						</record>
+						<record indx="2">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<!-- This forces tabbed_container to update when new data is gathered so we can figure if it is enabled, do it on the default section so we refresh -->
+				<attachment class="event_relay_attachment" event_id="CoUp">
+					<record id="action_event">
+						<flags id="event_id" value="mbrM" />
+						<flags id="event_target" value="ancs" />
+						<integer id="event_level" value="2" />
+					</record>
+				</attachment>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+				<list id="viewed_property_ids">
+					<integer value="Pcst" />
+					<integer value="Pcex" colour="white"/>
+					<integer value="Pcwg" />
+					<integer value="Pywi" />
+					<integer value="Pcpi" />
+					<integer value="Ptpi" />
+					<integer value="Pcrd" />
+					<integer value="Ptrd" />
+					<integer value="Pacp" />
+					<integer value="Plec" />
+					<integer value="Prdc" />
+				</list>
+
+			</widget>
+
+		</container>
+		<container id="cpe2">
+			<translation id="title" translation_id="376545" type="use" value="Player Bonuses[COMMENT: club contract editing]" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<!-- Show if he has a playing job -->
+			<record id="object_property">
+				<integer id="get_property" value="Phpj" />
+				<integer id="set_property" value="itvs" />
+			</record>
+
+			<container class="tabbed_container" default_item="pbt0">
+
+				<container id="pbt0">
+					<translation id="title" translation_id="248359" type="use" value="General" />
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+					<widget class="client_object_label_value_table" id="pbtb" edit_mode="true">
+						<record id="table_properties">
+							<flags id="mode" value="fill_rows, stripe_rows, printable" />
+							<boolean id="auto_size_rows" value="true" />
+							<boolean id="fixed_size_rows" value="false" />
+							<string id="layout" value="30, -5, -4" />
+							<integer id="row_spacing" value="0" />
+							<list id="column_widget_properties">
+								<record indx="0" alignment="left,centre_y" />
+								<record indx="1" alignment="left,centre_y" />
+								<record indx="2" alignment="left,centre_y" auto_size="vertical" spec="text" colour="selection" />
+							</list>
+
+							<list id="column_table_properties">
+								<record indx="0">
+									<integer id="left" value="4" />
+								</record>
+								<record indx="1">
+									<integer id="left" value="5" />
+								</record>
+								<record indx="2">
+									<flags id="alignment" value="left,centre_y" />
+									<integer id="top" value="2" />
+									<integer id="bottom" value="2" />
+								</record>
+							</list>
+						</record>
+
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+
+						<list id="viewed_property_ids">
+							<integer value="Pcap" />
+							<integer value="Pcgb" />
+							<integer value="PcAb" />
+							<integer value="Pccb" />
+							<integer value="Ptyb" />
+							<integer value="Ptgs" />
+							<integer value="Picb" />
+							<integer value="Pusb" />
+						</list>
+					</widget>
+				</container>
+
+				<container id="pbt1">
+					<translation id="title" translation_id="557853" type="use" value="Seasonal Goal Bonus[COMMENT: AREA: Contracts; SUB-AREA: Bonuses; FR-BN: FM-307; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: This is a slightly shortned version of 'Seasonal Landmark Goal Bonus' for UI purposes]" />
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+					<widget class="client_object_list_property_panel" id="slgb" edit_mode="true">
+						<record id="list_table_properties">
+							<integer id="default_sort_column" value="Cciv" />
+							<list id="views">
+								<record id="over">
+									<record id="view">
+										<flags id="Ccbv" />
+										<!-- Bonus -->
+										<flags id="Ccgl" />
+										<!-- Goals -->
+									</record>
+								</record>
+							</list>
+						</record>
+						<record id="Cols" file="properties/contract clause properties" />
+						<integer id="viewed_property_ids" value="pebg" />
+					</widget>
+				</container>
+
+				<container id="pbt2">
+					<translation id="title" translation_id="557854" type="use" value="Seasonal Assist Bonus[COMMENT: AREA: Contracts; SUB-AREA: Bonuses; FR-BN: FM-307; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: This is a slightly shortned version of 'Seasonal Landmark Assist Bonus' for UI purposes]" />
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+					<widget class="client_object_list_property_panel" id="slab" edit_mode="true">
+						<record id="list_table_properties">
+							<integer id="default_sort_column" value="Cciv" />
+							<list id="views">
+								<record id="over">
+									<record id="view">
+										<flags id="Ccbv" />
+										<!-- Bonus -->
+										<flags id="Ccas" />
+										<!-- Goals -->
+									</record>
+								</record>
+							</list>
+						</record>
+						<record id="Cols" file="properties/contract clause properties" />
+						<integer id="viewed_property_ids" value="peba" />
+					</widget>
+				</container>
+
+				<container id="pbt3">
+					<translation id="title" translation_id="557855" type="use" value="Seasonal Combined Goal and Assist Bonus[COMMENT: AREA: Contracts; SUB-AREA: Bonuses; FR-BN: FM-307; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: This is a slightly shortned version of 'Seasonal Landmark Combined Goal and Assist Bonus' for UI purposes]" />
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+					<widget class="client_object_list_property_panel" id="slxb" edit_mode="true">
+						<record id="list_table_properties">
+							<integer id="default_sort_column" value="Cciv" />
+							<list id="views">
+								<record id="over">
+									<record id="view">
+										<flags id="Ccbv" />
+										<!-- Bonus -->
+										<flags id="Ccga" />
+										<!-- Goals -->
+									</record>
+								</record>
+							</list>
+						</record>
+						<record id="Cols" file="properties/contract clause properties" />
+						<integer id="viewed_property_ids" value="pebx" />
+					</widget>
+				</container>
+				
+			</container>
+		</container>
+
+		<container id="cpe3">
+			<translation id="title" translation_id="441118" type="use" value="Release Clauses[COMMENT: club contract editing, section for adding/removing release clauses to a contract]" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<!-- Show if he has a playing job -->
+			<record id="object_property">
+				<integer id="get_property" value="Phpj" />
+				<integer id="set_property" value="itvs" />
+			</record>
+
+			<widget class="client_object_label_value_table" id="mfrc" edit_mode="true">
+				<record id="table_properties">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+					<string id="layout" value="30, -5, -4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" />
+						<record indx="2" alignment="left,centre_y" auto_size="vertical" spec="text" colour="selection" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="4" />
+						</record>
+						<record indx="1">
+							<integer id="left" value="5" />
+						</record>
+						<record indx="2">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<list id="viewed_property_ids">
+					<integer value="Pmfr" />
+					<integer value="Pmfe" />
+					<integer value="Pfcf" />
+					<integer value="Pfce" />
+					<integer value="Pdcf" />
+					<integer value="Pdex" />
+					<integer value="Phdr" />
+					<integer value="Phde" />
+					<integer value="Pccc" />
+					<integer value="Pcae" />
+					<integer value="Pccr" />
+					<integer value="Pcce" />
+					<integer value="Prrf" />
+					<integer value="Pnpr" />
+					<integer value="Parr" />
+					<integer value="Pnpa" />
+					<integer value="PcRf" />
+				</list>
+			</widget>
+		</container>
+
+		<container id="cpe4">
+			<translation id="title" translation_id="441119" type="use" value="Player Wage Increases[COMMENT: club contract editing, section for adding or removing player wage increases]" />
+			<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!-- Show if he has a playing job -->
+			<record id="object_property">
+				<integer id="get_property" value="Phpj" />
+				<integer id="set_property" value="itvs" />
+			</record>
+
+			<container class="inner_box">
+				<translation id="text" translation_id="435994" type="use" value="Wage After Reaching Club League Games[COMMENT: contract clause type, shown on contract offer screen]" />
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+				<widget class="client_object_list_property_panel" id="wrcg" edit_mode="true">
+					<record id="list_table_properties">
+						<integer id="default_sort_column" value="Ccgv" />
+
+						<list id="views">
+							<record id="over">
+								<record id="view">
+									<flags id="Ccwv" />
+									<!-- Wage -->
+									<flags id="Ccgv" />
+									<!-- Games -->
+								</record>
+							</record>
+						</list>
+					</record>
+
+					<record id="Cols" file="properties/contract clause properties" />
+					<integer id="viewed_property_ids" value="pewg" />
+				</widget>
+			</container>
+
+			<container class="inner_box">
+				<translation id="text" translation_id="321169" type="use" value="Wage After Reaching International Appearances[COMMENT: contract clause type, shown on contract offer screen]" />
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+				<widget class="client_object_list_property_panel" id="wrig" edit_mode="true">
+					<record id="list_table_properties">
+						<integer id="default_sort_column" value="Cciv" />
+
+						<list id="views">
+							<record id="over">
+								<record id="view">
+									<flags id="Ccwv" />
+									<!-- Wage -->
+									<flags id="Cciv" />
+									<!-- International Apps -->
+								</record>
+							</record>
+						</list>
+					</record>
+
+					<record id="Cols" file="properties/contract clause properties" />
+					<integer id="viewed_property_ids" value="peig" />
+				</widget>
+			</container>
+		</container>
+
+		<container id="cpe5">
+			<translation id="title" translation_id="441120" type="use" value="Player Contract Extensions[COMMENT: club contract editing, section for adding or removing player contract extensions]" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<!-- Show if he has a playing job -->
+			<record id="object_property">
+				<integer id="get_property" value="Phpj" />
+				<integer id="set_property" value="itvs" />
+			</record>
+
+			<widget class="client_object_label_value_table" id="pcet" edit_mode="true">
+				<record id="table_properties">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+					<string id="layout" value="30, -5, -4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" />
+						<record indx="2" alignment="left,centre_y" auto_size="vertical" spec="text" colour="selection" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="4" />
+						</record>
+						<record indx="1">
+							<integer id="left" value="5" />
+						</record>
+						<record indx="2">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<list id="viewed_property_ids">
+					<integer value="Pcxl" />
+					<integer value="Pypr" />
+					<integer value="Pyar" />
+					<integer value="Paco" />
+				</list>
+			</widget>
+		</container>
+
+		<container class="scrolling_box" id="cpe6">
+			<translation id="title" translation_id="437854" type="use" value="Other Player Clauses[COMMENT: in-game editor, contract editing]" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<widget class="client_object_label_value_table" id="octb" edit_mode="true">
+				<record id="table_properties">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+
+					<string id="layout" value="30, -5, -4" />
+					<integer id="row_spacing" value="0" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" />
+						<record indx="2" alignment="left,centre_y" auto_size="vertical" spec="text" colour="selection" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="4" />
+						</record>
+						<record indx="1">
+							<integer id="left" value="5" />
+						</record>
+						<record indx="2">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<list id="viewed_property_ids">
+					<integer value="Psof" />
+					<integer value="Psfp" />
+					<integer value="Psfc" />
+					<integer value="Pmhe" />
+					<integer value="Picr" />
+					<integer value="Pmcr" />
+				</list>
+
+			</widget>
+		</container>
+
+		<container id="cpe7">
+			<translation id="title" translation_id="376588" type="use" value="Staff Clauses[COMMENT: in-game editor, contract editing]" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<!-- Show if he has a non playing job -->
+			<record id="object_property">
+				<integer id="get_property" value="Phnj" />
+				<integer id="set_property" value="itvs" />
+			</record>
+
+			<widget class="client_object_label_value_table" id="sctb" edit_mode="true">
+				<record id="table_properties">
+					<flags id="mode" value="fill_rows, stripe_rows, printable" />
+					<boolean id="auto_size_rows" value="true" />
+					<boolean id="fixed_size_rows" value="false" />
+
+					<string id="layout" value="30, -5, -4" />
+					<integer id="row_spacing" value="0" />
+
+					<list id="column_table_properties">
+						<record indx="0">
+							<integer id="left" value="4" />
+						</record>
+						<record indx="1">
+							<integer id="left" value="5" />
+						</record>
+						<record indx="1">
+							<flags id="alignment" value="left,centre_y" />
+							<integer id="top" value="2" />
+							<integer id="bottom" value="2" />
+						</record>
+					</list>
+				</record>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<list id="viewed_property_ids">
+					<integer value="Pmcr" />
+					<integer value="Pwcm" />
+					<integer value="Ppcl" />
+				</list>
+			</widget>
+		</container>
+	</container>
+
+</panel>

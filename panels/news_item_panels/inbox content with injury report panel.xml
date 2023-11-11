@@ -1,0 +1,82 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<string id="skin_style" value="subtle box"/>
+
+	<container height="140">
+		<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true"/>
+		<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<container class="client_object_viewer_xml_panel" id="psdt">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+			<container id="plyd">
+				<layout class="arrange_horizontal_attachment" layout="130,80,-1,-1"  offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+					<widget class="object_portrait_picture"  image_alignment="right" scale_picture="true" keep_aspect_ratio="true" width="130">
+						<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+						<record id="object_property">
+							<integer id="get_property" value="objt"/>
+							<integer id="set_property" value="objt"/>
+						</record>
+					</widget>
+				</container>
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>	
+					<widget class="object_portrait_picture" id="clul" image_alignment="left" scale_picture="true" keep_aspect_ratio="true" width="75" >
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+					</widget>
+				</container>	
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="person_button" info_popup_enabled="true" Pipl="true" auto_size="vertical" size="large" style="bold">
+						<record id="object_property">
+							<integer id="get_property" value="objt"/>
+							<integer id="set_property" value="valu"/>
+						</record>
+					</widget>
+
+					<!-- Age -->
+					<widget class="game_formatted_label"  alignment="left,centre_y" auto_size="vertical" colour="faded text" >
+						<record id="format">
+							<translation id="text" translation_id="388547" type="use" value="[%number#1] year-old [%player_description#2][COMMENT: transfer window opening news, rumoured player moving, graphical display]"/>
+							<integer id="var2" value="vf_player_description"/>
+						</record>
+
+						<record id="object_property">
+							<list id="get_properties">
+								<!-- age -->
+								<record get_property="Page" set_property="var1" dont_set_object="true"/>
+								<!-- description -->
+								<record get_property="Pdes" set_property="var2" dont_set_object="true"/>
+							</list>
+						</record>
+					</widget>
+
+					<widget class="nation_button" auto_size="vertical">
+						<record id="object_property" get_property="PNat"/>
+					</widget>
+				</container>
+			</container>
+		</container>
+
+		<container class="vertical_arrange_container" id="infc" auto_size="none" gap="0" alignment="middle" inset="0" offset="0" />
+		
+	</container>
+
+	<container class="container"  id="trbx" height="165">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" />
+		<!-- treatment information boxes will be added to this container -->
+	</container>
+
+	<container class="player_loan_information_panel" id="plip"/>
+	<container class="team_current_injuries_panel" id="cuip"/>
+
+</panel>

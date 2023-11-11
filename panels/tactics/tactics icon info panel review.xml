@@ -1,0 +1,62 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<container>
+
+    <widget class="tactics_kit_picture" id="kitp">
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0,0,0,20"/>
+    </widget>
+	
+	<!--rating-->
+	<widget class="match_rating_label_formatted" id="avra" size="8" alignment="centre,can_scale" format="[%fraction#1-2.1]" navigation_focus_target="false" appearance="labels/custom/match rating/small/label">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="20,40,0,0"/>
+    </widget>
+	</container>	
+
+	<container class="bordered_box" appearance="boxes/custom/solid/rounded/paper" red_replacement="black" height="25">
+
+		<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<!-- Name-->
+		<container class="bordered_box" appearance="boxes/custom/scouting/heading/paper" height="13">
+		<record id="object_property" get_property="tbcl" set_property="rrep" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+			<widget class="person_button" format="[%person#1-initial_surname]" size="xsmall" alignment="centre" auto_size="vertical" multiline="false">
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="ttcl" />
+							<integer id="set_property" value="colr" />
+						</record>
+						<record>
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="valu" />
+						</record>
+					</list>
+				</record>
+			</widget> 
+		</container>
+
+		<!--debug role/duty-->
+		<container height="15">
+			<layout class="arrange_horizontal_attachment" layout="30,7,-1,-3" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<widget class="tactical_role_label" id="role" abbt="true" size="7" colour="white" alignment="left,can_scale" style="bold" auto_size="vertical"/>
+
+			<widget class="label" size="7" colour="white" alignment="centre_y,centre_x">
+				<translation id="text" translation_id="233089" type="use" value="-" />
+			</widget>
+			<widget class="tactical_role_label" id="duty" abbt="true" size="7" colour="white" alignment="right,can_scale" style="bold" auto_size="vertical"/>
+	        
+
+		</container>
+
+	</container>
+
+
+
+</panel>

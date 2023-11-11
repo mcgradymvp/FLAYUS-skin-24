@@ -1,0 +1,19 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,0,0,0" />
+
+	<!-- Team Analysis -->
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<widget class="data_analyst_visualisation_widget" id="vis2" visualisation_type="6" data_type="3" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="true">
+			<record id="object_property" get_property="objt" set_property="objt" />
+			<record id="widget_properties" type="0"/>
+		</widget>
+		<widget class="data_analyst_visualisation_widget" id="vis3" visualisation_type="6" data_type="3"  file="widgets/data analyst visualisation mini" show_mini_visualisation_text="true">
+			<record id="object_property" get_property="objt" set_property="objt" />
+			<record id="widget_properties" type="1"/>
+		</widget>
+	</container>
+
+</panel>

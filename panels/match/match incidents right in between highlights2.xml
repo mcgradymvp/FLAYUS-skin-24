@@ -1,0 +1,30 @@
+﻿<panel >
+
+  <container>
+    <layout class="arrange_horizontal_attachment" layout="-1,50" gap="0" offset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+  
+    <!-- team name -->
+ 				<widget class="text_button" id="T2nm" font="title" style="bold" size="10.5" alignment="centre" click_event="htac" navigation_focus_target="false" colour="black" multiline="true"/>
+
+    <!--logo-->
+				<container class="transformation_container"  >
+	            	<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" priority="10"/>
+		            <layout class="stick_to_sides_attachment" alignment="all" inset="0,0,0,0" priority="10"/>
+						<list id="transformations">
+				           <record type="rotation" value="15"/>
+				        </list>
+	   
+	    <!--away team main logo-->
+				<widget class="object_portrait_picture" id="picA" height="50" width="50" scale_picture="true" should_force_refresh="true" keep_aspect_ratio="true" image_alignment="right" transparency="0.3">
+	                <layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" priority="3"/>
+		            <layout class="stick_to_sides_attachment" alignment="all" inset="-15,0,0,0" priority="3"/>
+							<record id="object_property">
+								<integer id="get_property" value="away" />
+							</record>
+		        </widget>
+    </container>
+</container>
+
+</panel>

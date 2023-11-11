@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<panel draw_vertical_dividers="true">
+	<layout class="arrange_horizontal_attachment" layout="-4,-1" offset="0" gap="1"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+	<flags id="required_attribute_row_appearance" value="tables/custom/attributes/required/row"/>
+	<flags id="preferred_attribute_row_appearance" value="tables/custom/attributes/preferred/row"/>
+	<flags id="not_important_attribute_row_appearance" value="tables/standard/row/normal/row"/>
+
+	<!-- Table properties to use for all attribute tables -->
+	<record id="table_properties" mode="fill_rows, stripe_rows, printable" layout="-1, 40, 60, 30" row_height="26" row_spacing="1" default_sort_column="name">
+		<list id="column_table_properties">
+			<!-- Attribute name -->
+			<record index="0" id="name" left="10">
+				<record id="widget_info" class="text" alignment="left, centre_y,can_scale" font="gz_title" colour="gzk" size="10" multiline="false"/>
+			</record>
+			<!-- Attribute training improvement offset -->
+			<record index="1" id="offs" sort_disabled="true">
+				<record id="widget_info" class="training_improvement" />
+			</record>
+			<!-- Attribute value -->
+			<record index="2" id="val " sort_disabled="true" column_alignment="centre" right="8">
+				<record id="widget_info" class="attribute_label" font="gz_attribute" size="13" style="bold" alignment="centre_x,centre_y" multiline="false"/>
+			</record>
+			<!-- Attribute edit widget -->
+			<record index="3" id="edit" sort_disabled="true">
+				<record id="widget_info" class="editable_client_object_property_panel" />
+			</record>
+		</list>
+	</record>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1"/>
+
+		<container >
+			<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<!-- Technical Table -->
+			<widget class="table" id="pltt" layout="-1">
+				<!--<list id="headings">
+				<record index="0" alignment="centre_x, centre_y" size="9" font="gzmain"  colour="accent" column_span="5" hide_sorting="true" disabled="true">
+					<translation id="text" translation_id="229413" type="use" value="Technical"/>
+				</record>
+			</list>-->
+			</widget>
+
+			<!-- Goalkeeping Table -->
+			<widget class="table" id="plgk" layout="-1">
+				<!--<list id="headings">
+				<record index="0" alignment="centre_x, centre_y" size="9" font="gzmain"  colour="accent" column_span="5" hide_sorting="true" disabled="true">
+					<translation id="text" translation_id="230024" type="use" value="Goalkeeping" />
+				</record>
+			</list>-->
+			</widget>
+
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<!-- Mental Table -->
+			<widget class="table" id="plmt" layout="-1">
+				<!--<list id="headings">
+				<record index="0" alignment="centre_x, centre_y" size="9" font="gzmain"  colour="accent" column_span="5" hide_sorting="true" disabled="true">
+					<translation id="text" translation_id="230106" type="use" value="Mental"/>
+				</record>
+			</list>-->
+			</widget>
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical, fill" offset="0"/>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- Physical Table -->
+				<widget class="table" id="plpt" layout="-1" auto_size="vertical">
+					<!--<list id="headings">
+						<record index="0" alignment="centre_x, centre_y" size="9" font="gzmain"  colour="accent" column_span="5" hide_sorting="true" disabled="true">
+							<translation id="text" translation_id="230003" type="use" value="Physical"/>
+						</record>
+					</list>-->
+				</widget>
+
+				<!-- Extra technical table for GK -->
+				<widget class="table" id="plgt" layout="-1" auto_size="vertical">
+					<!--<list id="headings">
+						<record index="0" alignment="centre_x, centre_y" size="10.5" font="gzmain"  colour="accent" column_span="5">
+							<translation id="text" translation_id="229413" type="use" value="Technical"/>
+						</record>
+					</list>-->
+				</widget>
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- Separator -->
+				<widget class="picture" file="dividers/standard/horizontal/line" height="2" image_alignment="centre"/>
+
+				<!-- Additional attributes table -->
+				<container class="client_object_viewer_xml_panel" id="attT">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<widget class="table" layout="-1, -1" mode="fill_rows, printable,drag_rows,drop_on_rows" row_height="25" row_spacing="0">
+						<list id="column_display_properties">
+							<record index="0" left="7" sort_disabled="true"/>
+							<record index="1" right="7" sort_disabled="true"/>
+						</list>
+
+						<!-- Height-->
+						<widget class="label" row="0" column="0" column_span="2" font="gzmain"  colour="gzk" size="10">
+							<record id="object_property" get_property="Phei" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="Phei" row="0" column="1" font="gzmain"  colour="gzk" size="10">
+							<record id="object_property" get_property="Phei"/>
+							<record id="widget_properties" alignment="right, centre_y"/>
+						</widget>
+						<!-- Weight-->
+						<widget class="label" row="1" column="0" column_span="2" font="gzmain"  colour="gzk" size="10">
+							<record id="object_property" get_property="Pwei" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="Pwei" row="1" column="1" font="gzmain"  colour="gzk" size="10">
+							<record id="object_property" get_property="Pwei"/>
+							<record id="widget_properties" alignment="right, centre_y" />
+						</widget>
+						<!-- Condition -->
+						<widget class="label" row="2" column="0" font="gzmain"  colour="gzk" size="10">
+							<record id="object_property" get_property="Pcon" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="conv" row="2" column="1" column_span="2" font="gzmain"  colour="gzk" size="10">
+							<record id="widget_info" class="condition_label" alignment="right, centre_y" ivih="false"/>
+							<record id="widget_properties" alignment="right, centre_y"/>
+							<record id="object_property" get_property="Pcon"/>
+						</widget>
+						<!-- Fitness -->
+						<widget class="label" row="3" column="0" font="gzmain"  colour="gzk" size="10">
+							<record id="object_property" get_property="Pfit" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="fitv" row="3" column="1" column_span="2" font="gzmain"  colour="gzk" size="10">
+							<record id="widget_info" class="condition_label" alignment="right, centre_y" mode="1" ivih="false"/>
+							<record id="widget_properties" alignment="right, centre_y"/>
+							<record id="object_property" get_property="Pfit"/>
+						</widget>
+
+						<!-- Nationality -->
+                        <widget class="editable_client_object_property_panel" id="pfna" col="0" row="4" column_span="2">
+                            <record id="object_property">
+                              <integer id="get_property" value="Pnat" />
+                            </record>
+                        <record id="widget_properties" icon_alignment="left" display_format="1" font="fonts/letterpressed" size="10" />
+                        </widget>
+					
+						<!--morale-->
+						<widget class="editable_client_object_property_panel" id="mora" row="5" column="0" colour="gzk" font="gzmain"  alignment="left,centre_y,can_scale" should_recolour="true">
+							<record id="widget_info" class="morale_label"/>
+							<record id="object_property">
+								<integer id="get_property" value="Pmor" />
+							</record>
+						</widget>	
+
+						<!-- Squad Status -->
+						<widget class="squad_status_label" id="sqst" col="1" row="5" alignment="right,centre_y,can_scale" style="semi_bold" font="gzmain"  colour="accent" size="10">
+							<record id="object_property">
+								<integer id="get_property" value="Pccs" />
+							</record>
+						</widget>	
+
+						<!--jadedness-->
+						<widget class="label" row="7" column="0" style="semi_bold" alignment="left,centre_y,can_scale">
+							<translation id="text" type="use" value="피로도" />
+						</widget>
+						<widget class="editable_client_object_property_panel" id="jade" row="7" column="1" alignment="centre" style="semi_bold" use_attribute_colour_as_bg="false" appearance="boxes/custom/attributes/paper" colour="white">
+							<record id="widget_info" class="number_label"/>
+							<record id="object_property">
+								<integer id="get_property" value="Pjad" />
+							</record>
+						</widget>
+
+						<!--Asking Price-->
+						<widget class="label" row="8" column="0" style="semi_bold" alignment="left,centre_y,can_scale">
+							<translation id="text"  type="use"  translation_id="227778" value="Asking Price" />
+						</widget>
+						<widget class="value_label" row="8" column="1" alignment="centre" style="semi_bold" colour="accent">
+							<record id="object_property" get_property="Pnar"/>
+						</widget>
+
+					</widget>
+
+				</container>
+			</container>
+		</container>
+	</container>
+
+	<!-- More attribute stuff-->
+
+	<container class="client_object_viewer_xml_panel" id="atT2" file="gunzo/gunzo player profile taba"/>
+</panel>

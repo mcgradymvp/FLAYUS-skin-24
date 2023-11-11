@@ -1,0 +1,157 @@
+﻿<panel height="100" width="580">
+	<attachment_group class="vertical_arrange" vertical_layout="55,40" vertical_gap="0" vertical_offset="0"/>
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_layout="100,420,80" horizontal_gap="-17"/>
+		<container id="TeaC" class="client_object_viewer_xml_panel">
+			<animation class="translate_animation" start_value="0.2, -1" end_value="0, 0" duration="0.2" delay="0.8" end_mode="hold_auto_reverse" tween="ease_out_4" coord_mode="relative_to_target" trigger_id="hidden" trigger_start="false" trigger_end="true" no_clipping="true"/>
+			<animation class="fade_animation" start_value="0" end_value="1" duration="0.2" delay="0.8" end_mode="hold_auto_reverse" trigger_id="hidden" trigger_start="false" trigger_end="true"/>
+			<attachment_group class="vertical_arrange_autosize"/>
+			<container class="contrast_box" appearance="boxes/custom/match/tv captions/si tv/caption/header/paper" height="55">
+				<attachment_group class="vertical_arrange" vertical_alignment="middle"/>
+				<record id="object_property">
+					<integer id="get_property" value="Tbc1" />
+					<integer id="set_property" value="red_replacement" />
+				</record>
+				<widget class="object_portrait_picture" height="42">
+					<animation class="fade_animation" start_value="0" end_value="1" duration="0.2" delay="0.6" end_mode="hold_auto_reverse" trigger_id="hidden" trigger_value="false"/>
+					<string id="scale_picture" value="true"/>
+					<string id="image_alignment" value="centre"/>
+					<boolean id="keep_aspect_ratio" value="true"/>
+					<boolean id="clickable" value="false"/>
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+		</container>
+		<container >
+			<attachment_group class="vertical_arrange"/>
+			<container class="plain_box" id="at0i" appearance="boxes/custom/match/tv captions/si tv/caption/header/paper" height="55">
+				<animation class="translate_animation" start_value="-1, 0" end_value="0, 0" duration="0.6" delay="0" end_mode="hold_auto_reverse" tween="ease_out_4" coord_mode="relative_to_target" trigger_id="hidden" trigger_start="false" trigger_end="true" no_clipping="true"/>
+				<animation class="fade_animation" start_value="0" end_value="1" duration="0.5" delay="0.1" end_mode="hold_auto_reverse" trigger_id="hidden" trigger_start="false" trigger_end="true"/>
+				<string id="red_replacement" value="white"/>
+				<attachment_group class="horizontal_arrange_vertical_centre" horizontal_gap="6"/>
+				<widget class="picture" file="icons/26px/sub on" id="sbON" scale_picture="true" height="26" width="26">
+					<animation class="fade_animation" start_value="0" end_value="1" duration="0.1" delay="0.5" end_mode="hold_auto_reverse" trigger_id="hidden" trigger_value="false"/>
+					<string id="image_alignment" value="centre"/>
+				</widget>
+				<container id="astC" width="276" height="55">
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize"/>
+						<widget class="text" id="PlNA" alignment="centre_y,left" auto_size="all">
+							<animation class="fade_animation" start_value="0" end_value="1" duration="0.2" delay="0.5" end_mode="hold_auto_reverse" trigger_id="hidden" trigger_value="false"/>
+							<string id="value" value="99 -"/>
+							<string id="size" value="xlarge"/>
+							<string id="font" value="title"/>
+							<string id="colour" value="fm purple"/>
+							<string id="multiline" value="true"/>
+						</widget>
+						<widget class="text" alignment="centre_y,left" id="PlTA" auto_size="all">
+							<animation class="fade_animation" start_value="0" end_value="1" duration="0.2" delay="0.5" end_mode="hold_auto_reverse" trigger_id="hidden" trigger_value="false"/>
+							<string id="value" value="|b|TROY DEENEY|/b|"/>
+							<string id="size" value="xlarge"/>
+							<string id="colour" value="fm purple"/>
+							<string id="font" value="title"/>
+							<string id="multiline" value="true"/>
+							<string id="maximum_width" value="260"/>
+						</widget>
+					</container>
+					<widget class="text" id="Asss" auto_size="vertical">
+						<animation class="fade_animation" start_value="0" end_value="1" duration="0.2" delay="0.5" end_mode="hold_auto_reverse" trigger_id="hidden" trigger_value="false"/>
+						<string id="value" value="Ast - Robert Huth"/>
+						<string id="colour" value="faded black"/>
+					</widget>
+				</container>
+				<widget class="text" alignment="centre_y,left" auto_size="all" id="PlTn" needs_width="true" needs_height="true">
+					<animation class="fade_animation" start_value="0" end_value="1" duration="0.2" delay="0.5" end_mode="hold_auto_reverse" trigger_id="hidden" trigger_value="false"/>
+					<string id="value" value="99 -"/>
+					<string id="size" value="xlarge"/>
+					<string id="font" value="title"/>
+					<string id="colour" value="fm purple"/>
+					<string id="multiline" value="true"/>
+				</widget>
+				<widget class="text" alignment="centre_y,left" id="PlTx" width="260" auto_size="vertical">
+					<animation class="fade_animation" start_value="0" end_value="1" duration="0.2" delay="0.5" end_mode="hold_auto_reverse" trigger_id="hidden" trigger_value="false"/>
+					<string id="value" value="|b|TROY DEENEY|/b|"/>
+					<string id="size" value="xlarge"/>
+					<string id="colour" value="fm purple"/>
+					<string id="font" value="title"/>
+					<string id="multiline" value="true"/>
+					<string id="maximum_width" value="260"/>
+				</widget>
+			</container>
+			<container class="plain_box" id="AcCo" appearance="boxes/custom/match/tv captions/si tv/caption/header/paper" height="40">
+				<string id="red_replacement" value="white"/>
+				<attachment_group class="horizontal_arrange_vertical_centre"/>
+				<container id="at05" width="2">
+					<attachment_group class="vertical_arrange"/>
+				</container>
+				<widget class="picture" file="icons/26px/sub off" id="sbOF" scale_picture="true" width="26">
+					<string id="image_alignment" value="centre"/>
+				</widget>
+				<widget class="text" alignment="centre_y,left" id="AcTx" auto_size="horizontal" needs_width="true">
+					<string id="value" value="|b|Yellow Card|/b| -"/>
+					<string id="size" value="9"/>
+					<string id="font" value="title"/>
+					<string id="multiline" value="false"/>
+					<string id="colour" value="white"/>
+				</widget>
+				<widget class="text" alignment="centre_y,left" id="AcTs" width="250" auto_size="vertical">
+					<string id="value" value="4th goal of the season"/>
+					<string id="size" value="8"/>
+					<string id="colour" value="white"/>
+					<string id="multiline" value="true"/>
+					<string id="maximum_width" value="250"/>
+				</widget>
+			</container>
+		</container>
+		<container/>
+	</container>
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_layout="83,415,80" horizontal_gap="-12"/>
+		<container/>
+		<container class="plain_box" id="AcCo" appearance="boxes/custom/match/tv captions/si tv/caption/footer/paper" height="40">
+			<animation class="translate_animation" start_value="2, 0" end_value="0, 0" duration="0.6" delay="0" end_mode="hold_auto_reverse" tween="ease_out_4" coord_mode="relative_to_target" trigger_id="hidden" trigger_start="false" trigger_end="true" no_clipping="true"/>
+			<animation class="fade_animation" start_value="0" end_value="1" duration="0.5" delay="0.1" end_mode="hold_auto_reverse" trigger_id="hidden" trigger_start="false" trigger_end="true"/>
+			<string id="red_replacement" value="fm purple"/>
+			<attachment_group class="horizontal_arrange_vertical_centre"/>
+			<container id="at05" width="2">
+				<attachment_group class="vertical_arrange"/>
+			</container>
+			<widget class="picture" file="icons/26px/sub off" id="sbOF" scale_picture="true" width="26" height="26">
+				<animation class="fade_animation" start_value="0" end_value="1" duration="0.2" delay="0.5" end_mode="hold_auto_reverse" trigger_id="hidden" trigger_value="false"/>
+				<string id="image_alignment" value="centre"/>
+			</widget>
+			<widget class="text" alignment="centre_y,left" id="AcTx" auto_size="all" needs_width="true">
+				<animation class="fade_animation" start_value="0" end_value="1" duration="0.2" delay="0.5" end_mode="hold_auto_reverse" trigger_id="hidden" trigger_value="false"/>
+				<string id="value" value="|b|Yellow Card|/b| -"/>
+				<string id="size" value="9"/>
+				<string id="font" value="title"/>
+				<string id="multiline" value="false"/>
+				<string id="colour" value="white"/>
+			</widget>
+			<widget class="text" auto_size="vertical" width="230" alignment="centre_y,left" id="AcTs">
+				<string id="value" value="4th goal of the season"/>
+				<string id="size" value="8"/>
+				<string id="colour" value="white"/>
+				<string id="multiline" value="true"/>
+				<string id="maximum_width" value="230"/>
+			</widget>
+		</container>
+		<container class="plain_box" id="comC" appearance="boxes/custom/match/tv captions/si tv/caption/footer/paper" height="40">
+			<animation class="translate_animation" start_value="-0.2, 1" end_value="0, 0" duration="0.2" delay="0.8" end_mode="hold_auto_reverse" tween="ease_out_4" coord_mode="relative_to_target" trigger_id="hidden" trigger_start="false" trigger_end="true" no_clipping="true"/>
+			<animation class="fade_animation" start_value="0" end_value="1" duration="0.2" delay="0.8" end_mode="hold_auto_reverse" trigger_id="hidden" trigger_start="false" trigger_end="true"/>
+			<attachment_group class="vertical_arrange" vertical_alignment="middle"/>
+			<string id="red_replacement" value="primary"/>
+			<widget class="object_portrait_picture" id="comP" height="25">
+				<animation class="fade_animation" start_value="0" end_value="1" duration="0.2" delay="0.6" end_mode="hold_auto_reverse" trigger_id="hidden" trigger_value="false"/>
+				<string id="scale_picture" value="true"/>
+				<string id="image_alignment" value="centre"/>
+				<string id="keep_aspect_ratio" value="true"/>
+				<boolean id="clickable" value="false"/>
+			</widget>
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,13 @@
+<panel>
+
+  <boolean id="save_session_state" value="true" />
+  <boolean id="save_default_state" value="true" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <!--in-between highlights summary panel-->
+  <widget class="match_in_between_highlights_panel" id="MVSp" cancel_mouse_hide="true">
+        <record id="object_property" get_property="objt" set_property="objt" />
+  </widget>
+			
+</panel>

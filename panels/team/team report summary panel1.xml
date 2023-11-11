@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<container class="bordered_box">
+				<layout class="arrange_vertical_attachment" layout="-1,1,-1,1,-1,1,-1" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<translation id="title" type="use" value="최고 기량 선수"/>
+				<!--best form-->
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<container class="property_list_viewer_xml_panel" height="105">
+				        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<record id="object_property" index="0" get_property="Tsbf" set_property="objt" should_force_refresh="true" />
+						<widget class="object_portrait_picture" image_alignment="centre" scale_picture="true">
+							<record id="object_property" get_property="plys" set_property="objt" />
+						</widget>
+					</container>
+			    
+				<container>
+				<layout class="arrange_vertical_attachment" layout="30,30,40" offset="60" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<widget class="label" id="TsbL" alignment="centre_x,top,can_scale" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="Tsbf" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+					<widget class="player_stat_text" id="TsbV" size="10" auto_size="vertical" colour="gzk" multiline="true" alignment="centre_x,bottom,can_scale">
+						<flags id="mode" value="show_name" />
+						<record id="object_property">
+							<integer id="get_property" value="Tsbf" />
+						</record>
+					</widget>
+					<widget class="player_stat_text" id="Tsbv" auto_size="vertical" colour="gzc" size="12" alignment="centre_x,bottom,can_scale">
+						<flags id="mode" value="show_value,show_as_form" />
+						<record id="object_property">
+							<integer id="get_property" value="Tsbf" />
+						</record>
+					</widget>
+                </container>
+				</container>
+<widget class="horizontal_divider" />
+				<!--highest rating-->
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<container class="property_list_viewer_xml_panel" height="105">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<record id="object_property" index="0" get_property="Tsar" set_property="objt" should_force_refresh="true" />
+						<widget class="object_portrait_picture" image_alignment="centre" scale_picture="true">
+							<record id="object_property" get_property="plys" set_property="objt" />
+						</widget>
+					</container>
+				
+				<container>
+				<layout class="arrange_vertical_attachment" layout="30,30,40" offset="60" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<widget class="label" id="TsaL" alignment="centre_x,top,can_scale" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="Tsar" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+					<widget class="player_stat_text" id="TsaV" size="10" auto_size="vertical" colour="gzk" alignment="centre_x,bottom,can_scale">
+						<flags id="mode" value="show_name" />
+						<record id="object_property">
+							<integer id="get_property" value="Tsar" />
+						</record>
+					</widget>
+					<widget class="player_stat_text" id="Tsav" auto_size="vertical" colour="gzc" size="12" alignment="centre_x,bottom,can_scale">
+						<flags id="mode" value="show_value,show_as_fraction" />
+						<record id="object_property">
+							<integer id="get_property" value="Tsar" />
+						</record>
+					</widget>
+                 </container>
+				</container>
+<widget class="horizontal_divider" />
+				<!--top goalscorer-->
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<container class="property_list_viewer_xml_panel" height="105">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<record id="object_property" index="0" get_property="Tstg" set_property="objt" should_force_refresh="true" />
+						<widget class="object_portrait_picture" image_alignment="centre" scale_picture="true">
+							<record id="object_property" get_property="plys" set_property="objt" />
+						</widget>
+					</container> 
+
+				<container>
+				<layout class="arrange_vertical_attachment" layout="30,30,40" offset="60" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<widget class="label" id="TstL" alignment="centre_x,top,can_scale" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="Tstg" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+					<widget class="player_stat_text" id="TstV" size="10" auto_size="vertical" colour="gzk" alignment="centre_x,bottom,can_scale">
+						<flags id="mode" value="show_name" />
+						<record id="object_property">
+							<integer id="get_property" value="Tstg" />
+						</record>
+					</widget>
+					<widget class="player_stat_text" id="Tstv" auto_size="vertical" colour="gzc" size="12" alignment="centre_x,bottom,can_scale">
+						<flags id="mode" value="show_value,show_as_number" />
+						<record id="object_property">
+							<integer id="get_property" value="Tstg" />
+						</record>
+					</widget>
+				</container>
+               </container>
+<widget class="horizontal_divider" />
+				<!--top assists-->
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<container class="property_list_viewer_xml_panel" height="105">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<record id="object_property" index="0" get_property="Tsma" set_property="objt" should_force_refresh="true" />
+						<widget class="object_portrait_picture" image_alignment="centre" scale_picture="true">
+							<record id="object_property" get_property="plys" set_property="objt" />
+						</widget>
+					</container> 
+					
+				<container>
+				<layout class="arrange_vertical_attachment" layout="30,30,40" offset="60" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<widget class="label" id="TsmL" alignment="centre_x,top,can_scale" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="Tsma" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+					<widget class="player_stat_text" id="TsmV" size="10" auto_size="vertical" colour="gzk" multiline="true" alignment="centre_x,bottom,can_scale">
+						<flags id="mode" value="show_name" />
+						<record id="object_property">
+							<integer id="get_property" value="Tsma" />
+						</record>
+					</widget>
+					<widget class="player_stat_text" id="Tsmv" auto_size="vertical" colour="gzc" size="12" alignment="centre_x,bottom,can_scale">
+						<flags id="mode" value="show_value,show_as_number" />
+						<record id="object_property">
+							<integer id="get_property" value="Tsma" />
+						</record>
+					</widget>
+				</container>
+                </container>
+			</container>
+
+</panel>

@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<animation class="fade_on_hide_animation" duration="0.1" end_mode="stop"/>
+	<!-- This animation isn't a normal position animation as it gets triggered in code with specfic values-->
+	<animation class="position_animation" tween="ease_in_out" duration="0.2"/>
+
+	<container>
+		<!-- Number 
+    <container class="bordered_box" appearance="boxes/custom/solid/rounded/paper" height="32">
+      <record id="object_property" get_property="ttcl" set_property="rrep" />
+      <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+      <layout class="centre_in_parent_attachment" alignment="vertical" offset="4"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="4" apply_to_children="true"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="8"/>
+
+      <widget class="label" id="bsnm" size="12" alignment="right, centre_y" auto_size="vertical" style="semi_bold">
+        <record id="object_property" get_property="tbcl" set_property="colr" />
+      </widget>
+    </container>-->
+    <widget class="tactics_kit_picture" id="kitp">
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0,0,0,0"/>
+    </widget>
+
+	</container>	
+
+	<container class="bordered_box" appearance="boxes/custom/solid/rounded/paper" red_replacement="black" height="25">
+
+		<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<!-- Name-->
+		<container class="bordered_box" appearance="boxes/custom/scouting/heading/paper" height="13">
+			<record id="object_property" get_property="tbcl" set_property="rrep" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+			<widget class="person_button" format="[%person#1-initial_surname]" size="xsmall" alignment="centre,can_scale" auto_size="horizontal" multiline="false">
+
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="ttcl" />
+							<integer id="set_property" value="colr" />
+						</record>
+						<record>
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="valu" />
+						</record>
+					</list>
+				</record>
+			</widget> 
+		</container>
+
+		<!--debug role/duty-->
+		<container height="10">
+			<layout class="arrange_horizontal_attachment" layout="-5,-3,-4" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<widget class="tactical_role_label" id="role" abbt="true" size="7" colour="white" alignment="right" style="bold" auto_size="horizontal"/>
+
+			<widget class="label" size="7" colour="white" alignment="centre" auto_size="horizontal">
+				<translation id="text" translation_id="233089" type="use" value="-" />
+			</widget>
+			<widget class="tactical_role_label" id="duty" abbt="true" size="7" colour="white" alignment="left" style="bold" auto_size="horizontal"/>
+
+		</container>
+
+	</container>
+
+
+
+</panel>

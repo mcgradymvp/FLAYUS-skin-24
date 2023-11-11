@@ -1,0 +1,274 @@
+﻿<panel>
+	<list id="properties_to_forward">
+		<record get_property="ScMD" target="sctC"/>
+		<record get_property="Ttea" target="sctC"/>
+	</list>
+
+	<boolean id="save_session_state" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="scouting_centre_panel" id="sctC" file="" >
+		<boolean id="is_in_inbox" value="true" />
+		<boolean id="save_session_state" value="true" />
+		<boolean id="should_force_refresh" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+		<container class="main_box" appearance="boxes/custom/inbox attachment/personal/paper">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<container class="inner_box">
+				<attachment_group class="vertical_arrange" vertical_layout="40,-1" vertical_gap="0" vertical_inset="0"/>
+
+				<container id="targ">
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+					<container id="tbar" navigation_container="true">
+
+						<!--@note lachezar.hubanov 29/07/21 
+						this cavalcade of layout attachments is due to an edge case, where we only have
+						an attachment group for widgets embedded in frame that align like this, but not if they are not-->
+
+						<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0"/>
+						<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+						<layout class="stick_to_sides_attachment" alignment="top, left"/>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+						<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0"/>
+
+						<container>
+							<attachment_group class="horizontal_arrange_autosize_all_centre" horizontal_offset="0" horizontal_gap="0"/>
+
+							<widget class="radio_toggle_switch_left" id="crdb" auto_size="all" selected="true" select_event="crdE">
+								<translation id="text" translation_id="466474" type="use" value="Cards[COMMENT: FR 22655, scouting centre button, takes the user to the scouting report cards]" />
+							</widget>
+
+							<widget class="radio_toggle_switch_right" id="lstb" auto_size="all" select_event="lstE" >
+								<translation id="text" translation_id="293613" type="use" value="List" />
+							</widget>
+						</container>
+
+						<container height="40" id="recI">
+							<attachment_group class="horizontal_arrange_autosize" horizontal_offset="4" horizontal_gap="4" vertical_inset="0" />
+
+							<widget class="vertical_divider" width="2" height="22"/>
+
+							<container>
+								<attachment_group class="vertical_arrange_horizontal_autosize" vertical_alignment="middle" horizontal_inset="0" vertical_offset="0" vertical_gap="2" />
+									<widget class="icon_button" auto_size="vertical" width="210" id="rcBY" alignment="left,centre_y" font="title" colour="text" icon_colour="text" appearance=""/>
+					
+									<container height="20" id="recS">
+										<attachment_group class="horizontal_arrange_autosize" horizontal_offset="0" horizontal_gap="2" vertical_inset="0" />
+
+										<widget class="text" auto_size="horizontal" colour="faded text" alignment="left,centre_y" size="small">
+										<translation id="text" translation_id="242854" type="use" value="From" />
+										</widget>
+
+										<widget class="client_object_property_panel" id="senn" auto_size="horizontal">
+										<record id="widget_properties" auto_size="horizontal" alignment="left,centre_y" colour="text" enforce_style="true" size="small"/>
+										</widget>
+									</container>	
+
+										<container>
+											<attachment_group class="horizontal_arrange_autosize" horizontal_offset="0" horizontal_gap="2" vertical_inset="0" />
+
+											<widget class="text" auto_size="horizontal" colour="text" alignment="left,centre_y" size="small">
+											<string id="text" value="-"/>
+											</widget>
+								
+											<widget class="client_object_property_panel" id="senj" property="PcJj" size="small" auto_size="horizontal">
+											<record id="widget_properties" colour="text" alignment="left,centre_y" auto_size="horizontal" />
+											</widget>
+
+											<widget class="client_object_property_panel" id="senh" property="THic" height="20" size="small" auto_size="horizontal">
+											<record id="widget_properties" colour="text" alignment="left,centre_y" show_category_colour="false" size="small" auto_size="horizontal" />
+											</widget>
+										</container>
+							</container>
+						</container>
+					</container>
+
+					<container navigation_container="true">
+						<attachment_group class="title_embedded_panel_right">
+							<global id="horizontal_gap" name="ui.button_row_gap" />
+						</attachment_group>
+
+						<layout class="stick_to_sides_attachment" alignment="top, left"/>
+						<attachment_group class="horizontal_arrange_autosize_all_centre" horizontal_offset="0" horizontal_gap="5"/>
+
+						<widget class="subtle_popup_button" id="filt" auto_size="vertical" width="200" embed_in_frame="true" select_event="fils" fixed="true" auto_tick_exclusive="true">
+							<translation id="text" translation_id="229912" type="use" value="Filter" />
+						</widget>
+					</container>
+				</container>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<widget class="scouting_centre_inbox_panel" id="scic" is_in_inbox="true">
+						<boolean id="save_session_state" value="true" />
+					</widget>
+
+					<container id="lisC" hidden="true">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<container id="lvni" hidden="true">
+							<attachment_group class="vertical_arrange" vertical_alignment="middle" horizontal_inset="0" vertical_offset="0" vertical_gap="0" />
+
+							<widget class="text" auto_size="vertical" alignment="centre" style="semi_bold" size="large">
+								<translation id="text" translation_id="443663" type="use" value="No recommendations[COMMENT: FR 21760, no recommendations are made by the scouting team]" />
+							</widget>
+							<widget class="manager_text" colour="faded text" auto_size="vertical" alignment="centre">
+								<translation id="text" translation_id="450793" type="use" value="[%person#1-Your] scouting team is working hard to bring [%person#1-you] more recommendations of this type soon.[COMMENT: FR 21760, 'status pending' sort of string indicating that the scouting team are at work]" />
+							</widget>
+
+						</container>
+
+						<container id="lvip">
+							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="0" vertical_offset="4" vertical_gap="0" />
+
+							<container>
+								<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" />
+
+								<widget class="text" id="remt" auto_size="all" alignment="left,centre_y" font="title" colour="accent">
+									<translation id="text" translation_id="247116" type="use" value="Select All" />
+								</widget>
+
+								<container>
+									<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right" horizontal_offset="0">
+										<global id="horizontal_gap" name="ui.button_row_gap"/>
+									</attachment_group>
+
+									<widget class="button" auto_size="all" click_event="sela">
+										<translation id="text" translation_id="247116" type="use" value="Select All" />
+									</widget>
+									<widget class="button" auto_size="all" click_event="Clea">
+										<translation id="text" translation_id="451325" type="use" value="Clear All[COMMENT: button text to clear all previously given touchline shouts]" />
+									</widget>
+								</container>
+							</container>
+
+							<container>
+								<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" horizontal_inset="0" vertical_offset="0" vertical_gap="0" />
+
+								<widget class="client_object_list_table" id="scet" mode="fill_rows, stripe_rows, printable, show_bullets, select_rows, select_multiple" default_sort_column="Psrk" select_event="epsl" fixed_size_rows="true" auto_size_rows="false" fixed_row_height="29">
+
+									<list id="views">
+										<record id="ovvw">
+											<record id="view_table_properties">
+												<integer id="row_height" value="60" />
+											</record>
+											<translation id="name" translation_id="247414" type="use" value="Overview" />
+											<record id="view">
+												<record id="PSpi" auto_hide_priority="4" />
+												<!-- player status/info -->
+												<record id="PNaC" auto_hide_priority="1" minimum_width="110" />
+												<!-- player name/club -->
+												<record id="PpsP" auto_hide_priority="2" width="100" />
+												<!-- person position-->
+												<record id="Pcab" auto_hide_priority="7" />
+												<!-- CA stars -->
+												<record id="Ppab" auto_hide_priority="8" />
+												<!-- PA Stars -->
+												<record id="Pmxa" auto_hide_priority="2" />
+												<!-- max asking price -->
+												<record id="Pdva" auto_hide_priority="9" />
+												<!-- value -->
+												<record id="Pmxd" auto_hide_priority="10" />
+												<!-- max wage -->
+												<record id="Pcww" auto_hide_priority="11" />
+												<!-- weekly wage -->
+												<record id="PSag" auto_hide_priority="3" width="25" />
+												<!-- person age -->
+												<record id="PNat" auto_hide_priority="13" />
+												<!-- person nationality -->
+												<record id="PSCc" auto_hide_priority="2" minimum_width="100" />
+												<!-- category-->
+												<record id="PsRK" auto_hide_priority="2" width="70" />
+												<!-- recommended -->
+
+											</record>
+
+										</record>
+										<translation id="name" translation_id="247414" type="use" value="Overview" />
+										<record id="view">
+											<record id="PSpi" auto_hide_priority="4" />
+											<!-- player status/info -->
+											<record id="PNaC" auto_hide_priority="1" minimum_width="110" />
+											<!-- player name/club -->
+											<record id="PpsP" auto_hide_priority="2" width="100" />
+											<!-- person position-->
+											<record id="Pcab" auto_hide_priority="7" />
+											<!-- CA stars -->
+											<record id="Ppab" auto_hide_priority="8" />
+											<!-- PA Stars -->
+											<record id="Pmxa" auto_hide_priority="2" />
+											<!-- max asking price -->
+											<record id="Pdva" auto_hide_priority="9" />
+											<!-- value -->
+											<record id="Pmxd" auto_hide_priority="10" />
+											<!-- max wage -->
+											<record id="Pcww" auto_hide_priority="11" />
+											<!-- weekly wage -->
+											<record id="PSag" auto_hide_priority="3" width="25" />
+											<!-- person age -->
+											<record id="PNat" auto_hide_priority="13" />
+											<!-- person nationality -->
+											<record id="PSCc" auto_hide_priority="2" minimum_width="100" />
+											<!-- category-->
+											<record id="PsRK" auto_hide_priority="2" width="70" />
+											<!-- recommended -->
+										</record>
+										<translation id="name" translation_id="247414" type="use" value="Overview" />
+										<record id="view">
+											<record id="PSpi" auto_hide_priority="4" />
+											<!-- player status/info -->
+											<record id="PNaC" auto_hide_priority="1" minimum_width="110" />
+											<!-- player name/club -->
+											<record id="PpsP" auto_hide_priority="2" width="100" />
+											<!-- person position-->
+											<record id="Pcab" auto_hide_priority="7" />
+											<!-- CA stars -->
+											<record id="Ppab" auto_hide_priority="8" />
+											<!-- PA Stars -->
+											<record id="Pdva" auto_hide_priority="9" />
+											<!-- value -->
+											<record id="Pmxd" auto_hide_priority="10" />
+											<!-- max wage -->
+											<record id="Pcww" auto_hide_priority="11" />
+											<!-- weekly wage -->
+											<record id="PSag" auto_hide_priority="3" width="25" />
+											<!-- person age -->
+											<record id="PNat" auto_hide_priority="13" />
+											<!-- person nationality -->
+											<record id="PSCc" auto_hide_priority="2" minimum_width="100" />
+											<!-- category-->
+											<record id="PsRK" auto_hide_priority="2" width="70" />
+											<!-- recommended -->
+										</record>
+									</list>
+
+								</widget>
+
+
+
+								<widget class="spacer" height="4" />
+
+								<widget class="horizontal_divider" height="1" />
+
+								<widget class="spacer" height="8" />
+
+								<widget class="player_scouting_centre_actions_panel" id="lsac">
+									<boolean id="save_immediate_state" value="true" />
+
+								</widget>
+							</container>
+
+
+						</container>
+
+
+					</container>
+				</container>
+
+			</container>
+		</container>
+	</container>
+</panel>

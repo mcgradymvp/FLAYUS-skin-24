@@ -1,0 +1,46 @@
+<panel>
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="5" apply_to_children="true" />
+  	<!--team logos-->
+	<container>
+		<layout class="arrange_vertical_attachment" layout="50,250" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			<container>
+		<layout class="arrange_horizontal_attachment" layout="-1,50,-1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+		<!--logo-->
+		<widget class="match_team_logo_picture" id="hoLo" team_index="0" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="40">
+
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+     <widget class="label" alignment="centre_x, centre_y" style="semi_bold" size="28" id="vlbl">
+        <translation id="text" translation_id="242324" type="use" value="v[versus]" />
+      </widget>
+
+		<!--logo-->
+		<widget class="match_team_logo_picture" id="awLo" team_index="1" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="40">
+
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+
+	</container>
+			  <widget class="focus_of_attacks_pitch" id="fcat" vertical="false" fixed="true" auto_tick_exclusive="true" font_colour="white" alignment="centre" pitch_draw_grass="false" line_width="1" pitch_line_colour="text" pitch_touchline_width_percentage="5">
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+  </widget>
+  	</container>
+
+  				<!--momentum map-->
+		<widget class="match_live_data_analyst_visualisation_panel" id="afMM" visualisation_type="momentum">
+			<translation id="title" translation_id="535500" type="use" value="Match Momentum[COMMENT: AREA: Data Visualisation; SUB-AREA: Pass map FR: 32708; TONE: Formal; CHARLIMIT: None; NOTE: dataviz title string, the match momentum data viz charts how the match went with regards to each team enjoying spells on top/chances created]" />
+						<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+		</widget>
+</panel>

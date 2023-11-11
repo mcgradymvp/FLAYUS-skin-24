@@ -1,0 +1,86 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0">
+		<global id="vertical_gap" name="ui.main_box_gap" />
+	</attachment_group>
+
+	<list id="properties_to_forward">
+		<record get_property="KeyF" target="keyf" set_property="KeyF" />
+		<record get_property="LxGS" target="keyf" set_property="LxGS" />
+		<record get_property="STex" set_property="text" target="FrTx" />
+	</list>
+
+	<container class="title_link_box" id="opin" force_title_borders="true" hide_view_menu="true" height="140">
+		<translation id="link_title" translation_id="539015" type="use" value="Pre-Match Opposition Report[COMMENT: AREA: Inbox; SUB-AREA: opposition report; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE:  title for pre match opposition report inbox item]" />
+		<string id="section" value="Tpor" />
+
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top, extend">
+				<global id="vertical_gap" name="ui.main_box_gap" />
+			</attachment_group>
+
+
+			<!-- logos -->
+			<container height="55">
+				<attachment_group class="horizontal_arrange" horizontal_layout="-1,35, 40,35,-1" horizontal_gap="8" vertical_inset="0" />
+
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+					<widget class="client_object_label" id="hmnm" height="25" size="large" style="bold" colour="text" alignment="right,bottom" navigation_focus_target="true" />
+
+					<container class="client_object_viewer_xml_panel" id="hmrc">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="text" alignment="right" colour="faded text">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="subl" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+						</widget>
+					</container>
+				</container>
+
+				<widget class="object_portrait_picture" id="hmpc" scale_picture="true" image_alignment="centre" />
+
+				<widget class="text" alignment="centre" colour="text" font="title" size="15">
+					<translation id="text" translation_id="242324" type="use" value="v[versus]" />
+				</widget>
+
+				<widget class="object_portrait_picture" id="awpc" scale_picture="true" image_alignment="centre" />
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+					<widget class="client_object_label" id="awnm" height="25" spec="large" style="bold" colour="text" alignment="left,bottom" navigation_focus_target="true" />
+
+					<container class="client_object_viewer_xml_panel" id="awrc">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="text" alignment="left" colour="faded text">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="subl" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+						</widget>
+					</container>
+				</container>
+			</container>
+
+			<widget class="text" size="large" multiline="true" id="FrTx" alignment="centre" />
+		</container>
+	</container>
+
+	<widget class="horizontal_divider" />
+
+	<widget class="data_analyst_key_findings_widget" show_team_name="true" file="widgets/data analyst key findings widget autosize" can_update_with_no_objects="true" id="keyf" />
+
+</panel>

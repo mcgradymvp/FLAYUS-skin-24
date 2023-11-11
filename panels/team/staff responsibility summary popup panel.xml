@@ -1,0 +1,63 @@
+﻿<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at00"/>
+		<record entity_layout_id="at01"/>
+		<record entity_layout_id="at05"/>
+		<record entity_layout_id="at03"/>
+		<record entity_layout_id="at06"/>
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+	</widget>
+	<container class="standard_popup_box" entity_layout_id="at00" id="at00">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+		</widget>
+		<container entity_layout_id="at01" id="at01" height="30" name="link title container">
+			<layout class="stick_to_object_attachment" id="align_top" offset="0" get_side="top" set_side="top" move_side="true" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" offset="0" get_side="left" set_side="left" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_right" offset="0" get_side="right" set_side="right" target="main"/>
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true"/>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true"/>
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+			</widget>
+			<widget class="text" entity_layout_id="at03" id="Ltit" alignment="left,centre_y" width="400" height="30" font="title" colour="title">
+				<layout class="stick_to_object_attachment" id="align_top" offset="0" get_side="top" set_side="top" move_side="true" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_left" offset="0" get_side="left" set_side="left" move_side="true" target="main"/>
+			</widget>
+			<widget class="subtle_popup_button" entity_layout_id="at06" id="sAll" auto_size="all" needs_width="true" needs_height="true" name="set all button">
+				<string id="select_event" value="esgr"/>
+				<translation id="text" translation_id="376571" type="use" value="Set All[COMMENT: FR 8157; Player availability news item; text for button for changing all player's availabilities at once]"/>
+				<layout class="stick_to_object_attachment" id="align_top" offset="0" get_side="top" set_side="top" move_side="true" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" move_side="true" target="main"/>
+			</widget>
+		</container>
+		<container class="table" entity_layout_id="at05" id="resl" layout="-1" mode="fill_rows" name="table of resp">
+			<string id="auto_size_rows" value="false"/>
+			<string id="fixed_size_rows" value="true"/>
+			<integer id="row_height" value="75"/>
+			<layout class="stick_to_object_attachment" id="align_top" offset="8" get_side="bottom" set_side="top" target="at01"/>
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="0" get_side="bottom" set_side="bottom" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" offset="0" get_side="left" set_side="left" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_right" offset="0" get_side="right" set_side="right" target="main"/>
+		</container>
+	</container>
+</panel>

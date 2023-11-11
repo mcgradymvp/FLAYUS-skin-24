@@ -1,0 +1,647 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="vertical_adaptive_container" inset="0" offset="0">
+
+		<container class="subsection_box" height="110" priority="1">
+			<layout class="arrange_horizontal_attachment" layout="35,-1, -1, -1, -1" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<container embed_in_frame="true">
+				<layout class="stick_to_sides_attachment" alignment="all" embed_in_frame="true" inset="0" />
+
+				<widget class="link_button_title" section="tciG" embed_in_frame="true" spec="title">
+					<layout class="stick_to_sides_attachment" alignment="left,top" embed_in_frame="true" inset="12" />
+					<translation id="text" translation_id="319445" type="use" value="Club Details[COMMENT: heading for general club details on the club overview panel]" />
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+			</container>
+
+			<widget class="object_portrait_picture" id="badg" scale_picture="true" image_alignment="centre">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="team_button" style="bold" auto_size="vertical" icon_enabled="false">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</widget>
+
+				<widget class="label" font="title" colour="faded text" auto_size="vertical">
+					<translation id="text" translation_id="247212" type="use" value="Last Season" />
+				</widget>
+
+				<widget class="label" id="prvS" auto_size="vertical" />
+
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="text" font="label" auto_size="vertical">
+					<translation id="text" translation_id="227963" type="use" value="Reputation" />
+				</widget>
+
+				<widget class="client_object_property_panel" property="Trst" size="small" alignment="left,centre_y" height="20">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="text" font="label" auto_size="vertical">
+					<translation id="text" translation_id="316566" type="use" value="Finances[COMMENT: Link to club finances]" />
+				</widget>
+
+				<widget class="client_object_property_panel" property="Csfs" font="value" alignment="left,top" >
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+					<record id="widget_properties">
+						<flags id="auto_size" value="vertical" />
+					</record>
+				</widget>
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="text" font="label" auto_size="vertical">
+					<translation id="text" translation_id="420582" type="use" value="Continental Competition[COMMENT: competition team preview panel, indicates if a team will be playing in a named continental competition for the upcoming season]" />
+				</widget>
+
+				<widget class="client_object_property_panel" property="Ccon" font="value" alignment="left,top" icon_enabled="false">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+					<record id="widget_properties">
+						<flags id="auto_size" value="vertical" />
+					</record>
+				</widget>
+			</container>
+
+		</container>
+
+		<container height="110" priority="2">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<container class="subsection_box" id="mnIf">
+				<layout class="arrange_horizontal_attachment" layout="60,-1, -1, -1, -1" offset="4" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<container embed_in_frame="true">
+					<layout class="stick_to_sides_attachment" alignment="all" embed_in_frame="true" inset="0" />
+
+					<widget class="link_button_title" id="mnGr" section="Pnpl" embed_in_frame="true">
+						<layout class="stick_to_sides_attachment" alignment="top" embed_in_frame="true" inset="2" />
+						<layout class="stick_to_sides_attachment" alignment="left" embed_in_frame="true" inset="6" />
+						<translation id="text" translation_id="433440" type="use" value="Manager[%person#1-hidden][COMMENT: competition team preview label displaying a team's manager]" />
+						<record id="object_property">
+							<integer id="get_property" value="TMnR" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+
+				</container>
+
+				<widget class="object_portrait_picture" id="manG" scale_picture="true" image_alignment="centre">
+					<record id="object_property">
+						<integer id="get_property" value="TMnR" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="client_object_property_panel" property="dref" size="normal" style="bold" alignment="left,bottom" height="25">
+						<record id="object_property">
+							<integer id="get_property" value="TMnR" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+
+					<widget class="client_object_property_panel" property="PSag" size="small" alignment="left" colour="faded text" height="20">
+						<record id="object_property">
+							<integer id="get_property" value="TMnR" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+
+					<widget class="client_object_property_panel" property="Pnat" size="small" alignment="left" icon_enabled="false" colour="faded text" height="20">
+						<record id="object_property">
+							<integer id="get_property" value="TMnR" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="text" alignment="left,bottom" font="label" height="20">
+						<translation id="text" translation_id="227963" type="use" value="Reputation" />
+					</widget>
+
+					<widget class="client_object_property_panel" property="NrSr" alignment="left,centre_y" height="17">
+						<record id="object_property">
+							<integer id="get_property" value="TMnR" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+
+					<widget class="client_object_property_panel" property="Pcqu" size="small" colour="faded text" height="20">
+						<record id="object_property">
+							<integer id="get_property" value="TMnR" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="client_object_label" font="label" alignment="left,bottom" height="20">
+						<translation id="format" translation_id="420583" type="use" value="Manager Tenure[%person#1-hidden][COMMENT: competition team preview panel, label for how long the manager has been in their post, -hidden variable is there to use for female versions of the string if necessary]" />
+						<record id="object_property">
+							<integer id="get_property" value="TMnR"/>
+						</record>
+					</widget>
+
+					<widget class="client_object_property_panel" property="Nctc" alignment="left,top" height="24" font="value">
+						<record id="object_property">
+							<integer id="get_property" value="TMnR" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+					<container height="15"/>
+				</container>
+
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="text" alignment="left,bottom" font="label" height="20">
+						<translation id="text" translation_id="247713" type="use" value="Personality" />
+					</widget>
+
+					<widget class="client_object_property_panel" property="PPst" alignment="left,top" height="24" font="value">
+						<record id="object_property">
+							<integer id="get_property" value="TMnR" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+					<container height="15"/>
+				</container>
+
+			</container>
+
+			<container class="subsection_box" id="nMin" hidden="true" >
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<widget class="text" alignment="centre" size="xlarge">
+          <translation id="text" translation_id="298047" type="use" value="No manager." />
+				</widget>
+			</container>
+		</container>
+
+		<container height="270"  priority="1">
+			<layout class="arrange_horizontal_attachment" layout="-2,-1" offset="0"  />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<container class="bordered_box">
+				<layout class="arrange_horizontal_attachment" layout="160,-1" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<container id="tINf">
+						<layout class="arrange_vertical_attachment" layout="20,-1,-1,-1,-1,-1" offset="0"  />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<container class="plain_box">
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+							<widget class="label" spec="text" size="small" alignment="left,centre_y" auto_size="horizontal" font="title" colour="white">
+								<layout class="stick_to_sides_attachment" alignment="left" inset="6" />
+								<translation id="text" translation_id="230056" type="use" value="Tactics" />
+							</widget>
+						</container>
+
+						<container class="plain_box">
+							<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+							<widget class="label" alignment="left,centre_y" auto_size="horizontal" colour="faded white">
+								<layout class="stick_to_sides_attachment" alignment="left" inset="6" />
+								<translation id="text" translation_id="229988" type="use" value="Preferred Formation" />
+							</widget>
+
+							<widget class="client_object_property_panel" property="Nppf" colour="white">
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="6" />
+								<record id="object_property">
+									<integer id="get_property" value="TMnR" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</widget>
+						</container>
+
+						<container class="plain_box">
+							<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+							<widget class="label" alignment="left,centre_y" auto_size="horizontal" colour="faded white">
+								<layout class="stick_to_sides_attachment" alignment="left" inset="6" />
+								<translation id="text" translation_id="242530" type="use" value="Playing Style" />
+							</widget>
+
+							<widget class="client_object_property_panel" property="npps" colour="white">
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="6" />
+								<record id="object_property">
+									<integer id="get_property" value="TMnR" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</widget>
+						</container>
+
+						<container class="plain_box">
+							<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+							<widget class="label" alignment="left,centre_y" auto_size="horizontal" colour="faded white">
+								<layout class="stick_to_sides_attachment" alignment="left" inset="6" />
+								<translation id="text" translation_id="242539" type="use" value="Playing Mentality" />
+							</widget>
+
+							<widget class="client_object_property_panel" property="nppm" colour="white">
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="6" />
+								<record id="object_property">
+									<integer id="get_property" value="TMnR" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</widget>
+						</container>
+
+						<container class="plain_box">
+							<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+							<widget class="label" alignment="left,centre_y" auto_size="horizontal" colour="faded white">
+								<layout class="stick_to_sides_attachment" alignment="left" inset="6" />
+								<translation id="text" translation_id="242534" type="use" value="Pressing Style" />
+							</widget>
+
+							<widget class="client_object_property_panel" property="nppp" colour="white">
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="6" />
+								<record id="object_property">
+									<integer id="get_property" value="TMnR" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</widget>
+						</container>
+
+						<container class="plain_box">
+							<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+							<widget class="label" alignment="left,centre_y" auto_size="horizontal" colour="faded white">
+								<layout class="stick_to_sides_attachment" alignment="left" inset="6" />
+								<translation id="text" translation_id="242547" type="use" value="Marking Style" />
+							</widget>
+
+							<widget class="client_object_property_panel" property="npmm" colour="white">
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="6" />
+								<record id="object_property">
+									<integer id="get_property" value="TMnR" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</widget>
+						</container>
+
+					</container>
+
+					<container hidden="true" id="PiCN">
+						<translation id="title" translation_id="420578" type="use" value="Highlighted Star Player[COMMENT: competition season preview panel, focus panel on a star player from any given team]" />
+						<layout class="arrange_vertical_attachment" alignment="middle" offset="10" gap="10" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<container class="client_object_viewer_xml_panel" id="pliN" file="widgets/player vertical info panel" />
+
+						<widget class="horizontal_divider" />
+
+						<container class="client_object_viewer_xml_panel" id="plvi">
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="value_label" auto_size="vertical" style="semi_bold" size="large" alignment="centre">
+								<translation id="format" translation_id="383826" type="use" value="Valued at [%cash#1-roundsmall-short][COMMENT: FR 10661; player overview; string diaplyed a player's estimated monetary value]" />
+								<record id="object_property" get_property="Pdva" dont_set_hint="true" />
+							</widget>
+						</container>
+
+						<widget class="spacer" />
+					</container>
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="20,-1" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+						<layout class="stick_to_sides_attachment" alignment="right" inset="0" apply_to_children="true" />
+
+						<widget class="label" spec="text" size="small" alignment="centre" auto_size="horizontal" font="title" colour="white">
+							<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+							<translation id="text" translation_id="420584" type="use" value="Projected Line-Up[COMMENT: competition team preview panel, a projected starting eleven for the team in question]" />
+						</widget>
+					</container>
+
+					<widget class="pitch_with_tactics" id="prLu" icon_flags="show_selection_image,dont_allow_player_links,show_name" pitch_draw_markings="false" wants_mouse_events="true"
+	                    pitch_additional_touchline_pixels_left="2"
+	                    pitch_additional_touchline_pixels_bottom="0"
+	                    pitch_draw_grass="false"
+	                    pitch_perspective="0.10"
+	                    pitch_length_percentage="100"
+						pitch_alignment="centre,can_scale"
+	                    allow_y_score_adjustment_for_roles="false"
+	                    player_icon_file="widgets/player tactic icon match rating2"
+/>
+				</container>
+
+			</container>
+
+			<container class="subsection_box">
+				<translation id="title" translation_id="420585" type="use" value="Squad Analysis[COMMENT: competition season preview panel, a squad analysis section, breakdown of players by position etc]" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<container class="scrolling_box">
+					<container class="client_object_viewer_xml_panel">
+						<record id="object_property">
+							<integer id="get_property" value="Tftm" />
+							<integer id="set_property" value="objt" />
+						</record>
+						<!--"50,1,50,1,30,1,30"-->
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<container class="client_object_viewer_xml_panel">
+							<record id="object_property">
+								<integer id="get_property" value="Tcrf" />
+								<integer id="set_property" value="objt" />
+							</record>
+							<layout class="fit_children_attachment" alignment="vertical" offset="2" />
+							<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="top" inset="2" apply_to_children="true" />
+
+							<container>
+								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+								<widget class="label" alignment="left,top" font="label" auto_size="vertical">
+									<translation id="text" translation_id="227396" type="use" value="Key Player" />
+								</widget>
+
+								<widget class="person_button" auto_size="vertical">
+									<record id="object_property" get_property="TKpL" />
+								</widget>
+
+								<container class="client_object_viewer_xml_panel">
+									<record id="object_property">
+										<integer id="get_property" value="TKpL" />
+										<integer id="set_property" value="objt" />
+									</record>
+									<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+									<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+									<widget class="nation_button" icon_enabled="false" size="small" colour="faded text" auto_size="vertical">
+										<record id="object_property" get_property="Pnat" />
+									</widget>
+								</container>
+							</container>
+
+							<widget class="object_portrait_picture" id="kyPp" width="40" height="50" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x,bottom">
+								<record id="object_property">
+									<integer id="get_property" value="TKpL" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</widget>
+						</container>
+
+						<widget class="horizontal_divider" />
+
+						<container class="client_object_viewer_xml_panel">
+							<record id="object_property">
+								<integer id="get_property" value="Tcrf" />
+								<integer id="set_property" value="objt" />
+							</record>
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+							<container>
+								<layout class="fit_children_attachment" alignment="vertical" offset="2" />
+								<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="0" />
+								<layout class="stick_to_sides_attachment" alignment="top" inset="2" apply_to_children="true" />
+
+								<container>
+									<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+									<widget class="label" alignment="left,top" font="label" auto_size="vertical">
+										<translation id="text" translation_id="227404" type="use" value="Hot Prospect" />
+									</widget>
+
+									<widget class="person_button" auto_size="vertical">
+										<record id="object_property" get_property="CtPR" />
+									</widget>
+
+									<container class="client_object_viewer_xml_panel">
+										<record id="object_property">
+											<integer id="get_property" value="CtPR" />
+											<integer id="set_property" value="objt" />
+										</record>
+										<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+										<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+										<widget class="nation_button" icon_enabled="false" size="small" colour="faded text" auto_size="vertical">
+											<record id="object_property" get_property="Pnat" />
+										</widget>
+									</container>
+								</container>
+
+								<widget class="object_portrait_picture" id="hPpc" width="40" height="50" keep_aspect_ratio="true" scale_picture="true" image_alignment="bottom">
+									<record id="object_property">
+										<integer id="get_property" value="CtPR" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</widget>
+							</container>
+						</container>
+
+						<widget class="horizontal_divider" />
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<widget class="label" alignment="left,top" font="label" auto_size="vertical">
+								<translation id="text" translation_id="420586" type="use" value="Squad Average Age[COMMENT: competition team preview panel, displays the average age of the squad]" />
+							</widget>
+
+							<widget class="client_object_property_panel" property="Cvag" auto_size="vertical">
+								<record id="object_property">
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+
+								<record id="widget_properties">
+									<flags id="auto_size" value="vertical" />
+								</record>
+
+							</widget>
+						</container>
+
+						<widget class="horizontal_divider" />
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<widget class="label" alignment="left,top" font="label" auto_size="vertical">
+								<translation id="text" translation_id="319583" type="use" value="Squad Personality[COMMENT: club properties; club's squad's overall personality]" />
+							</widget>
+
+							<widget class="client_object_property_panel" property="Csca">
+								<record id="object_property">
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+								<record id="widget_properties">
+									<flags id="auto_size" value="vertical" />
+								</record>
+							</widget>
+						</container>
+					</container>
+				</container>
+			</container>
+		</container>
+
+		<container default_height="-1" minimum_height="230" priority="1">
+			<layout class="arrange_horizontal_attachment" layout="200,-1" offset="0"  />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="fill" offset="0"  />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<container class="subsection_box">
+					<translation id="title" translation_id="420587" type="use" value="Transfer Spending[COMMENT: competition team preview panel, displays details of a club's transfer expenditure]" />
+
+					<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="2" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="2" apply_to_children="true" />
+
+						<widget class="picture" scale_picture="true" file="icons/16px/sub on" width="16" image_alignment="centre" />
+						<widget class="number_label" alignment="left,centre_y" auto_size="horizontal">
+							<record id="object_property">
+								<integer id="get_property" value="pTic" />
+								<integer id="set_property" value="valu" />
+							</record>
+						</widget>
+						<widget class="label" alignment="left,centre_y" auto_size="horizontal">
+							<translation id="text" translation_id="420572" type="use" value="Players In[COMMENT: competition preview panel, transfers section showing arrivals to a league or team]" />
+						</widget>
+					</container>
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="2" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="2" apply_to_children="true" />
+
+						<widget class="picture" scale_picture="true" file="icons/16px/sub off" width="16" image_alignment="centre" />
+						<widget class="number_label" alignment="left,centre_y" auto_size="horizontal">
+							<record id="object_property">
+								<integer id="get_property" value="pToc" />
+								<integer id="set_property" value="valu" />
+							</record>
+						</widget>
+						<widget class="label" alignment="left,centre_y" auto_size="horizontal">
+							<translation id="text" translation_id="420573" type="use" value="Players Out[COMMENT: competition preview panel, transfers section showing departures from a league or team]" />
+						</widget>
+					</container>
+				</container>
+
+				<container class="subsection_box">
+					<translation id="title" translation_id="316862" type="use" value="Net Transfer Spend[COMMENT: team stat title for the amount of money a team has spent during this season]" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<container class="client_object_viewer_xml_panel">
+						<record id="object_property">
+							<integer id="get_property" value="Tcrf" />
+							<integer id="set_property" value="objt" />
+						</record>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="cash_cell" alignment="left,centre_y" font="value" format="[%cash#1-short-roundtiny]">
+							<record id="object_property">
+								<integer id="get_property" value="PNTs" />
+								<integer id="set_property" value="valu" />
+							</record>
+						</widget>
+					</container>
+				</container>
+
+				<container class="subsection_box">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<translation id="title" translation_id="316861" type="use" value="Salary Per Annum[COMMENT: team stat title for the team's total salary bill per year]" />
+
+					<container class="client_object_viewer_xml_panel">
+						<record id="object_property">
+							<integer id="get_property" value="Tcrf" />
+							<integer id="set_property" value="objt" />
+						</record>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="cash_cell" alignment="left,centre_y" font="value" format="[%cash#1-short-roundtiny]">
+							<record id="object_property">
+								<integer id="get_property" value="ClPa" />
+								<integer id="set_property" value="valu" />
+							</record>
+						</widget>
+					</container>
+				</container>
+			</container>
+
+			<container class="transfer_panel_club" file="club/club transfer in out tables panel">
+				<record id="object_property">
+					<integer id="get_property" value="Tcrf" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</container>
+		</container>
+	</container>
+</panel>

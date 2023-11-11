@@ -1,0 +1,19 @@
+﻿<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at00"/>
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+	</widget>
+	<container class="team_recent_matches_analysis_panel" entity_layout_id="at00" id="rmaW" name="recent matches">
+		<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main"/>
+		<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main"/>
+		<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main"/>
+	</container>
+</panel>

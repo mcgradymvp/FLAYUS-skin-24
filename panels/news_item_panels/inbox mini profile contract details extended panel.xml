@@ -1,0 +1,88 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="8" />
+
+	<string id="skin_style" value="subtle box" />
+
+	<container id="vali">
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="10" horizontal_inset="8" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_inset="0" />
+
+			<!--Wage labels-->
+			<container class="vertical_label_value_pair" label_widget="labl" value_widget="wagw">
+
+				<widget class="label" alignment="left" id="labl">
+					<translation id="text" translation_id="227799" type="use" value="Wage" />
+				</widget>
+
+				<widget class="label" id="wagw" alignment="left" size="normal" />
+			</container>
+
+			<!--Duration labels-->
+			<container class="vertical_label_value_pair" label_widget="labl" value_widget="cond">
+
+				<widget class="label" alignment="left" id="labl">
+					<translation id="text" translation_id="230113" type="use" value="Duration" />
+				</widget>
+
+				<widget class="label" id="cond" alignment="left" size="normal" />
+			</container>
+
+			<!-- Agreed playing time labels-->
+			<container class="vertical_label_value_pair" label_widget="labl" value_widget="fesq">
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="2" horizontal_alignment="horizontal" />
+
+				<widget class="label" id="labl" alignment="left">
+					<translation id="text" translation_id="492002" type="use" value="Agreed Playing Time[COMMENT: AREA: Player Happiness; SUB-AREA: Contract Promises; FR-BN: 14013; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: contract promise type]" />
+				</widget>
+
+				<widget class="playing_time_label" id="fesq" alignment="left" size="normal" />
+			</container>
+		</container>
+
+		<container class="transfer_offer_additional_fees_panel" id="fees" file="">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="table" layout="-4, -1, -1" id="adft" sort_disabled="true" mode="fill_rows, stripe_rows, printable" auto_size="vertical" fixed_size_rows="true" row_height="24">
+				<list id="column_widget_properties">
+					<record index="0" alignment="left, centre_y" multiline="false" />
+					<record index="1" alignment="left, centre_y" />
+					<record index="2" alignment="left, centre_y" />
+				</list>
+
+				<list id="headings">
+					<record column_span="3">
+						<translation id="text" translation_id="380141" type="use" value="Bonuses and Clauses[COMMENT: title for help bubble; describing bonuses and clauses in a contract]" />
+					</record>
+				</list>
+			</widget>
+		</container>
+
+		<!--Future Playing Time-->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" />
+
+			<widget class="text" alignment="left, centre_y" auto_size="vertical" font="label" size="small" colour="faded text">
+				<translation id="text" translation_id="492004" type="use" value="Future Playing Time[COMMENT: AREA: Playing Time; SUB-AREA: Playing Time Pathways; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: displays the agreed playing time for the player in years to come]" />
+			</widget>
+
+			<container class="simple_data_list" id="Fptl" set_property="objt">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="2" />
+
+				<record id="widget_properties" class="property_list_viewer_xml_panel" file="widgets/player future playing time" />
+			</container>
+
+			<widget class="text" id="Fptn" auto_size="vertical">
+				<translation id="text" translation_id="227487" type="use" value="None" />
+			</widget>
+
+			<container class="spacer">
+            </container>
+
+            <widget class="horizontal_divider"/>
+		</container>
+	</container>
+
+	<container id="inva" class="inner_subtle_box" hidden="true" height="40" />
+</panel>

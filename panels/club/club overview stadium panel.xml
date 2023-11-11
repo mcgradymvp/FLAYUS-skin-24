@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<!--stadium picture-->	  
+	<widget class="stadium_picture" id="STAp" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+		</record>
+	</widget>
+		
+		<container>
+			<layout class="arrange_vertical_attachment" layout="1,22,-1,40,2" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container/>
+			
+			<container class="bordered_box" appearance="boxes/custom/hierarchy/header/paper" red_replacement="primary">
+				<layout class="arrange_horizontal_attachment" alignment="middle" gap="15" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--name-->
+				<widget class="client_object_label" spec="text,large,bold" colour="secondary" id="namV" size="12" alignment="centre" auto_size="horizontal">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+					</record>
+				</widget>
+				<!--town-->
+				<widget class="city_label" id="namL" spec="text,small" alignment="centre" colour="secondary" auto_size="horizontal">
+					<record id="object_property">
+						<integer id="get_property" value="SctI" />
+					</record>
+				</widget>
+			</container>
+
+			<!-- Spacer -->
+			<container/>
+
+			<!-- Info -->
+			<container class="bordered_box" appearance="boxes/bordered/standard/paper" red_replacement="black">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container class="horizontal_adaptive_container" appearance="boxes/bordered/no margin/paper" inset="0" offset="0" gap="0">
+
+					<container default_width="-1" priority="1" minimum_width="40">
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<!--capacity-->
+						<widget class="dashed_number_label" spec="text,bold" id="capa" alignment="centre_x,bottom" >
+							<translation id="format" translation_id="356426" type="use" value="[%number#1][COMMENT: stadium capacity. Primarily for Korean as a marker needs to be added to indicate it's for a count of people]" />
+							<record id="object_property">
+								<integer id="get_property" value="Scpy" />
+							</record>
+						</widget>
+						<widget class="label" id="capL" spec="text,small" alignment="centre_x,top" auto_size="vertical" font="label">
+							<record id="object_property">
+								<integer id="get_property" value="Scpy" />
+								<boolean id="name" value="true" />
+							</record>
+						</widget>
+					</container>
+
+					<container default_width="-1" priority="2" minimum_width="40">
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<!--surface-->
+						<widget class="pitch_surface_type_label" spec="text,bold" id="surV" alignment="centre_x,bottom" >
+							<record id="object_property">
+								<integer id="get_property" value="SsfT" />
+							</record>
+						</widget>
+						<widget class="label" id="surL" spec="text,small" alignment="centre_x,top" auto_size="vertical" font="label">
+							<record id="object_property">
+								<integer id="get_property" value="SsfT" />
+								<boolean id="name" value="true" />
+							</record>
+						</widget>
+					</container>
+
+					<container default_width="-1" priority="3" minimum_width="40">
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<!-- surface condition -->
+						<widget class="stadium_condition_label" spec="text,bold" id="SdcV" alignment="centre_x,bottom" >
+							<record id="object_property">
+								<integer id="get_property" value="Sdcy" />
+							</record>
+						</widget>
+						<widget class="label" id="SdcL" spec="text,small" alignment="centre_x,top" auto_size="vertical" font="label">
+							<record id="object_property">
+								<integer id="get_property" value="Sdcy" />
+								<boolean id="name" value="true" />
+							</record>
+						</widget>
+					</container>
+
+					<container default_width="-1" priority="4" minimum_width="40">
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<!-- y f -->
+						<widget class="dashed_number_label" spec="text,bold" id="SbdV" NumF="0" alignment="centre_x,bottom" >
+							<record id="object_property">
+								<integer id="get_property" value="Sbdy" />
+							</record>
+						</widget>
+						<widget class="label" id="SbdL" spec="text,small" alignment="centre_x,top" auto_size="vertical" font="label">
+							<record id="object_property">
+								<integer id="get_property" value="Sbdy" />
+								<boolean id="name" value="true" />
+							</record>
+						</widget>
+					</container>
+				  </container>
+			    </container>
+			  <container/>
+		    </container>
+	      </container>
+
+</panel>

@@ -1,0 +1,67 @@
+﻿<panel save_session_state="true">
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+	<integer id="live_draw_draw_phase_timer" value="10000"/>
+	<integer id="live_draw_reaction_phase_timer" value="10000"/>
+	<boolean id="is_live_cup_draw_panel" value="true" />
+	<integer id="horizontal_group_gap" value="24" />
+	<!-- the group box that is the main container for the competition stage panel
+			this container holds whatever league or cup panel we need to create -->
+	<container class="main_box" id="stse">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+		<!-- group box for stage to go into -->
+		<container id="stgb">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<record id="default_properties" hidden="true" />
+
+			<!--league stage panel-->
+			<widget class="league_stage_panel" id="lspn" save_session_state="true" should_force_refresh="true"/>
+
+			<!--competition rules panel-->
+			<widget class="rules_panel" id="rupa" />
+
+			<!--cup stage_panel-->
+			<widget class="cup_stage_panel" id="cstp" save_session_state="true" file="competition/cup stage cup draws" />
+
+			<!--cup tree panel-->
+			<widget class="cup_tree_panel" id="ctpn" save_session_state="true" />
+
+			<!--group stage scrolling box (to be filled in code)-->
+			<container id="gsLD" save_session_state="true" navigation_container="true" navigation_container_allow_empty="true"/>
+		</container>
+
+
+	</container>
+
+	<!-- teams left to draw for a cup stage -->
+	<widget class="comp_teams_to_draw_panel" file="" id="ctdp" hidn="true" ddcw="true" dabc="true" height="200" use_tabbed_layout="true" appearance="">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="12" vertical_alignment="vertical" vertical_inset="0" />
+
+		<container class="main_box" width="990">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="8"/>
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right, extend" horizontal_offset="0" horizontal_gap="0" vertical_inset="0"/>
+				<container height="35" id="potB">
+					<attachment_group class="horizontal_arrange_autosize" horizontal_offset="0" horizontal_gap="10" vertical_inset="0"/>
+					<!--Buttons here added in code as we don't know how many pots a tournament will have-->
+				</container>
+                <container height="35">
+                <attachment_group class="vertical_arrange_horizontal_autosize" horizontal_layout="fill" horizontal_inset="20" vertical_alignment="middle"/>
+				<widget class="text" id="temR" auto_size="all" colour="fg">
+					<attachment class="get_global_attachment" get_property="CDtf" set_property="font" />
+				</widget>
+                </container>
+			</container>
+			<container class="scrolling_box">
+				<widget class="simple_data_list" id="Temz" alignment="left" gap="12" wrap="true">
+					<record id="widget_properties" class="property_list_viewer_xml_panel" file="competition/competition stage cup draw teams to draw tabbed icons"/>
+				</widget>
+				<record id="default_properties" auto_size="vertical" />
+			</container>
+		</container>
+	</widget>
+
+</panel>

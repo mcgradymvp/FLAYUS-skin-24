@@ -1,0 +1,48 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_layout="-1,30" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<container>
+								<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+								<layout class="arrange_horizontal_attachment" layout="70,-1" gap="0" offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+								<widget class="object_portrait_picture" id="cpic" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" height="70" />
+
+								<container>
+									<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+									<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+									<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+									<widget class="label" style="bold">
+										<translation id="text" auto_size="vertical" translation_id="466505" type="use" value="Training Report[COMMENT:player training; header feedback from coachs]" />
+									</widget>
+
+									<widget class="popup_button" id="vcoa" auto_tick_exclusive="true" auto_size="vertical" select_event="view" save_session_state="true" />
+
+								</container>
+
+							</container>
+
+							<widget class="table" id="trtb" layout="20,-1" auto_size_rows="true" fixed_size_rows="false">
+								<list id="column_table_properties">
+									<record id="bull">
+										<record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" />
+										<integer id="top" value="2" />
+									</record>
+									<record id="text">
+										<record id="widget_info" class="text" auto_size="vertical" />
+									</record>
+								</list>
+							</widget>
+
+						</container>
+
+					</container>
+	
+</panel>

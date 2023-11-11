@@ -1,0 +1,140 @@
+<panel save_session_state="true">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+	<container class="main_box" force_title_borders="true" id="plti" >
+
+		<layout class="arrange_vertical_attachment" alignment="top,extend" gap="10" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container embed_in_frame="true" navigation_container="true">
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<widget class="view_menu_label">
+				<translation id="text" translation_id="255101" type="use" value="Team Talk Feedback[COMMENT: title of the team talk feedback panel]" />
+			</widget>
+			<widget class="view_menu_popup" id="plvi" navigation_focus_target="true"/>
+
+		</container>
+
+		<widget class="table" layout="-1" id="cmpn" mode="0" auto_size="vertical">
+			<boolean id="fixed_size_rows" value="false" />
+			<boolean id="auto_size_rows" value="true" />
+
+			<!-- Title of box -->
+			<list id="headings">
+				<record alignment="left,centre_y">
+					<translation id="text" translation_id="258293" type="use" value="Team Morale[COMMENT: title of section displaying the current morale at a club/national team]" />
+				</record>
+			</list>
+
+			<!-- text should have the same text style as the labels and auto size vertically -->
+			<list id="column_widget_properties">
+				<record index="0" spec="text" auto_size="vertical" />
+			</list>
+
+			<!-- table isn't sortable -->
+			<list id="column_table_properties">
+				<record index="0" sort_disabled="true" top="5" bottom="5" />
+			</list>
+
+			<!-- coach comments -->
+			<widget class="text" id="clmo" row="0" column="0" />
+			<widget class="text" id="tmbs" row="1" column="0" />
+		</widget>
+
+		<widget class="client_object_list_table" id="pltb" mode="fill_rows, stripe_rows, printable, store_sort_state, drag_rows, drop_on_rows" column_mode="resize_columns, move_columns">
+
+			<boolean id="save_session_state" value="true" />
+			<integer id="contextual_handler_column_id" value="Pers" />
+			<!--default view-->
+			<flags id="default_view" value="kott" />
+
+			<!-- default sort by name -->
+			<list id="default_sort_column">
+				<integer value="Ptkp" />
+				<integer value="Phtp" />
+				<integer value="Ptfp" />
+			</list>
+
+			<list id="viws">
+				<!-- This view will show the kick off team talks -->
+				<record id="kott">
+					<translation id="name" translation_id="248077" type="use" value="Pre Match" />
+
+					<record id="view">
+						<record id="Pnms" auto_hide_priority="1" width="-1" />
+						<!-- name -->
+						<record id="Ptkp" auto_hide_priority="1" width="75" navigation_focus_target="false" />
+						<!-- position -->
+						<record id="Pkot" auto_hide_priority="1" width="-1" />
+						<!-- team talk action -->
+						<record id="Pkte" auto_hide_priority="1" width="-1" />
+						<!-- team talk effect -->
+						<record id="Pktr" auto_hide_priority="1" width="-1" />
+						<!-- team talk feed back reason -->
+					</record>
+				</record>
+
+				<!-- This view will show the half time team talks -->
+				<record id="httt">
+					<translation id="name" translation_id="248704" type="use" value="Half Time" />
+
+					<record id="view">
+						<record id="Pnms" auto_hide_priority="1" width="-1" />
+						<!-- name -->
+						<record id="Phtp" auto_hide_priority="1" width="75" />
+						<!-- position -->
+						<record id="Phtt" auto_hide_priority="1" width="-1" />
+						<!-- team talk action -->
+						<record id="Phte" auto_hide_priority="1" width="-1" />
+						<!-- team talk effect -->
+						<record id="Phtr" auto_hide_priority="1" width="-1" />
+						<!-- team talk feed back reason -->
+					</record>
+				</record>
+
+				<!-- This view will show the 90 minute team talks when a match went to extra time -->
+				<record id="90tt">
+					<translation id="name" translation_id="255453" type="use" value="90 Minutes[COMMENT: Team Talk Feedback Panel: Feedback on the team talk after 90 minutes, if the match went to extra time.]" />
+
+					<record id="view">
+						<record id="Pnms" auto_hide_priority="1" width="-1" />
+						<!-- name -->
+						<record id="Pt9p" auto_hide_priority="1" width="75" />
+						<!-- position -->
+						<record id="P9tt" auto_hide_priority="1" width="-1" />
+						<!-- team talk action -->
+						<record id="P9te" auto_hide_priority="1" width="-1" />
+						<!-- team talk effect -->
+						<record id="P9tr" auto_hide_priority="1" width="-1" />
+						<!-- team talk feed back reason -->
+					</record>
+				</record>
+
+				<!-- This view will show the full time team talks -->
+				<record id="fttt">
+					<translation id="name" translation_id="248716" type="use" value="Full Time[COMMENT - end of match]" />
+
+					<record id="view">
+						<record id="Pnms" auto_hide_priority="1" width="-1" />
+						<!-- name -->
+						<record id="Ptfp" auto_hide_priority="1" width="75" />
+						<!-- position -->
+						<record id="Pftt" auto_hide_priority="1" width="-1" />
+						<!-- team talk action -->
+						<record id="Pfte" auto_hide_priority="1" width="-1" />
+						<!-- team talk effect -->
+						<record id="Pftr" auto_hide_priority="1" width="-1" />
+						<!-- team talk feed back reason -->
+					</record>
+				</record>
+			</list>
+
+		</widget>
+	</container>
+
+	<widget class="manager_text" id="nATx" hidden="true">
+		<translation id="text" translation_id="420750" type="use" value="[%person#1-You] do not have an Assistant Manager[COMMENT: text for the panel when no assistant is present]" />
+	</widget>
+</panel>

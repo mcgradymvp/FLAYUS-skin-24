@@ -1,0 +1,566 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!-- This is a list of properties to be displayed in the top table. The number of properties, minus KG/outfield specific ones, here must match the number of columns
+        in the main and overview tables minus the first 2 (used for competitions and checkboxes)-->
+	<!-- default widget is formatted_label -->
+	<list id="tabS">
+		<!-- Appearances -->
+		<record id="PSap" format="[%fraction#1-1.0] ([%fraction#2-1.0])">
+			<translation id="hint" translation_id="336068" type="use" value="Total appearances (substituted on)[COMMENT: player stat column heading; total number of appearances and the number of matches where the player was subbed on]" />
+			<translation id="text" translation_id="229757" type="use" value="Apps" />
+		</record>
+		<!-- Conceded (GK)-->
+		<record id="PSgc" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="247734" type="use" value="Conceded" />
+			<translation id="text" translation_id="252155" type="use" value="Conc[COMMENT: manager stats: goals against]" />
+		</record>
+		<!-- Clean Sheets (GK)-->
+		<record id="PScs" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="317291" type="use" value="Clean Sheets[COMMENT: player stats; goalkeeper statistic for games where he didn't concede a goal]" />
+			<translation id="text" translation_id="249492" type="use" value="Cln[COMMENT clean sheets]" />
+		</record>
+		<!-- Save Tipped -->
+		<record id="stip" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="322138" type="use" value="Saves Tipped[COMMENT: match stats; saves tipped]" />
+			<translation id="text" translation_id="322134" type="use" value="Svt[COMMENT: match stats; abbreviation for saves tipped]" />
+		</record>
+		<!-- Save Parried -->
+		<record id="spar" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="322137" type="use" value="Saves Parried[COMMENT: match stats; saves parried]" />
+			<translation id="text" translation_id="322133" type="use" value="Svp[COMMENT: match stats; abbreviation for saves parried]" />
+		</record>
+		<!-- Saves Held -->
+		<record id="saHE" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="322136" type="use" value="Saves Held[COMMENT: match stats; saves held]" />
+			<translation id="text" translation_id="322132" type="use" value="Svh[COMMENT: match stats; abbreviation for saves held]" />
+		</record>
+		<!-- Goals -->
+		<record id="PSgo" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="227857" type="use" value="Goals" />
+			<translation id="text" translation_id="227850" type="use" value="Gls[comment - player (match/overall) goals short string]" />
+		</record>	
+		<!-- Assists-->
+		<record id="PSas" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="227847" type="use" value="Assists" />
+			<translation id="text" translation_id="249488" type="use" value="Asts" />
+		</record>
+		<!--Expected Goals-->
+		<record id="PSxG" format="[%fraction#1-2.2]">
+				<translation id="text" translation_id="514224" type="use" value="xG[COMMENT: AREA: Team Stat; SUB-AREA: Expected goals stats FR: 32708; TONE: Formal; CHARLIMIT: None NOTE: expected goals short string]" />
+				<translation id="hint" translation_id="515112" type="use" value="Expected Goals[COMMENT: AREA: Competition Stats; SUB-AREA: Player Overview; FR-BN: ; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Stat description]" />
+		</record>
+		<!--Expected Assists-->
+		<record id="PSxA" format="[%fraction#1-2.2]">
+			<translation id="text" translation_id="551844" type="use" value="xA[COMMENT: AREA: Team Stat; SUB-AREA: Expected Assists stats FR: 32708; TONE: Formal; CHARLIMIT: None NOTE: expected assists short string]" />
+			<translation id="hint" translation_id="551845" type="use" value="Expected Assists[COMMENT: AREA: Competition Stats; SUB-AREA: Player Overview; FR-BN: ; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Stat description]" />
+		</record>
+		<!-- Penalties -->
+		<record id="PSpe" format="[%fraction#2-1.0] ([%fraction#1-1.0])">
+			<translation id="hint" translation_id="230022" type="use" value="Penalties" />
+      <translation id="text" translation_id="249480" type="use" value="Pens" />
+		</record>
+		<!-- Penalties Faced -->
+		<record id="PSpG" format="[%fraction#2-1.0] ([%fraction#1-1.0])">
+			<translation id="hint" translation_id="492095" type="use" value="Penalties Faced[COMMENT: AREA: Stats; SUB-AREA: Player Stats; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: player stats; total number of penalties faced by the player]" />
+			<translation id="text" translation_id="249480" type="use" value="Pens" />
+		</record>
+		<!-- Man of Match -->
+		<record id="mogp" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="227859" type="use" value="Player Of The Match" />
+			<translation id="text" translation_id="249493" type="use" value="PoM[COMMENT man of match]" />
+		</record>
+		<!-- Yellows -->
+		<record id="ycmp" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="227869" type="use" value="Yellow cards" />
+			<translation id="text" translation_id="227868" type="use" value="Yel[COMMENT yellow cards]" />
+		</record>
+		<!-- Reds -->
+		<record id="rcmp" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="227871" type="use" value="Red cards" />
+			<translation id="text" translation_id="229879" type="use" value="Red" />
+		</record>
+		<!-- Dribbles made-->
+		<record id="ttDr" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="249449" type="use" value="Dribbles Made" />
+			<translation id="text" translation_id="542453" type="use" value="Drb[COMMENT: AREA: Player Additional Stats; SUB-AREA: General; FR-BN: BN 53664; TONE: Formal; CHARLIMIT: Shortish; REF-ID: n/a; NOTE: short chars label for dribbles per 90 mins]" />
+		</record>
+		<!-- Header made-->
+		<record id="PShe" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="395240" type="use" value="Headers won[COMMENT: team stat title; Total number of aerial challenges won, needs to be in sentence case like this to fit with the formatting on this particular screen]" />
+			<translation id="text" translation_id="395249" type="use" value="Hwn[COMMENT: Headers Won short text]" />
+		</record>
+		<!-- Shots ratio -->
+		<record id="PSst" class="dashed_record_percentage_label">
+			<translation id="hint" translation_id="249472" type="use" value="Shots On Target Ratio" />
+			<translation id="text" translation_id="249496" type="use" value="Sh Tar[COMMENT shots on target per game]" />
+		</record>
+		<!-- Header won ratio-->
+		<record id="hcha" class="dashed_record_percentage_label">
+			<translation id="hint" translation_id="395239" type="use" value="Headers won ratio[COMMENT: team stat title; Total ratio of aerial challenges won, needs to be in sentence case like this to fit with the formatting on this particular screen]" />
+			<translation id="text" translation_id="395248" type="use" value="Hwn R[COMMENT: Headers Won Ratio short text]" />
+		</record>
+		<!-- Pass ratio -->
+		<record id="PSpa" class="dashed_record_percentage_label">
+			<translation id="hint" translation_id="249473" type="use" value="Pass completion ratio" />
+			<translation id="text" translation_id="390509" type="use" value="Pas %[COMMENT: pass completion ratio, short text]" />
+		</record>
+		<!-- Tackles ratio -->
+		<record id="PSta" class="dashed_record_percentage_label">
+			<translation id="hint" translation_id="249474" type="use" value="Tackle completion ratio" />
+			<translation id="text" translation_id="301166" type="use" value="Tck R[COMMENT: tackle completion ratio short text]" />
+		</record>
+		<!-- Crosses (Outfield only) -->
+		<record id="pcra" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="318349" type="use" value="Crosses completed[COMMENT: Player stats column name]" />
+			<translation id="text" translation_id="318350" type="use" value="Cr C[COMMENT: Crosses completed column short text]" />
+		</record>
+		<!-- Tackles -->
+		<record id="PSta" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="247389" type="use" value="Tackles Won" />
+			<translation id="text" translation_id="249495" type="use" value="Tck[COMMENT tackles completed per game]" />
+		</record>
+		<!-- Clearances -->
+		<record id="PScl" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="539021" type="use" value="Clearances[COMMENT: AREA: Player Stats; BN: 38379; TONE: Informal; NOTE; Clearances Stat]" />
+			<translation id="text" translation_id="539022" type="use" value="Clear[COMMENT: AREA: Player Stats; BN: 38379; TONE: Informal; NOTE; Clearances Stat]" />
+		</record>
+		<!-- Fouls -->
+		<record id="PSfm" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="227873" type="use" value="Fouls made" />
+			<translation id="text" translation_id="227872" type="use" value="Fouls[COMMENT fouls made]" />
+		</record>
+		<!-- Fouls against -->
+		<record id="PSfa" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="227875" type="use" value="Fouls against" />
+			<translation id="text" translation_id="383336" type="use" value="Fouls Ag[COMMENT: fouls against, short text]" />
+		</record>
+		<!-- Average rating -->
+		<record id="PsAr" class="match_rating_label_formatted" format="[%fraction#1-1.2]">
+			<translation id="hint" translation_id="227853" type="use" value="Average Rating" />
+			<translation id="text" translation_id="227852" type="use" value="Av Rat[comment - Average rating]" />
+		</record>
+	</list>
+
+	<container class="main_box">
+		<translation id="title" translation_id="248440" type="use" value="Player Stats" />
+		<layout class="arrange_vertical_attachment" layout="-28,-68" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container id="stVW" clas="main_box">
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!-- Main table with comps in. Column layout must match the overview table -->
+				<widget class="table" id="tabl" select_event="togC" mode="fill_rows, stripe_rows, select_rows,select_multiple,show_bullets" layout="-4,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,65" row_height="30" save_session_state="true" navigation_container="true">
+					<boolean id="save_session_state" value="true" />
+					<record id="default_properties" alignment="centre" />
+					<list id="column_table_properties">
+						<record indx="0" left="4" />
+					</list>
+
+					<list id="column_widget_properties">
+						<record index="19" navigation_focus_target="false" />
+					</list>
+
+					<list id="headings">
+						<record>
+							<translation id="text" translation_id="227740" type="use" value="Competition" />
+						</record>
+					</list>
+				</widget>
+
+				<!--separator-->
+				<widget class="horizontal_divider" />
+
+				<!-- Overview table showing totals from the table. Column layout must match the main table -->
+				<widget class="table" id="ovrl" mode="fill_rows, printable" layout="16,-4,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,65" row_height="30" auto_size="vertical">
+					<record id="default_properties" style="bold" alignment="centre" size="10" />
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0" left="4" />
+					</list>
+
+					<list id="column_widget_properties">
+						<record index="20" navigation_focus_target="false" />
+					</list>
+
+
+					<widget class="label" row="0" col="0" column_span="2" id="lbID">
+						<translation id="text" translation_id="243224" type="use" value="All Competitions" />
+					</widget>
+				</widget>
+			</container>
+
+			<container id="frVW" hidden="true">
+				<layout class="arrange_horizontal_attachment" layout="150,-1" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<container class="main_box">
+
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+					<!-- Main table with comps in. Column layout must match the overview table -->
+					<widget class="table" id="minP" select_event="togC" mode="fill_rows, stripe_rows, select_rows,select_multiple,show_bullets" layout="150" row_height="30" auto_size="vertical">
+						<boolean id="save_session_state" value="true" />
+						<list id="column_widget_properties">
+							<record indx="1" alignment="centre" />
+						</list>
+						<list id="column_table_properties">
+							<record indx="0" left="4" />
+						</list>
+						<list id="headings">
+							<record column_span="2">
+								<translation id="text" translation_id="227740" type="use" value="Competition" />
+							</record>
+						</list>
+					</widget>
+
+				</container>
+
+				<container class="player_form_panel" id="plFP" file="player/player form stats" />
+			</container>
+		</container>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="text" id="nosl" hidden="true" alignment="centre">
+				<translation id="text" translation_id="336065" type="use" value="Tick one or more competitions to view stats.[COMMENT:player stats; label telling the user that they need to select some competitions]" />
+			</widget>
+
+			<container id="detS">
+				<layout class="arrange_vertical_attachment" layout="63,-1" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--Top Section-->
+				<container class="main_box">
+					<layout class="arrange_horizontal_attachment" layout="-1,4,-1,4,-1,4,-1" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<container>
+						<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="5" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<record id="default_properties" file="player/player additional stats item" />
+
+						<!--Matches Won-->
+						<container id="mtWV" />
+
+						<!--Man of the match-->
+						<container id="manV" />
+					</container>
+
+					<widget class="vertical_divider">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="5" />
+					</widget>
+
+					<container>
+						<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="5" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<record id="default_properties" file="player/player additional stats item" />
+
+						<!--Offsides-->
+						<container id="ofSD" />
+
+						<!--Sprints per game-->
+						<container id="sprG" file="player/player additional stats item" />
+						
+					</container>
+
+					<widget class="vertical_divider">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="5" />
+					</widget>
+ 
+					<container>
+						<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="5" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<record id="default_properties" file="player/player additional stats item" />
+
+						<!--Average Rating-->
+						<container id="avrV" />
+
+						<!--Fouls per 90-->
+						<container id="Fo9V" />
+
+					</container>
+
+					<widget class="vertical_divider">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="5" />
+					</widget>
+
+					<container>
+						<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="5" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<!--Distance Covered Per 90 mins-->
+						<container id="ds9V">
+							<layout class="arrange_vertical_attachment" alignment="top,extend" offset="2" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+							<widget class="text" id="sttx" colour="disabled" size="small" alignment="left,bottom" auto_size="vertical" />
+							<container>
+
+								<layout class="stick_to_sides_attachment" alignment="top,left" apply_to_children="true" inset="0" />
+								<widget class="distance_label" size="12" id="stVL" auto_size="all" alignment="left,top" />
+							</container>
+						</container>
+
+						<!-- Shots blocked -->
+						<container id="xgPV" file="player/player additional stats item" />
+
+					</container>
+				</container>
+
+				<!--Middle Section-->
+				<container>
+					<layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<!--Attacking Stats - Left Section-->
+					<container class="main_box">
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<!--Shots-->
+						<container>
+							<layout class="arrange_horizontal_attachment" layout="-1,10,-1" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<container>
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+								<widget class="percentage_pie_chart" id="ShSP" value_colour="shots on target colour" is_donut_chart="true" layout="-6,-3,-1" />
+
+								<widget class="pie_chart" id="shSC" is_donut_chart="true" layout="-6,-1,-2,-1" />
+
+
+								<container>
+									<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
+									<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+									<widget class="text" id="shTX" alignment="centre_x,bottom" style="semi_bold" colour="shots goal colour" />
+									<widget class="formatted_label" style="semi_bold" format="[%fraction#1-1.0]" id="ShSK" alignment="centre_x,top" colour="shots goal colour" />
+								</container>
+
+							</container>
+
+							<widget class="vertical_divider" />
+
+							<container>
+								<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+								<container id="exGV" file="player/player additional stats item" height="30" />
+								<container id="exGN" file="player/player additional stats item" height="30" />
+								<container id="SoTV" file="player/player additional stats item" height="40" />
+								<container id="SoTN" file="player/player additional stats item" height="40" />
+							</container>
+						</container>
+
+						<widget class="horizontal_divider" height="5" />
+
+						<!--Minutes on Pitch per goal-->
+						<container id="mpGV" file="player/player additional stats item" />
+
+						<widget class="horizontal_divider" height="5" />
+
+						<widget class="text" alignment="left,centre_y" colour="disabled" id="pnST" auto_size="vertical" size="small">
+							<translation id="text" type="use" translation_id="249395" value="Penalties Scored / Taken[COMMENT: player combination stat:penalties scored to penalties taken]" />
+						</widget>
+
+						<!--Penalties-->
+						<container height="22">
+							<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0" />
+							<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+
+							<widget class="formatted_label" format="[%fraction#1-1.0]/[%fraction#2-1.0]" id="pnSV" alignment="left,centre_y" size="large" auto_size="all" />
+							<widget id="pnBR" class="horizontal_percentage_bar" bar_value_colour="bar value" alignment="centre" label_width="0" show_label_on_bar="true" height="10" />
+						</container>
+					</container>
+
+					<!--Creative Stats - Left-Middle Section-->
+					<container class="main_box">
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<!--Chances Created-->
+						<container>
+							<layout class="arrange_horizontal_attachment" layout="-1,10,-1" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<container>
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+								<widget class="percentage_pie_chart" id="chCR" value_colour="crosses completed colour" is_donut_chart="true" layout="-6,-3,-1" />
+
+								<widget class="pie_chart" id="ccPC" is_donut_chart="true" layout="-6,-1,-2,-1" value_colour="chances created colour" />
+
+								<container>
+									<layout class="arrange_vertical_attachment" layout="-8,-7" offset="0" gap="0" />
+									<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="10" />
+
+									<widget class="text" id="cchT" alignment="centre_x,bottom" style="semi_bold" colour="fg yellow" multiline="true" width="60">
+										<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+									</widget>
+									
+									<widget class="formatted_label" width="60" style="semi_bold" format="[%fraction#1-1.0]" id="ccVL" alignment="centre_x,top" colour="fg yellow">
+										<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+									</widget>
+								</container>
+							</container>
+
+							<widget class="vertical_divider" />
+
+							<container>
+								<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+								<container id="xaVL" file="player/player additional stats item" height="30" />
+								<container id="xaNT" file="player/player additional stats item" height="30" />
+								<container id="crCT" file="player/player additional stats item" height="40" />
+								<container id="ppNT" file="player/player additional stats item" height="40" />
+							</container>
+						</container>
+
+						<widget class="horizontal_divider" height="5" />
+
+						<!--Dribbles per game-->
+						<container id="dblG" file="player/player additional stats item" />
+
+						<widget class="horizontal_divider" height="5" />
+
+						<!--Minutes on Pitch per assist-->
+						<container id="mpAV" file="player/player additional stats item" />
+					</container>
+
+					<!--Passing Stats - Right-Middle Section-->
+					<container class="main_box">
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<!--Passes-->
+						<container>
+							<layout class="arrange_horizontal_attachment" layout="-1,10,-1" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<container>
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+								<widget class="percentage_pie_chart" id="PasP" value_colour="passes succeeded colour" is_donut_chart="true" layout="-6,-3,-1" />
+
+								<widget class="pie_chart" id="PaSF" is_donut_chart="true" layout="-6,-1,-2,-1" />
+
+								<container>
+									<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
+									<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+									<widget class="text" alignment="centre_x,bottom" style="semi_bold" colour="key passes colour">
+										<translation id="text" translation_id="318355" type="use" value="Key Passes[COMMENT: Player stats column name]" />
+									</widget>
+
+									<widget class="formatted_label" format="[%fraction#1-1.0]" style="semi_bold" id="pasK" alignment="centre_x,top" colour="key passes colour" />
+								</container>
+
+							</container>
+
+							<widget class="vertical_divider" />
+
+							<container>
+								<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+								<container id="incV" file="player/player additional stats item" height="30" />
+								<container id="pscN" file="player/player additional stats item" height="30" />
+								<container id="PSUV" file="player/player additional stats item" height="40" />
+								<container id="ylwR" file="player/player additional stats item" height="40" />
+							</container>
+						</container>
+
+						<widget class="horizontal_divider" height="5" />
+
+						<!-- Possession won / 90 -->
+						<container id="pwnN" file="player/player additional stats item" />
+
+						<widget class="horizontal_divider" height="5" />
+
+						<!-- Possession lost / 90 -->
+						<container id="plsN" file="player/player additional stats item" />
+					</container>
+
+					<!--Defensive Stats - Right Section-->
+					<container class="main_box">
+						<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<!--Tackles-->
+						<container>
+							<layout class="arrange_horizontal_attachment" layout="-1,10,-1" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<container>
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+								<widget class="percentage_pie_chart" id="tacP" value_colour="tackles won colour" is_donut_chart="true" layout="-6,-3,-1" />
+
+								<widget class="pie_chart" id="tacK" is_donut_chart="true" layout="-6,-1,-2,-1" />
+
+								<container>
+									<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
+									<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+									<widget class="text" alignment="centre_x,bottom" style="semi_bold" colour="key tackles colour">/
+										<translation id="text" translation_id="248758" type="use" value="Key Tackles" />
+									</widget>
+									<widget class="formatted_label" format="[%fraction#1-1.0]" id="taVK" alignment="centre_x,top" style="semi_bold" colour="key tackles colour" />
+								</container>
+
+							</container>
+
+							<widget class="vertical_divider" />
+
+							<container>
+								<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4" />
+								-<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+								<container id="khdV" file="player/player additional stats item" height="30" />
+								<container id="hdwV" file="player/player additional stats item" height="30" />
+								<container id="twoV" file="player/player additional stats item" height="40" />
+								<container id="twpN" file="player/player additional stats item" height="40" />
+							</container>
+						</container>
+
+						<widget class="horizontal_divider" height="5" />
+
+						<!--Interceptions-->
+						<container id="clRV" file="player/player additional stats item" />
+
+						<widget class="horizontal_divider" height="5" />
+
+						<!--Mistakes leading to Goals-->
+						<widget class="text" alignment="left,centre_y" colour="disabled" auto_size="vertical" size="small">
+							<translation id="text" translation_id="515100" type="use" value="Mistakes Leading To Goals[COMMENT: AREA: player stat; NOTE: mistakes made table label]" />
+						</widget>
+
+						<container height="22">
+							<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0" />
+							<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+
+							<widget class="formatted_label" format="[%fraction#1-1.0]" id="misV" alignment="left,centre_y" size="large" auto_size="all" />
+						</container>
+
+					</container>
+				</container>
+				
+			</container>
+		</container>
+	</container>
+
+	<!-- panel for no available feeder clubs-->
+	<container class="empty_state" id="nost" hidden="true" header_widget="BShe">
+		<widget class="text" id="BShe">
+			<translation id="text" translation_id="562633" type="use" value="No match stats available[COMMENT: AREA: Scouting; SUB-AREA: Player stats panel/widget; FR-BN: FM-11536; NOTE: Fallback string, when the stats widget is hidden due to stats not being available - either player has not played any games yet, or has only played friendlies, where stats are not tracked]" />
+		</widget>
+	</container>
+
+</panel>

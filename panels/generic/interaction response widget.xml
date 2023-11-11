@@ -1,0 +1,13 @@
+﻿<panel>
+    <attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0"/>
+
+    <container class="main_transparent_box" id="anbx" red_replacement="bg" appearance="buttons/standard/flex/button">
+        <attachment_group class="vertical_arrange_autosize" vertical_offset="5" vertical_gap="0" horizontal_inset="0"/>
+
+        <!-- the response text -->
+        <widget class="button" id="answ" alignment="left,centre_y" multiline="true" appearance="" font="text" auto_size="vertical" navigation_focus_target="true" default_focus="true"/>
+
+        <!-- button to show promise popups -->
+        <widget class="icon_button" id="prvl" icon="icons/16px/plus" icon_colour="text" click_event="pkvl" appearance="" height="30" hidden="true" font="label" navigation_focus_target="true" default_focus="true"/>
+    </container>
+</panel>

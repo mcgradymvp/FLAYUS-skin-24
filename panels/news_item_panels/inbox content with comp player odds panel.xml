@@ -1,0 +1,86 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<list id="properties_to_forward">
+		<record get_property="favt" set_property="objL" target="lstb"/>
+		<record get_property="sttx" set_property="valu" target="stti"/>
+		<record get_property="stwi" set_property="valu" target="pers"/>
+		<record get_property="stvt" set_property="valu" target="stat"/>
+	</list>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<!-- content area -->
+	<container class="scrolling_box">
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="10" vertical_inset="0" />
+
+			<container id="infc">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- main body text -->
+				<widget class="inbox_body_text" id="bdtx">
+				</widget>
+
+				<!--list of odds-->
+				<widget class="client_object_list_table" id="lstb" fixed_size_rows="true" auto_size="vertical" row_height="80" fixed_row_height="20" row_spacing="4" navigation_container="true">
+					<flags id="mode" value="fill_rows, select_rows, stripe_rows, select_multiple"/>
+
+					<list id="viewed_property_ids">
+						<record id="port" width="80" auto_hide_priority="30"/>
+						<record id="Pnms" auto_hide_priority="20"/>
+						<record id="Pclb" auto_hide_priority="30"/>
+						<record id="Pnat" auto_hide_priority="40"/>
+						<record id="todd" auto_hide_priority="20" style="bold"/>
+					</list>
+				</widget>
+			</container>
+
+			<!--info panel on the right-->
+			<container width="250">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!--dynamic image here please-->
+				<container id="ICdi" height="150">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				</container>
+
+				<!--info-->
+				<container class="inner_subtle_box">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<!--name-->
+					<widget class="comp_button" id="comp" auto_size="vertical" alignment="centre" icon_enabled="false" font="title">
+						<record id="object_property">
+							<integer id="get_property" value="comp"/>
+						</record>
+					</widget>
+
+					<container height="8"/>
+
+					<!--comp logo-->
+					<widget class="object_portrait_picture" id="scpc" comp_use_trophy_icon="true" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" height="100">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+
+					<container height="8"/>
+
+					<!--text for what stat to show-->
+					<widget class="text" id="stti" auto_size="vertical" alignment="centre" multiline="true" font="title"/>
+
+					<!--name-->
+					<widget class="person_button" id="pers" auto_size="vertical" alignment="centre" size="large" style="bold"/>
+
+					<!--stat-->
+					<widget class="text" id="stat" auto_size="vertical" alignment="centre" multiline="true" colour="faded text"/>
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

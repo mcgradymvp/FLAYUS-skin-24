@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+  <list id="properties_to_forward">
+    <record get_property="titl" set_property="text" target="titl" />
+  </list>
+
+  <container class="bordered_box">
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <container>
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+      <layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="0" />
+      <layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+
+      <string id="skin_style" value="title link" />
+
+      <widget class="link_button" id="titl" auto_size="all" alignment="left,centre_y" font="title" section="TRsm">
+        <record id="object_property">
+          <list id="get_properties">
+            <record>
+              <integer id="index" value="1" />
+              <integer id="get_property" value="objt" />
+              <integer id="set_property" value="objt" />
+            </record>
+          </list>
+        </record>
+      </widget>
+    </container>
+
+    <container>
+      <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="4" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+      <!--manager-->
+      <widget class="client_object_viewer_xml_panel" id="mana" file="human/manager profile pre match" width="160">
+        <record id="object_property">
+          <list id="get_properties">
+            <record>
+              <integer id="index" value="1" />
+              <integer id="get_property" value="Ttsl" />
+              <integer id="set_property" value="objt" />
+            </record>
+          </list>
+        </record>
+      </widget>
+
+      <container>
+        <layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+        <!--strengths/weaknesses-->
+        <widget class="table" id="prot" layout="-1" inset="0" fixed_size_rows="false" auto_size_rows="true">
+        </widget>
+        
+        <!--no info available-->
+        <widget class="manager_text" id="nopr" alignment="centre" multiline="true">
+          <translation id="text" translation_id="450808" type="use" value="[%person#1-You] need to compile a scout report for [%person#1-your] next opposition in order to be able to see their strengths and weaknesses.[COMMENT: bug 164860 - team report pre match panel help text]" />
+        </widget>
+      </container>
+    </container>
+  </container>
+</panel>

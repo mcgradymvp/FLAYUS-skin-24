@@ -1,0 +1,74 @@
+﻿<panel width="495">
+    <attachment_group class="vertical_arrange_autosize"/>
+
+    <animation class="fade_animation" start_value="0" end_value="1" duration="0.3" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true"/>
+
+    <container class="main_transparent_box" red_replacement="bg darker">
+        <attachment_group class="vertical_arrange_autosize" vertical_gap="10"/>
+
+        <container>
+            <attachment_group class="vertical_arrange_autosize" vertical_gap="10"/>
+
+            <widget class="text" font="title" alignment="left, centre_y" auto_size="vertical">
+                <translation id="text" translation_id="516204" type="use" value="Journalist Relationships[COMMENT: AREA: Press conference; SUB-AREA: Summary panel; FR 32917; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Section title for list of relationship changes]"/>
+            </widget>
+            <widget class="text" id="SSum" alignment="left, top" auto_size="vertical"/>
+        </container>
+
+        <!-- journo list -->
+        <widget class="table" id="JrnT" layout="180, 100, -1" mode="fill_rows" fixed_size_rows="true" auto_size_rows="false" row_height="40" auto_size="vertical">
+            <list id="headings">
+                <record index="0" auto_hide_priority="1">
+                    <translation id="text" translation_id="348966" type="use" value="Journalists[COMMENT: media profile; list of journalists attached to media source]"/>
+                </record>
+                <record index="1" auto_hide_priority="2">
+                    <translation id="text" translation_id="515046" type="use" value="Influence[COMMENT: AREA: Inbox; SUB-AREA: Press Conference Invite News Item; FR: 32643; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: column header for a journalists global influence]"/>
+                </record>
+                <record index="2" auto_hide_priority="3" minimum_width="160">
+                    <translation id="text" translation_id="308637" type="use" value="Relationship[COMMENT: Relationship towards the human player]"/>
+                </record>
+            </list>
+
+            <list id="column_table_properties">
+                <record index="0" alignment="left, centre_y"/>
+                <record index="1" alignment="left, centre_y"/>
+                <record index="2" alignment="left, centre_y"/>
+            </list>
+
+            <list id="column_widget_properties">
+                <record index="0" alignment="left, centre_y" info_popup_enabled="true" person_is_player="true"/>
+                <record index="1" alignment="left, centre_y"/>
+                <record index="2" alignment="left, centre_y"/>
+            </list>
+        </widget>
+
+        <container class="plain_box" id="Bdfk" appearance="boxes/main/transparent/paper">
+            <attachment_group class="vertical_arrange_autosize" vertical_gap="10"/>
+
+            <widget class="text" font="title" alignment="left, centre_y" auto_size="vertical">
+                <translation id="text" translation_id="516205" type="use" value="Board Feedback[COMMENT: AREA: Press conference; SUB-AREA: Summary panel; FR 32917; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Section title for board feedback on your performance]"/>
+            </widget>
+
+            <!-- just a label if no objectives for the press conference -->
+            <widget class="text" id="Bdno" alignment="left, centre_y" auto_size="vertical" colour="text" hidden="true"/>
+
+            <!-- feedback and board objective list -->
+            <container>
+                <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="20, -1"/>
+
+                <widget class="picture" id="BdIc" height="16" width="16" scale_picture="true" keep_aspect_ratio="true" file="icons/26px/thumbs down" red_replacement="negative"/>
+                <widget class="text" id="Bdtx" alignment="left, centre_y" auto_size="vertical" colour="negative"/>
+            </container>
+
+            <widget class="horizontal_divider"/>
+
+            <!-- subjects to avoid added here -->
+            <widget class="table" id="Bdgl" layout="20, -1" mode="fill_rows" fixed_size_rows="false" auto_size_rows="true" auto_size="vertical">
+                <list id="column_widget_properties">
+                    <record index="0" alignment="left, centre_y" file="icons/8px/bullet filled" image_alignment="centre" red_replacement="text"/>
+                    <record index="1" alignment="left, centre_y" auto_size="all" colour="text"/>
+                </list>
+            </widget>
+        </container>
+    </container>
+</panel>

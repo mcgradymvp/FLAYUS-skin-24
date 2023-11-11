@@ -1,0 +1,204 @@
+﻿<panel save_session_state="true">
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+	<layout class="arrange_horizontal_attachment" layout="-6,-15" offset="0" gap="8" />
+	
+	<!--LEFT SIDE-->
+	<container class="main_subtle_box_no_margin">
+		<layout class="arrange_vertical_attachment" alignment="fill"  offset="0"  gap="3" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- Pitch -->
+		<widget class="pitch_with_player_positions" id="ppip" vertical="true"
+			pitch_alignment="top,can_scale"
+			pitch_draw_goals="false"
+			pitch_draw_markings="false"
+			show_position_strength="false"
+			hide_player_positions="true"
+			pitch_show_names="false"
+			pitch_show_names_as_hint="true"
+			pitch_draw_grass="false"
+			pitch_line_colour="disabled"
+			pitch_touchline_width_percentage="1"
+			pitch_override_icon_size="2"
+			line_width="1.8"
+			pitch_vertical_padding="4">
+
+			<!-- Set the icon to use for people on the pitch. The icon will first look for a size that matches the pitch's size, for instance 'pitch/icons/kit/tiny/kit' or 'pitch/icons/kit/medium/kit'.
+          If an icon for the size category is not found it will try the base path: pitch/icons/kit/kit. This means that if you want to use an icon on a pitch that will only ever be one size you 
+          can just provide the base and not worry about the tiny/small/medium/large size categories -->
+			<string id="pitch_kit_icon" value="pitch/icons/dots" />
+		</widget>
+
+		<container class="inner_box" id="FtSt">
+			<layout class="arrange_vertical_attachment" layout="-1,-1" offset="50" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<container id="styl">
+				<attachment_group class="vertical_arrange" vertical_alignment="middle" gap="0"/>
+				<widget class="text" font="label"  auto_size="vertical" multiline="false" alignment="centre">
+					<translation id="text" value="Playing Style" translation_id="242530" type="use" />
+				</widget>
+				<widget class="player_style_label" id="PpsT" auto_size="vertical" alignment="centre">
+						<record id="object_property">
+						<integer id="get_property" value="PpsT" />
+					</record>
+				</widget>
+			</container>
+		
+		<container >
+			<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<container id="left">
+				<attachment_group class="vertical_arrange" vertical_alignment="middle" gap="0" />
+	
+			<widget class="picture" file="icons/custom/footed/left" image_alignment="centre" auto_size="veritical" height="30"/>
+				<widget class="text" font="label" auto_size="vertical" multiline="false" alignment="centre">
+					<translation id="text" translation_id="230000" type="use" value="Left Foot" />
+				</widget>
+				<widget class="footedness_label" id="fotL" format="[%string#1]" font="text" auto_size="vertical" alignment="centre">
+					<record id="object_property">
+						<integer id="get_property" value="PlfG" />
+					</record>
+				</widget>
+
+			</container>
+
+			<container id="right">
+				<attachment_group class="vertical_arrange" vertical_alignment="middle" gap="0"/>
+					
+			<widget class="picture" file="icons/custom/footed/right" image_alignment="centre" auto_size="veritical" height="30"/>
+				<widget class="text" font="label"  auto_size="vertical" multiline="false" alignment="centre">
+					<translation id="text" translation_id="230001" type="use" value="Right Foot" />
+				</widget>
+				<widget class="footedness_label" id="fotR" format="[%string#1]" font="text" auto_size="vertical" alignment="centre">
+						<record id="object_property">
+							<integer id="get_property" value="PrfG" />
+						</record>
+					</widget>
+</container>
+			</container>
+		</container>
+	</container>
+
+	<!--RIGHT SIDE-->
+	<container>
+		<layout class="arrange_vertical_attachment" layout="30,2,-2, 2,-2" offset="0"  gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container class="inner_box">
+			<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="2" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<!-- Position label-->
+			<widget class="text" id="posT" auto_size="vertical" font="title" size="normal" alignment="left,centre_y"/>
+			<!-- Position strength label -->
+			<widget class="icon_button" id="posS" icon="icons/16px/circle" show_button_appearance="false" auto_size="vertical" style="semi_bold" size="large" navigation_focus_target="false"/>
+		</container>
+
+		<widget class="horizontal_subtle_divider"/>
+
+		<container class="inner_box" inset="0">
+			<layout class="arrange_vertical_attachment" layout="17,-1" offset="0"  gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="text" id="posB" font="title"/>
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<!-- Info labels for when the data isn't available-->
+				<container id="inFC" hidden="true">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<widget class="text" id="nrLb" auto_size="vertical" hidden="true">
+						<translation id="text" translation_id="383562" type="use" value="No suitable best roles for this position[COMMENT: FR 10661; player overview positions indicator; string displayed when the player is not good enough in a position to have a 'best role' for it]" />
+					</widget>
+					<widget class="text" id="arbs" auto_size="vertical" hidden="true">
+						<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+					</widget>
+					<widget class="text" id="pool" auto_size="vertical" hidden="true">
+						<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]" />
+					</widget>
+					<widget class="button" id="scPb" click_event="sctc" auto_size="all" height="30" hidden="true">
+						<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+						<layout class="centre_in_parent_attachment" alignment="horizontal" />
+					</widget>
+				</container>
+
+				<!-- Best roles for selected position -->
+				<widget class="table" id="Rcon" layout="75, 18, -1" auto_size_rows="false" row_spacing="2" column_spacing="2" row_height="25" navigation_focus_target="true">
+					<widget class="stars_range_strip" id="roS1" row="0" col="0" image_alignment="centre"/>
+					<widget class="info_icon_hint_text" id="hnt1" row="0" col="1"/>
+					<widget class="label" id="roL1" row="0" col="2"/>
+
+					<widget class="stars_range_strip" id="roS2" row="1" col="0" image_alignment="centre"/>
+					<widget class="info_icon_hint_text" id="hnt2" row="1" col="1" />
+					<widget class="label" id="roL2" row="1" col="2" />
+
+					<widget class="stars_range_strip" id="roS3" row="2" col="0" image_alignment="centre"/>
+					<widget class="info_icon_hint_text" id="hnt3" row="2" col="1" />
+					<widget class="label" id="roL3" row="2" col="2" />
+
+					<widget class="stars_range_strip" id="roS4" row="3" col="0" image_alignment="centre"/>
+					<widget class="info_icon_hint_text" id="hnt4" row="3" col="1" />
+					<widget class="label" id="roL4" row="3" col="2" />
+
+					<widget class="stars_range_strip" id="roS5" row="4" col="0" image_alignment="centre"/>
+					<widget class="info_icon_hint_text" id="hnt5" row="4" col="1" />
+					<widget class="label" id="roL5" row="4" col="2" />
+
+					<widget class="stars_range_strip" id="roS6" row="5" col="0" image_alignment="centre"/>
+					<widget class="info_icon_hint_text" id="hnt6" row="5" col="1" />
+					<widget class="label" id="roL6" row="5" col="2" />
+
+					<widget class="stars_range_strip" id="roS7" row="6" col="0" image_alignment="centre"/>
+					<widget class="info_icon_hint_text" id="hnt7" row="6" col="1" />
+					<widget class="label" id="roL7" row="6" col="2" />
+
+					<widget class="stars_range_strip" id="roS8" row="7" col="0" image_alignment="centre"/>
+					<widget class="info_icon_hint_text" id="hnt8" row="7" col="1" />
+					<widget class="label" id="roL8" row="7" col="2" />
+				</widget>
+
+			</container>
+		</container>
+
+		<widget class="horizontal_subtle_divider"/>
+		
+		<container class="inner_box" id="squC" >
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"  gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="text" id="sqTi" font="title" height="15"/>
+
+			<!-- Player Comparison list table -->
+			<widget class="table" id="sqTb" mode="fill_rows,stripe_rows" layout="20,-1,70,1" navigation_focus_target="true">
+				<list id="column_widget_properties">
+					<record indx="0" alignment="left,centre_y" colour="faded text"/>
+					<record indx="1" alignment="left,centre_y" />
+					<record indx="2" alignment="left,centre_y" />
+					<record indx="3" hidden="true" />
+				</list>
+
+				<list id="column_table_properties">
+					<record indx="0" sort_disabled="true" left="5" />
+					<record indx="1" sort_disabled="true" >
+						<record id="column_heading">
+							<flags id="alignment" value="left,centre_y" />
+							<translation id="text" translation_id="227966" type="use" value="Player" />
+						</record>
+					</record>
+					<record indx="2" sort_disabled="true" >
+						<record id="column_heading">
+							<flags id="alignment" value="centre_y" />
+							<translation id="text" translation_id="314426" type="use" value="Ability[COMMENT: player popup info panel - scout current ability rating]" />
+							<translation id="hint" translation_id="310135" type="use" value="Current Ability[COMMENT: contract offer screen - comments table]" />
+						</record>
+					</record>
+				
+				</list>
+			</widget>
+		</container>
+	</container>
+</panel>

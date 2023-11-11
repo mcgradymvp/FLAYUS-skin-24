@@ -1,0 +1,419 @@
+<record>
+	<boolean id="preload" value="false"/>
+    <boolean id="cache" value="true"/>
+
+	<!-- mappings -->
+
+	<list id="maps">
+		<!-- Map folder structure: wind/precipitation/temperature.png (exception being 'unknown') -->
+
+		<record from="unknown" to="graphics/weather/unknown" />
+
+		<!-- calm -->		
+		<record from="dry" to="graphics/weather/calm/dry/freezing" />
+		<record from="dry" to="graphics/weather/calm/dry/cold" />
+		<record from="dry sun" to="graphics/weather/calm/dry/mild" />
+		<record from="dry sun" to="graphics/weather/calm/dry/fine" />
+		<record from="sun" to="graphics/weather/calm/dry/warm" />
+		<record from="sun" to="graphics/weather/calm/dry/hot" />
+		<record from="sun" to="graphics/weather/calm/dry/very hot" />
+
+		<record from="wet" to="graphics/weather/calm/wet/freezing" />
+		<record from="wet" to="graphics/weather/calm/wet/cold" />
+		<record from="wet" to="graphics/weather/calm/wet/mild" />
+		<record from="wet" to="graphics/weather/calm/wet/fine" />
+		<record from="wet sun" to="graphics/weather/calm/wet/warm" />
+		<record from="wet sun" to="graphics/weather/calm/wet/hot" />
+		<record from="wet sun" to="graphics/weather/calm/wet/very hot" />
+
+		<record from="drizzle" to="graphics/weather/calm/drizzle/freezing" />
+		<record from="drizzle" to="graphics/weather/calm/drizzle/cold" />
+		<record from="drizzle" to="graphics/weather/calm/drizzle/mild" />
+		<record from="drizzle" to="graphics/weather/calm/drizzle/fine" />
+		<record from="drizzle sun" to="graphics/weather/calm/drizzle/warm" />
+		<record from="drizzle sun" to="graphics/weather/calm/drizzle/hot" />
+		<record from="drizzle sun" to="graphics/weather/calm/drizzle/very hot" />
+
+		<record from="shower" to="graphics/weather/calm/shower/freezing" />
+		<record from="shower" to="graphics/weather/calm/shower/cold" />
+		<record from="shower" to="graphics/weather/calm/shower/mild" />
+		<record from="shower" to="graphics/weather/calm/shower/fine" />
+		<record from="shower sun" to="graphics/weather/calm/shower/warm" />
+		<record from="shower sun" to="graphics/weather/calm/shower/hot" />
+		<record from="shower sun" to="graphics/weather/calm/shower/very hot" />
+
+		<record from="rain" to="graphics/weather/calm/rain/freezing" />
+		<record from="rain" to="graphics/weather/calm/rain/cold" />
+		<record from="rain" to="graphics/weather/calm/rain/mild" />
+		<record from="rain" to="graphics/weather/calm/rain/fine" />
+		<record from="rain sun" to="graphics/weather/calm/rain/warm" />
+		<record from="rain sun" to="graphics/weather/calm/rain/hot" />
+		<record from="rain sun" to="graphics/weather/calm/rain/very hot" />
+
+		<record from="downpour" to="graphics/weather/calm/downpour/freezing" />
+		<record from="downpour" to="graphics/weather/calm/downpour/cold" />
+		<record from="downpour" to="graphics/weather/calm/downpour/mild" />
+		<record from="downpour" to="graphics/weather/calm/downpour/fine" />
+		<record from="downpour sun" to="graphics/weather/calm/downpour/warm" />
+		<record from="downpour sun" to="graphics/weather/calm/downpour/hot" />
+		<record from="downpour sun" to="graphics/weather/calm/downpour/very hot" />
+
+		<record from="sleet" to="graphics/weather/calm/sleet/freezing" />
+		<record from="sleet" to="graphics/weather/calm/sleet/cold" />
+		<record from="sleet" to="graphics/weather/calm/sleet/mild" />
+		<record from="sleet" to="graphics/weather/calm/sleet/fine" />
+		<record from="sleet sun" to="graphics/weather/calm/sleet/warm" />
+		<record from="sleet sun" to="graphics/weather/calm/sleet/hot" />
+		<record from="sleet sun" to="graphics/weather/calm/sleet/very hot" />
+
+		<record from="hail" to="graphics/weather/calm/hail/freezing" />
+		<record from="hail" to="graphics/weather/calm/hail/cold" />
+		<record from="hail" to="graphics/weather/calm/hail/mild" />
+		<record from="hail" to="graphics/weather/calm/hail/fine" />
+		<record from="hail sun" to="graphics/weather/calm/hail/warm" />
+		<record from="hail sun" to="graphics/weather/calm/hail/hot" />
+		<record from="hail sun" to="graphics/weather/calm/hail/very hot" />
+
+		<record from="light snow" to="graphics/weather/calm/light snow/freezing" />
+		<record from="light snow" to="graphics/weather/calm/light snow/cold" />
+		<record from="light snow" to="graphics/weather/calm/light snow/mild" />
+		<record from="light snow" to="graphics/weather/calm/light snow/fine" />
+		<record from="light snow sun" to="graphics/weather/calm/light snow/warm" />
+		<record from="light snow sun" to="graphics/weather/calm/light snow/hot" />
+		<record from="light snow sun" to="graphics/weather/calm/light snow/very hot" />
+
+		<record from="heavy snow" to="graphics/weather/calm/heavy snow/freezing" />
+		<record from="heavy snow" to="graphics/weather/calm/heavy snow/cold" />
+		<record from="heavy snow" to="graphics/weather/calm/heavy snow/mild" />
+		<record from="heavy snow" to="graphics/weather/calm/heavy snow/fine" />
+		<record from="heavy snow sun" to="graphics/weather/calm/heavy snow/warm" />
+		<record from="heavy snow sun" to="graphics/weather/calm/heavy snow/hot" />
+		<record from="heavy snow sun" to="graphics/weather/calm/heavy snow/very hot" />
+
+		<!-- breezy -->		
+		<record from="dry" to="graphics/weather/breezy/dry/freezing" />
+		<record from="dry" to="graphics/weather/breezy/dry/cold" />
+		<record from="dry sun" to="graphics/weather/breezy/dry/mild" />
+		<record from="dry sun" to="graphics/weather/breezy/dry/fine" />
+		<record from="sun" to="graphics/weather/breezy/dry/warm" />
+		<record from="sun" to="graphics/weather/breezy/dry/hot" />
+		<record from="sun" to="graphics/weather/breezy/dry/very hot" />
+
+		<record from="wet" to="graphics/weather/breezy/wet/freezing" />
+		<record from="wet" to="graphics/weather/breezy/wet/cold" />
+		<record from="wet" to="graphics/weather/breezy/wet/mild" />
+		<record from="wet" to="graphics/weather/breezy/wet/fine" />
+		<record from="wet sun" to="graphics/weather/breezy/wet/warm" />
+		<record from="wet sun" to="graphics/weather/breezy/wet/hot" />
+		<record from="wet sun" to="graphics/weather/breezy/wet/very hot" />
+
+		<record from="drizzle" to="graphics/weather/breezy/drizzle/freezing" />
+		<record from="drizzle" to="graphics/weather/breezy/drizzle/cold" />
+		<record from="drizzle" to="graphics/weather/breezy/drizzle/mild" />
+		<record from="drizzle" to="graphics/weather/breezy/drizzle/fine" />
+		<record from="drizzle sun" to="graphics/weather/breezy/drizzle/warm" />
+		<record from="drizzle sun" to="graphics/weather/breezy/drizzle/hot" />
+		<record from="drizzle sun" to="graphics/weather/breezy/drizzle/very hot" />
+
+		<record from="shower" to="graphics/weather/breezy/shower/freezing" />
+		<record from="shower" to="graphics/weather/breezy/shower/cold" />
+		<record from="shower" to="graphics/weather/breezy/shower/mild" />
+		<record from="shower" to="graphics/weather/breezy/shower/fine" />
+		<record from="shower sun" to="graphics/weather/breezy/shower/warm" />
+		<record from="shower sun" to="graphics/weather/breezy/shower/hot" />
+		<record from="shower sun" to="graphics/weather/breezy/shower/very hot" />
+
+		<record from="rain" to="graphics/weather/breezy/rain/freezing" />
+		<record from="rain" to="graphics/weather/breezy/rain/cold" />
+		<record from="rain" to="graphics/weather/breezy/rain/mild" />
+		<record from="rain" to="graphics/weather/breezy/rain/fine" />
+		<record from="rain sun" to="graphics/weather/breezy/rain/warm" />
+		<record from="rain sun" to="graphics/weather/breezy/rain/hot" />
+		<record from="rain sun" to="graphics/weather/breezy/rain/very hot" />
+
+		<record from="downpour" to="graphics/weather/breezy/downpour/freezing" />
+		<record from="downpour" to="graphics/weather/breezy/downpour/cold" />
+		<record from="downpour" to="graphics/weather/breezy/downpour/mild" />
+		<record from="downpour" to="graphics/weather/breezy/downpour/fine" />
+		<record from="downpour sun" to="graphics/weather/breezy/downpour/warm" />
+		<record from="downpour sun" to="graphics/weather/breezy/downpour/hot" />
+		<record from="downpour sun" to="graphics/weather/breezy/downpour/very hot" />
+
+		<record from="sleet" to="graphics/weather/breezy/sleet/freezing" />
+		<record from="sleet" to="graphics/weather/breezy/sleet/cold" />
+		<record from="sleet" to="graphics/weather/breezy/sleet/mild" />
+		<record from="sleet" to="graphics/weather/breezy/sleet/fine" />
+		<record from="sleet sun" to="graphics/weather/breezy/sleet/warm" />
+		<record from="sleet sun" to="graphics/weather/breezy/sleet/hot" />
+		<record from="sleet sun" to="graphics/weather/breezy/sleet/very hot" />
+
+		<record from="hail" to="graphics/weather/breezy/hail/freezing" />
+		<record from="hail" to="graphics/weather/breezy/hail/cold" />
+		<record from="hail" to="graphics/weather/breezy/hail/mild" />
+		<record from="hail" to="graphics/weather/breezy/hail/fine" />
+		<record from="hail sun" to="graphics/weather/breezy/hail/warm" />
+		<record from="hail sun" to="graphics/weather/breezy/hail/hot" />
+		<record from="hail sun" to="graphics/weather/breezy/hail/very hot" />
+
+		<record from="light snow" to="graphics/weather/breezy/light snow/freezing" />
+		<record from="light snow" to="graphics/weather/breezy/light snow/cold" />
+		<record from="light snow" to="graphics/weather/breezy/light snow/mild" />
+		<record from="light snow" to="graphics/weather/breezy/light snow/fine" />
+		<record from="light snow sun" to="graphics/weather/breezy/light snow/warm" />
+		<record from="light snow sun" to="graphics/weather/breezy/light snow/hot" />
+		<record from="light snow sun" to="graphics/weather/breezy/light snow/very hot" />
+
+		<record from="heavy snow" to="graphics/weather/breezy/heavy snow/freezing" />
+		<record from="heavy snow" to="graphics/weather/breezy/heavy snow/cold" />
+		<record from="heavy snow" to="graphics/weather/breezy/heavy snow/mild" />
+		<record from="heavy snow" to="graphics/weather/breezy/heavy snow/fine" />
+		<record from="heavy snow sun" to="graphics/weather/breezy/heavy snow/warm" />
+		<record from="heavy snow sun" to="graphics/weather/breezy/heavy snow/hot" />
+		<record from="heavy snow sun" to="graphics/weather/breezy/heavy snow/very hot" />
+
+		<!-- gusty -->		
+		<record from="dry" to="graphics/weather/gusty/dry/freezing" />
+		<record from="dry" to="graphics/weather/gusty/dry/cold" />
+		<record from="dry sun" to="graphics/weather/gusty/dry/mild" />
+		<record from="dry sun" to="graphics/weather/gusty/dry/fine" />
+		<record from="sun" to="graphics/weather/gusty/dry/warm" />
+		<record from="sun" to="graphics/weather/gusty/dry/hot" />
+		<record from="sun" to="graphics/weather/gusty/dry/very hot" />
+
+		<record from="wet" to="graphics/weather/gusty/wet/freezing" />
+		<record from="wet" to="graphics/weather/gusty/wet/cold" />
+		<record from="wet" to="graphics/weather/gusty/wet/mild" />
+		<record from="wet" to="graphics/weather/gusty/wet/fine" />
+		<record from="wet sun" to="graphics/weather/gusty/wet/warm" />
+		<record from="wet sun" to="graphics/weather/gusty/wet/hot" />
+		<record from="wet sun" to="graphics/weather/gusty/wet/very hot" />
+
+		<record from="drizzle" to="graphics/weather/gusty/drizzle/freezing" />
+		<record from="drizzle" to="graphics/weather/gusty/drizzle/cold" />
+		<record from="drizzle" to="graphics/weather/gusty/drizzle/mild" />
+		<record from="drizzle" to="graphics/weather/gusty/drizzle/fine" />
+		<record from="drizzle sun" to="graphics/weather/gusty/drizzle/warm" />
+		<record from="drizzle sun" to="graphics/weather/gusty/drizzle/hot" />
+		<record from="drizzle sun" to="graphics/weather/gusty/drizzle/very hot" />
+
+		<record from="shower" to="graphics/weather/gusty/shower/freezing" />
+		<record from="shower" to="graphics/weather/gusty/shower/cold" />
+		<record from="shower" to="graphics/weather/gusty/shower/mild" />
+		<record from="shower" to="graphics/weather/gusty/shower/fine" />
+		<record from="shower sun" to="graphics/weather/gusty/shower/warm" />
+		<record from="shower sun" to="graphics/weather/gusty/shower/hot" />
+		<record from="shower sun" to="graphics/weather/gusty/shower/very hot" />
+
+		<record from="rain" to="graphics/weather/gusty/rain/freezing" />
+		<record from="rain" to="graphics/weather/gusty/rain/cold" />
+		<record from="rain" to="graphics/weather/gusty/rain/mild" />
+		<record from="rain" to="graphics/weather/gusty/rain/fine" />
+		<record from="rain sun" to="graphics/weather/gusty/rain/warm" />
+		<record from="rain sun" to="graphics/weather/gusty/rain/hot" />
+		<record from="rain sun" to="graphics/weather/gusty/rain/very hot" />
+
+		<record from="downpour" to="graphics/weather/gusty/downpour/freezing" />
+		<record from="downpour" to="graphics/weather/gusty/downpour/cold" />
+		<record from="downpour" to="graphics/weather/gusty/downpour/mild" />
+		<record from="downpour" to="graphics/weather/gusty/downpour/fine" />
+		<record from="downpour sun" to="graphics/weather/gusty/downpour/warm" />
+		<record from="downpour sun" to="graphics/weather/gusty/downpour/hot" />
+		<record from="downpour sun" to="graphics/weather/gusty/downpour/very hot" />
+
+		<record from="sleet" to="graphics/weather/gusty/sleet/freezing" />
+		<record from="sleet" to="graphics/weather/gusty/sleet/cold" />
+		<record from="sleet" to="graphics/weather/gusty/sleet/mild" />
+		<record from="sleet" to="graphics/weather/gusty/sleet/fine" />
+		<record from="sleet sun" to="graphics/weather/gusty/sleet/warm" />
+		<record from="sleet sun" to="graphics/weather/gusty/sleet/hot" />
+		<record from="sleet sun" to="graphics/weather/gusty/sleet/very hot" />
+
+		<record from="hail" to="graphics/weather/gusty/hail/freezing" />
+		<record from="hail" to="graphics/weather/gusty/hail/cold" />
+		<record from="hail" to="graphics/weather/gusty/hail/mild" />
+		<record from="hail" to="graphics/weather/gusty/hail/fine" />
+		<record from="hail sun" to="graphics/weather/gusty/hail/warm" />
+		<record from="hail sun" to="graphics/weather/gusty/hail/hot" />
+		<record from="hail sun" to="graphics/weather/gusty/hail/very hot" />
+
+		<record from="light snow" to="graphics/weather/gusty/light snow/freezing" />
+		<record from="light snow" to="graphics/weather/gusty/light snow/cold" />
+		<record from="light snow" to="graphics/weather/gusty/light snow/mild" />
+		<record from="light snow" to="graphics/weather/gusty/light snow/fine" />
+		<record from="light snow sun" to="graphics/weather/gusty/light snow/warm" />
+		<record from="light snow sun" to="graphics/weather/gusty/light snow/hot" />
+		<record from="light snow sun" to="graphics/weather/gusty/light snow/very hot" />
+
+		<record from="heavy snow" to="graphics/weather/gusty/heavy snow/freezing" />
+		<record from="heavy snow" to="graphics/weather/gusty/heavy snow/cold" />
+		<record from="heavy snow" to="graphics/weather/gusty/heavy snow/mild" />
+		<record from="heavy snow" to="graphics/weather/gusty/heavy snow/fine" />
+		<record from="heavy snow sun" to="graphics/weather/gusty/heavy snow/warm" />
+		<record from="heavy snow sun" to="graphics/weather/gusty/heavy snow/hot" />
+		<record from="heavy snow sun" to="graphics/weather/gusty/heavy snow/very hot" />
+
+		<!-- strong -->		
+		<record from="dry" to="graphics/weather/strong/dry/freezing" />
+		<record from="dry" to="graphics/weather/strong/dry/cold" />
+		<record from="dry sun" to="graphics/weather/strong/dry/mild" />
+		<record from="dry sun" to="graphics/weather/strong/dry/fine" />
+		<record from="sun" to="graphics/weather/strong/dry/warm" />
+		<record from="sun" to="graphics/weather/strong/dry/hot" />
+		<record from="sun" to="graphics/weather/strong/dry/very hot" />
+
+		<record from="wet" to="graphics/weather/strong/wet/freezing" />
+		<record from="wet" to="graphics/weather/strong/wet/cold" />
+		<record from="wet" to="graphics/weather/strong/wet/mild" />
+		<record from="wet" to="graphics/weather/strong/wet/fine" />
+		<record from="wet sun" to="graphics/weather/strong/wet/warm" />
+		<record from="wet sun" to="graphics/weather/strong/wet/hot" />
+		<record from="wet sun" to="graphics/weather/strong/wet/very hot" />
+
+		<record from="drizzle" to="graphics/weather/strong/drizzle/freezing" />
+		<record from="drizzle" to="graphics/weather/strong/drizzle/cold" />
+		<record from="drizzle" to="graphics/weather/strong/drizzle/mild" />
+		<record from="drizzle" to="graphics/weather/strong/drizzle/fine" />
+		<record from="drizzle sun" to="graphics/weather/strong/drizzle/warm" />
+		<record from="drizzle sun" to="graphics/weather/strong/drizzle/hot" />
+		<record from="drizzle sun" to="graphics/weather/strong/drizzle/very hot" />
+
+		<record from="shower" to="graphics/weather/strong/shower/freezing" />
+		<record from="shower" to="graphics/weather/strong/shower/cold" />
+		<record from="shower" to="graphics/weather/strong/shower/mild" />
+		<record from="shower" to="graphics/weather/strong/shower/fine" />
+		<record from="shower sun" to="graphics/weather/strong/shower/warm" />
+		<record from="shower sun" to="graphics/weather/strong/shower/hot" />
+		<record from="shower sun" to="graphics/weather/strong/shower/very hot" />
+
+		<record from="rain" to="graphics/weather/strong/rain/freezing" />
+		<record from="rain" to="graphics/weather/strong/rain/cold" />
+		<record from="rain" to="graphics/weather/strong/rain/mild" />
+		<record from="rain" to="graphics/weather/strong/rain/fine" />
+		<record from="rain sun" to="graphics/weather/strong/rain/warm" />
+		<record from="rain sun" to="graphics/weather/strong/rain/hot" />
+		<record from="rain sun" to="graphics/weather/strong/rain/very hot" />
+
+		<record from="downpour" to="graphics/weather/strong/downpour/freezing" />
+		<record from="downpour" to="graphics/weather/strong/downpour/cold" />
+		<record from="downpour" to="graphics/weather/strong/downpour/mild" />
+		<record from="downpour" to="graphics/weather/strong/downpour/fine" />
+		<record from="downpour sun" to="graphics/weather/strong/downpour/warm" />
+		<record from="downpour sun" to="graphics/weather/strong/downpour/hot" />
+		<record from="downpour sun" to="graphics/weather/strong/downpour/very hot" />
+
+		<record from="sleet" to="graphics/weather/strong/sleet/freezing" />
+		<record from="sleet" to="graphics/weather/strong/sleet/cold" />
+		<record from="sleet" to="graphics/weather/strong/sleet/mild" />
+		<record from="sleet" to="graphics/weather/strong/sleet/fine" />
+		<record from="sleet sun" to="graphics/weather/strong/sleet/warm" />
+		<record from="sleet sun" to="graphics/weather/strong/sleet/hot" />
+		<record from="sleet sun" to="graphics/weather/strong/sleet/very hot" />
+
+		<record from="hail" to="graphics/weather/strong/hail/freezing" />
+		<record from="hail" to="graphics/weather/strong/hail/cold" />
+		<record from="hail" to="graphics/weather/strong/hail/mild" />
+		<record from="hail" to="graphics/weather/strong/hail/fine" />
+		<record from="hail sun" to="graphics/weather/strong/hail/warm" />
+		<record from="hail sun" to="graphics/weather/strong/hail/hot" />
+		<record from="hail sun" to="graphics/weather/strong/hail/very hot" />
+
+		<record from="light snow" to="graphics/weather/strong/light snow/freezing" />
+		<record from="light snow" to="graphics/weather/strong/light snow/cold" />
+		<record from="light snow" to="graphics/weather/strong/light snow/mild" />
+		<record from="light snow" to="graphics/weather/strong/light snow/fine" />
+		<record from="light snow sun" to="graphics/weather/strong/light snow/warm" />
+		<record from="light snow sun" to="graphics/weather/strong/light snow/hot" />
+		<record from="light snow sun" to="graphics/weather/strong/light snow/very hot" />
+
+		<record from="heavy snow" to="graphics/weather/strong/heavy snow/freezing" />
+		<record from="heavy snow" to="graphics/weather/strong/heavy snow/cold" />
+		<record from="heavy snow" to="graphics/weather/strong/heavy snow/mild" />
+		<record from="heavy snow" to="graphics/weather/strong/heavy snow/fine" />
+		<record from="heavy snow sun" to="graphics/weather/strong/heavy snow/warm" />
+		<record from="heavy snow sun" to="graphics/weather/strong/heavy snow/hot" />
+		<record from="heavy snow sun" to="graphics/weather/strong/heavy snow/very hot" />
+
+		<!-- gale -->		
+		<record from="dry" to="graphics/weather/gale/dry/freezing" />
+		<record from="dry" to="graphics/weather/gale/dry/cold" />
+		<record from="dry sun" to="graphics/weather/gale/dry/mild" />
+		<record from="dry sun" to="graphics/weather/gale/dry/fine" />
+		<record from="sun" to="graphics/weather/gale/dry/warm" />
+		<record from="sun" to="graphics/weather/gale/dry/hot" />
+		<record from="sun" to="graphics/weather/gale/dry/very hot" />
+
+		<record from="wet" to="graphics/weather/gale/wet/freezing" />
+		<record from="wet" to="graphics/weather/gale/wet/cold" />
+		<record from="wet" to="graphics/weather/gale/wet/mild" />
+		<record from="wet" to="graphics/weather/gale/wet/fine" />
+		<record from="wet sun" to="graphics/weather/gale/wet/warm" />
+		<record from="wet sun" to="graphics/weather/gale/wet/hot" />
+		<record from="wet sun" to="graphics/weather/gale/wet/very hot" />
+
+		<record from="drizzle" to="graphics/weather/gale/drizzle/freezing" />
+		<record from="drizzle" to="graphics/weather/gale/drizzle/cold" />
+		<record from="drizzle" to="graphics/weather/gale/drizzle/mild" />
+		<record from="drizzle" to="graphics/weather/gale/drizzle/fine" />
+		<record from="drizzle sun" to="graphics/weather/gale/drizzle/warm" />
+		<record from="drizzle sun" to="graphics/weather/gale/drizzle/hot" />
+		<record from="drizzle sun" to="graphics/weather/gale/drizzle/very hot" />
+
+		<record from="shower" to="graphics/weather/gale/shower/freezing" />
+		<record from="shower" to="graphics/weather/gale/shower/cold" />
+		<record from="shower" to="graphics/weather/gale/shower/mild" />
+		<record from="shower" to="graphics/weather/gale/shower/fine" />
+		<record from="shower sun" to="graphics/weather/gale/shower/warm" />
+		<record from="shower sun" to="graphics/weather/gale/shower/hot" />
+		<record from="shower sun" to="graphics/weather/gale/shower/very hot" />
+
+		<record from="rain" to="graphics/weather/gale/rain/freezing" />
+		<record from="rain" to="graphics/weather/gale/rain/cold" />
+		<record from="rain" to="graphics/weather/gale/rain/mild" />
+		<record from="rain" to="graphics/weather/gale/rain/fine" />
+		<record from="rain sun" to="graphics/weather/gale/rain/warm" />
+		<record from="rain sun" to="graphics/weather/gale/rain/hot" />
+		<record from="rain sun" to="graphics/weather/gale/rain/very hot" />
+
+		<record from="downpour" to="graphics/weather/gale/downpour/freezing" />
+		<record from="downpour" to="graphics/weather/gale/downpour/cold" />
+		<record from="downpour" to="graphics/weather/gale/downpour/mild" />
+		<record from="downpour" to="graphics/weather/gale/downpour/fine" />
+		<record from="downpour sun" to="graphics/weather/gale/downpour/warm" />
+		<record from="downpour sun" to="graphics/weather/gale/downpour/hot" />
+		<record from="downpour sun" to="graphics/weather/gale/downpour/very hot" />
+
+		<record from="sleet" to="graphics/weather/gale/sleet/freezing" />
+		<record from="sleet" to="graphics/weather/gale/sleet/cold" />
+		<record from="sleet" to="graphics/weather/gale/sleet/mild" />
+		<record from="sleet" to="graphics/weather/gale/sleet/fine" />
+		<record from="sleet sun" to="graphics/weather/gale/sleet/warm" />
+		<record from="sleet sun" to="graphics/weather/gale/sleet/hot" />
+		<record from="sleet sun" to="graphics/weather/gale/sleet/very hot" />
+
+		<record from="hail" to="graphics/weather/gale/hail/freezing" />
+		<record from="hail" to="graphics/weather/gale/hail/cold" />
+		<record from="hail" to="graphics/weather/gale/hail/mild" />
+		<record from="hail" to="graphics/weather/gale/hail/fine" />
+		<record from="hail sun" to="graphics/weather/gale/hail/warm" />
+		<record from="hail sun" to="graphics/weather/gale/hail/hot" />
+		<record from="hail sun" to="graphics/weather/gale/hail/very hot" />
+
+		<record from="light snow" to="graphics/weather/gale/light snow/freezing" />
+		<record from="light snow" to="graphics/weather/gale/light snow/cold" />
+		<record from="light snow" to="graphics/weather/gale/light snow/mild" />
+		<record from="light snow" to="graphics/weather/gale/light snow/fine" />
+		<record from="light snow sun" to="graphics/weather/gale/light snow/warm" />
+		<record from="light snow sun" to="graphics/weather/gale/light snow/hot" />
+		<record from="light snow sun" to="graphics/weather/gale/light snow/very hot" />
+
+		<record from="heavy snow" to="graphics/weather/gale/heavy snow/freezing" />
+		<record from="heavy snow" to="graphics/weather/gale/heavy snow/cold" />
+		<record from="heavy snow" to="graphics/weather/gale/heavy snow/mild" />
+		<record from="heavy snow" to="graphics/weather/gale/heavy snow/fine" />
+		<record from="heavy snow sun" to="graphics/weather/gale/heavy snow/warm" />
+		<record from="heavy snow sun" to="graphics/weather/gale/heavy snow/hot" />
+		<record from="heavy snow sun" to="graphics/weather/gale/heavy snow/very hot" />
+
+	</list>
+
+</record>

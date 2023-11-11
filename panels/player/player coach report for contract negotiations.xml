@@ -1,0 +1,164 @@
+﻿<panel>
+	<flags id="cham" value="tables/custom/league/champions/row" />
+
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom, extend"/>
+
+	<container id="main">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<widget class="link_button_title" auto_size="all" section="Pccr" >
+			<translation id="text" translation_id="316844" type="use" value="Coach Report[COMMENT; coach reports section of player profile]" />
+		</widget>
+
+		<container class="bordered_box_no_margin" id="trif" height="55">
+			<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="20" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="5" apply_to_children="true" />
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="2" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="label" alignment="left" auto_size="vertical" spec="text" size="10" colour="disabled">
+					<translation id="text" translation_id="335037" type="use" value="Estimated Cost[COMMENT: scout report panel label]" />
+				</widget>
+
+				<widget class="label" id="esco" style="semi_bold" size="12" alignment="left" auto_size="vertical">
+
+				</widget>
+
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="2" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="label" alignment="left" auto_size="vertical" spec="text" size="10" colour="disabled">
+					<translation id="text" translation_id="335516" type="use" value="Wage Demands[COMMENT: scout report panel label]" />
+				</widget>
+
+				<widget class="label" id="wade" style="semi_bold" size="12" alignment="left" auto_size="vertical">
+				</widget>
+
+			</container>
+
+		</container>
+		
+	  <container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<container class="tabbed_container" id="tabc" default_item="attr" save_session_state="true" inset="0" offset="0">
+						
+						<container id="attr">
+							<translation id="title" translation_id="229822" type="use" value="Attributes" />
+
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
+
+							<widget class="player_attributes_panel" file="attributes/gunzo player attributes panel1">
+								<record id="object_property" get_property="Pers" set_property="objt" />
+							</widget>
+
+						</container>
+
+						<container id="prcn">
+							<!--<record id="object_property" get_property="HSrt" set_property="ithd" />-->
+
+							<translation id="title" translation_id="316845" type="use" value="Scout Report[COMMENT: Panel title for when viewing a scout report]" />
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
+
+							<widget class="player_scout_reports_panel" file="player/player scout reports pro con only">
+								<record id="object_property" get_property="Pers" set_property="objt" />
+							</widget>
+
+						</container>
+
+						<container id="pacn">
+							<!--<record id="object_property" get_property="HArt" set_property="ithd" />-->
+
+							<translation id="title" translation_id="447607" type="use" value="Analyst Report[COMMENT: Panel title for when viewing analyst report]" />
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
+
+							<widget class="player_data_analyst_report_panel" file="player/player analyst reports role analysis only">
+								<record id="object_property" get_property="Pers" set_property="objt" />
+							</widget>
+
+						</container>
+
+						<container id="psrl">
+							<translation id="title" translation_id="466570" type="use" value="Position and Role[COMMENT: FR 22655, scouting centre recommendation, section title for part of report that shows a player's position and role]" />
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
+
+							<widget class="player_positions_indicator_panel" id="Ppos" file="player/player positions indicator scout card">
+								<record id="object_property" get_property="Pers" set_property="objt" />
+							</widget>
+						</container>
+						
+						<container id="medi">
+							<!--<record id="object_property" get_property="HMdt" set_property="ithd" />-->
+							<translation id="title" translation_id="422164" type="use" value="Medical[COMMENT:Job Centre- Medical team sub-section]" />
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
+							<widget class="player_injury_panel" id="Injp" file="attributes/player injury panel">
+								<record id="object_property" get_property="Pers" set_property="objt" />
+							</widget>
+						</container>
+					</container>
+    			</container>
+
+	</container>
+
+	<container class="bordered_box">
+		<attachment_group class="vertical_arrange_autosize"/>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize"/>
+
+			<widget class="text" auto_size="all" id="suml" font="title" colour="accent">
+				<translation id="text" translation_id="378663" type="use" value="Coach Summary[COMMENT: bug 102206, report screen label, Coach Report summary section]" />
+			</widget>
+		</container>
+	
+		<widget class="text" id="SMtx" alignment="left,centre_y" auto_size="vertical" colour="text" multiline="true">
+		</widget>
+
+		<container class="inner_subtle_box_no_margin" height="35">
+			<layout class="arrange_horizontal_attachment" layout="-1,1,-1" offset="4" gap="6" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1,75" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<widget class="text" alignment="left,centre_y">
+					<translation id="text" translation_id="251893" type="use" value="Current Ability[COMMENT: scout report panel box heading]" />
+				</widget>
+
+				<widget class="scout_stars_label" id="CAic" alignment="right,centre_y" navigation_focus_target="false">
+
+				</widget>
+
+			</container>
+
+
+			<widget class="vertical_divider"/>
+
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1,75" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<widget class="text" alignment="left,centre_y">
+					<translation id="text" translation_id="251894" type="use" value="Potential Ability[COMMENT: scout report panel box heading]" />
+				</widget>
+
+				<widget class="scout_stars_label" id="PAic" alignment="right,centre_y" navigation_focus_target="false">
+
+				</widget>
+
+			</container>
+
+		</container>
+
+		
+	</container>
+
+</panel>

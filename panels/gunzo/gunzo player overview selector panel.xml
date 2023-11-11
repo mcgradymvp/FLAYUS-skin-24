@@ -1,0 +1,75 @@
+<panel>
+  <container id="SUBP" class="inner_box_no_margin" >
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+  </container>
+
+  <widget class="popup_button" id="popv"  auto_size="horizontal" height="20" click_event="msis" appearance="buttons/custom/customise panel/button" fixed="true" navigation_focus_target="true">
+    <layout class="stick_to_sides_attachment" alignment="right,top" inset="0"/>
+
+    <!-- This is a bit clumsy but I can't think of a better way without using equally clumsy code -->
+    <!-- Animation to 'hide' the widget by drawing it out of the clipping area -->
+    <!--<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="100.0,0.0" end_value="100.0,0.0" duration="0.1" end_mode="hold_end" apply_to_mouse="false"/>-->
+    <!-- Animations to move it back and fade it in when moused over  -->
+    <!--<animation class="translate_animation" trigger_start="msen" trigger_end="msex" start_value="-100.0,0.0" end_value="-100.0,0.0" duration="0.01" end_mode="hold_auto_reverse" apply_to_mouse="false"/>-->
+    <!--<animation class="fade_animation" trigger_start="msen" trigger_end="msex" start_value="0.0" end_value="1.0" duration="0.4" end_mode="hold_auto_reverse"/>-->
+  </widget>
+	<widget class="preferred_moves_panel" id="pfmp" file="player/player information preferred moves" late_loading="true">
+		<translation id="title" translation_id="229993" type="use" value="Preferred Moves" />
+	</widget>	 
+  <widget class="person_history_biography_panel" id="phb1" file="person/person history biography no title" late_loading="true">
+    <translation id="title" translation_id="295868" type="use" value="Biography[COMMENT: player history panel; title of biography titled box]" />
+  </widget>
+  <widget class="player_scout_reports_panel" id="pscR" file="player/player scout report comparison small1" late_loading="true">
+    <translation id="title" translation_id="248428" type="use" value="Comparison" />
+  </widget>
+  <widget file="player/player attribute analyser panel" id="paAn" class="client_object_viewer_xml_panel" late_loading="true">
+    <translation id="title" translation_id="334971" type="use" value="Attribute Analysis[COMMENT: player overview; title for a panel showing an attribute analyisis diagram]" />
+  </widget>
+	<widget class="player_scout_reports_panel" id="gprt" file="gunzo/gunzo player reports rd" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
+		<translation id="title" translation_id="248079" type="use" value="Report" />
+	</widget>     
+
+	<widget class="player_positions_indicator_panel" id="gzp2" file="gunzo/gunzo player positions indicator profile1" late_loading="true">
+		<translation id="title" translation_id="230082" type="use" value="Positions" />
+		<record id="object_property" get_property="objt" set_property="objt"/>  
+	</widget> 
+
+  	<widget class="player_history_achievements_panel" id="pac1" file="player/player history achievements small" late_loading="true">
+		<translation id="title" translation_id="329749" type="use" value="Career Achievements" />
+	</widget>
+
+	<widget class="player_training_stats_panel" id="pitf" late_loading="true" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
+		<translation id="title" translation_id="363655" type="use" value="Individual training[COMMENT: training players panel, column heading for Individual Training Focus]" />
+	</widget>  
+
+	<widget class="client_object_viewer_xml_panel" file="player/player attribute analyser panel" id="paAn" late_loading="true">
+		<translation id="title" translation_id="334971" type="use" value="Attribute Analysis[COMMENT: player overview; title for a panel showing an attribute analyisis diagram]" />
+	</widget>
+	
+	<widget class="client_object_viewer_xml_panel" file="gunzo/gunzo attribute analyser panel6" id="att4" late_loading="true">
+		<translation id="title" translation_id="334971" type="use" value="Attribute Analysis[COMMENT: player overview; title for a panel showing an attribute analyisis diagram]" />
+		<record id="object_property" get_property="objt" set_property="objt"/>
+	</widget>   
+	<widget class="player_scout_reports_panel" file="gunzo/gunzo player stats1" id="pc1a" late_loading="true">
+		<translation id="title" type="use" value="전반적인 기록" />
+	</widget>   
+	<widget class="playing_history_summary_panel" file="gunzo/playing history summary small" id="Pcrs" late_loading="true">
+		<translation id="title" translation_id="247605" type="use" value="Career Stats" />
+	</widget>
+
+	<widget class="player_transfer_interest_panel" id="manC" file="player/player transfer interest panel2" late_loading="true">
+		<translation id="title" translation_id="383284" type="use" value="Clubs Interested[COMMENT: FR 10253, player overview; trandfers sub panel; label for number of clubs interested in a player]" />
+	</widget> 
+	<widget class="player_games_in_position_panel" id="ptgs" file="gunzo/gunzo games played in position1" late_loading="true">
+		<translation id="title" translation_id="257322" type="use" value="Games Played In Position" />
+	</widget> 
+	<widget class="player_personal_details_panel" id="ifo1" file="gunzo/gunzo person personal information" late_loading="true">
+		<translation id="title" type="use" value="GZ info 1" />
+	</widget> 
+
+	<widget class="player_personal_details_panel" id="ifo2" file="gunzo/gunzo person personal information1" late_loading="true">
+		<translation id="title" type="use" value="GZ info 2" />
+	</widget>
+
+</panel>

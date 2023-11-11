@@ -1,0 +1,22 @@
+<panel >
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="horizontal_adaptive_container" alignment="middle" inset="0" offset="0" gap="0">
+
+		<widget class="condition_label" size="xsmall" alignment="right,centre_y,can_scale" id="CDLB" default_width="-1" minimum_width="18" />
+
+		<container width="24" priority="1">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+			<!--the way layout works for donut chart is a replacement for donut_line_width, the first value is the prportion
+    for the centre empty space the second value for the line width and the third/rest of values for the gap in the
+    outer space of the donut chart-->
+			<widget class="percentage_pie_chart" id="piec" max_value="100" is_donut_chart="true" layout="-1,2,1"/>
+			<widget class="percentage_pie_chart" id="inPI" max_value="100" is_donut_chart="true" layout="-1,2,5"/>
+		</container>
+
+		<widget class="condition_label" size="xsmall" alignment="left,centre_y,can_scale" id="FTLB" default_width="-1" minimum_width="18" />
+
+	</container>
+</panel>

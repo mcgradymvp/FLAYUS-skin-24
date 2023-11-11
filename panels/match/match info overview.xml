@@ -1,0 +1,68 @@
+<panel info_panel_type="1">
+<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+<container class="inner_box">
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container>
+		<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		   <record id="default_properties" spec="text,small" alignment="left,centre_x" />
+		
+			<widget class="date_cell" id="date" format="[%date#1-short] [%date#1-time]" colour="white" auto_size="vertical">
+				<record id="object_property">
+					<integer id="get_property" value="fxdt" />
+				</record>
+			</widget>
+
+			<widget class="label" id="attl" alignment="left,centre_y" auto_size="vertical" multiline="true" size="small" colour="white"/>
+				
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="fixture_name_text" id="fxnm" alignment="centre_x,can_scale" spec="text,large" size="large" colour="gzc1" auto_size="vertical">
+				<record id="object_property">
+				<integer id="get_property" value="FxNm" />
+				</record>
+			</widget>		
+
+        <widget class="text" id="stad" alignment="centre_x,can_scale" auto_size="vertical" colour="lime 100" multiline="false"/>
+        </container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="referee_strictness_label" id="reff" spec="text,normal" alignment="centre" auto_size="vertical" colour="white">
+				<translation id="format" translation_id="332843" type="use" value="Referee: [%string#1][COMMENT: string to how strict the referee is]" />
+			</widget>
+	</container>	
+	</container>	
+	
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-10,-1,-10" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<!--  home incidents panel -->
+		<widget class="home_match_incidents_panel" id="hmip" small_version="true" file="match/match incidents overview left" />
+
+		<container/>
+		
+		<!--  away incidents panel -->
+		<widget class="away_match_incidents_panel" id="amip" small_version="true" file="match/match incidents overview right" />
+
+	</container>
+</container>
+</panel>

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+  <layout class="arrange_vertical_attachment" layout="35,-1" offset="0" gap="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+  <container class="icon_box" icon="icons/custom/icon box/info">
+    <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	  <container height="25">
+      <layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+      
+      <string id="skin_style" value="title link" />
+
+      <!-- Linked header -->
+      
+      <widget class="link_button" section="Ppin" auto_size="all">
+         <translation id="text" type="use" value="GZ info 1" />
+      </widget>
+    </container>  
+   </container>
+   
+   	<container class="scrolling_box">
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+			<widget class="client_object_label_value_table" id="infp" auto_size="horizontal">
+	            <record id="table_properties" layout="-1, -2" mode="fill_rows, stripe_rows" auto_size_rows="true" fixed_size_rows="false" row_spacing="5">
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" spec="text" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0" left="0" sort_disabled="true" />
+						<record indx="1" left="8" sort_disabled="true" auto_size="vertical"/>
+					</list>
+				</record>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+
+				<list id="viewed_property_ids">
+										<integer value="Pfln" /><!--풀네임-->
+										<integer value="Pdob" /><!--생일-->
+										<integer value="Pntn" /><!--국적-->
+										<integer value="Psnt" /><!--2차국적-->
+										<integer value="PReg" /><!--출생지-->									
+										<integer value="Pcob" /><!--출생지-->										
+										<integer value="Lang" /><!--언어-->
+										<integer value="Pcqu" /><!--코치자격-->
+										<integer value="Ppsq" /><!--선호등번호-->
+										<integer value="Phcl" /> <!--머리색-->
+										<integer value="Phln" /> <!--머리길이-->
+										<integer value="Pskt" /> <!--피부색-->
+				</list>
+
+			</widget>
+	   
+   </container>
+</panel>

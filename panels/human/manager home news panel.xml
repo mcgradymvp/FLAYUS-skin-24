@@ -1,0 +1,88 @@
+<panel number_of_stories_to_request="20" Gtop="false">
+  <layout class="arrange_vertical_attachment" alignment="top, extend" gap="6" offset="0" do_not_size="true" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+   
+  <widget class="formatted_label" id="none" multiline="true" alignment="centre_x, top" font="fonts/letterpressed" size="xxlarge" hidden="true">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="10" />
+
+    <!-- Choose string based on object type -->
+    <list id="format">
+      <record value="3">
+        <translation id="format" translation_id="395482" type="use" value="There is currently no news to display for this club.[COMMENT:FR 11005; FM news panel; String displayed when there is not yet any news to display to user]" />
+      </record>
+      <record value="5">
+        <translation id="format" translation_id="395484" type="use" value="There is currently no news to display for this continent.[COMMENT:FR 11005; FM news panel; String displayed when there is not yet any news to display to user]" />
+      </record>
+      <record value="9">
+        <translation id="format" translation_id="395485" type="use" value="There is currently no news to display for this nation.[COMMENT:FR 11005; FM news panel; String displayed when there is not yet any news to display to user]" />
+      </record>
+      <record value="25">
+        <translation id="format" translation_id="395483" type="use" value="There is currently no news to display for this competition.[COMMENT:FR 11005; FM news panel; String displayed when there is not yet any news to display to user]" />
+      </record>
+      <record default_value="true">
+        <translation id="format" translation_id="388376" type="use" value="There is currently no news to display.[COMMENT:FMC competition news; String displayed when there is not yet any news to display to user in the currently selected category]" />
+      </record>
+    </list>
+  </widget>
+
+  <!-- Main headline at the top -->
+  <container class="inner_box" height="165">
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4" />
+
+    <container class="competition_news_item_panel" index="0">
+      <layout class="arrange_vertical_attachment" alignment="top, extend" gap="2" offset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+
+      <!-- Story title -->
+		<widget class="text" id="titl" auto_size="vertical" multiline="true" alignment="left, centre_y" style="bold" size="large">
+			<record id="auto_size_restrictions">
+				<string id="type" value="value" />
+				<string id="limit_type" value="maximum" />
+				<integer id="value" value="42" />
+				<string id="orientation" value="vertical" />
+			</record>
+		</widget>
+
+      <container>
+        <layout class="arrange_horizontal_attachment" alignment="left, extend" gap="10" offset="0"/>
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+        <!-- News image -->
+        <container width="120">
+          <layout class="arrange_vertical_attachment" layout="72, -1" gap="6" offset="0"/>
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+          <container>
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+            <widget class="competition_news_image_panel" id="impl"/>
+          </container>
+
+          <!-- show news item age -->
+          <widget class="text" id="date" colour="faded alt text" size="small" alignment="left,top"/>
+        </container>
+
+        <!-- Full news text -->
+        <widget class="text" id="news" colour="faded alt text"/>
+      </container>
+    </container>
+  </container>
+
+  <container class="vertical_adaptive_container" gap="5" inset="0" offset="0">
+    <container class="competition_news_item_panel" file="competition/competition news item small" index="1"   height="22"/>
+    <container class="competition_news_item_panel" file="competition/competition news item small" index="2"   height="22"/>
+    <container class="competition_news_item_panel" file="competition/competition news item small" index="3"   height="22"/>
+    <container class="competition_news_item_panel" file="competition/competition news item small" index="4"   height="22"/>
+    <container class="competition_news_item_panel" file="competition/competition news item small" index="5"   height="22"/>
+    <container class="competition_news_item_panel" file="competition/competition news item small" index="6"   height="22"/>
+    <container class="competition_news_item_panel" file="competition/competition news item small" index="7"   height="22"/>
+    <container class="competition_news_item_panel" file="competition/competition news item small" index="8"   height="22"/>
+    <container class="competition_news_item_panel" file="competition/competition news item small" index="9"   height="22"/>
+    <container class="competition_news_item_panel" file="competition/competition news item small" index="10"  height="22"/>
+    <container class="competition_news_item_panel" file="competition/competition news item small" index="11"  height="22"/>
+    <container class="competition_news_item_panel" file="competition/competition news item small" index="12"  height="22"/>
+    <container class="competition_news_item_panel" file="competition/competition news item small" index="13"  height="22"/>
+    <container class="competition_news_item_panel" file="competition/competition news item small" index="14"  height="22"/>
+    <container class="competition_news_item_panel" file="competition/competition news item small" index="15"  height="22"/>
+  </container>
+</panel>

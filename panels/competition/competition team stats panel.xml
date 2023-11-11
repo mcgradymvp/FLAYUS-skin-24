@@ -1,0 +1,297 @@
+<!-- A panel used for displaying a ranked list of stats about players in a competition -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<widget class="text" id="nomt" alignment="centre_x,top" hidden="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="20" />
+		<translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+	</widget>
+
+	<!-- Table showing the data-->
+	<widget class="object_list_table" id="stat" mode="stripe_rows" auto_size_rows="false" fixed_size_rows="false" row_spacing="0" should_force_refresh="true" fixed_row_height="18" row_height="50" force_refresh_on_object_list="true">
+
+		<list id="column_table_properties">
+			<!-- Ranking -->
+			<record id="csRS" width="40" auto_hide_priority="1" left="5">
+				<record id="widget_info" class="sortable_text" size="large" style="bold" alignment="left,centre_y"/>
+			</record>
+			<!-- Team badge-->
+			<record id="badg" width="32" auto_hide_priority="1">
+				<record id="widget_info" class="object_portrait_picture" scale_picture="true" image_alignment="centre" height="50"/>
+			</record>
+			<!-- Team name -->
+			<record id="Ttea" width="800" auto_hide_priority="1" dont_set_object="true" left="10">
+				<record id="widget_info" class="team_button" icon_enabled="false"/>
+				<record id="column_heading"/>
+			</record>
+			<!-- Short stat value -->
+			<record id="csSS" width="60" auto_hide_priority="3">
+				<record id="widget_info" class="label" size="large" style="bold" alignment="centre"/>
+				<record id="column_heading" alignment="centre">
+					<translation id="text" translation_id="252894" type="use" value="Goals[COMMENT: team stat overall goals scored, short title]" />
+				</record>
+			</record>
+			<!-- Long stat value (only used for penalties) -->
+			<record id="csLS" width="100" auto_hide_priority="3">
+				<record id="widget_info" class="label" size="large" style="bold" alignment="centre"/>
+				<record id="column_heading" alignment="centre">
+					<translation id="text" translation_id="252894" type="use" value="Goals[COMMENT: team stat overall goals scored, short title]" />
+				</record>
+			</record>
+		</list>
+
+		<list id="views">
+			<!-- General stats -->
+			<!-- Avg Possession -->
+			<record id="0028">
+				<!-- Average Possession (1), Matches Played (2), Passes Completed (3), Pass Completion % (5), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" TpsC="1" TpsP="1" TpoN="1"/>
+			</record>
+			<!-- Penalties -->
+			<record id="0017">
+				<!-- Penalties (1), Matches Played (2), Fouls Made (5), Yellow Cards (6), Red Cards (7), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tpen="1" Tomp="1" Tfow="1" Toyc="1" Torc="1" TpoN="1"/>
+			</record>
+			<!-- Yellow Cards -->
+			<record id="0024">
+				<!-- Yellow Cards (1), Matches Played (2), Fouls Made (3), Red Cards (5), Tackle Completion % (6), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" Tfow="1" Torc="1" TtkP="1" TpoN="1"/>
+			</record>
+			<!-- Red Cards -->
+			<record id="0025">
+				<!-- Red Cards (1), Matches Played (2), Fouls Made (3), Yellow Cards (5), Tackle Completion % (6), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" Tfow="1" Toyc="1" TtkP="1" TpoN="1"/>
+			</record>
+			<!-- Headers Won -->
+			<record id="0034">
+				<!-- Headers Won (1), Matches Played (2), Header Completion % (3), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" ThdP="1" TpoN="1"/>
+			</record>
+			<!-- Header Completion Ratio -->
+			<record id="0035">
+				<!-- Header Completion % (1), Matches Played (2), Headers Won % (3), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" ThdW="1" TpoN="1"/>
+			</record>
+
+			<!-- Form stats -->
+			<!-- Form -->
+			<record id="0005">
+				<!-- Form (1), Home Form (2), Away Form (3), Games Without Losing (5), Games Without Winning (6), Minutes Since Last Goal (7), League Position (4) -->
+				<record id="view" badg="1" Ttea="1" csLS="1" Tshf="1" Tsaf="1" Tgsl="1" Tgww="1" Tmsg="1" TpoN="1"/>
+			</record>
+			<!-- Home Form -->
+			<record id="0006">
+				<!-- Home Form (1), Away Form (3), Form (2), Games Without Losing (5), Games Without Winning (6), Minutes Since Last Goal (7), League Position (4) -->
+				<record id="view" badg="1" Ttea="1" csLS="1" Tsaf="1" Tsof="1" Tgsl="1" Tgww="1" Tmsg="1" TpoN="1"/>
+			</record>
+			<!-- Away Form -->
+			<record id="0007">
+				<!-- Away Form (1), Home Form (2), Form (3), Games Without Losing (5), Games Without Winning (6), Minutes Since Last Goal (7), League Position (4) -->
+				<record id="view" badg="1" Ttea="1" csLS="1" Tshf="1" Tsof="1" Tgsl="1" Tgww="1" Tmsg="1" TpoN="1"/>
+			</record>
+			<!-- Games Won In A Row -->
+			<record id="0008">
+				<!-- Games Won In A Row (1), Games Without Losing (2), Games Scored In A Row (3), Games Without Conceding (5),  League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tgsl="1" Tsir="1" Tgwc="1" TpoN="1"/>
+			</record>
+			<!-- Games Lost In A Row -->
+			<record id="0009">
+				<!-- Games Lost In A Row (1), Games Without Winning (2), Games Without Scoring (3), Minutes Since Last Goal (5), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tgww="1" Tgws="1" Tmsg="1" TpoN="1"/>
+			</record>
+			<!-- Games Scored In A Row -->
+			<record id="0014">
+				<!-- Games Scored In A Row (1), Games Won In A Row (2), Games Without Losing (3), Games Without Conceding (5), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Twir="1" Tgsl="1" Tgwc="1" TpoN="1"/>
+			</record>
+			<!-- Games Without Losing -->
+			<record id="0010">
+				<!-- Games Without Losing (1), Games Won In A Row (2), Games Scored In A Row (3), Games Without Conceding (5), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Twir="1" Tsir="1" Tgwc="1" TpoN="1"/>
+			</record>
+			<!-- Games Without Winning -->
+			<record id="0011">
+				<!-- Games Without Winning (1), Games Lost In A Row (2), Games Without Scoring (3), Minutes Since Last Goal (5), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tlir="1" Tgws="1" Tmsg="1" TpoN="1"/>
+			</record>
+			<!-- Games Without Conceding -->
+			<record id="0012">
+				<!-- Games Without Conceding (1), Games Won In A Row (2), Games Without Losing (3), Games Scored In A Row (5), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Twir="1" Tgsl="1" Tsir="1" TpoN="1"/>
+			</record>
+			<!-- Games Without Scoring -->
+			<record id="0013">
+				<!-- Games Without Scoring (1), Minutes Since Last Goal (2), Games Lost In A Row (3), Games Without Winning (5), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tmsg="1" Tlir="1" Tgww="1" TpoN="1"/>
+			</record>
+			<!-- Minutes Since Last Goal -->
+			<record id="0040">
+				<!-- Minutes Since Last Goal (1), Games Without Scoring (2), Games Lost In A Row (3), Games Without Winning (5), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tgws="1" Tlir="1" Tgww="1" TpoN="1"/>
+			</record>
+
+			<!-- Attacking -->
+			<!-- Goals -->
+			<record id="0015">
+				<!-- Goals (1), Matches Played (2), Goals From Corners (3), Goals From Direct Free Kicks (5), Goals From Indirect Free Kicks (6), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" TgFC="1" tgDK="1" tgIK="1" TpoN="1"/>
+			</record>
+			<!-- Goals From Corners -->
+			<record id="0018">
+				<!-- Goals From Corners (1), Matches Played (2), Goals (3), Goals From Direct Free Kicks (5), Goals From Indirect Free Kicks (6), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" Tsgs="1" tgDK="1" tgIK="1" TpoN="1"/>
+			</record>
+			<!-- Goals From Direct Free Kicks -->
+			<record id="0020">
+				<!-- Goals From Direct Free Kicks (1), Matches Played (2), Goals (3), Goals From Corners (5), Goals From Indirect Free Kicks (6), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" Tsgs="1" TgFC="1" TgIK="1" TpoN="1"/>
+			</record>
+			<!-- Goals From Indirect Free Kicks -->
+			<record id="0019">
+				<!-- Goals From Indirect Free Kicks (1), Matches Played (2), Goals (3), Goals From Corners (6), Goals From Direct Free Kicks (5), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" Tsgs="1" TgFC="1" TgDK="1" TpoN="1"/>
+			</record>
+			<!-- Shots On Target  -->
+			<record id="0038">
+				<!-- Shots On Target (1), Matches Played (2), Shots On Target % (3), Minutes Since Last Goal (5), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" TsoP="1" Tmsg="1" TpoN="1"/>
+			</record>
+			<!-- Shots On Target %  -->
+			<record id="0048">
+				<!-- Shots On Target % (1), Goals(2), Shots Attempted(3), Shots On Target (4), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tsgs="1" TcSA="1" TsoP="1" TpoN="1"/>
+			</record>
+			<!-- Goals to Shots %-->
+			<record id="0039">
+				<!-- Goals to Shots % (1), Matches Played (2), Shots On Target (3), Minutes Since Last Goal (5), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" TsoT="1" Tmsg="1" TpoN="1"/>
+			</record>
+			<!-- Passes Completed  -->
+			<record id="0029">
+				<!-- Passes Completed (1), Matches Played (2), Pass Completion % (3), Average Possession (5), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" TpsP="1" TavP="1" TpoN="1"/>
+			</record>
+			<!-- Pass Completion %  -->
+			<record id="0030">
+				<!-- Pass Completion % (1), Matches Played (2), Passes Completed (3), Average Possession (5), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" TpsC="1" TavP="1" TpoN="1"/>
+			</record>
+			<!-- Chances Created  -->
+			<record id="0047">
+				<!-- Chances Created (1), Matches Played (2), Passes Completed (3), Average Possession (5), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" TpsC="1" TavP="1" TpoN="1"/>
+			</record>
+			<!-- Crosses Succeeded  -->
+			<record id="0036">
+				<!-- Crosses Succeeded (1), Matches Played (2), Cross Completion % (3), Goals (5), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" TcrP="1" Tsgs="1" TpoN="1"/>
+			</record>
+			<!-- Cross Completion %  -->
+			<record id="0037">
+				<!-- Cross Completion % (1), Matches Played (2), Crosses Succeeded (3), Goals (5), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" TcrC="1" Tsgs="1" TpoN="1"/>
+			</record>
+			<!-- Fouls Against -->
+			<record id="0045">
+				<!-- Fouls Against(1), Matches Played (2), Fouls Made (3), Goals From Direct Free Kicks (1), Goals From Indirect Free Kicks (6), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" Tfow="1" TgDK="1" tgIK="1" TpoN="1"/>
+			</record>
+			<!-- Dribbles per game -->
+			<record id="0046">
+				<!-- Dribbles per game (1), Matches Played (2), Average Possession (1), Passes Completed (3), Pass Completion % (5), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" TavP="1" TpsC="1" TpsP="1" TpoN="1"/>
+			</record>
+
+			<!-- Defensive -->
+			<!-- Conceded  -->
+			<record id="0016">
+				<!-- Conceded (1), Matches Played (2), Conceded From Corners (3), Conceded From Direct Free Kicks (5), Conceded From Indirect Free Kicks (6), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" TcFC="1" TcFK="1" TcIK="1" TpoN="1"/>
+			</record>
+			<!-- Conceded From Corners -->
+			<record id="0021">
+				<!-- Conceded From Corners (1), Matches Played (2), Conceded (3), Conceded From Direct Free Kicks (5), Conceded From Indirect Free Kicks (6), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" Tsgc="1" TcFK="1" TcIK="1" TpoN="1"/>
+			</record>
+			<!-- Conceded From Direct Free Kicks -->
+			<record id="0023">
+				<!-- Conceded From Direct Free Kicks (1), Matches Played (2), Conceded (3), Conceded From Corners (5), Conceded From Indirect Free Kicks (6), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" Tsgc="1" TcFC="1" TcIK="1" TpoN="1"/>
+			</record>
+			<!-- Conceded From Indirect Free Kicks -->
+			<record id="0022">
+				<!-- Conceded From Indirect Free Kicks (1), Matches Played (2), Conceded (3), Conceded From Direct Free Kicks (5), Conceded From Corners (6), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" Tsgc="1" TcFC="1" TcFK="1" TpoN="1"/>
+			</record>
+			<!-- Clean Sheets -->
+			<record id="0041">
+				<!-- Clean Sheets (1), Matches Played (2), Conceded (3) Conceded From Corners (5), Conceded From Direct Free Kicks (6), Conceded From Indirect Free Kicks (7), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" Tsgc="1" TcFC="1" TcFK="1" TcIK="1" TpoN="1"/>
+			</record>
+			<!-- Fouls Made -->
+			<record id="0031">
+				<!-- Fouls Made (1), Matches Played (2), Tackles Won (3), Tackle Completion % (5), Yellow Cards (6), Red Cards (7), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" TtkW="1" TtkP="1" Toyc="1" Torc="1" TpoN="1"/>
+			</record>
+			<!-- Tackles Won -->
+			<record id="0032">
+				<!-- Tackles Won (1), Matches Played (2), Tackle Completion % (3), Fouls Made (5), Yellow Cards (6), Red Cards (7), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1"  TtkP="1" Tfow="1" Toyc="1" Torc="1" TpoN="1"/>
+			</record>
+			<!-- Tackle Completion % -->
+			<record id="0033">
+				<!-- Tackles Completion % (1), Matches Played (2), Tackles Won (3), Fouls Made (5), Yellow Cards (6), Red Cards (7), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" TtkW="1" Tfow="1" Toyc="1" Torc="1" TpoN="1"/>
+			</record>
+			<!-- Penalties Conceded -->
+			<record id="0044">
+				<!-- Penalties Conceded (1), Matches Played (2), Fowls Made, Conceded, Yellow Cards (6), Red Cards (7), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tomp="1" Tfow="1" Tsgc="1" Toyc="1" Torc="1" TpoN="1"/>
+			</record>
+
+			<!-- Attendance -->
+			<!-- Average Attendance -->
+			<record id="0002">
+				<!-- Average Attendance (1), Average Attendance By Capacity (3), Stadium Sellouts (4), Matches Played (2), League Position (5) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tapc="1" Tslo="1" THmp="1" TpoN="1"/>
+			</record>
+			<!-- Average Attendance % -->
+			<record id="0003">
+				<!-- Average Attendance By Capacity (1), Average Attendance (3), Stadium Sellouts (4), Matches Played (2), League Position (5) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tava="1" Tslo="1" THmp="1" TpoN="1"/>
+			</record>
+			<!-- Stadium Sellouts -->
+			<record id="0004">
+				<!-- Stadium Sellouts (1), Average Attendance 3), Average Attendance By Capacity (4), Matches Played (2), League Position (5) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tava="1" Tapc="1" THmp="1" TpoN="1"/>
+			</record>
+			<!-- Highest Attendance -->
+			<record id="0042">
+				<!-- Highest Attendance, Average Attendance (1), Average Attendance By Capacity (3), Stadium Sellouts (4), Matches Played (2), League Position (5) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tava="1" Tslo="1" THmp="1" TpoN="1"/>
+			</record>
+			<!-- Lowest Attendance -->
+			<record id="0043">
+				<!-- Lowest Attendance, Average Attendance (1), Average Attendance By Capacity (3), Stadium Sellouts (4), Matches Played (2), League Position (5) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tava="1" Tslo="1" THmp="1" TpoN="1"/>
+			</record>
+
+			<!-- Finances -->
+			<!-- Net Transfer Spend -->
+			<record id="0027">
+				<!-- Net transfer Spend (1), Salary Per Annum (2), Finances (3), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tspa="1" Csfs="1" TpoN="1"/>
+			</record>
+			<!-- Salary Per Annum -->
+			<record id="0026">
+				<!-- Salary Per Annum (1), Net Transfer Spend (2), Finances (3), League Position (4) -->
+				<record id="view" csRS="1" badg="1" Ttea="1" csLS="1" Tnts="1" Csfs="1" TpoN="1"/>
+			</record>
+		</list>
+
+		<integer id="view" value="0015"/>
+		<integer id="default_sort_column" value="csRS"/>
+	</widget>
+</panel>
+
+

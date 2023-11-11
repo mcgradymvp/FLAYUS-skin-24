@@ -1,0 +1,160 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container id="mnCT" class="main_subtle_box_no_margin">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!--assignment details-->
+		<container class="inner_contrast_box_no_margin" red_replacement="bg lighter" height="50">
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="10" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container id="tstt" height="50">
+				<attachment_group class="vertical_arrange" vertical_offset="4" vertical_gap="5"/>
+				
+				<widget class="text" alignment="left,centre_y" multiline="true" font="title" size="large" colour="text" auto_size="all">
+					<translation id="text" translation_id="377813" type="use" value="Assignment[COMMENT: scouting assignment title]" />
+				</widget>
+				
+				<widget class="text" alignment="left,centre_y" multiline="true" colour="text" auto_size="all">
+					<record id="object_property" get_property="SCnm" set_property="text" />
+				</widget>
+
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4" />
+				<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+
+				<widget class="text" font="title" auto_size="all" colour="faded text">
+					<translation id="text" translation_id="450819" type="use" value="Players Found[COMMENT: FR 21109 scouting centre]" />
+				</widget>
+
+				<widget class="text" alignment="left,centre_y" auto_size="all" size="large" colour="text">
+					<record id="object_property" get_property="aspf" set_property="valu" />
+				</widget>
+
+			</container>
+
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4" />
+				<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+
+				<widget class="text" font="title" auto_size="all" colour="faded text">
+					<translation id="text" translation_id="230113" type="use" value="Duration" />
+				</widget>
+
+				<widget class="text" alignment="left,centre_y" auto_size="all" size="large" colour="text">
+					<record id="object_property" get_property="asdu" set_property="valu" />
+				</widget>
+			</container>
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="20" gap="20" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="text" alignment="left,top" auto_size="vertical" colour="faded text">
+					<record id="object_property" get_property="text" set_property="text" />
+				</widget>
+
+				<widget class="client_object_list_table" id="scet" mode="fill_rows, select_rows, stripe_rows, printable, keyboard" fixed_size_rows="true" auto_size_rows="false" navigation_focus_target="true">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="astp" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+					
+					<list id="views">
+						<record id="ovvw">
+							<record id="view_table_properties">
+								<integer id="row_height" value="60" />
+							</record>
+							<translation id="name" translation_id="247414" type="use" value="Overview" />
+							<record id="view">
+								<record id="port" auto_hide_priority="2" width="40"/>
+								<!--portrait-->
+								<record id="PNaC" auto_hide_priority="1" width="240" />
+								<!-- player name/club -->
+								<record id="PpsP" auto_hide_priority="2" width="200" />
+								<!-- person position-->
+								<record id="PSag" auto_hide_priority="3" width="25" />
+								<!-- person age -->
+								<record id="PNat" auto_hide_priority="13" />
+								<!-- person nationality -->
+								<record id="Pcab" auto_hide_priority="7" />
+								<!-- CA stars -->
+								<record id="Ppab" auto_hide_priority="8" />
+								<!-- PA Stars -->
+								<record id="PPaD" auto_hide_priority="3" width="220" />
+								<!-- player interest -->
+								<record id="Pdva" auto_hide_priority="9" />
+								<!-- value -->
+								<record id="PRpo" auto_hide_priority="3" width="70" />
+								<!-- recommended -->
+							</record>
+						</record>
+					</list>
+				</widget>
+
+			</container>
+
+			<widget class="assignment_scouting_centre_actions_panel" height="30">
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="Ttea" />
+							<integer id="set_property" value="Ttea" />
+						</record>
+						<record>
+							<integer id="get_property" value="SCei" />
+							<integer id="set_property" value="SCei" />
+						</record>
+						<record>
+							<integer id="get_property" value="Pers" />
+							<integer id="set_property" value="Pers" />
+						</record>
+						<record>
+							<integer id="get_property" value="psai" />
+							<integer id="set_property" value="psai" />
+						</record>
+						<record>
+							<integer id="get_property" value="psFI" />
+							<integer id="set_property" value="psFI" />
+						</record>
+						<record>
+							<integer id="get_property" value="Hhum" />
+							<integer id="set_property" value="objt" />
+						</record>
+						<record>
+							<integer id="get_property" value="fSCe" />
+							<integer id="set_property" value="fSCe" />
+						</record>
+						<record>
+							<integer id="get_property" value="AsTY" />
+							<integer id="set_property" value="AsTY" />
+						</record>
+						
+					</list>
+				</record>
+			</widget>
+
+			<container height="10" />
+
+		</container>
+
+	</container>
+
+
+</panel>

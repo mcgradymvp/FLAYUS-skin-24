@@ -1,0 +1,16 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<container class="bordered_box" height="365">
+    <attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="10" vertical_gap="2" horizontal_inset="0" />
+    
+		<widget class="link_button_title" section="tkno" height="26" auto_size="horizontal" alignment="left,centre_y" embed_in_frame="true">
+			<translation id="text" translation_id="363717" type="use" value="Regional Knowledge[COMMENT: FR 8138, scouting label, displays information about the regional knowledge of a scout/the scouting team]" />
+      <layout class="stick_to_sides_attachment" alignment="top,left" embed_in_frame="true" inset="0" />
+    </widget>
+
+		<container class="team_scouting_knowledge_map" id="map "/>
+
+	</container>
+
+</panel>
+

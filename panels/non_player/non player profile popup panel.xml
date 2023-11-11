@@ -1,0 +1,54 @@
+<panel>
+	<layout class="arrange_vertical_attachment" layout="325, 175"  offset="0"/>
+	<layout class="fit_children_attachment" alignment="vertical,fill"  offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<container>
+		<layout class="arrange_horizontal_attachment" offset="0" alignment="right, extend"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+		<!-- Attributes Container -->
+		<container>
+			<layout class="arrange_horizontal_attachment" offset="0" layout="-1, -2" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<widget class="non_player_roles_panel" id="nprp" file="non_player/non player roles popup panel"/>
+			<container class="non_player_attributes_panel" id="patp"/>
+		</container>
+
+		<container class="scrolling_box" width="170" id="nptp">
+			<container class="non_player_tendencies_panel" should_force_refresh="true" width="150">
+				<record id="object_property">
+					<integer id="set_property" value="objt"/>
+					<integer id="get_property" value="objt"/>
+				</record>
+			</container>
+		</container>
+	</container>
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1, 1, -1" offset="0" gap="10"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<widget class="player_history_achievements_panel" id="pac1" file="non_player/non player history">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="objt"/>
+						<integer id="set_property" value="objt"/>
+					</record>
+				</list>
+			</record>
+		</widget>
+
+		<widget class="vertical_divider"/>
+
+		<widget class="person_happiness_panel" id="phap" file="person/person happiness profile plans">
+			<record id="object_property">
+				<integer id="get_property" value="objt"/>
+				<integer id="set_property" value="objt"/>
+			</record>
+		</widget>
+	</container>
+
+</panel>

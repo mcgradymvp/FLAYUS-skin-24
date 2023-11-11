@@ -1,0 +1,100 @@
+﻿<panel>
+	<list id="properties_to_forward">
+		<record get_property="is_in_inbox" set_property="hidden" target="clAL" />
+		<record get_property="is_in_recruitment_meeting" set_property="is_in_recruitment_meeting" target="nRec" />
+	</list>
+
+	<boolean id="should_force_refresh" value="true" />
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container id="nsec" hidden="true">
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="2" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<widget class="text" auto_size="vertical" alignment="centre" style="semi_bold" size="large">
+			<translation id="text" translation_id="443663" type="use" value="No recommendations[COMMENT: FR 21760, no recommendations are made by the scouting team]" />
+		</widget>
+		<widget class="manager_text" colour="faded text" auto_size="vertical" alignment="centre">
+			<translation id="text" translation_id="450793" type="use" value="[%person#1-Your] scouting team is working hard to bring [%person#1-you] more recommendations of this type soon.[COMMENT: FR 21760, 'status pending' sort of string indicating that the scouting team are at work]" />
+		</widget>
+	</container>
+
+	<container id="nosc" hidden="true">
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="2" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<widget class="text" auto_size="vertical" alignment="centre" style="semi_bold" size="large">
+			<translation id="text" translation_id="562252" type="use" value="No Scouts in Senior Recruitment Team[COMMENT: AREA: Scouting; SUB-AREA: Scouting Overview; FR-BN: FM-12770; NOTE: Fallback text for when the user has no scouts in their team]" />
+		</widget>
+
+		<widget class="manager_text" colour="faded text" auto_size="vertical" alignment="centre">
+			<translation id="text" translation_id="562253" type="use" value="There are currently no scouts in the senior recruitment team. If [%person#1-you] want scouting recommendations, [%person#1-you] will need to hire staff members.[COMMENT: AREA: Scouting; SUB-AREA: Scouting Overview; FR-BN: FM-12770; NOTE: Fallback text for when the user has no scouts in their team]" />
+		</widget>
+		
+		<widget class="link_button" id="stSC" auto_size="all" section="stfs">
+			<layout class="centre_in_parent_attachment" alignment="horizontal" />
+			<translation id="text" translation_id="320500" type="use" value="Staff Search[COMMENT: team report; link to the staff search]" />
+		</widget>
+	</container>
+
+	<container id="scrc">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="-5" apply_to_children="true" />
+
+		<container class="main_box" id="crdc" navigation_container="true" appearance="boxes/main/standard/paper">
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			<container>
+
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<widget id="recc" class="property_list_viewer_xml_panel" file="widgets/scouting centre recommendation card" />
+				<widget id="nRec" class="property_list_viewer_xml_panel" file="widgets/scouting centre report card" />
+				<widget id="acrf" class="property_list_viewer_xml_panel" file="widgets/scouting centre assignment card for recruitment focus"/>
+				<widget id="assc" class="property_list_viewer_xml_panel" file="widgets/scouting centre assignment card" />
+				<widget id="cmpc" class="property_list_viewer_xml_panel" file="widgets/scouting centre comp suggestion card" />
+				<widget id="mesc" class="property_list_viewer_xml_panel" file="widgets/scouting centre message card" />
+				<widget id="fcrc" class="property_list_viewer_xml_panel" file="widgets/scouting centre focus review card" />
+			</container>
+
+			<container height="6" />
+			
+			<container id="atnC" height="30">
+				<layout class="arrange_horizontal_attachment" alignment="middle" offset="8" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<container class="main_box_no_margin" height="26" width="30">
+					<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" />
+					<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<widget class="icon_button" click_event="Clea" auto_size="all" red_replacement="bg" icon="icons/custom/add manager/colour unpicked">
+						<translation id="hint" translation_id="451325" type="use" value="Clear All[COMMENT: button text to clear all previously given touchline shouts]" />
+					</widget>
+
+					<widget class="text" id="rrnb" auto_size="all" font="bold" wants_mouse_events="false" colour="bg" />
+				</container>
+
+				<widget class="text" id="clAL" auto_size="all" font="bold" colour="fg">
+					<layout class="centre_in_parent_attachment" alignment="vertical" />
+					<translation id="text" translation_id="363718" type="use" value="Remaining[COMMENT: FR 8138, scouting assignment list; gives an indication of how much time remains on a particular scouting assignment]" />
+				</widget>
+
+				<widget class="player_scouting_centre_actions_panel" id="toto" colour="white" disabled_colour="faded text" navigation_container="true">
+					<boolean id="save_immediate_state" value="true" />
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="fSCe" />
+								<integer id="set_property" value="fSCe" />
+							</record>
+						</list>
+					</record>
+				</widget>
+				
+			</container>
+		</container>
+	</container>
+</panel>

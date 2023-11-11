@@ -1,0 +1,74 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<widget class="table" id="tabl" layout="80, -2, -2, -2, -2, 90, 100, -2" mode="fill_rows, stripe_rows" all_content_same_height="false" auto_size_rows="true" fixed_size_rows="false" row_spacing="1" save_session_state="true">
+		<list id="headings">
+			<record index="0"/>
+			<record index="1">
+				<translation id="text" translation_id="227966" type="use" value="Player"/>
+			</record>
+			<record index="2">
+				<translation id="text" translation_id="450783" type="use" value="Match Load[COMMENT: FR 20159; team injury risk assessment; table column header for player's recent match workload]"/>
+			</record>
+			<record index="3">
+				<translation id="text" translation_id="450784" type="use" value="Training Load[COMMENT: FR 20159; team injury risk assessment; table column header for player's recent training workload]"/>
+			</record>
+			<record index="4">
+				<translation id="text" translation_id="450785" type="use" value="Injury Susceptibility[COMMENT: FR 20159; player injury panel; table column header for player's susceptibility to injury]"/>
+			</record>
+			<record index="5">
+				<translation id="text" translation_id="394347" type="use" value="CON/SHP[COMMENT: label for the player's condition (CON, for Overall Condition) and match sharpness (SHP)]"/>
+				<translation id="hint" translation_id="394523" type="use" value="Overall Physical Condition/Match Sharpness[COMMENT: label for the player's condition and match fitness]"/>
+				<list id="multi_sort_props">
+					<record index="0">
+						<translation id="name" translation_id="394524" type="use" value="Overall Physical Condition[COMMENT: label for a player's overall physical condition, when taking every element of his game into account]"/>
+					</record>
+					<record index="1">
+						<translation id="name" translation_id="388919" type="use" value="Match Sharpness[COMMENT: label for the player's match fitness, i.e. what condition he's currently in if he were to be selected for the next fixture]"/>
+					</record>
+				</list>
+			</record>
+			<record index="6">
+				<translation id="text" translation_id="450786" type="use" value="Physical Status[COMMENT: FR20159; player injuries panel; panel title for displaying location of injury]"/>
+			</record>
+			<record index="7">
+				<translation id="text" translation_id="450806" type="use" value="Overall Risk[COMMENT: FR 20159; team injury risk assessment; table column header for player's overall inujury risk assessment]"/>
+			</record>
+		</list>
+
+		<list id="column_table_properties">
+			<record index="0" id="port" alignment="centre" auto_hide_priority="10" top="4" bottom="4">
+				<boolean id="sort_ascending" value="false"/>
+			</record>
+			<record index="1" id="play" auto_hide_priority="1" minimum_width="140" top="4" bottom="4">
+				<boolean id="sort_ascending" value="true"/>
+			</record>
+			<record index="2" id="MaLo" auto_hide_priority="1" minimum_width="140" top="4" bottom="4">
+				<boolean id="sort_ascending" value="false"/>
+			</record>
+			<record index="3" id="TrLo" auto_hide_priority="1" minimum_width="140" top="4" bottom="4">
+				<boolean id="sort_ascending" value="false"/>
+			</record>
+			<record index="4" id="InSu" auto_hide_priority="1" minimum_width="140" top="4" bottom="4">
+				<boolean id="sort_ascending" value="false"/>
+			</record>
+			<record index="5" id="PRCF" auto_hide_priority="1" top="4" bottom="4">
+				<boolean id="sort_ascending" value="false"/>
+			</record>
+			<record index="6" id="PhSt" auto_hide_priority="1" top="4" bottom="4">
+				<boolean id="sort_disabled" value="true"/>
+			</record>
+			<record index="7" id="OvRi" auto_hide_priority="1" minimum_width="140" top="24" bottom="24">
+				<boolean id="sort_ascending" value="false"/>
+			</record>
+		</list>
+
+		<list id="sort">
+			<integer value="OvRi"/>
+			<integer value="PRCF"/>
+			<integer value="InSu"/>
+		</list>
+	</widget>
+
+</panel>

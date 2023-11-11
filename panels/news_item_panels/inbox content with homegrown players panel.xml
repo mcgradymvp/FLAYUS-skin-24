@@ -1,0 +1,103 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="1" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<!--personal info about the guy-->
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="5" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="left, bottom" apply_to_children="true" inset="0, 10, 10, 0" />
+
+		<string id="skin_style" value="title link" />
+
+		<widget class="link_button" id="plil" auto_size="all" alignment="left, centre_y" font="title" />
+	</container>
+
+	<container id="plif">
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1, -1" horizontal_inset="0" vertical_offset="0" />
+
+		<!--nations trained in-->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="text" auto_size="vertical" font="label">
+				<translation id="text" translation_id="420677" type="use" value="Nation(s) trained in[COMMENT: FR14481 - title for a panel showing which nations a player has been trained in]" />
+			</widget>
+
+			<container id="nati">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="10" />
+				
+				<!-- nations get added here -->
+			</container>
+		</container>
+
+		<!--clubs trained in-->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="text" auto_size="vertical" font="label">
+				<translation id="text" translation_id="420678" type="use" value="Club(s) trained in[COMMENT: FR14481 - title for a panel showing which clubs a player has been trained in]" />
+			</widget>
+
+			<container id="club">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="10" />
+
+				<!-- clubs get added here -->
+			</container>
+		</container>
+	</container>
+
+	<container id="hgpc">
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal, top" apply_to_children="true" inset="0, 10, 0, 10" />
+
+		<widget class="client_object_list_table" id="hgpt" fixed_size_rows="true" auto_size="vertical">
+			<flags id="mode" value="fill_rows, stripe_rows" />
+			<integer id="default_sort_column" value="Phdd" />
+			<record id="viewed_property_ids">
+				<record id="Pnms" minimum_width="130" />
+				<record id="PSag" width="30" />
+				<record id="Pnat" width="80" />
+				<record id="PtmT" width="70" />
+				<record id="Phgs" width="330" />
+			</record>
+		</widget>
+	</container>
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="10" />
+		<layout class="stick_to_sides_attachment" alignment="left, top" apply_to_children="true" inset="10, 10, 0, 0" />
+
+		<string id="skin_style" value="title link" />
+
+		<widget class="link_button" id="sqrl" auto_size="all" alignment="left, centre_y" font="title">
+			<translation id="text" translation_id="316860" type="use" value="Squad Registration[COMMENT: competition schedule panel; date of squad registration]" />
+		</widget>
+	</container>
+
+	<!--other players nearing home grown status-->
+	<container id="upco">
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="left, top" apply_to_children="true" />
+
+		<widget class="label" auto_size="all" alignment="left, centre_y" font="title">
+			<translation id="text" translation_id="491970" type="use" value="Upcoming Status Changes[COMMENT: AREA: Inbox; SUB-AREA: Home-grown news item; FR-BN: 16656; TONE: Formal; CHARLIMIT: None; REF-ID: XXXXXX; NOTE; Title of table showing players whose home grown status is due to change]" />
+		</widget>
+	</container>
+	
+	<container id="sqre">
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal, top" apply_to_children="true" inset="10, 10, 0, 10" />
+
+		<widget class="client_object_list_table" id="shtb" fixed_size_rows="true" auto_size="vertical">
+			<flags id="mode" value="fill_rows, stripe_rows" />
+			<integer id="default_sort_column" value="Phdd" />
+			<record id="viewed_property_ids">
+				<record id="Pnms" minimum_width="100" />
+				<record id="PSag" width="30" />
+				<record id="Pnat" width="60" />
+				<record id="PtmT" />
+				<record id="Phgs" width="150" />
+				<record id="Phdd" minimum_width="130" />
+			</record>
+		</widget>
+	</container>
+</panel>

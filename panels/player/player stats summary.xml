@@ -1,0 +1,274 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="empty_state" id="noma" header_widget="nomT">
+		<widget class="text" id="nomT">
+			<translation id="text" translation_id="562633" type="use" value="No match stats available[COMMENT: AREA: Scouting; SUB-AREA: Player stats panel/widget; FR-BN: FM-11536; NOTE: Fallback string, when the stats widget is hidden due to stats not being available - either player has not played any games yet, or has only played friendlies, where stats are not tracked]" />
+		</widget>
+	</container>
+
+
+	<container class="scrolling_box" id="soma">
+		<container class="vertical_arrange_container" alignment="top" gap="4" inset="0" offset="0" auto_size="vertical" draw_horizontal_dividers="true">
+
+			<set_var name="shared_top_layout">
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0" />
+			</set_var>
+
+			<set_var name="portrait_picture_container">
+				<container width="80" height="58">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<widget class="picture" image_alignment="left,top" scale_picture="false">
+						<var id="file" name="image_file" />
+					</widget>
+					<widget class="object_portrait_picture" image_alignment="right,bottom" scale_picture="true">
+						<var id="widget_id" name="portrait_id" />
+					</widget>
+				</container>
+			</set_var>
+
+			<set_var name="shared_vertical_layout">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="1" horizontal_inset="0" />
+			</set_var>
+			
+			<!-- Top Goalcorer-->
+			<container>
+				<var name="shared_top_layout" />
+				
+				<var name="portrait_picture_container">
+					<set_var name="image_file">
+						<flags value="icons/custom/player stats/top goalscorer" />
+					</set_var>
+					<set_var name="portrait_id">
+						<flags value="tgsp" />
+					</set_var>
+				</var>
+
+				<container>
+					<var name="shared_vertical_layout" />
+
+					<widget class="label" auto_size="vertical" alignment="left,can_scale" font="label">
+						<translation id="text" translation_id="247695" type="use" value="Top Goalscorer[COMMENT: manager home panel: player stats: top goalscorer label]" />
+					</widget>
+					<widget class="player_stat_text" id="tgsc" maxv="5" mode="show_name" multiline="true" auto_size="vertical" style="bold" navigation_focus_target="true">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+					</widget>
+					<widget class="player_stat_text" id="tgs2" mode="show_value,show_as_number" auto_size="vertical" colour="faded text" size="small">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+						<list id="format">
+							<record value="1">
+								<translation id="format" translation_id="385425" type="use" value="1 goal[COMMENT: FR 10661; player overview form; number of goals scored by player; singular]" />
+							</record>
+							<record default_value="true">
+								<translation id="format" translation_id="327328" type="use" value="[%number#1] goals" />
+							</record>
+						</list>
+					</widget>
+				</container>
+			</container>
+
+			<!-- Highest Average rating-->
+			<container>
+				<var name="shared_top_layout" />
+
+				<var name="portrait_picture_container">
+					<set_var name="image_file">
+						<flags value="icons/custom/player stats/average rating" />
+					</set_var>
+					<set_var name="portrait_id">
+						<flags value="avrp" />
+					</set_var>
+				</var>
+
+				<container>
+					<var name="shared_vertical_layout" />
+
+					<widget class="label" auto_size="vertical" alignment="left,can_scale" font="label">
+						<translation id="text" translation_id="232096" type="use" value="Highest Average Rating" />
+					</widget>
+					<widget class="player_stat_text" id="avra" maxv="5" mode="show_name" multiline="true" auto_size="vertical" style="bold" navigation_focus_target="true">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+					</widget>
+					<widget class="player_stat_text" id="avr2" mode="show_value,show_as_fraction" auto_size="vertical" colour="faded text" size="small">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+					</widget>
+				</container>
+			</container>
+
+			<!-- Most Assists-->
+			<container>
+				<var name="shared_top_layout" />
+
+				<var name="portrait_picture_container">
+					<set_var name="image_file">
+						<flags value="icons/custom/player stats/assists" />
+					</set_var>
+					<set_var name="portrait_id">
+						<flags value="moap" />
+					</set_var>
+				</var>
+				
+				<container>
+					<var name="shared_vertical_layout" />
+
+					<widget class="label" auto_size="vertical" alignment="left,can_scale" font="label">
+						<translation id="text" translation_id="336496" type="use" value="Most Assists[COMMENT: title for table showing players who have the most assists]" />
+					</widget>
+					<widget class="player_stat_text" id="moas" maxv="5" mode="show_name" multiline="true" auto_size="vertical" style="bold" navigation_focus_target="true">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+					</widget>
+					<widget class="player_stat_text" id="moa2" mode="show_value,show_as_number" auto_size="vertical" colour="faded text" size="small">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+						<list id="format">
+							<record value="1">
+								<translation id="format" translation_id="385424" type="use" value="1 assist[COMMENT: FR 10661; player overview form; number of assists made by player; singular]" />
+							</record>
+							<record default_value="true">
+								<translation id="format" translation_id="384051" type="use" value="[%number#1] assists[COMMENT: FR 10661; player overview form; number of assists made by player; multiple/plural]" />
+							</record>
+						</list>
+					</widget>
+				</container>
+			</container>
+
+			<!-- Pass completion -->
+			<container>
+				<var name="shared_top_layout" />
+
+				<var name="portrait_picture_container">
+					<set_var name="image_file">
+						<flags value="icons/custom/player stats/pass completition" />
+					</set_var>
+					<set_var name="portrait_id">
+						<flags value="pasp" />
+					</set_var>
+				</var>
+
+				<container>
+					<var name="shared_vertical_layout" />
+
+					<widget class="label" auto_size="vertical" alignment="left,can_scale" font="label">
+						<translation id="text" translation_id="392241" type="use" value="Best Pass Completion[COMMENT: FR 8873; Competition player stats overview; stat description, best pass completion ratio]" />
+					</widget>
+					<widget class="player_stat_text" id="pass" maxv="5" mode="show_name" multiline="true" auto_size="vertical" style="bold" navigation_focus_target="true">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+					</widget>
+
+					<widget class="player_stat_text" id="pas2" mode="show_value,show_as_number" auto_size="vertical" colour="faded text" size="small">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+						<translation id="format" translation_id="233144" type="use" value="[%number#1]%" />
+					</widget>
+				</container>
+			</container>
+
+			<!-- Player of the match -->
+			<container>
+				<var name="shared_top_layout" />
+
+				<var name="portrait_picture_container">
+					<set_var name="image_file">
+						<flags value="icons/custom/player stats/player of match" />
+					</set_var>
+					<set_var name="portrait_id">
+						<flags value="momp" />
+					</set_var>
+				</var>
+
+				<container>
+					<var name="shared_vertical_layout" />
+
+					<widget class="label" auto_size="vertical" alignment="left,can_scale" font="label">
+						<translation id="text" translation_id="336498" type="use" value="Most Player of the Match Awards[COMMENT: title for table showing players who have been man of the match most often]" />
+					</widget>
+					<widget class="player_stat_text" id="moma" maxv="5" mode="show_name" multiline="true" auto_size="vertical" style="bold" navigation_focus_target="true">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+					</widget>
+					<widget class="player_stat_text" id="mom2" mode="show_value,show_as_number" auto_size="vertical" colour="faded text" size="small">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+						<list id="format">
+							<record value="1">
+								<translation id="format" translation_id="390343" type="use" value="1 Player of the Match award[COMMENT: FR 10252; manager home - player stats panel; number of 'man of the match' received by player; singular]" />
+							</record>
+							<record default_value="true">
+								<translation id="format" translation_id="390640" type="use" value="[%number#1] Player of the Match awards[COMMENT: FR 10252; manager home - player stats panel; number of 'man of the match' received by player; plural]" />
+							</record>
+						</list>
+					</widget>
+				</container>
+			</container>
+
+			<!-- Yellow cards -->
+			<container>
+				<var name="shared_top_layout" />
+
+				<var name="portrait_picture_container">
+					<set_var name="image_file">
+						<flags value="icons/custom/player stats/yellow cards" />
+					</set_var>
+					<set_var name="portrait_id">
+						<flags value="yecp" />
+					</set_var>
+				</var>
+
+				<container>
+					<var name="shared_vertical_layout" />
+
+					<widget class="label" auto_size="vertical" alignment="left,can_scale" font="label">
+						<translation id="text" translation_id="336499" type="use" value="Most Yellow Cards[COMMENT: title for table showing players who have the most yellow cards]" />
+					</widget>
+					<widget class="player_stat_text" id="yeca" maxv="5" mode="show_name" multiline="true" auto_size="vertical" style="bold" navigation_focus_target="true">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+					</widget>
+					<widget class="player_stat_text" id="yec2" mode="show_value,show_as_number" auto_size="vertical" colour="faded text" size="small">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+						<list id="format">
+							<record value="1">
+								<translation id="format" translation_id="343069" type="use" value="1 yellow card[COMMENT: text showing how many yellow cards a referee has given out]" />
+							</record>
+							<record default_value="true">
+								<translation id="format" translation_id="345784" type="use" value="[%number#1] yellow cards[COMMENT: text showing how many yellow cards a referee has given out]" />
+							</record>
+						</list>
+					</widget>
+				</container>
+			</container>
+
+			<!-- Red cards-->
+			<container>
+				<var name="shared_top_layout" />
+
+				<var name="portrait_picture_container">
+					<set_var name="image_file">
+						<flags value="icons/custom/player stats/red cards" />
+					</set_var>
+					<set_var name="portrait_id">
+						<flags value="recp" />
+					</set_var>
+				</var>
+
+				<container>
+					<var name="shared_vertical_layout" />
+
+					<widget class="label" auto_size="vertical" alignment="left,can_scale" font="label">
+						<translation id="text" translation_id="349785" type="use" value="Most Red Cards[COMMENT: title for table showing players who have the most red cards]" />
+					</widget>
+					<widget class="player_stat_text" id="reca" maxv="5" mode="show_name" multiline="true" auto_size="vertical" style="bold" navigation_focus_target="true">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+					</widget>
+					<widget class="player_stat_text" id="rec2" mode="show_value,show_as_number" auto_size="vertical" colour="faded text">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+						<list id="format">
+							<record value="1">
+								<translation id="format" translation_id="343065" type="use" value="1 red card[COMMENT: text showing how many red cards a referee has given out]" />
+							</record>
+							<record default_value="true">
+								<translation id="format" translation_id="345782" type="use" value="[%number#1] red cards[COMMENT: text showing how many red cards a referee has given out]" />
+							</record>
+						</list>
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

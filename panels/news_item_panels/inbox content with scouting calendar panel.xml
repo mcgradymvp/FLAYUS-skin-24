@@ -1,0 +1,77 @@
+﻿<panel>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+
+	<widget class="table" id="tabl" layout="200,180,100,70,70,80,80" mode="fill_rows, stripe_rows" auto_size="vertical" fixed_size_rows="true" row_height="50" >
+
+		<list id="column_table_properties">
+			<record  auto_hide_priority="1" minimum_width="230">
+				<flags id="id" value="name" />
+				<record id="column_heading">
+					<translation id="text" translation_id="227740" type="use" value="Competition" />
+					<flags id="alignment" value="left,centre_y" />
+					<flags id="column" value="0" />
+				</record>
+			</record>
+			<record auto_hide_priority="1" minimum_width="120">
+				<flags id="id" value="loca" />
+				<record id="column_heading">
+					<translation id="text" translation_id="386787" type="use" value="Location[COMMENT: arrange friendly panel; arrange the location of a friendly tour]" />
+					<flags id="alignment" value="left,centre_y" />
+					<flags id="column" value="1" />
+				</record>
+			</record>
+			<record  auto_hide_priority="3" minimum_width="120">
+				<flags id="id" value="type" />
+				<record id="column_heading">
+					<translation id="text" translation_id="229400" type="use" value="Type" />
+					<flags id="alignment" value="left,centre_y" />
+					<flags id="column" value="2" />
+				</record>
+			</record>
+			<record  auto_hide_priority="1" minimum_width="80">
+				<flags id="id" value="stad" />
+				<record id="column_heading">
+					<translation id="text" translation_id="293013" type="use" value="Start Date" />
+					<flags id="alignment" value="centre" />
+					<flags id="column" value="3" />
+				</record>
+			</record>
+			<record  auto_hide_priority="2" minimum_width="80">
+				<flags id="id" value="endd" />
+				<record id="column_heading">
+					<translation id="text" translation_id="293014" type="use" value="End Date" />
+					<flags id="alignment" value="centre" />
+					<flags id="column" value="4" />
+				</record>
+			</record>
+			<record  auto_hide_priority="1" minimum_width="80">
+				<flags id="id" value="repu" />
+				<record id="column_heading">
+					<translation id="text" translation_id="306609" type="use" value="Reputation[COMMENT: competitions reputation in a continent]" />
+					<flags id="alignment" value="centre" />
+					<flags id="column" value="5" />
+				</record>
+			</record>
+			<record  auto_hide_priority="1" minimum_width="80" sort_disabled="true" left="2" right="2" alignment="centre">
+				<flags id="id" value="butt"/>
+				<record id="column_heading">
+					<flags id="column" value="6" />
+				</record>
+			</record>
+		</list>
+
+		<list id="column_widget_properties">
+			<record indx="1" alignment="left,centre_y"/>
+			<record indx="2" alignment="left,centre_y"/>
+			<record indx="6" auto_size="vertical"/>
+		</list>
+
+	</widget>
+
+
+
+
+
+</panel>

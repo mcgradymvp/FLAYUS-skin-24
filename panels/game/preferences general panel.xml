@@ -1,0 +1,215 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+	<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+
+	<container class="titled_box">
+		<translation id="title" translation_id="329984" type="use" value="General[COMMENT: preferences: General settings section title]" />
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+		<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container id="window_mode_settings" file="game/preferences item" navigation_container="true">
+			<list id="viewed_property_ids">
+				<symbol value="window_mode_settings" />
+			</list>
+		</container>
+
+		<container id="ui_zoom_level" file="game/preferences item" navigation_container="true" >
+			<list id="viewed_property_ids">
+				<symbol value="ui_zoom_level" />
+			</list>
+		</container>
+
+
+		<container id="skin" file="game/preferences item" navigation_container="true" >
+			<list id="viewed_property_ids">
+				<symbol value="skin" />
+			</list>
+		</container>
+		
+		<container class="inner_subtle_box" id="Vcon">
+			<attachment_group class="vertical_arrange_autosize" />
+				<container id="clbm" file="game/colour blind settings panel">
+					<attachment_group class="vertical_arrange_autosize" />
+				</container>
+		</container>
+
+		<container id="show_in_game_editor" file="game/preferences item" navigation_container="true" >
+			<list id="viewed_property_ids">
+				<symbol value="show_in_game_editor" />
+			</list>
+		</container>
+
+
+		<container class="inner_subtle_box" navigation_container="true">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+			<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<widget class="game_settings_viewer_panel" id="set1" concat_hint="true">
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<record id="table_properties" layout="-3,260" sort_disabled="true">
+					<integer id="row_spacing" value="5" />
+
+					<list id="column_widget_properties">
+						<record index="1" appearance="buttons/standard/normal/button" />
+					</list>
+
+				</record>
+				<list id="viewed_property_ids">
+					<symbol value="current_language" />
+				</list>
+			</widget>
+
+			<container id="pLnB">
+				<global id="hidden" name="distribution_is_ms_store"/>
+				<layout class="arrange_horizontal_attachment" layout="-1,260" offset="0" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+				<container>
+					<global id="hidden" name="distribution_is_epic"/>
+					<layout class="arrange_horizontal_attachment" layout="-1" offset="0" />
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+					<widget class="button" click_event="mnLN" auto_size="vertical">
+						<translation id="text" translation_id="433931" type="use" value="Publish Languages" />
+						<global id="hidden" name="workshop_is_disabled"/>
+					</widget>
+				</container>
+
+			</container>
+
+		</container>
+
+
+		<container id="data_language_preferences" file="game/preferences item" navigation_container="true">
+			<list id="viewed_property_ids">
+				<symbol value="data_language_preferences" />
+			</list>
+		</container>
+
+		<container id="selected_currency" file="game/preferences item" navigation_container="true" >
+			<list id="viewed_property_ids">
+				<symbol value="selected_currency" />
+			</list>
+		</container>
+
+		<container id="wage_string_type" file="game/preferences item" navigation_container="true" >
+			<list id="viewed_property_ids">
+				<symbol value="wage_string_type" />
+			</list>
+		</container>
+
+		<container id="sound_volume" file="game/preferences item" navigation_container="true" >
+			<list id="viewed_property_ids">
+				<symbol value="play_sounds" />
+				<symbol value="play_music" />
+				<symbol value="sound_volume" />
+			</list>
+		</container>
+
+		<container class="inner_subtle_box" navigation_container="true">
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="top, horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="match_settings_viewer_panel" id="set1" concat_hint="true">
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<record id="table_properties" layout="-3,260" sort_disabled="true">
+					<integer id="row_spacing" value="5" />
+				</record>
+				<list id="viewed_property_ids">
+					<symbol value="graphical_detail" />
+				</list>
+			</widget>
+		</container>
+
+		<container id="user_data_location" file="game/preferences item" navigation_container="true" >
+			<list id="viewed_property_ids">
+				<symbol value="user_data_location" />
+			</list>
+		</container>
+
+		<container id="use_auto_saves" file="game/preferences item" navigation_container="true" >
+			<list id="viewed_property_ids">
+				<symbol value="use_auto_saves" />
+				<symbol value="auto_save_interval" />
+				<symbol value="auto_save_mode" />
+			</list>
+		</container>
+
+		<container id="use_auto_save_mode_for_manual_save" file="game/preferences item" navigation_container="true" >
+			<list id="viewed_property_ids">
+				<symbol value="use_auto_save_mode_for_manual_save" />
+			</list>
+		</container>
+
+		<container id="enable_interest_based_advertising" file="game/preferences item" navigation_container="true" >
+			<list id="viewed_property_ids">
+				<symbol value="enable_interest_based_advertising" />
+			</list>
+		</container>
+		
+		<container id="enable_gamesight" file="game/preferences item" navigation_container="true" >
+			<list id="viewed_property_ids">
+				<symbol value="enable_gamesight" />
+			</list>
+		</container>
+
+		<container class="inner_subtle_box" height="70" navigation_container="true">
+			<layout class="arrange_horizontal_attachment" layout="-3,260" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="text" style="bold" alignment="left, centre_y">
+					<translation id="text" translation_id="395977" type="use" value="Change Profile Picture[COMMENT: Minor wording change, meaing the same, us etop 10 matches; Add Manager Wizard - Button that lets the manager select a picture of himself for his ingame manager profile]" />
+				</widget>
+
+			</container>
+
+
+			<container class="preferences_profile_panel" file="none">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<container class="manager_profile_panel" id="mpmp" file="none" >
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<container>
+						<layout class="arrange_horizontal_attachment" layout="-1,40" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<widget class="button" id="slpc" click_event="sepi" alignment="left,centre_y" icon="icons/actions/select picture">
+							<translation id="text" translation_id="249631" type="use" value="Select" />
+						</widget>
+
+						<widget class="icon_button" disabled="true" id="clpc" click_event="clpc" alignment="left,centre_y" icon="icons/16px/cross" icon_alignment="centre">
+						</widget>
+
+					</container>
+				</container>
+
+			</container>
+
+
+		</container>
+
+		<container id="online_game_preferences" file="game/preferences item" navigation_container="true">
+			<list id="viewed_property_ids">
+				<symbol value="online_game_preferences" />
+			</list>
+		</container>
+
+		<container id="player_search_timer" file="game/preferences item"  >
+			<list id="viewed_property_ids">
+				<symbol value="player_search_timer" />
+			</list>
+		</container>
+
+	</container>
+
+</panel>

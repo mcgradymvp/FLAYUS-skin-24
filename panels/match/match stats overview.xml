@@ -1,0 +1,50 @@
+<panel>
+
+	<!--This panel is for the mini overview stats we get on the match overview page-->
+	<attachment_group class="vertical_arrange_autosize" />
+
+	<boolean id="show_bars" value="true" />
+
+	<list id="preset_stats_list">
+		<record id="m_sg" /> <!-- Shots -->
+		<record id="m_on" /> <!-- On Target -->
+		<record id="m_xg" /> <!-- Xg -->
+		<record id="m_hc" /> <!-- Half Chances -->
+		<record id="m_ls" /> <!-- Long Shots -->		
+		<record id="m_cr" /> <!-- Corners -->
+		<record id="m_fl" /> <!-- Fouls -->
+		<record id="m_fk" /> <!-- Free Kicks -->		
+		<record id="m_os" /> <!-- Offsides -->
+		<record id="m_yc" /> <!-- Yellow Cards -->
+		<record id="m_rc" /> <!-- Red Cards -->
+		<record id="m_pc" /> <!-- Passes Completed -->
+		<record id="m_tw" /> <!-- Tackles Won -->
+		<record id="m_hw" /> <!-- Headers Won -->			
+		<record id="m_ps" /> <!-- Possession -->
+		<record id="m_av" /> <!-- Possession -->
+	</list>
+
+	<widget class="table" id="mstn" layout="5,-2,-6,-2,5" mode="printable" row_spacing="0" row_height="20" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical">
+
+		<list id="column_widget_properties">
+			<record indx="1" alignment="left,centre_y" colour="text" style="bold"/>
+			<record indx="2" alignment="centre" colour="text" />
+			<record indx="3" alignment="right,centre_y" colour="text" style="bold"/>
+		</list>
+
+		<list id="column_table_properties">
+			<record indx="1" id="home" sort_disabled="true" />
+			<record indx="2" id="labl" sort_disabled="true" />
+			<record indx="3" id="away" sort_disabled="true" />
+		</list>
+
+	</widget>
+	<container height="30">
+		<layout class="arrange_horizontal_attachment" alignment="right" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<widget class="button" click_event="mcss" auto_size="horizontal" appearance="buttons/custom/match/standard/normal/button">
+			<translation id="text" translation_id="333760" type="use" value="Customise[COMMENT:Match screen; match stats panel; button text for customising visible match stats]" />
+		</widget>
+	</container>
+</panel>

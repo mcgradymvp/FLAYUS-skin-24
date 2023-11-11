@@ -1,0 +1,202 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box" id="rHsb" red_replacement="dark_box_background">
+		<attachment_group class="horizontal_arrange" horizontal_layout="150,-2,-6" />
+
+		<widget class="picture" scale_picture="true" height="100" id="HDpc" alignment="centre" image_alignment="centre" />
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_layout="-2,-2,-3" vertical_offset="0" />
+
+			<!-- Coach name and role -->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom" vertical_gap="-2" />
+				<widget class="person_button" id="cNam" alignment="left, bottom" auto_size="vertical" size="12" style="bold" navigation_focus_target="true" />
+				<widget class="job_label" id="cPos" alignment="left, top" auto_size="vertical" colour="faded text" />
+			</container>
+
+			<!-- Best Training Category	-->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="-2" />
+
+				<widget class="label" auto_size="vertical" alignment="left,bottom" font="label" colour="faded text">
+					<translation id="text" translation_id="329738" type="use" value="Best Training Category[COMMENT - person list view column heading]" />
+				</widget>
+				<widget class="label" id="cBTC" multiline="true" alignment="left,top" style="bold" size="12" />
+			</container>
+
+			<!-- Qualifications	-->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="-2" />
+				
+				<widget class="label" auto_size="vertical" alignment="left,bottom" font="label" colour="faded text">
+					<translation id="text" translation_id="329843" type="use" value="Coaching Qualifications[COMMENT: non-player profile; coaching qualification]" />
+				</widget>
+				<widget class="coaching_badge_label" auto_size="vertical" id="tAQU" alignment="left,top" style="bold" size="12" navigation_focus_target="false" />
+				<widget class="text" auto_size="none" id="cBCC" alignment="left,top" style="bold" />
+			</container>
+		</container>
+
+		<!-- Attribute Tables -->
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_gap="-2" horizontal_layout="-1,-1,-1" />
+
+			<!-- Coaching -->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+				<widget class="table" mode="fill_rows, stripe_rows" id="COta" layout="-1,30" fixed_size_rows="false" auto_size_rows="true" auto_size="vertical" row_spacing="4">
+					<boolean id="save_session_state" value="true" />
+
+					<!-- column display properties -->
+
+					<list id="headings">
+						<record alignment="left,centre_y" column_span="2">
+							<translation id="text" translation_id="230043" type="use" value="Coaching" />
+						</record>
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0" left="4" top="3" sort_disabled="true" />
+						<record indx="1" right="4" top="3" sort_disabled="true" />
+					</list>
+
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" auto_size="vertical" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" style="semi_bold" />
+					</list>
+
+					<!-- Coaching Attributes -->
+					<widget class="label" row="0" column="0">
+						<translation id="text" translation_id="230042" type="use" value="Attacking" />
+					</widget>
+					<widget class="attribute_label" row="0" column="1" id="ATat" />
+
+					<widget class="label" row="1" column="0">
+						<translation id="text" translation_id="247413" type="use" value="Defensive" />
+					</widget>
+					<widget class="attribute_label" row="1" column="1" id="Dfat" />
+
+					<widget class="label" row="2" column="0">
+						<translation id="text" translation_id="247571" type="use" value="Fitness" />
+					</widget>
+					<widget class="attribute_label" row="2" column="1" id="FTat" />
+
+					<widget class="label" row="3" column="0">
+						<translation id="text" translation_id="230106" type="use" value="Mental" />
+					</widget>
+					<widget class="attribute_label" row="3" column="1" id="MTat" />
+					
+					<widget class="label" row="4" column="0">
+						<translation id="text" translation_id="585677" type="use" value="Set Pieces[COMMENT: AREA: non player attributes; SUB-AREA: non player attributes; FR-BN: FM-20960; TONE: Formal; CHARLIMIT:None; NOTE: Name of the coaching set pieces non player attribute]" />
+					</widget>
+					<widget class="attribute_label" row="4" column="1" id="STat" />
+
+					<widget class="label" row="5" column="0">
+						<translation id="text" translation_id="229413" type="use" value="Technical" />
+					</widget>
+					<widget class="attribute_label" row="5" column="1" id="TCat" />
+
+					<widget class="label" row="6" column="0">
+						<translation id="text" translation_id="248614" type="use" value="Tactical[COMMENT - non playing data; Abbr. Tactical coaching]" />
+					</widget>
+					<widget class="attribute_label" row="6" column="1" id="Taat" />
+				</widget>
+			</container>
+
+			<!-- Goalkeeper Coaching -->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+				<widget class="table" mode="fill_rows, stripe_rows" id="GKta" layout="-1,30" fixed_size_rows="false" auto_size_rows="true" auto_size="vertical" row_spacing="4">
+					<boolean id="save_session_state" value="true" />
+
+					<!-- column display properties -->
+
+					<list id="headings">
+						<record alignment="left,centre_y" column_span="2">
+							<translation id="text" translation_id="466541" type="use" value="Goalkeeper Coaching[COMMENT: team training, specific goalkeeper coaching]" />
+						</record>
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0" left="4" top="3" sort_disabled="true" />
+						<record indx="1" right="4" top="3" sort_disabled="true" />
+					</list>
+
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" auto_size="vertical" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" style="semi_bold" />
+					</list>
+					
+					<!-- Goalkeeper Coaching Attributes -->
+					<widget class="label" row="0" column="0">
+						<translation id="text" translation_id="308086" type="use" value="GK - Shot Stopping[COMMENT - training category]" />
+					</widget>
+					<widget class="attribute_label" row="0" column="1" id="GSat" />
+
+					<widget class="label" row="1" column="0">
+						<translation id="text" translation_id="308087" type="use" value="GK - Handling[COMMENT - training category]" />
+					</widget>
+					<widget class="attribute_label" row="1" column="1" id="GHat" />
+
+					<widget class="label" row="2" column="0">
+						<translation id="text" translation_id="439416" type="use" value="GK - Distribution[COMMENT - goalkeeper(GK) training category]" />
+					</widget>
+					<widget class="attribute_label" row="2" column="1" id="GDat" />
+				</widget>
+			</container>
+
+			<!-- Mental -->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+				<widget class="table" mode="fill_rows, stripe_rows" id="MEta" layout="-1,30" fixed_size_rows="false" auto_size_rows="true" auto_size="vertical" row_spacing="4">
+					<boolean id="save_session_state" value="true" />
+
+					<!-- column display properties -->
+
+					<list id="headings">
+						<record alignment="left,centre_y" column_span="2">
+							<translation id="text" translation_id="230106" type="use" value="Mental" />
+						</record>
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0" left="4" top="3" sort_disabled="true" />
+						<record indx="1" right="4" top="3" sort_disabled="true" />
+					</list>
+
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" auto_size="vertical" />
+						<record indx="1" alignment="left,centre_y" auto_size="vertical" style="semi_bold" />
+					</list>
+
+					<!-- Mental Attributes -->
+					<widget class="label" row="0" column="0">
+						<translation id="text" translation_id="316925" type="use" value="Adaptability[COMMENT: nation player tendency]" />
+					</widget>
+					<widget class="attribute_label" row="0" column="1" id="ADat" />
+
+					<widget class="label" row="1" column="0">
+						<translation id="text" translation_id="227803" type="use" value="Determination" />
+					</widget>
+					<widget class="attribute_label" row="1" column="1" id="DEat" />
+
+					<widget class="label" row="2" column="0">
+						<translation id="text" translation_id="248619" type="use" value="Level of Discipline" />
+					</widget>
+					<widget class="attribute_label" row="2" column="1" id="DIat" />
+
+					<widget class="label" row="3" column="0">
+						<translation id="text" translation_id="534820" type="use" value="People Management[COMMENT: AREA: Non-Player Profile; SUB-AREA: Attributes; FR-BN: 34684; TONE: Formal; CHARLIMIT: None; REF-ID: 284430; NOTE: used to be Man Management, changed to a more inclusive term]" />
+					</widget>
+					<widget class="attribute_label" row="3" column="1" id="MMat" />
+
+					<widget class="label" row="4" column="0">
+						<translation id="text" translation_id="227951" type="use" value="Motivating" />
+					</widget>
+					<widget class="attribute_label" row="4" column="1" id="MOat" />
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

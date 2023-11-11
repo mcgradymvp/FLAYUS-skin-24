@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<!--very close relationship colour-->
+	<colour id="pVgC" name="green 500" />
+	<!--close relationship colour-->
+	<colour id="pgCl" name="green 300" />
+	<!--aquaintance relationship colour-->
+	<colour id="pACl" name="green 100" />
+	<!--contact relationship colour-->
+	<colour id="pCTr" name="blue 300" />
+	<!--rival relationship colour-->
+	<colour id="prVr" name="red 100" />
+	<!--adversary relationship colour-->
+	<colour id="pAdv" name="red 300" />
+	<!--distant relationship colour-->
+	<colour id="pCds" name="red 500" />
+
+	<layout class="arrange_vertical_attachment" layout="50,-1" offset="0" gap="2"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!--Header box-->
+	<container class="bordered_box">
+		<layout class="arrange_horizontal_attachment" layout="120, -3," offset="0" gap="2" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+
+		<!--relationship-->
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0" />
+			<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<widget class="picture" id="hrcP" height="40" width="40" file="icons/48px/relationship" image_alignment="left" scale_picture="true"  keep_aspect_ratio="true" />
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+				<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+
+				<widget class="label" colour="faded text" auto_size="all" alignment="left,centre_y" font="label">
+					<translation id="text" translation_id="447541" type="use" value="Relationship[COMMENT: player Relationships panel; panel header title for player relationship with manager]" />
+				</widget>
+
+				<container height="22">
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4" />
+					<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="4" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+					<widget class="label" id="relL" auto_size="horizontal" alignment="left,centre_y" font="gz_title"/>
+
+					<widget class="picture" id="hrcl" width="16" hidden="true" file="icons/16px/up" image_alignment="centre" scale_picture="true" />
+				</container>
+			</container>
+		</container>
+		<!--Opinion-->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+			<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+
+			<widget class="label" colour="faded text" id="opHd" auto_size="all" alignment="left," font="label">
+				<translation id="text" translation_id="447596" type="use" value="Opinion of [%person#1-you][COMMENT: player Relationships panel; panel header title for players opinion of manager]" />
+			</widget>
+
+			<widget class="label" id="opiL" auto_size="all" alignment="left,centre_y" font="gz_title" colour="gzk"/>
+
+		</container>
+
+	</container>
+
+	<!--body-->
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+		<!--Squad Hierarchy-->
+		<container id="plHr" width="370">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			<container class="team_hierarchy_player_details_panel" id="pHrc" file="gunzo/gunzo person dynamics" />
+		</container>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			
+			<!--Happiness and plans-->
+			<container class="bordered_box">
+				<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="6" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<translation id="title" translation_id="447598" type="use" value="Happiness &amp; Plans[COMMENT: Player Relationships panel; panel header title for a section listing the happiness and plans of a player, please retain the ampersand code within the string, it's there as this is XML and therefore doesn't support the use of the character itself]" />
+
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="6" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<widget class="person_happiness_panel" id="phr1" file="person/person happiness relationships1" late_loading="true">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

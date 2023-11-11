@@ -1,0 +1,305 @@
+<panel>
+
+	<translation id="title" type="new" value="Player Profile Panel" />
+	<!-- PANEL PROPERTIES -->
+
+	<!--Player 1 ability comparison table appearance-->
+	<flags id="cham" value="tables/custom/comparison/player 1/row" />
+	<!--Player 2 ability comparison table appearance-->
+	<flags id="cha2" value="tables/custom/comparison/player 2/row" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<boolean id="save_session_state" value="true" />
+
+	<container id="root">
+
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0"/>
+
+		<!-- Top section displaying personal details side-by side -->
+		<!-- The fixed height is a bug-fix to avoid using fit_children (too slow) -->
+		<container id="namh" height="122">
+			<!-- Vertical stack, both names then combined portrait & details table below -->
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+			<container id="dtsp">
+				<!-- Horizontal split, player details on either side -->
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+
+				<!-- Person 1 -->
+				<container id="p1tp" class="main_contrast_box" red_replacement="comp person 1" navigation_container="true">
+					<!--Horizontal stack, table expanded to fill space-->
+					<attachment_group class="horizontal_arrange" horizontal_layout="105,230,150,-1" horizontal_offset="4" />
+
+					<!--Person 1 portrait-->
+					<widget class="object_portrait_picture" id="pic1" scale_picture="true" width="105" keep_aspect_ratio="true" image_alignment="left,bottom" />
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle"  vertical_gap="0"/>
+
+						<!-- Person 1 details -->
+						<widget class="label" id="nam1" alignment="left,centre_y" height="25" font="title" size="large" colour="alt text">
+							<translation id="text" translation_id="229689" type="use" value="Name" />
+						</widget>
+
+						<widget class="table" id="dts1" layout="-1" auto_size="vertical" row_height="21" row_spacing="0">
+							<list id="column_table_properties">
+								<record indx="0" sort_disabled="true" alignment="left,centre_y" />
+							</list>
+							<list id="column_widget_properties">
+								<record indx="0" colour="faded alt text" alignment="left,centre_y" />
+							</list>
+						</widget>
+
+					</container>
+
+	    <container>
+			<layout class="arrange_vertical_attachment" layout="-1,-1,-1,-1" offset="5"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+						
+			<!-- Preferred Foot-->
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="70,50" offset="0" gap="0" />
+			    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<widget class="label" id="Pfor" auto_size="vertical" font="title" colour="faded text"/>
+				<widget class="foot_label" id="Pfot" auto_size="vertical" colour="white"/>
+			</container>
+			<!--height-->
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="70,50" offset="0" gap="0" />
+			    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<widget class="label" id="Pfel" auto_size="vertical" font="title" colour="faded text"/>
+				<widget class="height_label" id="Pfdd" auto_size="vertical" colour="white"/>
+			</container>
+
+			<!--weight -->
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="70,50" offset="0" gap="0" />
+			    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<widget class="label" id="Pfss" auto_size="vertical" font="title" colour="faded text"/>
+				<widget class="weight_label" id="Past" auto_size="vertical" colour="white"/>
+			</container>
+
+			<!--needs scouting-->
+			<container id="nds1">
+				<layout class="arrange_horizontal_attachment" layout="70,50" offset="0" gap="4" />
+			    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<widget class="text" id="mag1" auto_size="vertical" colour="fg"/>
+			</container>
+		</container>
+
+					<!--Person 1 additional info box-->
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+						<string id="create_if" value="allow_transfers"/>
+						<container>
+							<attachment_group class="vertical_arrange_autosize" horizontal_alignment="right"/>
+
+							<!--Value-->
+							<widget class="transfer_value_label" id="val1" auto_size="all" alignment="centre" size="11" colour="alt text">
+								<translation id="format" translation_id="383826" type="use" value="Valued at [%cash#1-roundsmall-short][COMMENT: FR 10661; player overview; string diaplyed a player's estimated monetary value]" />
+								<record id="object_property" get_property="Pdva" dont_set_hint="true" />
+							</widget>
+
+							<!--Wage / Expiry date-->
+							<widget class="link_text" id="wgex" section="Pcnr" auto_size="vertical" alignment="right" multiline="false" colour="alt text" navigation_focus_target="true">
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+							</widget>
+
+							<!-- Agreed playing time-->
+							<widget class="playing_time_label" id="sqst" auto_size="all" alignment="centre" colour="faded alt text">
+								<record id="object_property" get_property="Pcpt" />
+							</widget>
+						</container>
+					</container>
+
+				</container>
+
+				<!-- Person 2 -->
+				<container id="p2dt" class="main_box" red_replacement="comp person 2" navigation_container="true" default_focus="true">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<container id="p2tp">
+						<!-- Horizontal stack, table expanded to fill space -->
+			            <attachment_group class="horizontal_arrange" horizontal_layout="-1,150,230,105" horizontal_offset="4" />
+						<!--Person 2 additional info box-->
+						<container id="p2id">
+							<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+							<container>
+								<string id="create_if" value="allow_transfers"/>
+								<attachment_group class="vertical_arrange_autosize" horizontal_alignment="left"/>
+
+								<!--Value-->
+								<widget class="transfer_value_label" id="val2" auto_size="all" alignment="centre" size="11" colour="alt text">
+									<translation id="format" translation_id="383826" type="use" value="Valued at [%cash#1-roundsmall-short][COMMENT: FR 10661; player overview; string diaplyed a player's estimated monetary value]" />
+								</widget>
+
+								<!--Wage / Expiry date-->
+								<widget class="link_text" id="wgx2" section="Pcnr" auto_size="vertical" alignment="left" multiline="false" colour="alt text" >
+									<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+								</widget>
+
+								<!-- Playing time -->
+								<widget class="playing_time_label" id="sqs2" auto_size="all" alignment="centre" colour="faded alt text" />
+							</container>
+							
+						</container>
+		<!--Player Two attributes -->
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-1,-1,-1,-1" offset="5"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!-- Preferred Foot-->
+			<container>
+			<layout class="arrange_horizontal_attachment" layout="70,50" offset="0" gap="4" />
+			    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<widget class="label" id="Pfo2" auto_size="vertical" font="title" colour="faded text" />
+				<widget class="foot_label" id="Pft2" auto_size="vertical" colour="white"  />
+			</container>
+
+			<!--height-->
+			<container>
+			<layout class="arrange_horizontal_attachment" layout="70,50" offset="0" gap="4" />
+			    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<widget class="label" id="Pfl2" auto_size="vertical" font="title" colour="faded text"  />
+				<widget class="height_label" id="Pfd2" auto_size="vertical" colour="white"  />
+			</container>
+
+			<!--weight -->
+			<container>
+			<layout class="arrange_horizontal_attachment" layout="70,50" offset="0" gap="4" />
+			    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<widget class="label" id="Pfs2" auto_size="vertical" font="title" colour="faded text"  />
+				<widget class="weight_label" id="Pas2" auto_size="vertical" colour="white"  />
+			</container>
+
+			<!--needs scouting-->
+			<container id="nds2">
+			<layout class="arrange_horizontal_attachment" layout="70,50" offset="0" gap="4" />
+			    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+	
+				<widget class="text" id="mag2" auto_size="vertical"  colour="fg"/>
+			</container>
+		</container>
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+							<container>
+								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+								<widget class="popup_button" id="pccw" alignment="right,centre_y" height="25" sele="pccw" fixed="true" appearance="buttons/custom/very subtle/button" font="title" size="10" colour="alt text"  auto_tick_exclusive="true" save_default_state="true" default_focus="true">
+									<translation id="text" translation_id="329857" type="use" value="Compared With: No Person Selected[COMMENT: Button text on compare person screen]" />
+								</widget>
+							</container>
+
+							<!-- Person 2 details -->
+							<widget class="table" id="dts2" mode="" auto_size="vertical" layout="-1" row_height="20" row_spacing="0" >
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+								<list id="column_table_properties">
+									<record indx="0" colour="alt text" sort_disabled="true" alignment="right,centre_y" />
+								</list>
+								<list id="column_widget_properties">
+									<record indx="0" colour="faded alt text" alignment="right,centre_y" />
+								</list>
+							</widget>
+						</container>
+						<!-- Person 2 portrait -->
+						<widget class="object_portrait_picture" id="pic2" hidden="true" width="105" scale_picture="true" keep_aspect_ratio="true" image_alignment="right,bottom" />
+					</container>
+				</container>
+			</container>
+		</container>
+		
+		<!-- End of personal details -->
+		<container class="main_box">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="2,8,8,8" apply_to_children="true" />
+			<!-- No second player label -->
+			<widget class="text" id="nopt" hidden="true" auto_size="none" alignment="centre" />
+			<container class="tabbed_container" id="mcbc" appearance="" default_item="OvrC" changed_event="dese"  save_session_state="true" height="40" navigation_container="true">
+
+				<!-- The overview panel is an xml file only and doesn't do anything clever except contain some more panels -->
+				<container id="OvrC">
+					<translation id="title" translation_id="323122" type="use" value="Overview[COMMENT: Player comparison type header]" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<container file="player/player comparison overview" id="over" hidden="true" />
+				</container>
+				<!-- The attributes comparison panel is similar to the one found in person profile -->
+				<container id="AttC">
+					<translation id="title" translation_id="323123" type="use" value="Attributes[COMMENT: Player comparison type header]" />
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<widget class="player_attributes_comparison_panel" id="attr" hidden="true" />
+				</container>
+
+				<!-- Statistics comparison table -->
+				<container id="StaC" navigation_container="true">
+					<translation id="title" translation_id="323124" type="use" value="Statistics[COMMENT: Player comparison type header]" />
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="6" gap="4" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<container height="30">
+						<layout class="arrange_horizontal_attachment" alignment="left" gap="10" offset="4" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+						<layout class="fit_children_attachment" alignment="horizontal,fill" gap="10" offset="4" />
+
+						<widget class="label" id="perl" auto_size="horizontal" font="title" height="32">
+							<translation id="text" translation_id="316800" type="use" value="Competition[COMMENT: competition a fixture is played in]" />
+						</widget>
+
+						<widget class="view_menu_popup" height="32" id="pcom" auto_size="horizontal" select_event="repe" auto_tick_exclusive="true" size="10" fixed="false" embed_in_frame="false"/>
+					</container>
+
+					<container class="scrolling_box">
+						<container id="Stbc">
+							<translation id="title" translation_id="323124" type="use" value="Statistics[COMMENT: Player comparison type header]" />
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<widget class="table" id="stat" mode="fill_rows" layout="80, 280, 80" auto_size_rows="true"  row_spacing="0" hidden="true" auto_size="all">
+								<list id="column_table_properties">
+									<record indx="0" sort_disabled="true" alignment="centre"/>
+									<record indx="1" sort_disabled="true" alignment="centre"/>
+									<record indx="2" sort_disabled="true" alignment="centre"/>
+								</list>
+								<!-- Comparison items will be created dynamically and added here -->
+							</widget>
+
+							<widget class="horizontal_divider" width="460" image_alignment="centre" />
+
+							<widget class="label" id="pern" alignment="centre_x,top" height="20" auto_size="horizontal" font="title" colour="faded text">
+								<translation id="text" translation_id="420716" type="use" value="Stats per 90 minutes[COMMENT: Player Stats Comparisons Per 90 Minutes label]" />
+							</widget>
+
+							<widget class="table" id="stt2" mode="fill_rows" layout="80, 280, 80" auto_size_rows="true"  row_spacing="2" hidden="true" auto_size="all">
+								<list id="column_table_properties">
+									<record indx="0" sort_disabled="true" alignment="centre"/>
+									<record indx="1" sort_disabled="true" alignment="centre"/>
+									<record indx="2" sort_disabled="true" alignment="centre"/>
+								</list>
+								<!-- Comparison items will be created dynamically and added here -->
+							</widget>
+						</container>
+					</container>
+				</container>
+				<!-- Positions comparison table -->
+				<container id="PosC">
+					<translation id="title" translation_id="420717" type="use" value="Positions &amp; Roles[COMMENT: Player comparison type header, feel free to use an alternative to an ampersand if it's not your convention but please use appropriate character references as done here]" />
+					<layout class="arrange_vertical_attachment" layout="-1, 20" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="player_positions_comparison_indicator_panel" file="player/player positions comparison indicator" hidden="true" id="pos1">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+					<widget class="spacer" />
+				</container>
+
+			</container>
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,248 @@
+<!-- this file is used in player comparision.xml, as an XML file only - there is no code for this panel/container at the moment, all it does it contain other widgets -->
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!-- legend -->
+	<container id="lgnd" height="180">
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0"/>
+
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<!--First Players Overview box-->
+		<container class="inner_subtle_box" navigation_container="true">
+			<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container id="P1St">
+				<layout class="arrange_vertical_attachment" layout="-4,-3" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="2" />
+
+				<!--Coach/Scout report-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<container height="22">
+						<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+						<widget class="button" appearance="buttons/link/title/button" click_event="slRp" id="trlb" height="26" alignment="left,centre_y" auto_size="horizontal"  font="title" colour="comp person bar 1" red_replacement="comp person bar 1" blue_replacement="comp person bar 1"/>
+					</container>
+
+					<container height="23">
+						<layout class="arrange_horizontal_attachment" layout="72,-1" offset="0" gap="4" />
+
+						<!-- Recommendation -->
+						<widget class="scout_stars_label" id="RCic" alignment="centre" auto_size="none" click_event="ltms" navigation_focus_target="false">
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"  />
+						</widget>
+
+						<!-- Cons / pro count and % scouted text. Links to Coach report/scout report -->
+						<widget class="link_text" id="pc%t" auto_size="none" alignment="left,centre_y">
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="1,0,0,0"  />
+						</widget>
+					</container>
+
+					<widget class="text" id="SMtx" spec="text" size="9" height="40" auto_size="none" colour="faded text" alignment="left,centre_y" />
+				</container>
+
+				<!--Season stats-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<container height="22">
+						<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+
+						<widget class="button" appearance="buttons/link/title/button" click_event="slst" id="SsTs" height="26" alignment="left,centre_y" auto_size="horizontal" font="title" colour="comp person bar 1" red_replacement="comp person bar 1" blue_replacement="comp person bar 1">
+							<translation id="text" translation_id="385617" type="use" value="Season Stats[COMMENT: player overview; player stats by competition panel title]" />
+						</widget>
+					</container>
+
+					<!-- Main table with comps in. Column layout must match the overview table -->
+					<widget class="table" id="tabl" select_event="togC" layout="-1,-1,-1,-1,-1,-1,-1,-1,-1" row_height="22" save_session_state="true" >
+
+						<record id="default_properties">
+							<flags id="alignment" value="left,centre_y" />
+							<flags id="colour" value="faded text" />
+						</record>
+
+						<integer id="column_heading_appearance" value="tables/standard/heading/subtle/row"/>
+
+						<list id="headings">
+							<record index="0"  auto_hide_priority="1" />                       <!--Apps-->
+							<record index="1"  auto_hide_priority="1" />                       <!--Goals/Conceded-->
+							<record index="2"  auto_hide_priority="1" />                       <!--Assists/Clean Sheets-->
+							<record index="3"  auto_hide_priority="100" minimum_width="90"/>  <!--Yellow Cards-->
+							<record index="4"  auto_hide_priority="100" minimum_width="90"/>  <!--Red Cards-->
+							<record index="5"  auto_hide_priority="100" minimum_width="90"/>  <!--Man Of Match-->
+							<record index="6"  auto_hide_priority="200" minimum_width="90"/>  <!--Tackle Completion-->
+							<record index="7"  auto_hide_priority="1"/>                        <!--Pass % completetion-->
+							<record index="8"  auto_hide_priority="1"/>                        <!--Average-->-->
+						</list>
+
+						<list id="column_table_properties">
+							<record index="0" alignment="left,centre_y" sort_disabled="true"  auto_hide_priority="1"/>
+							<!--Apps-->
+							<record index="1" alignment="left,centre_y" sort_disabled="true" auto_hide_priority="1"/>
+							<!--Goals/Conceded-->
+							<record index="2" alignment="left,centre_y" sort_disabled="true" auto_hide_priority="1"/>
+							<!--Assists/Clean Sheets-->
+							<record index="3" alignment="left,centre_y" sort_disabled="true" auto_hide_priority="100" minimum_width="90"/>
+							<!--Yellow Cards-->
+							<record index="4" alignment="left,centre_y" sort_disabled="true" auto_hide_priority="100" minimum_width="90"/>
+							<!--Red Cards-->
+							<record index="5" alignment="left,centre_y" sort_disabled="true" auto_hide_priority="100" minimum_width="90"/>
+							<!--Man Of Match-->
+							<record index="6" alignment="left,centre_y" sort_disabled="true" auto_hide_priority="200" minimum_width="90"/>
+							<!--Tackle Completion-->
+							<record index="7" alignment="left,centre_y" sort_disabled="true" auto_hide_priority="1"/>
+							<!--Pass % completetion-->
+							<record index="8" alignment="left,centre_y" sort_disabled="true" auto_hide_priority="1"/>
+							<!--Average-->
+						</list>
+
+					</widget>
+
+				</container>
+			</container>
+
+			<!--Pitch and positions-->
+			<widget class="pitch_with_position_and_role_indicator" id="pwr1"/>
+		</container>
+		<!--Second Players Overview box-->
+		<container class="inner_subtle_box" navigation_container="true">
+			<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<!--Pitch and positions-->
+			<widget class="pitch_with_position_and_role_indicator" id="pwr2"/>
+
+			<!--Report & Stats-->
+			<container id="P2St">
+				<layout class="arrange_vertical_attachment" layout="-4,-3" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="2" />
+
+				<!--Coach/Scout report-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<container height="22">
+						<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+						<widget class="button" appearance="buttons/link/title/button" click_event="slRp" id="trl2" height="26" alignment="left,centre_y" auto_size="horizontal" font="title" colour="comp person bar 2" red_replacement="comp person bar 2" blue_replacement="comp person bar 2" />
+					</container>
+
+					<container height="23">
+						<layout class="arrange_horizontal_attachment" layout="72,-1" offset="0" gap="4" />
+
+						<!-- Recommendation -->
+						<widget class="scout_stars_label" id="RCi2" alignment="centre" auto_size="none" click_event="ltms" navigation_focus_target="false">
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"  />
+						</widget>
+
+						<!-- Cons / pro count and % scouted text. Links to Coach report/scout report -->
+						<widget class="link_text" id="pc%2" auto_size="none" alignment="left,centre_y">
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="1,0,0,0"  />
+						</widget>
+					</container>
+
+					<widget class="text" id="SMt2" spec="text" size="9" height="40" auto_size="none" colour="faded text" alignment="left,centre_y"/>
+				</container>
+
+				<!--Season stats-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<container height="22">
+						<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+
+						<widget class="button" appearance="buttons/link/title/button" click_event="slst"  id="SsT2" height="26" alignment="left,centre_y" auto_size="horizontal" font="title" colour="comp person bar 2" red_replacement="comp person bar 2" blue_replacement="comp person bar 2">
+							<translation id="text" translation_id="385617" type="use" value="Season Stats[COMMENT: player overview; player stats by competition panel title]" />
+						</widget>
+					</container>
+
+					<!-- Main table with comps in. Column layout must match the overview table -->
+					<widget class="table" id="tab2" select_event="togC" layout="-1,-1,-1,-1,-1,-1,-1,-1,-1" row_height="22" save_session_state="true" >
+
+						<record id="default_properties">
+							<flags id="alignment" value="left,centre_y" />
+							<flags id="colour" value="faded text" />
+						</record>
+
+						<integer id="column_heading_appearance" value="tables/standard/heading/subtle/row"/>
+
+						<list id="headings">
+							<record index="0" auto_hide_priority="1" />                       <!--Apps-->
+							<record index="1" auto_hide_priority="1" />                       <!--Goals/Conceded-->
+							<record index="2" auto_hide_priority="1" />                       <!--Assists/Clean Sheets-->
+							<record index="3" auto_hide_priority="100" minimum_width="90"/>  <!--Yellow Cards-->
+							<record index="4" auto_hide_priority="100" minimum_width="90"/>  <!--Red Cards-->
+							<record index="5" auto_hide_priority="100" minimum_width="90"/>  <!--Man Of Match-->
+							<record index="6" auto_hide_priority="200" minimum_width="90"/>  <!--Tackle Completion-->
+							<record index="7" auto_hide_priority="1"/>                        <!--Pass % completetion-->
+							<record index="8" auto_hide_priority="1"/>                        <!--Average-->-->
+						</list>
+
+						<list id="column_table_properties">
+							<record index="0" alignment="left,centre_y" sort_disabled="true" auto_hide_priority="1"/>
+							<!--Apps-->
+							<record index="1" alignment="left,centre_y" sort_disabled="true" auto_hide_priority="1"/>
+							<!--Goals/Conceded-->
+							<record index="2" alignment="left,centre_y" sort_disabled="true" auto_hide_priority="1"/>
+							<!--Assists/Clean Sheets-->
+							<record index="3" alignment="left,centre_y" sort_disabled="true" auto_hide_priority="100" minimum_width="90"/>
+							<!--Yellow Cards-->
+							<record index="4" alignment="left,centre_y" sort_disabled="true" auto_hide_priority="100" minimum_width="90"/>
+							<!--Red Cards-->
+							<record index="5" alignment="left,centre_y" sort_disabled="true" auto_hide_priority="100" minimum_width="90"/>
+							<!--Man Of Match-->
+							<record index="6" alignment="left,centre_y" sort_disabled="true" auto_hide_priority="200" minimum_width="90"/>
+							<!--Tackle Completion-->
+							<record index="7" alignment="left,centre_y" sort_disabled="true" auto_hide_priority="1"/>
+							<!--Pass % completetion-->
+							<record index="8" alignment="left,centre_y" sort_disabled="true" auto_hide_priority="1"/>
+							<!--Average-->
+						</list>
+					</widget>
+
+				</container>
+			</container>
+		</container>
+	</container>
+
+	<container class="main_box">
+		<layout class="arrange_horizontal_attachment" layout="500,-1,500"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<!--Player 1 report-->
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<!-- If we have scout reports -->
+						<widget class="player_comparison_reports_indicator" id="pcr1" colour="comp person bar 1" />
+					</container>
+
+		<!--Stats comparison graph-->
+		<container id="temp" >
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			<!-- outfield player analyser panel : visible by default -->
+			<widget class="person_attributes_analyser_panel" id="ofap" file="player/player comparison attribute analyser outfield" hidden="false" />
+			<!-- goalkeeper player analyser panel : hidden by default -->
+			<widget class="person_attributes_analyser_panel" id="gkap" file="player/player comparison attribute analyser goalkeeper" hidden="true" />
+		</container>
+	
+					<!--Player 2 report-->
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<!-- If we have scout reports -->
+						<widget class="player_comparison_reports_indicator" id="pcr2" colour="comp person bar 2" />
+					</container>
+	</container>
+
+</panel>

@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel save_session_state="true">
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+  
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="2"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+	
+   
+      <!-- If we have scout reports -->
+    
+		<container id="main" height="185">
+ 
+   <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+	<layout class="arrange_horizontal_attachment" layout="1,80,-1,32" inset="0" offset="0" gap="1" />
+							
+			
+<container/>
+			
+      <!-- Pros icons -->
+      <container>
+      <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+      <widget class="horizontal_arrange_container" alignment="left,top" id="mpro" wrap="true" gap="1" inset="0">
+        <integer id="size" value="31" />
+      </widget>
+    </container>
+
+	<container/>
+	
+      <!-- Cons icons -->
+      <container>
+      <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+      <!-- Icons get inserted into here. The 'size' attribute is the size in pixels of each icon -->
+      <widget class="horizontal_arrange_container" alignment="right,top" id="mcon" wrap="true" gap="1" inset="0">
+        <integer id="size" value="31" />
+		
+      </widget>
+	  		
+    </container>
+	
+	
+    </container>
+    
+    	  
+
+		
+ </container>
+
+</panel>

@@ -1,0 +1,32 @@
+﻿<panel>
+    <attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="10"/>
+
+    <!-- answer list -->
+    <container class="scrolling_box">
+        <container class="plain_box" appearance="boxes/custom/quick chat/user_quick_chat_speech" red_replacement="bg lighter">
+            <attachment_group class="vertical_arrange_autosize" vertical_alignment="top, extend"/>
+
+            <container id="ancr">
+                <attachment_group class="vertical_arrange_autosize" vertical_alignment="top, extend"/>
+
+                <!--response group containers widgets added here-->
+            </container>
+
+            <container class="spacer" height="3"/>
+
+            <!-- additional comments -->
+            <container class="collapsable_box" id="adcC" collapsed="true" appearance="boxes/contrast/standard/paper" red_replacement="bg lighter" colour="text">
+                <attachment_group class="vertical_arrange_autosize" vertical_offset="8"/>
+                <translation id="title" translation_id="515049" type="use" value="Additional Comments[COMMENT: AREA: Press Conference Panel; SUB-AREA: Footer section; FR-BN: 32500; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Label for button to display the text box for adding custom comments to an answer]"/>
+
+                <widget class="edit_box" id="adco" show_clear_text_icon="true" height="30">
+                    <translation id="placeholder_string" translation_id="308081" type="use" value="Additional Comments.. (Optional)[COMMENT: Press conference; label for text box]"/>
+                    <record id="changed_event" event_id="sadc" event_target="prnt"/>
+                    <attachment class="max_length_attachment" length="100"/>
+                    <layout class="stick_to_sides_attachment" alignment="horizontal"/>
+                </widget>
+            </container>
+        </container>
+    </container>
+
+</panel>

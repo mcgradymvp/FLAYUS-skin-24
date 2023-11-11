@@ -1,0 +1,104 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="4" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container id="main">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="10" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<widget class="text" id="cdsc" auto_size="vertical" colour="faded text" size="small" />
+
+			<!-- Ability list table -->
+			<widget class="table" id="calL" mode="fill_rows,stripe_rows" layout="24,-5,-3,-3">
+				<list id="column_widget_properties">
+					<record indx="0" alignment="left,centre_y" />
+					<record indx="1" alignment="left,centre_y" />
+					<record indx="2" alignment="left,centre_y" />
+					<record indx="3" alignment="left,centre_y" />
+				</list>
+				<list id="column_table_properties">
+					<record indx="0" sort_disabled="true" left="5" />
+					<record indx="1" sort_disabled="true" />
+					<record indx="2" sort_disabled="true" />
+					<record indx="3" sort_disabled="true" />
+				</list>
+			</widget>
+		</container>
+
+		<!-- No scout report -->
+		<container id="nsrc" width="230">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="10" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" />
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" auto_size="vertical">
+				<translation id="text" translation_id="320496" type="use" value="You need to request a member of your scouting staff to compile a report on this player.[COMMENT: scout report; need to scout advice]" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" />
+			</widget>
+			<widget class="button" id="sctP" click_event="sctc" auto_size="horizontal" height="30">
+				<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+				<layout class="centre_in_parent_attachment" alignment="horizontal" />
+			</widget>
+		</container>
+
+		<!-- No Coach Report-->
+		<container id="ncrc" width="230">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="10" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="320498" type="use" value="You need to have at least one coach at your team to compile a report on this player.[COMMENT: coach report; need staff advice]" />
+			</widget>
+			<widget class="text" auto_size="vertical" alignment="centre" size="8">
+				<translation id="text" translation_id="326089" type="use" value="You can find staff to hire via the Staff Search.[COMMENT: team report; need to scout sub advice]" />
+			</widget>
+			<widget class="spacer" height="10" />
+			<widget class="link_appearance_button" click_event="gtss">
+				<translation id="text" translation_id="320500" type="use" value="Staff Search[COMMENT: team report; link to the staff search]" />
+				<layout class="centre_in_parent_attachment" alignment="horizontal" />
+			</widget>
+		</container>
+
+		<!-- No national report-->
+		<container id="nnrc" width="230">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="10" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+
+			<!--explanatory text-->
+			<widget class="text" id="info" alignment="centre" spec="text" style="semi_bold, embossed" auto_size="all" />
+			<widget class="button" id="sctn" click_event="sctn" auto_size="horizontal">
+				<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+				<layout class="centre_in_parent_attachment" alignment="horizontal" />
+			</widget>
+		</container>
+
+		<!-- Already being scounted -->
+		<container id="Arbs" width="230">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+
+			<!--explanatory text-->
+			<widget class="text" id="arbt" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+			</widget>
+		</container>
+
+		<container id="naSP" width="230">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="all">
+				<translation id="text" translation_id="435189" type="use" value="Unavailable[COMMENT: no scouting report available; was ID 247303 but some languages need specific translations here]" />
+			</widget>
+		</container>
+
+	</container>
+</panel>

@@ -1,0 +1,13 @@
+﻿<panel>
+    <attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="10"/>
+
+    <!-- answer list -->
+    <container class="scrolling_box">
+        <container id="ancr" class="plain_box" appearance="boxes/custom/quick chat/user_quick_chat_speech" red_replacement="bg lighter">
+            <attachment_group class="vertical_arrange_autosize" vertical_alignment="top, extend"/>
+
+            <!--response group containers widgets added here-->
+        </container>
+    </container>
+
+</panel>

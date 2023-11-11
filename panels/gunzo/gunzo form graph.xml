@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+
+  <string id="title" value="Form Graph" />
+  <!-- layout -->	
+	<layout class="arrange_horizontal_attachment" alignment="right,extend" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+  <!--bar chart-->
+  <widget class="vertical_bar_chart" id="barc" show_labels="false" show_negative_values="false" />
+ 
+ 
+</panel>
+<!-- main container -->

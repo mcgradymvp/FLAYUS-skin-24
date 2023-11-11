@@ -1,0 +1,17 @@
+<panel>
+
+  <layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+  
+  <container id="mafl">
+    <layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="5"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+    <widget class="match_analysis_pre_match_panel" id="MANm" file="match/match analysis pre-match floating" hidden="true"/>
+    <widget class="match_analysis_statistics_panel" id="MANs" file="match/match analysis statistics floating"/>
+    <widget class="match_analysis_performance_panel" id="MANf" file="match/match analysis performance floating"/>
+    <widget class="match_analysis_tactics_panel" id="MANt" file="match/match analysis tactics floating"/>
+
+   </container>
+
+</panel>

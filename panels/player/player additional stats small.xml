@@ -1,0 +1,156 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <!-- Include friendly info -->
+  <boolean id="ifps" value="true" />
+
+  <!-- This is a list of properties to be displayed in the top table. The number of properties, minus KG/outfield specific ones, here must match the number of columns
+        in the main and overview tables minus the first 2 (used for competitions and checkboxes)-->
+  <!-- default widget is formatted_label -->
+	<list id="tabS">
+		<!-- Appearances -->
+		<record id="PSap" format="[%fraction#1-1.0] ([%fraction#2-1.0])">
+			<translation id="hint" translation_id="336068" type="use" value="Total appearances (substituted on)[COMMENT: player stat column heading; total number of appearances and the number of matches where the player was subbed on]" />
+			<translation id="text" translation_id="229757" type="use" value="Apps" />
+		</record>
+		<!-- Conceded (GK)-->
+		<record id="PSgc" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="247734" type="use" value="Conceded" />
+			<translation id="text" translation_id="252155" type="use" value="Conc[COMMENT: manager stats: goals against]" />
+		</record>
+		<!-- Clean Sheets (GK)-->
+		<record id="PScs" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="317291" type="use" value="Clean Sheets[COMMENT: player stats; goalkeeper statistic for games where he didn't concede a goal]" />
+			<translation id="text"  type="use" value="클린 시트" />
+		</record>
+		<!-- Save Tipped -->
+		<record id="stip" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="322138" type="use" value="Saves Tipped[COMMENT: match stats; saves tipped]" />
+			<translation id="text" translation_id="322134" type="use" value="Svt[COMMENT: match stats; abbreviation for saves tipped]" />
+		</record>
+		<!-- Save Parried -->
+		<record id="spar" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="322137" type="use" value="Saves Parried[COMMENT: match stats; saves parried]" />
+			<translation id="text" translation_id="322133" type="use" value="Svp[COMMENT: match stats; abbreviation for saves parried]" />
+		</record>
+		<!-- Saves Held -->
+		<record id="saHE" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="322136" type="use" value="Saves Held[COMMENT: match stats; saves held]" />
+			<translation id="text" translation_id="322132" type="use" value="Svh[COMMENT: match stats; abbreviation for saves held]" />
+		</record>
+		<!-- Goals -->
+		<record id="PSgo" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="227857" type="use" value="Goals" />
+			<translation id="text" translation_id="227850" type="use" value="Gls[comment - player (match/overall) goals short string]" />
+		</record>
+		<!-- Assists-->
+		<record id="PSas" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="227847" type="use" value="Assists" />
+			<translation id="text" translation_id="249488" type="use" value="Asts" />
+		</record>
+		<!-- Penalties -->
+    <record id="PSpe" format="[%fraction#2-1.0] ([%fraction#1-1.0])">
+			<translation id="hint" translation_id="230022" type="use" value="Penalties" />
+      <translation id="text" translation_id="249480" type="use" value="Pens" />
+		</record>
+		<!-- Man of Match -->
+		<record id="mogp" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="227859" type="use" value="Man Of The Match" />
+			<translation id="text" translation_id="249493" type="use" value="MoM[COMMENT man of match]" />
+		</record>
+		<!-- Yellows -->
+		<record id="ycmp" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="227869" type="use" value="Yellow cards" />
+			<translation id="text" translation_id="227868" type="use" value="Yel[COMMENT yellow cards]" />
+		</record>
+		<!-- Reds -->
+		<record id="rcmp" format="[%fraction#1-2.0]">
+			<translation id="hint" translation_id="227871" type="use" value="Red cards" />
+			<translation id="text" translation_id="229879" type="use" value="Red" />
+		</record>
+		<!-- Dribbles made per game-->
+		<record id="PSdg" format="[%fraction#1-2.2]">
+			<translation id="text" translation_id="337882" type="use" value="DrbPG[COMMENT: dribbles made per game for an individual player, used as a column header, needs to be short as poss but different to 'Drb', which is total dribbles]" />
+			<translation id="hint" type="use" value="경기 당 드리블" />
+		</record>
+		<!-- Shots ratio -->
+		<record id="PSst" class="dashed_record_percentage_label">
+			<translation id="hint" translation_id="249472" type="use" value="Shots on target ratio" />
+			<translation id="text" translation_id="249496" type="use" value="Sh Tar[COMMENT shots on target per game]" />
+		</record>
+		<!-- Pass ratio -->
+		<record id="PSpa" class="dashed_record_percentage_label">
+			<translation id="hint" translation_id="249473" type="use" value="Pass completion ratio" />
+			<translation id="text" translation_id="390509" type="use" value="Pas %[COMMENT: pass completion ratio, short text]" />
+		</record>
+		<!-- Tackles completion ratio -->
+		<record id="tcta" class="dashed_record_percentage_label">
+			<translation id="text" translation_id="301168" type="use" value="Tck W[COMMENT: Tackles won (completed), short text]" />
+			<translation id="hint" translation_id="249446" type="use" value="Tackles completed" />
+		</record>
+		<!-- Average rating -->
+		<record id="PsAr" class="match_rating_label_formatted" format="[%fraction#1-1.2]">
+			<translation id="hint" translation_id="227853" type="use" value="Average rating" />
+			<translation id="text" translation_id="227852" type="use" value="Av Rat[comment - Average rating]" />
+		</record>
+	</list>
+  
+	<container class="icon_box" file="player/player status icon box" icon="icons/custom/icon box/stats">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+    <!-- Set icon to only show: Yel, Sus, Una -->
+    <record id="widget_properties" type="5" />
+
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+      <widget class="label" id="nost" alignment="centre" size="11" hidden="true">
+        <translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+      </widget>
+
+      <container id="stVW">
+        <layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+        <!-- Main table with comps in. Column layout must match the overview table -->
+        <widget class="table" id="tabl" select_event="togC" mode="fill_rows, stripe_rows" layout="-19,-4,-5,-5,-5,-5,-4,-4,-6,-4,-5,-5,-5,-5,-5,-5,-5" row_height="24" save_session_state="true" footer_class="formatted_label">
+          <boolean id="save_session_state" value="true" />
+          <record id="default_properties" alignment="centre_x,centre_y" colour="faded text" />
+          <list id="column_properties">
+             <record indx="0" alignment="left,centre_y" colour="faded text" />
+             <record indx="12" alignment="centre_x,centre_y" colour="gzc" />
+          </list>
+          <list id="column_display_properties">
+            <record indx="0" left="4" sort_disabled="true"/>
+          </list>
+          <list id="headings">
+            <record alignment="centre_x,centre_y" />
+            <record alignment="centre_x,centre_y" />
+            <record alignment="centre_x,centre_y" />
+            <record alignment="centre_x,centre_y" />
+            <record alignment="centre_x,centre_y" />
+            <record alignment="centre_x,centre_y" />
+            <record alignment="centre_x,centre_y" />
+            <record alignment="centre_x,centre_y" />
+            <record alignment="centre_x,centre_y" />
+            <record alignment="centre_x,centre_y" />
+            <record alignment="centre_x,centre_y" />
+            <record alignment="centre_x,centre_y" />
+            <record colour="gzc" alignment="centre_x,centre_y" />
+          </list>
+        </widget>
+      </container>
+    </container>
+
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="top,left" apply_to_children="true" inset="0" />
+
+      <string id="skin_style" value="title link" />
+
+      <!-- Linked header -->
+      <widget class="link_button" section="Psta" auto_size="all">
+        <translation id="text" translation_id="385617" type="use" value="Season Stats[COMMENT: player overview; player stats by competition panel title]" />
+      </widget>
+    </container>
+  </container>
+</panel>

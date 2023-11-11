@@ -1,0 +1,19 @@
+<panel info_panel_type="1">
+  <layout class="arrange_horizontal_attachment" layout="-1,100,-1" />
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+  <!--  home incidents panel -->
+  <widget class="home_match_incidents_panel" id="hmip" small_version="true" file="match/match incidents overview popup left" />
+
+  <!--score stuff-->
+  <widget class="match_titlebar_panel" id="titb" file="match/match title bar popup" mode="1">
+    <record id="object_property">
+      <integer id="get_property" value="objt" />
+      <integer id="set_property" value="objt" />
+    </record>
+  </widget>
+
+  <!--  away incidents panel -->
+  <widget class="away_match_incidents_panel" id="amip" small_version="true" file="match/match incidents overview popup right" />
+
+</panel>

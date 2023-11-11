@@ -1,0 +1,84 @@
+﻿<panel width="300">
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="0" vertical_offset="0" horizontal_inset="0" />
+
+	<container class="standard_popup_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="5" vertical_offset="10" horizontal_inset="10" />
+
+		<widget class="manager_text" auto_size="vertical" colour="faded text">
+			<translation id="text" translation_id="466509" type="use" value="[%person#1-Your] team's tactical identity, also used to influence training schedules.[COMMENT: FR 23334, hint text for the team's primary trained tactic]" />
+		</widget>
+
+		<widget class="spacer" height="5" />
+
+		<widget class="radio_button" group="1" auto_size="vertical">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="slt1" />
+						<integer id="set_property" value="text" />
+					</record>
+					<record>
+						<integer id="get_property" value="hsl1" />
+						<integer id="set_property" value="hidn" />
+					</record>
+					<record>
+						<integer id="get_property" value="slc1" />
+						<integer id="set_property" value="sltd" />
+					</record>
+					<record>
+						<integer id="get_property" value="evs1" />
+						<integer id="set_property" value="sele" />
+					</record>
+				
+				</list>
+			</record>
+		</widget>
+
+		<widget class="radio_button" group="1" auto_size="vertical">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="slt2" />
+						<integer id="set_property" value="text" />
+					</record>
+					<record>
+						<integer id="get_property" value="hsl2" />
+						<integer id="set_property" value="hidn" />
+					</record>
+					<record>
+						<integer id="get_property" value="slc2" />
+						<integer id="set_property" value="sltd" />
+					</record>
+					<record>
+						<integer id="get_property" value="evs2" />
+						<integer id="set_property" value="sele" />
+					</record>
+				</list>
+			</record>
+		</widget>
+
+		<widget class="radio_button" group="1" auto_size="vertical">
+			<record id="object_property">
+				<list id="get_properties">
+					<record>
+						<integer id="get_property" value="slt3" />
+						<integer id="set_property" value="text" />
+					</record>
+					<record>
+						<integer id="get_property" value="hsl3" />
+						<integer id="set_property" value="hidn" />
+					</record>
+					<record>
+						<integer id="get_property" value="slc3" />
+						<integer id="set_property" value="sltd" />
+					</record>
+					<record>
+						<integer id="get_property" value="evs3" />
+						<integer id="set_property" value="sele" />
+					</record>
+				</list>
+			</record>
+		</widget>
+	</container>
+	
+</panel>

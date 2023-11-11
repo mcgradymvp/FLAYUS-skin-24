@@ -1,0 +1,103 @@
+<panel wants_mouse_events="false" disable_animations="true" width="800" height="640" >
+
+	<record id="widget_info">
+		<flags id="alignment" value="centre_x" />
+		<symbol id="class" value="container" />
+	</record>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box" appearance="boxes/popup/standard/paper">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6" />
+
+		<container class="tactics_team_strategies_container" file="none" id="tmSc">
+
+			<colour id="selected_colour" name="selected instruction" />
+			<colour id="unselected_colour" name="black" />
+			<colour id="conflicting_colour" name="conflicting instruction" />
+			<colour id="preselected_colour" name="preselected instruction" />
+			<colour id="unavailable_colour" name="conflicting with role instruction" />
+
+
+			<!--these are the icons overlaid on the team instructions pitch for in transition-->
+			<string id="TIDC" value="icons/custom/tactics/transition/counterpress" />
+			<string id="TIDR" value="icons/custom/tactics/transition/regroup" />
+			<string id="TIAC" value="icons/custom/tactics/transition/counter" />
+			<string id="TIAH" value="icons/custom/tactics/transition/hold shape" />
+
+			<list id="properties_to_forward">
+				<record get_property="type" target="ovar" set_property="sltd"/>
+			</list>
+
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" horizontal_inset="0" vertical_gap="6"/>
+
+			<!--selected items area-->
+			<container class="main_contrast_box_no_margin" red_replacement="pitch_box_background">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,8,8,8" />
+
+				<container class="tabbed_container" id="ovar" default_item="poSE" >
+
+					<!--in possession-->
+					<container id="poSE" icon="icons/16px/in possession">
+						<translation id="title" translation_id="466532" type="use" value="In Possession[COMMENT: team instructions, what the team do when they have the ball]" />
+
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6,0,0,0" />
+
+						<container file="tactics/tactics team strategies in possession"/>
+					</container>
+
+					<!--transition-->
+					<container id="trSE" icon="icons/16px/in transition">
+						<translation id="title" translation_id="466534" type="use" value="In Transition[COMMENT: team instructions, what the team do when transitioning from having the ball to losing it, or vice-versa, this section contains instructions for both situations]" />
+
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6,0,0,0" />
+
+						<container file="tactics/tactics team strategies transition"/>
+
+					</container>
+
+					<!--out of possession-->
+					<container id="opSE" icon="icons/16px/out of possession">
+						<translation id="title" translation_id="466535" type="use" value="Out of Possession[COMMENT: team instructions, what the team do when they do not have the ball]" />
+
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="6,0,0,0" />
+
+						<container file="tactics/tactics team strategies out of possession"/>
+
+					</container>
+
+				</container>
+			</container>
+
+			<container>
+
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_gap="10"/>
+
+
+				<widget class="icon_button" id="sele" auto_size="all" icon="icons/16px/circle" show_button_appearance="false" always_use_appearance_font="true" colour="text">
+					<translation id="text" translation_id="344778" type="use" value="Selected[COMMENT: label text for a key showing what colour a selected item is]" />
+				</widget>
+
+				<widget class="icon_button" id="unav" auto_size="all" icon="icons/16px/circle" show_button_appearance="false" always_use_appearance_font="true" colour="text">
+					<translation id="text" translation_id="247303" type="use" value="Unavailable" />
+				</widget>
+
+
+				<container>
+					<attachment_group class="button_arrangement_right" />
+
+					<widget class="primary_icon_tick_button" id="ok" controller_button="y_button">
+						<translation id="text" translation_id="229829" type="use" value="Ok" />
+					</widget>
+					<widget class="icon_button" id="canc" auto_size="all" controller_button="b_button">
+						<translation id="text" translation_id="229828" type="use" value="Cancel" />
+					</widget>
+				</container>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

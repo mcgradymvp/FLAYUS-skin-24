@@ -1,0 +1,663 @@
+﻿<panel>
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container >
+    <layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+    <container>
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+      <container id="mPNl">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+        <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+        <container height="40" id="tbSl" navigation_container="true" default_focus="true" default_item="recs" save_session_state="true" save_default_state="true">
+        <layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+          <widget class="radio_button" auto_size="all" appearance="tabs/subsection/normal/top/button" show_button_appearance="true" icon="none">
+            <record id="click_event">
+              <integer id="event_id" value="pPsl" />
+              <integer id="selection" value="recs" />
+            </record>
+            <translation id="text" translation_id="330300" type="use" value="Overview[COMMENT: preferences: most important settings section (short) name]" />
+          </widget>
+          <widget class="radio_button" auto_size="all" appearance="tabs/subsection/normal/top/button" show_button_appearance="true" icon="none">
+            <record id="click_event">
+              <integer id="event_id" value="pPsl" />
+              <integer id="selection" value="prGp" />
+            </record>
+             <translation id="text" translation_id="329984" type="use" value="General[COMMENT: preferences: General settings section title]" />
+          </widget>
+          <widget class="radio_button" auto_size="all" appearance="tabs/subsection/normal/top/button" show_button_appearance="true" icon="none">
+            <record id="click_event">
+              <integer id="event_id" value="pPsl" />
+              <integer id="selection" value="prDs" />
+            </record>
+            <translation id="text" translation_id="333864" type="use" value="Interface[COMMENT: preferences: User Interface settings section title]" />
+          </widget>
+          <widget class="radio_button" auto_size="all" appearance="tabs/subsection/normal/top/button" show_button_appearance="true" icon="none">
+            <record id="click_event">
+              <integer id="event_id" value="pPsl" />
+              <integer id="selection" value="prFp" />
+            </record>
+            <translation id="text" translation_id="306615" type="use" value="Formats[COMMENT: preferences: formats (date, currency,etc) settings section (short) name]" />
+          </widget>
+          <widget class="radio_button" auto_size="all" appearance="tabs/subsection/normal/top/button" show_button_appearance="true" icon="none">
+            <record id="click_event">
+              <integer id="event_id" value="pPsl" />
+              <integer id="selection" value="prMp" />
+            </record>
+             <translation id="text" translation_id="330229" type="use" value="Match[COMMENT: preferences: match settings section (short) name]" />
+          </widget>         
+          <widget class="radio_button" auto_size="all" appearance="tabs/subsection/normal/top/button" show_button_appearance="true" icon="none">
+            <record id="click_event">
+              <integer id="event_id" value="pPsl" />
+              <integer id="selection" value="prMC" />
+            </record>
+            <translation id="text" type="use" value="기타 설정" />
+          </widget>
+          <widget class="radio_button" auto_size="all" appearance="tabs/subsection/normal/top/button" show_button_appearance="true" icon="none">
+            <record id="click_event">
+              <integer id="event_id" value="pPsl" />
+              <integer id="selection" value="prEf" />
+            </record>
+            <translation id="text" translation_id="251339" type="use" value="Extra Files[COMMENT: preferences: extra files (edt/ddt) settings section (short) name]" />
+          </widget>       
+          <widget class="radio_button" auto_size="all" appearance="tabs/subsection/normal/top/button" show_button_appearance="true" icon="none">
+            <record id="click_event">
+              <integer id="event_id" value="pPsl" />
+              <integer id="selection" value="gens" />
+            </record>
+            <translation id="text" translation_id="517663" type="use" value="Accounts[COMMENT: AREA: Preferences; SUB-AREA: most common preferences; FR-BN: 47073; TONE: Formal; CHARLIMIT: None; REF-ID: XXXXXX;]" />
+          </widget>
+           </container>
+
+ 		<container>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<container id="srRS">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+						<container class="scrolling_box">
+							<container id="srCO">
+								<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+								<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+							</container>
+						</container>
+					</container>
+
+					<container class="scrolling_box" id="prSc" navigation_container="true">
+
+						<container id="mnCs">
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+							<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+							<container class="preferences_general_panel" id="recs" file="game/preferences overview panel" height="450" />
+
+							<container hidden="true" id="prMC">
+								<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+								<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+								<container class="inner_subtle_box" navigation_container="true">
+									<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+									<layout class="stick_to_sides_attachment" alignment="top, horizontal" apply_to_children="true" inset="0" />
+
+									<widget class="game_settings_viewer_panel" id="set1" concat_hint="true">
+										<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+										<record id="table_properties" layout="-3,-1">
+											<integer id="row_spacing" value="5" />
+											<list id="column_widget_properties">
+												<record index="1" appearance="buttons/standard/normal/button" />
+											</list>
+										</record>
+										<list id="viewed_property_ids">
+											<symbol value="use_auto_saves" />
+											<symbol value="auto_save_interval" />
+											<symbol value="auto_save_mode" />
+										</list>
+									</widget>
+
+								</container>
+
+								<container class="inner_subtle_box" id="scCO" height="70" navigation_container="true">
+
+									<attachment_group class="horizontal_arrange_vertical_centre" horizontal_layout="-3,-1" />
+
+									<container>
+										<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" />
+
+										<widget class="text" style="bold" auto_size="vertical">
+											<translation id="text" translation_id="509159" type="use" value="Screen Calibration[COMMENT: AREA: Preferences panel; SUB-AREA: calibration dialog; FR: 31776; TONE: Formal; CHARLIMIT: None; NOTE:]" />
+										</widget>
+
+										<widget class="text" auto_size="vertical">
+											<translation id="text" translation_id="509160" type="use" value="Adjust the edges of the screen[COMMENT: AREA: Preferences panel; SUB-AREA: calibration dialog; FR: 31776; TONE: Formal; CHARLIMIT: None; NOTE:]" />
+										</widget>
+
+									</container>
+
+									<widget class="button">
+										<record id="click_event">
+											<integer id="event_id" value="clSC" />
+											<integer id="index" value="1" />
+										</record>
+										<translation id="text" translation_id="509161" type="use" value="Calibrate[COMMENT: AREA: Preferences panel; SUB-AREA: calibration dialog; FR: 31776; TONE: Formal; CHARLIMIT: None; NOTE:]" />
+									</widget>
+
+								</container>
+
+								<container class="inner_subtle_box" id="OGpr" height="70" navigation_container="true">
+									<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+									<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+									<attachment class="hide_empty_container_attachment" min_value="0" />
+
+									<widget class="game_settings_viewer_panel" id="set1" concat_hint="true">
+										<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+										<record id="table_properties" layout="-3,-1">
+											<integer id="row_spacing" value="5" />
+										</record>
+										<list id="viewed_property_ids">
+											<symbol value="online_game_preferences" />
+
+										</list>
+									</widget>
+
+								</container>
+
+								<container class="inner_subtle_box" navigation_container="true">
+									<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+									<layout class="stick_to_sides_attachment" alignment="top, horizontal" apply_to_children="true" inset="0" />
+									<attachment class="hide_empty_container_attachment" min_value="0" />
+
+									<widget class="game_settings_viewer_panel" id="set1" concat_hint="true">
+										<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+										<record id="table_properties" layout="-3,-1">
+											<integer id="row_spacing" value="5" />
+										</record>
+										<list id="viewed_property_ids">
+											<symbol value="custom_skin_colours" />
+
+										</list>
+									</widget>
+
+								</container>
+
+								<container class="inner_subtle_box" height="70" navigation_container="true">
+									<attachment class="test_global_attachment" get_property="gset" value="false" set_property="hidn" />
+									<attachment_group class="horizontal_arrange_vertical_centre" horizontal_layout="-3,-1" />
+
+									<container>
+										<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" />
+
+										<widget class="text" style="bold" auto_size="vertical">
+											<translation id="text" translation_id="491916" type="use" value="Custom Screen Flow[COMMENT: AREA: Preferences; SUB-AREA: preferences title; FR-BN: 28565; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Screen Flow allows the user to set up a series of screens to be viewed at certain trigger points during the game processing]" />
+										</widget>
+
+										<widget class="text" auto_size="vertical">
+											<translation id="text" translation_id="491917" type="use" value="Customise which screens the game should be taken when clicking 'Continue'[COMMENT: AREA: Preferences; SUB-AREA: preferences description; FR-BN: 28565; TONE: Formal; CHARLIMIT: None; REF-ID: XXXXXX;]" />
+										</widget>
+
+									</container>
+
+									<widget class="button">
+										<record id="click_event">
+											<integer id="event_id" value="shSa" />
+											<integer id="index" value="3" />
+										</record>
+										<translation id="text" translation_id="301117" type="use" value="Screen Flow[COMMENT: team setting section title, allows the user to configure a list of screens to be taken to at desired intervals when continuing the game]" />
+									</widget>
+
+								</container>
+
+								<container class="inner_subtle_box" height="70" navigation_container="true">
+
+									<attachment_group class="horizontal_arrange_vertical_centre" horizontal_layout="-3,-1" />
+
+
+									<container>
+										<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" />
+
+										<widget class="text" style="bold" auto_size="vertical">
+											<translation id="text" translation_id="251952" type="use" value="Shortcuts[COMMENT: preferences: configure keyboard shortcuts settings section (short) name]" />
+										</widget>
+
+										<widget class="text" auto_size="vertical">
+											<translation id="text" translation_id="491918" type="use" value="Customise shortcuts here[COMMENT: AREA: Preferences; SUB-AREA: preferences description; FR-BN: 28565; TONE: Formal; CHARLIMIT: None; REF-ID: XXXXXX;]" />
+										</widget>
+
+
+									</container>
+
+									<widget class="button">
+										<record id="click_event">
+											<integer id="event_id" value="shSa" />
+											<integer id="index" value="4" />
+										</record>
+										<translation id="text" translation_id="251952" type="use" value="Shortcuts[COMMENT: preferences: configure keyboard shortcuts settings section (short) name]" />
+									</widget>
+
+								</container>
+
+								<container class="titled_box" id="mUsI" hidden="true">
+									<translation id="title" translation_id="509162" type="use" value="Most Used[COMMENT: AREA: Preferences; SUB-AREA: most used preferences; FR-BN: 29278; TONE: Formal; CHARLIMIT: None; REF-ID: n/a;]" />
+									<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+									<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" />
+									<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+								</container>
+							</container>
+
+							<container class="preferences_general_panel" hidden="true" id="prGp" navigation_container="true" />
+							<container class="preferences_display_sound_panel" hidden="true" id="prDs" navigation_container="true" />
+							<container class="preferences_formats_panel" hidden="true" id="prFp" navigation_container="true" />
+							<container class="preferences_match_panel" hidden="true" id="prMp" navigation_container="true" />
+							<container class="preferences_extra_files_panel" file="game/preferences extra files panel" height="700" id="prEf" />
+							<container class="preferences_profile_panel" hidden="true" id="gens" file="game/preferences profile panel accounts" navigation_container="true" />
+						</container>
+					</container>
+				</container>
+			</container>
+
+			<container class="inner_contrast_box" id="scOp" red_replacement="bg darker" wants_mouse_events="true">
+				<animation class="slide_in_top_animation" duration="0.6" tween="ease_out" />
+
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,0,0" />
+
+				<!--screen flow-->
+				<widget class="network_settings_panel">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+
+				<widget class="icon_button" icon="icons/16px/close" auto_size="all" icon_colour="white">
+					<record id="click_event">
+						<integer id="event_id" value="shSa" />
+						<integer id="index" value="-1" />
+					</record>
+					<layout class="stick_to_sides_attachment" alignment="top, right" inset="0" />
+				</widget>
+
+			</container>
+
+			<container class="inner_contrast_box" id="scfl" red_replacement="bg darker" wants_mouse_events="true">
+				<animation class="slide_in_top_animation" duration="0.6" tween="ease_out" />
+
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,30,0" />
+
+				<!--screen flow-->
+				<widget class="preferences_display_sound_panel" file="none">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+					<widget class="preferences_profile_panel" file="game/preferences profile panel screen flow">
+						<translation id="title" translation_id="301117" type="use" value="Screen Flow[COMMENT: team setting section title, allows the user to configure a list of screens to be taken to at desired intervals when continuing the game]" />
+					</widget>
+				</widget>
+
+				<widget class="icon_button" icon="icons/16px/close" auto_size="all" icon_colour="white">
+					<record id="click_event">
+						<integer id="event_id" value="shSa" />
+						<integer id="index" value="-1" />
+					</record>
+					<layout class="stick_to_sides_attachment" alignment="top, right" inset="0" />
+				</widget>
+
+			</container>
+
+			<container class="inner_contrast_box" id="shRt" red_replacement="bg darker" wants_mouse_events="true">
+				<animation class="slide_in_top_animation" duration="0.6" tween="ease_out" />
+
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,30,0" />
+
+				<!--screen flow-->
+				<widget class="preferences_display_sound_panel" file="none">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+					<widget class="preferences_shortcuts_panel">
+						<translation id="text" translation_id="251952" type="use" value="Shortcuts[COMMENT: preferences: configure keyboard shortcuts settings section (short) name]" />
+					</widget>
+				</widget>
+
+				<widget class="icon_button" icon="icons/16px/close" auto_size="all" icon_colour="white">
+					<record id="click_event">
+						<integer id="event_id" value="shSa" />
+						<integer id="index" value="-1" />
+					</record>
+					<layout class="stick_to_sides_attachment" alignment="top, right" inset="0" />
+				</widget>
+
+			</container>
+
+			<!-- data language-->
+			<container class="inner_contrast_box" id="dLgP" red_replacement="bg darker" wants_mouse_events="true">
+				<animation class="slide_in_top_animation" duration="0.6" tween="ease_out" />
+
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,0,0" />
+
+				<widget class="container" file="game/data lang settings panel">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+
+				<widget class="icon_button" icon="icons/16px/close" auto_size="all" icon_colour="white">
+					<record id="click_event">
+						<integer id="event_id" value="shSa" />
+						<integer id="index" value="-1" />
+					</record>
+					<layout class="stick_to_sides_attachment" alignment="top, right" inset="0" />
+				</widget>
+			</container>
+
+			<container class="inner_contrast_box" id="clAt" red_replacement="bg darker" wants_mouse_events="true">
+				<animation class="slide_in_top_animation" duration="0.6" tween="ease_out" />
+
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,30,0" />
+
+				<!--skin colours-->
+				<widget class="preferences_display_sound_panel" file="none">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+					<container id="skcl" class="inner_subtle_box">
+						<translation id="title" translation_id="325857" type="use" value="Skin Colours[COMMENT: preferences screen panel title, used for UI skin colours rather than player skin colours]" />
+						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="text" id="warn" multiline="true" auto_size="vertical" colour="title" size="10" />
+
+						<!--colour buttons-->
+						<container>
+							<layout class="arrange_vertical_attachment" alignment="middle,extend" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="check_box" id="shad" click_event="shad" alignment="centre" auto_size="horizontal" save_session_state="true" save_default_state="true">
+								<translation id="text" translation_id="318330" type="use" value="Show advanced settings[COMMENT: text for switching between basic and advanced skin settings]" />
+							</widget>
+
+							<container class="scrolling_box">
+								<container>
+									<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+									<!--attribute colours and thresholds-->
+									<container class="main_box">
+										<translation id="title" translation_id="229822" type="use" value="Attributes" />
+
+										<container id="AtHd" embed_in_frame="true" height="20" hidden="true">
+											<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" embed_in_frame="true" />
+											<layout class="arrange_horizontal_attachment" layout="-2,-1" offset="0" embed_in_frame="true" />
+											<layout class="stick_to_sides_attachment" alignment="top" inset="10" embed_in_frame="true" />
+											<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" embed_in_frame="true" />
+
+											<container embed_in_frame="true">
+												<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" embed_in_frame="true" />
+												<layout class="arrange_horizontal_attachment" layout="-1,-2" offset="0" gap="0" embed_in_frame="true" />
+
+												<container embed_in_frame="true" />
+
+												<container embed_in_frame="true">
+													<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" embed_in_frame="true" />
+													<layout class="arrange_horizontal_attachment" layout="-1,180" offset="0" gap="0" embed_in_frame="true" />
+
+													<container embed_in_frame="true">
+														<layout class="arrange_horizontal_attachment" alignment="fill" embed_in_frame="true" />
+														<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" embed_in_frame="true" />
+
+														<record id="default_properties" embed_in_frame="true" alignment="centre" />
+
+														<widget class="spacer" />
+														<widget class="label">
+															<translation id="text" translation_id="356918" type="use" value="R[COMMENT: abbreviation of the colour Red]" />
+														</widget>
+														<widget class="label">
+															<translation id="text" translation_id="356847" type="use" value="G[COMMENT: abbreviation of the colour Green]" />
+														</widget>
+														<widget class="label">
+															<translation id="text" translation_id="356818" type="use" value="B[COMMENT: abbreviation of the colour Blue]" />
+														</widget>
+														<widget class="label">
+															<translation id="text" translation_id="356793" type="use" value="A[COMMENT: abbreviation of the colour component Alpha]" />
+														</widget>
+													</container>
+
+													<container embed_in_frame="true" />
+												</container>
+											</container>
+
+											<container embed_in_frame="true" />
+										</container>
+
+										<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+										<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+										<layout class="arrange_horizontal_attachment" layout="-2,-1" offset="0" />
+
+										<!--attribute colours-->
+										<widget class="game_settings_viewer_panel" id="set1">
+											<record id="table_properties">
+												<string id="layout" value="-1,-2" />
+											</record>
+											<list id="viewed_property_ids">
+												<symbol value="exc_attribute_colour" />
+												<symbol value="good_attribute_colour" />
+												<symbol value="norm_attribute_colour" />
+												<symbol value="low_attribute_colour" />
+											</list>
+										</widget>
+
+										<!--attribute thresholds-->
+										<widget class="game_settings_viewer_panel" id="set1">
+											<record id="table_properties">
+												<string id="layout" value="-1,-1" />
+											</record>
+											<list id="viewed_property_ids">
+												<symbol value="excellent_attribute_boundary" />
+												<symbol value="good_attribute_boundary" />
+												<symbol value="average_attribute_boundary" />
+											</list>
+										</widget>
+									</container>
+
+									<!--position colours and icons-->
+									<container class="main_box">
+										<translation id="title" translation_id="230082" type="use" value="Positions" />
+
+										<container id="PoHd" embed_in_frame="true" height="20" hidden="true">
+											<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" embed_in_frame="true" />
+											<layout class="arrange_horizontal_attachment" layout="-2,-1" offset="0" embed_in_frame="true" />
+											<layout class="stick_to_sides_attachment" alignment="top" inset="10" embed_in_frame="true" />
+											<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" embed_in_frame="true" />
+
+											<container embed_in_frame="true">
+												<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" embed_in_frame="true" />
+												<layout class="arrange_horizontal_attachment" layout="-1,-2" offset="0" gap="0" embed_in_frame="true" />
+
+												<container embed_in_frame="true" />
+
+												<container embed_in_frame="true">
+													<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" embed_in_frame="true" />
+													<layout class="arrange_horizontal_attachment" layout="-1,180" offset="0" gap="0" embed_in_frame="true" />
+
+													<container embed_in_frame="true">
+														<layout class="arrange_horizontal_attachment" alignment="fill" embed_in_frame="true" />
+														<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" embed_in_frame="true" />
+
+														<record id="default_properties" embed_in_frame="true" alignment="centre" />
+
+														<widget class="spacer" />
+														<widget class="label">
+															<translation id="text" translation_id="356918" type="use" value="R[COMMENT: abbreviation of the colour Red]" />
+														</widget>
+														<widget class="label">
+															<translation id="text" translation_id="356847" type="use" value="G[COMMENT: abbreviation of the colour Green]" />
+														</widget>
+														<widget class="label">
+															<translation id="text" translation_id="356818" type="use" value="B[COMMENT: abbreviation of the colour Blue]" />
+														</widget>
+														<widget class="label">
+															<translation id="text" translation_id="356793" type="use" value="A[COMMENT: abbreviation of the colour component Alpha]" />
+														</widget>
+													</container>
+
+													<container embed_in_frame="true" />
+												</container>
+											</container>
+
+											<container embed_in_frame="true" />
+										</container>
+
+										<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+										<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+										<layout class="arrange_horizontal_attachment" layout="-2,-1" offset="0" />
+
+										<!--position strength colours-->
+										<widget class="game_settings_viewer_panel" id="set1">
+											<record id="table_properties">
+												<string id="layout" value="-1,-2" />
+											</record>
+											<list id="viewed_property_ids">
+												<symbol value="player_poor_colour" />
+												<symbol value="player_makeshift_colour" />
+												<symbol value="player_awkward_colour" />
+												<symbol value="player_uncon_colour" />
+												<symbol value="player_comp_colour" />
+												<symbol value="player_accom_colour" />
+												<symbol value="player_natural_colour" />
+											</list>
+										</widget>
+
+										<!--position strength display icons-->
+										<container>
+											<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+											<container height="75">
+												<layout class="arrange_horizontal_attachment" layout="70,70,70,70" offset="0" gap="6" />
+												<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+												<widget class="position_strength_setting_indicator_panel" value="player_poor_colour" />
+												<widget class="position_strength_setting_indicator_panel" value="player_makeshift_colour" />
+												<widget class="position_strength_setting_indicator_panel" value="player_awkward_colour" />
+												<widget class="position_strength_setting_indicator_panel" value="player_uncon_colour" />
+											</container>
+
+											<container height="75">
+												<layout class="arrange_horizontal_attachment" layout="70,70,70" offset="0" gap="6" />
+												<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+												<widget class="position_strength_setting_indicator_panel" value="player_comp_colour" />
+												<widget class="position_strength_setting_indicator_panel" value="player_accom_colour" />
+												<widget class="position_strength_setting_indicator_panel" value="player_natural_colour" />
+											</container>
+										</container>
+									</container>
+
+									<!--other colours-->
+									<container class="main_box">
+										<translation id="title" translation_id="242350" type="use" value="Other" />
+
+										<container id="OtHd" embed_in_frame="true" height="20" hidden="true">
+											<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" embed_in_frame="true" />
+											<layout class="arrange_horizontal_attachment" layout="-2,-1" offset="0" embed_in_frame="true" />
+											<layout class="stick_to_sides_attachment" alignment="top" inset="10" embed_in_frame="true" />
+											<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" embed_in_frame="true" />
+
+											<container embed_in_frame="true">
+												<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" embed_in_frame="true" />
+												<layout class="arrange_horizontal_attachment" layout="-1,-2" offset="0" gap="0" embed_in_frame="true" />
+
+												<container embed_in_frame="true" />
+
+												<container embed_in_frame="true">
+													<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" embed_in_frame="true" />
+													<layout class="arrange_horizontal_attachment" layout="-1,180" offset="0" gap="0" embed_in_frame="true" />
+
+													<container embed_in_frame="true">
+														<layout class="arrange_horizontal_attachment" alignment="fill" embed_in_frame="true" />
+														<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" embed_in_frame="true" />
+
+														<record id="default_properties" embed_in_frame="true" alignment="centre" />
+
+														<widget class="spacer" />
+														<widget class="label">
+															<translation id="text" translation_id="356918" type="use" value="R[COMMENT: abbreviation of the colour Red]" />
+														</widget>
+														<widget class="label">
+															<translation id="text" translation_id="356847" type="use" value="G[COMMENT: abbreviation of the colour Green]" />
+														</widget>
+														<widget class="label">
+															<translation id="text" translation_id="356818" type="use" value="B[COMMENT: abbreviation of the colour Blue]" />
+														</widget>
+														<widget class="label">
+															<translation id="text" translation_id="356793" type="use" value="A[COMMENT: abbreviation of the colour component Alpha]" />
+														</widget>
+													</container>
+
+													<container embed_in_frame="true" />
+												</container>
+											</container>
+
+											<container embed_in_frame="true" />
+										</container>
+
+										<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+										<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+										<layout class="arrange_horizontal_attachment" layout="-2,-1" offset="0" />
+
+										<widget class="game_settings_viewer_panel" id="set1">
+											<record id="table_properties">
+												<string id="layout" value="-1,-2" />
+											</record>
+											<list id="viewed_property_ids">
+												<symbol value="loan_in_colour" />
+												<symbol value="loan_out_colour" />
+												<symbol value="trial_in_colour" />
+												<symbol value="trial_out_colour" />
+												<symbol value="virtual_colour" />
+												<symbol value="shortlist_colour" />
+												<symbol value="global_replacement_colour_red" />
+												<symbol value="global_replacement_colour_green" />
+												<symbol value="global_replacement_colour_blue" />
+												<symbol value="global_focus_colour" />
+												<symbol value="standard_ball_colour" />
+												<symbol value="winter_ball_colour" />
+											</list>
+										</widget>
+
+										<widget class="spacer" />
+
+									</container>
+								</container>
+							</container>
+
+							<!--restore default colours button-->
+							<container>
+								<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" apply_to_children="true" />
+
+								<widget class="button" click_event="Rdfc" auto_size="horizontal" height="30">
+									<translation id="text" translation_id="318331" type="use" value="Restore Default Colours[COMMENT; game preferences; advanced user option for skin makers to reset the default colours for various parts of the UI should they have opted to change them]" />
+								</widget>
+							</container>
+
+						</container>
+					</container>
+				</widget>
+		<widget class="icon_button" icon="icons/16px/close" auto_size="all">
+          <record id="click_event">
+            <integer id="event_id" value="shSa" />
+            <integer id="index" value="-1" />
+          </record>
+          <layout class="stick_to_sides_attachment" alignment="top, right" inset="0" />
+        </widget>
+			</container>
+		</container>
+
+	<widget class="preferences_button_panel" iDil="true" />
+	</container>
+</panel>

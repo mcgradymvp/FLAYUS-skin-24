@@ -1,0 +1,24 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<integer id="maximum_number_of_news_items" value="20" />
+
+	<!-- Buttons displaying number of unread items (or none) and linking to the inbox panel. It's done this way to mak eit more skinnable -->
+	<widget class="icon_button" id="unrd" icon="icons/26px/inbox" size="13" height="44" click_event="INBX" background_colour="attention" colour="black">
+		<record id="primary_icon_properties" red_replacement="black"/>
+	</widget>
+	<widget class="icon_button" id="Nunr" icon="icons/26px/inbox" size="13" height="44" click_event="INBX" hidden="true">
+		<translation id="text" translation_id="335194" type="use" value="No Unread Messages[COMMENT: inbox mini panel (manager overview); message displayed when there are no unread inbox items]" />
+	</widget>
+
+	<!-- Table containing the news headlines -->
+	<widget class="table" id="nilt" layout="-1" fixed_size_rows="false" auto_size_rows="true" allow_half_rows="true" mode="fill_rows, no_scrolling" row_spacing="5">
+		<boolean id="save_session_state" value="true" />
+
+		<list id="column_widget_properties">
+			<record indx="0" sort_disabled="true" alignment="left" auto_size="vertical" />
+		</list>
+	</widget>
+
+</panel>

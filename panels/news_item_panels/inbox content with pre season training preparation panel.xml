@@ -1,0 +1,159 @@
+﻿<panel>
+	<string id="skin_style" value="subtle box" />
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+	<container class="inner_box">
+		<translation id="title" translation_id="466476" type="use" value="Pre-Season Preparation[COMMENT: title for an email about pre season preparation]" />
+
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="4"/>
+
+		<!--dates-->
+		<container class="inner_subtle_box" height="65">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="8" horizontal_gap="0" vertical_inset="0" />
+
+			<!--start of pre season-->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" horizontal_inset="0" />
+
+				<widget class="text" alignment="left,bottom" font="label" auto_size="vertical" multiline="false">
+					<translation id="text" translation_id="466477" type="use" value="Start Of Pre-Season[COMMENT: title for information about when pre season starts]" />
+				</widget>
+				<widget class="date_cell" id="pssd" alignment="left,top" font="value" auto_size="vertical" navigation_focus_target="false"/>
+			</container>
+
+			<!--pre season duration-->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" horizontal_inset="0" />
+				
+				<widget class="text" alignment="left,bottom" font="label" auto_size="vertical" multiline="false">
+					<translation id="text" translation_id="466478" type="use" value="Pre-Season Duration[COMMENT: title for information about how long pre season is]" />
+				</widget>
+				<widget class="text" id="psdu" alignment="left,top" font="value" auto_size="vertical"/>
+			</container>
+
+			<!--start of season-->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" horizontal_inset="0" />
+
+				<widget class="text" alignment="left,bottom" font="label" auto_size="vertical" multiline="false">
+					<translation id="text" translation_id="466479" type="use" value="Start Of Season[COMMENT: title for information about when the season starts]" />
+				</widget>
+				<widget class="date_cell" id="sesd" alignment="left,top" font="value" auto_size="vertical" navigation_focus_target="false"/>
+			</container>
+
+		</container>
+
+		<!--pre-season schedule/fixtures-->
+		<container draw_vertical_dividers="true">
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0">
+				<global id="horizontal_gap" name="ui.inner_box_gap"/>
+			</attachment_group>
+
+			<!--pre-season schedule-->
+			<container class="inner_box">
+				<translation id="title" translation_id="466480" type="use" value="Initial Pre-Season Schedule[COMMENT: title for an email about pre season preparation, schedule section]" />
+
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="4"/>
+
+				<!--schedule selection-->
+				<container>
+
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+					<!--schedule popup-->
+					<widget class="popup_button" id="sche" select_event="tscS" auto_size="vertical" />
+
+				</container>
+
+				<!--schedule description-->
+				<widget class="text" id="scde" multiline="true" auto_size="vertical" colour="faded text"/>
+
+				<widget class="horizontal_divider"/>
+
+				<!--schedule impacts-->
+				<widget class="table" id="impT" layout="-1,170" mode="fill_rows,stripe_rows" auto_size="vertical" fixed_size_rows="true" row_height="22">
+					<list id="headings">
+						<record column_span="2">
+              <translation id="text" translation_id="468962" type="use" value="Impacts[COMMENT: training session selector, heading, shows the impact the session will have on various areas of a player's game]" />
+            </record>
+					</list>
+					<record id="default_properties" auto_size="vertical" multiline="true" />
+
+					<list id="column_table_properties">
+						<record index="0" column_alignment="left,centre_y" />
+						<record index="1" column_alignment="left,centre_y" />
+					</list>
+				</widget>
+
+				<!--link to training calendar-->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="right" horizontal_inset="0" />
+					
+					<widget class="link_button" auto_size="all" section="ttcP">
+						<translation id="text" translation_id="466481" type="use" value="Training Calendar[COMMENT: text for a button linking to the user's training calendar]" />
+					</widget>
+				</container>
+
+			</container>
+
+			<!--pre-season fixtures-->
+			<container class="inner_box">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+				<!--title link-->
+				<container>
+					<string id="skin_style" value="title link" />
+
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="left" horizontal_inset="0" />
+					
+					<widget class="link_button" section="TeFi" auto_size="all">
+						<translation id="text" translation_id="466482" type="use" value="Pre-Season Fixtures[COMMENT: title for an email about pre season preparation, fixtures section]" />
+					</widget>
+				</container>
+
+				<!--fixture list-->
+				<widget class="fixtures_list_panel" id="flpn" file="">
+					<boolean id="save_session_state" value="true" />
+
+					<!-- Styles -->
+					<flags id="friendly_appearance" value="tables/custom/fixtures/friendly/row" />
+					<flags id="continental_appearance" value="tables/custom/fixtures/continental/row" />
+					<flags id="cup_appearance" value="tables/custom/fixtures/cup/row" />
+
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+					<widget class="client_object_list_table" id="pltb" database_table_type="53" select_event="self"  mode="fill_rows, stripe_rows" auto_size="vertical">
+
+						<!-- default sort -->
+						<list id="default_sort_column">
+							<integer value="fxdt" />
+						</list>
+
+						<list id="column_widget_properties">
+							<record index="0" navigation_focus_target="false"/>
+						</list>
+
+						<record id="viewed_property_ids">
+							<record id="fxdt" width="130"/>
+							<record id="fopt" />
+						</record>
+
+					</widget>
+				</widget>
+
+				<!--arrange friendly-->
+				<container>
+					<string id="skin_style" value="title link" />
+
+					<attachment_group class="button_arrangement_right" />
+					
+					<widget class="subtle_button" id="arrf" auto_size="all">
+						<translation id="text" translation_id="242435" type="use" value="Arrange Friendly" />
+					</widget>
+				</container>
+
+			</container>
+		</container>
+	</container>
+</panel>

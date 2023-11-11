@@ -1,0 +1,30 @@
+﻿<panel>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+    <string id="tv_media_icon_file" value="icons/custom/match/waiting live tv"/>
+    <string id="radio_media_icon_file" value="icons/custom/match/waiting live radio"/>
+
+    <animation class="fade_on_hide_animation" duration="0.4" end_mode="hold_auto_reverse" high_priority="true"/>
+
+    <container class="main_box" red_replacement="blue grey 700">
+        <attachment_group class="vertical_arrange_horizontal_centre" vertical_alignment="middle" vertical_gap="20"/>
+
+        <container>
+            <attachment_group class="horizontal_arrange_autosize_all_centre" horizontal_gap="10" horizontal_alignment="middle"/>
+
+            <!-- media type icon -->
+            <widget class="picture" id="medI" width="28" height="28" scale_picture="true" keep_aspect_ratio="true"/>
+
+            <!-- The loading animation - GPU rendering -->
+            <widget class="picture" id="anmG" file="progress/circular/spinner" auto_size="all" colour="white">
+                <animation class="rotate_animation" end_mode="repeat" start_value="0" end_value="360" tween="linear" apply_to_mouse="false" limit_frame_rate="true"/>
+
+                <attachment class="test_setting_attachment" get_setting="ui_rendering_mode" default_value="true" set_property="hidn">
+                    <integer id="value" value="1"/>
+                </attachment>
+            </widget>
+        </container>
+
+        <widget class="text" id="tiTl" font="title" alignment="centre" auto_size="all" colour="text" size="xlarge"/>
+    </container>
+</panel>

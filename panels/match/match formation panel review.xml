@@ -1,0 +1,21 @@
+﻿<panel>
+  <layout class="arrange_horizontal_attachment" alignment="fill" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="1" inset="0" />
+
+    <!-- the pitch-->
+    <widget	class="pitch_with_tactics" id="pwtc" navigation_disabled="true" player_icon_file="tactics/tactics icon info panel review" pitch_additional_touchline_pixels_left="0" pitch_additional_touchline_pixels_bottom="0" icon_flags="show_number,show_extra_details,show_name,use_player_kits_back">
+      <layout class="stick_to_sides_attachment" alignment="all"  />
+      <string id="pitch_draw_grass" value="false" />
+      <integer id="pitch_vertical_padding" value="0" />
+      <string id="vertical" value="true" />
+      <integer id="pitch_player_icon_text_size" value="15" />
+      <string id="pitch_alignment" value="can_scale" />
+      <real id="maximum_player_size" value="0.160000" />
+      <string id="pitch_line_colour" value="white" />
+      <string id="3958779584" value="tactics normal run" />
+      <string id="3958779616" value="tactics darkened run" />
+      <string id="3958779648" value="tactics dragged run" />
+
+		</widget>
+
+</panel>

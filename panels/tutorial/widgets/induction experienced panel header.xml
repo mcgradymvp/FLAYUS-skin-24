@@ -1,0 +1,15 @@
+﻿<container class="main_contrast_box" appearance="boxes/custom/solid/rounded/paper">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<widget class="picture" file="backgrounds/pattern home left" scale_picture="false" keep_aspect_ratio="true" image_alignment="left,top" transparency="0.6" />
+
+	<container>
+
+		<attachment_group class="horizontal_arrange" horizontal_layout="49,-1" horizontal_offset="10" vertical_inset="6" horizontal_gap="12"/>
+		<widget class="picture" id="inic" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" red_replacement="white" blue_replacement="white"/>
+		<widget class="text" id="inte" alignment="left, centre_y" colour="white"/>
+
+	</container>
+
+</container>
+

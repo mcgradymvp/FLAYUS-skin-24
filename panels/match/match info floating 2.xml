@@ -1,0 +1,13 @@
+<panel info_panel_type="3">
+	<layout class="arrange_horizontal_attachment" layout="-1,1,-1" gap="10"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+	<!--  home incidents panel -->
+	<widget class="home_match_incidents_panel" id="hmip" small_version="true" file="match/match incidents floating home"/>
+
+	<!--separator-->
+	<widget class="vertical_divider"/>
+
+	<!--  away incidents panel -->
+	<widget class="away_match_incidents_panel" id="amip" small_version="true" file="match/match incidents floating away"/>
+</panel>

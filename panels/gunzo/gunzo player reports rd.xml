@@ -1,0 +1,116 @@
+<panel save_session_state="true">
+	<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<!-- Spacer -->
+	<container height="5"/>  
+	
+	<!-- No scout report -->
+	<container id="nsrc">
+		<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+
+		<container id="nocs" height="60">
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" auto_size="vertical" size="large" style="semi_bold">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+				<translation id="text" translation_id="297209" type="use" value="Scouting Required[COMMENT: shown when the user can't view player info without scouting them first]" />
+			</widget>
+			<widget class="icon_button" id="sctP" click_event="sctc" auto_size="horizontal" height="30" icon="icons/16px/search">
+				<translation id="text" translation_id="298524" type="use" value="Scouting Assignments[COMMENT: backroom advice, button link]" />
+
+				<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+			</widget>
+		</container>
+
+		<widget id="nocn" class="label" spec="text,large" size="11" alignment="centre" auto_size="vertical">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		</widget>
+	</container>
+
+	<!-- Already being scounted -->
+	<container id="arbs">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!--explanatory text-->
+		<widget class="text" id="arbt" alignment="centre" spec="text" colour="attention">
+			<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+		</widget>
+	</container>
+
+	<!-- Already being scouted by pool -->
+	<container id="pool" >
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!--explanatory text-->
+		<widget class="text" alignment="centre" spec="text" colour="attention">
+			<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]" />
+		</widget>
+	</container>
+	
+	<container id="scou">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" inset="0" gap="0" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" apply_to_children="true" />
+	
+		<!-- If we have scout reports -->
+		<!-- pros / cons -->
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-10,-10" offset="0" gap="4"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<!-- Pros icons -->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!--title-->
+				<container class="bordered_box" height="25" appearance="boxes/bordered/standard/paper" red_replacement="pro high">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+					<widget class="label" size="9" style="bold" alignment="centre" auto_size="vertical" colour="gzk">
+						<translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]"/>
+					</widget>
+				</container>
+
+				<!-- Icons get inserted into here. The 'size' attribute is the size in pixels of each icon -->
+						<container class="scrolling_box">
+							<container id="mprT">
+								<attachment_group class="vertical_arrange_autosize" horizontal_inset="0" />
+								<integer id="size" value="35" />					
+			                    <integer id="sort_ascending" value="false" />
+								<record id="default_properties" multiline="true" colour="text" />
+							</container>
+						</container>
+			</container>
+
+			<!-- Cons icons -->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!--title-->
+				<container class="bordered_box" height="25" appearance="boxes/bordered/standard/paper" red_replacement="con high">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+					<widget class="label" size="9" style="bold" alignment="centre" auto_size="vertical" colour="gzk">
+						<translation id="text" translation_id="361094" type="use" value="Cons[COMMENT: FR 8316 ]"/>
+					</widget>
+				</container>
+
+						<!-- Icons get inserted into here. The 'size' attribute is the size in pixels of each icon -->
+						<container class="scrolling_box">
+							<container id="mcoT">
+								<attachment_group class="vertical_arrange_autosize" horizontal_inset="0" />
+								<integer id="size" value="35" />
+								<integer id="sort_ascending" value="false" />
+								<record id="default_properties" multiline="true" colour="text" />
+							</container>
+						</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

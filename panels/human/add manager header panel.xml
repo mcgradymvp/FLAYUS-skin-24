@@ -1,0 +1,61 @@
+﻿<!-- header panel to be used during live press conferences and the tunnel interviews -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+	
+	<list id="properties_to_forward">
+		<record get_property="titl" set_property="text" target="titl"/>
+	</list>
+	
+	<container class="main_box" appearance="boxes/custom/full screen header/paper">
+		<layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0" gap="10"/>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+		<!-- Back Button -->
+		<widget class="icon_button" id="prev" fixed="true" width="50" appearance="buttons/custom/interface/navigation bar/button" icon="icons/26px/back" icon_alignment="right">
+			<record id="primary_icon_properties" red_replacement="text"/>
+			<record id="click_event" event_id="prpa"/>
+		</widget>
+
+		<widget class="vertical_divider"/>
+
+		<container height="52">
+			<layout class="arrange_horizontal_attachment" alignment="right, extend" offset="10"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<!--Title container -->
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="left, extend" offset="10" gap="10"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+				<widget class="label" id="titl" size="xlarge" font="title" colour="text" auto_size="horizontal">
+				</widget>
+			</container>
+			<!-- Group of buttons in the top Right -->
+			<container id="FMbt">
+				<attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_gap="8" horizontal_offset="0"/>
+				<!-- FM button -->
+				<widget class="popup_button" id="fmst" fixed="true" appearance="chrome/buttons/items/button" icon="icons/26px/fm" width="60" height="42" disable_wheel="true">
+					<event id="click_notification_event" event_id="FM" item="NULL" />
+					<event id="menu_layout_notification_event" event_id="mlne" event_target="fmst" />
+					<record id="items" file="menus/game" />
+					<translation id="hint" translation_id="292829" type="use" value="Options[COMMENT: menubar game options button]" />
+				</widget>
+				<widget class="icon_button" id="nxt1"  alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/continue" secondary_icon_alignment="centre_right, centre_y" font="title" width="175" multiline="true">
+					<record id="secondary_icon_properties" red_replacement="text"/>
+					<record id="click_event" event_id="n1pa"/>
+					<attachment class="get_global_attachment" get_property="ctcl" set_property="colr" />
+				</widget>
+				<widget class="icon_button" id="fini"  alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/continue" secondary_icon_alignment="centre_right, centre_y" font="title" width="175" multiline="true">
+					<record id="secondary_icon_properties" red_replacement="text"/>
+					<translation id="text" translation_id="229918" type="use" value="Confirm" />
+					<record id="click_event" event_id="fnwz"/>
+					<attachment class="get_global_attachment" get_property="ctcl" set_property="colr" />
+				</widget>
+			</container>
+		</container>
+	</container>
+
+</panel>

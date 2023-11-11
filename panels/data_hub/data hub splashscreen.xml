@@ -1,0 +1,163 @@
+﻿<panel>
+	<layout class="flex_attachment" />
+
+	<container class="main_box" id="splh" flex_width="75%" hidden="true" navigation_container="true">
+		<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" />
+		<layout class="centre_in_parent_attachment" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="230,-1" />
+
+			<!--head/other analyst explaining the splashscreen-->
+			<container height="50">
+				<attachment_group class="vertical_arrange" vertical_gap="0" />
+
+				<container class="inbox_mini_profile_player_details_panel" id="anAl" file="" height="50">
+					<attachment_group class="horizontal_arrange" horizontal_layout="50,-1" horizontal_offset="2" horizontal_gap="10" vertical_alignment="vertical" />
+
+					<widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" height="45">
+						<record id="object_property">
+							<list id="get_properties">
+								<!--Facegen data request-->
+								<record get_property="fcgn" />
+								<!--Fake name request-->
+								<record get_property="Pfke" />
+								<record get_property="prpc" set_property="valu" />
+							</list>
+						</record>
+					</widget>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="2" horizontal_alignment="horizontal" />
+
+						<widget class="person_button" id="PnmP" info_popup_enabled="true" style="bold" auto_size="vertical">
+							<record id="object_property" get_property="PnmP" />
+						</widget>
+
+						<widget class="job_label" alignment="left, centre_y" colour="faded text" auto_size="vertical">
+							<record id="object_property" get_property="PcJj" />
+						</widget>
+					</container>
+				</container>
+			</container>
+
+			<!--speech bubble-->
+			<container class="inner_box" appearance="boxes/custom/speech bubble/left/paper" colour="general speech bubble 2" red_replacement="fg foreground">
+				<attachment_group class="vertical_arrange_autosize" horizontal_inset="6" vertical_offset="6" />
+				<widget class="text" id="afbs" alignment="left, centre_y" size="large" multiline="true" auto_size="vertical">
+					<translation id="text" translation_id="542441" type="use" value="Welcome to the Data Hub! The analysis team is hard at work putting together data which will offer in-depth and customisable analysis of the performance of the team and players.[COMMENT: AREA: Data Hub; SUB-AREA: Splashscreen; FR: 34616; TONE: Formal; CHARLIMIT: None; REF-ID: None; NOTE: welcomes user to data hub]" />
+				</widget>
+			</container>
+		</container>
+
+		<widget class="spacer" flex_height="2%" />
+		<widget class="horizontal_divider" />
+		<widget class="spacer" flex_height="2.5%" />
+
+		<container flex_height="33%">
+			<attachment_group class="horizontal_arrange" horizontal_layout="-2,-3" vertical_alignment="vertical" horizontal_gap="0" />
+
+			<!--cool A&S picture-->
+			<widget class="picture" file="icons/custom/visual/placeholder" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" />
+
+			<container>
+				<attachment_group class="vertical_arrange" horizontal_alignment="horizontal" vertical_alignment="middle" vertical_gap="10" />
+
+				<widget class="text" alignment="left, top" size="large" multiline="true" auto_size="vertical">
+					<translation id="text" translation_id="541070" type="use" value="We'll start sending reports and visualisations through as soon as we have our systems populated with enough data.[COMMENT: AREA: Data Hub; SUB-AREA: Splashscreen; FR: 34616; TONE: Formal; CHARLIMIT: None; REF-ID: None; NOTE: tells user that only after three matches enough data will have been gathered to show more data]" />
+				</widget>
+				<widget class="spacer" height="10" />
+
+				<container>
+
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="2" />
+
+				<widget class="text" font="title" colour="faded text" size="small" auto_size="vertical">
+					<translation id="text" translation_id="541071" type="use" value="Estimated Availability[COMMENT: AREA: Data Hub; SUB-AREA: Splashscreen; FR: 34616; TONE: Formal; CHARLIMIT: None; REF-ID: None; NOTE: explains that text right below it estimates when something will become available or show up]" />
+				</widget>
+
+				<widget class="text" size="xlarge" style="bold" auto_size="vertical">
+					<translation id="text" size="small" translation_id="541072" type="use" value="After three league matches[COMMENT: AREA: Data Hub; SUB-AREA: Splashscreen; FR: 34616; TONE: Formal; CHARLIMIT: None; REF-ID: None; NOTE: tells user that only after three matches enough data will have been gathered to show more data]" />
+				</widget>
+
+				</container>
+					
+				<widget class="text" id="date" size="xsmall" auto_size="vertical" hidden="true" />
+			</container>
+		</container>
+
+		<widget class="spacer" flex_height="2.5%" />
+
+		<container class="inner_subtle_box">
+			<string id="remove_if" value="is_fmt" />
+			<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" />
+
+			<container height="100">
+				<attachment_group class="horizontal_arrange" horizontal_layout="-2,-1" vertical_alignment="vertical" horizontal_gap="20" />
+
+				<container>
+					<attachment_group class="vertical_arrange" horizontal_alignment="horizontal" />
+
+					<widget class="text" font="title" colour="text" auto_size="vertical">
+						<translation id="text" translation_id="541073" type="use" value="About the analysis team[COMMENT: AREA: Data Hub; SUB-AREA: Splashscreen; FR: 34616; TONE: Formal; CHARLIMIT: None; REF-ID: None; NOTE: short title that tell below text is about the analyst team]" />
+					</widget>
+
+					<widget class="spacer" height="4" />
+
+					<widget class="text" id="quAn" colour="text" auto_size="vertical" />
+
+				</container>
+
+				<container>
+					<attachment_group class="vertical_arrange" horizontal_alignment="horizontal" vertical_offset="28" />
+
+					<widget class="text" font="title" colour="text" auto_size="vertical">
+						<translation id="text" translation_id="541074" type="use" value="Team Size[COMMENT: AREA: Data Hub; SUB-AREA: Analysts; FR-BN: 52758; TONE: Formal; NOTE: Club's analyst team size header]" />
+					</widget>
+
+					<widget class="spacer" height="3" />
+
+					<widget class="text" id="nuAn" colour="text" auto_size="vertical" />
+
+				</container>
+			</container>
+
+			<widget class="horizontal_divider" />
+			<widget class="spacer" height="3" />
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right,extend" vertical_offset="3" horizontal_gap="10" />
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize_centre" />
+
+					<widget class="widget_popup_button" id="rspb" auto_size="horizontal" appearance="buttons/subtle/normal/button">
+						<record id="object_property" get_property="objt" set_property="objt" />
+						<translation id="text" translation_id="335274" type="use" value="Responsibilities[COMMENT: Manager main/top menu: national team options when team name is not visible]" />
+						<string id="popup_alignment" value="centre_x, top" />
+						<string id="widget_type" value="group_responsibility_list_widget" />
+						<record id="widget_properties" file="team/staff responsibility summary popup panel" width="800" height="520" />
+					</widget>
+				</container>
+
+				<widget class="link_button" auto_size="horizontal" section="tcso">
+					<translation id="text" translation_id="450720" type="use" value="Staff[COMMENT - bug 162191; can be a scout or analyst or ass man]" />
+				</widget>
+
+				<widget class="link_button" auto_size="horizontal" section="stfs">
+					<translation id="text" translation_id="320500" type="use" value="Staff Search[COMMENT: team report; link to the staff search]" />
+				</widget>
+
+				<widget class="job_centre_panel" file="" height="30" width="125">
+					<record id="object_property" get_property="TMnR" set_property="objt" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<widget class="popup_button" id="pabn" fixed="true">
+						<translation id="text" translation_id="242474" type="use" value="Place Advert" />
+					</widget>
+				</widget>
+
+			</container>
+		</container>
+	</container>
+</panel>

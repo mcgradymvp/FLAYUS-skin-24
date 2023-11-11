@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE panel SYSTEM "http://www.sigames.com/dtds/sios/panel.dtd">
+
+<panel title="workings">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>  
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+
+	<widget class="button" text="" appearance="button/hide_options/button">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+		<event id="click_event" event_id="gzp2"/>
+
+		<attachment class="event_relay_attachment" event_id="gzp2">
+			<record id="action_event">
+				<flags id="event_id" value="hide"/>
+				<flags id="event_target" value="med1"/>
+			</record>
+		</attachment>
+
+	</widget>  
+
+	
+	    <!-- Gunzofaces PA table on the right hand side -->
+  <widget class="picture" id="gzct" file="main menu/mediatable" transparency="1.0" scale_picture="false" keep_aspect_ratio="true" image_alignment="right" exclude_from_find="true">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+    <!-- Slide on from right of screen -->
+    <animation class="translate_animation" start_value="1, 0" end_value="0, 0" duration="0.8" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_screen" />
+  </widget>
+	
+
+</panel>

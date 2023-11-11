@@ -1,0 +1,29 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<boolean id="save_session_state" value="true"/>
+	<boolean id="save_default_state" value="true"/>
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="6"/>
+
+		<widget class="tactics_overview_panel" id="tacc" file="tactics/tactics overview panel match" />
+
+		<container id="MTfo" >
+			<attachment_group class="vertical_arrange_autosize"/>
+
+			<container id="cBco" class="inner_box_no_margin" >
+				<attachment_group class="vertical_arrange_autosize"/>
+
+				<widget class="container" entity_layout_id="at08" id="at08" name="confirm" file="match/match confirm button" auto_size="vertical"/>
+
+			</container>
+
+		</container>
+		
+	</container>
+
+    <container class="match_team_talk_panel" file="match/match sub talk panel" id="sTlP" hidden="true">
+        <record id="object_property" get_property="objt" set_property="objt" />
+    </container>
+</panel>

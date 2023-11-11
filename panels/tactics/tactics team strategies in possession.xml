@@ -1,0 +1,263 @@
+﻿<panel wants_mouse_events="false" disable_animations="true">
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4" />
+
+	<!--in possession-->
+	<container draw_vertical_dividers="true">
+			  <attachment_group class="horizontal_arrange" horizontal_gap="20" horizontal_alignment="fill"/>
+
+				<container class="scrolling_box" navigation_container="true" default_focus="true">
+					<container class="inner_box" >
+						<attachment_group class="vertical_arrange_autosize"  vertical_gap="3" />
+
+						<!-- Attacking Width Slider-->
+						<widget class="tactical_instructions_slider_Widget" id="awth" icon="" />
+
+						<container height="240">
+
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+							<widget class="pitch_with_tactics" id="awpi" icon_flags="dont_fade_icons, dont_use_player_instructions_menu, use_own_colours,dont_allow_player_links">
+								<boolean id="pitch_is_read_only" value="true" />
+								<string id="vertical" value="true" />
+								<string id="pitch_alignment" value="can_scale" />
+								<string id="pitch_line_colour" value="white" />
+								<integer id="pitch_touchline_width_percentage" value="0" />
+								<integer id="line_width" value="1" />
+								<boolean id="pitch_draw_grass" value="false" />
+								<boolean id="pitch_dont_draw_indicators" value="true" />
+								<string id="pitch_kit_icon" value="pitch/icons/kit/large/kit" />
+
+							</widget>
+
+						</container>
+					</container>
+				</container>
+
+				<container class="scrolling_box" navigation_container="true">
+					<container class="inner_box" >
+						<attachment_group class="vertical_arrange_autosize"  vertical_gap="3" />
+
+						<container>
+		                  <attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" gap="0"/>
+
+		                  <widget class="text" font="title" colour="white" alignment="centre" auto_size="vertical">
+							<translation id="text" translation_id="466517" type="use" value="Approach Play[COMMENT: team tactical strategy setting]" />
+					 		</widget>
+
+						  <widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_PASSING_STRATEGY_INTO_SPACE">
+							<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_PASSING_STRATEGY_INTO_SPACE" />
+						  </widget>
+	                    </container>
+
+						<!--Approach play pitch-->
+						<container id="imbk" height="240">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+							<widget class="pitch" icon_flags="dont_fade_icons, dont_use_player_instructions_menu, use_own_colours">
+								<boolean id="pitch_is_read_only" value="true" />
+								<string id="vertical" value="true" />
+								<string id="pitch_alignment" value="can_scale" />
+								<string id="pitch_line_colour" value="white" />
+								<integer id="pitch_touchline_width_percentage" value="0" />
+								<integer id="line_width" value="1" />
+								<boolean id="pitch_draw_grass" value="false" />
+								<boolean id="pitch_dont_draw_indicators" value="true" />
+								<boolean id="pitch_draw_goals" value="false" />
+							</widget>
+
+							<!--container for the buttons-->
+							<container>
+								<layout class="arrange_vertical_attachment" layout="-2,-3,-4,-2,-2" offset="9" gap="1" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="7" />
+
+								<container />
+
+								<container>
+									<layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1" offset="2" gap="1" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+									<!--look for overlap left-->
+									<widget class="tactics_pitch_button" height="28" id="lfo1" itID="simatchshared::TEAM_INSTRUCTION::TI_LOOK_FOR_OVERLAP_LEFT" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+										<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_LOOK_FOR_OVERLAP_LEFT" />
+									</widget>
+
+									<!--look for underlap left-->
+									<widget class="tactics_pitch_button" height="28" id="lfu1" itID="simatchshared::TEAM_INSTRUCTION::TI_LOOK_FOR_UNDERLAP_LEFT" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+										<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_LOOK_FOR_UNDERLAP_LEFT" />
+									</widget>
+									<!--look for underlap right-->
+									<widget class="tactics_pitch_button" height="28" id="sosi" itID="simatchshared::TEAM_INSTRUCTION::TI_LOOK_FOR_UNDERLAP_RIGHT" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+										<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_LOOK_FOR_UNDERLAP_RIGHT" />
+									</widget>
+
+									<!--look for overlap right-->
+									<widget class="tactics_pitch_button" height="28" id="lfu2" itID="simatchshared::TEAM_INSTRUCTION::TI_LOOK_FOR_OVERLAP_RIGHT" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+										<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_LOOK_FOR_OVERLAP_RIGHT" />
+									</widget>
+
+								</container>
+
+								<container>
+									<layout class="arrange_horizontal_attachment" layout="-3,-3,-3" offset="2" gap="1" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+									<!--focus play down the left flank-->
+									<widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_FOCUS_PLAY_DOWN_THE_LEFT_FLANK" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+										<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_FOCUS_PLAY_DOWN_THE_LEFT_FLANK" />
+									</widget>
+
+									<!--focus play down the middle-->
+									<widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_FOCUS_PLAY_DOWN_THE_MIDDLE" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+										<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_FOCUS_PLAY_DOWN_THE_MIDDLE" />
+									</widget>
+
+									<!--focus play down the right flank-->
+									<widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_FOCUS_PLAY_DOWN_THE_RIGHT_FLANK" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+										<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_FOCUS_PLAY_DOWN_THE_RIGHT_FLANK" />
+									</widget>
+
+								</container>
+								<container>
+									<layout class="stick_to_sides_attachment" alignment="all" inset="2,0" apply_to_children="true" />
+									<!--play out of defence-->
+									<widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_PASSING_STRATEGY_PLAY_OUT_FROM_DEFENCE" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+										<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_PASSING_STRATEGY_PLAY_OUT_FROM_DEFENCE" />
+									</widget>
+								</container>
+								<container />
+
+							</container>
+						</container>
+
+						<container>
+						    <attachment_group class="vertical_arrange_autosize" vertical_gap="15" vertical_offset="2"/>
+
+							<!-- Passing Directness Slider-->
+							<widget class="tactical_instructions_slider_Widget" id="psdr" icon="icons/custom/team instructions/passing directness" />
+
+							<!-- Tempo Slider-->
+							<widget class="tactical_instructions_slider_Widget" id="tmpo" icon="icons/custom/team instructions/tempo" />
+
+							<!-- Time Wasting Slider-->
+							<widget class="tactical_instructions_slider_Widget" id="tmws" icon="icons/custom/team instructions/time wasting" />
+
+						</container>
+					</container>
+				</container>
+				
+				<container class="scrolling_box" navigation_container="true">
+					<container class="inner_box" >
+					<attachment_group class="vertical_arrange_autosize"  vertical_gap="3" />
+
+					<container>
+	                	<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle"/>
+
+	                 	<widget class="text" font="title" colour="white" alignment="centre" auto_size="vertical">
+							<translation id="text" translation_id="395235" type="use" value="Final Third[COMMENT: FR 11046 - title for a section allowing the user to adjust how passes are made when attacking in the final third of the pitch]" />
+				 		</widget>
+	                  
+					<widget class="popup_button" id="cros" height="28" appearance="buttons/custom/tactics/pitch switch/normal/button" alignment="centre">
+					</widget>
+					
+					</container>
+
+					<!--Final third pitch-->
+					<container id="imfk" height="240">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+						<widget class="pitch" icon_flags="dont_fade_icons, dont_use_player_instructions_menu, use_own_colours">
+							<boolean id="pitch_is_read_only" value="true" />
+							<string id="vertical" value="true" />
+							<string id="pitch_alignment" value="can_scale" />
+							<string id="pitch_line_colour" value="white" />
+							<integer id="pitch_touchline_width_percentage" value="0" />
+							<integer id="line_width" value="1" />
+							<boolean id="pitch_draw_grass" value="false" />
+							<boolean id="pitch_dont_draw_indicators" value="true" />
+							<boolean id="pitch_draw_goals" value="false" />
+						</widget>
+
+						<!--container for the buttons-->
+						<container>
+							<layout class="arrange_vertical_attachment" layout="-2,-4,-6" offset="9" gap="1" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="7" />
+
+							<container>
+								<layout class="arrange_horizontal_attachment" layout="-4,-9,-4" offset="2" gap="1" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+								<container />
+								<!--work ball into box -->
+								<widget class="tactics_pitch_button" height="28" id="wbib" itID="simatchshared::TEAM_INSTRUCTION::TI_WORK_BALL_INTO_BOX" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+									<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_WORK_BALL_INTO_BOX" />
+								</widget>
+								<container />
+							</container>
+
+							<container>
+								<layout class="arrange_horizontal_attachment" layout="-4,-9,-4" offset="2" gap="1" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+								<!--Hit early crosses left-->
+								<widget class="tactics_pitch_button" height="28" id="hec1" itID="simatchshared::TEAM_INSTRUCTION::TI_HIT_EARLY_CROSSES" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+									<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_HIT_EARLY_CROSSES" />
+								</widget>
+
+								<!--shoot on sight-->
+								<widget class="tactics_pitch_button" height="28" id="sosi" itID="simatchshared::TEAM_INSTRUCTION::TI_SHOOT_ON_SIGHT" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+									<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_SHOOT_ON_SIGHT" />
+								</widget>
+								<!--hit early crosses right-->
+								<widget class="tactics_pitch_button" height="28" id="hec2" itID="simatchshared::TEAM_INSTRUCTION::TI_HIT_EARLY_CROSSES" multiline="true" size="7" appearance="buttons/custom/tactics/pitch area/button">
+									<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_HIT_EARLY_CROSSES" />
+								</widget>
+
+							</container>
+							<container />
+						</container>
+					</container>
+
+					<container>
+					    <attachment_group class="vertical_arrange_autosize" vertical_gap="6"/>
+
+						<!--Play for set pieces-->
+						<widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_PLAY_FOR_SET_PIECES">
+							<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_PLAY_FOR_SET_PIECES" />
+						</widget>
+
+	          			<container>
+	            			<attachment_group class="vertical_arrange_autosize" vertical_gap="1" />
+
+				            <!--Team style-->
+				            <widget class="text" height="20" font="title" alignment="centre" colour="white">
+				              <translation id="text" translation_id="227805" type="use" value="Dribbling" />
+				            </widget>
+				            <widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_DRIBBLE_LESS">
+				              <record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_DRIBBLE_LESS" />
+				            </widget>
+				            <widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_RUN_AT_DEFENCE">
+				              <record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_RUN_AT_DEFENCE" />
+				            </widget>
+				        </container>
+
+						<container>
+						  <attachment_group class="vertical_arrange_autosize" vertical_gap="1" />
+
+							<!--Team style-->
+							<widget class="text" height="20" font="title" alignment="centre" colour="white">
+								<translation id="text" translation_id="308909" type="use" value="Creative Freedom[COMMENT: tactical training area]" />
+							</widget>
+							<widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_BE_MORE_EXPRESSIVE">
+								<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_BE_MORE_EXPRESSIVE" />
+							</widget>
+							<widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_BE_MORE_DISCIPLINED">
+								<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_BE_MORE_DISCIPLINED" />
+							</widget>
+						</container>
+
+					</container>
+					</container>
+				</container>
+	</container>
+
+</panel>

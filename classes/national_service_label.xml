@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- setting the 'icon' property on this should change the root folder for the appearance used to indicate checked states. icon="checkbox" would be the default -->
+<class class="national_service_label" parent="label" alignment="centre">
+  <list id="value_list">
+    <record value="-1">
+      <translation id="text" type="use" value="미징집"/>
+		  <translation id="hint" type="use" value="아직 징집 되지 않은 상태."/>
+    </record> 
+    <record value="1">
+      <translation id="text" type="use" value="병역 완료" />
+		  <translation id="hint" type="use" value="복무를 마친 상태."/>
+    </record> 
+    <record value="2">
+      <translation id="text" type="use" value="병역 면제" />
+		  <translation id="hint" type="use" value="병역을 면제 받은 상태."/>
+    </record> 
+    <record value="3">
+      <translation id="text" type="use" value="복무중" />
+		  <translation id="hint" type="use" value="현재 복무중인 상태."/>
+    </record> 
+
+  </list>
+</class>

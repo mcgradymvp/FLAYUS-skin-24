@@ -1,0 +1,33 @@
+﻿<panel>
+
+	<layout class="arrange_vertical_attachment" layout="-3,-1" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignmnet="all" inset="0" apply_to_children="true" />
+
+
+    <!-- Portrait -->
+    <widget class="object_portrait_picture" scale_picture="true" image_alignment="top">
+      <record id="object_property" get_property="objt" set_property="objt"/>
+    </widget>
+ 
+  	
+    <container>
+		<layout class="stick_to_sides_attachment" alignmnet="all" inset="0" apply_to_children="true" />
+    <container id="staf">
+    <layout class="arrange_vertical_attachment" layout="-2,-1" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+
+          <!-- Person name -->
+      <widget class="person_button" alignment="centre, bottom" style="semi_bold" info_popup_enabled="true" info_popup_alignment="centre, bottom" icon_enabled="true">
+        <record id="object_property" get_property="Pcjo" set_property="Pcjo"/>
+        <record id="object_property" get_property="objt" set_property="valu"/>
+      </widget>
+
+        <!-- Job -->
+      <widget class="job_label" alignment="centre, top" size="small" colour="faded text">
+        <record id="object_property" get_property="PcJj" set_property="valu"/>
+      </widget>
+    </container>
+
+ </container>
+</panel>

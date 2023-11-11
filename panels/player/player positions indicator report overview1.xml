@@ -1,0 +1,163 @@
+﻿<panel save_session_state="true">
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="inner_box_no_margin" id="posB" appearance="boxes/titled/compact/paper" font="text">
+
+		<layout class="arrange_vertical_attachment" layout="50,-1,-1" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1, 20" offset="12" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<widget class="text" id="sltP" size="xlarge" height="25" font="title" colour="accent"/>
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0" gap="5"/>
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="5"/>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+					
+						<widget class="text" auto_size="all" colour="faded text" alignment="left, centre_y">
+							<translation id="text" translation_id="383263" type="use" value="Best Role[COMMENT - person list view column heading - abbreviation of Best Role - an opinion of the best role for this player]" />
+						</widget>
+						
+						<widget class="info_icon_hint_text" id="hnt1" width="20" height="18" />
+						
+						<widget class="text" id="roL1" auto_size="vertical" multiline="false" colour="text" alignment="left, centre_y"/>
+					</container>
+				</container>
+				
+				<widget class="position_popup" id="posm" height="20" short_position_string="false" fixed="true" text="" show_button_appearance="false" display_compound_positions="false" alignment="left" sele="PosS" skip_no_position_string="true">
+					<layout class="stick_to_sides_attachment" alignment="right" inset="4" />
+				</widget>
+			</container>
+		</container>
+	
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="120,-1" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2" />
+
+			<container>
+				<!--<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />-->
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			<!-- Pitch -->
+			<widget class="player_basic_positions_indicator_widget" id="pbip">
+				<record id="object_property" get_property="objt" set_property="objt" />
+			</widget>
+			<widget class="pitch_with_player_positions" id="ppip" hidden="true" wants_mouse_events="true" />
+
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<!-- Info labels for when the data isn't available-->
+					<container id="inFC">
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+						<widget class="text" id="nrLb" auto_size="vertical" hidden="true">
+							<translation id="text" translation_id="383562" type="use" value="No suitable best roles for this position[COMMENT: FR 10661; player overview positions indicator; string displayed when the player is not good enough in a position to have a 'best role' for it]" />
+						</widget>
+						<widget class="text" id="arbs" auto_size="vertical" hidden="true">
+							<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+						</widget>
+						<widget class="text" id="pool" auto_size="vertical" hidden="true">
+							<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]" />
+						</widget>
+						<widget class="button" id="scPb" click_event="sctc" auto_size="all" height="30" hidden="true">
+							<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+							<layout class="centre_in_parent_attachment" alignment="horizontal" />
+						</widget>
+					</container>
+
+					<!-- Best roles for selected position -->
+					<widget class="table" id="Rcon" layout="80, -1" auto_size_rows="true" row_spacing="0" column_spacing="0" navigation_container="true">
+						<widget class="stars_range_strip" id="roS1" alignment="centre" row="0" col="0" />
+						<widget class="label" id="roL1" row="0" col="1" />
+
+						<widget class="stars_range_strip" id="roS2" alignment="centre" row="1" col="0" />
+						<widget class="label" id="roL2" row="1" col="1" colour="faded text"/>
+
+						<widget class="stars_range_strip" id="roS3" alignment="centre" row="2" col="0" />
+						<widget class="label" id="roL3" row="2" col="1" colour="faded text"/>
+
+						<widget class="stars_range_strip" id="roS4" alignment="centre" row="3" col="0" />
+						<widget class="label" id="roL4" row="3" col="1" colour="faded text"/>
+
+						<widget class="stars_range_strip" id="roS5" alignment="centre" row="4" col="0" />
+						<widget class="label" id="roL5" row="4" col="1" colour="faded text"/>
+
+						<widget class="stars_range_strip" id="roS6" alignment="centre" row="5" col="0" />
+						<widget class="label" id="roL6" row="5" col="1" colour="faded text"/>
+
+						<widget class="stars_range_strip" id="roS7" alignment="centre" row="6" col="0" />
+						<widget class="label" id="roL7" row="6" col="1" colour="faded text"/>
+
+						<widget class="stars_range_strip" id="roS8" alignment="centre" row="7" col="0" />
+						<widget class="label" id="roL8" row="7" col="1" colour="faded text"/>
+					</widget>
+
+				</container>
+		
+			</container>
+		</container>
+	<!--Squad comparison table-->
+				<container id="sqdC">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0"/>
+					<widget class="text" id="sqcw" font="title" size="medium" auto_size="vertical" />
+
+					<!-- Ability list table -->
+					<widget class="table" id="calL" mode="fill_rows,stripe_rows" layout="26,-5,-3,-3" sort_disabled="true">
+						<list id="column_widget_properties">
+							<record indx="0" alignment="left,centre_y" colour="faded text" />
+							<record indx="1" alignment="left,centre_y" />
+							<record indx="2" alignment="left,centre_y" navigation_focus_target="false" />
+							<record indx="3" alignment="left,centre_y" navigation_focus_target="false" />
+						</list>
+
+						<list id="column_table_properties">
+							<record indx="0" sort_disabled="true" left="5" />
+							<record indx="1" sort_disabled="true">
+								<record id="column_heading">
+									<flags id="alignment" value="left,centre_y" />
+									<translation id="text" translation_id="227966" type="use" value="Player" />
+								</record>
+							</record>
+							<record indx="2" sort_disabled="true">
+								<record id="column_heading">
+									<flags id="alignment" value="left,centre_y" />
+									<translation id="text" translation_id="314426" type="use" value="Ability[COMMENT: player popup info panel - scout current ability rating]" />
+									<translation id="hint" translation_id="310135" type="use" value="Current Ability[COMMENT: contract offer screen - comments table]" />
+								</record>
+							</record>
+							<record indx="3" sort_disabled="true">
+								<record id="column_heading">
+									<flags id="alignment" value="left,centre_y" />
+									<translation id="text" translation_id="314427" type="use" value="Potential[COMMENT: player popup info panel - scout potential ability rating]" />
+									<translation id="hint" translation_id="310136" type="use" value="Potential Ability[COMMENT: contract offer screen - comments table]" />
+								</record>
+							</record>
+						</list>
+					</widget>
+				</container>
+
+	</container>
+
+
+
+
+</panel>

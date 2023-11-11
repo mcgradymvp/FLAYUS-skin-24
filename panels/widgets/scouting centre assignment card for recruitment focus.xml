@@ -1,0 +1,149 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container id="mnCT" class="main_subtle_box_no_margin">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!--assignment details-->
+		<container class="inner_contrast_box_no_margin" red_replacement="bg lighter">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="4" vertical_gap="5" />
+
+			<container id="tstt">
+				<attachment_group class="vertical_arrange_autosize_all" vertical_offset="4" vertical_gap="5" />
+				
+				<widget class="link_button" id="rfLB" auto_size="all" appearance="buttons/link/title/button">
+					<record id="object_property" get_property="Hhum" set_property="objt" />
+					<string id="section" value="rcfc" />
+					<translation id="text" translation_id="557708" type="use" value="Recruitment Focuses[COMMENT: AREA: Scouting; SUB-AREA: Scouting Overview; FR-BN: FM-4003; NOTE: Text on button, linking to Recruitment Focus section]" />
+				</widget>
+			</container>
+
+			<!--subpanel to show the recruitment focus-->
+			<widget class="recruitment_focus_widget" file="widgets/recruitment focus with pitch subpanel" show_creator="false" is_completed_focus="true">
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="SCsf" />
+							<integer id="set_property" value="valu" />
+						</record>
+						<record>
+							<integer id="get_property" value="tact" />
+							<integer id="set_property" value="tact" />
+						</record>
+						<record>
+							<integer id="get_property" value="hvTA" />
+							<integer id="set_property" value="hvTA" />
+						</record>
+					</list>
+				</record>
+			</widget>
+		</container>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="10" gap="10" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="text" alignment="left,centre_y" font="title" size="large" colour="text" auto_size="all">
+					<translation id="text" translation_id="557819" type="use" value="Recommended Players[COMMENT: AREA:Inbox; SUB-AREA: Recruitment Meeting Feedback Invite; FR-BN:FM-4261; TONE: Formal; CHARLIMIT: None; REF-ID: XXXXX; NOTE: title for subpanl]" />
+				</widget>
+
+				<widget class="text" alignment="left,top" auto_size="vertical" colour="faded text">
+					<record id="object_property" get_property="text" set_property="text" />
+				</widget>
+
+				<!--The sorting of this table is disabled to hide the "JUMP TO TABLE ROWS" shortcut, a fix for dual functionality controller issue.-->
+				<widget class="client_object_list_table" id="scet" sort_disabled="true" mode="fill_rows, select_rows, stripe_rows, printable, keyboard" fixed_size_rows="true" auto_size_rows="false" navigation_focus_target="true">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="astp" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+					
+					<list id="views">
+						<record id="ovvw">
+							<record id="view_table_properties">
+								<integer id="row_height" value="60" />
+							</record>
+							<translation id="name" translation_id="247414" type="use" value="Overview" />
+							<record id="view">
+								<record id="port" auto_hide_priority="9" width="40" />
+								<!--portrait-->
+								<record id="PNaN" auto_hide_priority="1" minimum_width="120" />
+								<!-- player name/nationality -->
+								<record id="PCaD" auto_hide_priority="2" />
+								<!-- club -->
+								<record id="PSag" auto_hide_priority="3" />
+								<!-- age -->
+								<record id="Pcab" auto_hide_priority="8" />
+								<!-- CA stars -->
+								<record id="Ppab" auto_hide_priority="7" />
+								<!-- PA Stars -->
+								<record id="Pdva" auto_hide_priority="4" />
+								<!-- value -->
+								<record id="PRpo" auto_hide_priority="5" width="70" />
+								<!-- recommended -->
+								<record id="PPaD" auto_hide_priority="6" width="140" />
+								<!-- player interest -->
+							</record>
+						</record>
+					</list>
+				</widget>
+
+			</container>
+
+			<widget class="assignment_scouting_centre_actions_panel" height="30">
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="Ttea" />
+							<integer id="set_property" value="Ttea" />
+						</record>
+						<record>
+							<integer id="get_property" value="SCei" />
+							<integer id="set_property" value="SCei" />
+						</record>
+						<record>
+							<integer id="get_property" value="Pers" />
+							<integer id="set_property" value="Pers" />
+						</record>
+						<record>
+							<integer id="get_property" value="psai" />
+							<integer id="set_property" value="psai" />
+						</record>
+						<record>
+							<integer id="get_property" value="psFI" />
+							<integer id="set_property" value="psFI" />
+						</record>
+						<record>
+							<integer id="get_property" value="Hhum" />
+							<integer id="set_property" value="objt" />
+						</record>
+						<record>
+							<integer id="get_property" value="fSCe" />
+							<integer id="set_property" value="fSCe" />
+						</record>
+						<record>
+							<integer id="get_property" value="AsTY" />
+							<integer id="set_property" value="AsTY" />
+						</record>
+						
+					</list>
+				</record>
+			</widget>
+
+			<container height="10" />
+
+		</container>
+
+	</container>
+
+
+</panel>

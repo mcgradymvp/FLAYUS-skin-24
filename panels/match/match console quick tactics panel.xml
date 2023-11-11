@@ -1,0 +1,108 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="0" />
+
+	<flags id="miBI" value="icons/16px/show top bar" />
+	<!--icon to expand -->
+	<flags id="maBI" value="icons/16px/show bottom bar" />
+	<!--icon to expand -->
+
+	<!--formation-->
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_gap="0" />
+
+		<container navigation_container="true">
+
+			<attachment_group class="horizontal_arrange_autosize_all" horizontal_gap="0" />
+
+			<!-- Hot seat switcher -->
+			<widget id="TeSe" class="match_team_selector_panel" width="60" height="30">
+				<record id="object_property" get_property="objt" set_property="objt" />
+			</widget>
+       		<container class="inner_box" appearance="boxes/contrast/no margin/top left/paper" red_replacement="bg" height="30">
+				<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="left" horizontal_offset="0" horizontal_gap="2" />
+
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="12" horizontal_offset="4" vertical_inset="2" />
+
+                    <!--keep this id for the match tutorial-->
+					<widget class="icon_button" id="tact" auto_size="horizontal" secondary_icon="icons/16px/maximise" secondary_icon_enabled="true" icon="icons/16px/tactics" appearance="buttons/custom/over state only/button" click_event="EsFT" controller_button="start_button" default_focus="true" font="title" colour="text" size="normal" auto_size_maximum_width="155">
+						<translation id="text" translation_id="516460" type="use" value="Tactics &amp; Subs[COMMENT: AREA; match UI; SUB-AREA: heading; NOTE: text for section allowing user to make tactics changes and/or subs]" />
+					</widget>
+
+				</container>
+
+			</container>
+       
+		</container>
+			<container height="30" navigation_container="true">
+
+				<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0" />
+
+				<container class="main_box_no_margin" background_colour="bg" width="150" height="30">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	                <!-- battery indicator, only shows up for laptops -->
+					<widget class="battery_power_indicator" width="20" height="20">
+					</widget>
+					<widget class="icon_button" appearance="buttons/custom/over state only/square/button" icon_alignment="left" click_event="Emmb" id="mmbt" >
+					   <translation id="text" type="use" value="선수 정보창 On/Off" />
+                    </widget>
+				</container>
+
+				<container class="inner_box" appearance="boxes/contrast/no margin/top right/paper" red_replacement="bg">
+					<attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_gap="0" horizontal_offset="2" />
+
+					<widget class="icon_button" appearance="buttons/custom/over state only/button" icon_alignment="left" icon="icons/16px/show me" id="Stab" width="150" height="30">
+						<translation id="text" type="use" value="경기 정보창 On/Off" />
+						<record id="click_event">
+							<flags id="event_id" value="TtaV" />
+							<integer id="evfl" value="7" />
+							<flags id="evtg" value="root" />
+						</record>
+					</widget>
+
+				</container>
+
+			</container>
+
+		</container>
+
+	<container class="main_box_no_margin" height="120" background_colour="bg lighter" id="mBar">
+
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="0" />
+
+		<container navigation_container="true">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="0" />
+
+			<container >
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="0" />
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<widget class="match_players_bar_panel" id="plbr">
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+
+					<widget class="match_players_bar_panel" id="subr" hidden="true" include_current_subs="true">
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+				</container>
+
+				<container class="main_box_no_margin" background_colour="black" width="30">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+					<widget class="icon_button" id="sutg" click_event="tgsu" style="vertical" font="title" size="large" alignment="centre" appearance="buttons/custom/over state only/square/button" colour="text" controller_button="x_button" gamepad_icon_alignment="centre_top">
+                 
+					</widget>
+
+				</container>
+
+			</container>
+
+
+
+		</container>
+
+	</container>
+
+</panel>

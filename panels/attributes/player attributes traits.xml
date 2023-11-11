@@ -1,0 +1,40 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+        <container>
+				  <layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+				  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+        
+          <widget class="text" auto_size="vertical" font="title" colour="accent">
+            <translation id="text" translation_id="402385" type="use" value="Player Traits[COMMENT: label for the previously named 'Preferred Moves' section (ID 229993), changed to Player Traits because it fits all potential options more suitably]" />
+          </widget>
+
+          <widget class="preferred_move_popup_button" id="nPPM" appearance="buttons/standard/normal/button" alignment="left,centre_y" auto_size="vertical">
+            <record id="object_property">
+              <list id="get_properties">
+                <record>
+                  <integer id="get_property" value="PmCo" />
+                  <integer id="set_property" value="valu" />
+                </record>
+              </list>
+            </record>
+          </widget>
+
+          <widget class="preferred_move_label" id="ppML" alignment="left,centre_y" auto_size="vertical">
+            <record id="object_property">
+              <list id="get_properties">
+                <record>
+                  <integer id="get_property" value="PTpm" />
+                  <integer id="set_property" value="valu" />
+                </record>
+              </list>
+            </record>
+          </widget>
+
+          <widget class="button" hidden="true" click_event="PPMC" id="cPPM" alignment="left,centre_y" auto_size="all">
+            <translation id="text" translation_id="229828" type="use" value="Cancel" />
+          </widget>
+          
+        </container>
+       
+</panel>

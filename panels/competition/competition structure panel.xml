@@ -1,0 +1,17 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="scrolling_box" id="scrb" fit_content_horizontal="true" fit_content_vertical="true" reveal_widget_on_item_select="false">
+		<container class="main_box" id="lvls" navigation_container="true">
+			<layout class="fit_children_attachment" alignment="vertical,extend"/>
+			<layout class="fit_children_attachment" alignment="horizontal"/>
+			<layout class="arrange_vertical_attachment" alignment="top" gap="10"/>
+			<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" offset="0"/>
+
+		</container>
+	</container>
+
+	<widget class="canvas" id="cnvs">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</widget>
+</panel>

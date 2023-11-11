@@ -1,0 +1,13 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+
+		<!-- Role label-->
+	
+		<widget class="text" id="rolT" colour="gzk" font="gz_title" style="bold" size="11" alignment="centre_x,centre_y" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="rolT" />
+						</record>
+					</widget> 
+</panel>

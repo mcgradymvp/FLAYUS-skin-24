@@ -1,0 +1,51 @@
+<panel>
+  <string id="skin_style" value="subtle box"/>
+
+  <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+  <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="1"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+  <container class="inner_box">
+    <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+    <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="1"/>
+
+    <widget class="button" id="tipl" auto_size="all" appearance="buttons/link/title/button" red_replacement="negative" blue_replacement="negative" colour="negative">
+      <layout class="centre_in_parent_attachment" alignment="horizontal" />
+    </widget>
+    
+   
+    <widget class="button" id="cipl" auto_size="all" appearance="buttons/link/title/button" colour="faded text" red_replacement="faded text" size="normal">
+      <layout class="centre_in_parent_attachment" alignment="horizontal" />
+    </widget>
+    
+    <container height="6"/>
+
+    <widget class="client_object_list_table" id="tabl" mode="fill_rows" auto_size="vertical">
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+      <!--default view-->
+      <flags id="default_view" value="geni" />
+
+      <list id="viws">
+
+        <record id="geni">
+          <translation id="name" translation_id="247410" type="use" value="General Info" />
+          <!-- Define attributes/properties to view in this view type on the panel.
+								 Any properties not defined here will be hidden for this view. -->
+          <record id="view">
+            <record id="Pnfo" />
+            <!-- player status/info -->
+            <record id="Pnms" />
+            <!-- person name -->
+            <record id="injr" width="180"/>
+            <record id="iida" width="130"/>
+            <record id="iito" width="100"/>
+          </record>
+        </record>
+      </list>
+    </widget>
+    
+  </container>
+
+  
+  
+</panel>

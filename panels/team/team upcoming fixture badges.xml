@@ -1,0 +1,48 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<!-- background shading image 
+  <widget class="picture" id="pict" file="interface/shadow/bar" height="171">
+    <layout class="stick_to_sides_attachment" alignment="top" inset="55"/>
+  </widget> -->
+
+	<!--container for the team badges-->
+	<container id="tbdg">
+		<layout class="arrange_horizontal_attachment" alignment="middle,fill" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<!--home team-->
+		<widget class="object_portrait_picture" id="htpi" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" inset="25">
+			<record id="object_property">
+				<integer id="get_property" value="home" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+
+		<widget class="label" alignment="centre" style="semi_bold" size="26" id="vlbl" auto_size="horizontal">
+			<translation id="text" translation_id="242324" type="use" value="v[versus]" />
+		</widget>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<!--away team-->
+			<widget class="object_portrait_picture" id="atpi" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" inset="25">
+				<record id="object_property">
+					<integer id="get_property" value="away" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+			<widget class="label" id="nopp" size="48" alignment="centre">
+				<translation id="text" translation_id="364192" type="use" value="?[COMMENT:upcoming fixture info panel; placeholder used for when match opposition isn't known yet, keep to single character where possible]" />
+				<record id="object_property">
+					<integer id="get_property" value="Hawy" />
+					<integer id="set_property" value="hidn" />
+				</record>
+			</widget>
+		</container>
+	</container>
+
+</panel>

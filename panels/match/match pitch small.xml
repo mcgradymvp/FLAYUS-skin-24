@@ -1,0 +1,10 @@
+<panel>
+
+  <!--this panel wants the mouse to hide if idle for more than a short while-->
+  <flags id="WaMH" value="true"/>
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <!--Our match widget-->
+  <widget class="match_view_widget" id="ptc3" hidden="true" is_2d_radar="true" ratio="1.48"/>
+</panel>

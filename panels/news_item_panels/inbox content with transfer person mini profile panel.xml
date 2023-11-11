@@ -1,0 +1,79 @@
+<panel navigation_container="true">
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0"/>
+
+	<flags id="tric" value="icons/26px/transfer"/>
+	<flags id="wpic" value="icons/26px/work permit denied"/>
+
+	<widget class="inbox_body_text" id="bdtx"/>
+
+	<!--list of solidarity payments-->
+	<widget class="table" id="SolP" layout="-1, -1" auto_size="vertical">
+		<list id="headings">
+			<record alignment="left, centre_y">
+				<translation id="text" translation_id="227737" type="use" value="Club"/>
+			</record>
+			<record alignment="left, centre_y">
+				<translation id="text" translation_id="230121" type="use" value="Fee"/>
+			</record>
+		</list>
+	</widget>
+
+	<!-- extra text -->
+	<widget class="inbox_body_text" id="altx"/>
+
+	<!--Details-->
+	<container id="conA">
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="4"/>
+
+		<!--Name age position-->
+		<container height="120" >
+			<attachment_group class="horizontal_arrange" horizontal_layout="-1, -1, -1" horizontal_offset="0"  vertical_inset="0"/>
+
+			<container class="inbox_mini_profile_player_details_panel" id="psdt" file="">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+				<!-- some pictures -->
+				<widget class="competition_news_image_panel" file="competition/competition news image panel1" id="ptpc"/>
+			</container>
+
+			<container class="inbox_mini_profile_player_details_panel" id="pdts" file="">
+				<string id="skin_style" value="subtle box"/>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+				<container  id="psbt">
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+					<!-- person name -->
+					<widget class="person_button" id="pnam" info_popup_enabled="true" person_is_player="true" auto_size="vertical" spec="text" style="bold" alignment="left, centre_y" size="14">
+						<layout class="centre_in_parent_attachment" alignment="horizontal"/>
+					</widget>
+
+					<!-- person description -->
+					<widget class="text" id="ppos" auto_size="vertical" colour="faded text" alignment="left" size="10" multiline="true">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+					</widget>
+				</container>
+			</container>
+
+			<string id="skin_style" value="subtle box"/>
+
+			<!--transfer status icon-->
+			<container>
+				<container class="inner_box" id="tsic" appearance="labels/standard/label" red_replacement="red" hidden="true">
+
+					<attachment_group class="horizontal_arrange_autosize_all_centre_centered_in_parent" horizontal_alignment="middle" />
+
+					<widget class="picture" id="tsci" file="icons/26px/transfer" auto_size="all" />
+					<widget class="label" id="tslb" alignment="left,centre_y"  size="large" auto_size="all"/>
+				</container>
+			</container>
+		</container>
+
+		<container id="infc">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="8"/>
+		</container>
+
+        <widget class="player_pending_contract_discussion_panel" id="CoDi"/>
+	</container>
+</panel>

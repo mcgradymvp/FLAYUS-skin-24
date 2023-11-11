@@ -1,0 +1,48 @@
+﻿<!-- News item panel for an article about the top spending clubs and leagues in a transfer window. Should be used with a PROPERTY_LIST_VIEWER_XML_PANEL -->
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<!-- A list of colours to be used for each bar in order. Can be used to make bars darker as the values get progressively smaller -->
+	<list id="bar_colour">
+		<colour red="0" green="159" blue="168"/>
+		<colour red="0" green="145" blue="155"/>
+		<colour red="16" green="130" blue="143"/>
+		<colour red="31" green="119" blue="134"/>
+		<colour red="44" green="109" blue="124"/>
+	</list>
+
+	<!-- content area -->
+	<widget class="inbox_body_text" id="bdtx"/>
+
+	<container class="scrolling_box">
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<!-- Leagues -->
+			<container class="inner_subtle_box">
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true"/>
+
+				<record id="object_property" get_property="tit2" set_property="titl"/>
+
+				<widget class="horizontal_bar_chart" bar_appearance="boxes/main/contrast/paper1" bar_label_alignment="right" alignment="left" bar_size="30" height="160" minimum_bar_size="180">
+					<record id="object_property" get_property="bar2" set_property="itms"/>
+				</widget>
+			</container>
+
+			<!-- Clubs -->
+			<container class="inner_subtle_box">
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true"/>
+
+				<record id="object_property" get_property="tit1" set_property="titl"/>
+
+				<!-- Widget height should be 'size * 5 + 5 * gap' gap default is 2-->
+				<widget class="horizontal_bar_chart" bar_appearance="boxes/main/contrast/paper1" bar_label_alignment="right" alignment="left" bar_size="30" height="160" minimum_bar_size="180">
+					<record id="object_property" get_property="bar1" set_property="itms"/>
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

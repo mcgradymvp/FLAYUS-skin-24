@@ -1,0 +1,36 @@
+<panel height="40" width="750">
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+	<container class="plain_box" appearance="boxes/contrast/no margin/bottom right/paper" id="bgrn" width="342" red_replacement="bg lighter">
+		<animation class="slide_in_top_animation" duration="0.5" tween="ease_out" />
+		<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend"  />
+
+		<container height="40">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle" vertical_alignment="vertical"  />
+
+				<widget class="text" auto_size="horizontal" alignment="centre_y" multiline="false" font="title" colour="match accent" >
+					<animation class="fade_animation" start_value="0.1" end_value="1" duration="0.6" delay="0" end_mode="cycle"/>
+					<translation id="text" translation_id="332267" type="use" value="REPLAY[COMMENT: replay controls label]" />
+				</widget>
+
+				<widget class="text" auto_size="horizontal" alignment="centre_y" multiline="false" font="title" value="-" >
+					<animation class="fade_animation" start_value="0.1" end_value="1" duration="0.6" delay="0" end_mode="cycle"/>
+				</widget>
+
+				<widget class="text" id="repT" auto_size="horizontal" alignment="centre_y" multiline="false" font="title">
+					<animation class="fade_animation" start_value="0.1" end_value="1" duration="0.6" delay="0" end_mode="cycle"/>
+				</widget>
+			</container>
+
+
+		<container class="plain_box" appearance="boxes/contrast/no margin/bottom left/paper" red_replacement="bg darker">
+		<attachment_group class="horizontal_arrange_autosize" horizontal_offset="6"/>
+
+			<widget class="icon_button" id="exre" appearance="buttons/custom/over state only/button" auto_size="horizontal" alignment="centre_x,centre_y" font="title" click_event="exre" controller_button="b_button">
+				<translation id="text" translation_id="332276" type="use" value="Skip[COMMENT: match_time_slider; instruction to skip the replay]" />
+				<translation id="hint" translation_id="332275" type="use" value="Skip this replay[COMMENT: match_time_slider; instruction to skip this replay, hint tooltip]" />
+			</widget>
+
+		</container>
+	</container>
+</panel>

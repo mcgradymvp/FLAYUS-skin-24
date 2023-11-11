@@ -1,0 +1,770 @@
+﻿<panel>
+	<boolean id="save_session_state" value="true" />
+
+	<boolean id="RsuH" value="true"/>		
+	
+	<set_var name="sheet_text_colour">
+		<symbol value="black" />
+	</set_var>
+
+	<set_var name="name_view_props">
+		<record>
+			<var id="colour" name="sheet_text_colour" />
+			<boolean id="person_is_player" value="true" />
+			<boolean id="dslk" value="true" />
+			<boolean id="info_popup_enabled" value="true" />
+			<boolean id="links_enabled_in_popup" value="false" />
+		</record>
+	</set_var>
+
+	<set_var name="captain_view_props">
+		<flags id="alignment" value="centre" />
+		<translation id="text" translation_id="515078" type="use" value="(c)[COMMENT: AREA: Team lineups in the match; SUB-AREA: Captaincy; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: abbreviation for Captain; same as 260925 but with parentheses]" />
+		<var id="colour" name="sheet_text_colour" />
+		<integer id="width" value="45" />
+	</set_var>
+
+	<set_var name="home_views">
+		<list>
+			<record id="deta">
+				<record id="view">
+					<record id="Psnu" alignment="right,centre_y,auto_fit" width="25">
+						<var id="colour" name="sheet_text_colour" />						
+					</record>
+			        <record id="PisC" width="25" alignment="centre_y,centre_x"/>
+					<record id="Pnam" alignment="left,centre_y,auto_fit" info_popup_enabled="true" style="bold" navigation_focus_target="false">
+						<var id="prop" name="name_view_props" />
+					</record>
+				
+				<record id="PtsL" hidden="true">				
+					</record>
+					
+				</record>
+			</record>
+		</list>
+	</set_var>
+
+	<set_var name="away_views">
+		<list>
+			<record id="deta">
+				<record id="view">
+					<record id="Pnam" alignment="right,centre_y,auto_fit" info_popup_enabled="true" navigation_focus_target="false"> 
+						<var id="prop" name="name_view_props" />
+					</record>
+
+					<record id="PisC" width="25" alignment="centre_y,centre_x"/>
+	
+					<record id="Psnu" alignment="left,centre_y,auto_fit" width="25">
+						<var id="colour" name="sheet_text_colour" />
+					</record>
+
+					<record id="PpsC" hidden="true">				
+					</record>
+									
+  			  </record>
+			</record>
+		</list>
+	</set_var>
+	<set_var name="players_table">
+		<widget class="tactic_player_list_table" database_table_type="1" mode="fill_rows,hide_headings">
+
+			<boolean id="auto_size_rows" value="false" />
+			<boolean id="fixed_size_rows" value="true" />
+			<integer id="row_height" value="21" />
+
+			<list id="Spid">
+				<integer value="PpsC" />
+			</list>
+			
+				<list id="default_sort_column">
+						<integer value="PtsL" />
+					</list>
+
+			<!--default view-->
+			<flags id="default_view" value="deta" />
+			
+		</widget>
+	</set_var>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="horizontal_adaptive_container" inset="0" offset="0">
+		<!--C-->
+		<container class="vertical_arrange_container" default_width="570" minimum_width="570" priority="1" alignment="bottom,extend" offset="0" inset="0">
+       
+		<!--head to head-->
+		<container class="main_transparent_box">	
+            <translation id="title" translation_id="233151" type="use" value="Match Information" />
+              <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<!--container for badges, behind everything else-->
+				<container>
+					<!--home team badge-->
+					<widget class="object_portrait_picture" id="picH" height="100" width="100" scale_picture="true">
+						<boolean id="keep_aspect_ratio" value="true" />
+						<flags id="image_alignment" value="centre" />
+
+						<record id="object_property">
+							<integer id="get_property" value="home" />
+							<integer id="set_property" value="objt" />
+						</record>
+
+						<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+						<layout class="stick_to_sides_attachment" alignment="top" inset="6" />
+					</widget>
+
+					<!--away team badge-->
+					<widget class="object_portrait_picture" id="picA" height="100" width="100" scale_picture="true">
+						<boolean id="keep_aspect_ratio" value="true" />
+						<flags id="image_alignment" value="centre" />
+
+						<record id="object_property">
+							<integer id="get_property" value="away" />
+							<integer id="set_property" value="objt" />
+						</record>
+
+						<layout class="stick_to_sides_attachment" alignment="right" inset="10" />
+						<layout class="stick_to_sides_attachment" alignment="top" inset="6" />
+					</widget>
+
+				</container>
+
+				<!--container for all the head to head stats-->
+				<container class="scrolling_box">
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="1" />
+						<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="1" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<!--fixture name-->
+						<widget class="fixture_name_text" id="Name" auto_size="vertical" alignment="centre" colour="title" size="small">
+							<record id="object_property">
+								<integer id="get_property" value="FxNm" />
+							</record>
+						</widget>
+
+						<!--team names-->
+						<container height="30">
+							<layout class="arrange_horizontal_attachment" layout="60,-1,20,-1,60" offset="0" gap="1" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+							<container/>
+
+							<!--home team-->
+							<widget class="team_button" id="hotm" alignment="right,top" icon_enabled="false" size="large" style="bold" auto_size="none">
+								<record id="object_property">
+									<integer id="get_property" value="home" />
+								</record>
+							</widget>
+
+							<!--v-->
+							<widget class="text" alignment="top, centre_x" colour="faded text">
+								<translation id="text" translation_id="242324" type="use" value="v[versus]" />
+							</widget>
+
+							<!--away team-->
+							<widget class="team_button" id="aotm" alignment="left,top" icon_enabled="false" size="large" style="bold" auto_size="none">
+								<record id="object_property">
+									<integer id="get_property" value="away" />
+								</record>
+							</widget>
+
+							<container/>
+
+						</container>
+
+						<!--spacer-->
+						<container height="4" />
+
+						<!--odds-->
+				        <container  height="55">
+							<layout class="arrange_vertical_attachment" layout="20,-1" offset="0" gap="1" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		                <widget class="text" id="oddl" alignment="top,centre_y" font="title">
+			                <translation id="text" translation_id="230320" type="use" value="Odds" />
+		                </widget>
+							
+						<widget id="FxOd" class="fixture_odds_text" alignment="centre">
+							<record id="object_property" get_property="FxOd" />
+						</widget>
+			            </container>
+ 
+						<!--spacer-->
+						<container height="4" />
+
+						<!--league position-->
+						<container id="lpsC" height="53">
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="1" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="text" id="lpti" alignment="centre" auto_size="vertical" font="title">
+								<translation id="text" translation_id="284395" type="use" value="League Position[COMMENT: French attacking league table; league position heading hint]" />
+							</widget>
+
+							<container height="30">
+								<layout class="arrange_horizontal_attachment" layout="-1,1,-1" offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+								<!--home position-->
+								<container>
+									<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="1" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+									<widget class="label" id="homl" alignment="centre_x,centre_y" size="11" auto_size="horizontal">
+										<string id="format" value="[%number#1-nth]" />
+										<record id="object_property">
+											<integer id="get_property" value="homl" />
+										</record>
+									</widget>
+								</container>
+
+								<!--vertical divider-->
+								<widget class="picture" file="dividers/standard/vertical/line">
+								</widget>
+
+								<!--away position-->
+								<container>
+									<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="1" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+									<widget class="label" id="awal" alignment="centre_x,centre_y" size="11" auto_size="horizontal">
+										<string id="format" value="[%number#1-nth]" />
+										<record id="object_property">
+											<integer id="get_property" value="awal" />
+										</record>
+									</widget>
+								</container>
+							</container>
+						</container>
+
+						<!--spacer-->
+						<container height="4" />
+
+						<!--recent form-->
+						<widget class="text" alignment="centre" auto_size="vertical" font="title">
+							<translation id="text" translation_id="344664" type="use" value="Recent Form" />
+						</widget>
+						<container height="30">
+							<layout class="arrange_horizontal_attachment" layout="-1,1,-1" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+							<!--home form-->
+							<container>
+								<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="1" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+								<widget class="team_recent_form_widget" id="homF" alignment="right,centre_y" show_description_text="true" auto_size="horizontal">
+									<record id="object_property">
+										<list id="get_properties">
+											<record>
+												<integer id="get_property" value="homF" />
+												<integer id="set_property" value="valu" />
+												<boolean id="dont_set_object" value="true" />
+											</record>
+											<record>
+												<integer id="get_property" value="home" />
+												<integer id="set_property" value="objt" />
+											</record>
+										</list>
+									</record>
+								</widget>
+							</container>
+
+							<!--vertical divider-->
+							<widget class="picture" file="dividers/standard/vertical/line" col="white">
+							</widget>
+
+							<!--away form-->
+							<container>
+								<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="1" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+								<widget class="team_recent_form_widget" id="awaF" alignment="left,centre_y" show_description_text="true" auto_size="horizontal">
+									<record id="object_property">
+										<list id="get_properties">
+											<record>
+												<integer id="get_property" value="awaF" />
+												<integer id="set_property" value="valu" />
+												<boolean id="dont_set_object" value="true" />
+											</record>
+											<record>
+												<integer id="get_property" value="away" />
+												<integer id="set_property" value="objt" />
+											</record>
+										</list>
+									</record>
+								</widget>
+							</container>
+						</container>
+
+						<!--spacer-->
+						<container height="4" />
+
+						<!--preferred formation-->
+						<widget class="text" alignment="centre" auto_size="vertical" font="title">
+							<translation id="text" translation_id="229988" type="use" value="Preferred Formation" />
+						</widget>
+						<container height="26">
+							<layout class="arrange_horizontal_attachment" layout="-1,1,-1" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+							<!--home preferred formation-->
+							<widget class="formation_label" id="PFmH" alignment="right,centre_y" style="semi_bold">
+								<record id="object_property">
+									<integer id="get_property" value="PFmH" />
+								</record>
+							</widget>
+
+							<!--vertical divider-->
+							<widget class="picture" file="dividers/standard/vertical/line">
+							</widget>
+
+							<!--away preferred formation-->
+							<widget class="formation_label" id="PFmA" alignment="left,centre_y" style="semi_bold">
+								<record id="object_property">
+									<integer id="get_property" value="PFmA" />
+								</record>
+							</widget>
+
+						</container>
+
+						<!--spacer-->
+						<container height="4" />
+
+						<!--team news-->
+						<widget class="text" alignment="centre" auto_size="vertical" font="title">
+							<translation id="text" translation_id="344976" type="use" value="Team News[COMMENT: team report panel; team news ahead of the next match]" />
+						</widget>
+						<container>
+							<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+							<layout class="arrange_horizontal_attachment" layout="-1,1,-1" offset="0" />
+
+							<!--home team news-->
+							<widget class="fixture_news_text" id="hnws" alignment="right,centre_y" icon_alignment="right,centre_y" auto_size="vertical" auto_size_rows="true" >
+								<record id="object_property">
+									<integer id="get_property" value="FxHN" />
+								</record>
+								<record id="default_properties">
+									<symbol id="multiline" value="false" />
+								</record>
+							</widget>
+
+							<!--vertical divider-->
+							<widget class="picture" file="dividers/standard/vertical/line">
+							</widget>
+
+							<!--away team news-->
+							<widget class="fixture_news_text" id="anws" alignment="left,centre_y" icon_alignment="left,centre_y" auto_size="vertical"  auto_size_rows="true">
+								<record id="object_property">
+									<integer id="get_property" value="FxAN" />
+								</record>
+								<record id="default_properties">
+									<symbol id="multiline" value="false" />
+								</record>
+							</widget>
+						</container>
+	                 </container>
+					</container>
+				</container>
+
+        <!-- ticket -->
+        <container class="main_transparent_box" height="300">
+           <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	
+				<container class="scrolling_box">
+					<widget class="match_feed_panel" id="sfed" file="match/match feed panel team news reaction" />
+				</container>
+	    </container>    
+
+			<container class="main_transparent_box" id="rdrd" height="220">
+				<translation id="title" type="use" value="기타 정보" />
+				<layout class="arrange_horizontal_attachment" alignment="top,extend" offset="0" />
+                 <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+			
+				<!--match information-->
+			    <container>
+				<layout class="arrange_vertical_attachment" layout="35,1,-1" offset="-5" />
+                 <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<!--weather icon-->
+				<widget class="weather_indicator_panel" id="FxWe" file="match/weather indicator with wind horizontal1">
+					<record id="object_property">
+						<integer id="get_property" value="FxWe" />
+						<integer id="set_property" value="valu" />
+					</record>
+				</widget>
+
+				<!-- separator image -->
+				<widget class="horizontal_divider" />
+
+				<!--referee-->
+				<widget class="referee_profile_panel" id="refp" file="non_player/referee profile2">
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="FRef" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+				</widget>
+				</container>
+			</container>
+		</container>
+
+	<!--R-->
+	<container default_width="-2" minimum_width="600" priority="1">
+	    <layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+    <container class="main_transparent_box">
+      <layout class="arrange_horizontal_attachment" layout="-1,550,-1" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="vertical " apply_to_children="true" inset="0" />	
+		
+		<!-- Home Expected Tactic -->
+		 <container class="team_report_scout_report_panel" id="trsr" file="team/team report scout report overview2">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<record id="object_property">
+				<integer id="get_property" value="home" />
+				<integer id="set_property" value="objt" />
+			 </record>
+		</container>
+		
+		<!-- Formation-->
+		<container >
+            <layout class="arrange_horizontal_attachment" alignment="top,extend" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />	
+		
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				
+				<widget class="picture" id="shbg" scale_picture="true" keep_aspect_ratio="true" file="boxes/custom/match/team sheet/paper">
+				</widget>
+
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_layout="-1,-20,-1" />
+
+					<container />
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_layout="5,60,-2,-12" vertical_gap="0" />
+
+						    <container />
+
+					<!-- Logos, stadium, detials -->
+					<container height="60">
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-1,-2,-1" horizontal_gap="2" />
+
+						<container id="tsHL" height="60" class="main_box" appearance="boxes/custom/match/team sheet/home team layer/paper">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+							
+							<widget class="object_portrait_picture" id="htpc" scale_picture="true" image_alignment="centre" />
+
+						</container>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_gap="0" />
+							
+							<record id="default_properties">
+								<var id="colour" name="sheet_text_colour" />
+							</record>
+
+							<widget class="text" height="20" font="title" colour="black" alignment="centre, centre_y,auto_fit" size="xlarge" id="otst">
+								<translation id="text" translation_id="515081" type="use" value="Official Team Sheet[COMMENT: AREA: Match; SUB-AREA: Pre match flow; FR: 30889; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title for pre match flow screen that shows the Teams sheets]" />
+							</widget>
+
+							<container height="34">
+								<attachment_group class="horizontal_arrange" horizontal_offset="0" horizontal_alignment="middle,fill"/>
+
+								<container/>
+								<container >
+									<attachment_group class="horizontal_arrange_autosize" horizontal_offset="0"/>
+
+									<container width="34">
+										<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+										<widget class="picture" scale_picture="true" id="coBG" image_alignment="centre" keep_aspect_ratio="true"  file="icons/26px/circle"/>
+
+										<widget class="object_portrait_picture" scale_picture="true" image_alignment="centre" keep_aspect_ratio="true" clickable="false" navigation_focus_target="false">
+											<record id="object_property" get_property="fxCo" set_property="valu" />
+											<layout class="stick_to_sides_attachment" alignment="all" inset="7"/>
+										</widget>
+									</container>
+
+									<!-- Comp logo -->
+									<widget class="comp_button" auto_size="horizontal" text_colour="black" icon_enabled="false" alignment="centre" disable_link="true" navigation_focus_target="false">
+										<record id="object_property" get_property="fxCo" set_property="valu" />
+									</widget>
+
+								</container>
+								<container/>
+							</container>			
+						</container>
+
+						<container id="tsAL" height="60" class="main_box" appearance="boxes/custom/match/team sheet/away team layer/paper">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+							<widget class="object_portrait_picture" id="atpc" scale_picture="true" image_alignment="centre" />
+
+						</container>
+					</container>
+
+					<!-- Clubs and maanger -->
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-6,-2,-6" vertical_inset="0"/>
+
+						<record id="default_properties">
+							<var id="colour" name="sheet_text_colour" />
+						</record>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize"  vertical_offset="0" vertical_gap="0"/>
+
+							<widget class="client_object_label" id="htlb" font="title" size="xlarge"  style="bold" alignment="right" disable_link="true" auto_size="vertical">
+								<var id="colour" name="sheet_text_colour" />
+							</widget>
+
+							<container class="client_object_viewer_xml_panel" id="homm">
+
+								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" />
+
+								<widget class="person_button" alignment="right" disable_link="true" navigation_focus_target="false" auto_size="vertical">
+									<var id="colour" name="sheet_text_colour" />
+									<translation id="format" translation_id="515083" type="use" value="Manager: [%person#1-bold_surname][COMMENT: AREA: Match; SUB-AREA: Pre match flow; FR: 30889; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: bold_surname is a tag that prints the person's first name and surname, but puts the latter into bold text for presentation]" />
+									<translation id="alternate_format" translation_id="515084" type="use" value="Manager: [%person#1-initial_bold_surname][COMMENT: AREA: Match; SUB-AREA: Pre match flow; FR: 30889; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: bold_surname is a tag that prints the person's first name and surname, but puts the latter into bold text for presentation, this one changes the first name to an initial, like F.Lampard]" />
+
+									<record id="object_property" get_property="TMnR" set_property="valu" />
+								</widget>
+
+							</container>
+						</container>
+
+						<widget class="text" alignment="centre" style="bold" size="18" auto_size="vertical">
+							<translation id="text" translation_id="242324" type="use" value="v[versus]" />
+						</widget>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0"/>
+
+							<record id="default_properties">
+								<var id="colour" name="sheet_text_colour" />
+							</record>
+
+							<widget class="client_object_label" id="atlb" font="title" size="xlarge"  style="bold" alignment="left" disable_link="true" auto_size="vertical"/>
+
+							<container class="client_object_viewer_xml_panel" id="awam">
+
+								<attachment_group class="vertical_arrange_autosize" vertical_offset="0"/>
+
+								<widget class="person_button" alignment="left" disable_link="true" navigation_focus_target="false" auto_size="vertical">
+									<var id="colour" name="sheet_text_colour" />
+									<translation id="format" translation_id="515083" type="use" value="Manager: [%person#1-bold_surname][COMMENT: AREA: Match; SUB-AREA: Pre match flow; FR: 30889; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: bold_surname is a tag that prints the person's first name and surname, but puts the latter into bold text for presentation]" />
+									<translation id="alternate_format" translation_id="515084" type="use" value="Manager: [%person#1-initial_bold_surname][COMMENT: AREA: Match; SUB-AREA: Pre match flow; FR: 30889; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: bold_surname is a tag that prints the person's first name and surname, but puts the latter into bold text for presentation, this one changes the first name to an initial, like F.Lampard]" />
+									<record id="object_property" get_property="TMnR" set_property="valu" />
+								</widget>
+
+							</container>
+						</container>
+					</container>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="10" vertical_offset="0" horizontal_inset="0"/>
+
+						<container>
+							<attachment_group class="vertical_arrange" vertical_layout="-1,25,-1"/>
+
+							<!-- Starting XI -->
+							<container>
+								<attachment_group class="horizontal_arrange" horizontal_alignment="fill" vertical_inset="0" horizontal_offset="0" horizontal_gap="20" />
+
+								<container class="match_team_squad_panel" id="ht1t" file="" include_starting_xi="false" include_starting_subs="false" include_current_subs="false" auto_size="vertical" should_add_bullets="false" sast="true">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+									<list id="properties_to_forward">
+										<record get_property="viws" target="pltb" />
+										<record get_property="rhNS" target="pltb" />
+									</list>
+
+									<var id="viws" name="home_views" />
+
+									<var id="pltb" name="players_table"/>
+
+								</container>
+
+								<container class="match_team_squad_panel" id="at1t" file="" include_starting_xi="false" include_starting_subs="false" include_current_subs="false" auto_size="vertical" should_add_bullets="false" sast="true">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+									<list id="properties_to_forward">
+										<record get_property="viws" target="pltb" />
+										<record get_property="rhNS" target="pltb" />
+									</list>
+
+									<var id="viws" name="away_views" />
+
+									<var id="pltb" name="players_table"/>
+
+								</container>
+							</container>
+
+							<container>
+								<attachment_group class="horizontal_arrange_vertical_centre" horizontal_layout="-1,-1,-1,-1,-1" horizontal_gap="0" horizontal_offset="10"/>
+
+								<widget class="spacer"/>
+
+								<widget class="horizontal_divider" red_replacement="black"/>
+
+								<!-- Subs title -->
+								<widget class="text" alignment="centre" font="label" size="medium" height="25">
+									<translation id="text" translation_id="318313" type="use" value="Substitutes[COMMENT: subs bench panel; subsection box which will list any designated substitutes]" />
+									<var id="colour" name="sheet_text_colour" />
+								</widget>
+
+								<widget class="horizontal_divider" red_replacement="black"/>
+
+								<widget class="spacer"/>
+
+							</container>
+
+							<!-- Subs -->
+							<container>
+								<attachment_group class="horizontal_arrange" horizontal_alignment="fill" vertical_inset="0" horizontal_offset="0" horizontal_gap="20" />
+
+								<container class="match_team_squad_panel" id="htst" file="" include_current_xi="false" include_starting_xi="false" include_starting_subs="false" should_add_bullets="false">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+									<list id="properties_to_forward">
+										<record get_property="viws" target="pltb" />
+										<record get_property="rhNS" target="pltb" />
+									</list>
+
+									<var id="viws" name="home_views" />
+
+									<var id="pltb" name="players_table"/>
+
+								</container>
+
+								<container class="match_team_squad_panel" id="atst" file="" include_current_xi="false" include_starting_xi="false" include_starting_subs="false" should_add_bullets="false" sast="true">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+									<list id="properties_to_forward">
+										<record get_property="viws" target="pltb" />
+										<record get_property="rhNS" target="pltb" />
+									</list>
+
+									<var id="viws" name="away_views" />
+
+									<var id="pltb" name="players_table"/>
+
+								</container>
+
+							</container>
+
+						</container>
+
+						<!-- Ref -->
+						<widget class="person_button" alignment="centre" disable_link="true" navigation_focus_target="false" auto_size="vertical">
+							<var id="colour" name="sheet_text_colour" />
+							<translation id="format" translation_id="515085" type="use" value="Referee: [%person#1-bold_surname][COMMENT: AREA: Match; SUB-AREA: Pre match flow; FR: 30889; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: bold_surname is a tag that prints the person's first name and surname, but puts the latter into bold text for presentation]" />
+							<record id="object_property" get_property="FRef" set_property="valu" />
+						</widget>
+					</container>
+				   </container>
+			      <container />
+		     	 </container>
+		        </container>
+              </container>
+
+		<container class="team_report_scout_report_panel" id="trs1" file="team/team report scout report overview2">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<record id="object_property">
+				<integer id="get_property" value="away" />
+				<integer id="set_property" value="objt" />
+			 </record>
+		</container>
+     </container>
+
+	<container class="main_transparent_box" default_height="-1" minimum_height="400" priority="1">
+	    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" /> 	
+	
+	  <!-- tabbed -->	  
+		<container class="tabbed_container" id="tpp1" default_item="adad" offset="0" inset="0" gap="0" save_session_state="true" save_default_state="true" default_height="-1" minimum_height="270" priority="2">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+				
+			<container id="adad">
+				<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				 	<translation id="title" translation_id="247694" type="use" value="팀내 선수 기록" />
+				
+			<container class="titled_box">
+				<translation id="title" translation_id="453188" type="use" value="홈팀 선수 기록" />
+				<layout class="arrange_vertical_attachment" layout="-1" offset="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />				
+				<!-- home player stats -->
+				<widget class="team_report_summary_panel" id="res1" file="team/team report summary panel3" default_width="-1" priority="1">				
+					<record id="object_property" get_property="home" set_property="objt"/>
+				</widget>
+			</container>
+		
+			<container class="titled_box">
+				<translation id="title" translation_id="453189" type="use" value="원정팀 선수 기록" />	
+			   	<layout class="arrange_vertical_attachment" layout="-1" offset="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />	
+				<!-- away player stats -->
+				<widget class="team_report_summary_panel" id="res2" file="team/team report summary panel3" default_width="-1" priority="1">
+					<record id="object_property" get_property="away" set_property="objt"/>
+				</widget>
+			</container>
+           </container>
+
+		<widget class="competition_stage_panel" id="leag" file="competition/competition overview stage">
+		  <translation id="title" translation_id="242904" type="use" value="리그 순위" />
+          <record id="object_property">
+            <list id="get_properties">
+              <record>
+                <integer id="get_property" value="cssi" />
+                <integer id="set_property" value="cssi" />
+                <boolean id="dont_set_object" value="true" />
+              </record>
+              <record>
+                <integer id="get_property" value="cmsi" />
+                <integer id="set_property" value="cmsi" />
+                <boolean id="dont_set_object" value="true" />
+              </record>
+              <record>
+                <integer id="get_property" value="comp" />
+                <integer id="set_property" value="objt" />
+              </record>
+            </list>
+          </record>
+        </widget>
+		
+		<widget class="competition_fixtures_panel" id="fixt" file="competition/competition fixtures match preview" svsl="false">
+		  <translation id="title" translation_id="324243" type="use" value="오늘의 경기 일정" />
+          <record id="object_property">
+            <list id="get_properties">
+              <record>
+                <integer id="get_property" value="cssi" />
+                <integer id="set_property" value="cssi" />
+                <boolean id="dont_set_object" value="true" />
+              </record>
+              <record>
+                <integer id="get_property" value="cmsi" />
+                <integer id="set_property" value="cmsi" />
+                <boolean id="dont_set_object" value="true" />
+              </record>
+              <record>
+                <integer id="get_property" value="comp" />
+                <integer id="set_property" value="objt" />
+              </record>
+            </list>
+          </record>
+        </widget> 
+
+		</container>
+     </container>
+   </container>
+ </container>
+</panel>

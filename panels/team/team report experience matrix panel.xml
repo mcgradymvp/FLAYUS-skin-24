@@ -1,0 +1,178 @@
+﻿<panel>
+	<boolean id="save_session_state" value="true" />
+	<boolean id="should_force_refresh" value="true" />
+
+	<!--These apply to the player widgets and the key-->
+	<string id="important_colour" value="bg purple darker" />
+	<string id="squad_depth_colour" value="blue 700" />
+	<string id="youth_colour" value="teal 500" />
+	<integer id="transparency" value="0.7" />
+
+	<attachment_group class="vertical_arrange" vertical_alignment="middle, extend" vertical_offset="0" vertical_inset="0" vertical_gap="6" />
+
+	<container class="main_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_inset="0" vertical_gap="0" />
+
+		<!--Top Buttons-->
+		<container height="40" id="heDR">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left, extend" horizontal_offset="0" vertical_inset="0" />
+
+			<!--Left Side-->
+			<container>
+				<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="left, extend" horizontal_offset="0" vertical_inset="0" />
+
+				<widget class="label" id="ttlw" font="title" colour="text" auto_size="horizontal">
+					<translation id="text" translation_id="553532" type="use" value="Experience Matrix[COMMENT: AREA: Squad; SUB-AREA: Experience Matrix; FR: FM-4065, NOTE: Experience matrix section title]" />
+				</widget>
+
+				<widget class="radio_button" click_event="SQVS" group="0" selected="true" show_button_appearance="true" alignment="centre" auto_size="all" appearance="switches/toggle/normal/button" icon_enabled="false" secondary_icon_enabled="true" secondary_icon="icons/16px/shirt" secondary_icon_alignment="left">
+					<translation id="text" translation_id="553533" type="use" value="Squad View[COMMENT: AREA: Squad; SUB-AREA: Experience Matrix; FR: FM-4065, NOTE: Experience matrix squad view title]" />
+				</widget>
+
+				<widget class="radio_button" id="PVrb" click_event="PSVS" group="0" show_button_appearance="true" alignment="centre" auto_size="all" appearance="switches/toggle/normal/button" icon_enabled="false" secondary_icon_enabled="true" secondary_icon="icons/16px/man" secondary_icon_alignment="left">
+					<translation id="text" translation_id="553534" type="use" value="Position View[COMMENT: AREA: Squad; SUB-AREA: Experience Matrix; FR: FM-4065, NOTE: Experience matrix position view title]" />
+				</widget>
+
+				<container id="psVO">
+					<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="left" horizontal_offset="0" vertical_inset="6" />
+
+					<widget class="vertical_divider" />
+
+					<widget class="subtle_popup_button" auto_size="horizontal" id="psPB" select_event="PSSL" auto_tick_exclusive="true" fixed="false" colour="text" />
+				</container>
+			</container>
+		</container>
+
+		<!--Positions View Text-->
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" horizontal_offset="0" vertical_inset="0" />
+
+			<widget class="label" id="PSVT" font="title" size="xlarge" auto_size="horizontal" alignment="centre_x, centre_y" />
+		</container>
+
+	</container>
+
+	<!--Main Content-->
+	<container class="main_box" id="trg1" draw_vertical_dividers="true">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+		<!--Development-->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0" vertical_inset="0" vertical_gap="6" />
+
+			<!--Development Header-->
+			<container height="30">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="6" vertical_offset="0" />
+
+				<widget class="picture" height="28" width="28" file="icons/26px/development player" scale_picture="true" image_alignment="centre" red_replacement="text">
+					<translation id="hint" translation_id="561233" type="use" value="Young, physically developing players who are starting out on their pathway in the first team squad that have yet to appear much in the starting lineup.[COMMENT: AREA: Squad; SUB-AREA: Experience Matrix; FR: FM-11428, NOTE: Experience matrix development title tooltip]" />
+				</widget>
+
+				<widget class="label" font="title" colour="text" size="large" auto_size="horizontal" alignment="left,centre_y">
+					<translation id="text" translation_id="553535" type="use" value="Development[COMMENT: AREA: Squad; SUB-AREA: Experience Matrix; FR: FM-4065, NOTE: title to describe players in the early development period of their careers]" />
+					<translation id="hint" translation_id="561233" type="use" value="Young, physically developing players who are starting out on their pathway in the first team squad that have yet to appear much in the starting lineup.[COMMENT: AREA: Squad; SUB-AREA: Experience Matrix; FR: FM-11428, NOTE: Experience matrix development title tooltip]" />
+				</widget>
+
+			</container>
+
+			<!--Development Players-->
+			<container class="scrolling_box">
+				<container id="devB">
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_inset="0" vertical_gap="6" horizontal_inset="6" />
+					<!--Players added here in code-->
+				</container>
+			</container>
+
+		</container>
+
+		<!--Breakthrough-->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0" vertical_inset="0" vertical_gap="6" />
+
+			<!--Breakthrough Header-->
+			<container height="30">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="6" vertical_offset="0" />
+
+				<widget class="picture" height="28" width="28" file="icons/26px/breakthrough" scale_picture="true" image_alignment="centre" red_replacement="text">
+					<translation id="hint" translation_id="561234" type="use" value="Younger players coming towards their peak years who have made a good number of meaningful first team appearances as part of their pathway to more regular gametime, and can still improve both their ability and physical attributes.[COMMENT: AREA: Squad; SUB-AREA: Experience Matrix; FR: FM-11428, NOTE: Experience matrix breakthrough title tooltip]" />
+				</widget>
+
+				<widget class="label" font="title" colour="text" size="large" auto_size="horizontal" alignment="left,centre_y">
+					<translation id="text" translation_id="553536" type="use" value="Emerging[COMMENT: AREA: Squad; SUB-AREA: Experience Matrix; FR: FM-4065, NOTE: title to describe players in an emerging or breakthrough period of their careers]" />
+					<translation id="hint" translation_id="561234" type="use" value="Younger players coming towards their peak years who have made a good number of meaningful first team appearances as part of their pathway to more regular gametime, and can still improve both their ability and physical attributes.[COMMENT: AREA: Squad; SUB-AREA: Experience Matrix; FR: FM-11428, NOTE: Experience matrix breakthrough title tooltip]" />
+				</widget>
+
+			</container>
+
+			<!--Breakthrough Players-->
+			<container class="scrolling_box">
+				<container id="breB">
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_inset="0" vertical_gap="6" horizontal_inset="6" />
+					<!--Players added here in code-->
+				</container>
+			</container>
+
+		</container>
+
+		<!--Peak-->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0" vertical_inset="0" vertical_gap="6" />
+
+			<!--Peak Header-->
+			<container height="30">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="6" vertical_offset="0" />
+
+				<widget class="picture" height="28" width="28" file="icons/26px/peak" scale_picture="true" image_alignment="centre" red_replacement="text">
+					<translation id="hint" translation_id="561235" type="use" value="Players who are in the peak years of their career in terms of physical development, gametime, and ability.[COMMENT: AREA: Squad; SUB-AREA: Experience Matrix; FR: FM-11428, NOTE: Experience matrix peak title tooltip]" />
+				</widget>
+
+				<widget class="label" font="title" colour="text" size="large" auto_size="horizontal" alignment="left,centre_y">
+					<translation id="text" translation_id="553537" type="use" value="Peak[COMMENT: AREA: Squad; SUB-AREA: Experience Matrix; FR: FM-4065, NOTE: title to describe players in the peak of their careers]" />
+					<translation id="hint" translation_id="561235" type="use" value="Players who are in the peak years of their career in terms of physical development, gametime, and ability.[COMMENT: AREA: Squad; SUB-AREA: Experience Matrix; FR: FM-11428, NOTE: Experience matrix peak title tooltip]" />
+				</widget>
+
+				<!--Peak Players-->
+			</container>
+			<container class="scrolling_box">
+				<container id="peaB">
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_inset="0" vertical_gap="6" horizontal_inset="6" />
+					<!--Players added here in code-->
+				</container>
+			</container>
+
+		</container>
+
+		<!--Twilight-->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0" vertical_inset="0" vertical_gap="6" />
+
+			<!--Twilight Header-->
+			<container height="30">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="6" vertical_offset="0" />
+
+				<widget class="picture" height="28" width="28" file="icons/26px/twilight" scale_picture="true" image_alignment="centre" red_replacement="text">
+					<translation id="hint" translation_id="561236" type="use" value="Players in the final few years of their career whose physical peak is behind them, but who are still able to use their vast experience on and off the pitch to help their younger teammates.[COMMENT: AREA: Squad; SUB-AREA: Experience Matrix; FR: FM-11428, NOTE: Experience matrix twilight title tooltip]" />
+				</widget>
+
+				<widget class="label" font="title" colour="text" size="large" auto_size="horizontal" alignment="left,centre_y">
+					<translation id="text" translation_id="553538" type="use" value="Experienced[COMMENT: AREA: Squad; SUB-AREA: Experience Matrix; FR: FM-4065, NOTE: title to describe players in their prime and twilight period of their careers]" />
+					<translation id="hint" translation_id="561236" type="use" value="Players in the final few years of their career whose physical peak is behind them, but who are still able to use their vast experience on and off the pitch to help their younger teammates.[COMMENT: AREA: Squad; SUB-AREA: Experience Matrix; FR: FM-11428, NOTE: Experience matrix twilight title tooltip]" />
+				</widget>
+
+			</container>
+
+			<!--Twilight Players-->
+			<container class="scrolling_box">
+				<container id="twiB">
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_inset="0" vertical_gap="6" horizontal_inset="6" />
+					<!--Players added here in code-->
+				</container>
+			</container>
+
+		</container>
+
+	</container>
+
+	<!--Footer/Key-->
+	<container class="bordered_box" id="mKey" file="team/team report experience matrix key" />
+</panel>

@@ -1,0 +1,73 @@
+﻿<panel wants_mouse_events="true" disable_animations="true">
+	<translation id="title" translation_id="247728" type="use" value="Team Instructions" />
+
+	<colour id="selected_colour" name="selected instruction" />
+	<colour id="unselected_colour" name="black" />
+	<colour id="conflicting_colour" name="conflicting instruction" />
+	<colour id="preselected_colour" name="preselected instruction" />
+	<colour id="unavailable_colour" name="conflicting with role instruction" />
+
+	<!--these are the icons overlaid on the team instructions pitch for in transition-->
+	<string id="TIDC" value="icons/custom/tactics/transition/counterpress" />
+	<string id="TIDR" value="icons/custom/tactics/transition/regroup" />
+	<string id="TIAC" value="icons/custom/tactics/transition/counter" />
+	<string id="TIAH" value="icons/custom/tactics/transition/hold shape" />
+
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_contrast_box">
+   	   <string id="red_replacement" value="style_background"/>
+	   <layout class="arrange_vertical_attachment" alignment="bottom,extend" />
+	   <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!--selected items area-->
+	<container class="main_contrast_box" id="tbls">
+	<string id="red_replacement" value="style_background"/>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<container class="main_contrast_box" red_replacement="blue grey 900">
+			<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<!--in possession-->
+			<container id="poSE" hidden="true">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<container file="tactics/tactics team strategies in possession"/>
+
+			</container>
+
+			<!--transition-->
+			<container id="trSE" hidden="true">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<container file="tactics/tactics team strategies transition"/>
+			</container>
+
+			<!--out of possession-->
+			<container id="opSE" hidden="true">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<container file="tactics/tactics team strategies out of possession"/>
+
+			</container>
+		</container>
+		</container>
+		<!--buttons-->
+		<container>
+			<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="5" />
+			<layout class="arrange_horizontal_attachment" alignment="middle" offset="6" gap="12" />
+
+			<widget class="icon_button" id="sele" auto_size="all" icon="icons/16px/circle" show_button_appearance="false" always_use_appearance_font="true" colour="white">
+				<translation id="text" translation_id="344778" type="use" value="Selected[COMMENT: label text for a key showing what colour a selected item is]" />
+			</widget>
+			<widget class="icon_button" id="unav" auto_size="all" icon="icons/16px/circle" show_button_appearance="false" always_use_appearance_font="true" colour="white">
+				<translation id="text" translation_id="247303" type="use" value="Unavailable" />
+			</widget>
+		</container>
+	</container>
+
+</panel>

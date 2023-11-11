@@ -1,0 +1,14 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0"/>
+
+	<container class="scrolling_box" auto_size="vertical" auto_size_maximum_height="140">
+		<widget class="inbox_body_text" id="bdtx" colour="inbox_text"/>
+	</container>
+
+	<container class="inner_subtle_box" appearance="boxes/custom/inbox attachment/personal/paper">
+		<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0"/>
+
+		<widget class="transfer_offer_panel" id="roob" file="player/transfer offer inbox read only panel" is_in_inbox="true" is_inbox_read_only="true"/>
+		<widget class="transfer_offer_panel" id="ofbx" file="player/transfer offer inbox panel" is_in_inbox="true" is_inbox_read_only="false"/>
+	</container>
+</panel>

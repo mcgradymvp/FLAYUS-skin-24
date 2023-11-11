@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<panel>
+  <widget class="percentage_pie_chart" id="piec" max_value="100" is_donut_chart="true" donut_line_width="8">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+  </widget>
+
+  <widget class="condition_label" alignment="centre" id="CDLB">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+  </widget>
+  </panel>

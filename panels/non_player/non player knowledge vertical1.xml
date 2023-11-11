@@ -1,0 +1,25 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container>
+		<layout class="arrange_vertical_attachment" layout="-2,-1" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<container class="team_scouting_knowledge_map" id="npMp">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+		</container>
+
+		<widget class="table" mode="fill_rows, stripe_rows" id="tabl" layout="-1, -1" auto_size_rows="false" row_height="30" save_session_state="true" save_default_state="true">
+			<list id="column_widget_properties">
+				<record indx="0" alignment="left,centre_y" use_mainland_china_override="true"/>
+			</list>
+
+			<list id="column_table_properties">
+				<record indx="0" left="4" sort_disabled="true"/>
+				<record indx="1" top="6" bottom="6" right="4" sort_disabled="true"/>
+			</list>
+		</widget>
+
+	</container>
+
+</panel>

@@ -1,0 +1,35 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <container class="main_contrast_box" red_replacement="blue grey 900" >
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="4" gap="2" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+    <container>
+      <attachment_group class="vertical_arrange_autosize" vertical_gap="0" vertical_alignment="top" vertical_offset="2"/>
+
+      <widget class="text" alignment="centre" auto_size="vertical" font="label" colour="faded white" size="large">
+        <translation id="text" type="use" translation_id="230321" value="Subs:" />
+      </widget>
+      <widget class="text" id="maxs" alignment="centre" height="20" auto_size="vertical"/>
+
+    </container>
+
+    <widget class="subs_bench_icon_panel" id="subs" iche="80" ichx="80"/>
+
+  </container>
+    <!-- close button -->
+  <container>
+    <widget class="icon_button" icon="icons/16px/close" red_replacement="white" icon_alignment="centre" width="40" height="25">
+      <event id="click_event" event_id="kev3"/>
+      <attachment class="event_relay_attachment" event_id="kev3">
+        <record id="action_event">
+          <flags id="event_id" value="hide"/>
+          <flags id="event_target" value="esub"/>
+        </record>
+      </attachment>
+      <layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+      <layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+    </widget>
+  </container>
+</panel>

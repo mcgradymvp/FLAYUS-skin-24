@@ -1,0 +1,78 @@
+﻿<panel version="1.0">
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container id="emTC" wants_mouse_events="false">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="30,20,0,20" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="5" />
+
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+			<widget class="text" alignment="centre_x,bottom" colour="disabled">
+				<layout class="stick_to_sides_attachment" alignment="horizontal"  inset="0" />
+				<translation id="text" translation_id="233092" type="use" value="Drag and drop a player onto the list[COMMENT: tactics screen: how to add player to list]" />
+			</widget>
+
+			<container/>
+		</container>
+
+	</container>
+	
+	<!--  group box holding instruction table for layout purposes  -->
+	<widget class="table" id="sptt" mode="fill_custom_rows, drag_rows, drop_on_rows, insert_on_drop" layout="45, -1, 45" sort_disabled="true" auto_size_rows="false" fixed_size_rows="true" row_height="32" row_spacing="4" drag_drop_handler_column="Pers">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<record id="defp">
+			<flags id="alignment" value="left,centre_y" />
+			<flags id="spec" value="text" />
+			<flags id="appearance" value="labels/custom/draggable/label"/>
+		</record>
+
+
+		<list id="column_widget_properties">
+			<record index="0">
+				<boolean id="sort_ascending" value="false" />
+				<flags id="alignment" value="centre" />
+			</record>
+			<record index="1" id="Pers">
+				<boolean id="sort_ascending" value="false" />
+				<flags id="alignment" value="left,centre_y" />
+			</record>
+			<record index="2">
+				<boolean id="sort_ascending" value="false" />
+			</record>
+		</list>
+
+		<list id="column_table_properties">
+			<record index="0" right="2" >
+				<boolean id="sort_disabled" value="true" />
+			</record>
+			<record index="1" right="2">
+				<boolean id="sort_disabled" value="true" />
+			</record>
+			<record index="2">
+				<boolean id="sort_disabled" value="true" />
+			</record>
+		</list>
+
+	</widget>
+
+	<container id="qPCn" wants_mouse_events="false">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="30,20,0,20" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+			<container/>
+
+			<widget class="icon_button" auto_size="all" click_event="qPSp" controller_button="y_button">
+				<layout class="centre_in_parent_attachment" alignment="horizontal"/>
+				<translation id="text" translation_id="344655" type="use" value="Quick Pick[COMMENT - team screen team selection, contains the former Ask To Pick menu but also acts as a standalone button which picks the team, renamed for accuracy]" />
+			</widget>
+		</container>
+
+	</container>
+</panel>

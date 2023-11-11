@@ -1,0 +1,179 @@
+<panel>
+    <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0"/>
+
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <widget class="text" id="agnL" font="text" auto_size="vertical" />
+
+    <!-- Main panel and sidebar -->
+    <container id="tstE" draw_vertical_dividers="true" navigation_container="true">
+        <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0"/>
+
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+     <!-- Top panel with detailed contract info -->
+        <container>
+            <layout class="arrange_vertical_attachment" layout="100,-1" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+    
+    
+    <container id="cntI" class="main_box" height="100"  navigation_container="true" default_focus="true">
+        <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="4" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+        <container class="vertical_arrange_container" id="dveb" inset="0" offset="2" gap="" alignment="fill">
+
+                <!-- Player ownership / co-ownership and loaned status -->
+                <container class="vertical_arrange_container" inset="0" offset="2" gap="2">
+                    <widget class="label" id="ownL" font="label" auto_size="vertical" />
+                    <widget class="club_button" id="ownT" font="value" auto_size="vertical" size="small" multiline="true" />
+                    <container height="4" />
+                    <widget class="text" id="bosT" auto_size="vertical" colour="accent" font="title" size="small" multiline="true" hidden="true" />
+                    <widget class="text" id="loaT" auto_size="vertical" colour="accent" font="title" size="small" multiline="true" hidden="true" />
+                </container>
+
+            <!-- Contract info for all leagues (incl. Contracted to, Value, Asking Price, Transfer status, Loan status) -->
+            <container class="horizontal_arrange_container" layout="-1,-2, -1, -1" inset="0" offset="0" gap="0">
+
+                <!-- Player value -->
+                <container class="vertical_arrange_container" inset="0" offset="2" gap="2">
+                    <widget class="label" font="label" auto_size="vertical">
+                        <translation id="text" translation_id="227806" type="use" value="Value" />
+                    </widget>
+                    <widget class="text" id="valT" font="value" auto_size="vertical" size="small" multiline="true" />
+                </container>
+
+                <!-- Asking Price -->
+                <container class="vertical_arrange_container" inset="0" offset="2" gap="2">
+                    <widget class="label" font="label" auto_size="vertical">
+                        <translation id="text" translation_id="227778" type="use" value="Asking Price" />
+                    </widget>
+                    <widget class="text" id="aspV" font="value" auto_size="vertical" size="small" multiline="true" />
+                </container>
+
+                <!-- Transfer Status -->
+                <container class="vertical_arrange_container" layout="15,20" inset="0" offset="2" gap="2">
+                    <widget class="label" font="label" auto_size="vertical">
+                        <translation id="text" translation_id="227953" type="use" value="Transfer Status" />
+                    </widget>
+
+                    <container class="horizontal_arrange_container" alignment="left, extend" inset="0" offset="0" gap="2">
+                        <widget class="info_icon_hint_text" id="TStR" height="20" width="20" hidden="true" />
+                        <widget class="transfer_status_label" id="TSta" font="value" auto_size="vertical" size="small" />
+                    </container>
+                </container>
+
+                <!-- Loan Status -->
+                <container class="vertical_arrange_container" id="lssT" layout="15,20" inset="0" offset="2" gap="2">
+                    <widget class="label" font="label" auto_size="vertical">
+                        <translation id="text" translation_id="247489" type="use" value="Loan Status" />
+                    </widget>
+
+                    <container class="horizontal_arrange_container" alignment="left, extend" inset="0" offset="0" gap="2">
+                        <widget class="info_icon_hint_text" id="LStR" height="20" width="20" hidden="true" />
+                        <widget class="loan_status_label" id="LSta" font="value" auto_size="vertical" size="small" multiline="true" alignment="left, centre_y" />
+                    </container>
+                </container>
+            </container>
+
+            <!-- MLS info - Team rights owned by & Team drafted by -->
+            <container id="mlsI" class="horizontal_arrange_container" layout="220,-5" inset="0" offset="0" gap="10" hidden="true">
+                <!-- Player rights (MLS) -->
+                <container class="vertical_arrange_container" inset="0" offset="2" gap="2">
+                    <widget class="label" id="rigL" font="label" auto_size="vertical" />
+                    <widget class="club_button" id="rigT" font="value" auto_size="vertical" size="small" multiline="true" />
+                </container>
+
+                <!--Drafted by (MLS)-->
+                <container class="vertical_arrange_container" inset="0" offset="2" gap="2">
+                    <widget class="label" id="drfL" font="label" auto_size="vertical" />
+                    <widget class="club_button" id="drfT" font="value" auto_size="vertical" size="small" multiline="true" />
+                </container>
+            </container>
+        </container>
+    </container>
+
+            <container class="main_box">
+                <translation id="title" translation_id="510402" type="use" value="Interested Clubs[COMMENT: AREA: Player Transfer Information panel; FR-BN: 32754; NOTE: Interested clubs subpanel title]" />
+                <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+                <container class="player_transfer_interest_panel" id="Pint" />
+            </container>
+        </container>
+
+        <!-- Widgets if player is controlled by human (populated in code) -->
+        <container id="hmCI" hidden="true">
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+            <container class="main_box" id="info" hidden="true">
+                <translation id="title" translation_id="251898" type="use" value="Transfer Information[COMMENT: scout report panel box heading]" />
+
+                <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+            </container>
+
+        </container>
+
+        <!-- Player interest widgets, if player is not owned by human team -->
+        <container id="dclI">
+            <attachment_group class="vertical_arrange" horizontal_alignment="horizontal" horizontal_offset="0"/>
+
+            <container id="mnBX" class="main_box">
+                <translation id="title" translation_id="510403" type="use" value="Player's Interest[COMMENT: AREA: Player Transfer Information panel; FR-BN: 32754; NOTE: Player's interest subpanel title]" />
+                <attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal"/>
+
+                <container id="pinT">
+                    <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="10" />
+                    <layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="10" />
+                    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+                    <!--Player interest text summary-->
+                    <widget class="text" id="intT" auto_size="vertical" multiline="true">
+                        <layout class="stick_to_sides_attachment" id="s2sh" alignment="horizontal" />
+                    </widget>
+
+                    <!--Speak to agent button-->
+                    <widget class="client_action_icon_button" id="intB" auto_size="all">
+                        <layout class="stick_to_sides_attachment" alignment="left" />
+                        <translation id="text" translation_id="510405" type="use" value="Discuss Interest with Agent[COMMENT: AREA: Player Transfer Information panel; FR-BN: 32754; NOTE: Discuss interest button text]" />
+                        <string id="ignore_top_level_submenus" value="true"/>
+                        <string id="force_display_text" value="true"/>
+                        <string id="action_id" value="aPdA"/>
+                    </widget>
+                </container>
+
+                <container class="spacer" height="10">
+                </container>
+
+                <widget class="horizontal_divider"/>
+            
+            </container>
+
+            <widget class="player_pending_contract_discussion_panel" id="CoDi"/>
+
+                <!--Transfer action buttons-->
+                <container id="trnB">
+                    <attachment_group class="horizontal_arrange_autosize_all" horizontal_offset="0" horizontal_gap="0" />
+                    <layout class="stick_to_sides_attachment" alignment="bottom, right" inset="0" />
+
+                    <widget class="client_action_popup_button" id="asBT" auto_size="all">
+                        <string id="ignore_top_level_submenus" value="true" />
+                        <string id="force_display_text" value="true" />
+                        <string id="action_id" value="AtSo" />
+                    </widget>
+
+                    <widget class="client_action_popup_button" id="atBT" auto_size="all">
+                        <string id="ignore_top_level_submenus" value="true" />
+                        <string id="force_display_text" value="true" />
+                        <string id="action_id" value="ApTt" />
+                    </widget>
+
+                    <widget class="client_action_icon_button" id="ofBT" auto_size="all">
+                        <string id="ignore_top_level_submenus" value="true" />
+                        <string id="force_display_text" value="true" />
+                        <string id="action_id" value="offr" />
+                    </widget>
+                </container>
+        </container>
+
+    </container>
+</panel>

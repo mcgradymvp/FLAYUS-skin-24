@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	
+	 <!-- Linked header  -->
+    <container class="bordered_box" appearance="boxes/custom/dynamics/player widget social/name/paper" height="20" red_replacement="primary">
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+      
+      <widget class="text" section="Ppin" font="gzmain" colour="secondary" size="10" alignment="horizontal">
+         <translation id="text" translation_id="229993" type="use" value="Preferred Moves" />
+      </widget>
+    </container> 
+  
+    <!-- Spacer -->
+    <container height="2"/>  
+
+	<!-- preferred moves table -->
+	<widget class="table" id="pref" mode="fill_rows,drag_rows" layout="-1" auto_size_rows="true" fixed_size_rows="false" >
+		<list id="column_widget_properties">
+			<record index="0" alignment="centre_x,centre_y" spec="text" auto_size="vertical"/>
+		</list>
+
+    <list id="column_table_properties">
+      <record indx="0" left="0" top="0" sort_disabled="true"/>
+    </list>
+	</widget>
+  </container>
+</panel>

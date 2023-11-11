@@ -1,0 +1,57 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="collapsable_box" id="tstb" transparency="0.3" save_default_state="true" save_session_state="true" allow_single_bar_click="true" disable_animations="true">
+		<attachment_group class="horizontal_arrange_vertical_autosize" vertical_offset="0" horizontal_layout="-4, -5" horizontal_offset="4" />
+
+		<!-- buttons area -->
+		<container id="btna" embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" horizontal_offset="30" vertical_inset="4"/>
+
+			<!-- comp view menu -->
+			<widget class="embedded_popup_button" id="cmpS" fixed="false" auto_tick_exclusive="true" auto_size="horizontal" embed_in_frame="true" height="30">
+				<translation id="text" translation_id="227741" type="use" value="Competitions" />
+			</widget>
+		</container>
+
+		<container class="table" id="mist" mode="fill_rows, stripe_rows" auto_size_rows="true" fixed_size_rows="false" layout="32, 20, -1">
+			<flags id="auto_size" value="vertical" />
+
+			<list id="column_widget_properties">
+				<record index="0" id="icon" auto_size="all" />
+				<record index="1" id="tkcr" image_alignment="centre" />
+				<record index="2" id="rule" alignment="left,centre_y" spec="text" multiline="false" />
+			</list>
+
+			<list id="column_table_properties">
+				<record index="0" id="icon" alignment="left,centre_y" />
+				<record index="1" id="tkcr" />
+				<record index="2" id="rule" alignment="left,centre_y" />
+			</list>
+		</container>
+
+		<container class="table" id="tsit" mode="fill_rows, stripe_rows" auto_size_rows="true" fixed_size_rows="false" layout="32, 20, 75, 20, 15, -1, 20">
+			<flags id="auto_size" value="vertical" />
+
+			<list id="column_widget_properties">
+				<record index="0" id="icon" auto_size="all" />
+				<record index="1" id="tkcr" image_alignment="centre" />
+				<record index="2" id="prog" auto_size="all" />
+				<record index="3" id="valu" alignment="centre_y" spec="text" colour="selection" multiline="false" style="bold" />
+				<record index="4" id="divi" alignment="centre_y"/>
+				<record index="5" id="rule" alignment="left,centre_y" spec="text" multiline="true" auto_size="vertical" />
+				<record index="6" id="warn" />
+			</list>
+
+			<list id="column_table_properties">
+				<record index="0" id="icon" alignment="left,centre_y" />
+				<record index="1" id="tkcr" />
+				<record index="2" id="prog" />
+				<record index="3" id="valu" />
+				<record index="4" id="divi" />
+				<record index="5" id="rule" alignment="left,centre_y" />
+				<record index="6" id="warn" />
+			</list>
+		</container>
+	</container>
+</panel>

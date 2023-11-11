@@ -1,0 +1,112 @@
+<panel>
+	<boolean id="should_force_refresh" value="true" />
+
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!-- Finance overview -->
+	<widget class="table" id="fint" mode="fill_rows, stripe_rows, printable" layout="-3,-2" auto_size_rows="true" fixed_size_rows="false">
+		<list id="column_widget_properties">
+			<record index="0" alignment="left,centre_y" />
+			<record index="1" alignment="right,centre_y" colour="selection" />
+		</list>
+		<list id="column_table_properties">
+			<record index="0" left="4" sort_disabled="true" />
+			<record index="1" right="4" />
+		</list>
+		<!-- Finance overview -->
+		<widget class="label" row="0" column="0">
+			<translation id="text" translation_id="242369" type="use" value="Balance[COMMENT - money]" />
+		</widget>
+		<widget class="label" row="1" column="0">
+			<translation id="text" translation_id="316564" type="use" value="Current Season Profit/(Loss)" />
+		</widget>
+		<widget class="label" row="2" column="0">
+			<translation id="text" translation_id="247220" type="use" value="Season Budget" />
+		</widget>
+		<widget class="label" row="3" column="0">
+			<translation id="text" translation_id="247221" type="use" value="Remaining Budget" />
+		</widget>
+
+		<widget class="cash_cell" id="bala" row="0" column="1" cusv="true">
+			<translation id="text" translation_id="233089" type="use" value="-" />
+		</widget>
+		<widget class="cash_cell" id="prof" row="1" column="1" cusv="true">
+			<translation id="text" translation_id="233089" type="use" value="-" />
+		</widget>
+		<widget class="cash_cell" id="sebu" row="2" column="1" format="[%cash#1-transferbudget]">
+			<translation id="text" translation_id="233089" type="use" value="-" />
+		</widget>
+		<widget class="cash_cell" id="rebu" row="3" column="1" format="[%cash#1-transferbudget]">
+			<translation id="text" translation_id="233089" type="use" value="-" />
+		</widget>
+
+		<widget class="label" row="4" column="0">
+			<translation id="text" translation_id="247222" type="use" value="Wage Budget[COMMENT: home_page; salary panel text]" />
+		</widget>
+		<widget class="label" row="5" column="0">
+			<translation id="text" translation_id="247223" type="use" value="Current Wage[COMMENT: home_page; salary panel text]" />
+		</widget>
+		<widget class="label" row="6" column="0">
+			<translation id="text" translation_id="247224" type="use" value="Difference[COMMENT: home_page; salary panel text]" />
+		</widget>
+		<widget class="label" row="7" column="0">
+			<translation id="text" translation_id="247225" type="use" value="Average Wage[COMMENT: home_page; salary panel text]" />
+		</widget>
+
+		<widget class="label" id="tobu" row="4" column="1">
+			<translation id="text" translation_id="233089" type="use" value="-" />
+		</widget>
+		<widget class="label" id="curr" row="5" column="1">
+			<translation id="text" translation_id="233089" type="use" value="-" />
+		</widget>
+		<widget class="label" id="diff" row="6" column="1">
+			<translation id="text" translation_id="233089" type="use" value="-" />
+		</widget>
+		<widget class="label" id="aver" row="7" column="1">
+			<translation id="text" translation_id="233089" type="use" value="-" />
+		</widget>
+	</widget>
+
+	<!--button-->
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+    <!--sugar label-->
+    <widget class="label" auto_size="horizontal">
+      <translation id="text" translation_id="293002" type="use" value="Sugar Daddy" />
+      <layout class="stick_to_sides_attachment" alignment="top" inset="4" />
+    </widget>
+    <!--sugar-->
+    <widget class="value_based_picture" width="100" height="30">
+      <record id="object_property">
+        <integer id="get_property" value="Chsd" />
+      </record>
+      <list id="value_list">
+        <record value="0" file="icons/custom/star rating/senior/large/empty" >
+          <translation id="hint" translation_id="227487" type="use" value="None" />
+        </record>
+        <record value="1" file="icons/custom/star rating/senior/large/full" >
+          <translation id="hint" translation_id="348844" type="use" value="Front End[COMMENT: sugar daddy type]" />
+        </record>
+        <record value="2" file="icons/custom/star rating/senior/large/half full half empty" >
+          <translation id="hint" translation_id="348778" type="use" value="Back End[COMMENT: sugar daddy type]" />
+        </record>
+        <record value="3" file="icons/custom/star rating/youth/large/full" >
+          <translation id="hint" translation_id="296533" type="use" value="Underwriter[COMMENT: other income type]" />
+        </record>
+        <record value="4" file="icons/custom/star rating/youth/large/half full half empty" >
+          <translation id="hint" translation_id="402418" type="use" value="Underwriter Expects Return[COMMENT: other income type]" />
+        </record>
+      </list>
+    </widget>
+		<widget class="button" id="sali" auto_size="horizontal" appearance="buttons/link/button">
+			<translation id="text" translation_id="316565" type="use" value="Salary[COMMENT: Link to club salary]" />
+		</widget>
+		<widget class="button" id="fili" auto_size="horizontal" appearance="buttons/link/button">
+			<translation id="text" translation_id="316566" type="use" value="Finances[COMMENT: Link to club finances]" />
+		</widget>
+	</container>
+
+</panel>

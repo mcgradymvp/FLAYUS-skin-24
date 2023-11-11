@@ -1,0 +1,29 @@
+<panel>
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <!-- Starting XI Styles -->
+  <flags id="stxi" value="tables/standard/normal"/>
+
+  <!-- Subs Styles -->
+  <flags id="subs" value="tables/custom/squad/row/substitutes/row"/>
+
+  <!--Table of player stats-->
+  <widget class="match_player_list_table" id="pltb" database_table_type="1" mode="fill_rows, stripe_rows" row_height="26" row_spacing="0">
+    <boolean id="sort_disabled" value="true" />
+
+    <list id="default_sort_column">
+      <integer value="TPRD" />
+    </list>
+
+    <record id="viewed_property_ids">
+      <record id="TPRD" hidden="true"/>
+      <flags id="Pcar" width="45" />
+      <flags id="PisC" />
+      <flags id="Pnam" />
+      <flags id="Pmtc" />
+    </record>
+
+  </widget>
+
+</panel>

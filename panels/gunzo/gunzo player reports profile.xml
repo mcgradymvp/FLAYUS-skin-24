@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel save_session_state="true">
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+  
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+	
+    
+  
+  <container id="norp" height="80">
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <!-- No scout report -->
+    <container id="nsrc" height="120">
+      <layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" offset="0" apply_to_children="true" />
+
+        <!--explanatory text-->
+        <widget class="text" alignment="left" spec="text" auto_size="vertical" size="large" style="semi_bold">
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+          <translation id="text" translation_id="320496" type="use" value="You need to request a member of your scouting staff to compile a report on this player.[COMMENT: scout report; need to scout advice]" />
+        </widget>
+        
+        <container height="30">
+          <layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="8" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" offset="0" apply_to_children="true" />
+        
+          <widget class="button" id="sctP" click_event="sctc" alignment="centre" auto_size="horizontal" height="30">
+            <translation id="text" translation_id="298524" type="use" value="Scouting Assignments[COMMENT: backroom advice, button link]" />
+        
+          </widget>
+          
+        </container>
+    </container>
+
+    <!-- No Coach Report-->
+    <container id="ncrc" height="120">
+      <layout class="fit_children_attachment" alignment="top,extend" offset="0" gap="2" />
+      <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" apply_to_children="true" />
+
+      <!--explanatory text-->
+		<widget class="text" alignment="top, left" spec="text" colour="faded text" auto_size="vertical" priority="1">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="4"/>
+
+			<translation id="text" translation_id="320498" type="use" value="You need to have at least one coach at your team to compile a report on this player.[COMMENT: coach report; need staff advice]" />
+		</widget>
+
+    </container>
+
+    <!-- No national report-->
+    <container id="nnrc" height="120">
+      <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" apply_to_children="true" />
+
+
+      <!--explanatory text-->
+      <widget class="label" id="info" alignment="left,centre_y" spec="text,large" size="11" auto_size="vertical" />
+      <widget class="label" id="scit" auto_size="vertical" spec="text,large" alignment="left,centre_y" size="11">
+        <translation id="text" translation_id="327297" type="use" value="You can request a match report from your coaching staff using the 'National Team' action menu.[COMMENT: national report; how to get a match report]" />
+      </widget>
+
+        <container height="30">
+          <layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="8" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" offset="0" apply_to_children="true" />
+        
+          <widget class="button" id="sctP" click_event="sctc" alignment="centre" auto_size="horizontal" height="30">
+            <translation id="text" translation_id="243421" type="use" value="Scout Player" />
+          </widget>
+          
+        </container>	  
+
+    </container>
+
+    <!-- Already being scouted -->
+    <container id="arbs" height="120">
+      <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" apply_to_children="true" />
+
+    <container height="120">
+      <layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+      <layout class="stick_to_sides_attachment" alignment="all" inset="0" offset="0" apply_to_children="true" />
+		<!--explanatory text-->
+		<widget class="text" id="arbt" alignment="left" spec="text" auto_size="vertical" size="large" style="semi_bold">
+		    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+			<translation id="text" translation_id="385683" type="use" value="This player is being scouted by [%person#1] and a report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+		</widget>
+    </container>
+    
+    </container>
+
+  </container>
+   
+     
+    <container>
+      <layout class="arrange_vertical_attachment" alignment="top,extend" inset="0" gap="2" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" apply_to_children="true" />
+
+      <!-- If we have scout reports -->
+    
+	   <!-- pros / cons -->
+        <container>
+          <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="2"/>
+          <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+          <!-- Pros icons -->
+          <container>
+            <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="-1"/>
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+            <!--title-->
+         <container height="27">
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+        <widget class="link_button" section="Pccr" appearance="boxes/bordered/standard/paper1" red_replacement="pro mid" alignment="centre_x,centre_y" font="gzmain" colour="gzk" size="10">
+          <translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]" />
+         </widget>
+      </container>
+
+            <!-- Icons get inserted into here. The 'size' attribute is the size in pixels of each icon -->
+            <container class="scrolling_box">
+              <container id="mprT">
+                <layout class="arrange_vertical_attachment" alignment="top" />
+                <layout class="fit_children_attachment" alignment="vertical,fill"/>
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+                <integer id="size" value="30"/>
+              </container>
+            </container>
+          </container>
+
+          <!-- Cons icons -->
+          <container>
+            <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+            <!--title-->
+             <container height="27">
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+
+        <widget class="link_button" section="Pccr" appearance="boxes/bordered/standard/paper1" red_replacement="con mid" alignment="centre_x,centre_y" font="gzmain" colour="gzk" size="10">
+          <translation id="text" translation_id="361094" type="use" value="Cons[COMMENT: FR 8316 ]" />
+        </widget>
+      </container>
+
+            <!-- Icons get inserted into here. The 'size' attribute is the size in pixels of each icon -->
+            <container class="scrolling_box">
+              <container id="mcoT">
+                <layout class="arrange_vertical_attachment" alignment="top" />
+                <layout class="fit_children_attachment" alignment="vertical,fill"/>
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+                <integer id="size" value="30"/>
+              </container>
+            </container>
+          </container>
+        </container>
+    
+    	  
+
+    </container>
+		
+ </container>
+
+</panel>

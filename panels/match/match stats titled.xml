@@ -1,0 +1,77 @@
+<panel>
+
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+
+	<container class="main_transparent_box">
+		<layout class="arrange_horizontal_attachment" layout="-1,-5,-1" offset="0" gap="8"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="4" apply_to_children="true" />
+
+		<!--home kit-->
+		<widget class="kit_picture" id="T_hk" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x,top">
+		</widget>
+
+		<widget class="table" id="mstn" layout="-1,-1,-1" mode="printable" auto_size_rows="true" fixed_size_rows="false" row_spacing="0">
+
+			<list id="headings">
+				<record alignment="left,centre_y" id="m_HH" >
+					<translation id="text" translation_id="242477" type="use" value="Home" />
+				</record>
+				<record alignment="centre" id="m_SH" >
+					<translation id="text" translation_id="247380" type="use" value="Statistic" />
+				</record>
+				<record alignment="right,centre_y" id="m_AH" >
+					<translation id="text" translation_id="242476" type="use" value="Away" />
+				</record>
+			</list>
+
+			<list id="column_widget_properties">
+				<record indx="0" alignment="left,centre_y"  multiline="false"/>
+				<record indx="1" alignment="centre"  />
+				<record indx="2" alignment="right,centre_y"  multiline="false"/>
+			</list>
+
+			<list id="column_table_properties">
+				<record indx="0" id="home" sort_disabled="true" left="4" />
+				<record indx="1" id="labl" sort_disabled="true" />
+				<record indx="2" id="away" sort_disabled="true" right="5" />
+			</list>
+
+		</widget>
+
+
+		<!--away kit-->
+		<widget class="kit_picture" id="T_ak" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x,top">
+		</widget>
+	</container>
+
+	<container class="main_transparent_box">
+
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right, extend"/>
+
+		<container>
+
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left"/>
+
+			<widget class="button" click_event="mcss" auto_size="all">
+				<translation id="text" translation_id="333760" type="use" value="Customise[COMMENT:Match screen; match stats panel; button text for customising visible match stats]" />
+			</widget>
+			
+			<widget class="button" id="mcsu" click_event="mcsu" auto_size="all">
+				<translation id="text" translation_id="230251" type="use" value="Undo" />
+			</widget>
+				
+			<widget class="button" id="mcsr" click_event="mcsr" auto_size="all">
+				<translation id="text" translation_id="344717" type="use" value="Revert" />
+			</widget>
+
+		</container>
+
+		<widget class="button" click_event="ok  " auto_size="all">
+			<translation id="text" translation_id="249644" type="use" value="Close[COMMENT - Button to close tutorial dialog]" />
+		</widget>
+		
+	</container>
+
+
+
+</panel>

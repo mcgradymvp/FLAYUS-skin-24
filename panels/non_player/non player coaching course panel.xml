@@ -1,0 +1,340 @@
+﻿<panel navigation_container="true">
+	<list id="draw_order">
+		<record entity_layout_id="at21" />
+		<record entity_layout_id="at20" />
+		<record entity_layout_id="at06" />
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at05" />
+		<record entity_layout_id="at02" />
+		<record entity_layout_id="at03" />
+		<record entity_layout_id="at04" />
+		<record entity_layout_id="at19" />
+		<record entity_layout_id="at15" />
+		<record entity_layout_id="at13" />
+		<record entity_layout_id="at14" />
+		<record entity_layout_id="at12" />
+		<record entity_layout_id="at08" />
+		<record entity_layout_id="at07" />
+		<record entity_layout_id="at11" />
+		<record entity_layout_id="at09" />
+		<record entity_layout_id="at10" />
+		<record entity_layout_id="at16" />
+		<record entity_layout_id="at00" />
+		<record entity_layout_id="at18" />
+		<record entity_layout_id="at23" />
+		<record entity_layout_id="at22" />
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<container class="client_object_viewer_xml_panel" entity_layout_id="at21" id="pers" name="main data panel">
+		<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+		<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container class="inner_subtle_box" entity_layout_id="at20" id="at20" height="130" name="inner box">
+			<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<container entity_layout_id="at06" id="at06" width="250" name="profilebox">
+				<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" move_side="true" target="main" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<container class="object_portrait_picture" entity_layout_id="at01" id="trpf" width="73" name="meep">
+					<string id="image_alignment" value="centre" />
+					<string id="scale_picture" value="true" />
+					<record id="dbrp">
+						<list id="get_properties">
+							<record>
+								<string id="get_property" value="objt" />
+								<string id="set_property" value="valu" />
+							</record>
+						</list>
+					</record>
+					<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+					<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" move_side="true" target="main" />
+				</container>
+				<container entity_layout_id="at05" id="at05" name="personcontainer">
+					<layout class="stick_to_object_attachment" id="alPt" offset="4" get_side="top" set_side="top" target="main" />
+					<layout class="stick_to_object_attachment" id="alPb" offset="-2" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="alPl" offset="6" get_side="right" set_side="left" target="at01" />
+					<layout class="stick_to_object_attachment" id="alPr" offset="-7" get_side="right" set_side="right" target="main" />
+					<widget class="spacer" id="main">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					</widget>
+					<widget class="spacer" id="fmin" embed_in_frame="true">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+					</widget>
+					<widget class="person_button" entity_layout_id="at02" id="psbf" auto_size="vertical" alignment="centre_y,left" height="30" name="buttonperson">
+						<string id="info_popup_enabled" value="true" />
+						<string id="style" value="semi_bold" />
+						<string id="size" value="large" />
+						<record id="dbrp">
+							<list id="get_properties">
+								<record>
+									<string id="get_property" value="objt" />
+									<string id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+						<layout class="stick_to_object_attachment" id="alPt" offset="4" get_side="top" set_side="top" move_side="true" target="main" />
+						<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+						<layout class="stick_to_object_attachment" id="alPr" offset="-21" get_side="right" set_side="right" target="main" />
+					</widget>
+					<widget class="text" entity_layout_id="at03" id="ppos" auto_size="vertical" alignment="left,top" height="30" name="description">
+						<string id="colour" value="faded text" />
+						<string id="size" value="small" />
+						<layout class="stick_to_object_attachment" id="alPt" get_side="bottom" set_side="top" move_side="true" target="at02" />
+						<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+						<layout class="stick_to_object_attachment" id="alPr" offset="-21" get_side="right" set_side="right" target="main" />
+					</widget>
+					<widget class="game_formatted_label" entity_layout_id="at04" id="wgex" alignment="left,top" auto_size="vertical" height="30" name="contractvalue">
+						<string id="size" value="small" />
+						<record id="dbrp">
+							<list id="get_properties">
+								<record>
+									<string id="get_property" value="PcMM" />
+									<string id="set_property" value="var1" />
+									<string id="dont_set_object" value="true" />
+								</record>
+								<record>
+									<string id="get_property" value="Pcww" />
+									<string id="set_property" value="var2" />
+									<string id="dont_set_object" value="true" />
+								</record>
+								<record>
+									<string id="get_property" value="Pced" />
+									<string id="set_property" value="var3" />
+									<string id="dont_set_object" value="true" />
+								</record>
+							</list>
+						</record>
+						<list id="format">
+							<record>
+								<integer id="value" value="-1" />
+								<string id="format" value="" />
+							</record>
+							<record>
+								<integer id="value" value="0" />
+								<translation id="format" translation_id="450823" type="use" value="[%wage#2] until [%date#3-short][COMMENT: player overview; wage and contract expiry date string, small change to ID 394401 to remove the 'Earning' part so this can be used in a lot of places]" />
+							</record>
+							<record>
+								<string id="format" value="[%wage#2]" />
+							</record>
+						</list>
+						<record id="FoRF">
+							<string id="var2" value="vf_wage" />
+						</record>
+						<layout class="stick_to_object_attachment" id="alPt" offset="1" get_side="bottom" set_side="top" move_side="true" target="at03" />
+						<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+						<layout class="stick_to_object_attachment" id="alPr" offset="-21" get_side="right" set_side="right" target="main" />
+					</widget>
+				</container>
+			</container>
+			<container class="main_box" entity_layout_id="at19" id="cCst" name="costbox">
+				<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" move_side="true" target="main" />
+				<layout class="stick_to_sizes_attachment" width="15.000001" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<widget class="label" entity_layout_id="at16" alignment="left,bottom" auto_size="vertical" id="at16" height="30" name="costlabel">
+					<string id="standard_spec" value="text" />
+					<string id="font" value="label" />
+					<string id="size" value="small" />
+					<translation id="text" translation_id="333752" type="use" value="Cost[COMMENT: store dialog; text indicating how much a purchasable item costs]"/>
+					<layout class="stick_to_object_attachment" id="alPt" offset="11" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+				</widget>
+				<widget class="value_label" entity_layout_id="at00" id="coCL" height="30" name="costprice">
+					<string id="style" value="semi_bold" />
+					<layout class="stick_to_object_attachment" id="alPt" offset="2" get_side="bottom" set_side="top" move_side="true" target="at16" />
+					<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+				</widget>
+				<widget class="text" entity_layout_id="at18" id="cpbc" alignment="left,top" auto_size="vertical" height="30" name="costcovered">
+					<string id="standard_spec" value="text" />
+					<string id="size" value="small" />
+					<string id="colour" value="faded text" />
+					<string id="multiline" value="true" />
+					<layout class="stick_to_object_attachment" id="alPt" offset="1" get_side="bottom" set_side="top" move_side="true" target="at00" />
+					<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+				</widget>
+			</container>
+			<container class="main_box" entity_layout_id="at15" id="cDur" name="durationbox">
+				<layout class="stick_to_object_attachment" id="alPt" offset="1" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="alPb" offset="-1" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="alPr" offset="-8" get_side="left" set_side="right" move_side="true" target="at19" />
+				<layout class="stick_to_sizes_attachment" width="15.000001" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<widget class="label" entity_layout_id="at13" id="labl" alignment="left,bottom" auto_size="vertical" height="30" name="durationlabel">
+					<string id="standard_spec" value="text" />
+					<string id="font" value="label" />
+					<string id="size" value="small" />
+					<translation id="text" value="Duration" translation_id="230113" type="use" />
+					<layout class="stick_to_object_attachment" id="alPt" offset="9" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+				</widget>
+				<widget class="text" entity_layout_id="at14" id="dLAB" alignment="left,top" auto_size="vertical" height="30" name="durationtext">
+					<string id="standard_spec" value="text" />
+					<string id="size" value="large" />
+					<string id="style" value="semi_bold" />
+					<layout class="stick_to_object_attachment" id="alPt" offset="1" get_side="bottom" set_side="top" move_side="true" target="at13" />
+					<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+				</widget>
+			</container>
+			<container class="inner_subtle_box" entity_layout_id="at12" id="cDet" height="110" name="coursebox">
+				<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" move_side="true" target="main" />
+				<layout class="stick_to_object_attachment" id="alPl" offset="7" get_side="right" set_side="left" target="at06" />
+				<layout class="stick_to_object_attachment" id="alPr" offset="-8" get_side="left" set_side="right" target="at15" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<container entity_layout_id="at08" id="at08" height="90" name="courselabelbox">
+					<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+					<widget class="spacer" id="main">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					</widget>
+					<widget class="spacer" id="fmin" embed_in_frame="true">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+					</widget>
+					<widget class="label" entity_layout_id="at07" alignment="left,bottom" auto_size="vertical" id="at07" height="90" name="courselabel">
+						<string id="standard_spec" value="text" />
+						<string id="size" value="small" />
+						<string id="font" value="label" />
+						<translation id="text" translation_id="336226" type="use" value="Coaching Course[COMMENT: interaction manager; type of interaction]" />
+						<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" move_side="true" target="main" />
+						<layout class="stick_to_object_attachment" id="alPl" offset="5" get_side="left" set_side="left" target="main" />
+						<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+					</widget>
+				</container>
+				<container entity_layout_id="at11" id="at11" height="67" name="coursebox">
+					<layout class="stick_to_object_attachment" id="alPt" offset="19" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+					<widget class="spacer" id="main">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					</widget>
+					<widget class="spacer" id="fmin" embed_in_frame="true">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+					</widget>
+					<widget class="picture" entity_layout_id="at09" id="cpic" width="20" height="67" name="tick">
+						<string id="image_alignment" value="left,top" />
+						<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" move_side="true" target="main" />
+						<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" move_side="true" target="main" />
+					</widget>
+					<widget class="text" entity_layout_id="at10" id="pcqu" alignment="left,top" auto_size="vertical" height="67" name="coursename">
+						<string id="standard_spec" value="text" />
+						<string id="size" value="large" />
+						<string id="style" value="semi_bold" />
+						<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" move_side="true" target="main" />
+						<layout class="stick_to_object_attachment" id="alPl" get_side="right" set_side="left" target="at09" />
+						<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
+	<container class="inner_subtle_box" entity_layout_id="at23" id="at23" name="staffoverview">
+		<translation id="title" translation_id="329843" type="use" value="Coaching Qualifications[COMMENT: non-player profile; coaching qualification]" />
+		<layout class="stick_to_object_attachment" id="alPt" offset="141" get_side="top" set_side="top" target="main" />
+		<layout class="stick_to_object_attachment" id="alPb" offset="-27" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container class="client_object_list_table" entity_layout_id="at22" id="pltb" save_session_state="true" save_default_state="true" name="tableofstaff">
+			<integer id="database_table_type" value="1" />
+			<string id="customisation_context" value="staf" />
+			<string id="mode" value="fill_rows, stripe_rows, select_rows" />
+			<string id="auto_size_rows" value="true" />
+			<integer id="column_spacing" value="2" />
+			<integer id="row_height" value="30" />
+			<string id="contextual_handler_column_id" value="Psnm" />
+			<list id="default_sort_column" />
+			<record id="vpid">
+				<record id="Psnm" width="-1" />
+				<record id="PcjN" width="-1" />
+				<record id="Page" width="40" />
+				<record id="Prsa" width="80" />
+				<record id="Pcqu" width="-1" />
+			</record>
+
+			<list id="column_widget_properties">
+				<record index="3" navigation_focus_target="false" />
+				<record index="4" navigation_focus_target="false" />
+			</list>
+			
+			<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+		</container>
+	</container>
+</panel>

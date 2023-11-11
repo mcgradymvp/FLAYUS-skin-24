@@ -1,0 +1,22 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container id="trnC">
+		<attachment_group class="vertical_arrange" vertical_layout="-1,400" vertical_gap="0" />
+
+			<!--summary text-->
+			<widget class="text" id="trpT" auto_size="none" multiline="true" />
+
+		<container>
+			<!-- Player Lists -->
+			<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+			<widget class="club_training_performers_list_widget" id="best" file="widgets/club training performers list widget1"/>
+			<widget class="club_training_performers_list_widget" id="wrst" file="widgets/club training performers list widget1" is_worst="true" />
+		</container>
+	</container>
+
+	<widget class="text" id="noTi" font="title" hidden="true" alignment="centre">
+		<translation id="text" translation_id="242522" type="use" value="N/A" />
+	</widget>
+</panel>

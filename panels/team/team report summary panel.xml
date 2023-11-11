@@ -1,0 +1,33 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+	<widget class="team_report_request_report_panel" id="nort" />
+	<container id="sort">
+		<attachment_group class="horizontal_arrange" horizontal_layout="-1,300,-1">
+		</attachment_group>
+
+		<container id="scre" class="team_report_scout_report_panel" file="team/team report scout report overview" />
+	    
+		<widget class="team_report_summary_panel" id="res1" file="team/team report summary panel1" >
+			<record id="object_property" get_property="objt" set_property="objt" />
+		</widget>
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_layout="-1" />
+
+			<container id="noAn">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+				<widget class="label" font="title" colour="accent"  alignment="left,centre_y">
+					<translation id="text" translation_id="447607" type="use" value= "Analyst Report[COMMENT: Panel title for when viewing analyst report]" />
+				</widget>
+				
+				<widget class="label" font="label" alignment="centre">
+					<translation id="text" translation_id="448324" type="use" value= "No Analysts[COMMENT: FR 21135 disabled menu item when a club has no analysts]" />
+				</widget>
+			</container>
+			<container id="anre" class="team_report_analyst_report_panel" file="team/team report analyst report overview"/>
+				
+	</container>
+</container>
+</panel>

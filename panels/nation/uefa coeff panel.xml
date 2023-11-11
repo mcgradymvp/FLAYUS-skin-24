@@ -1,0 +1,30 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="inner_titled_box" id="uctt" >
+		<translation id="title" translation_id="363690" type="use" value="Nation Club Coefficients[COMMENT: section title; Uefa coefficient for nations calculated for the clubs to determine how many clubs each nations can have in the European Cups etc.]" />
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- nation co-efficients table -->
+		<widget class="table" id="ucnc" mode="fill_rows, stripe_rows,printable,keyboard" layout="65, -1, 75, 70, 70, 70, 70, 70, 100, 100" row_spacing="0" save_session_state="true">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			<flags id="heading_class" value="column_heading" />
+
+			<record id="default_properties" alignment="left,centre_y" />
+
+			<list id="column_table_properties">
+				<record indx="0" id="UCpo" />
+				<record indx="1" id="UCna" />
+				<record indx="2" id="UCy1" sort_ascending="false" />
+				<record indx="3" id="UCy2" sort_ascending="false" />
+				<record indx="4" id="UCy3" sort_ascending="false" />
+				<record indx="5" id="UCy4" sort_ascending="false" />
+				<record indx="6" id="UCy5" sort_ascending="false" />
+				<record indx="7" id="UCy6" sort_ascending="false" />
+				<record indx="8" id="UCto" sort_ascending="false" />
+				<record indx="9" id="UCt2" sort_ascending="false" />
+			</list>
+		</widget>
+	</container>
+</panel>

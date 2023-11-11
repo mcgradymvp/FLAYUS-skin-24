@@ -1,0 +1,113 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="horizontal" inset="0" />
+	<boolean id="should_force_refresh" value="true" />
+	<container class="bordered_box" red_replacement="dark_box_background">
+		<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="horizontal" inset="0" />
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+
+		<!--Player Personal Details-->
+		<container height="80">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+
+			<container height="80">
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+				<layout class="arrange_horizontal_attachment" layout="70, -1" offset="0" gap="5" />
+				<!-- Pictures -->
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0,10,0,0" apply_to_children="true" />
+					<!-- Profile picture -->
+					<widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+						<record id="object_property">
+							<list id="get_properties">
+								<!--Facegen data request-->
+								<record get_property="fcgn" />
+								<!--Fake name request-->
+								<record get_property="Pfke" />
+								<record get_property="prpc" set_property="valu" />
+							</list>
+						</record>
+					</widget>
+				</container>
+
+				<!-- Personal Details -->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="8" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<!--Name-->
+					<widget class="person_button" id="prsn" style="semi_bold" info_popup_enabled="false" alignment="left" height="22" person_is_player="false"/>
+
+					<!-- Age -->
+					<widget class="text" id="pAge" alignment="left,centre_y" size="small" height="22" />
+
+					<!--Job Description-->
+					<widget class="text" id="Pdes" alignment="left,centre_y" size="small" height="22" />
+
+				</container>
+			</container>
+		</container>
+
+		<widget class="horizontal_divider" />
+		<!--manager support details-->
+		<container height="220">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<!--Manager support text-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="label" auto_size="vertical" font="title" multiline="true" style="semi_bold" >
+					<translation id="text" translation_id="447498" type="use" value="Managerial Support[COMMENT: team confidence panel header, offers board confidence feedback on the level of managerial support from the players]" />
+				</widget>
+
+				<widget class="text" id="msDh" multiline="true" auto_size="vertical" />
+			</container>
+
+			<!--support pros/cons-->
+			<container class="scrolling_box">
+				<container id="Mpcn">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+					<layout class="fit_children_attachment" alignment="vertical,fill" gap="4" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				</container>
+			</container>
+		</container>
+
+		<widget class="horizontal_divider" />
+		<!--Manager Supporters details-->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="4" />
+
+			<widget class="label" auto_size="vertical" font="title" style="semi_bold" >
+				<translation id="text" translation_id="447646" type="use" value="Supporters[COMMENT:Team Dynamics: header for the supporters' take on the manager's level of support within the squad]" />
+			</widget>
+
+			<!--Supporters-->
+			<container class="main_box" id="spCn" height="42" red_replacement="chemistry_influences_colour" appearance="boxes/custom/darken/rounded/no margin/paper">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="8,2" apply_to_children="true" />
+				<widget class="text" id="spTx" auto_size="none" style="semi_bold" alignment="left,centre_y" height="36"/>
+			</container>
+
+			<!--No strong opinion-->
+			<container class="main_box" id="noCn" height="42" red_replacement="chemistry_no_opinion_colour" appearance="boxes/custom/darken/rounded/no margin/paper">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="8,2" apply_to_children="true" />
+				<widget class="text" id="nOTx" auto_size="none" style="semi_bold" alignment="left,centre_y" height="36"/>
+			</container>
+
+			<!--Opposers-->
+			<container class="main_box" id="opCn" height="42" red_replacement="chemistry_opposes_colour" appearance="boxes/custom/darken/rounded/no margin/paper">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="8,2" apply_to_children="true" />
+				<widget class="text" id="opTx" auto_size="none" style="semi_bold" alignment="left,centre_y" height="36"/>
+			</container>
+
+		</container>
+		<widget class="horizontal_divider" />
+	</container>
+</panel>

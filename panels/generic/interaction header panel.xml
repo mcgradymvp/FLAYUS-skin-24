@@ -1,0 +1,69 @@
+﻿<!-- header panel to be used during interactions -->
+<panel height="50">
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+    <animation class="translate_animation" start_value="0, -1" end_value="0, 0" duration="0.2" delay="0" end_mode="hold_end" tween="ease_out_4" coord_mode="relative_to_target" trigger_id="hidden" trigger_start="false" trigger_end="true" no_clipping="true"/>
+
+    <boolean id="should_force_refresh" value="true"/>
+
+    <container class="main_box" appearance="boxes/custom/full screen header/paper" red_replacement="bg darker" navigation_container="true">
+        <attachment_group class="horizontal_arrange" horizontal_alignment="middle"/>
+
+        <container>
+            <attachment_group class="horizontal_arrange_autosize" horizontal_alignment="left, extend" vertical_alignment="vertical"/>
+            <layout class="stick_to_sides_attachment" alignment="left" inset="10"/>
+
+            <!-- Back Button -->
+            <widget class="screen_history_button" id="back" fixed="true" width="30" appearance="buttons/custom/interface/navigation bar/button" icon="icons/26px/back" icon_alignment="centre">
+                <attachment class="get_global_attachment" get_property="hnpt" set_property="itms"/>
+                <record id="primary_icon_properties" red_replacement="text"/>
+                <record id="click_event" event_id="GOTO" event_target="brow" scin="-3"/>
+
+                <attachment class="test_global_attachment" get_property="MnuS" mode="not_equal" value="true" set_property="hidn" skip_if_null="true"/>
+            </widget>
+
+            <!-- interactions type and subject -->
+            <container>
+                <attachment_group class="vertical_arrange_horizontal_autosize" vertical_alignment="middle"/>
+
+                <widget class="text" id="titl" font="title" size="large" colour="text" alignment="left, centre_y" auto_size="all"/>
+
+                <container id="AttB">
+                    <attachment_group class="horizontal_arrange_autosize_all"/>
+
+                    <widget class="text" id="AttL" font="title" size="xsmall" colour="faded text"  auto_size="all">
+                        <translation id="text" translation_id="515043" type="use" value="Attendance[COMMENT: AREA: Press Conference Panel; SUB-AREA: Header section; FR-BN: 32571; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title of section indicating number of journalists in attendance]"/>
+                    </widget>
+                    <widget class="text" id="Matt" size="xsmall" font="title" auto_size="all" colour="fg">
+                        <attachment class="get_global_attachment" get_property="PCat" set_property="text"/>
+                    </widget>
+                </container>
+            </container>
+        </container>
+
+        <widget class="interaction_room_atmosphere_widget" id="Matm">
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="5"/>
+            <layout class="centre_in_parent_attachment" alignment="horizontal"/>
+        </widget>
+
+        <container>
+            <attachment_group class="horizontal_arrange_autosize" horizontal_alignment="centre_x, centre_y" vertical_alignment="vertical" horizontal_offset="0"/>
+            <layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+
+            <!-- press conference questions remaining -->
+            <widget class="percentage_pie_chart" id="QuRP" value_colour="bg lighter" filler_colour="fg" is_donut_chart="true" layout="-6, -3, -1" height="30" width="30"/>
+            <widget class="text" id="QuRT" font="label" colour="faded text" alignment="left, centre_y" width="70" size="small" multiline="true"/>
+
+            <widget class="spacer" width="6"/>
+            
+            <!-- featured object -->
+            <widget class="icon_button" id="FBib" click_event="ToVs" font="title" size="large" colour="text" width="220" height="50" alignment="centre_x, centre_y" show_button_appearance="false" icon_enabled="false" secondary_icon_enabled="true" secondary_icon="icons/16px/minus" secondary_icon_alignment="centre_x, centre_y" hidden="true"/>
+
+            <!-- continue button -->
+            <widget class="icon_button" id="nxbt" appearance="chrome/buttons/continue/button" red_replacement="title" controller_button="right_trigger" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/right" secondary_icon_alignment="centre_right, centre_y" font="extendedblack" size="xsmall" colour="text" auto_size="horizontal" auto_size_minimum_width="230" height="46">
+                <record id="secondary_icon_properties" red_replacement="text"/>
+            </widget>
+        </container>
+    </container>
+
+</panel>

@@ -1,0 +1,87 @@
+<panel save_session_state="true">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_layout="35, -1" vertical_gap="1" />
+		
+		<container class="bordered_box" navigation_container="true">
+			<attachment_group class="horizontal_arrange" horizontal_layout="-1, 150, 120" />
+
+			<widget class="text" font="title" size="large" colour="accent" alignment="left, centre_y">
+				<translation id="text" translation_id="435775" type="use" value="Career Milestones[COMMENT: was previously ID 329749 Career Achievements, rewording as it's a better term for the content on the screen]" />
+			</widget>
+
+			<!--Career-->
+			<widget class="widget_popup_button" id="carr" appearance="buttons/subtle/normal/button" widget_type="career_job_table">
+				<translation id="text" translation_id="284803" type="use" value="Entire Career[COMMENT: player_history_achievements_panel; selectable row which displays a person's entire achievement history]" />
+			</widget>
+
+			<widget class="link_button" section="PBio">
+				<translation id="text" translation_id="295868" type="use" value="Biography[COMMENT: player history panel; title of biography titled box]" />
+			</widget>
+			
+		</container>
+		
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_layout="-1, -1" />
+
+			<!-- Achievements filtered by selected clubs in left panel -->
+			<container class="main_box" navigation_container="true">
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!-- Filter tabs -->
+				<container class="tab_strip" id="view" appearance="tabs/subsection" use_alt_end_tab_appearances="false" alignment="top" select_event="view" auto_size="vertical">
+
+					<list id="items">
+						<record id="5">
+							<translation id="name" translation_id="509195" type="use" value="Notable[COMMENT: AREA: Player History; SUB-AREA: Title for section showing Notable Achievements; FR-BN: n/a]" />
+
+						</record>
+						<record id="-1">
+							<translation id="name" translation_id="247183" type="use" value="All" />
+						</record>
+
+						<record id="0">
+							<translation id="name" translation_id="227741" type="use" value="Competitions" />
+							<string id="icon" value="icons/custom/milestones/competitions" />
+							<string id="red_replacement" value="milestones competitions icon" />
+						</record>
+						<record id="1">
+							<translation id="name" translation_id="229368" type="use" value="Awards" />
+							<string id="icon" value="icons/custom/milestones/awards" />
+							<string id="red_replacement" value="milestones awards icon" />
+						</record>
+						<record id="2">
+							<translation id="name" translation_id="227743" type="use" value="Transfers" />
+							<string id="icon" value="icons/custom/milestones/transfers" />
+							<string id="red_replacement" value="milestones transfer icon" />
+						</record>
+						<record id="4">
+							<translation id="name" translation_id="230331" type="use" value="Jobs" />
+							<string id="icon" value="icons/custom/milestones/jobs" />
+							<string id="red_replacement" value="milestones jobs icon" />
+						</record>
+						<record id="-2">
+							<translation id="name" translation_id="320441" type="use" value="Landmarks[COMMENT - manager table screen; view option text for league/cup and award wins]" />
+							<string id="icon" value="icons/custom/milestones/landmarks" />
+							<string id="red_replacement" value="milestones landmarks icon" />
+							<boolean id="hidden" value="true" />
+						</record>
+					</list>
+					<flags id="selection" value="5" />
+				</container>
+
+				<!-- List of achievements -->
+				<container class="scrolling_box" id="achl">
+					<container id="lndM">
+						<attachment_group class="vertical_arrange_autosize" vertical_inset="0" vertical_gap="-4" horizontal_alignment="horizontal" horizontal_inset="0" />
+					</container>
+				</container>
+
+			</container>
+
+		</container>
+	</container>
+
+</panel>

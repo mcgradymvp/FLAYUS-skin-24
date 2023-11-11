@@ -1,0 +1,42 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<!-- Starting XI Styles -->
+	<flags id="stxi" value="tables/standard/normal"/>
+
+	<!-- Subs Styles -->
+	<flags id="subs" value="tables/custom/squad/substitute/row"/>
+
+  <widget class="match_player_list_table" id="pltb" database_table_type="1" mode="fill_rows, stripe_rows, printable, store_sort_state, drag_rows, drop_on_rows,show_insert_column_popup,keyboard" column_mode="resize_columns, move_columns, custom_views" row_height="23">
+    <boolean id="fixed_size_rows" value="true" />
+    <boolean id="dont_restore_selection" value="true" />
+    <boolean id="save_session_state" value="true" />
+
+    <flags id="default_view" value="msvw" />
+
+    <!-- default sort by playing position (primary), then picked position, then name -->
+    <list id="default_sort_column">
+      <integer value="TPRD" />
+    </list>
+
+    <list id="viws">
+      <record id="msvw">
+        <record id="view">
+					<record id="TPRD" hidden="true"/>
+					<record id="Pshp" width="53" disabled="true"/>
+					<record id="Pcar" width="20"/>
+					<record id="Pnam" format="[%person#1-initial_surname]" width="130" info_popup_enabled="true" alignment="left,centre_y,can_scale"/>
+          <record id="PisC" width="25" alignment="centre_y,centre_x"/>
+					<record id="PRCF" width="60" auto_hide_priority="1600"/>
+					<record id="MPrt" width="35" auto_hide_priority="1300"/>			<!-- Rating -->
+					<record id="MPgl" colour="gzk" width="20" auto_hide_priority="1400"/>			<!-- Goals -->	
+					<record id="MPas" colour="amber a500" width="20" auto_hide_priority="1500"/>			<!-- Assists -->
+					<record id="MPst" width="20"/>			<!-- Shoots -->	
+					<record id="MPkp" colour="orange a500" width="20"/>			<!-- Key Passes -->
+					<record id="MPCc" colour="teal a500" width="30"/> <!-- Chances Created -->	
+					<record id="Pmtc" width="150" auto_hide_priority="1800" alignment="centre,can_scale"/>
+        </record>
+      </record>
+    </list>
+
+  </widget>
+</panel>

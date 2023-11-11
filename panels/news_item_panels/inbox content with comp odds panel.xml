@@ -1,0 +1,135 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<!-- content area -->
+	<container class="scrolling_box">
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,250" vertical_inset="0" />
+
+			<container id="infc">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<container class="inner_subtle_box">
+					<translation id="title" translation_id="412462" type="use" value="League Info[COMMENT: FR 14577; title odds news item; title of league information box]"/>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-2,-1" horizontal_gap="10" vertical_inset="0" />
+
+					<!-- nation -->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="text" auto_size="vertical" alignment="left,centre_y" font="label">
+							<translation id="text" translation_id="229390" type="use" value="Nation"/>
+						</widget>
+						<widget class="object_portrait_picture" id="natp" scale_picture="true" image_alignment="left,centre_y" height="25" clickable="true"/>
+					</container>
+
+					<!-- league -->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="comp_button" id="lnam" auto_size="vertical" alignment="left,centre_y" icon_enabled="false" format="([%comp#1-short])" font="label"/>
+						<widget class="object_portrait_picture" id="llog" scale_picture="true" image_alignment="left,centre_y" height="25" clickable="true"/>
+					</container>
+
+					<!-- reputation -->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="text" auto_size="vertical" alignment="left,centre_y" font="label">
+							<translation id="text" translation_id="227963" type="use" value="Reputation"/>
+						</widget>
+
+						<widget class="comp_reputation_stars_label" id="lrep" alignment="left,centre_y" height="25">
+							<record id="object_property">
+								<integer id="get_property" value="crps"/>
+							</record>
+						</widget>
+					</container>
+				</container>
+
+				<!-- favourites -->
+				<container id="favb">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+					<container class="inner_subtle_box" height="90">
+						<translation id="title" translation_id="412463" type="use" value="Title Favourites[COMMENT: FR 14577; title odds news item; title of favourites box]"/>
+						<attachment_group class="horizontal_arrange" horizontal_layout="-2,-1" vertical_inset="0" />
+
+						<container height="40">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="middle" />
+
+							<widget class="object_portrait_picture" id="flog" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" height="40" width="50"/>
+
+							<widget class="client_object_label" id="fnam" auto_size="all" alignment="centre" multiline="true"/>
+						</container>
+
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" horizontal_inset="0" />
+
+							<widget class="text" auto_size="vertical" alignment="left,centre_y" font="label">
+								<translation id="text" translation_id="443660" type="use" value="Title Odds[COMMENT: news item, FR 20945; gambling odds for a team to win the title]" />
+							</widget>
+
+							<widget class="odds_label" id="favo" auto_size="vertical" alignment="left,centre_y" size="xxlarge" style="bold" multiline="false" />
+						</container>
+					</container>
+
+					<container class="inner_subtle_box">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="text" auto_size="vertical" alignment="left,centre_y" font="label">
+							<translation id="text" translation_id="319446" type="use" value="League History[COMMENT: title for the league position history on the club overview panel]"/>
+						</widget>
+
+						<widget class="club_league_history_graph" id="flhw" height="200" file="club/club league history graph basic" year="11" />
+
+					</container>
+				</container>
+
+				<!-- joint favourites -->
+				<container class="inner_subtle_box" id="jfvb">
+					<translation id="title" translation_id="412463" type="use" value="Title Favourites[COMMENT: FR 14577; title odds news item; title of favourites box]"/>
+
+					<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-2,-1" horizontal_gap="10" />
+					
+
+					<widget class="table" id="favl" mode="printable" layout="60 -1" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical" row_spacing="10"/>
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize"  />
+
+						<widget class="text" auto_size="vertical" alignment="left,centre_y">
+							<translation id="text" translation_id="230320" type="use" value="Odds"/>
+						</widget>
+
+						<widget class="odds_label" id="jfvo" auto_size="vertical" alignment="left,centre_y" size="30" style="bold" multiline="false" />
+					</container>
+				</container>
+
+				<widget class="spacer" height="10"/>
+
+				<!-- main body text -->
+				<widget class="inbox_body_text" id="bdtx">
+					<layout class="stick_to_sides_attachment" alignment="horizontal"/>
+				</widget>
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="1" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!--dynamic image and logo-->
+				<container id="ICdi" height="150">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				</container>
+
+				<container class="inner_subtle_box" id="prfn">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+					<container class="media_predicition_league_table_panel" id="oddl" file="competition/media prediction league table preview no headings"/>
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

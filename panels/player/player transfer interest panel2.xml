@@ -1,0 +1,103 @@
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="5" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+  <container id="manC">
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+    <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+    <layout class="arrange_horizontal_attachment" layout="60,-1" offset="10" gap="20" />
+    <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+    <!-- Team badge -->
+    <widget class="object_portrait_picture" id="manP" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" height="60" />
+    <!-- Main interest text -->
+    <container class="scrolling_box">
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+    <container>
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+		<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="4"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<widget class="label" spec="text" style="bold" auto_size="vertical">
+        <translation id="text" translation_id="350859" type="use" value="Main Interest[COMMENT: transfer interest panel]" />
+      </widget>
+      <widget class="text" id="manT" auto_size="vertical" />
+    </container>
+  </container>
+  </container>
+
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="0" gap="5" />
+
+	  <container class="scrolling_box">
+		  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		  <container>
+        <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+        <layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="2" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+        <!-- Transfer Offers -->
+        <widget class="table" id="TraT" layout="-7, -5, -5, -5" mode="fill_rows, stripe_rows" auto_size="vertical">
+          <boolean id="fixed_size_rows" value="false" />
+          <boolean id="auto_size_rows" value="true" />
+          <list id="default_sort_column">
+            <integer value="3" />
+            <integer value="0" />
+          </list>
+
+          <!-- Title of box -->
+          <list id="headings">
+            <record column_span="3" alignment="left, centre_y" id="rcof">
+              <translation id="text" translation_id="306802" type="use" value="Recent Offers" />
+            </record>
+            <record alignment="left, centre_y" id="ofdt">
+              <translation id="text" translation_id="329373" type="use" value="Offer Date[COMMENT: player_transfer_interest_panel; table header text indicating the date a transfer offer was made for a player]" />
+            </record>
+          </list>
+
+          <!-- table isn't sortable -->
+          <list id="column_display_properties">
+            <record index="1" sort_disabled="true" />
+          </list>
+        </widget>
+
+        <!-- Major club interest -->
+        <widget class="table" id="MajT" layout="120,-1,-1,-1" row_height="18" mode="fill_rows, stripe_rows" auto_size="vertical">
+          <boolean id="fixed_size_rows" value="false" />
+          <boolean id="auto_size_rows" value="true" />
+          <list id="default_sort_column">
+            <integer value="0" />
+          </list>
+          <!-- Title of box -->
+          <list id="headings">
+            <record column_span="3" alignment="left, centre_y">
+              <translation id="text" translation_id="306803" type="use" value="Major Interest From Clubs" />
+            </record>
+          </list>
+        </widget>
+
+        <!-- Clubs which are monitoring -->
+        <widget class="table" id="MinT" layout="120,-1,-1,-1" row_height="18" mode="fill_rows, stripe_rows" auto_size="vertical">
+          <boolean id="fixed_size_rows" value="false" />
+          <boolean id="auto_size_rows" value="true" />
+          <list id="default_sort_column">
+            <integer value="0" />
+          </list>
+          <!-- Title of box -->
+          <list id="headings">
+            <record column_span="3" alignment="left, centre_y">
+              <translation id="text" translation_id="306804" type="use" value="Minor Interest From Clubs" />
+            </record>
+          </list>
+        </widget>
+      </container>
+    </container>
+
+    
+    <widget class="link_button" auto_size="all" id="traL">
+      <layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+      <translation id="text" translation_id="364853" type="use" value="View Transfer Offers[COMMENT: transfer interest panel; link to transfer centre]" />
+    </widget>
+    
+  </container>
+</panel>

@@ -1,0 +1,33 @@
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+
+		<!-- Player picture -->
+		<widget class="object_portrait_picture" id="pict" scale_picture="true" image_alignment="centre,top">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+			<record id="object_property">
+				<integer id="get_property" value="objt"/>
+				<integer id="set_property" value="objt"/>
+			</record>
+		</widget>
+
+    <widget class="text" id="bsnm" alignment="centre">
+    </widget>
+  </container>
+
+  <container class="bordered_box" height="15" appearance="boxes/custom/pitch selection/paper_selected" red_replacement="blue grey 800">
+    <layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <widget class="text" id="name" size="xsmall" alignment="centre" multiline="false" height="18" >
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+    </widget>
+  </container>
+</panel>

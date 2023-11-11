@@ -1,0 +1,230 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize"/>
+
+	<boolean id="should_force_refresh" value="true"/>
+
+	<container navigation_container="true" default_focus="true">
+		<attachment_group class="vertical_arrange_autosize" />
+
+		<container class="tabbed_container" appearance="" id="detg" default_item="fepl" save_session_state="true" hide_selector_if_one_or_fewer_items="true">
+			<attachment_group class="vertical_arrange_autosize" />
+			<flags id="changed_event" value="cnch" />
+			
+			<container id="fepl">
+				<attachment_group class="vertical_arrange_autosize" />
+				<translation id="title" translation_id="229526" type="use" value="Details"/>
+
+				<!-- views offer from team -->
+				<container id="aoft" height="30">
+					<layout class="arrange_horizontal_attachment" layout="-1, -2" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+
+					<widget class="text" alignment="left, centre_y" auto_size="horizontal" height="30">
+						<translation id="text" translation_id="386804" type="use" value="Offer from:[COMMENT: FR #10312; transfer offer panel; label for popup to switch between offers for a player]"/>
+					</widget>
+					<widget class="popup_button" id="aofw" select_event="view" height="30" fixed="false"/>
+				</container>
+
+				<container id="TOpt">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+					<container height="30" >
+                        <attachment_group class="horizontal_arrange_vertical_centre" horizontal_alignment="right,extend">
+                        	<global id="horizontal_gap" name="ui.button_row_gap"/>
+    					</attachment_group>
+
+						<!-- FM skin only -->
+                        <container id="oftp" height="30" remove_if="ui.is_fmt_controller_skin">
+							<attachment_group class="horizontal_arrange_autosize"/>
+
+							<!-- offer type -->
+							<container id="tlco" height="30">
+								<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0"/>
+
+								<widget class="radio_toggle_switch_left" id="totw" auto_size="all" alignment="centre" navigation_focus_target="true">
+									<layout class="centre_in_parent_attachment" alignment="vertical"/>
+									<translation id="text" translation_id="248364" type="use" value="Transfer Offer"/>
+
+									<event id="click_event">
+										<flags id="event_id" value="ttyc"/>
+										<integer id="type" value="1"/>
+									</event>
+								</widget>
+
+								<widget class="radio_toggle_switch_right" id="lotw" auto_size="all" alignment="centre" navigation_focus_target="true">
+									<layout class="centre_in_parent_attachment" alignment="vertical"/>
+									<translation id="text" translation_id="352098" type="use" value="Loan Offer[COMMENT: transfer offer panel; transfer type selection popup menu option]"/>
+
+									<event id="click_event">
+										<flags id="event_id" value="ttyc"/>
+										<integer id="type" value="3"/>
+									</event>
+								</widget>
+							</container>
+
+							<widget class="button" id="aotw" click_event="pcpr" height="30" size="9" disabled="true">
+								<layout class="centre_in_parent_attachment" alignment="vertical"/>
+								<translation id="text" translation_id="350716" type="use" value="Agent Offer[COMMENT: transfer_manager; type of offer a club can make an offer to buy back a % of player from agent, or vice versa]"/>
+							</widget>
+						</container>
+
+						<!-- FMC/T skins only  -->
+						<container id="oftp" height="30" create_if="ui.is_fmt_controller_skin">
+							<attachment_group class="horizontal_arrange_autosize_all_centre_centered_in_parent"/>
+
+							<!-- offer type -->
+							<container id="tlco" height="30">
+								<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0"/>
+
+								<widget class="radio_toggle_switch_left" id="totw" auto_size="all" alignment="centre" navigation_focus_target="true">
+									<layout class="centre_in_parent_attachment" alignment="vertical"/>
+									<translation id="text" translation_id="248364" type="use" value="Transfer Offer"/>
+
+									<event id="click_event">
+										<flags id="event_id" value="ttyc"/>
+										<integer id="type" value="1"/>
+									</event>
+								</widget>
+
+								<widget class="radio_toggle_switch_right" id="lotw" auto_size="all" alignment="centre" navigation_focus_target="true">
+									<layout class="centre_in_parent_attachment" alignment="vertical"/>
+									<translation id="text" translation_id="352098" type="use" value="Loan Offer[COMMENT: transfer offer panel; transfer type selection popup menu option]"/>
+
+									<event id="click_event">
+										<flags id="event_id" value="ttyc"/>
+										<integer id="type" value="3"/>
+									</event>
+								</widget>
+							</container>
+
+							<widget class="button" id="aotw" click_event="pcpr" height="30" size="9" disabled="true">
+								<layout class="centre_in_parent_attachment" alignment="vertical"/>
+								<translation id="text" translation_id="350716" type="use" value="Agent Offer[COMMENT: transfer_manager; type of offer a club can make an offer to buy back a % of player from agent, or vice versa]"/>
+							</widget>
+						</container>
+
+						<!-- Flexibility -->
+						<widget class="icon_button" id="negw" click_event="trtc" auto_size="all" icon="icons/lock/button_off" appearance="buttons/subtle/normal/button">
+							<string id="remove_if" value="ui.is_fmt_controller_skin" />
+						</widget>
+
+						<!-- Decision Deadline -->
+						<widget class="popup_button" id="ddlw" select_event="ddle" auto_size="all" appearance="buttons/subtle/normal/button">
+							<string id="remove_if" value="is_fmt" />
+							<list id="itms">
+								<record id="-1">
+									<translation id="name" translation_id="350881" type="use" value="No Deadline[COMMENT: Deadline option on transfer offer screen]"/>
+								</record>
+								<record id="0">
+									<translation id="name" translation_id="330706" type="use" value="Today[COMMENT: Deadline option on transfer offer screen]"/>
+								</record>
+								<record id="1">
+									<translation id="name" translation_id="330709" type="use" value="Tomorrow[COMMENT: Deadline option on transfer offer screen]"/>
+								</record>
+							</list>
+						</widget>
+
+						<!-- private/public -->
+						<container id="pubw" height="30">
+							<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0"/>
+
+							<widget class="radio_toggle_switch_left" id="pupu" click_event="pcpu" height="30" auto_size="horizontal">
+								<translation id="text" translation_id="248393" type="use" value="Public"/>
+							</widget>
+							<widget class="radio_toggle_switch_right" id="pupr" click_event="pcpr" height="30" auto_size="horizontal">
+								<translation id="text" translation_id="248392" type="use" value="Private"/>
+							</widget>
+						</container>
+					</container>
+
+					<container >
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+						<!-- Fee -->
+						<container height="36">
+							<attachment_group class="horizontal_arrange" horizontal_layout="-1, 30"/>
+
+							<container class="negotiation_cash_widget" alignment="horizontal" id="feew" have_please_select_string="false" allow_force_selection="false" height="40" navigation_preferred_up_target="tlco">
+								<record id="select_event" event_id="chca"/>
+							</container>
+
+							<widget class="picture" id="minc" auto_size="horizontal" alignment="centre" file="icons/16px/minimum fee" scale_picture="false" keep_aspect_ratio="true">
+								<translation id="hint" translation_id="374738" type="use" value="Fee matches or exceeds clause fee.[COMMENT: FR 7530; transfer offer panel; hint text for indicator that fee being offered exceeds release clause fee]"/>
+								<layout class="stick_to_sides_attachment" alignment="top" inset="8"/>
+							</widget>
+						</container>
+
+						<!-- Fee when not playing (loan offers)-->
+						<container id="fnpc" height="36" hidden="true">
+							<layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="0" gap="4"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+							<container height="66">
+								<widget class="negotiation_cash_widget" alignment="horizontal" id="fnpw" have_please_select_string="false" allow_force_selection="false">
+									<translation id="text" translation_id="420722" type="use" value="Unused Monthly Fee[COMMENT: FR 14469; transfer offer; monthly fee paid to loaning club when the player is not playing]"/>
+									<translation id="label_hint" translation_id="469787" type="use" value="A monthly fee to be paid when the player is not playing in the first team[COMMENT: FR 14469; transfer offer; monthly fee paid to loaning club when the player is not playing]"/>
+									<record id="select_event" event_id="cnpc"/>
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+								</widget>
+							</container>
+						</container>
+
+						<!-- Transfer Date -->
+						<container id="tdcn">
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="4" horizontal_inset="0"/>
+
+							<widget class="negotiation_popup_widget"  alignment="horizontal" id="tdtw" have_please_select_string="false" allow_force_selection="false">
+								<translation id="text" translation_id="247986" type="use" value="Transfer Date"/>
+							</widget>
+						</container>
+
+						<!-- Wages -->
+						<container id="wacn" hidden="true">
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="4" horizontal_inset="0"/>
+
+							<widget class="negotiation_popup_widget" alignment="horizontal" id="wagw" have_please_select_string="false" allow_force_selection="false">
+								<translation id="text" translation_id="420694" type="use" value="Playing Wage Percentage[COMMENT: FR 14469; transfer offer; wages paid to loaning club when the player is playing]"/>
+								<translation id="label_hint" translation_id="469785" type="use" value="A proportion of the player's wage to be paid by the loaning club when the player is playing in the first team[COMMENT: FR 14469; transfer offer; wages paid to loaning club when the player is playing]"/>
+							</widget>
+						</container>
+
+						<!-- Wages when not playing (loan offers) -->
+						<container id="wnpc">
+							<global id="hidden" name="is_fmt"/>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="4" horizontal_inset="0"/>
+
+							<widget class="negotiation_popup_widget" alignment="horizontal" id="wnpw" have_please_select_string="false" allow_force_selection="false">
+								<translation id="text" translation_id="420695" type="use" value="Unused Wage Percentage[COMMENT: FR 14469; transfer offer; wages paid to loaning club when the player is not playing]"/>
+								<translation id="label_hint" translation_id="469786" type="use" value="A proportion of the player's wage to be paid by the loaning club when the player is not playing in the first team[COMMENT: FR 14469; transfer offer; wages paid to loaning club when the player is not playing]"/>
+							</widget>
+						</container>
+
+						<!-- Duration -->
+						<container id="lodc">
+							<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+							<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+							<container id="lodu" class="transfer_offer_loan_duration_panel" />
+						</container>
+					</container>
+					
+				</container>
+			</container>
+
+			<!-- offer to clubs -->
+			<container id="otcw" height="170">
+				<layout class="arrange_horizontal_attachment" layout="-1, 3, -1" offset="0" gap="8"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="6" apply_to_children="true"/>
+				<translation id="title" translation_id="386838" type="use" value="Targets[COMMENT: FR 10312; offer player to clubs panel; user selects a list of target clubs when offering a player out]"/>
+
+				<!-- Exclusions -->
+				<widget class="transfer_offer_exclude_clubs_panel" id="excb"/>
+				<widget class="vertical_subtle_divider" navigation_focus_target="false"/>
+
+				<!-- Clubs to target -->
+				<widget class="transfer_offer_target_clubs_panel" id="club"/>
+			</container>
+		</container>
+	</container>
+</panel>

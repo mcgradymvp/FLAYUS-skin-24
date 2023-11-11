@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<colour name="goal_com" red="24" green="36" blue="47" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<boolean id="save_session_state" value="true" />
+
+		<!-- IMPORTANT Need to keep this synced up with number of panels or we won't fill them all, we use this to minimise the amount of data the panel needs to request -->
+		<integer id="number_of_stories_to_request" value="75" />
+		<boolean id="show_daily_news_request" value="true"/>
+		<boolean id="show_related_news" value="true" />
+
+		<!-- Note that the id is important so that the league selector panels have their popups display correctly -->
+		<container class="horizontal_adaptive_container" id="Pnlf" inset="0" gap="0" offset="0">
+
+			<container class="main_box" default_width="-1" minimum_width="600" priority="1">
+				<widget class="formatted_label" id="none" multiline="true" alignment="centre" colour="website text" size="xxlarge" hidden="true">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="10" />
+
+					<!-- Choose string based on object type -->
+					<list id="format">
+						<record value="3">
+							<translation id="format" translation_id="395482" type="use" value="There is currently no news to display for this club.[COMMENT:FR 11005; FM news panel; String displayed when there is not yet any news to display to user]" />
+						</record>
+						<record value="5">
+							<translation id="format" translation_id="395484" type="use" value="There is currently no news to display for this continent.[COMMENT:FR 11005; FM news panel; String displayed when there is not yet any news to display to user]" />
+						</record>
+						<record value="9">
+							<translation id="format" translation_id="395485" type="use" value="There is currently no news to display for this nation.[COMMENT:FR 11005; FM news panel; String displayed when there is not yet any news to display to user]" />
+						</record>
+						<record value="25">
+							<translation id="format" translation_id="395483" type="use" value="There is currently no news to display for this competition.[COMMENT:FR 11005; FM news panel; String displayed when there is not yet any news to display to user]" />
+						</record>
+						<record default_value="true">
+							<translation id="format" translation_id="388376" type="use" value="There is currently no news to display.[COMMENT:FMC competition news; String displayed when there is not yet any news to display to user in the currently selected category]" />
+						</record>
+					</list>
+				</widget>
+              				
+			<container class="scrolling_box">
+				<flags id="scroll_bar_class" value="scroll_bar_vertical_inbox" />
+			    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+          
+                <container id="goal">	     
+		            <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+		            <layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="0" />
+		            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                     
+						<!-- Top story panel + related items -->
+						<container class="competition_news_item_panel" index="0" file="none" height="240">
+							<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+							<!-- Content -->
+							<container width="400">
+								<!-- Dynamic news image -->
+								<container id="CNdi" width="400">
+									<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+									<layout class="centre_in_parent_attachment" alignment="horizontal" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+								</container>
+							</container>
+							
+							<widget class="picture" file="dividers/standard/vertical/line" scale_picture="false" colour="black" width="2"/>
+							<!-- Related news -->
+							<container >
+								<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="6" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+								<!-- Content -->
+								<container class="competition_news_item_panel" index="0" file="none" id="wcon">
+									<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+									<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+									<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+									<!-- Big Story Title -->
+									<container background_colour="title" height="30">
+										<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="4" />
+										<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+										<widget class="label" auto_size="horizontal" colour="black" style="bold" alignment="centre_y" size="xlarge">
+											<translation id="text" translation_id="395390" type="use" value="The Big Story[COMMENT: FR 11005; Competition news panel; panel title for top news story, i.e. the most important one]" />
+										</widget>
+										<!-- Main object link -->
+										<widget class="text" id="brif" auto_size="horizontal" multiline="false" colour="grey3" alignment="centre_y" size="normal"/>
+									</container>
+									<!-- Story title banner-->
+										<widget class="text" id="titl" size="19" style="bold" alignment="left, centre_y" colour="white" multiline="true" auto_size="vertical" auto_size_maximum_height="70"/>
+								</container>
+
+								<!-- Related 1 -->
+								<container class="competition_news_item_panel" file="none" index="0" related_news_index="0" matR="true" height="38" >
+									<layout class="arrange_horizontal_attachment" layout="8,-1" offset="6" gap="8" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+									<!-- Bullet -->
+									<widget class="picture" file="icons/8px/bullet" red_replacement="white" width="8px" image_alignment="centre">
+									</widget>
+									<!-- Story title -->
+									<widget class="text" id="titl" size="normal" style="semi_bold" multiline="true" colour="white" alignment="left,centre_y" >
+									</widget>
+								</container>
+								<!-- Related 2 -->
+								<container class="competition_news_item_panel" file="none" index="0" related_news_index="1" height="38">
+									<layout class="arrange_horizontal_attachment" layout="8,-1" offset="6" gap="8" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+									<!-- Bullet -->
+									<widget class="picture" file="icons/8px/bullet" red_replacement="white" width="8px" image_alignment="centre">
+									</widget>
+									<!-- Story title -->
+									<widget class="text" id="titl" size="normal" style="semi_bold" multiline="true" colour="white" alignment="left,centre_y" >
+									</widget>
+								</container>
+								<!-- Related 3 -->
+								<container class="competition_news_item_panel" file="none" index="0" related_news_index="2" height="38">
+									<layout class="arrange_horizontal_attachment" layout="8,-1" offset="6" gap="8" />
+									<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+									<!-- Bullet -->
+									<widget class="picture" file="icons/8px/bullet" red_replacement="white" width="8px" image_alignment="centre">
+									</widget>
+									<!-- Story title -->
+									<widget class="text" id="titl" size="large" style="semi_bold" multiline="true" colour="white" alignment="left,centre_y" >
+									</widget>
+								</container>
+							</container>
+						</container>
+
+						<container height="180">
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<container class="competition_news_item_panel" file="competition/competition news item large" index="1"/>
+							<container class="competition_news_item_panel" file="competition/competition news item large" index="2"/>
+						</container>
+						<container height="160">
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="3"/>
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="4"/>
+						</container>
+						<container height="160">
+							<attachment class="hide_empty_container_attachment" min_value="1"/>
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="5"/>
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="6"/>
+						</container>
+						<container height="160">
+							<attachment class="hide_empty_container_attachment" min_value="1"/>
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="7"/>
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="8"/>
+						</container>
+						<container height="160">
+							<attachment class="hide_empty_container_attachment" min_value="1"/>
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="9"/>
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="10"/>
+						</container>
+						<container height="160">
+							<attachment class="hide_empty_container_attachment" min_value="1"/>
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="11"/>
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="12"/>
+						</container>
+						<container height="160">
+							<attachment class="hide_empty_container_attachment" min_value="1"/>
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="13"/>
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="14"/>
+						</container>
+						<container height="160">
+							<attachment class="hide_empty_container_attachment" min_value="1"/>
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="15"/>
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="16"/>
+						</container>
+						<container height="160">
+							<attachment class="hide_empty_container_attachment" min_value="1"/>
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="17"/>
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="18"/>
+						</container>
+						<container height="160">
+							<attachment class="hide_empty_container_attachment" min_value="1"/>
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="19"/>
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="20"/>
+						</container>
+						<container height="160">
+							<attachment class="hide_empty_container_attachment" min_value="1"/>
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="21"/>
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="22"/>
+						</container>
+						<container height="160">
+							<attachment class="hide_empty_container_attachment" min_value="1"/>
+							<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="23"/>
+							<container class="competition_news_item_panel" file="competition/competition news item medium" index="24"/>
+					   </container>
+					</container>		
+				  </container>	
+                </container>
+
+			<container class="competition_news_side_panel" id="side" default_width="300" priority="2" />
+
+			<container class="bordered_box" id="sid2" minimum_width="340" priority="3">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<container class="titled_box">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+					<translation id="title" translation_id="395260" type="use" value="Leagues in Focus[COMMENT: FR 11005; title for panel showing overview of leagues from across the game]" />
+
+					<container class="vertical_adaptive_container" id="ocmp" inset="0" gap="10" offset="0" mode="distribute_equally">
+						<container class="competition_news_league_overview_selector_panel" id="lif1" index="0" news="false" minimum_height="250" priority="1" late_loading="true" />
+						<container class="competition_news_league_overview_selector_panel" id="lif2" index="1" news="false" minimum_height="250" priority="2" late_loading="true" />
+						<container class="competition_news_league_overview_selector_panel" id="lif3" index="2" news="false" minimum_height="250" priority="3" late_loading="true" />
+						<container class="competition_news_league_overview_selector_panel" id="lif4" index="3" news="false" minimum_height="250" priority="4" late_loading="true" />
+					</container>
+
+					<widget class="competition_stage_panel" file="none" id="cosg">
+						<boolean id="overview_version" value="true" />
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<container id="stse">
+
+							<!-- bottom row of the stage panel is used to store cup draw buttons -->
+							<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+							<!-- No game panel-->
+							<container id="nots" hidden="true">
+								<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+								<!--spacer-->
+								<container height="10" />
+
+								<widget class="text" id="nost" alignment="centre" spec="text,large" style="semi_bold, embossed" auto_size="vertical" />
+							</container>
+
+							<!-- group box for stage to go into -->
+							<container id="stgb">
+
+								<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+								<!--league stage panel-->
+								<widget class="league_stage_panel" id="lspn" hidden="true" view="oovr" highlight_club="true" league_table_heading_length="0"/>
+
+								<!--cup stage_panel-->
+								<widget class="cup_stage_panel" file="competition/cup overview stage" id="cstp" hidden="true" save_session_state="true" />
+
+								<!--group stage scrolling box (to be filled in code)-->
+								<widget class="scrolling_box" id="gscb" hidden="true" save_session_state="true" />
+							</container>
+
+							<container>
+
+								<layout class="fit_children_attachment" alignment="vertical,extend" offset="0" />
+								<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+								<!-- The exceptions so point deductions in the league etc-->
+								<widget class="table" layout="-1" id="exta" auto_size="vertical" row_height="15" hidden="true" mode="fill_rows" />
+
+							</container>
+
+						</container>
+					</widget>
+
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

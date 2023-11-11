@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+
+
+
+	<layout class="arrange_vertical_attachment" layout="-1, 1" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container class="bordered_box">
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		<container class="vertical_adaptive_container" id="PDvc" inset="0" offset="0" gap="3">
+
+
+
+			<!-- Positions -->
+			<container default_height="252" minimum_height="200" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				<widget class="player_positions_indicator_panel" id="ppi1" file="gunzo/gunzo player positions indicator profile">
+					<translation id="title" translation_id="230082" type="use" value="Positions" />
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+			</container>
+
+
+			<!-- Separator -->
+			<widget class="picture" file="dividers/standard/horizontal/line" height="3" priority="6" image_alignment="centre"/>
+
+
+			<container default_height="-1" minimum_height="50" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				<widget class="player_positions_details_panel" id="ppdp" file="gunzo/gunzo games played in position">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+
+			</container>
+
+
+			<!-- Suitability 
+			<container default_height="-1" minimum_height="50" priority="2">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="player_scout_reports_panel" file="gunzo/gunzo player suitability1" id="ggps">
+
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>-->
+
+
+
+		</container>
+	</container>
+
+
+</panel>

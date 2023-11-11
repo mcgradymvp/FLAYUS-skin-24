@@ -1,0 +1,155 @@
+<panel height="95">
+	<boolean id="should_force_refresh" value="true" />
+	<colour id="budget_info_positive_colour" name="positive" />
+	<colour id="budget_info_zero_colour" name="text" />
+	<colour id="budget_info_negative_colour" name="negative" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_subtle_box" navigation_container="true">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+		</record>
+
+		<container class="horizontal_adaptive_container" layout="-8,-8,-10" inset="0" offset="0" gap="1" draw_vertical_dividers="true">
+
+			<!--Responsibility-->
+			<container class="inner_box_no_margin" appearance="boxes/inner/standard/no margin/paper" minimum_width="200" id="trac" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+
+					<widget class="widget_popup_button" entity_layout_id="at05" id="traR" appearance="buttons/custom/over state only/button" width="170" height="65">
+						<global id="hidden" name="is_fmt"/>
+						<string id="popup_alignment" value="left, bottom" />
+						<string id="widget_type" value="group_responsibility_list_widget" />
+						<record id="widget_properties" file="team/staff responsibility summary popup panel" width="1024" height="600" />
+						<record id="modal_popup_properties" file="modal popup panel auto sized" />
+						<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+						<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+						<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					</widget>
+
+				</container>
+
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="8" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+					<widget class="picture" id="trIc" red_replacement="primary" blue_replacement="secondary" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" width="26" />
+
+					<container wants_mouse_events="false">
+						<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_offset="0" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+						<container wants_mouse_events="false">
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="8" vertical_gap="1"/>
+
+							<widget class="text" auto_size="vertical" colour="text" font="label" alignment="left,centre_y" wants_mouse_events="false" multiline="false">
+								<translation id="text" translation_id="492722" type="use" value="Transfer and Contract Responsibilities[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibilities; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: responsibilities dialog]" />
+							</widget>
+
+							<widget class="text" id="rtxt" auto_size="vertical" style="semi_bold" alignment="left, centre_y" size="large" wants_mouse_events="false" colour="text" />
+
+							<widget class="text" id="stxt" auto_size="vertical" colour="faded text" size="small" alignment="left,centre_y" wants_mouse_events="false" multiline="false" />
+
+						</container>
+
+					</container>
+
+				</container>
+			</container>
+
+			<!--Scouting Centre-->
+			<container class="inner_box_no_margin" appearance="boxes/inner/standard/no margin/paper" minimum_width="200" id="sccc" priority="4">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="8" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+					<widget class="picture" file="icons/custom/icon box/scouting" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" width="26" />
+
+					<container wants_mouse_events="false">
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<string id="skin_style" value="title link" />
+
+						<widget class="text" id="titl" font="label" colour="text" auto_size="vertical" alignment="left,centre_y" wants_mouse_events="false" navigation_focus_target="false">
+						</widget>
+
+						<widget class="link_button" id="lkbt" section="tssc" auto_size="all" alignment="left,centre_y" colour="text" font="label" red_replacement="text" navigation_focus_target="true">
+							<translation id="text" translation_id="447700" type="use" value="Scouting Centre[COMMENT: FR 19770; transfer centre; scouting centre link button text]" />
+						</widget>
+
+						<widget class="text" id="name" auto_size="vertical" colour="text" style="semi_bold" size="large" alignment="left,centre_y" wants_mouse_events="false" navigation_focus_target="false">
+							<record id="object_property" get_property="Pnam" set_property="text" />
+						</widget>
+
+						<widget class="text" id="scrt" auto_size="vertical" colour="text" style="semi_bold" alignment="left,centre_y" size="large" wants_mouse_events="false" navigation_focus_target="false">
+						</widget>
+
+						<widget class="text" id="scst" auto_size="vertical" multiline="true" colour="text" size="small" alignment="left,top" auto_size_maximum_height="33" wants_mouse_events="false" navigation_focus_target="false">
+						</widget>
+
+						<widget class="client_object_property_panel" id="jobw" auto_size="vertical" property="Pcjo" size="small" colour="faded text" alignment="left,top" wants_mouse_events="false" navigation_focus_target="false">
+							<record id="object_property" get_property="Pers" set_property="objt" />
+							<record id="widget_info" auto_size="vertical" />
+						</widget>
+
+					</container>
+				</container>
+			</container>
+
+			<!--Transfer budget-->
+			<container class="inner_box_no_margin" appearance="boxes/inner/standard/no margin/paper" minimum_width="300" id="trbc" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+
+					<widget class="widget_popup_button" id="bact" widget_type="client_object_viewer_xml_panel" file="modal popup panel auto sized" popup_alignment="right,bottom" offset_y="2" appearance="buttons/custom/over state only/button" default_focus="true">
+
+						<record id="widget_properties" file="club/popup budget adjustment panel" width="500" />
+					</widget>
+
+				</container>
+
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="8" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+					<widget class="picture" file="icons/custom/icon box/budget" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" width="26" />
+
+					<container wants_mouse_events="false">
+						<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_offset="0" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+						<container wants_mouse_events="false">
+							<attachment_group class="vertical_arrange" vertical_alignment="middle" />
+
+							<widget class="text" auto_size="vertical" colour="text" font="label" alignment="left,centre_y" wants_mouse_events="false" multiline="true">
+								<translation id="text" translation_id="321077" type="use" value="Transfer Budget Remaining: [COMMENT: player search; displays team's remaining transfer budget]" />
+							</widget>
+
+							<widget class="cash_cell" id="tbva" format="[%cash#1-transferbudget]" auto_size="vertical" font="value" alignment="left, centre_y" wants_mouse_events="false" colour="text" />
+							<widget class="text" id="nxbw" auto_size="vertical" font="label" size="small" alignment="left, centre_y" wants_mouse_events="false" colour="faded text"/>
+						</container>
+
+						<container wants_mouse_events="false">
+							<attachment_group class="vertical_arrange" vertical_alignment="middle" />
+
+							<widget class="text" auto_size="vertical" colour="text" font="label" alignment="left,centre_y" wants_mouse_events="false" multiline="true">
+								<translation id="text" translation_id="321080" type="use" value="Wage Budget Available:" />
+							</widget>
+
+							<widget class="text" id="wbva" auto_size="vertical" font="value" alignment="left, centre_y" wants_mouse_events="false" colour="text" />
+
+						</container>
+
+					</container>
+
+				</container>
+			</container>
+
+		</container>
+	</container>
+</panel>

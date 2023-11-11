@@ -1,0 +1,222 @@
+<panel>
+
+	<!--this list shows the match feed notification type. We need to match the number here with the list of appearances below. Any appearances that don't appear 
+  in this list will use the unchanged main_box appearance on the bordered box 'skbo'.-->
+	<!--enum NOTIFICATION_TYPE
+{
+	NT_NONE = 0,
+	NT_GOAL = 1,
+	NT_OWN_GOAL = 2,
+	NT_DISALLOWED_GOAL = 3,
+	NT_MISSED_PENALTY = 4,
+	NT_FOUL = 5,
+	NT_YELLOW_CARD = 6,
+	NT_RED_CARD = 7,
+	NT_OFFSIDE = 8,
+	NT_ADDED_TIME = 9,
+	NT_IMPORTANT_SCORE = 10,
+	NT_LEAGUE_POSITION_CHANGE = 11,
+	NT_SERIOUS_INJURY = 12,
+	NT_SLIGHT_INJURY = 13,
+	NT_TACTICS_ADVICE = 14,
+	NT_STATS_ADVICE = 15,
+	NT_PERFORMANCE_ADVICE = 16,
+	NT_TEAM_ADVICE = 17,
+  NT_KNOCK = 18,
+	NT_HALF_TIME = 19,
+	NT_EXTRA_TIME_KICK_OFF = 20,
+	NT_HALF_TIME_EXTRA_TIME = 21,
+	NT_FULL_TIME = 22,
+	NT_SUB = 23,
+  NT_TEAM_STAT = 24,
+  NT_PLAYER_STAT = 25
+	NT_MATCH_PLAN_TACTIC_CHANGE = 26
+	NT_MATCH_PLAN_PHILOSPHY_CHANGE = 27
+	NT_MATCH_PLAN_MENTALITY_CHANGE = 28
+	NT_PENALTY_AWARDED = 29
+	NT_TOUCHLINE_SHOUT = 30
+};
+-->
+	<list id="skns">
+		<record id="1" />
+		<record id="2" />
+		<record id="3" />
+		<record id="4" />
+		<record id="5" />
+		<record id="6" />
+		<record id="7" />
+		<record id="8" />
+		<record id="9" />
+		<record id="10" />
+		<record id="11" />
+		<record id="12" />
+		<record id="13" />
+		<record id="14" />
+		<record id="15" />
+		<record id="16" />
+		<record id="17" />
+		<record id="18" />
+		<record id="19" />
+		<record id="20" />
+		<record id="21" />
+		<record id="22" />
+		<record id="23" />
+		<record id="24" />
+		<record id="25" />
+		<record id="26" />
+		<record id="27" />
+		<record id="28" />
+		<record id="29" />
+		<record id="30" />
+	</list>
+
+
+	<boolean id="set_seen_when_shown" value="true"/>
+
+
+	<list id="properties_to_forward">
+		<record get_property="htim" set_property="hidn" target="time"/>
+		<record get_property="hpco" set_property="hidn" target="pcon"/>
+		<record get_property="iapp" set_property="appearance" target="fico"/>
+		<record get_property="shfp" set_property="Shwn" target="fopc"/>
+	</list>
+
+	<!-- There is also a GPU animation setup in code -->
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="main_transparent_box" id="fico" appearance="boxes/custom/match/dugout advice/paper">
+		<attachment_group class="vertical_arrange_autosize"/>
+
+		<!--
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" horizontal_offset="0" vertical_inset="0" />
+			<widget class="icon_button" appearance="" font="title" auto_size="all" alignment="centre" icon="icons/16px/dugout" icon_colour="title" navigation_focus_target="false">
+				<translation id="text" translation_id="516207" type="use" value="The Dugout[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: section title to show the manager instructions that can be given from the dugout/managerial area - subs, tactics etc]" />
+			</widget>
+		</container>-->
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" />
+
+			<container id="fopc" width="120" height="200" hidden="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<widget class="pitch_with_tactics" id="ofpi" vertical="true" pitch_draw_grass="false" player_icon_file="tactics/tactics info panel team report icon only" icon_flags="dont_colour_names,dont_fade_icons" >
+
+				</widget>
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_gap="0" />
+
+				<!--pitch-->
+				<container class="main_box" id="ptcC" width="200">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="preselected_match_chalkboard_panel" id="pitc" height="140" />
+					<widget class="data_analyst_visualisation_widget" id="visW"  height="200" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false"/>
+
+				</container>
+
+				<!--subs-->
+				<widget class="simple_data_list" set_property="objt" id="subC" auto_size="vertical" >
+					<record id="widget_properties" class="property_list_viewer_xml_panel" file="match/match feed item panel subs widget"/>
+				</widget>
+
+				<widget class="table" id="conX" layout="-1,20" auto_size="vertical" auto_size_rows="true">
+				</widget>
+
+				<container>
+
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="8"/>
+
+					<!--event text-->
+					<widget class="text" id="evtx" size="normal" auto_size="vertical" colour="text" alignment="centre"/>
+
+					<!--league table if needed-->
+					<widget class="match_league_table_panel" id="letb" height="100" file="match/match league table panel feed" LeSF="match/match league stage feed" upOn="true" navigation_focus_target="false" navigation_container="false"/>
+
+					<!--score update area-->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="8"/>
+
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-1,35,-1" />
+
+							<widget class="team_button" alignment="right,centre_y" icon_alignment="right" id="homt" auto_size="vertical"/>
+							<widget class="text" id="scor" auto_size="vertical" alignment="centre"/>
+							<widget class="team_button" alignment="left,centre_y" icon_alignment="left" id="awat" auto_size="vertical"/>
+						</container>
+
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-1,-1" horizontal_gap="30"/>
+
+							<container>
+								<attachment_group class="vertical_arrange_autosize"/>
+								<widget class="embeddable_button" id="hspe" info_popup_enabled="false" auto_size="vertical" size="small" show_button_appearance="false" colour="fg alert" navigation_focus_target="false"/>
+							</container>
+
+							<container>
+								<attachment_group class="vertical_arrange_autosize"/>
+								<widget class="embeddable_button" id="aspe" info_popup_enabled="false" auto_size="vertical" size="small" show_button_appearance="false" colour="fg alert" navigation_focus_target="false"/>
+							</container>
+						</container>
+
+					</container>
+
+				</container>
+
+			</container>
+
+		</container>
+		
+		<!--advice-->
+		<widget class="text" id="avtx" size="normal" auto_size="vertical" alignment="centre" colour="fg alert"/>
+
+
+		<!--buttons-->
+		<container>
+			<attachment_group class="horizontal_arrange_wrapped" horizontal_alignment="middle" horizontal_offset="0" vertical_inset="0">
+				<global id="horizontal_gap" name="ui.button_row_gap" />
+			</attachment_group>
+
+			<widget class="primary_icon_button" id="but1" auto_size="horizontal" default_focus="true" controller_button="y_button"/>
+			<widget class="button" id="but2" auto_size="horizontal" />
+
+			<container>
+				<attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="middle" horizontal_offset="0" vertical_inset="0">
+					<global id="horizontal_gap" name="ui.split_button_row_gap" />
+				</attachment_group>
+
+				<widget class="icon_button" id="but3" auto_size="horizontal" controller_button="b_button"/>
+				<widget class="popup_button" id="but4" fixed="true" auto_size="all" appearance="buttons/standard/split/right/button" />
+
+			</container>
+
+
+
+			<!--advice has been taken picture-->
+			<widget class="picture" id="adtk" width="32" image_alignment="centre" file="icons/16px/tick"/>
+		</container>
+
+
+	</container>
+
+	<!--person/role/time-->
+	<container id="pcon">
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend"/>
+
+		<!--person/role-->
+		<widget class="object_portrait_picture" id="PPic" width="20" height="20">
+			<boolean id="scale_picture" value="true" />
+			<boolean id="keep_aspect_ratio" value="true" />
+			<flags id="image_alignment" value="centre" />
+		</widget>
+		<widget class="text" id="Pers" font="title" size="small" auto_size="all" colour="text"/>
+
+		<widget class="text" id="time" alignment="right" size="small" colour="faded text" auto_size="vertical" />
+	
+	</container>
+
+</panel>

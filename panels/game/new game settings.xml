@@ -1,0 +1,438 @@
+<panel save_default_state="true">
+	<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<!--header with selected team in (can be hidden)-->
+	<container class="new_game_settings_panel_header" id="head" height="82" />
+
+	<record id="recommendation_icon_properties">
+		<record id="primary_icon_properties" red_replacement="title" />
+	</record>
+
+	<!--most of the changeable info-->
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1, 300" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<!--leagues selected-->
+		<container draw_horizontal_dividers="true">
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0">
+				<global id="gap" name="ui.main_box_gap" />
+			</layout>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<!--list of selected leagues-->
+			<container class="main_box">
+				<layout class="arrange_vertical_attachment" layout="24, 70, -1, 32" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="text" font="title" size="xlarge" colour="title">
+					<translation id="text" translation_id="420643" type="use" value="Active Leagues[COMMENT: game information screen; details of the nations running in a saved game]" />
+				</widget>
+
+				<!--active leagues explanation text-->
+				<widget class="text" multiline="true">
+					<translation id="text" translation_id="420644" type="use" value="Leagues that are active contain more players and are simulated in higher detail, allowing you to see more stats. The more leagues that are set as active, the longer the wait between turns. You are able to change the active leagues later by choosing the 'Add/Remove Leagues' option from the FM Menu.[COMMENT: game information screen; explanatory text, cannot be feminised]" />
+				</widget>
+
+				<container class="scrolling_box" navigation_container="true">
+					<!--list of selected nations and leagues-->
+					<widget class="table" id="natn" mode="keyboard, fill_rows, stripe_rows" layout="-3, -1, -2, 20" row_spacing="0" row_height="32" auto_size="vertical">
+
+						<!-- headings -->
+						<list id="headings">
+							<record alignment="left, centre_y">
+								<translation id="hint" translation_id="420645" type="use" value="The Active Leagues in a given nation will be the tiers in which you will be able to manage.[COMMENT: preferences.xml, use top 10 matches as string has been slightly modified, cannot be feminised]" />
+								<translation id="text" translation_id="420646" type="use" value="Active Nations &amp; Leagues[COMMENT: FR15522 - title for a table header showing which nations and leagues are selected, you don't have to use the ampersand if it's not your convention but use appropriate character references as done here please]" />
+							</record>
+							<record alignment="left, centre_y">
+								<translation id="hint" translation_id="320483" type="use" value="Leagues must be playable in order to manage a team[COMMENT: preferences.xml, hint string]" />
+								<translation id="text" translation_id="256712" type="use" value="Mode[COMMENT: Start New Game screen: league mode header in column where user picks Playable or View-Only]" />
+							</record>
+							<record alignment="left, centre_y">
+								<translation id="text" translation_id="420647" type="use" value="Reason For Recommendation[COMMENT: FR15522 - title for a table header showing why certain nations and leagues are pre-selected]" />
+							</record>
+						</list>
+
+						<record id="default_properties">
+							<flags id="alignment" value="left, centre_y" />
+						</record>
+
+						<list id="column_widget_properties">
+							<record index="0" icon_enabled="true" primary_use_icon_app_rep_colour="false" />
+							<record index="1" />
+							<record index="2" colour="text" />
+							<record index="3">
+								<flags id="column_alignment" value="centre" />
+								<string id="icon" value="icons/16px/remove from list" />
+								<boolean id="show_button_appearance" value="false" />
+								<translation id="hint" translation_id="292627" type="use" value="Remove Nation[COMMENT: nation selection panel; hint text for button for removing a nation]" />
+							</record>
+						</list>
+
+						<list id="column_table_properties">
+							<record index="0" id="Clal" />
+							<record index="1" id="Cexd" />
+							<record index="2" sort_disabled="true" id="Crec" />
+							<record index="3" sort_disabled="true" id="Crem" />
+						</list>
+					</widget>
+				</container>
+
+				<!--buttons-->
+				<container navigation_container="true">
+					<layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0" gap="4" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<!--load/save game setups-->
+					<widget class="popup_button" id="gmSU" auto_size="horizontal" fixed="true">
+						<translation id="text" translation_id="466426" type="use" value="Game Setup[COMMENT: FR 23149 - popup button to allow the user to choose to load or save their game setup]" />
+						<list id="items">
+							<record id="LGsu" event_id="LGsu">
+								<translation id="text" translation_id="393319" type="use" value="Load...[COMMENT: complement to string #233104 - menu item for loading a file]" />
+							</record>
+							<record id="SGsu" event_id="SGsu">
+								<translation id="text" translation_id="247112" type="use" value="Save As..." />
+							</record>
+							<record id="----" />
+							<record id="rece">
+								<translation id="text" translation_id="249632" type="use" value="Recent[COMMENT: file dialogs: recent folder list: menu label]" />
+								<list id="items">
+								</list>
+							</record>
+						</list>
+					</widget>
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="4" />
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<!--button to bring up the add nations dialog-->
+						<widget class="icon_button" id="adrm" click_event="adrm" auto_size="horizontal" icon="icons/16px/edit">
+							<translation id="text" translation_id="319433" type="use" value="Add/Remove Leagues[COMMENT: competition detail level option on game menu]" />
+						</widget>
+					</container>
+				</container>
+			</container>
+
+			<!-- box containing options-->
+			<container class="collapsable_box" height="440" collapsed="false" save_default_state="true" save_session_state="true" allow_single_bar_click="true" appearance="boxes/main/standard/paper" navigation_container="true">
+				<translation id="text" translation_id="308067" type="use" value="Advanced Options[COMMENT: new game settings panel; title]" />
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" horizontal_alignment="horizontal" vertical_offset="4" horizontal_inset="4" />
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" horizontal_alignment="horizontal" />
+
+					<!-- table containing options -->
+					<widget class="table" id="dbop" mode="keyboard, fill_rows, stripe_rows" auto_size_rows="true" layout="-1, -1" auto_size="vertical">
+						<boolean id="fixed_size_rows" value="false" />
+
+						<record id="default_properties">
+							<flags id="alignment" value="left, centre_y" />
+						</record>
+
+						<list id="column_table_properties">
+							<record index="0" sort_disabled="true" />
+							<record index="1" sort_disabled="true" />
+						</list>
+						<container row="0" col="0" height="30">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="left, extend" />
+
+							<widget class="check_box" id="urpn" click_event="urpn" selection="1" auto_size="horizontal" />
+							<widget class="info_icon_hint_text" colour="text" auto_size="horizontal">
+								<translation id="text" translation_id="365450" type="use" value="Use Fake Players and Staff[COMMENT: new game settings, use top ten matches, just adding the staff bit to clarify they're also falsified]" />
+								<record id="info_popup_hint">
+									<translation id="title" translation_id="365450" type="use" value="Use Fake Players and Staff[COMMENT: new game settings, use top ten matches, just adding the staff bit to clarify they're also falsified]" />
+									<translation id="text" translation_id="365306" type="use" value="Select this option to use a database consisting of entirely generated players and staff[COMMENT: new game settings hint, use top ten matches, just adding the staff bit to clarify they're also falsified]" />
+								</record>
+							</widget>
+						</container>
+
+						<container row="1" col="0" height="30">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="left, extend" />
+
+							<widget class="check_box" id="urfx" click_event="urfx" selection="1" auto_size="horizontal" />
+							<widget class="info_icon_hint_text" colour="text" auto_size="horizontal">
+								<translation id="text" translation_id="348046" type="use" value="Do not use Real Fixtures[COMMENT: new game settings, reversing the way we present additional options so they're 'turn on' rather than 'turn off']" />
+								<record id="info_popup_hint">
+									<translation id="title" translation_id="348046" type="use" value="Do not use Real Fixtures[COMMENT: new game settings, reversing the way we present additional options so they're 'turn on' rather than 'turn off']" />
+									<translation id="text" translation_id="348144" type="use" value="If you don't want to use a competition's real fixture list (when available) and instead use an entirely generated schedule, tick this option[COMMENT: hint text for start new game option, cannot feminise at this stage]" />
+								</record>
+							</widget>
+						</container>
+
+						<container row="2" col="0" height="30">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="left, extend" />
+
+							<widget class="check_box" id="aknp" click_event="aknp" selection="1" auto_size="horizontal" />
+							<widget class="info_icon_hint_text" colour="text" auto_size="horizontal">
+								<translation id="text" translation_id="348044" type="use" value="Do not Add Key Staff[COMMENT: new game settings, reversing the way we present additional options so they're 'turn on' rather than 'turn off']" />
+								<record id="info_popup_hint">
+									<translation id="title" translation_id="348044" type="use" value="Do not Add Key Staff[COMMENT: new game settings, reversing the way we present additional options so they're 'turn on' rather than 'turn off']" />
+									<translation id="text" translation_id="348491" type="use" value="When disabled, this option adds key backroom staff (such as Assistant Managers and Coaches) to teams which do not have them. It is chiefly beneficial when running leagues which have been created or added through the Editor when the teams included may lack staff. If you do not want this to occur, please tick this box[COMMENT: Tooltip on check box on start new game screen, FR 6097, cannot be feminised]" />
+								</record>
+							</widget>
+						</container>
+
+						<container row="3" col="0" height="30">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="left, extend" />
+
+							<widget class="check_box" id="apet" click_event="apet" selection="1" auto_size="horizontal" />
+							<widget class="info_icon_hint_text" colour="text" auto_size="horizontal">
+								<translation id="text" translation_id="351892" type="use" value="Add Players to Playable Teams[COMMENT: new game settings]" />
+								<record id="info_popup_hint">
+									<translation id="title" translation_id="351892" type="use" value="Add Players to Playable Teams[COMMENT: new game settings]" />
+									<translation id="text" translation_id="352066" type="use" value="If playable teams are unable to fulfil particular squad requirements at the start of a new game, ticking this box will ensure that their playing squad will be filled out with sufficient personnel. It is chiefly beneficial when running leagues which have been created or added through the Editor and the teams included may lack a full complement of players.[COMMENT: Tooltip on check box on start new game screen, FR 6098]" />
+								</record>
+							</widget>
+						</container>
+
+						<container row="0" col="1" height="30">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="left, extend" />
+
+							<widget class="check_box" id="dfwb" click_event="dfwb" selection="1" auto_size="horizontal" />
+							<widget class="info_icon_hint_text" colour="text" auto_size="horizontal">
+								<translation id="text" translation_id="466427" type="use" value="Disable First Window Transfer Activity[COMMENT: new game settings, reversing the way we present additional options so they're 'turn on' rather than 'turn off']" />
+								<record id="info_popup_hint">
+									<translation id="title" translation_id="466427" type="use" value="Disable First Window Transfer Activity[COMMENT: new game settings, reversing the way we present additional options so they're 'turn on' rather than 'turn off']" />
+									<translation id="text" translation_id="466428" type="use" value="Football Manager typically starts a new game in the same pre-season that just happened in the real world. Therefore, the database reflects this in squad lists and team transfer budgets. By disallowing transfer activity in the first transfer window of a saved game, the saved game will reflect the real world more accurately than if the save allows teams to make transfers they didn't in real life. Simply put, this is another option to add to the realism of your saved game.[COMMENT: Tooltip on check box on start new game screen, FR 6099]" />
+								</record>
+							</widget>
+						</container>
+
+						<container row="4" col="0" height="30" id="dfsb" hidden="true">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="left, extend" />
+
+							<widget class="check_box" id="dfsc" click_event="dfsc" selection="1" auto_size="horizontal" />
+							<widget class="info_icon_hint_text" colour="text" auto_size="horizontal">
+								<string id="text" value="Disable First Season Transfer Activity(Debug Only)" />
+								<record id="info_popup_hint">
+									<string id="title" value="Disable First Season Transfer Activity (Debug only)" />
+									<string id="text" value="Football Manager typically starts a new game in the same pre-season that just happened in the real world. Therefore, the database reflects this in squad lists and team transfer budgets. By disallowing transfer activity in the first season of a saved game, the saved game will reflect the real world more accurately than if the save allows teams to make transfers they didn't in real life. Simply put, this is another option to add to the realism of your saved game." />
+								</record>
+							</widget>
+						</container>
+
+						<container row="1" col="1" height="30">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="left, extend" />
+
+							<widget class="check_box" id="epam" click_event="epam" selection="1" auto_size="horizontal" />
+							<widget class="info_icon_hint_text" colour="text" auto_size="horizontal">
+								<translation id="text" translation_id="348033" type="use" value="Disable Player Attribute Masking[COMMENT: new game settings, reversing the way we present additional options so they're 'turn on' rather than 'turn off']" />
+								<record id="info_popup_hint">
+									<translation id="title" translation_id="348033" type="use" value="Disable Player Attribute Masking[COMMENT: new game settings, reversing the way we present additional options so they're 'turn on' rather than 'turn off']" />
+									<translation id="text" translation_id="347987" type="use" value="Attribute masking is a concept where certain attributes (or in some cases all) are not visible to the human manager because Football Manager assumes a manager will not necessarily know everything about every player in the world. These attributes can be revealed through scouting or simply by interacting with the player in various ways; he may be an opponent on a team you've just faced, for example, or simply play in the same division (and therefore you are aware of him to some extent). If you wish to simply display all information and attributes from the off, leave this option unticked.[COMMENT: Tooltip on check box on start new game screen, FR 6100]" />
+								</record>
+							</widget>
+						</container>
+
+						<container row="2" col="1" height="30">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="left, extend" />
+
+							<widget class="check_box" id="uman" click_event="uman" selection="1" auto_size="horizontal" />
+							<widget class="info_icon_hint_text" colour="text" auto_size="horizontal">
+								<translation id="text" translation_id="466429" type="use" value="Prevent control of teams with managers in place[COMMENT: new game settings, revision to ID 348263]" />
+								<record id="info_popup_hint">
+									<translation id="title" translation_id="466429" type="use" value="Prevent control of teams with managers in place[COMMENT: new game settings, revision to ID 348263]" />
+									<translation id="text" translation_id="348140" type="use" value="If selected, it will not be possible to assume control of a team that already has a manager when adding a new human manager.[COMMENT: Tooltip on check box on start new game screen]" />
+								</record>
+							</widget>
+						</container>
+
+						<container row="3" col="1" height="30">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="left, extend" />
+
+							<widget class="check_box" id="pige" click_event="pige" selection="1" auto_size="horizontal" />
+							<widget class="info_icon_hint_text" colour="text" auto_size="horizontal">
+								<translation id="text" translation_id="357270" type="use" value="Prevent use of the In-Game Editor[COMMENT: new game settings, the in-game editor will not be allowed to use at all for this game]" />
+								<record id="info_popup_hint">
+									<translation id="title" translation_id="357270" type="use" value="Prevent use of the In-Game Editor[COMMENT: new game settings, the in-game editor will not be allowed to use at all for this game]" />
+									<translation id="text" translation_id="357231" type="use" value="If selected, it will not be possible to use the In-Game Editor at all in this game.[COMMENT: Tooltip on check box on start new game screen]" />
+								</record>
+							</widget>
+						</container>
+					</widget>
+				</container>
+			</container>
+		</container>
+
+		<!-- summary of player counts and computer speed  - real life transfers version -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top, fill" vertical_offset="12" vertical_gap="12" horizontal_alignment="horizontal" />
+			<string id="create_if" value="can_have_real_life_transfers" />
+
+			<!--player count/game speed-->
+			<container class="main_subtle_box" navigation_container="true">
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="top, extend" vertical_gap="12" horizontal_alignment="horizontal" />
+
+				<!--player count-->
+				<container id="coun">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="text" font="label" colour="accent" auto_size="vertical">
+						<translation id="text" translation_id="292332" type="use" value="Approximate Player Count[COMMENT: nation league selection panel; label showing approximate number of players]" />
+					</widget>
+					<widget class="subtle_popup_button" appearance="buttons/subtle/flex/button" id="dbsz" sele="dbsz" multiline="true" fixed="true" height="56" size="large">
+						<list id="items">
+							<record id="0">
+								<translation id="name" translation_id="255041" type="use" value="Small[COMMENT: database size menu item text]" />
+							</record>
+							<record id="1">
+								<translation id="name" translation_id="255042" type="use" value="Medium[COMMENT: database size menu item text]" />
+							</record>
+							<record id="2">
+								<translation id="name" translation_id="255043" type="use" value="Large[COMMENT: database size menu item text]" />
+							</record>
+							<record id="----" />
+							<record id="4">
+								<translation id="name" translation_id="348764" type="use" value="Advanced...[COMMENT: database size menu item text]" />
+							</record>
+						</list>
+						<translation id="hint" translation_id="320485" type="use" value="Customise the number of players loaded into the game[COMMENT: preferences.xml, hint string for database size options]" />
+					</widget>
+					<widget class="text" id="plce" alignment="centre" auto_size="vertical" />
+				</container>
+
+				<widget class="horizontal_divider" />
+
+				<!-- game speed -->
+				<container id="spee">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="text" font="label" colour="accent" auto_size="vertical">
+						<translation id="text" translation_id="292330" type="use" value="Estimated Game Speed[COMMENT: nation league selection panel; label for showing how fast the game will be]" />
+					</widget>
+					<widget class="estimated_game_speed_stars_label" id="gmsp" large="true" alignment="left" auto_size="vertical" />
+					<widget class="text" id="gmst" colour="faded text" multiline="true" auto_size="vertical" />
+				</container>
+			</container>
+
+			<container class="main_subtle_box" id="stdt" navigation_container="true">
+				<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_gap="12" horizontal_alignment="horizontal" />
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<!-- start date -->
+					<widget class="text" alignment="left" font="label" colour="accent" auto_size="vertical">
+						<translation id="text" translation_id="247399" type="use" value="Game Start Date" />
+					</widget>
+					<widget class="popup_button" id="gmsd" sele="gmsd" row="0" col="1" fixed="true" multiline="true" auto_size="vertical" primary_use_icon_app_rep_colour="false">
+						<flags id="appearance" value="buttons/subtle/flex/button" />
+						<translation id="hint" translation_id="320484" type="use" value="Choose the date the game will start on[COMMENT: preferences.xml, hint string]" />
+					</widget>
+
+					<widget class="text" id="gsdt" colour="faded text" alignment="left, top" auto_size="vertical" hidden="true"/>
+				</container>
+
+				<!-- game mode -->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="top, extend" vertical_offset="0" vertical_gap="12" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="horizontal_divider" />
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="text" alignment="left" font="label" colour="accent" auto_size="vertical">
+							<translation id="text" translation_id="594824" type="use" value="Choose A Game Mode[COMMENT: AREA: Start new game; SUB-AREA: Team choice dialog; FR-BN: FM-23921; NOTE: Button label to progress to game mode choice when starting a new career]" />
+						</widget>
+
+						<widget class="popup_button" id="CHgm" select_event="CHgm" fixed="false" appearance="buttons/subtle/flex/button" auto_size="all">
+							<translation id="hint" translation_id="594807" type="use" value="Choose which game mode you would like to add to your career game setup.[COMMENT: AREA: Start new game; SUB-AREA: Choose game mode dialog; FR-BN: FM-23921; NOTE: Description text for choose game mode dialog]" />
+							<list id="items">
+								<record id="0">
+									<translation id="text" translation_id="594817" type="use" value="Original[COMMENT: AREA: Start new game; SUB-AREA: Choose game mode dialog; FR-BN: FM-23921; NOTE: Game mode type title]" />
+								</record>
+								<record id="1">
+									<translation id="text" translation_id="594818" type="use" value="Real World[COMMENT: AREA: Start new game; SUB-AREA: Choose game mode dialog; FR-BN: FM-23921; NOTE: Game mode type title]" />
+								</record>
+								<record id="2">
+									<translation id="text" translation_id="594819" type="use" value="Your World[COMMENT: AREA: Start new game; SUB-AREA: Choose game mode dialog; FR-BN: FM-23921; NOTE: Game mode type title]" />
+								</record>
+							</list>
+						</widget>
+					</container>
+
+					<widget class="text" id="mdtx" colour="faded text" alignment="left, top" auto_size="vertical" />
+
+					<container id="Warn" hidden="true">
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left, extend" horizontal_gap="8" />
+
+						<widget class="picture" file="icons/16px/warning" width="16" height="16" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" red_replacement="title" blue_replacement="bg" />
+						<widget class="text" colour="title" alignment="left, centre_y" auto_size="vertical">
+							<translation id="text" translation_id="597598" type="use" value="If this mode is selected then no other transfers aside from those that occurred in real life will occur for the first season in both MLS (United States) and A-League (Australia).[COMMENT: AREA: Start new game; SUB-AREA: Choose game mode dialog; FR-BN: FM-23921; NOTE: Warning string for real life transfers mode when playing in Australia or MLS]" />
+						</widget>
+					</container>
+				</container>
+			</container>
+		</container>
+
+		<!-- summary of player counts and computer speed - no real life transfers -->
+		<container class="main_subtle_box" id="cofi" width="300">
+			<layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="12" gap="12" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="12" />
+			<string id="remove_if" value="can_have_real_life_transfers" />
+
+			<!--player count/game speed-->
+			<container navigation_container="true">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--player count-->
+				<container id="coun">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="text" font="title" colour="accent" auto_size="vertical">
+						<translation id="text" translation_id="292332" type="use" value="Approximate Player Count[COMMENT: nation league selection panel; label showing approximate number of players]" />
+					</widget>
+					<widget class="subtle_popup_button" appearance="buttons/subtle/flex/button" id="dbsz" sele="dbsz" multiline="true" fixed="true" height="60" size="large">
+						<list id="items">
+							<record id="0">
+								<translation id="name" translation_id="255041" type="use" value="Small[COMMENT: database size menu item text]" />
+							</record>
+							<record id="1">
+								<translation id="name" translation_id="255042" type="use" value="Medium[COMMENT: database size menu item text]" />
+							</record>
+							<record id="2">
+								<translation id="name" translation_id="255043" type="use" value="Large[COMMENT: database size menu item text]" />
+							</record>
+							<record id="----" />
+							<record id="4">
+								<translation id="name" translation_id="348764" type="use" value="Advanced...[COMMENT: database size menu item text]" />
+							</record>
+						</list>
+						<translation id="hint" translation_id="320485" type="use" value="Customise the number of players loaded into the game[COMMENT: preferences.xml, hint string for database size options]" />
+					</widget>
+					<widget class="text" id="plce" alignment="centre" auto_size="vertical" />
+				</container>
+
+				<container height="10" />
+
+				<!--game speed-->
+				<container id="spee">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="text" font="title" colour="accent" auto_size="vertical">
+						<translation id="text" translation_id="292330" type="use" value="Estimated Game Speed[COMMENT: nation league selection panel; label for showing how fast the game will be]" />
+					</widget>
+					<widget class="estimated_game_speed_stars_label" id="gmsp" auto_size="vertical" alignment="left" />
+					<widget class="text" id="gmst" auto_size="vertical" multiline="true" size="small" colour="faded text" />
+				</container>
+			</container>
+
+			<!--start date-->
+			<container id="stdt" navigation_container="true">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="text" alignment="left" font="title" colour="accent" auto_size="vertical">
+					<translation id="text" translation_id="247399" type="use" value="Game Start Date" />
+				</widget>
+				<widget class="popup_button" id="gmsd" sele="gmsd" row="0" col="1" fixed="true" multiline="true" auto_size="vertical" primary_use_icon_app_rep_colour="false">
+					<flags id="appearance" value="buttons/subtle/flex/button" />
+					<translation id="hint" translation_id="320484" type="use" value="Choose the date the game will start on[COMMENT: preferences.xml, hint string]" />
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

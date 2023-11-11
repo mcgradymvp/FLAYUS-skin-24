@@ -1,0 +1,25 @@
+<panel>
+
+	<flags id="styl" value="no_border, darkened" />
+
+	<attachment_group class="vertical_arrange_autosize"/>
+
+	<container id="cmpc" tran="1" height="30">
+
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="picture" file="boxes/custom/match/commentary/bar" id="cmbi" rthr="85" colour="neutral commentary background">
+	     		 <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	   		 </widget>
+
+			<!-- commentary widget -->
+			<widget class="label" id="cmnt" hidden="true" font="bold">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,2,2" />
+
+				<translation id="text" value="" />
+				<flags id="algn" value="centre" />
+				<colour id="colour" name="text" />
+			</widget>
+
+	</container>
+</panel>

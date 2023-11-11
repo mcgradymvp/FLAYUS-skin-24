@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+  <layout class="arrange_horizontal_attachment" layout="-1,-2"/>
+  <layout class="stick_to_sides_attachment" alignmnet="vertital" inset="0" apply_to_children="true"/>
+
+  <widget class="picture" id="picM" scale_picture="true" keep_aspect_ratio="true">
+		<flags id="image_alignment" value="left" />
+    <attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+      <list id="value">
+        <boolean value="false" />
+      </list>
+    </attachment>
+    <record id="object_property">
+      <list id="get_properties">
+        <record>
+          <integer id="get_property" value="fcgn" />
+          <!--Facegen data request-->
+        </record>
+        <record>
+          <integer id="get_property" value="Pfke" />
+          <!--Fake name request-->
+        </record>
+        <record>
+          <integer id="get_property" value="prpc" />
+          <integer id="set_property" value="valu" />
+        </record>
+      </list>
+    </record>
+  </widget>
+    
+    <container>
+      <layout class="arrange_vertical_attachment" layout="19,19,19" offset="8" gap="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<widget class="person_button" id="perM" size="xsmall" style="bold" alignment="left,can_scale">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="valu" />
+				</record>
+			</widget>
+
+      <widget class="client_object_property_panel" property="PSag" size="small" alignment="left,can_scale" style="bold" colour="faded text">
+        <record id="widget_properties">
+          <translation id="format" translation_id="242551" type="use" value="[%number#1] years old" />
+        </record>
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+      </widget>
+
+      <widget class="client_object_property_panel" property="Pnat" size="small" alignment="left,can_scale" icon_enabled="true" style="bold" colour="faded text">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </widget>
+   </container>   
+
+</panel>

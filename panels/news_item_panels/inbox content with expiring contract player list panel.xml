@@ -1,0 +1,86 @@
+﻿<panel>
+	 <attachment class="test_screen_size_attachment" alignment="horizontal" min_value="0" max_value="1600" set_property="suml" true_value="true" false_value="false" id="smh1"/>
+	
+	<attachment_group class="vertical_arrange"  vertical_alignment="top,extend" horizontal_inset="0" />	
+	
+
+	<boolean id="check_for_multiple_requests" value="true"/>
+	
+	<!-- main body text -->
+	<widget class="inbox_body_text" id="bdtx" colour="inbox_text" auto_size="vertical"/>
+
+	<container id="icbx" class="inner_subtle_box" appearance="boxes/custom/inbox attachment/personal/paper">
+		
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" horizontal_inset="0" />
+
+		<widget class="table" id="list" layout="-2, 120, 120, 90, 90, 90, -2, 140" mode="fill_rows, stripe_rows, printable, keyboard, dont_ask_for_focus, show_bullets, select_rows, select_multiple" select_event="sele" fixed_size_rows="true" row_height="55" fixed_row_height="25" column_spacing="8" navigation_container="true">
+			<list id="headings">
+				<record index="0" alignment="left, centre_y">
+					<translation id="text" translation_id="227966" type="use" value="Player"/>
+				</record>
+				<record index="1" alignment="left, centre_y">
+					<translation id="text" translation_id="227784" type="use" value="Expires"/>
+				</record>
+				<record index="2" alignment="left, centre_y">
+					<translation id="text" translation_id="423877" type="use" value="Playing Time[COMMENT: FR 14013, contract promise type]"/>
+				</record>
+				<record index="3" alignment="left, centre_y">
+					<translation id="text" translation_id="227799" type="use" value="Wage"/>
+				</record>
+				<record index="4" alignment="left, centre_y">
+					<translation id="text" translation_id="314426" type="use" value="Ability[COMMENT: player popup info panel - scout current ability rating]"/>
+				</record>
+				<record index="5" alignment="left, centre_y">
+					<translation id="text" translation_id="314427" type="use" value="Potential[COMMENT: player popup info panel - scout potential ability rating]"/>
+				</record>
+				<record index="6" alignment="left, centre_y">
+				</record>
+				<record index="7" alignment="left, centre_y">
+					<translation id="text" translation_id="491968" type="use" value="Recommended Action[COMMENT: AREA: Inbox; SUB-AREA: Contract expiting news item; FR-BN: 13862; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: column heading for indicating what action should be taken about a players expiring contract]"/>
+				</record>
+			</list>
+
+			<!-- use the col id for the property to view -->
+			<list id="column_table_properties">
+				<record index="0" id="Pnam" auto_hide_priority="0" minimum_width="180"/>
+				<record index="1" auto_hide_priority="1"/>
+				<record index="2" auto_hide_priority="500"/>
+				<record index="3" auto_hide_priority="400"/>
+				<record index="4" auto_hide_priority="200"/>
+				<record index="5" auto_hide_priority="200"/>
+				<record index="6" auto_hide_priority="0" minimum_width="160"/>
+				<record index="7" auto_hide_priority="0" />
+			</list>
+
+			<list id="column_widget_properties">
+				<record index="0" alignment="left, centre_y"/>
+				<record index="1" alignment="left, centre_y"/>
+				<record index="2" alignment="left, centre_y"/>
+				<record index="3" alignment="left, centre_y"/>
+				<record index="4" alignment="left, centre_y" navigation_focus_target="false"/>
+				<record index="5" alignment="left, centre_y" navigation_focus_target="false"/>
+				<record index="6" alignment="left, centre_y"/>
+				<record index="7" alignment="left, centre_y"/>
+			</list>
+		</widget>
+
+		<container id="actn" navigation_container="true">
+			<layout class="fit_children_attachment" alignment="vertical, extend" gap="0" offset="0"/>
+			<layout class="arrange_horizontal_attachment" alignment="right" wrap="true" gap="0" offset="0"/>
+
+			<!--set for release button-->
+			<widget class="icon_button" id="spfr" click_event="spfr" auto_size="all" disabled="true" controller_button="x_button">
+				<translation id="text" translation_id="334040" type="use" value="Set For Release[COMMENT: sets the player to be released at the end of his contract]"/>
+			</widget>
+
+			<!--DoF button-->
+			<widget class="icon_button" id="sdof" click_event="sdof" auto_size="all" disabled="true" controller_button="y_button">
+				<translation id="text" translation_id="491967" type="use" value="Instruct DoF to Negotiate Renewal[COMMENT: AREA: Inbox; SUB-AREA: Contract expiting news item; FR-BN: 13862; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: button label for requesting the director of football negotiates contract renewals on your behalf]"/>
+			</widget>
+
+			<widget class="icon_button" id="apal" click_event="apal" auto_size="all">
+				<translation id="text" translation_id="491969" type="use" value="Apply Recommended Action To All[COMMENT: AREA: Inbox; SUB-AREA: Contract expiting news item; FR-BN: 13862; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: button label for requesting the recommended contract renewal action is applied to all players in the list]"/>
+			</widget>
+		</container>
+	</container>
+</panel>

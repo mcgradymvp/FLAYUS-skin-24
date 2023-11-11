@@ -1,0 +1,30 @@
+﻿<panel>
+	<container class="vertical_adaptive_container" layout="-1,-1,-6" offset="0" id="trnC">
+
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<!-- Intro Information -->
+		<widget class="text" id="trpT" auto_size="vertical" multiline="true" />
+		<container height="100">
+			<attachment_group class="vertical_arrange" vertical_layout="20,-1" vertical_gap="-2" />
+			<widget class="text" font="title">
+				<translation id="text" translation_id="466393" type="use" value="Avg. Training Rating[COMMENT: a rating of how well the team is getting on in training on average]" />
+			</widget>
+			<widget class="formatted_label" format="[%fraction#1-2.2]" id="avtr" size="xxlarge" />
+		</container>
+
+		<container height="380">
+			<attachment_group class="vertical_arrange" vertical_layout="-1,1,-1" vertical_offset="0" vertical_gap="8"/>
+
+			<widget class="club_training_performers_list_widget" file="widgets/club training performers list widget5" id="best" />
+			<widget class="horizontal_subtle_divider"/>
+			<widget class="club_training_performers_list_widget" file="widgets/club training performers list widget5" id="wrst" is_worst="true" />
+		</container>
+	</container>
+
+	<widget class="text" id="noTi" font="title" hidden="true" alignment="centre">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<translation id="text" translation_id="242522" type="use" value="N/A" />
+	</widget>
+</panel>

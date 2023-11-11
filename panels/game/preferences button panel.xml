@@ -1,0 +1,38 @@
+<panel>
+
+  <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend"/>
+
+
+  <widget class="reset_popup_button" id="mRsp" auto_size="all" >
+  </widget>
+	
+  <widget class="link_button" id="dbgP" auto_size="all">
+	<string id="text" value="Debug Preferences" />
+  </widget>
+
+  <container>
+
+  <attachment_group class="button_arrangement_right" />
+  
+    <widget class="primary_icon_tick_button" id="conf" click_event="CnfR" controller_button="y_button">
+      <translation id="text" translation_id="229918" type="use" value="Confirm" />
+      <flags id="disa" value="true" />
+    </widget>
+    <widget class="button" id="rels" click_event="CnfR" auto_size="all">
+      <translation id="text" translation_id="312731" type="use" value="Reload Skin[COMMENT: preferences screen; reloads the skin]" />
+      <flags id="hidden" value="true" />
+    </widget>
+    <widget class="icon_button" id="sdef" click_event="Undo" auto_size="all"  controller_button="x_button">
+      <translation id="text" translation_id="247978" type="use" value="Undo Changes" />
+      <flags id="disa" value="true" />
+    </widget>
+    <widget class="icon_button" id="canc" click_event="canc" auto_size="all">
+      <translation id="text" translation_id="229828" type="use" value="Cancel" />
+    </widget>
+    <widget class="primary_icon_button" id="chnt" click_event="chnt" auto_size="all" controller_button="y_button">
+      <translation id="hint" translation_id="320479" type="use" value="Confirm network game settings and proceed to Choose Nations[COMMENT: network game tooltip to indicate the purpose of Choose Nations button]" />
+      <translation id="text" translation_id="320478" type="use" value="Choose Nations[COMMENT: new game screen title]" />
+    </widget>
+
+  </container>
+</panel>

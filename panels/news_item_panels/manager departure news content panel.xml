@@ -1,0 +1,57 @@
+<!-- XML for a news item about a manager leaving a club. Displayes the news text and a two panels showing the odds for the most likely replacements and the most likely next 
+manager to go from the same comp -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<string id="skin_style" value="subtle box"/>
+
+	<!-- News text and replacement odds -->
+	<container class="scrolling_box">
+		<container>
+			<attachment_group class="vertical_arrange" vertical_layout="-1,1,140"/>
+
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_layout="-2,-1" horizontal_gap="8"/>
+
+				<widget class="inbox_body_text" id="bdtx"/>
+
+				<container class="inner_titled_box" id="repC">
+					<translation id="title" translation_id="352478" type="use" value="Who will take over?[COMMENT: manager departure news item; title for panel showing list of managers most likely to take over the job]"/>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="text" auto_size="vertical">
+						<translation id="text" translation_id="352315" type="use" value="The media pundits and bookmakers are already speculating about who will take over the reins.[COMMENT: manager departure news item; flavour text for panel showing list of managers most likely to take over the job]"/>
+					</widget>
+
+					<!-- This is the list of managers thought to be likely replacements. Every widget in this container will have a manager assigned to it so you can add/remove them freely -->
+					<container id="repl">
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<record id="default_properties" file="human/manager odds mini panel 1" height="60" hidden="true" />
+						
+						<container class="property_list_viewer_xml_panel" />
+						<container class="property_list_viewer_xml_panel" />
+						<container class="property_list_viewer_xml_panel" />
+					</container>
+				</container>	
+			</container>
+
+		<widget class="horizontal_divider"/>
+	  	
+		<!-- Next manager to go odds. Title gets set in code to something like 'SkyBet predicts who will be next to go...' -->
+	    <container id="nxtc" height="140">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<container class="titled_box" id="nxtg">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left" horizontal_offset="0" vertical_inset="0" />
+
+			<record id="default_properties" file="human/manager odds mini panel 2" width="170" hidden="true" />
+						
+			    <container class="property_list_viewer_xml_panel" />
+			    <container class="property_list_viewer_xml_panel" />
+				<container class="property_list_viewer_xml_panel" />
+		</container>
+	  </container>	
+    </container>
+  </container>
+</panel>

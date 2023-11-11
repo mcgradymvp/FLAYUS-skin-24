@@ -1,0 +1,117 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="main_box" id="jbcp" >
+		<translation id="title" translation_id="247309" type="use" value="Job Centre"/>
+
+		<!-- embedded buttons -->
+		<container id="btns" height="30" embed_in_frame="true" navigation_container="true">
+			<attachment_group class="title_embedded_panel_right" />
+
+			<!-- filter menu -->
+			<widget class="embedded_filter_button" id="plsf" target="jbcp" auto_size="all" embed_in_frame="true"/>
+		</container>
+
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			<widget class="table" id="list" sele="jcts" save_session_state="true" save_default_state="true" layout="-2, 70, -3, 50, 180, 180" row_spacing="0" navigation_container="true" default_focus="true">
+				<flags id="heading_class" value="column_heading" />
+				<flags id="mode" value="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows" />
+
+				<list id="default_sort_column">
+					<integer value="jobt" />
+					<integer value="divs" />
+					<integer value="divp" />
+					<integer value="team" />
+				</list>
+
+				<record id="default_properties">
+					<flags id="alignment" value="left,centre_y" />
+					<flags id="spec" value="text" />
+				</record>
+
+				<list id="column_table_properties">
+					<record>
+						<flags id="id" value="team" />
+						<record id="column_heading">
+							<translation id="text" translation_id="229408" type="use" value="Team" />
+							<translation id="hint" translation_id="229408" type="use" value="Team" />
+						</record>
+					</record>
+					<record>
+						<flags id="id" value="natn" />
+						<record id="column_heading">
+							<translation id="text" translation_id="229390" type="use" value="Nation" />
+							<translation id="hint" translation_id="247311" type="use" value="Team's Nation[COMMENT: tool-tip heading on job_security panel]" />
+						</record>
+						<flags id="alignment" value="left,centre_y" />
+					</record>
+					<record>
+						<flags id="id" value="divs" />
+						<record id="column_heading">
+							<translation id="text" translation_id="229392" type="use" value="Division" />
+							<translation id="hint" translation_id="247310" type="use" value="Division team currently belongs to[COMMENT: tool-tip heading on job_security panel]" />
+						</record>
+					</record>
+					<record>
+						<flags id="id" value="divp" />
+						<record id="column_heading">
+							<translation id="text" translation_id="317320" type="use" value="Pos[COMMENT: club's current reputation ranking, abbreviated]" />
+							<translation id="hint" translation_id="232109" type="use" value="League Positions" />
+						</record>
+					</record>
+					<record>
+						<flags id="id" value="jobt" />
+						<boolean id="sort_ascending" value="false" />
+						<record id="column_heading">
+							<translation id="text" translation_id="247312" type="use" value="Vacancy[COMMENT: column heading in job centre panel]" />
+							<translation id="hint" translation_id="247313" type="use" value="Position being advertised" />
+						</record>
+					</record>
+					<record>
+						<flags id="id" value="cand" />
+						<boolean id="sort_ascending" value="false" />
+						<record id="column_heading">
+							<translation id="text" translation_id="352091" type="use" value="Leading Candidate[COMMENT: Job centre; column heading for person most likely to take over a vacant manager position]" />
+							<translation id="hint" translation_id="352091" type="use" value="Leading Candidate[COMMENT: Job centre; column heading for person most likely to take over a vacant manager position]" />
+						</record>
+					</record>
+				</list>
+
+				<list id="column_widget_properties">
+					<record indx="0" navigation_focus_target="true"/>
+				</list>
+			</widget>
+		</container>
+
+		<!-- box containing buttons -->
+		<container navigation_container="true">
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0">
+				<global id="gap" name="ui.button_row_gap"/>
+			</layout>
+
+			<widget class="popup_button" id="pabn" fixed="true" auto_size="all">
+				<translation id="text" translation_id="242474" type="use" value="Place Advert" />
+			</widget>
+			<widget class="button" id="jcrj" auto_size="all" click_event="jcrj">
+				<translation id="hint" translation_id="247314" type="use" value="Remove selected job" />
+				<translation id="text" translation_id="229716" type="use" value="Remove" />
+			</widget>
+			<widget class="icon_button" id="jcaj" auto_size="all" click_event="jcaj" controller_button="y_button">
+				<translation id="hint" translation_id="247316" type="use" value="Apply for selected job" />
+				<translation id="text" translation_id="247315" type="use" value="Apply" />
+			</widget>
+			<widget class="button" id="jcaa" auto_size="all" click_event="jcaa">
+				<translation id="hint" translation_id="306594" type="use" value="Apply for all available jobs[COMMENT: hint for button on job centre panel; apply for all available jobs]" />
+				<translation id="text" translation_id="306593" type="use" value="Apply All[COMMENT: button on job centre panel; apply for all available jobs]" />
+			</widget>
+		</container>
+	</container>
+
+</panel>

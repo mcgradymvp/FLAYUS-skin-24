@@ -1,0 +1,98 @@
+﻿<panel>
+    <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+    
+    <string id="skin_style" value="subtle box" />
+    
+    <!--colour used to set background colour of player details in reco -->
+    <flags id="pbkc" value="green1" />
+    <flags id="1crd" value="boxes/custom/scouting/card/1/paper" />
+
+    <!-- content area -->
+    <container>
+        <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+        <widget class="inbox_body_text" id="bdtx" auto_size="vertical"/>
+
+        <container>
+            <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+            <container id="nsec" hidden="true">
+                <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="2" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+                <widget class="text" auto_size="vertical" alignment="centre" style="semi_bold" size="large">
+                    <translation id="text" translation_id="443663" type="use" value="No recommendations[COMMENT: FR 21760, no recommendations are made by the scouting team]" />
+                </widget>
+                <widget class="manager_text" colour="faded text" auto_size="vertical" alignment="centre">
+                    <translation id="text" translation_id="443664" type="use" value="[%person#1-Your] scouting team is working hard to bring [%person#1-you] more recommendations soon.[COMMENT: FR 21760, 'status pending' sort of string indicating that the scouting team are at work]" />
+                </widget>
+            </container>
+
+            <container id="nosc" hidden="true">
+                <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="2" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+                <widget class="text" auto_size="vertical" alignment="centre" style="semi_bold" size="large">
+                    <translation id="text" translation_id="443663" type="use" value="No recommendations[COMMENT: FR 21760, no recommendations are made by the scouting team]" />
+                </widget>
+                <widget class="text" colour="faded text" auto_size="vertical" alignment="centre">
+                    <translation id="text" translation_id="447500" type="use" value="There are currently no recruitment staff employed by the club. Therefore, reports cannot be provided.[COMMENT: club scouting assignments; explanatory text for situations where a club has no scouts]" />
+                </widget>
+            </container>
+
+            <container id="scrc">
+                <attachment_group class="vertical_arrange" vertical_layout="-1,30" vertical_inset="0" vertical_gap="2"/>
+
+                <container class="main_box" id="crdc" >
+                    <layout class="stick_to_sides_attachment" alignment="all" inset="0,0,15,0" apply_to_children="true" />
+
+                    <widget id="recc" class="property_list_viewer_xml_panel" file="widgets/scouting centre recommendation card"/>
+                    <widget id="nRec" class="property_list_viewer_xml_panel" file="widgets/scouting centre report card"/>
+                    <widget id="assc" class="property_list_viewer_xml_panel" file="widgets/scouting centre assignment card"/>
+                    <widget id="acrf" class="property_list_viewer_xml_panel" file="widgets/scouting centre assignment card for recruitment focus"/>
+                    <widget id="cmpc" class="property_list_viewer_xml_panel" file="widgets/scouting centre comp suggestion card"/>
+                    <widget id="mesc" class="property_list_viewer_xml_panel" file="widgets/scouting centre message card"/>
+                    <widget id="fcrc" class="property_list_viewer_xml_panel" file="widgets/scouting centre focus review card"/>
+                </container>
+
+                <container id="atnC" height="30">
+                    <layout class="arrange_horizontal_attachment" alignment="middle, extend" offset="50" gap="10" />
+                    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+                    <widget class="player_scouting_centre_actions_panel" id="toto" colour="text" disabled_colour="faded text" navigation_container="true">
+                        <layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="-10" />
+                        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+                        <boolean id="save_immediate_state" value="true" />
+                        <record id="object_property">
+                            <list id="get_properties">
+                                <record>
+                                    <integer id="get_property" value="hpla" />
+                                    <integer id="set_property" value="hidn" />
+                                </record>
+                                <record>
+                                    <integer id="get_property" value="Ttea" />
+                                    <integer id="set_property" value="Ttea" />
+                                </record>
+                                <record>
+                                    <integer id="get_property" value="SCei" />
+                                    <integer id="set_property" value="SCei" />
+                                </record>
+                                <record>
+                                    <integer id="get_property" value="fSCe" />
+                                    <integer id="set_property" value="fSCe" />
+                                </record>
+                                <record>
+                                    <integer id="get_property" value="Hhum" />
+                                    <integer id="set_property" value="Hhum" />
+                                </record>
+                            </list>
+                        </record>
+                    </widget>
+                </container>
+            </container>
+        </container>
+    </container>
+</panel>

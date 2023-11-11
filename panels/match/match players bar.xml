@@ -1,0 +1,24 @@
+﻿<panel>	
+	<integer id="miHR" value="1113"/>
+	
+	
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container id="plco" hidden="true">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" vertical_inset="0" horizontal_gap="2" />
+
+		<!--player widgets go here-->
+
+	</container>
+
+	<container id="plcs" hidden="true">
+		<layout class="fit_children_attachment" alignment="vertical,extend" offset="0" gap="0" />
+		<layout class="arrange_horizontal_attachment" alignment="left" wrap="true" gap="2" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+
+		<!--player widgets go here-->
+
+	</container>
+
+</panel>

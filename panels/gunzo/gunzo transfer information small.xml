@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+
+	<layout class="arrange_vertical_attachment" layout="15, -1" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	   <container height="20">
+      <layout class="stick_to_sides_attachment" alignment="left,vertical" inset="0" apply_to_children="true" />
+      
+      <string id="skin_style" value="title link" />
+
+      <!-- Linked header -->
+      <widget class="link_button" id="Ptin" section="Ptin" auto_size="all">
+       <translation id="text" translation_id="316646" type="use" value="Transfer Info" />
+      </widget>
+    </container>
+	
+	<container>
+			<layout class="arrange_vertical_attachment" layout="110,-1" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			
+			<!-- transfer info -->
+			<container default_height="110" minimum_height="35" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="player_transfer_information_small_panel" file="gunzo/gunzo player transfer information small" id="gpti">
+
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+	  
+			<!-- small report 
+			<container default_height="30" minimum_height="30" priority="2">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="player_scout_reports_panel" id="gprs" file="gunzo/gunzo player reports small1" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
+
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>-->
+			
+	</container>
+
+
+</panel>

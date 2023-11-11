@@ -1,0 +1,104 @@
+﻿<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at00" />
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at04" />
+		<record entity_layout_id="at02" />
+		<record entity_layout_id="at05" />
+		<record entity_layout_id="at06" />
+		<record entity_layout_id="at07" />
+		<record entity_layout_id="at03" />
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="none,all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="none,all" inset="0" />
+	</widget>
+	<container entity_layout_id="at00" id="at00" sub_group_id="NULL_ID" name="container">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="none,top" set_side="none,top" target="main" />
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="none,bottom" set_side="none,bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="none,left" set_side="none,left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="none,right" set_side="none,right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="none,all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="none,all" inset="0" />
+		</widget>
+		<container class="object_portrait_picture" entity_layout_id="at01" id="trpc" name="picture" width="140">
+			<string id="image_alignment" value="centre" />
+			<string id="scale_picture" value="true" />
+			<string id="keep_aspect_ratio" value="true" />
+			<record id="object_property">
+				<string id="get_property" value="objt" />
+				<string id="set_property" value="objt" />
+			</record>
+			<layout class="stick_to_object_attachment" id="align_top" get_side="none,top" set_side="none,top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="none,bottom" set_side="none,bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="12" get_side="none,left" set_side="none,left" move_side="true" target="main" />
+		</container>
+		<widget class="text" entity_layout_id="at04" alignment="centre_y,left" id="trst" name="training summary" colour="white">
+			<layout class="stick_to_object_attachment" id="align_top" get_side="none,top" set_side="none,top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="none,bottom" set_side="none,bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="155" get_side="none,right" set_side="none,left" target="at01" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="none,right" set_side="none,right" target="main" />
+		</widget>
+	</container>
+	<container class="plain_box" entity_layout_id="at02" id="rtbx" sub_group_id="NULL_ID" name="rating box" width="120" height="45" appearance="boxes/custom/training/rating big/paper" >
+		<layout class="stick_to_object_attachment" id="align_left" offset="155" get_side="none,left" set_side="none,left" move_side="true" target="main" />
+    <layout class="centre_in_parent_attachment" alignment="vertical" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="none,all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="none,all" inset="0" />
+		</widget>
+		<widget class="text" entity_layout_id="at05" alignment="centre_y,centre_x" id="rthd" auto_size="none,vertical" name="training rating heading" needs_height="true" colour="white">
+			<string id="font" value="label" />
+      <boolean id="multiline" value="true" />
+	  <string id="size" value="xlarge" />
+      <translation id="value" translation_id="466504" type="use" value="Training Rating[COMMENT: a rating of how well the player is getting on in training]" />
+			<layout class="stick_to_object_attachment" id="align_top" get_side="none,top" set_side="none,top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="10" get_side="none,left" set_side="none,left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="none,right" set_side="none,right" target="main" />
+		</widget>
+		<widget class="property_list_viewer_xml_panel" file="widgets/training rating with change icon" abcd="centre" should_colour="true" entity_layout_id="at06" id="plci"  auto_size="vertical"  needs_height="true"  navigation_focus_target="false">
+			<record id="object_property">
+				<string id="get_property" value="PtWC" />
+				<string id="set_property" value="valu" />
+			</record>
+			<layout class="stick_to_object_attachment" id="align_top" offset="2"  get_side="none,bottom" set_side="none,top" move_side="true" target="at05" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="30" get_side="none,left" set_side="none,left" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="0" get_side="none,right" set_side="none,right" target="main" />
+		</widget>
+	</container>
+	<container class="plain_box" entity_layout_id="at07" id="ntcn" sub_group_id="NULL_ID" name="not training container" width="120">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="none,top" set_side="none,top" target="main" />
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="none,bottom" set_side="none,bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="100" get_side="none,left" set_side="none,left" move_side="true" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="none,all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="none,all" inset="0" />
+		</widget>
+		<widget class="text" entity_layout_id="at03" alignment="centre_y,right" id="ntst" name="not training reason">
+			<string id="style" value="bold" />
+			<string id="size" value="large" />
+			<string id="colour" value="white" />
+			<layout class="stick_to_object_attachment" id="align_top" get_side="none,top" set_side="none,top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="none,bottom" set_side="none,bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" get_side="none,left" set_side="none,left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="none,right" set_side="none,right" target="main" />
+		</widget>
+	</container>
+</panel>

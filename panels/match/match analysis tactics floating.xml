@@ -1,0 +1,25 @@
+<panel>
+
+	<container class="inner_subtle_box" id="MANt" >
+
+		<translation id="title" translation_id="230056" type="use" value="Tactics" />
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<widget class="table" id="tble" mode="fill_table" layout="4, -8" auto_size_rows="true" fixed_size_rows="false" row_spacing="6">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+			<list id="column_table_properties">
+				<record indx="0" left="0" top="3" sort_disabled="true" alignment="left,centre_y" />
+				<record indx="1" right="4" top="2" alignment="left,centre_y" />
+			</list>
+
+			<list id="column_widget_properties">
+				<record indx="1" colour="text" />
+			</list>
+
+		</widget>
+
+	</container>
+
+</panel>

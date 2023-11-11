@@ -1,0 +1,43 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <!-- Here we have several pictures that are combined in different combinations to give the final image -->
+  <!-- For instance, for a news item that has a player and a team we would show the background, left and right pictures -->
+
+  <!-- Background -->
+  <!--<widget class="picture" id="bkgd" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+  <widget class="stadium_picture" id="stad" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>-->
+
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+    <!-- Right -->
+    <container>
+      <layout class="arrange_horizontal_attachment" layout="-1, -1" gap="0" offset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+      <container/>
+      <widget class="object_portrait_picture" id="rhgt" image_alignment="left" scale_picture="true" keep_aspect_ratio="true" hidden="true"/>
+    </container>
+
+    <!-- Left -->
+    <container>
+      <layout class="arrange_horizontal_attachment" layout="-5, -4" gap="0" offset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+      <widget class="object_portrait_picture" id="left" image_alignment="right" scale_picture="true" keep_aspect_ratio="true" hidden="true"/>
+      <container/>
+    </container>
+
+    <!-- Centre -->
+    <container>
+      <layout class="arrange_horizontal_attachment" layout="-1, -5, -1" gap="0" offset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+      <container/>
+      <widget class="object_portrait_picture" id="pcen" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" hidden="true"/>
+      <container/>
+    </container>
+  </container>
+
+</panel>

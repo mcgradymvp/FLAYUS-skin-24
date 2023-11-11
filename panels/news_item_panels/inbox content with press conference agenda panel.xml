@@ -1,0 +1,141 @@
+﻿<panel height="630" width="800">
+	<attachment_group class="horizontal_arrange" horizontal_layout="250,-1" horizontal_offset="0" vertical_offset="0" />
+	<!-- Left Side -->
+	<container class="inner_subtle_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!-- Press conference image -->
+		<container height="140">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="picture" file="photos/dynamic/press conference/press bg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+			</widget>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_gap="2" vertical_alignment="middle" vertical_offset="0" horizontal_inset="0" />
+
+				<widget class="object_portrait_picture" id="ObPc" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" no_object_picture="pictures/comp/none/logo/league" width="45" height="45"/>
+
+				<widget class="text" id="ObTp" size="12" font="title" colour="text" alignment="centre_x,centre_y" auto_size="vertical"/>
+
+				<widget class="text" size="12" font="title" colour="text" alignment="centre_x,centre_y" auto_size="vertical">
+					<translation id="text" translation_id="276325" type="use" value="Press Conference[COMMENT: player happiness panel]" />
+				</widget>
+			</container>
+		</container>
+
+		<!-- Head to head -->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="comp_button" id="CmpB" icon_enabled="false" size="8" font="title" colour="grey 400" alignment="centre_x,centre_y" auto_size="vertical" multiline="true"/>
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1, 20, -1" horizontal_offset="0" vertical_offset="0" />
+
+				<!-- Home -->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right, extend" horizontal_offset="0" vertical_offset="0" />
+
+					<widget class="team_button" id="homB" display_format="[%team#1-six_letter]" icon_enabled="false" style="bold" alignment="centre_y,right" auto_size="horizontal"/>
+
+					<widget class="object_portrait_picture" id="homP" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" no_object_picture="pictures/logos/normal/clubs/cro/dinamo zagreb" width="20" height="30"/>
+
+				</container>
+
+				<widget class="text" alignment="centre_x,centre_y" size="8" font="title" colour="darkened text" value="vs" height="27" width="20"/>
+
+				<!-- Away -->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left, extend" horizontal_offset="0" vertical_offset="0" />
+
+					<widget class="object_portrait_picture" id="awaP" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" no_object_picture="pictures/logos/normal/clubs/cro/dinamo zagreb" width="20" height="30"/>
+
+					<widget class="team_button" id="awaB" display_format="[%team#1-six_letter]" icon_enabled="false" style="bold" alignment="centre_y,left" auto_size="horizontal"/>
+				</container>
+			</container>
+
+		</container>
+
+		<widget class="horizontal_divider" image_alignment="centre_y" height="2"/>
+
+		<!-- Stadium -->
+		<container height="80" >
+			<attachment_group class="vertical_arrange" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="text" size="9" font="title" colour="grey 400" alignment="centre_y,left" auto_size="vertical">
+				<translation id="text" translation_id="466483" type="use" value="Press Conference Location[COMMENT: table heading; where press conference was held]" />
+			</widget>
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left, extend" horizontal_offset="0" horizontal_gap="4" vertical_offset="0" />
+
+				<widget class="picture" file="icons/custom/stadium/stadium" image_alignment="centre" auto_size="all"/>
+
+				<widget class="inbox_body_text" id="Lolb" auto_size="vertical">
+				</widget>
+			</container>
+
+		</container>
+
+		<widget class="horizontal_divider" image_alignment="centre_y" height="2"/>
+
+		<!-- Journo attendance -->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="text"  size="9" font="title" colour="text" alignment="centre_y,left" auto_size="vertical">
+				<translation id="text" translation_id="466484" type="use" value="Journalists Expected[COMMENT: FR 22941; press conference invite news; title for box containing number of journalists expected to attend]" />
+			</widget>
+
+			<widget class="inbox_body_text" id="NCla" colour="positive" style="bold" auto_size="vertical"/>
+			<widget class="text" id="Jdes" colour="positive" auto_size="vertical"/>
+		</container>
+
+	</container>
+
+	<!-- Right side -->
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_layout="-1,2,450" horizontal_offset="0" vertical_offset="0" />
+
+		<!-- Notable Journalists -->
+		<container class="inner_box" colour="text">
+			<translation id="text" translation_id="466485" type="use" value="Notable Journalists In Attendance[COMMENT: FR 22941; press conference invite news; title for box containing list of notable journalists]" />
+			<attachment_group class="vertical_arrange" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="table" id="NMtb" layout="-1,-1,-1" mode="fill_rows" auto_size_rows="true" fixed_size_rows="false" height="550" row_spacing="4">
+				<list id="column_table_properties">
+					<record auto_hide_priority="1">
+						<boolean id="sort_disabled" value="true" />
+						<record id="column_heading" alignment="centre_y,left">
+							<translation id="text" translation_id="348966" type="use" value="Journalists[COMMENT: media profile; list of journalists attached to media source]" />
+						</record>
+					</record>
+					<record auto_hide_priority="1">
+						<boolean id="sort_disabled" value="true" />
+						<record id="column_heading" alignment="centre_y,left">
+							<translation id="text" translation_id="515046" type="use" value="Influence[COMMENT: AREA: Inbox; SUB-AREA: Press Conference Invite News Item; FR: 32643; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: column header for a journalists global influence]" />
+						</record>
+					</record>
+					<record auto_hide_priority="2" minimum_width="160">
+						<boolean id="sort_disabled" value="true" />
+						<record id="column_heading" alignment="centre_y,left">
+							<translation id="text" translation_id="308637" type="use" value="Relationship[COMMENT: Relationship towards the human player]" />
+						</record>
+					</record>
+				</list>
+			</widget>
+		</container>
+
+		<widget class="vertical_divider" image_alignment="centre_y" width="2"/>
+
+		<!-- Talking points -->
+		<container class="inner_box" colour="text">
+			<translation id="text" translation_id="466486" type="use" value="Likely Talking Points[COMMENT: FR 22941; press conference invite news; title for box containing number of journalists expected to attend]" />
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="table" id="Tapt" layout="20,-1" mode="fill_rows" row_spacing="2" auto_size_rows="true" fixed_size_rows="false" height="140"/>
+		</container>
+	</container>
+
+</panel>

@@ -1,0 +1,114 @@
+<panel>
+	
+		<!--default text colour-->
+	<flags id="dTXc" value="black"/>
+	<!--alternative text colour-->
+	<flags id="aTXc" value="white"/>
+	<!--disallowed text colour-->
+	<flags id="iTXc" value="negative"/>
+	<!--default background colour-->
+	<flags id="dBGc" value="background"/>
+	<!--yellow card background colour-->
+	<flags id="yBGc" value="yellow"/>
+	<!--red card background colour-->
+	<flags id="rBGc" value="red"/>
+	<!--substitutes background colour-->
+	<flags id="sBGc" value="darkened text"/>
+	<!--yellow card image-->
+	<string id="ycIM" value="icons/26px/yellow card"/>
+	<!--red card image-->
+	<string id="rcIM" value="icons/26px/red card"/>
+	
+	<!--used for debug reasons-->
+	<list id="properties_to_forward">
+		<record get_property="hiVA" set_property="hidn" target="lgCP" />
+		<record get_property="hiCV" set_property="hidn" target="chVR" />
+		<record get_property="hiVD" set_property="hidn" target="DeVR" />
+		<record get_property="hiCA" set_property="hidn" target="smCP" />
+	</list>
+	
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container id="lgCP" hidden="true">
+
+		<attachment_group class="horizontal_arrange_vertical_centre" horizontal_alignment="middle"/>
+		
+		<animation class="fade_animation" start_value="0" end_value="1" duration="0.5" end_mode="hold_end" trigger_id="hidden" trigger_value="false"/>
+		<animation class="fade_animation" start_value="1" end_value="0" duration="0.5" end_mode="hold_end" trigger_id="hidden" trigger_value="true"/>
+
+
+		<container  class="contrast_box_no_margin" red_replacement="bg" height="400" width="575">
+
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="picture" file="backgrounds/VAR pattern" red_replacement="fg accent" green_replacement="bg" scale_picture="false">
+			<animation class="fade_animation" start_value="0.3" end_value="1.0" duration="1.0" delay="0" end_mode="cycle" trigger_id="hidden" trigger_start="false" trigger_end="true" />
+			</widget>
+
+			<!--Checking VAR-->
+			<container id="chVR" >
+				<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+
+				<widget class="picture" auto_size="vertical" file="icons/custom/match/logos/VAR" red_replacement="fg" image_alignment="centre">
+				</widget>
+
+				<widget class="spacer" height="20"/>
+				
+				<widget class="text" id="vrST" text="CHECKING title" auto_size="vertical" alignment="centre" size="32" font="title" colour="fg accent">
+					<animation class="fade_animation" trigger_id="hidden" trigger_value="false" start_value="0" end_value="1.0" duration="0.2" delay="0.1" end_mode="hold_auto_reverse" />
+				</widget>
+				<widget class="text" id="vrMD" text="CHECKING description" auto_size="vertical" alignment="centre" size="32" font="title" colour="fg">
+					<animation class="fade_animation" trigger_id="hidden" trigger_value="false" start_value="0" end_value="1.0" duration="0.2" delay="0.2" end_mode="hold_auto_reverse" />
+				</widget>
+
+				<widget class="spacer" height="20"/>
+				<widget class="text" id="vrRS" text="CHECKING subtitle" auto_size="vertical" alignment="centre" size="18" font="title" colour="fg accent">
+				<animation class="fade_animation" trigger_id="hidden" trigger_value="false" start_value="0" end_value="1.0" duration="0.2" delay="0.3" end_mode="hold_auto_reverse" />
+				</widget>
+			</container>
+
+			<!--VAR Decision-->
+			<container id="DeVR">
+				<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0"/>
+
+				<widget class="picture" auto_size="vertical" file="icons/custom/match/logos/VAR" red_replacement="fg" image_alignment="centre">
+				</widget>
+
+				<widget class="spacer" height="20"/>
+
+				<widget class="text" id="vrDT" text="DECISION title" auto_size="vertical" alignment="centre" size="32" font="title" colour="fg">
+					<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.2" delay="0.1" end_mode="hold_auto_reverse" tween="ease_out_4" coord_mode="relative_to_target" trigger_id="hidden" trigger_start="false" trigger_end="true" centre_point="bottom" no_clipping="true" />
+					<animation class="fade_animation" start_value="0" end_value="1" duration="0.2" delay="0.1" end_mode="hold_auto_reverse" trigger_id="hidden" trigger_start="false" trigger_end="true" />
+				</widget>
+
+				<widget class="text" id="vrDD" text="DECISION description" auto_size="vertical" alignment="centre" size="32" font="title" colour="fg alert" hidden="true">
+					<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.2" delay="0.2" end_mode="hold_auto_reverse" tween="ease_out_4" coord_mode="relative_to_target" trigger_id="hidden" trigger_start="false" trigger_end="true" centre_point="bottom" no_clipping="true" />
+					<animation class="fade_animation" start_value="0" end_value="1" duration="0.2" delay="0.3" end_mode="hold_auto_reverse" trigger_id="hidden" trigger_start="false" trigger_end="true" />
+					<attachment class="event_relay_attachment" event_id="FMMH">
+						<record id="action_event">
+							<flags id="event_id" value="SETP"/>
+							<flags id="event_target" value="vrDD"/>
+							<flags id="id" value="hidn"/>
+							<flags id="value" value="false"/>
+						</record>
+					</attachment>
+				</widget>
+
+
+				<widget class="spacer" height="20"/>
+
+			<widget class="text" id="vrDS" text="DECISION subtitle" auto_size="vertical" alignment="centre" size="18" font="title" colour="fg accent"/>
+			</container>
+
+		</container>
+
+	</container>
+
+	<container>
+
+		<attachment_group class="horizontal_arrange" horizontal_alignment="middle" vertical_alignment="bottom" vertical_offset="30"/>
+	
+		<container id="smCP" file="match/match caption panel small" height="100" width="500"/>
+
+	</container>
+</panel>

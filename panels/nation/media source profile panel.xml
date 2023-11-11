@@ -1,0 +1,211 @@
+<!-- Panel for showing overview info about a media source including club/nations covered, journalists etc. Should be used with a CLIENT_OBJECT_VIEWER_XML_PANEL -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<!-- General info -->
+		<container class="inner_titled_box" height="100"> 
+		<translation id="title" translation_id="349045" type="use" value="Profile[COMMENT: media source profile tab, use top 10 matches]" />
+			<attachment_group class="vertical_arrange" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="50" />
+
+			<!-- General info labels -->
+			<container height="30">
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<record id="default_properties" alignment="centre_x,bottom" font="label" colour="secondary"/>
+
+				<!-- Type -->
+				<widget class="label" id="typl">
+					<record id="object_property">
+						<integer id="get_property" value="Mtyp" />
+						<integer id="set_property" value="text" />
+						<boolean id="name" value="true" />
+					</record>
+				</widget>
+
+				<!-- Period -->
+				<widget class="label" id="perl">
+					<record id="object_property">
+						<integer id="get_property" value="Mper" />
+						<integer id="set_property" value="text" />
+						<boolean id="name" value="true" />
+					</record>
+				</widget>
+
+				<!-- Scope -->
+				<widget class="label" id="scpl">
+					<record id="object_property">
+						<integer id="get_property" value="Mscp" />
+						<integer id="set_property" value="text" />
+						<boolean id="name" value="true" />
+					</record>
+				</widget>
+
+				<!-- Style -->
+				<widget class="label" id="styl">
+					<record id="object_property">
+						<integer id="get_property" value="Msty" />
+						<integer id="set_property" value="text" />
+						<boolean id="name" value="true" />
+					</record>
+				</widget>
+
+				<!-- Date last published -->
+				<widget class="label" id="datl">
+					<record id="object_property">
+						<integer id="get_property" value="Mdlp" />
+						<integer id="set_property" value="text" />
+						<boolean id="name" value="true" />
+					</record>
+				</widget>
+			</container>
+
+			<!-- General info data -->
+			<container height="30">
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<record id="default_properties" alignment="centre_x,top" font="value" colour="secondary"/>
+				
+				<!-- Type -->
+				<widget class="media_source_type_label" id="Mtyp">
+					<record id="object_property">
+						<integer id="get_property" value="Mtyp" />
+					</record>
+				</widget>
+
+				<!-- Period -->
+				<widget class="media_source_period_label" id="Mper">
+					<record id="object_property">
+						<integer id="get_property" value="Mper" />
+					</record>
+				</widget>
+
+				<!-- Scope -->
+				<widget class="media_source_scope_label" id="Mscp">
+					<record id="object_property">
+						<integer id="get_property" value="Mscp" />
+					</record>
+				</widget>
+
+				<!-- Style -->
+				<widget class="media_source_style_label" id="Msty">
+					<record id="object_property">
+						<integer id="get_property" value="Msty" />
+					</record>
+				</widget>
+
+				<!-- Date last published -->
+				<widget class="date_cell" id="Mdlp">
+					<record id="object_property">
+						<integer id="get_property" value="Mdlp" />
+					</record>
+				</widget>
+			</container>
+
+			<!-- Website link -->
+			<widget class="url_text" id="urlt" auto_size="vertical" size="xlarge" colour="secondary" alignment="centre_x,top">
+				<string id="url_tracking_category" value="feature_news_item_url_clicked" />
+				<record id="object_property">
+					<integer id="get_property" value="Murl" />
+				</record>
+			</widget>
+		</container>
+
+		<!-- List on the left news on the right -->
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-3,-3" offset="0"  />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<!-- 4x4 grid of lists -->
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0"  />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<container>
+					<layout class="arrange_horizontal_attachment" alignment="fill" offset="0"  />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<container class="subsection_box">
+						<translation id="title" translation_id="348966" type="use" value="Journalists[COMMENT: media profile; list of journalists attached to media source]" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<!-- Journalist list -->
+						<widget class="client_object_list_table" database_table_type="1" id="jour" mode="fill_rows, stripe_rows" save_session_state="false">
+							<record id="object_property">
+								<integer id="get_property" value="Mjor" />
+								<integer id="set_property" value="objL" />
+							</record>
+
+							<record id="default_properties" alignment="left,centre_y"/>
+
+							<record id="viewed_property_ids">
+								<!-- name -->
+								<flags id="Pnms" />
+							</record>
+						</widget>
+					</container>
+
+
+					<!-- Related media list -->
+					<container class="subsection_box">
+						<translation id="title" translation_id="348977" type="use" value="Linked Media[COMMENT: media profile; list of other media sources link to media source]" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="client_object_list_table" database_table_type="7" id="link" mode="fill_rows, stripe_rows" save_session_state="false">
+							<record id="object_property">
+								<integer id="get_property" value="MlmR" />
+								<integer id="set_property" value="objL" />
+							</record>
+
+							<record id="default_properties" alignment="left,centre_y"/>
+
+							<record id="viewed_property_ids">
+								<!-- name -->
+								<flags id="Mgna" />
+							</record>
+						</widget>
+					</container>
+				</container>
+
+				<!-- Covered objects -->
+				<container class="subsection_box">
+					<translation id="title" translation_id="306508" type="use" value="Coverage" />
+					<!--Kept for string reuse <translation id="title" translation_id="348799" type="use" value="Covered Clubs[COMMENT: media profile; list of clubs covered by media source]" />-->
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<widget class="client_object_list_table" database_table_type="3" id="covr" mode="fill_rows, stripe_rows" save_session_state="true" default_sort_column="Cref">
+						<!-- Object list -->
+						<record id="object_property" get_property="MsaO" set_property="objL"/>
+
+						<record id="viewed_property_ids">
+							<!-- name -->
+							<flags id="dref" />
+						</record>
+					</widget>
+
+				</container>
+			</container>
+
+			<!-- Recent news -->
+			<container class="subsection_box">
+				<translation id="title" translation_id="295149" type="use" value="News[comment: option that appears on the competition context menu]" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container class="scrolling_box">
+					<container class="simple_data_list" id="news" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="Mrnw" />
+						</record>
+						<record id="widget_properties" class="competition_news_item_panel" file="competition/competition news item small" height="80" almh="true" />
+					</container>
+				</container>
+			</container>
+
+		</container>
+	</container>
+</panel>

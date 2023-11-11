@@ -1,0 +1,20 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+  <container class="horizontal_adaptive_container" offset="0" inset="0" gap="0" mode="distribute_equally">
+    <container minimum_width="150" priority="1" default_width="-1">
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+      <!-- Outfield player -->
+      <container class="person_attributes_analyser_panel" id="ofap" file="gunzo/gunzo attribute analyser outfield8" >
+        <record id="object_property" get_property="Pigo" set_property="hidn"/>
+      </container>
+
+      <!-- Goalkeeper -->
+      <container class="person_attributes_analyser_panel" file="gunzo/gunzo attribute analyser goalkeeper8" id="gkap">
+        <record id="object_property" get_property="Pigo" set_property="Shwn"/>
+      </container>
+    </container>
+
+  </container>
+</panel>

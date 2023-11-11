@@ -1,0 +1,30 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <!-- league progress graph -->
+  <widget class="graph" id="grph" inset="3,6,3,6">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+    <record id="instant_hint" file="generic/graph instant hint positions small" alignment="right,bottom"/>
+    <record id="default_series_properties" line_width="2" />
+    <record id="x_axis" show_labels="false"/>
+    <record id="y_axis" min_value="1" show_labels="false" mark_size="0" reverse_order="true"/>
+    <list id="grid_line_styles">
+      <record colour="graph row"/>
+      <record/>
+    </list>
+    <list id="border_line_styles">
+      <record/>
+      <record colour="graph row"/>
+      <record/>
+      <record/>
+    </list>
+  </widget>
+
+  <!-- text for when there are no past positions -->
+  <widget class="text" id="nopp" alignment="centre_x,top" hidden="true">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="2" />
+
+    <translation id="text" translation_id="376542" type="use" value="Past positions are not available for this competition.[COMMENT:League past positions panel; Text displayed when there is no data]" />
+  </widget>
+</panel>

@@ -1,0 +1,100 @@
+﻿<panel>
+	<boolean id="save_immediate_state" value="true" />
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+	<layout class="fit_children_attachment" alignment="horizontal" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" />
+
+
+	<container id="actC" height="30">
+		<attachment_group class="horizontal_arrange_autosize" horizontal_offset="0" horizontal_gap="8" />
+
+		<widget class="vertical_divider" width="2" height="22" />
+
+		<record id="default_properties">
+			<flags id="auto_size" value="all" />
+			<flags id="icon_alignment" value="left,centre_y" />
+			<flags id="appearance" value="buttons/primary/normal/button" />
+			<flags id="colour" value="white" />
+			<flags id="disabled_colour" value="faded_text" />
+			<flags id="font" value="button" />
+			<flags id="icon_colour" value="white" />
+		</record>
+
+		<widget class="check_box" id="shtl">
+			<!--!Add/remove to/from shortlist-->
+		</widget>
+
+		<widget class="check_box" id="pool">
+			<!--!Add/remove to/from national pool-->
+		</widget>
+
+		<widget class="icon_button" id="ksco" icon="icons/16px/search" red_replacement="purple 700" blue_replacement="purple 700" disabled_colour="faded text">
+			<translation id="text" translation_id="539033" type="use" value="Fully Scout Player[COMMENT: AREA: Scouting; SUB-AREA: Scouting card report action; FR-BN: 36081; TONE: Informal]" />
+      		<attachment class="test_screen_size_attachment" alignment="horizontal" min_value="0" max_value="1700" set_property="ldis" true_value="true" false_value="false" />
+      		<attachment class="test_global_attachment" mode="equal" get_property="section" value="tssc" set_property="disabled" skip_if_false="false" />
+		</widget>
+		
+		<widget class="client_action_icon_button" id="AskA" icon="icons/custom/scouting/agent" red_replacement="teal 700" blue_replacement="teal 700" disabled_colour="faded text">
+			<attachment class="test_screen_size_attachment" alignment="horizontal" min_value="0" max_value="1700" set_property="ldis" true_value="true" false_value="false" />
+			<attachment class="test_global_attachment" mode="equal" get_property="section" value="tssc" set_property="disabled" skip_if_false="false" />
+
+			<translation id="text" translation_id="539034" type="use" value="Approach Agent[COMMENT: AREA: Scouting; SUB-AREA: Scouting card report action; FR-BN: 36081; TONE: Informal]" />
+			<string id="action_id" value="apaa" />
+			<string id="remove_if" value="is_fmt" />
+		</widget>
+		
+		<widget class="client_action_icon_button" id="RspA" icon="icons/custom/scouting/agent" red_replacement="teal 700" blue_replacement="teal 700" disabled_colour="faded text">
+			<attachment class="test_screen_size_attachment" alignment="horizontal" min_value="0" max_value="1700" set_property="ldis" true_value="true" false_value="false" id="smh3" />
+			<attachment class="test_global_attachment" mode="equal" get_property="section" value="tssc" set_property="disabled" skip_if_false="false" />
+
+			<translation id="text" translation_id="554437" type="use" value="Discuss With Agent[COMMENT: AREA: Scouting; SUB-AREA: scouting centre; FR: 4307; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: scouting centre action button]" />
+			<string id="action_id" value="rpaa" />
+			<string id="remove_if" value="is_fmt" />
+		</widget>
+
+		<!--Make Offer & other options button/popup button combo-->
+		<container height="30">
+			<layout class="arrange_horizontal_attachment" alignment="left" embed_in_frame="false" offset="0">
+				<global id="gap" name="ui.split_button_row_gap" />
+			</layout>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" embed_in_frame="false" />
+			<layout class="fit_children_attachment" alignment="horizontal,fill" embed_in_frame="false" offset="0">
+				<global id="gap" name="ui.split_button_row_gap" />
+			</layout>
+
+			<widget class="icon_button" id="mkof" auto_size="horizontal" red_replacement="green 700" blue_replacement="green 800" appearance="buttons/primary/split/left/button" icon="icons/custom/transfer deadline day/transfer status/offer made" icon_colour="fg" secondary_icon_colour="fg" colour="white" disabled_colour="faded text" font="button">
+				<attachment class="test_screen_size_attachment" alignment="horizontal" min_value="0" max_value="1700" set_property="ldis" true_value="true" false_value="false" />
+				<attachment class="test_global_attachment" mode="equal" get_property="section" value="tssc" set_property="disabled" skip_if_false="false" />
+			</widget>
+
+			<widget class="popup_button" id="ofPB" auto_size="vertical" width="35" icon_colour="fg" secondary_icon_colour="fg" red_replacement="green 700" blue_replacement="green 800" appearance="buttons/primary/split/right/button" disabled_colour="faded text" font="button">
+				<attachment class="test_global_attachment" mode="equal" get_property="section" value="tssc" set_property="disabled" skip_if_false="false" />
+			</widget>
+		</container>
+		
+		<widget class="icon_tick_button" id="call" red_replacement="solid_button" blue_replacement="solid_button">
+			<!--call up to national squad-->
+		</widget>
+
+		<widget class="icon_tick_button" id="RmSq" red_replacement="solid_button" blue_replacement="solid_button">
+			<!--remove from national squad-->
+		</widget>
+
+		<widget class="vertical_divider" width="2" height="22" />
+
+		<widget class="icon_button" id="disc" icon="icons/16px/cross" controller_button="x_button" red_replacement="red 800" blue_replacement="red 800" disabled_colour="faded text">
+			<attachment class="test_screen_size_attachment" alignment="horizontal" min_value="0" max_value="1950" set_property="ldis" true_value="true" false_value="false" />
+			<attachment class="test_global_attachment" mode="equal" get_property="section" value="tssc" set_property="disabled" skip_if_false="false" />
+		</widget>
+
+
+		<widget class="primary_icon_button" icon="icons/16px/tick" controller_button="y_button" id="ackn" red_replacement="deep purple 700" blue_replacement="deep purple 700" disabled_colour="faded text">
+			<attachment class="test_screen_size_attachment" alignment="horizontal" min_value="0" max_value="1950" set_property="ldis" true_value="true" false_value="false" />
+      		<attachment class="test_global_attachment" mode="equal" get_property="section" value="tssc" set_property="disabled" skip_if_false="false" />
+		</widget>
+
+
+	</container>
+
+</panel>

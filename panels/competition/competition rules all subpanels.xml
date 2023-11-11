@@ -1,0 +1,59 @@
+﻿<panel>
+	<container class="scrolling_box" id="mt55" file="none" name="competition_rules_scrolling_box" >
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<container class="bordered_box">
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="20" vertical_offset="0" horizontal_inset="0" />
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right, extend" />
+				<widget class="text" alignment="centre_y,left" id="cstT" height="50" name="competition_stages_title">
+					<translation id="text" translation_id="491883" type="use" value="Competition Stages[COMMENT: AREA; Competition stage tree title; SUB-AREA: Competition Rules Screen; FR-BN: 27410]" />
+					<string id="size" value="large" />
+					<string id="font" value="title" />
+					<string id="colour" value="accent" />
+				</widget>
+
+				<container class="menu_strip" id="sesN" height="50" inset="0" offset="2" gap="-8" auto_size="horizontal" default_widget_type="radio_toggle_switch_left" submenu_type="popup_button" positional_appearance_first="switches/toggle/left/button" positional_appearance_last="switches/toggle/right/button" positional_appearance_normal="switches/toggle/middle/button" positional_appearance_first_and_last="buttons/primary/normal/button">
+					<list id="items">
+						<record id="0" click_event="snSL" selected="true">
+							<translation id="text" translation_id="323070" type="use" value="Current Season[COMMENT - years menu on comp screen - current year]" />
+						</record>
+						<record id="1" click_event="snSL">
+							<translation id="text" translation_id="509143" type="use" value="Next Season[COMMENT: AREA: Competitions; SUB-AREA: Competition Rules Panel; FR-BN: 32497 NOTE: Button for showing next season's rules (to highlight any changes in rules between the two)]" />
+						</record>
+					</list>
+				</container>
+			</container>
+
+			<container class="scrolling_box" id="csgS" file="none" name="competition_stages_graph_scrolling_box" fit_content_horizontal="true" alignment="centre">
+				<container id="cspT">
+					<layout class="fit_children_attachment" alignment="horizontal" gap="0" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="top, left" inset="0" apply_to_children="true" />
+
+					<container id="at99" name="competition_stages_graph_container_parent" file="competition/competition rules tree container">
+						<layout class="fit_children_attachment" alignment="horizontal" gap="0" offset="0" />
+					</container>
+				</container>
+			</container>
+
+			<container file="competition/competition rules start end header" id="cseh" height="50" name="competition_start_end_header">
+			</container>
+
+			<container class="bordered_box" id="ssrb" auto_size="vertical" name="stage_specific_rules_bordered_box">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />			
+				<layout class="fit_children_attachment" alignment="vertical, fill" offset="20" gap="20" />
+
+				<container class="competition_rules_subpanel" id="ssrs" auto_size="vertical" needs_height="true" name="stage_specific_rules_subpanel">
+					<layout class="stick_to_sides_attachment" alignment="top, horizontal" inset="0" />
+				</container>
+			</container>
+			<container class="competition_rules_subpanel" id="grsp" auto_size="vertical" needs_height="true" name="general_competition_rules_subpanel" />
+			<container class="competition_rules_subpanel" id="twtl" auto_size="vertical" needs_height="true" name="transfer_windows_timeline" />
+			<container class="competition_rules_subpanel" id="trrs" auto_size="vertical" needs_height="true" name="transfer_registration_rules_subpanel" />
+			<container class="competition_rules_subpanel" id="wprs" auto_size="vertical" needs_height="true" name="work_permit_rules_subpanel" />
+			<container class="competition_rules_subpanel" id="frss" auto_size="vertical" needs_height="true" name="financial_rules_subpanel" />
+			<container class="competition_rules_subpanel" id="msrs" auto_size="vertical" needs_height="true" name="misc_rules_subpanel" />
+		</container>
+	</container>
+</panel>

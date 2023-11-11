@@ -1,0 +1,568 @@
+<properties version="1.0">
+	
+	<!--  
+	 ============================================================
+	 Default Settings Modified By This Skin
+	 
+	 The definitions below will override the defaults contained
+	 in the parent skins, or in the various global and application
+	 settings files.
+	 
+	 ============================================================
+	 -->
+
+	<!-- global settings -->
+	<set_global name="ui.main_box_gap" >
+		<integer value="12"/>
+	</set_global>
+	<set_global name="ui.main_contrast_box_gap" >
+		<integer value="8"/>
+	</set_global>
+	<set_global name="ui.inner_box_gap" >
+		<integer value="20"/>
+	</set_global>
+	<set_global name="ui.main_content_margin" >
+		<integer value="12"/>
+	</set_global>
+	<set_global name="ui.button_row_gap" >
+		<integer value="4"/>
+	</set_global>
+	<set_global name="ui.split_button_row_gap" >
+		<integer value="1"/>
+	</set_global>
+
+
+	<!-- This allows us to set a global font adjustment value for given languages this 
+	     is required because we map to a different font set for russian and greek which
+		 ends up with a larger vertical size then the base font which causes cut offs, so now we
+		 can adjust it to fit closer to the original size -->
+	<list id="language_font_scaling_list">
+		<record name="russian">
+			<coordinate id="value" x="0.9" y="0.9" />
+		</record>
+		<record name="greek">
+			<coordinate id="value" x="0.9" y="0.9" />
+		</record>
+		<record name="default">
+			<coordinate id="value" x="1.0" y="1.0" />
+		</record>
+	</list>
+
+	<!-- resolution dependant global settings -->
+	<list id="resolution_settings">
+
+		<!-- gap used between main box appearance -->
+		<record >
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1" />
+			<integer id="resolution_maximum" value="1366" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.main_box_gap" />
+					<integer id="value" value="12" />
+				</record>
+			</list>
+		</record>
+		<record>
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1367" />
+			<integer id="resolution_maximum" value="1919" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.main_box_gap" />
+					<integer id="value" value="18" />
+				</record>
+			</list>
+		</record>
+		<record>
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1920" />
+			<integer id="resolution_maximum" value="100000" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.main_box_gap" />
+					<integer id="value" value="24" />
+				</record>
+			</list>
+		</record>
+
+		<!-- gap used between boxes that have a visible appearance -->
+		<record >
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1" />
+			<integer id="resolution_maximum" value="1366" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.main_contrast_box_gap" />
+					<integer id="value" value="8" />
+				</record>
+			</list>
+		</record>
+		<record>
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1367" />
+			<integer id="resolution_maximum" value="1919" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.main_contrast_box_gap" />
+					<integer id="value" value="12" />
+				</record>
+			</list>
+		</record>
+		<record>
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1920" />
+			<integer id="resolution_maximum" value="100000" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.main_contrast_box_gap" />
+					<integer id="value" value="16" />
+				</record>
+			</list>
+		</record>
+
+		<!-- gap used between a collection of inner_box -->
+		<record >
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1" />
+			<integer id="resolution_maximum" value="1366" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.inner_box_gap" />
+					<integer id="value" value="28" />
+				</record>
+			</list>
+		</record>
+		<record>
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1367" />
+			<integer id="resolution_maximum" value="1919" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.inner_box_gap" />
+					<integer id="value" value="36" />
+				</record>
+			</list>
+		</record>
+		<record>
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1920" />
+			<integer id="resolution_maximum" value="100000" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.inner_box_gap" />
+					<integer id="value" value="48" />
+				</record>
+			</list>
+		</record>
+
+		<!-- gap used around main content area -->
+
+		<record >
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1" />
+			<integer id="resolution_maximum" value="1366" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.main_content_margin" />
+					<integer id="value" value="12" />
+				</record>
+			</list>
+		</record>
+		<record>
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1367" />
+			<integer id="resolution_maximum" value="1919" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.main_content_margin" />
+					<integer id="value" value="18" />
+				</record>
+			</list>
+		</record>
+		<record>
+			<flags id="resolution_orientation" value="horizontal" />
+			<integer id="resolution_minimum" value="1920" />
+			<integer id="resolution_maximum" value="100000" />
+			<list id="value">
+				<record>
+					<string id="name" value="ui.main_content_margin" />
+					<integer id="value" value="24" />
+				</record>
+			</list>
+		</record>
+	</list>
+	
+	<!-- misc properties -->
+	<real id="background_opacity" value="1.0" />
+	<integer id="dcht" value="30" comment="default control height"/>
+  	<real id="default_control_inset" value="0" />
+  	<real id="default_control_offset" value="0" />
+  	<real id="default_control_gap" value="4" />
+	<real id="default_table_column_spacing" value="4" />
+	<real id="default_table_row_spacing" value="0" />
+
+	<boolean id="disable_accent_colour" value="true" />
+	<boolean id="disable_dark_accent_colour" value="false" />
+	<boolean id="disable_primary_colour" value="false" />
+	<boolean id="disable_secondary_colour" value="false" />
+
+	<!-- Colour Scheme -->
+	<!-- The following colours define the base colours scheme for the skin. The colours are references by other colour names in fm colours.xml -->
+
+	<!-- Foreground colours - used for text, icon etc -->
+	<colour name="fg lighter" 																	value="rgb(255,248,237)"/>
+	<colour name="fg" 																					value="rgb(255,248,238)"/>
+	<colour name="fg darker" 																		value="rgb(204,197,186)"/>
+	<colour name="fg alpha" 																		value="rgba(244,244,244,0.6)"/>
+	<colour name="fg info" 																			value="rgb(118,147,219)"/>
+	<colour name="fg accent" 																		value="rgb(255,165,40)"/>
+	<colour name="fg tertiary" 																	value="rgb(244,244,244)"/>
+
+		<!-- Default FM purple colours -->
+	<colour name="FM purple dark" 							value="rgb(100,30,170)" />
+	<colour name="FM purple" 								value="rgb(105,51,189)" />
+	<colour name="FM purple light" 							value="rgb(115,92,228)" />
+	<colour name="FM purple continue"		 				value="rgb(115,92,228)" />
+	<colour name="FM purple ultra violet" 					value="rgb(120,113,247)" />
+
+  <colour name="fg range1" 																		value="rgb(255,84,84)" />
+  <colour name="fg range2" 																		value="rgb(255,92,78)" />
+  <colour name="fg range3" 																		value="rgb(251,96,72)" />
+  <colour name="fg range4" 																		value="rgb(255,108,73)" />
+  <colour name="fg range5" 																		value="rgb(255,122,77)" />
+  <colour name="fg range6" 																		value="rgb(255,135,71)" />
+  <colour name="fg range7" 																		value="rgb(255,159,78)" />
+  <colour name="fg range8" 																		value="rgb(255,178,74)" />
+  <colour name="fg range9" 																		value="rgb(255,202,76)" />
+  <colour name="fg range10" 																	value="rgb(255,214,79)" />
+  <colour name="fg range11" 																	value="rgb(247,223,68)" />
+  <colour name="fg range12" 																	value="rgb(248,238,76)" />
+  <colour name="fg range13" 																	value="rgb(239,243,59)" />
+  <colour name="fg range14" 																	value="rgb(196,222,22)" />
+  <colour name="fg range15" 																	value="rgb(168,222,29)" />
+  <colour name="fg range16" 																	value="rgb(147,221,32)" />
+  <colour name="fg range17" 																	value="rgb(86,221,36)" />
+  <colour name="fg range18" 																	value="rgb(73,230,35)" />
+  <colour name="fg range19" 																	value="rgb(38,242,60)" />
+  <colour name="fg range20" 																	value="rgb(10,255,111)" />
+
+ 	<colour name="fg positive" 																	value="rgb(80,226,80)"/>
+	<colour name="fg alert" 																	value="rgb(249,197,74)"/>
+	<colour name="fg negative" 																	value="rgb(255,84,84)"/>
+
+  <colour name="fg red lighter" 															value="red 200" />
+	<colour name="fg red" 																			value="red 300" />
+	<colour name="fg red darker" 																value="red 400" />
+  <colour name="fg pink lighter" 															value="pink 200" />
+	<colour name="fg pink" 																			value="pink 300" />
+	<colour name="fg pink darker" 															value="pink 400" />
+  <colour name="fg purple lighter" 														value="purple 200" />
+	<colour name="fg purple" 																		value="purple 300" />
+	<colour name="fg purple darker" 														value="purple 400" />
+  <colour name="fg blue lighter" 															value="blue 200" />
+	<colour name="fg blue" 																			value="blue 300" />
+	<colour name="fg blue darker" 															value="blue 400" />
+  <colour name="fg cyan lighter" 															value="cyan 200" />
+	<colour name="fg cyan" 																			value="cyan 300" />
+	<colour name="fg cyan darker" 															value="cyan 400" />
+  <colour name="fg teal lighter" 															value="teal 200" />
+	<colour name="fg teal" 																			value="teal 300" />
+	<colour name="fg teal darker" 															value="teal 400" />
+  <colour name="fg green lighter" 														value="green 200" />
+	<colour name="fg green" 																		value="green 300" />
+	<colour name="fg green darker" 															value="green 400" />
+  <colour name="fg lime lighter" 															value="lime 200" />
+	<colour name="fg lime" 																			value="lime 300" />
+	<colour name="fg lime darker" 															value="lime 400" />
+  <colour name="fg yellow lighter" 														value="yellow 200" />
+	<colour name="fg yellow" 																		value="yellow 300" />
+	<colour name="fg yellow darker" 														value="yellow 400" />
+  <colour name="fg orange lighter" 														value="orange 200" />
+	<colour name="fg orange" 																		value="orange 300" />
+	<colour name="fg orange darker" 														value="orange 400" />
+  <colour name="fg grey lighter" 															value="grey 200" />
+	<colour name="fg grey" 																			value="grey 300" />
+	<colour name="fg grey darker" 															value="grey 500" />
+
+	<!-- Background colours - used for background, boxes etc -->
+	<colour name="bg lighter" 																	value="rgb(43,43,43)"/>
+	<colour name="bg" 																			value="rgb(34,34,34)"/>
+	<colour name="bg darker" 																	value="rgb(22,22,22)"/>
+	<colour name="bg alpha" 																	value="rgb(54,54,54)"/>
+	<colour name="bg small alpha" 																value="rgba(18,7,30,0.94)"/>
+	<colour name="bg large alpha" 																value="rgba(18,7,30,0.5)"/>
+	<colour name="bg info" 																		value="rgb(39,103,192)"/>
+	<colour name="bg positive" 																	value="rgb(16,165,68)"/>
+	<colour name="bg alert" 																	value="rgb(0,129,138)"/>
+	<colour name="bg accent" 																	value="rgb(255,165,40)"/>
+	<colour name="bg tertiary" 																	value="rgb(38,38,38)"/>
+	<colour name="bg negative" 																	value="rgb(182,40,40)"/>
+
+  <colour name="bg range1" 																		value="rgb(183,0,5)" />
+  <colour name="bg range2" 																		value="rgb(195,24,0)" />
+  <colour name="bg range3" 																		value="rgb(195,30,0)" />
+  <colour name="bg range4" 																		value="rgb(203,39,0)" />
+  <colour name="bg range5" 																		value="rgb(204,51,0)" />
+  <colour name="bg range6" 																		value="rgb(204,70,0)" />
+  <colour name="bg range7" 																		value="rgb(196,90,0)" />
+  <colour name="bg range8" 																		value="rgb(201,115,0)" />
+  <colour name="bg range9" 																		value="rgb(201,141,0)" />
+  <colour name="bg range10" 																	value="rgb(208,160,0)" />
+  <colour name="bg range11" 																	value="rgb(195,169,0)" />
+  <colour name="bg range12" 																	value="rgb(185,174,0)" />
+  <colour name="bg range13" 																	value="rgb(171,175,0)" />
+  <colour name="bg range14" 																	value="rgb(162,186,0)" />
+  <colour name="bg range15" 																	value="rgb(125,174,0)" />
+  <colour name="bg range16" 																	value="rgb(87,169,0)" />
+  <colour name="bg range17" 																	value="rgb(48,179,0)" />
+  <colour name="bg range18" 																	value="rgb(35,184,0)" />
+  <colour name="bg range19" 																	value="rgb(0,184,20)" />
+  <colour name="bg range20" 																	value="rgb(0,168,63)" />
+  
+  <colour name="bg tactics green dark" value="rgb(0,61,51)" />
+
+  <colour name="bg red lighter" 															value="red 600" />
+	<colour name="bg red" 																			value="red 700" />
+	<colour name="bg red darker" 																value="red 800" />
+  <colour name="bg pink lighter" 															value="pink 600" />
+	<colour name="bg pink" 																			value="pink 700" />
+	<colour name="bg pink darker" 															value="pink 800" />
+  <colour name="bg purple lighter" 														value="purple 600" />
+	<colour name="bg purple" 																		value="purple 700" />
+	<colour name="bg purple darker" 														value="purple 800" />
+  <colour name="bg blue lighter" 															value="blue 600" />
+	<colour name="bg blue" 																			value="blue 700" />
+	<colour name="bg blue darker" 															value="blue 800" />
+  <colour name="bg cyan lighter" 															value="cyan 600" />
+	<colour name="bg cyan" 																			value="cyan 700" />
+	<colour name="bg cyan darker" 															value="cyan 800" />
+  <colour name="bg teal lighter" 															value="teal 600" />
+	<colour name="bg teal" 																			value="teal 700" />
+	<colour name="bg teal darker" 															value="teal 900" />
+  <colour name="bg green lighter" 														value="green 600" />
+	<colour name="bg green" 																		value="green 800" />
+	<colour name="bg green darker" 															value="green 900" />
+  <colour name="bg lime lighter" 															value="lime 600" />
+	<colour name="bg lime" 																			value="lime 700" />
+	<colour name="bg lime darker" 															value="lime 800" />
+  <colour name="bg yellow lighter" 														value="yellow 600" />
+	<colour name="bg yellow" 																		value="yellow 700" />
+	<colour name="bg yellow darker" 														value="yellow 800" />
+  <colour name="bg orange lighter" 														value="orange 600" />
+	<colour name="bg orange" 																		value="orange 700" />
+	<colour name="bg orange darker" 														value="orange 800" />
+  <colour name="bg grey lighter" 															value="grey 600" />
+	<colour name="bg grey" 																			value="grey 700" />
+	<colour name="bg grey darker" 															value="grey 900" />
+
+	<!-- Card colours - used for places where the colours are inverted in the default skin. Inbox, Report cards, etc -->
+	<colour name="card fg lighter" 															value="rgb(255,255,255)"/>
+	<colour name="card fg" 																			value="rgb(244,244,244)"/>
+	<colour name="card fg darker" 															value="rgb(205,205,205)"/>
+	<colour name="card bg lighter" 															value="rgb(57,57,57)"/>
+	<colour name="card bg" 																			value="rgb(43,43,43)"/>
+	<colour name="card bg darker" 															value="rgb(28,28,28)"/>
+
+  <colour name="shadow" 																			value="rgb(0,0,0)" />
+
+
+	<!-- The following colours are just here temporarily to make sure nothing gets broken in other non-FM projects. We need to determine which of these belong in sitoolkit and which should live in fm colours.xml  -->
+  <!-- Base text colours -->
+	<colour name="text" 																				value="white"/>
+	<colour name="faded text" 																			value="fg alpha"/>
+	<colour name="alt text" 																			value="fg"/>
+	<colour name="faded alt text" 																		value="fg alpha"/> 
+	<colour name="darkened text" 																		value="fg darker"/> 
+	<colour name="selection" 																			value="fg darker"/>
+	<colour name="disabled" 																			value="fg alpha"/>
+	<colour name="disabled light" 																		value="rgba(255,255,255,0.5)"/>
+	<colour name="transparent" 																			value="rgba(0,0,0,0.0)" />
+  <colour name="faded white" 																			value="rgba(255,255,255,0.5)"/>
+  <colour name="faded black" 																			value="rgba(0,0,0,0.5)"/>
+	<colour name="dark text" 																			value="rgb(55,64,71)"/> 
+	<colour name="hint" 																				value="white"/>
+	<colour name="title" 																				value="rgb(247,157,40)" /> 
+	<colour name="standard_button_text" 																value="fg"/>
+	<colour name="searchbox text" 																		value="fg"/>
+	<colour name="continue text" 																		value="fg" />
+  <colour name="continue text match" 																	value="fg" />
+  <colour name="sidebar text" 																		value="white"/>
+ 	<colour name="news ticker" 																			value="fg alert" />
+
+	<!-- Base icon colours -->
+	<colour name="normal_icon" 																			value="fg"/>
+	<colour name="button_icon" 																			value="fg"/> 
+	<colour name="match_icon" 																			value="fg"/> 
+	<colour name="ui_header_icons" 																		value="fg"/>
+
+	<!-- Alerts -->
+	<colour name="attention" 																			value="fg alert"/> 
+	<colour name="warning" 																				value="fg alert"/> 
+	<colour name="neutral" 																				value="fg info"/> 
+	<colour name="positive" 																			value="fg positive"/> 
+	<colour name="positive dark" 																		value="rgb(0,110,58)"/> <!-- Used when white text on top, so needs to be dark(ish) -->
+	<colour name="positive bg" 																			value="bg positive"/> <!-- Used for panel recolouring, so text should stand out -->
+	<colour name="positive light" 																		value="green 300"/>
+	<colour name="negative" 																			value="fg negative"/> 
+	<colour name="negative dark" 																		value="rgb(171,30,30)"/> <!-- Used when white text on top, so needs to be dark(ish) -->
+	<colour name="negative bg" 																			value="bg negative"/> <!-- Used for panel recolouring, so text should stand out -->
+	<colour name="negative light" 																		value="red 200"/>
+
+	<!-- Button colours -->
+	<colour name="standard_button" 																		value="fg"/> 
+	<colour name="standard_button_shadow" 													value="shadow"/> 
+	<colour name="standard_button_border" 													value="white"/> 
+	<colour name="match_button" 																		value="fg"/> 
+	<colour name="toggle_button" 																		value="fg"/> 
+	<colour name="primary_button" 																		value="title"/> 
+	<colour name="view_button" 																			value="fg"/>
+	<colour name="link_button" 																			value="fg blue"/>
+	<colour name="conversation_statement_button" 														value="fg"/>
+	<colour name="conversation_statement_selected_button" 												value="cyan 400"/>
+	<colour name="standard_label" 																		value="bg info"/>
+
+	<!-- Box colours -->
+	<colour name="background" 																			value="bg"/> 
+	<colour name="ui_background" 																		value="bg"/> 
+	<colour name="dialog_background" 																	value="bg darker"/> 
+	<colour name="dialog_box_background" 																value="bg lighter"/> 
+	<colour name="popup_box_background" 																value="bg lighter"/> 
+	<colour name="light_box_background" 																value="bg lighter"/> 
+	<colour name="box_background" 																		value="bg"/> 
+	<colour name="hint_background" 																value="bg lighter"/> 
+	<colour name="alpha_box_background" 																value="rgb(41,43,50)"/> 
+	<colour name="dark_box_background" 																	value="bg darker"/> 
+	<colour name="contrast_box_background" 																value="FM purple light"/> 
+	<colour name="alt_dark_box_background" 																value="rgb(26,34,38)"/> 
+	<colour name="alt_box_background" 																	value="rgb(20,21,26)"/> 
+	<colour name="match_box_background" 																value="bg"/> 
+	<colour name="match_background" 																	value="bg"/>
+	<colour name="subtle_box_background" 																value="rgb(255,255,255)"/> 
+	<colour name="calendar_cell_border" 																value="fg"/>
+	<colour name="edit_box_background" 																	value="fg"/>
+	<colour name="edit_box_border" 																	value="bg accent"/>
+	<colour name="sidebar" 																							value="rgb(10,5,14)"/>
+	<colour name="processing_box_background" 														value="bg"/>
+
+	<!-- Scrollbar colours -->
+	<colour name="scrollbar" 																			value="fg"/> 
+	<colour name="inbox_scrollbar" 																		value="fg"/> 
+	<colour name="scrollbar_border" 																	value="shadow"/>
+
+	<!-- Menu -->
+	<colour name="standard_menu" 																		value="bg lighter"/>
+	<colour name="standard_menu_border" 																value="shadow"/> 
+	<colour name="standard_menu_shadow" 																value="shadow"/> 
+	<colour name="menu_highlight" 																		value="fg accent"/> <!-- Used for _over appearances and separator -->
+	<colour name="menu selected" 																		value="fg"/> 
+	
+	<!-- Slider-->
+	<colour name="slider_body" 																			value="fg"/>
+	<colour name="slider_border" 																		value="fg"/>
+	<colour name="slider_thumb" 																		value="fg accent"/>
+	<colour name="slider_thumb_border" 																	value="fg accent"/>
+
+	<!-- Switch -->
+	<colour name="switch_background" 																	value="fg"/>
+	<colour name="switch_border" 																		value="fg"/>
+	<colour name="switch_on" 																			value="fg accent"/>
+	<colour name="switch_off" 																			value="fg"/>
+
+	<!-- Table row colours -->
+	<colour name="table_heading" 																		value="bg"/> 
+	<colour name="table_row_alternate" 																	value="fg"/>
+	<colour name="table_row_over" 																		value="fg"/> 
+	<colour name="table_row_selected" 																	value="fg accent"/> 
+	
+	<!-- Club Vision -->
+	<colour name="required objective" 					value="rgb(27,120,134)" />
+	<colour name="desired objective" 					value="rgb(18,97,113)" />
+	<colour name="preferred objective" 					value="rgb(14,73,131)" />
+	<colour name="favoured objective" 					value="rgb(26,63,125)" />
+    
+	<colour name="match rating none" 						value="bg lighter" />
+	<colour name="match rating zero to five" 				value="bg range1" />
+	<colour name="match rating five to six" 				value="bg range2" />
+	<colour name="match rating six to seven" 				value="bg lighter" />
+	<colour name="match rating seven to eight" 				value="bg range16" />
+	<colour name="match rating eight to nine" 				value="bg range18" />
+	<colour name="match rating nine to ten" 				value="bg range20" />
+
+	<!-- match rating text colours -->
+	<colour name="match rating text none" 					value="faded text" />
+	<colour name="match rating text zero to five" 			value="faded black" />
+	<colour name="match rating text five to six" 			value="faded black" />
+	<colour name="match rating text six to seven" 			value="fg alpha" />
+	<colour name="match rating text seven to eight" 		value="faded black" />
+	<colour name="match rating text eight to nine" 			value="faded black" />
+	<colour name="match rating text nine to ten" 			value="faded black" />
+
+	<!-- training rating colours -->
+	<colour name="training rating none" 					value="fg" />
+	<colour name="training rating zero to five" 			value="fg range1" />
+	<colour name="training rating five to six" 				value="fg range2" />
+	<colour name="training rating six to seven" 			value="fg" />
+	<colour name="training rating seven to eight" 			value="fg range16" />
+	<colour name="training rating eight to nine" 			value="fg range18" />
+	<colour name="training rating nine to ten" 				value="fg range20" />
+	
+	<!--Player Line Colour-->
+    <colour name="goalkeeper_line" red="142" green="36" blue="170" />
+    <colour name="sweeper_line" red="57" green="73" blue="171" />
+    <colour name="defender_line" red="30" green="136" blue="229" />
+    <colour name="defensive_midfielder_line" red="0" green="172" blue="193" />
+    <colour name="midfielder_line" red="67" green="160" blue="71" />
+    <colour name="attacking_midfielder_line" red="124" green="179" blue="66" />
+    <colour name="attacker_line" red="229" green="57" blue="53" />
+    <colour name="substitutes_line" red="70" green="70" blue="70" />
+	
+	<!-- injury report body -->
+	<colour name="injury_body_colour_past_injury" 			value="fg blue"/>
+	<colour name="injury_body_colour_at_risk" 				value="fg range5"/>
+	<colour name="injury_body_colour_injured" 				value="fg range1"/>
+	<colour name="injury_body_colour_recurring" 			value="purple 200"/>
+	<colour name="injury_body_colour_light_training" 		value="fg range10"/>
+	
+	<colour name="bar value" 								value="blue a700"/>
+	<!-- percentage bar fill colour -->
+	<colour name="bar filler" 								value="bg lighter"/>
+
+	<!-- Transfer Centre -->
+	<colour name="transfer centre extra info" 				value="fg alpha" />
+	<colour name="transfer centre fee" 						value="fg alert" />
+	<colour name="transfer status proposal colour" 			value="blue 700"/>
+	<colour name="transfer status offer made colour" 		value="blue 700"/>
+	<colour name="transfer status offer accepted colour" 	value="cyan 700"/>
+	<colour name="transfer status offer negotiated colour" 	value="blue grey 900"/>
+	<colour name="transfer status offer rejected colour" 	value="negative bg"/>
+	<colour name="transfer status offer withdrawn colour" 	value="negative bg"/>
+	<colour name="transfer status cancelled colour" 		value="negative bg"/>
+	<colour name="transfer status contract offered colour" 	value="cyan 700"/>
+	<colour name="transfer status contract rejected colour" value="pink 700"/>
+	<colour name="transfer status awaiting work permit colour" 	value="teal 700"/>
+	<colour name="transfer status failed work permit colour" 	value="negative"/>
+	<colour name="transfer status awaiting confirmation colour" value="teal 700"/>
+	<colour name="transfer status confirmed colour" 			value="positive bg"/>
+    
+	<colour name="search filter active" 			        value="blue a700"/>
+    <colour name="search filter inactive" 				    value="grey 900"/>
+    <colour name="team talk addressing" 					value="blue grey 900" />
+
+	<colour name="gzk"                                                                          value="rgb(250,250,250)"/>
+	<colour name="gzc"                                                                          value="rgb(217,177,40)"/>
+	<colour name="gzc1"                                                                         value="rgb(255,185,34)"/>
+	<colour name="gzc2"                                                                         value="rgb(192,136,51)"/>
+	<colour name="gzc3"                                                                         value="rgb(255,200,50)"/>
+
+	<colour name="xg01" 																		value="rgb(169,0,255)"/>
+	<colour name="xg02" 																		value="rgb(179,0,255)"/>
+	<colour name="xg03" 																		value="rgb(189,0,255)"/>
+	<colour name="xg04" 																		value="rgb(199,0,255)"/>
+	<colour name="xg05" 																		value="rgb(209,0,255)"/>
+	<colour name="xg06" 																		value="rgb(219,0,255)"/>
+	<colour name="xg07" 																		value="rgb(229,0,255)"/>
+	<colour name="xg08" 																		value="rgb(239,0,255)"/>
+	<colour name="xg09" 																		value="rgb(249,0,255)"/>
+
+</properties>

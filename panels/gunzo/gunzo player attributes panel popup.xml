@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<panel>
+	<layout class="arrange_horizontal_attachment" layout="-4,1,-1" offset="0" gap="2"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+	<flags id="required_attribute_row_appearance" value="tables/custom/attributes/required/row"/>
+	<flags id="preferred_attribute_row_appearance" value="tables/custom/attributes/preferred/row"/>
+	<flags id="not_important_attribute_row_appearance" value="tables/standard/row/normal/row"/>
+
+	<!-- Table properties to use for all attribute tables -->
+	<record id="table_properties" mode="fill_rows, stripe_rows, printable" layout="-1, 13, 50" row_height="23" row_spacing="1" default_sort_column="name">
+		<list id="column_table_properties">
+			<!-- Attribute name -->
+			<record index="0" id="name" left="8" top="0">
+				<record id="widget_info" class="text" font="gz_title" colour="gzk" size="10" alignment="left, centre_y" multi_line="false"/>
+			</record>
+			<!-- Attribute training improvement offset -->
+			<record index="1" id="offs" sort_disabled="true">
+				<record id="widget_info" class="training_improvement" />
+			</record>
+			<!-- Attribute value -->
+			<record index="2" id="val " sort_disabled="true" column_alignment="centre" right="8">
+				<record id="widget_info" class="attribute_label" font="gz_attribute" size="11" style="bold" alignment="right, centre_y" multi_line="false"/>
+			</record>
+			<!-- Attribute value as a bar -->
+			<record index="3" id="bar " sort_disabled="true">
+				<record id="widget_info" class="attribute_bar">
+					<record id="help" help_translation_id="plAr" alignment="top, right"/>
+				</record>
+			</record>
+			<!-- Attribute edit widget -->
+			<record index="4" id="edit" sort_disabled="true">
+				<record id="widget_info" class="editable_client_object_property_panel" />
+			</record>
+		</list>
+	</record>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1"/>
+
+		<!-- Technical Table -->
+		<widget class="table" id="pltt" layout="-1">
+			<!-- <list id="headings">
+				<record index="0" alignment="centre_x, centre_y" size="9" font="gz_title" colour="accent" column_span="5" hide_sorting="true" disabled="true">
+					<translation id="text" translation_id="229413" type="use" value="Technical"/>
+				</record>
+			</list> -->
+		</widget>
+
+		<!-- Goalkeeping Table -->
+		<widget class="table" id="plgk" layout="-1">
+			<!-- <list id="headings">
+				<record index="0" alignment="centre_x, centre_y" size="9" font="gz_title" colour="accent" column_span="5" hide_sorting="true" disabled="true">
+					<translation id="text" translation_id="230024" type="use" value="Goalkeeping" />
+				</record>
+			</list>-->
+		</widget>
+		<!-- Mental Table -->
+		<widget class="table" id="plmt" layout="-1">
+			<!-- <list id="headings">
+				<record index="0" alignment="centre_x, centre_y" size="9" font="gz_title" colour="accent" column_span="5" hide_sorting="true" disabled="true">
+					<translation id="text" translation_id="230106" type="use" value="Mental"/>
+				</record>
+			</list>-->
+		</widget>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical, fill" offset="0"/>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- Physical Table -->
+				<widget class="table" id="plpt" layout="-1" auto_size="vertical">
+					<!-- <list id="headings">
+						<record index="0" alignment="centre_x, centre_y" size="9" font="gz_title" colour="accent" column_span="5" hide_sorting="true" disabled="true">
+							<translation id="text" translation_id="230003" type="use" value="Physical"/>
+						</record>
+					</list>-->
+				</widget>
+
+				<!-- Extra technical table for GK -->
+				<widget class="table" id="plgt" layout="-1" auto_size="vertical">
+					<!-- <list id="headings">
+						<record index="0" alignment="centre_x, centre_y" size="9" font="gz_title" colour="accent" column_span="5">
+							<translation id="text" translation_id="229413" type="use" value="Technical"/>
+						</record>
+					</list>-->
+				</widget>
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- Separator -->
+				<widget class="picture" file="dividers/standard/horizontal/line" height="1" image_alignment="centre"/>
+
+				<!-- Additional attributes table -->
+				<container class="client_object_viewer_xml_panel" id="attT">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<widget class="table" layout="-1, -1" mode="fill_rows, printable" row_height="24" row_spacing="1">
+						<list id="column_display_properties">
+							<record index="0" left="10" sort_disabled="true"/>
+							<record index="1" right="10" sort_disabled="true"/>
+						</list>
+
+						<!-- Height-->
+						<widget class="label" row="0" column="0" column_span="2" font="gz_title" colour="gzk" size="9">
+							<record id="object_property" get_property="Phei" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="Phei" row="0" column="1" font="gz_title" colour="gzk" size="9">
+							<record id="object_property" get_property="Phei"/>
+							<record id="widget_properties" alignment="right, centre_y"/>
+						</widget>
+						<!-- Weight-->
+						<widget class="label" row="1" column="0" column_span="2" font="gz_title" colour="gzk" size="9">
+							<record id="object_property" get_property="Pwei" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="Pwei" row="1" column="1" font="gz_title" colour="gzk" size="9">
+							<record id="object_property" get_property="Pwei"/>
+							<record id="widget_properties" alignment="right, centre_y" />
+						</widget>
+						<!-- Condition -->
+						<widget class="label" row="2" column="0" column_span="2" font="gz_title" colour="gzk" size="9">
+							<record id="object_property" get_property="Pcon" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="conv" row="2" column="1" column_span="2" font="gz_title" colour="gzk" size="9">
+							<record id="widget_info" class="condition_label" alignment="right, centre_y" ivih="false"/>
+							<record id="widget_properties" alignment="right, centre_y"/>
+							<record id="object_property" get_property="Pcon"/>
+						</widget>
+						<!-- Fitness -->
+						<widget class="label" row="3" column="0" column_span="2" font="gz_title" colour="gzk" size="9">
+							<record id="object_property" get_property="Pfit" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="fitv" row="3" column="1" column_span="2" font="gz_title" colour="gzk" size="9">
+							<record id="widget_info" class="condition_label" alignment="right, centre_y" mode="1" ivih="false"/>
+							<record id="widget_properties" alignment="right, centre_y"/>
+							<record id="object_property" get_property="Pfit"/>
+						</widget>
+
+
+						<widget class="label" id="Pfo:" col="0" row="4" style="semi_bold" font="gz_title" size="9" colour="gzk">
+							<record id="object_property" get_property="Pfot" name="true" />
+						</widget>
+
+
+					<container col="1" row="4">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<!-- left foot -->
+					<widget class="value_based_picture" id="Mlft" scale_picture="true" transparency="1">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+						<list id="value_list">
+							<record min_value="1" max_value="4" file="icons/custom/foot/l1"/>
+							<record min_value="5" max_value="8" file="icons/custom/foot/l2"/>
+							<record min_value="9" max_value="12" file="icons/custom/foot/l3"/>
+							<record min_value="13" max_value="16" file="icons/custom/foot/l4"/>
+							<record min_value="17" max_value="20" file="icons/custom/foot/l5"/>
+						</list>
+						<record id="object_property">
+							<integer id="get_property" value="PlfG" />
+						</record>
+					</widget>
+
+					<!-- right foot -->
+					<widget class="value_based_picture" id="Mrft" scale_picture="true" transparency="1">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="right" inset="-15"/>
+						<list id="value_list">
+							<record min_value="1" max_value="4" file="icons/custom/foot/r1"/>
+							<record min_value="5" max_value="8" file="icons/custom/foot/r2"/>
+							<record min_value="9" max_value="12" file="icons/custom/foot/r3"/>
+							<record min_value="13" max_value="16" file="icons/custom/foot/r4"/>
+							<record min_value="17" max_value="20" file="icons/custom/foot/r5"/>
+						</list>
+						<record id="object_property">
+							<integer id="get_property" value="PrfG" />
+						</record>
+					</widget>
+
+					</container>
+
+				<!-- Player Status  -->
+				<widget class="player_status_all_button" id="Pnfa" row="5" column="0" maximised="true">
+						<record id="object_property">
+							<integer id="get_property" value="PnaS"/>
+						</record>
+				</widget>		
+
+					</widget>
+
+				</container>
+
+			</container>
+		</container>
+	</container>
+
+	<widget class="picture" file="dividers/standard/vertical/line" width="1" image_alignment="centre"/>
+
+	<!-- More attribute stuff-->
+
+	<container class="client_object_viewer_xml_panel" id="atT2" file="gunzo/gunzo player profile taba popup"/>
+
+</panel>

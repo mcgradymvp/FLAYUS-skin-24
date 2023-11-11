@@ -1,0 +1,82 @@
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="2"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+  <animation class="fade_on_hide_animation" duration="0.2" end_mode="stop"/>
+  <!-- This animation isn't a normal position animation as it gets triggered in code with specfic values-->
+  <animation class="position_animation" tween="ease_in_out" duration="0.0"/>
+
+  <container>
+    
+				<widget class="object_portrait_picture" id="npiB" image_alignment="centre_x,top" scale_picture="true" width="16" height="16">
+					<layout class="stick_to_sides_attachment" alignment="top" inset="65"/>
+					<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+					<record id="object_property" dont_set_hint="true" get_property="PNat" set_property="objt" />
+				</widget>
+    <!-- Player picture -->
+    <widget class="object_portrait_picture" id="pict" scale_picture="true" image_alignment="centre_x, bottom">
+      <layout class="stick_to_sides_attachment" alignment="top" inset="10"/>
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="5"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="5"/>
+
+      <record id="object_property">
+        <integer id="get_property" value="objt"/>
+        <integer id="set_property" value="objt"/>
+      </record>
+    </widget>
+  
+    <!-- captain icon-->
+    <widget class="picture" id="capi" scale_picture="true" file="icons/16px/captain" hidden="true" width="16" height="16">
+      <layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="top" inset="65"/>
+    </widget>
+
+    <!-- Icons (Injury, star player etc)-->
+    <container id="icoC" height="16" width="16" class="bordered_box" appearance="boxes/custom/solid/rounded/paper">
+      <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+      <layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="2"/>
+      <layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+
+      <widget class="picture" id="PTgs" file="icons/16px/goal" image_alignment="centre" hidden="true" width="16" height="16" red_replacement="text"/>
+      <widget class="picture" id="PTas" file="icons/16px/assist" image_alignment="centre" hidden="true" width="16" height="16" red_replacement="text"/>
+      <widget class="picture" id="PTrt" file="icons/16px/key player" image_alignment="centre" hidden="true" width="16" height="16"/>
+      <widget class="picture" id="PNba" file="icons/16px/yellow card" image_alignment="centre" hidden="true" width="16" height="16"/>
+      <widget class="picture" id="PHNO" file="icons/16px/debut" image_alignment="centre" hidden="true" width="16" height="16"/>
+    </container>
+  </container>
+
+  <!-- Name -->
+  <container class="bordered_box" appearance="boxes/custom/solid/paper" height="24" red_replacement="blue2">    
+    <layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="vertical"  inset="0" apply_to_children="true" />
+    
+    <container class="animated_wipe_cycle_fade_container" id="valu" alignment="centre,centre_y" interval="1">
+
+    <widget class="person_button" format="[%person#1-initial_surname]" size="10" alignment="centre,centre_y" auto_size="vertical" multiline="false" style="semi_bold" enforce_style="true">
+      <flags id="colr" value="white" />
+      <record id="object_property">
+        <list id="get_properties">          
+          <record>
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="valu" />
+          </record>
+        </list>
+      </record>
+    </widget>
+  
+     	<!--debug role/duty-->
+	    <container>
+			<layout class="arrange_horizontal_attachment" layout="-5,-3,-4" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<widget class="tactical_role_label" id="role" abbt="true" size="10" colour="white" alignment="right,centre_y" auto_size="horizontal"/>
+			<widget class="label" size="10" colour="white" alignment="centre,centre_y" auto_size="horizontal">
+			<translation id="text" translation_id="233089" type="use" value="-" />
+			</widget>
+			<widget class="tactical_role_label" id="duty" abbt="true" size="10" colour="white" alignment="left,centre_y" auto_size="horizontal"/>
+      
+		</container>
+	</container>   
+	</container>   
+        
+</panel>

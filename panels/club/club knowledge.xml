@@ -1,0 +1,332 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" vertical_gap="0" />
+
+	<widget class="scouting_top_panel" id="stop">
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+		</record>
+		<list id="visible_items">
+			<flags value="trwd" />
+			<flags value="scfc" />
+			<flags value="scpc" />
+			<flags value="scbc" />
+			<flags value="trbc" />
+			<flags value="assc" />
+		</list>
+	</widget>
+
+	<container class="main_box">
+		<attachment_group class="horizontal_arrange" horizontal_layout="400,-1" horizontal_offset="0" vertical_inset="0" horizontal_gap="0" />
+
+		<!--LHS container-->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="10" horizontal_inset="0" vertical_gap="16" />
+
+			<!--tab buttons-->
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" />
+
+				<widget class="radio_button" select_event="ECST" auto_size="horizontal" show_button_appearance="true" alignment="centre" appearance="switches/store toggle/normal/button" colour="fg" red_replacement="bg" blue_replacement="bg" green_replacement="bg accent" icon_enabled="false" secondary_icon_enabled="true" secondary_icon_alignment="left" selected="true">
+					<record id="secondary_icon_properties" file="icons/16px/staff" />
+					<translation id="text" translation_id="458567" type="use" value="Scouts[COMMENT: filter option to show only scout suggestions in scouting centre; fr 22700]" />
+				</widget>
+					
+				<widget class="radio_button" select_event="ECKT" auto_size="horizontal" show_button_appearance="true" alignment="centre" appearance="switches/store toggle/normal/button" colour="fg" red_replacement="bg" blue_replacement="bg" green_replacement="bg accent" icon_enabled="false" secondary_icon_enabled="true" secondary_icon_alignment="left">
+					<record id="secondary_icon_properties" file="icons/16px/world" />
+					<translation id="text" translation_id="334387" type="use" value="World Knowledge[COMMENT: team scouts; information about range of knowledge]" />
+				</widget>
+			</container>
+
+			<!--scouts panel container-->
+			<container id="spnc" hidden="true">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" vertical_gap="6" />
+
+				<!--title section-->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_gap="8" />
+
+					<container class="main_box_no_margin" height="26" width="26">
+						<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" />
+						<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="picture" auto_size="all" file="icons/custom/add manager/colour unpicked" red_replacement="white">
+						</widget>
+
+						<widget class="text" id="stnw" auto_size="all" font="bold" wants_mouse_events="false" colour="bg" alignment="centre, centre_y">
+						</widget>
+					</container>
+
+					<widget class="text" font="title" colour="white" size="xlarge" auto_size="all">
+						<layout class="centre_in_parent_attachment" alignment="vertical" />
+						<translation id="text" translation_id="259890" type="use" value="Scout Assignments[COMMENT; scout assignments section in person screen]" />
+					</widget>
+				</container>
+
+				<widget class="text" colour="faded text" multiline="true" auto_size="vertical">
+					<translation id="text" translation_id="557634" type="use" value="The Chief Scout will assign scouts by default based on their skillset and knowledge of an area unless otherwise specified.[COMMENT: AREA: Scouting Coverage; SUB-AREA: Scout Assignments; FR-BN: FM-4076; NOTE: explanation text for scout assignments]" />
+				</widget>
+
+				<!--scouts table with the responsibility button-->
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="12" />
+
+					<widget class="table" mode="fill_rows, stripe_rows, select_rows" id="stbl" layout="30,-1,-1" auto_size_rows="true" fixed_size_rows="false" select_event="ZOM!" navigation_container="false" navigation_container_allow_empty="true">
+
+						<list id="headings">
+							<record />
+							<record alignment="left,centre_y">
+								<translation id="text" translation_id="447637" type="use" value="Staff Member[COMMENT: FR 21109, title text displaying staff member for a given responsibility]" />
+							</record>
+							<record alignment="left,centre_y">
+								<translation id="text" translation_id="560931" type="use" value="Recruitment Focus Area[COMMENT: AREA: Scouting Coverage; SUB-AREA: Scout Assignments; FR-BN: FM-4076; NOTE: one of the table column headings]" />
+							</record>
+						</list>
+
+						<list id="column_widget_properties">
+							<record indx="0" image_alignment="centre" />
+							<record indx="1" alignment="left,centre_y" />
+							<record indx="2" alignment="left,centre_y" />
+						</list>
+
+						<list id="column_table_properties">
+							<record indx="0" top="6" bottom="6">
+								<boolean id="sort_disabled" value="true" />
+								<record id="widget_info" class="picture" file="icons/26px/search" red_replacement="fg" scale_picture="false" />
+							</record>
+							<record indx="1" top="6" bottom="6" />
+							<record indx="2" top="6" bottom="6" />
+						</list>
+					</widget>
+
+					<widget class="horizontal_divider" />
+
+					<widget class="widget_popup_button" id="rspb" auto_size="all" icon="icons/16px/staff" appearance="buttons/subtle/normal/button">
+						<translation id="text" translation_id="420803" type="use" value="Scouting Responsibility[COMMENT: FR 11179 - title for buttons to change who is responsible for organising scouting at the club]" />
+						<string id="popup_alignment" value="centre_x, top" />
+						<string id="widget_type" value="group_responsibility_list_widget" />
+						<record id="WdgP" file="team/team container scout responsibility popup" width="950" />
+						<record id="modal_popup_properties" file="modal popup panel auto sized" />
+					</widget>					
+				</container>
+				
+			</container>
+
+			<!--knowledge panel container-->
+			<container id="kpnc" hidden="true">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" vertical_gap="10" />
+
+				<!--title section-->
+				<widget class="text" font="title" colour="white" size="xlarge" auto_size="vertical">
+					<translation id="text" translation_id="334387" type="use" value="World Knowledge[COMMENT: team scouts; information about range of knowledge]" />
+				</widget>
+
+				<widget class="text" colour="faded text" multiline="true" auto_size="vertical">
+					<translation id="text" translation_id="557633" type="use" value="The club's knowledge of specific Regions and Countries based on those associated with the club.[COMMENT: AREA: Scouting Coverage; SUB-AREA: World Coverage; FR-BN: FM-4083; NOTE: explanation text for world knowledge]" />
+				</widget>
+
+				<widget class="popup_button" auto_size="all" icon="icons/16px/world" appearance="buttons/subtle/normal/button">
+					<list id="items">
+						<record id="ckrv" event_id="EUKV">
+							<translation id="text" translation_id="338079" type="use" value="Regions" />
+						</record>
+						<record id="cknv" event_id="EUKV">
+							<translation id="text" translation_id="229364" type="use" value="Nations" />
+						</record>
+					</list>
+					<integer id="selection" value="ckrv" />
+				</widget>
+
+				<!--knowledge table-->
+				<container >
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<widget class="table" mode="fill_rows, stripe_rows, select_rows" id="ktbl" layout="30,-3,-2" auto_size_rows="true" fixed_size_rows="false" select_event="ZOM!" navigation_container="false" navigation_container_allow_empty="true">
+
+						<!--default sorting by the knowledge column-->
+						<integer id="default_sort_column" value="2" />
+
+						<list id="headings">
+							<record />
+							<record alignment="left,centre_y">
+								<translation id="text" translation_id="296523" type="use" value="Region[COMMENT: team screen; title of panel showing scouting knowledge]" />
+							</record>
+							<record alignment="left,centre_y">
+								<translation id="text" translation_id="251861" type="use" value="Knowledge[COMMENT: non player profile panel; title of panel showing scouting knowledge]" />
+							</record>
+						</list>
+
+						<list id="column_widget_properties">
+							<record indx="0" image_alignment="centre" />
+							<record indx="1" alignment="left,centre_y" />
+							<record indx="2" alignment="left,centre_y" />
+						</list>
+
+						<list id="column_table_properties">
+							<record indx="0" top="6" bottom="6">
+								<boolean id="sort_disabled" value="true" />
+								<record id="widget_info" class="picture" file="icons/26px/search" red_replacement="fg" scale_picture="false" />
+							</record>
+							<record indx="1" top="6" bottom="6" />
+							<record indx="2" top="6" bottom="6" sort_ascending="false" />
+						</list>
+					</widget>
+				</container>
+			</container>
+		</container>
+		
+		<!--RHS container-->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+			<!--the map with popup overlay-->
+			<container navigation_container="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container embed_in_frame="true">
+					<attachment_group class="title_embedded_panel_right" />
+
+					<record id="default_properties" height="18" width="18" />
+
+					<widget class="text" auto_size="horizontal" alignment="centre" height="30">
+						<string id="text" value="0%" />
+					</widget>
+
+					<container class="main_box" background_colour="knowledge colour minimal" />
+					<container class="main_box" background_colour="knowledge colour nominal" />
+					<container class="main_box" background_colour="knowledge colour sporadic" />
+					<container class="main_box" background_colour="knowledge colour decent" />
+					<container class="main_box" background_colour="knowledge colour average" />
+					<container class="main_box" background_colour="knowledge colour good" />
+					<container class="main_box" background_colour="knowledge colour very good" />
+					<container class="main_box" background_colour="knowledge colour extensive" />
+					<container class="main_box" background_colour="knowledge colour exceptional" />
+					<container class="main_box" background_colour="knowledge colour outstanding" />
+					<container class="main_box" background_colour="knowledge colour complete" />
+
+					<widget class="text" auto_size="horizontal" alignment="centre" height="30">
+						<string id="text" value="100%" />
+					</widget>
+
+				</container>
+
+				<container class="team_scouting_knowledge_map" id="map " disabled_colour="0.1" />
+
+				<!--popup overlay-->
+				<container>
+					<attachment_group class="vertical_arrange_horizontal_autosize" vertical_offset="8" horizontal_inset="0" />
+					<layout class="centre_in_parent_attachment" alignment="horizontal" />
+
+					<!--knowledge panel-->
+					<container class="contrast_box" id="pokp" hidden="true" width="600" appearance="boxes/contrast/standard/paper" red_replacement="box_background">
+						<animation class="slide_in_left_animation" start_value="0, 0.025" end_value="0, 0" duration="0.2" tween="ease_out" coord_mode="relative_to_screen" no_clipping="true" end_mode="hold_end" />
+						<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="5" vertical_gap="5" horizontal_alignment="horizontal" horizontal_inset="10" />
+
+						<!--the region (or nation)-->
+						<widget class="region_label" id="ksrl" style="bold" auto_size="vertical" hidden="true" />
+						<widget class="nation_button" id="ksnb" style="bold" size="large" hidden="true" use_mainland_china_override="true" />
+
+						<!--level of knowledge-->
+						<widget class="icon_button" id="kskb" auto_size="vertical" font="title" show_button_appearance="false" icon="icons/16px/scouting" />
+
+						<!--knowledge source details-->
+						<container id="ksrc" hidden="true">
+							<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" />
+
+							<widget class="spacer" />
+							<widget class="horizontal_divider" />
+							<widget class="spacer" />
+
+							<widget class="text" auto_size="vertical" spec="title" text="label" colour="faded text">
+								<translation id="text" translation_id="557636" type="use" value="Main Knowledge Source[COMMENT: AREA: scouting; SUB-AREA: world knowledge; FR-BN: FM-4076; REF-ID: 251845; NOTE: knowledge source popup panel, where does the knowledge of this region come from? Scout, Staff, Affiliate etc]" />
+							</widget>
+
+							<!--knowledge source person (or club)-->
+							<container>
+								<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" />
+
+								<widget class="person_button_with_job_description" id="kspb" file="widgets/person button with job description horizontal" info_popup_enabled="true" hidden="true" auto_size="all" />
+								<widget class="club_button" id="kscb" style="bold" hidden="true" auto_size="all" />
+							</container>
+
+							<!--knowledge source relationship-->
+							<widget class="icon_button" id="ksrb" auto_size="vertical" show_button_appearance="false" hidden="true" icon="icons/16px/relationship">
+								<string id="colour" value="fg info" />
+								<string id="icon_colour" value="fg info" />
+							</widget>
+
+						</container>
+					</container>
+
+					<!--assignment panel-->
+					<container class="contrast_box" id="poap" hidden="true" width="540" appearance="boxes/popup/match/paper" red_replacement="bg lighter" blue_replacement="bg darker">
+						<animation class="slide_in_left_animation" start_value="0, 0.025" end_value="0, 0" duration="0.2" tween="ease_out" coord_mode="relative_to_screen" no_clipping="true" end_mode="hold_end" />
+						<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="8" vertical_gap="12" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<!--assignment scout widgets (managed by code)-->
+						<container id="sasc">
+							<attachment_group class="vertical_arrange_autosize_all" vertical_alignment="top" />
+						</container>
+
+						<!--assignment description text (managed by code)-->
+						<container id="saDc">
+							<attachment_group class="vertical_arrange_autosize_all" vertical_alignment="top" />
+						</container>
+
+						<widget class="text" alignment="left,centre_y" spec="title" colour="faded text" size="small">
+							<translation id="text" translation_id="557637" type="use" value="Current Focuses[COMMENT: AREA: Scouting; SUB-AREA: Scouting Coverage; FR-BN: FM-4076; NOTE: title for the recruitment focuses buttons]" />
+						</widget>
+
+						<!--recruitment focus widgets (managed by code)-->
+						<container id="srfc">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_gap="8" />
+						</container>
+
+						<widget class="horizontal_divider" height="1" />
+
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" />
+
+							<container>
+								<attachment_group class="vertical_arrange_autosize_all" vertical_alignment="top" />
+
+								<widget class="text" auto_size="all" alignment="left,centre_y" spec="title" colour="faded text" size="small">
+									<translation id="text" translation_id="450810" type="use" value="Next Planned Match[COMMENT: FR 21125, scouting centre text showing the match the scout intends to observe next]" />
+								</widget>
+
+								<widget class="text" id="samt" auto_size="all" alignment="left,centre_y" style="bold" size="large" />
+							</container>
+
+							<!--assignment report widget (managed by code)-->
+							<container id="sarc">
+								<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right" />
+							</container>
+
+						</container>
+
+					</container>
+				</container>
+			</container>
+
+			<!--buttons-->
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" vertical_inset="12" horizontal_offset="12" />
+
+				<widget class="icon_button" id="mlib" auto_size="all" show_button_appearance="false" file="icons/16px/circle" size="large" colour="faded text">
+					<flags id="icon_colour" value="currently scouting" />
+					<translation id="text" translation_id="557631" type="use" value="Currently Scouting[COMMENT: AREA: Scouting; SUB-AREA: Scouting Coverage; FR-BN: FM-4076; NOTE: the map legend]" />
+				</widget>
+				
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right" />
+					<widget class="link_button" alignment="centre" section="tmta" auto_size="all">
+						<translation id="text" translation_id="557638" type="use" value="Match and Team Analysis[COMMENT: AREA: Scouting; SUB-AREA: Scouting Coverage; FR-BN: FM-4038; NOTE: section title for the new Match and Team Analysis area, which revamps the old Create Assignment dialog]" />
+					</widget>
+				</container>
+			</container>
+			
+		</container>
+		
+	</container>
+</panel>

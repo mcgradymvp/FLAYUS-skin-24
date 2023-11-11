@@ -1,0 +1,14 @@
+<panel>
+  <boolean id='AUsp' value='false'/>
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0,0,0,0" apply_to_children="true" />
+
+  <container class="main_contrast_box" red_replacement="style_background">
+  	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+  
+    <!--main instructions area-->
+    <widget class="position_instructions_panel" id="poin" file="tactics/position instructions panel overview"/>
+
+  </container>
+</panel>

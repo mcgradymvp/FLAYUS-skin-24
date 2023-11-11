@@ -1,0 +1,33 @@
+<panel>
+	<attachment_group class="button_arrangement_right" />
+					
+	<widget class="primary_icon_tick_button" id="set " click_event="set " controller_button="y_button">
+		<translation id="text" translation_id="229918" type="use" value="Confirm" />
+	</widget>
+    
+    <container>
+        <attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="left" horizontal_offset="0" vertical_inset="0" >
+            <global id="horizontal_gap" name="ui.split_button_row_gap"/>
+        </attachment_group>
+
+        <widget class="button" id="undo" click_event="UNDO" auto_size="all" appearance="buttons/subtle/split/left/button" >
+            <translation id="text" translation_id="230251" type="use" value="Undo"/>
+        </widget>
+
+        <widget class="popup_button" id="rvrd" select_event="rvrd" fixed="true" width="25" height="30" appearance="buttons/subtle/split/right/button">
+            <list id="items">
+                <record id="REDO">
+                    <translation id="text" translation_id="329043" type="use" value="Redo"/>
+                </record>
+                <record id="revt">
+                    <translation id="text" translation_id="344717" type="use" value="Revert"/>
+                </record>
+            </list>
+        </widget>
+    </container>
+    
+	<widget class="icon_button" id="disc" click_event="disc" auto_size="all" controller_button="x_button">
+		<translation id="text" translation_id="229828" type="use" value="Cancel" />
+	</widget>
+
+</panel>

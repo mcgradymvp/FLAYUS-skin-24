@@ -1,0 +1,77 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="-1"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<container>
+
+		<!-- Player picture -->
+		<widget class="object_portrait_picture" id="pict" scale_picture="true" image_alignment="centre,top">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+			<record id="object_property">
+				<integer id="get_property" value="objt"/>
+				<integer id="set_property" value="objt"/>
+			</record>
+		</widget>
+
+		<!-- captain icon-->
+		<widget class="picture" id="capi" scale_picture="true" file="icons/16px/captain" hidden="true" width="16" height="16">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="10"/>
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="1"/>
+		</widget>
+
+		<!-- Icons (Injury, star player etc)-->
+		<container id="icoC" height="16" width="16" class="bordered_box" appearance="boxes/custom/solid/rounded/paper">
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="2"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="right" inset="10"/>
+
+		    <widget class="picture" id="PTgs" file="icons/16px/goal" image_alignment="centre" hidden="true" width="16" height="16" red_replacement="text"/>
+			<widget class="picture" id="PTas" file="icons/16px/assist" image_alignment="centre" hidden="true" width="16" height="16" red_replacement="text"/>
+			<widget class="picture" id="PTrt" file="icons/16px/key player" image_alignment="centre" hidden="true" width="16" height="16"/>
+			<widget class="picture" id="PNba" file="icons/16px/yellow card" image_alignment="centre" hidden="true" width="16" height="16"/>
+			<widget class="picture" id="PHNO" file="icons/16px/debut" image_alignment="centre" hidden="true" width="16" height="16"/>
+		</container>
+	</container>
+
+	<container class="bordered_box" appearance="boxes/custom/solid/rounded/paper" red_replacement="black" height="25">
+		<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<!-- Name-->
+		<container class="bordered_box" appearance="boxes/custom/scouting/heading/paper" height="13">
+			<record id="object_property" get_property="oPCn" set_property="rrep"/>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+			<widget class="person_button" format="[%person#1-initial_surname]" size="xsmall" alignment="centre,can_scale" auto_size="vertical" multiline="false">
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="oSCn" />
+							<integer id="set_property" value="colr" />
+						</record>
+						<record>
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="valu" />
+						</record>
+					</list>
+				</record>
+			</widget> 
+		</container>
+
+		<!--debug role/duty-->
+		<container height="12">
+			<layout class="arrange_horizontal_attachment" layout="-5,-3,-4" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<widget class="tactical_role_label" id="role" abbt="true" size="8" colour="white" alignment="right,can_scale" auto_size="vertical"/>
+
+			<widget class="label" size="6" colour="white" alignment="centre" auto_size="vertical">
+				<translation id="text" type="use" value="-" />
+			</widget>
+			<widget class="tactical_role_label" id="duty" abbt="true" size="8" colour="white" alignment="left,can_scale" auto_size="vertical"/>
+
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,203 @@
+<panel>
+
+	<!--icons to be used for annual revenues"-->
+	<!--Sponsorship"-->
+	<flags id="spoi" value="icons/custom/commercial summary/sponsorship" />
+	<!--Corporate"-->
+	<flags id="cori" value="icons/custom/commercial summary/corporate" />
+	<!--match day"-->
+	<flags id="mati" value="icons/custom/commercial summary/kit" />
+	<!--broadcast"-->
+	<flags id="broi" value="icons/custom/commercial summary/tv" />
+	<!--prize money"-->
+	<flags id="prii" value="icons/custom/commercial summary/prize" />
+
+	<!--Up Arrow-->
+	<flags id="upar" value="icons/26px/increase" />
+	<!--Down Arrow-->
+	<flags id="dwar" value="icons/26px/decrease" />
+
+	<string id="skin_style" value="subtle box" />
+
+	<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" apply_to_children="true" />
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<!--When only one new sponsor-->
+			<container id="1nsp" class="inner_titled_box" height="140">
+				<translation id="text" translation_id="402411" type="use" value="New Sponsorship Deal[COMMENT: FR 13750]" />
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<container height="55">
+					<layout class="arrange_horizontal_attachment" layout="70,-1" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<widget class="picture" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" file="icons/custom/commercial summary/new deal" height="55" red_replacement="primary" blue_replacement="secondary">
+
+					</widget>
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="5" gap="0"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="label" id="nsnm" style="semi_bold" auto_size="vertical" />
+
+						<container>
+							<layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+							<widget class="label" id="nscv" auto_size="horizontal">
+
+							</widget>
+
+							<widget class="label" id="nslv" auto_size="horizontal" colour="faded text">
+
+							</widget>
+
+							<widget class="picture" id="nspi" image_alignment="centre" auto_size="horizontal" height="16">
+
+							</widget>
+
+						</container>
+
+					</container>
+
+				</container>
+
+				<widget class="text" id="nstx" font="inbox_body" colour="faded text" auto_size="vertical" />
+
+			</container>
+
+			<!--When several new sponsors-->
+			<container id="snsp" height="140">
+				<layout class="arrange_horizontal_attachment" layout="-2,-7" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<container class="inner_titled_box">
+					<translation id="text" translation_id="402412" type="use" value="New Sponsorship Deals[COMMENT: FR 13750]" />
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="1" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="picture" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" file="icons/custom/commercial summary/new deal" height="55" red_replacement="primary" blue_replacement="secondary">
+
+					</widget>
+
+					<container height="6" />
+
+					<widget class="label" id="nbns" auto_size="vertical" alignment="centre" font="title">
+
+					</widget>
+
+					<widget class="label" id="nstv" auto_size="vertical" style="bold" alignment="centre">
+
+					</widget>
+
+
+				</container>
+
+				<container class="inner_titled_box">
+					<translation id="text" translation_id="402413" type="use" value="Most Notable New Deal[COMMENT: FR 13750]" />
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="label" id="nsnm" size="large" style="bold" auto_size="vertical" />
+
+						<container>
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+							<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+							<layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+
+							<widget class="label" id="nscv" auto_size="horizontal">
+
+							</widget>
+
+							<widget class="label" id="nslv" auto_size="horizontal" colour="faded text">
+
+							</widget>
+
+							<widget class="picture" id="nspi" image_alignment="centre" auto_size="horizontal" height="16">
+
+							</widget>
+
+						</container>
+
+					</container>
+
+					<widget class="text" id="nstx" colour="faded text">
+
+					</widget>
+				</container>
+
+			</container>
+
+		</container>
+
+		<!--Annual Revenue Totals-->
+		<container class="inner_titled_box" height="220">
+			<translation id="text" translation_id="402414" type="use" value="Annual Revenue Totals[COMMENT: FR 13750]" />
+			<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1,-1,-1" offset="0" gap="8"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--Sponsorships-->
+				<widget id="spon" class="property_list_viewer_xml_panel" file="widgets/commercial update annual revenue widget">
+
+				</widget>
+
+				<!--Corporate and hospitality-->
+				<widget id="corp" class="property_list_viewer_xml_panel" file="widgets/commercial update annual revenue widget">
+
+				</widget>
+
+				<!--Match day-->
+				<widget id="matc" class="property_list_viewer_xml_panel" file="widgets/commercial update annual revenue widget">
+
+				</widget>
+
+			</container>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1,-1,-1" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--Braodcast-->
+				<widget id="broa" class="property_list_viewer_xml_panel" file="widgets/commercial update annual revenue widget" />
+
+				<!--Prize money-->
+				<widget id="priz" class="property_list_viewer_xml_panel" file="widgets/commercial update annual revenue widget" />
+
+				<widget class="spacer" />
+
+			</container>
+
+		</container>
+
+		<container class="inner_titled_box">
+			<translation id="text" translation_id="402415" type="use" value="Merchandise[COMMENT: FR 13750]" />
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="12" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<widget class="text" id="merc" auto_size="vertical" font="inbox_body" />
+
+			<widget class="simple_data_list" maximum_items="5" height="100" id="kits" set_property="obji">
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<layout class="arrange_horizontal_attachment" alignment="left" gap="6" offset="0"/>
+
+				<record id="widget_properties" class="kit_icon" file="widgets/commercial update kit" width="150" scale_picture="true" kit_path="zoomed/large" kit_number_path="large" />
+			</widget>
+
+
+		</container>
+	</container>
+</panel>

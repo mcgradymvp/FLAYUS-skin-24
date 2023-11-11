@@ -1,0 +1,54 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<list id="properties_to_add_to_context">
+		<integer value="TIdx"/>
+		<integer value="Ttea"/>
+		<record>
+			<integer id="get_property" value="numr"/>
+			<integer id="set_property" value="numb"/>
+		</record>
+	</list>
+
+	<container class="subsection_box">
+		<translation id="title" translation_id="297306" type="use" value="Top Players[COMMENT: major players snapshot; lists the top players in a nation or continent]"/>
+
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" horizontal_inset="0" />
+
+		<!-- table listing the major players -->
+		<widget class="client_object_list_table" id="ptbl" mode="fill_rows, stripe_rows, keyboard">
+			<boolean id="should_force_refresh" value="true"/>
+			<record id="object_property">
+				<integer id="get_property" value="CmpM"/>
+				<integer id="set_property" value="objL"/>
+				<boolean id="dont_set_object" value="true"/>
+			</record>
+
+			<record id="viewed_property_ids">
+				<record id="Pnms"/>
+				<record id="Pclb"/>
+			</record>
+		</widget>
+
+		<!--button-->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="right" />
+
+			<widget class="link_button" id="gtnt" auto_size="all" section="TeSq">
+				<translation id="text" translation_id="297307" type="use" value="View national team[COMMENT: major players snapshot; link to view national team from a nation overview screen]" />
+				<record id="object_property">
+					<integer id="get_property" value="objt"/>
+					<integer id="set_property" value="objt"/>
+				</record>
+				<attachment class="test_multiple_globals_attachment" default_value="false">
+					<list id="get_properties">
+						<record get_property="dtty" test_mode="0" value="5" skip_if_null="true" />
+					</list>
+					<integer id="set_property" value="hidn" />
+				</attachment>
+
+			</widget>
+		</container>
+	</container>
+
+</panel>

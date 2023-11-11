@@ -1,0 +1,142 @@
+<!-- A panel showing various bits of information about a player --><panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<boolean id="should_force_refresh" value="true" />
+
+	<container class="inner_box">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!-- Portrait / Analyser-->
+		<container height="140">
+			<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+
+			<container>
+				<!-- Club badge image -->
+				<widget class="object_portrait_picture" id="pclB" image_alignment="right" scale_picture="true" wants_mouse_events="true">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,0,0" />
+
+					<record id="object_property" dont_set_hint="true" get_property="Pclb" set_property="objt" />
+				</widget>
+
+				<!-- Profile picture -->
+				<widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="left,bottom">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+					<!-- only show the picture if we should show portraits -->
+					<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+						<boolean id="value" value="false" />
+					</attachment>
+
+					<record id="object_property">
+						<list id="get_properties">
+							<!--Facegen data request-->
+							<record get_property="fcgn" />
+							<!--Fake name request-->
+							<record get_property="Pfke" />
+							<record get_property="prpc" set_property="valu" />
+						</list>
+					</record>
+				</widget>
+			</container>
+
+			<!-- Attribute Analyser -->
+			<container id="ppaa" default_width="-7">
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+
+				<container class="inner_box" id="ovrv" appearance="">
+					<string id="title" value="" />
+					<!-- there are two panels here: one for goalkeepers, and one for outfield players
+			          only one panel is visible at any time -->
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+
+					<!-- outfield player analyser panel : visible by default -->
+					<widget class="person_attributes_analyser_panel" id="ofap" file="player/player attribute analyser outfield" hidden="false" auto_size="vertical" />
+					<!-- goalkeeper player analyser panel : hidden by default -->
+					<widget class="person_attributes_analyser_panel" id="gkap" file="player/player attribute analyser goalkeeper" hidden="true" auto_size="vertical" />
+				</container>
+			</container>
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_offset="0" vertical_gap="0"/>
+
+			<!--Player extra details (e.g. onloan at...)-->
+			<container  height="30">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,0,140" apply_to_children="true" />
+
+				<widget class="player_extra_details_text" font="title" alignment="centre" multiline="false">
+					<record id="object_property" get_property="PExD" />
+				</widget>
+			</container>
+
+			<!-- D.O.B / Age -->
+			<widget class="label" font="label" auto_size="vertical">
+				<translation id="text" translation_id="458477" type="use" value="D.O.B.[COMMENT: player profile, personal details; Abbreviation for 'Date of Birth']" />
+			</widget>
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_offset="0" horizontal_gap="10" vertical_alignment="top" vertical_inset="0" />
+
+				<!-- Age -->
+				<!-- We use an editable panel here just to make it disappear when editing-->
+				<!-- fixed height as an attempt to fix 152615 -->--&gt;
+				<widget class="editable_client_object_property_panel" id="age " auto_size="all" font="value">
+					<record id="widget_info" class="formatted_label" alignment="left,centre_y" height="22" auto_size="all">
+						<translation id="format" translation_id="242551" type="use" value="[%number#1] years old" />
+					</record>
+					<record id="widget_edit_info" width="0" height="0" />
+					<record id="object_property" get_property="Page" />
+				</widget>
+
+				<!-- DoB -->
+				<widget class="editable_client_object_property_panel" id="dobl" auto_size="all" font="value">
+					<record id="widget_info" class="game_formatted_label" alignment="left,centre_y" auto_size="all" auto_size_minimum_height="20" format="([%date#1-short])" colour="faded text" />
+					<record id="widget_properties" height="24" />
+					<record id="object_property" get_property="Pdob" />
+				</widget>
+			</container>
+
+			<!-- Nationality -->
+			<widget class="label" font="label" auto_size="vertical">
+				<translation id="text" translation_id="248033" type="use" value="Nationality[COMMENT - Hall of fame section]" />
+			</widget>
+			<widget class="editable_client_object_property_panel" id="intc " auto_size="vertical" font="value">
+				<record id="widget_info" class="nation_button" auto_size="vertical" format="[%nation#1-nationality]" />
+				<record id="widget_properties" auto_size="vertical" />
+				<record id="object_property" dont_set_hint="true" get_property="PNat" />
+			</widget>
+
+			<!-- Int Caps -->
+			<widget class="international_appearances_label" size="small" auto_size="vertical" >
+				<record id="object_property" dont_set_hint="true" get_property="Pist" />
+			</widget>
+
+			<!--Value-->
+			<widget class="label" font="label" auto_size="vertical">
+				<translation id="text" translation_id="292633" type="use" value="Estimated Value[COMMENT: player profile; value label]" />
+			</widget>
+			<widget class="transfer_value_label" id="valu" auto_size="vertical" font="value">
+				<record id="object_property" get_property="Pdva" dont_set_hint="true" />
+			</widget>
+
+			<!--Wage / Expiry date-->
+			<widget class="label" font="label" auto_size="vertical">
+				<translation id="text" translation_id="257347" type="use" value="Contract[COMMENT - transfer status filter text; offers at contract stage]" />
+			</widget>
+			<container height="23" id="wged">
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<widget class="editable_client_object_property_panel" id="Pcww" font="value">
+					<record id="object_property" get_property="Pcww" />
+				</widget>
+				<widget class="editable_client_object_property_panel" id="Pcex" font="value">
+					<record id="object_property" get_property="Pcex" />
+				</widget>
+			</container>
+			<widget class="link_text" id="wgex" section="Pcnr" auto_size="vertical" font="value"/>
+		</container>
+	</container>
+</panel>

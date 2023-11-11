@@ -1,0 +1,88 @@
+﻿<panel height="80">
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+  <container class="inner_box_no_margin">
+	  <attachment_group class="horizontal_arrange" horizontal_alignment="left" horizontal_offset="0" vertical_ofset="0" horizontal_gap="0"/>
+
+    <widget class="object_portrait_picture" width="80" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+      <record id="object_property">
+        <integer id="get_property" value="Pers" />
+        <integer id="set_property" value="objt" />
+      </record>
+    </widget>
+
+
+    <container width="150">
+      <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+      <widget class="person_button" auto_size="all" colour="scout card text" style="semi_bold" enforce_style="true">
+        <record id="object_property">
+          <integer id="get_property" value="Pers" />
+          <integer id="set_property" value="valu" />
+        </record>
+      </widget>
+
+      <widget class="client_object_property_panel" property="PNat" auto_size="all" height="15">
+        <record id="object_property" get_property="Pers" set_property="objt" />
+        <record id="widget_properties"   alignment="left,centre_y" colour="scout card text"/>
+      </widget>
+
+    </container>
+
+    <container width="150">
+      <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="-2"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+      <widget class="position_label" auto_size="all" colour="scout card text" style="semi_bold"  alignment="left,centre_y">
+        <record id="object_property">
+          <integer id="get_property" value="Ppos" />
+          <integer id="set_property" value="valu" />
+        </record>
+      </widget>
+
+      <widget class="tactical_role_label" auto_size="all" alignment="left,centre_y" colour="scout card text">
+        <record id="object_property">
+          <integer id="get_property" value="PRrs" />
+          <integer id="set_property" value="valu" />
+        </record>
+      </widget>
+
+    </container>
+
+    <widget class="age_label" width="45" alignment="centre" colour="scout card text" style="semi_bold">
+      <record id="object_property" get_property="Page" set_property="value" />
+    </widget>
+
+    <container width="200">
+      <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="-2"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+      <widget class="text" auto_size="all" colour="scout card text" style="semi_bold" alignment="left,centre_y">
+        <record id="object_property">
+          <integer id="get_property" value="Pdva" />
+          <integer id="set_property" value="text" />
+        </record>
+      </widget>
+
+      <widget class="text" auto_size="all" alignment="left,centre_y" colour="scout card text">
+        <record id="object_property">
+          <integer id="get_property" value="Pmnw" />
+          <integer id="set_property" value="text" />
+        </record>
+      </widget>
+
+    </container>
+    
+   <widget class="player_scout_recommendation_widget" width="60" >
+     <record id="object_property">
+       <integer id="get_property" value="Psrk" />
+       <integer id="set_property" value="valu" />
+     </record>
+   </widget>
+
+    <container width="4"/>
+
+  </container>
+  
+</panel>

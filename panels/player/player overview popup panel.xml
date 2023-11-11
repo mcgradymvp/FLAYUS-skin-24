@@ -1,0 +1,97 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize"  vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+	<boolean id="suppress_update_after_selection" value="true"/>
+
+	<container id="PoRl">
+		<layout class="fit_children_attachment" alignment="vertical"/>
+		<layout class="arrange_horizontal_attachment" alignment="middle,fill" offset="0" gap="10"/>
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal,extend" inset="10"/>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="vertical"/>
+			<layout class="arrange_vertical_attachment" layout="20, -1" offset="6" gap="1"/>
+			<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true"/>
+
+			<string id="skin_style" value="title link"/>
+
+			<!-- Linked header -->
+			<widget class="link_button" section="Plov" auto_size="horizontal">
+				<translation id="text" translation_id="332515" type="use" value="Best Position"/>
+			</widget>
+
+			<widget class="position_label" id="PUbp" display_format="0" alignment="left,top" height="20" auto_size="horizontal" font="value"/>
+		</container>
+
+		<widget class="vertical_divider">
+			<layout class="stick_to_sides_attachment" alignment="vertical"/>
+		</widget>
+
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical,extend" gap="1"/>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="6" gap="1"/>
+			<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true"/>
+			
+
+			<string id="skin_style" value="title link"/>
+
+			<!-- Linked header -->
+			<widget class="link_button" section="Plov" height="20" auto_size="horizontal">
+				<translation id="text" translation_id="412466" type="use" value="Best Role And Duty[COMMENT: player popup object preview; section title for role and duty indicator]"/>
+			</widget>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="horizontal"/>
+				<layout class="fit_children_attachment" alignment="vertical" gap="1"/>
+				<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="10"/>
+				<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true"/>
+
+				<widget class="position_role_duty_suitability_pie" id="PUrp" auto_size="all"/>
+
+				<container class="vertical_arrange_container" auto_size="vertical" vertical_gap="2">
+					<widget class="label" id="PUrl" auto_size="vertical" font="value"/>
+					<widget class="label" id="PUdl" auto_size="vertical" colour="faded text"/>
+				</container>
+			</container>
+		</container>
+	</container>
+
+	<widget class="horizontal_divider" />
+
+	<!-- Middle row of large panels -->
+	<container height="390">
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="1"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<container class="client_object_viewer_selector_panel" id="pus1" file="player/player overview big selector panel" save_session_state="true">
+			<widget class="player_attributes_panel" id="patt" file="gunzo/gunzo player attributes panel popup" late_loading="true">
+				<translation id="title" translation_id="229822" type="use" value="Attributes"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</container>
+	</container>
+
+	<container class="inner_subtle_box" height="140" draw_vertical_dividers="true">
+		<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<record id="default_properties" file="player/player overview popup selector panel" save_session_state="true" />
+
+		<container class="client_object_viewer_selector_panel" id="pus2" >
+			<integer id="default_for_unemployed_managers" value="pcon"/>
+			<integer id="default_for_international_managers_other_team" value="pcon"/>
+			<integer id="default_for_everyone_else" value="pcon"/>
+			<integer id="default_for_versus_mode" value="pcon"/>
+		</container>
+
+
+		<container class="client_object_viewer_selector_panel" id="pus3">
+			<integer id="default_for_unemployed_managers" value="pfmp"/>
+			<integer id="default_for_international_managers_other_team" value="pfmp"/>
+			<integer id="default_for_everyone_else" value="pfmp"/>
+			<integer id="default_for_versus_mode" value="pfmp"/>
+		</container>
+	</container>
+
+</panel>

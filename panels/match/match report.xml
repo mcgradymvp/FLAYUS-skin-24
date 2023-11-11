@@ -1,0 +1,86 @@
+<panel>
+
+	<flags id="match_report_summary_appearance" value="boxes/custom/match/report heading/paper" />
+
+	<boolean id="save_session_state" value="true" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<!--titled box-->
+	<container class="main_transparent_box" id="mrtb">
+
+		<translation id="title" translation_id="242329" type="use" value="Match Report" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<!--table for all report entries-->
+		<widget class="table" id="mrit" mode="fill_rows, printable" auto_size_rows="true" fixed_size_rows="false">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+			<list id="column_widget_properties">
+				<record indx="0" spec="text" colour="text" />
+				<record indx="1" spec="text" colour="text" />
+				<record indx="2" spec="text" colour="text" />
+				<record indx="3" spec="text" colour="text" />
+			</list>
+
+			<list id="column_table_properties">
+				<record id="match_report_incident_icon" width="30">
+
+					<flags id="sort_disabled" value="true" />
+					<flags id="box_style" value="no_border" />
+					<flags id="left" value="4" />
+
+					<record id="column_widget_properties">
+						<flags id="alignment" value="centre" />
+						<flags id="spec" value="text" />
+						<flags id="size" value="small" />
+						<flags id="navigation_focus_target" value="false" />
+					</record>
+
+				</record>
+
+				<record id="match_report_incident_time" width="70">
+
+					<flags id="sort_disabled" value="true" />
+					<flags id="box_style" value="no_border" />
+
+					<record id="column_widget_properties">
+						<flags id="alignment" value="centre" />
+						<flags id="spec" value="text" />
+						<flags id="size" value="small" />
+						<flags id="navigation_focus_target" value="false" />
+					</record>
+
+				</record>
+
+				<record id="match_report_incident_description" width="-1">
+
+					<flags id="sort_disabled" value="true" />
+					<flags id="box_style" value="no_border" />
+
+					<record id="column_widget_properties">
+						<flags id="alignment" value="left,centre_y" />
+						<flags id="spec" value="text" />
+						<flags id="size" value="small" />
+						<integer id="auto_size_minimum_height" value="26" />
+					</record>
+				</record>
+
+				<record id="match_report_incident_score" width="40">
+					<flags id="sort_disabled" value="true" />
+					<flags id="box_style" value="no_border" />
+					<flags id="right" value="4" />
+
+					<record id="column_widget_properties">
+						<flags id="alignment" value="left,centre_y" />
+						<flags id="spec" value="text" />
+						<flags id="size" value="small" />
+					</record>
+				</record>
+			</list>
+
+		</widget>
+
+	</container>
+
+</panel>

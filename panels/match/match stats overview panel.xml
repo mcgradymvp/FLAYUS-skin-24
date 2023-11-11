@@ -1,0 +1,25 @@
+﻿<panel>
+	<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="5" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<!--match stats-->
+	<widget class="match_stats_panel" file="match/match stats titled">
+		<record id="object_property" set_property="objt" get_property="objt" />
+	</widget>
+
+	<!--formations-->
+	<container class="main_transparent_box">
+		<translation id="title" translation_id="247329" type="use" value="Player Ratings" />
+    <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="1" inset="0" />
+		<widget class="pitch_with_both_tactics" id="pwbt" navigation_disabled="true" file="widgets/pitch with both tactics vertical" icon_flags="use_player_kits_back,show_name,show_extra_details,drop_initial_if_possible,show_number,dont_colour_number,colour_names_for_team" player_icon_file="tactics/tactics icon preview info panel5" pitch_draw_grass="false">
+      <boolean id="vertical" value="true"/>
+			<boolean id="pitch_is_read_only" value="true" />
+			<boolean id="pitch_dont_draw_indicators" value="true" />
+			<boolean id="allow_y_score_adjustment_for_roles" value="false" />
+			<flags id="pitch_alignment" value="centre"/>
+		</widget>
+
+	
+	</container>
+</panel>

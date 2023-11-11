@@ -1,0 +1,36 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="icon_box" icon="icons/custom/icon box/plans">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<container height="15">
+			<layout class="stick_to_sides_attachment" alignment="left,vertical" inset="0" apply_to_children="true" />
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" section="Ppin" auto_size="horizontal">
+				<translation id="text" translation_id="365298" type="use" value="Plans[COMMENT: FR 512; person happiness panel; title for person future plans section]" />
+			</widget>
+		</container>
+
+		<!-- Number of short term / long term plans -->
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+			<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4"/>
+
+			<widget class="link_text" id="stpC" auto_size="all" size="large" style="semi_bold" section="Ppin"/>
+
+		</container>
+
+		<widget class="link_text" id="ltpC" auto_size="vertical" section="Ppin"/>
+
+		<container class="scrolling_box">
+			<!-- One of the plans (short term has priority over long term) -->
+			<widget class="text" id="splw" auto_size="vertical" colour="faded text" size="small"/>
+		</container>
+	</container>
+</panel>

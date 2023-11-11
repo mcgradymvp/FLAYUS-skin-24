@@ -1,0 +1,121 @@
+﻿<!-- panel to be used during the welcome to the club briefing --><panel>
+
+		<attachment class="test_screen_size_attachment" skip_if_false="true">
+			<list id="properties">
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="0" />
+					<integer id="max_value" value="601" />
+					<!-- This is a very large value as we want our widget to show if > the min_value.  The attachmen itself only does values between a range so we set the max arbitrarily high to make this work -->
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="420" />
+					<integer id="false_value" value="420" />
+				</record>
+				<record min_value="601" max_value="720" true_value="460"/>
+				<record min_value="720" max_value="868" true_value="525"/>
+				<record min_value="868" max_value="968" true_value="630"/>
+				<record min_value="968" max_value="10000" true_value="730"/>
+			</list>
+		</attachment>
+
+	<attachment_group class="horizontal_arrange" horizontal_layout="-12, -11">
+		<global id="horizontal_gap" name="ui.main_contrast_box_gap" />
+	</attachment_group>
+
+	<!-- Player Icons -->
+	<string id="highest_earner_icon" value="icons/custom/player stats/earner" />
+	<string id="captain_icon" value="icons/custom/player stats/captain" />
+	<string id="top_scorer_icon" value="icons/custom/player stats/top goalscorer" />
+	<string id="key_player_icon" value="icons/custom/player stats/average rating" />
+	<string id="hot_prospect_icon" value="icons/custom/player stats/prospect" />
+	<string id="squad_personality_icon" value="icons/custom/player stats/personality" />
+	
+	<boolean id="should_force_refresh" value="true" />
+
+	<container class="main_transparent_box">
+		<translation id="title" translation_id="491942" type="use" value="Team Report - Best XI[COMMENT: AREA: Welcome to team; SUB-AREA: team report step; FR-BN: 22765; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string of the best eleven sub-panel of the team report step of the welcome pack, XI is 11 in roman numerals and is somewhat common to use in this way in English, replace it in your language if it's not]" />
+
+		<widget class="pitch_with_tactics" id="attp" allow_y_score_adjustment_for_roles="false" maximum_player_height="0.15" disable_link="true" icon_flags="show_name, show_number, show_captain, dont_show_tactical_info, dont_colour_number, drop_initial_if_possible, can_have_multiple_top_icons" player_icon_file="tactics/tactics icon welcome to team panel" vertical="true" pitch_is_read_only="true" pitch_alignment="centre, can_scale" pitch_draw_grass="false" pitch_line_colour="faded text" pitch_vertical_padding="0" pitch_horizontal_padding="0" pitch_touchline_width_percentage="50" draw_partnerships="false">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+
+		<!-- squad personality -->
+		<container id="sqpr" file="human/welcome to team squad mini info left panel" height="65" width="170" hidden="true">
+			<string id="remove_if" value="ui.is_fmt_controller_skin" />
+
+			<layout class="stick_to_sides_attachment" alignment="bottom, left" inset="0" />
+		</container>
+
+		<!-- hot prospect -->
+		<container id="hotp" file="human/welcome to team squad mini info left panel" height="65" width="170" hidden="true">
+			<string id="remove_if" value="ui.is_fmt_controller_skin" />
+
+			<layout class="stick_to_sides_attachment" alignment="bottom, left" inset="0" />
+		</container>
+
+		<!-- key player -->
+		<container id="keyp" file="human/welcome to team squad mini info left panel" height="65" width="170" hidden="true">
+			<string id="remove_if" value="ui.is_fmt_controller_skin" />
+
+			<layout class="stick_to_sides_attachment" alignment="bottom, left" inset="0" />
+		</container>
+
+		<!-- top scorer -->
+		<container id="tops" file="human/welcome to team squad mini info right panel" height="65" width="170" hidden="true">
+			<string id="remove_if" value="ui.is_fmt_controller_skin" />
+
+			<layout class="stick_to_sides_attachment" alignment="bottom, right" inset="0" />
+		</container>
+
+		<!-- highest earner -->
+		<container id="hier" file="human/welcome to team squad mini info right panel" height="65" width="170" hidden="true">
+			<string id="remove_if" value="ui.is_fmt_controller_skin" />
+
+			<layout class="stick_to_sides_attachment" alignment="bottom, right" inset="0" />
+		</container>
+
+		<!-- captain -->
+		<container id="capt" file="human/welcome to team squad mini info right panel" height="65" width="170" hidden="true">
+			<string id="remove_if" value="ui.is_fmt_controller_skin" />
+
+			<layout class="stick_to_sides_attachment" alignment="bottom, right" inset="0" />
+		</container>
+	</container>
+
+	<container class="main_transparent_box">
+		<translation id="title" translation_id="491947" type="use" value="Transfer Obligations[COMMENT: AREA: Welcome to team; SUB-AREA: team report step; FR-BN: 22765; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string of the transfer obligations sub-panel of the team report step of the welcome pack that lists any future transfers the club has lined up]" />
+		<attachment_group class="vertical_arrange" horizontal_inset="0" vertical_offset="0" />
+
+		<container class="scrolling_box" navigation_container="true">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="8" />
+
+				<container class="inner_box" id="TrOb">
+					<attachment_group class="vertical_arrange_autosize" horizontal_inset="0" vertical_offset="0" vertical_gap="8" />
+
+					<widget class="text" id="NoTo" auto_size="vertical" alignment="left, centre_x" hidden="true">
+						<translation id="text" translation_id="491948" type="use" value="No current transfer obligations[COMMENT: AREA: Welcome to team; SUB-AREA: team report step; FR-BN: 22765; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: String in the transfer obligations sub-panel of the team report step of the welcome pack to indicate that the team currently has no future transfers lined up]" />
+					</widget>
+					<!-- future transfers added here -->
+				</container>
+
+				<widget class="picture" file="dividers/standard/horizontal/line" height="1" />
+
+				<container class="inner_box" id="LoOb">
+
+					<translation id="title" translation_id="491949" type="use" value="Loan Obligations[COMMENT: AREA: Welcome to team; SUB-AREA: team report step; FR-BN: 22765; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string of the loan obligations sub-panel of the team report step of the welcome pack that lists any players the team has any loan players in the squad or out on loan]" />
+					<attachment_group class="vertical_arrange_autosize" horizontal_inset="0" vertical_offset="0" vertical_gap="8" />
+
+					<widget class="text" id="NoLo" auto_size="vertical" alignment="left, centre_x" hidden="true">
+						<translation id="text" translation_id="491950" type="use" value="No current loan obligations[COMMENT: AREA: Welcome to team; SUB-AREA: team report step; FR-BN: 22765; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: String in the loan obligations sub-panel of the team report step of the welcome pack to indicate that the team currently has no loan players in it's squad or players out on loan]" />
+					</widget>
+					<!-- current loans added here -->
+				</container>
+			</container>
+		</container>
+
+	</container>
+
+</panel>

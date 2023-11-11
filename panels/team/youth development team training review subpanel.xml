@@ -1,0 +1,123 @@
+﻿<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at00" />
+		<record entity_layout_id="at0:" />
+		<record entity_layout_id="at09" />
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at04" />
+		<record entity_layout_id="at02" />
+		<record entity_layout_id="at03" />
+		<record entity_layout_id="at07" />
+		<record entity_layout_id="at06" />
+		<record entity_layout_id="at05" />
+		<record entity_layout_id="at08" />
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<container class="inner_subtle_box" entity_layout_id="at00" id="trIB" name="training_review_inner_titled_box" force_title_borders="true" navigation_container="true">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container entity_layout_id="at09" id="revC">
+			<layout class="stick_to_object_attachment" id="align_top" offset="8" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="-8" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<container class="club_training_performers_panel" entity_layout_id="at01" id="bprC" file="widgets/club training performers small panel1" name="team_performers_container">
+				<layout class="stick_to_object_attachment" id="align_top" offset="0" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="align_bottom" offset="0" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" move_side="true" target="main" />
+				<layout class="stick_to_sizes_attachment" width="50.000000" />
+			</container>
+			<widget class="text" entity_layout_id="at04" id="arTl" width="170" height="20" name="avg_training_rating_title">
+				<translation id="text" translation_id="466393" type="use" value="Avg. Training Rating[COMMENT: a rating of how well the team is getting on in training on average]" />
+				<string id="font" value="title" />
+				<string id="size" value="small" />
+				<layout class="stick_to_object_attachment" id="align_top" offset="-1" get_side="top" set_side="top" move_side="true" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" get_side="left" set_side="right" move_side="true" target="at01" />
+			</widget>
+			<widget class="text" entity_layout_id="at02" id="fcTl" height="20" name="Last Weeks Focus">
+				<string id="font" value="title" />
+				<string id="size" value="small" />
+				<layout class="stick_to_object_attachment" id="align_top" offset="-1" get_side="top" set_side="top" move_side="true" target="main" />
+				<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" offset="-99" get_side="left" set_side="right" target="at04" />
+			</widget>
+			<widget class="text" entity_layout_id="at03" id="inTl" width="100" height="20" name="injuries_title">
+				<translation id="text" value="Injuries" translation_id="227748" type="use" />
+				<string id="font" value="title" />
+				<string id="size" value="small" />
+				<layout class="stick_to_object_attachment" id="align_top" offset="-1" get_side="top" set_side="top" move_side="true" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" get_side="left" set_side="right" move_side="true" target="at04" />
+			</widget>
+			<widget class="match_rating_label" appearance="none" font="bold" alignment="centre_y,left"  size="large" style="semi_bold" entity_layout_id="at07" id="arVl" width="170" height="30" name="avg_training_rating_value" navigation_focus_target="false">
+				<list id="value_list">
+					<record min_value="-1" max_value="0" colour="training rating none" />
+					<record min_value="0" max_value="4.999999999" colour="training rating zero to five" />
+					<record min_value="5" max_value="5.999999999" colour="training rating five to six" />
+					<record min_value="6" max_value="6.999999999" colour="training rating six to seven" />
+					<record min_value="7" max_value="7.999999999"  colour="training rating seven to eight" />
+					<record min_value="8" max_value="8.999999999" colour="training rating eight to nine" />
+					<record min_value="9" max_value="10" colour="training rating nine to ten" />
+				</list>
+				<string id="format" value="[%fraction#1-2.2]" />
+				
+				<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" move_side="true" target="at04" />
+				<layout class="stick_to_object_attachment" id="align_right" get_side="left" set_side="right" move_side="true" target="at01" />
+			</widget>
+			<container class="editable_client_object_property_panel" entity_layout_id="at06" id="inVl" width="100" height="30" name="injuries_value">
+				<string id="size" value="large" />
+				<string id="style" value="semi_bold" />
+				<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" move_side="true" target="at03" />
+				<layout class="stick_to_object_attachment" id="align_right" get_side="left" set_side="right" move_side="true" target="at07" />
+			</container>
+			<container class="editable_client_object_property_panel" entity_layout_id="at05" id="fcVl" height="30" name="focus_value">
+				<string id="size" value="large" />
+				<string id="style" value="semi_bold" />
+				<record id="widget_properties">
+					<string id="icon_enabled" value="false" />
+					<string id="should_recolour" value="false" />
+				</record>
+				<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" move_side="true" target="at03" />
+				<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" get_side="left" set_side="right" target="at06" />
+			</container>
+			<widget class="text" entity_layout_id="at08" id="trCm" name="training_comments_text">
+				<layout class="stick_to_object_attachment" id="align_top" offset="20" get_side="bottom" set_side="top" target="at07" />
+				<layout class="stick_to_object_attachment" id="align_bottom" offset="-1" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" get_side="left" set_side="right" target="at01" />
+			</widget>
+		</container>
+		<widget class="text" id="noTi" font="title" size="large" entity_layout_id="at0:" hidden="true" alignment="centre">
+			<translation id="text" translation_id="242522" type="use" value="N/A" />
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		</widget>
+	</container>
+</panel>

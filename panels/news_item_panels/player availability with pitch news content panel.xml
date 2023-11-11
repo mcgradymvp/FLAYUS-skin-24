@@ -1,0 +1,10 @@
+﻿<!-- XML for a news item about a choosing first team players to make available for reserve team matches -->
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+	<string id="skin_style" value="subtle box"/>
+	<container class="inner_subtle_box_no_margin" red_replacement="dark_box_background">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+		<container class="youth_development_team_tactics_panel" file="team/youth development team tactics inbox panel" m_is_news_item="true" height="650" id="ptPn" />
+
+	</container>
+</panel>

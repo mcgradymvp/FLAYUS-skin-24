@@ -1,0 +1,196 @@
+<panel>
+
+	<!--appearances for status buttons and labels-->
+	<flags id="stfa" value="buttons/custom/dof status/failed/button" />
+	<!--Failed label-->
+	<flags id="snsa" value="buttons/custom/dof status/not started/button" />
+	<!--Not Started label-->
+	<flags id="spha" value="buttons/standard/normal/button" />
+	<!--Put on Hold button-->
+	<flags id="soha" value="buttons/custom/dof status/not started/button" />
+	<!--On Hold label-->
+	<flags id="ssna" value="buttons/primary/normal/button" />
+	<!--Start Negotiations button-->
+	<flags id="sipa" value="buttons/custom/dof status/in progress/button" />
+	<!--In Progress label-->
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+
+		<container class="main_box" height="80">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="10" vertical_inset="0" />
+
+			<container class="client_object_viewer_xml_panel" id="dofc" width="400">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" vertical_inset="4" />
+
+				<widget class="object_portrait_picture" width="80" id="dofp" image_alignment="centre" scale_picture="true">
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="8" />
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+				</widget>
+
+				<container width="200">
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="2" horizontal_inset="0" />
+
+
+					<widget class="job_label" id="dofj" alignment="left,centre_y" colour="faded text" auto_size="vertical">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="Pcjo" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+
+					<widget class="person_button" id="dofn" auto_size="vertical" navigation_focus_target="false">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+
+					<widget class="global_reputation_stars_label" id="dofs" alignment="left" auto_size="vertical" navigation_focus_target="false">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="NrSr" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</list>
+						</record>
+					</widget>
+
+				</container>
+
+			</container>
+
+
+			<widget class="picture" width="26" file="icons/26px/info" image_alignment="centre" scale_picture="true" red_replacement="normal_icon">
+
+			</widget>
+
+			<widget class="text" id="expl" multiline="true" size="10" alignment="left,centre_y" />
+
+
+
+		</container>
+
+		<container id="devl" draw_vertical_dividers="true">
+
+			<attachment_group class="horizontal_arrange" horizontal_layout="-1,550">
+				<global id="horizontal_gap" name="ui.main_box_gap" />
+			</attachment_group>
+
+			<container class="main_box">
+				<translation id="title" translation_id="335031" type="use" value="Development List" />
+
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_inset="0" />
+
+                <container navigation_container="true" default_focus="true">
+                    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+                    <widget class="table" id="ultb" layout="-1, -1, 45, 120, 90, 100, 85" mode="fill_rows, select_rows, printable, stripe_rows" save_immediate_state="true" row_spacing="2" navigation_focus_target="true">
+                        <!--headings-->
+                        <list id="headings">
+                            <record index="0" alignment="left,centre_y" auto_hide_priority="1">
+                                <translation id="text" translation_id="229689" type="use" value="Name" />
+                                <translation id="hint" translation_id="229689" type="use" value="Name" />
+                            </record>
+                            <record index="1" alignment="left,centre_y" auto_hide_priority="1">
+                                <translation id="text" translation_id="242853" type="use" value="Status" />
+                                <translation id="hint" translation_id="242853" type="use" value="Status" />
+                            </record>
+
+                            <record index="2" alignment="left,centre_y" auto_hide_priority="40">
+                                <translation id="text" translation_id="227770" type="use" value="Age[comment - person age]" />
+                                <translation id="hint" translation_id="229407" type="use" value="Age" />
+                            </record>
+                            <record index="3" alignment="left,centre_y" auto_hide_priority="50">
+                                <translation id="text" translation_id="538841" type="use" value="Transfer Value[COMMENT: AREA: Transfers; SUB-AREA: Transfer Value; FR-BN: 34410; TONE: Formal; CHARLIMIT: Shortish, column header; REF-ID: 227806; NOTE: displays the player's estimated transfer value in a range]" />
+                                <translation id="hint" translation_id="538841" type="use" value="Transfer Value[COMMENT: AREA: Transfers; SUB-AREA: Transfer Value; FR-BN: 34410; TONE: Formal; CHARLIMIT: Shortish, column header; REF-ID: 227806; NOTE: displays the player's estimated transfer value in a range]" />
+                            </record>
+                            <record index="4" alignment="left,centre_y" auto_hide_priority="60">
+                                <translation id="text" translation_id="227799" type="use" value="Wage" />
+                                <translation id="hint" translation_id="227799" type="use" value="Wage" />
+                            </record>
+                            <record index="5" alignment="left,centre_y" auto_hide_priority="70">
+                                <translation id="text" translation_id="227884" type="use" value="Position" />
+                                <translation id="hint" translation_id="227884" type="use" value="Position" />
+                            </record>
+                            <record index="6" alignment="left,centre_y" auto_hide_priority="80">
+                                <translation id="text" translation_id="247488" type="use" value="Contract Expiry Date" />
+                                <translation id="hint" translation_id="247488" type="use" value="Contract Expiry Date" />
+                            </record>
+                        </list>
+
+                        <list id="column_table_properties">
+                            <record index="0" auto_hide_priority="1" minimum_width="180" />
+                            <record index="1" auto_hide_priority="1" minimum_width="180" />
+                            <record index="2" auto_hide_priority="3" />
+                            <record index="3" auto_hide_priority="40" minimum_width="120" />
+                            <record index="4" auto_hide_priority="50" />
+                            <record index="5" auto_hide_priority="60" />
+                            <record index="6" auto_hide_priority="70" />
+                            <record index="7" auto_hide_priority="80" />
+                        </list>
+
+                        <list id="column_widget_properties">
+                            <record index="4" alignment="left, centre_y, can_scale"/>
+                            <record index="5" alignment="left, centre_y"/>
+                            <record index="6" alignment="left, centre_y"/>
+                        </list>
+                    </widget>
+                </container>
+
+				<container navigation_container="true">
+
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="left,top" apply_to_children="true" inset="0" />
+
+
+					<widget class="icon_button" id="rmbt" auto_size="all" click_event="rmsl" controller_button="y_button" navigation_focus_target="true">
+						<translation id="text" translation_id="229716" type="use" value="Remove" />
+					</widget>
+
+				</container>
+			</container>
+
+			<container class="main_box_no_margin" id="1sel" navigation_container="true">
+
+				<attachment_group class="vertical_arrange" vertical_offset="0" vertical_alignment="top,extend" vertical_gap="6" horizontal_inset="0" />
+
+				<widget class="table" id="splt" mode="" layout="-1" row_height="90" height="90" />
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="8" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+					<container class="scrolling_box">
+						
+						<widget class="player_unwanted_details_panel" id="deta" height="310" file="player/player development details" />
+
+					</container>
+					
+					<widget class="button" id="RepB" auto_size="all" click_event="unde">
+						<translation id="text" translation_id="247978" type="use" value="Undo Changes" />
+					</widget>
+
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

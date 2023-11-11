@@ -1,0 +1,99 @@
+<panel height="70">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="inner_subtle_box">
+		<record id="object_property">
+			<integer id="get_property" value="bkcl" />
+			<integer id="set_property" value="red_replacement" />
+		</record>
+
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_gap="0" horizontal_inset="0" />
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" vertical_alignment="vertical" horizontal_gap="6" />
+
+				<widget class="picture" width="26" height="26" scale_picture="true" keep_aspect_ratio="true">
+					<record id="object_property">
+						<integer id="get_property" value="file" />
+						<integer id="set_property" value="file" />
+					</record>
+				</widget>
+
+				<widget class="text" auto_size="all" alignment="centre" font="title" colour="fg" multiline="false">
+					<record id="object_property">
+						<integer id="get_property" value="text" />
+						<integer id="set_property" value="text" />
+					</record>
+				</widget>
+
+			</container>
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right" />
+
+				<container height="30" width="160" >
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+					<container class="inner_box_no_margin">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+						<widget class="text" alignment="centre" font="bold" colour="title">
+							<record id="object_property">
+								<list id="get_properties">
+									<record>
+										<integer id="get_property" value="TvsC" />
+										<integer id="set_property" value="text" />
+									</record>
+									<record>
+										<integer id="get_property" value="sltd" />
+										<integer id="set_property" value="Shwn" />
+									</record>
+
+								</list>
+							</record>
+						</widget>
+
+					</container>
+
+					<widget class="button">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="TvsC" />
+									<integer id="set_property" value="text" />
+								</record>
+								<record>
+									<integer id="get_property" value="click_event" />
+									<integer id="set_property" value="click_event" />
+								</record>
+								<record>
+									<integer id="get_property" value="sltd" />
+									<integer id="set_property" value="hidn" />
+								</record>
+								<record>
+									<integer id="get_property" value="disa" />
+									<integer id="set_property" value="disa" />
+								</record>
+							</list>
+						</record>
+
+					</widget>
+				</container>
+			</container>
+
+		</container>
+
+		<widget class="text" auto_size="vertical" colour="faded text">
+			<record id="object_property">
+				<integer id="get_property" value="atxt" />
+				<integer id="set_property" value="text" />
+			</record>
+		</widget>
+
+	</container>
+
+</panel>

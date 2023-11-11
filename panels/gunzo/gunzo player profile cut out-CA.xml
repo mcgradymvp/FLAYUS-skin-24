@@ -1,0 +1,163 @@
+
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="1" apply_to_children="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container class="vertical_adaptive_container" inset="0" gap="0" mode="distribute_equally">
+
+		<container minimum_height="350" priority="1">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		
+		<!-- Profile picture -->
+        <widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" width="150" height="150" image_alignment="centre_x,centre_y">   
+           <layout class="stick_to_sides_attachment" alignment="all" inset="60,0,87,0"/>
+          <record id="object_property">
+            <list id="get_properties">
+              <!--Facegen data request-->
+              <record get_property="fcgn" />
+              <!--Fake name request-->
+              <record get_property="Pfke" />
+              <record get_property="prpc" set_property="valu" />
+            </list>
+          </record>
+        </widget>		
+		
+
+		<!-- RCA star rating -->
+				<widget class="value_based_picture" id="rcaz" scale_picture="false" transparency="1">
+					<layout class="stick_to_sides_attachment" alignment="top" inset="-130"/>
+					<layout class="stick_to_sides_attachment" alignment="left" inset="1"/>
+					<list id="value_list">
+						<record min_value="100" max_value="105" file="icons/custom/rca/05"/>
+						<record min_value="106" max_value="110" file="icons/custom/rca/10"/>
+						<record min_value="111" max_value="115" file="icons/custom/rca/15"/>
+						<record min_value="116" max_value="120" file="icons/custom/rca/20"/>
+						<record min_value="121" max_value="125" file="icons/custom/rca/25"/>
+						<record min_value="126" max_value="130" file="icons/custom/rca/30"/>
+						<record min_value="131" max_value="135" file="icons/custom/rca/35"/>
+						<record min_value="136" max_value="140" file="icons/custom/rca/40"/>
+						<record min_value="141" max_value="145" file="icons/custom/rca/45"/>
+						<record min_value="146" max_value="150" file="icons/custom/rca/50"/>
+						<record min_value="151" max_value="155" file="icons/custom/rca/55"/>
+						<record min_value="156" max_value="160" file="icons/custom/rca/60"/>
+						<record min_value="161" max_value="165" file="icons/custom/rca/65"/>
+						<record min_value="166" max_value="170" file="icons/custom/rca/70"/>
+						<record min_value="171" max_value="175" file="icons/custom/rca/75"/>
+						<record min_value="176" max_value="180" file="icons/custom/rca/80"/>
+						<record min_value="181" max_value="185" file="icons/custom/rca/85"/>
+						<record min_value="186" max_value="190" file="icons/custom/rca/90"/>
+						<record min_value="191" max_value="195" file="icons/custom/rca/95"/>
+						<record min_value="196" max_value="200" file="icons/custom/rca/100"/>
+					</list>
+					<record id="object_property">
+						<integer id="get_property" value="PRCA" />
+					</record>
+				</widget>
+		<!-- Player Status  -->
+				<widget class="player_status_all_button" appearance="buttons/custom/gzstatus" id="Pnfa" alignment="bottom" gap="1" maximised="true">
+					<layout class="stick_to_sides_attachment" alignment="top" inset="88" />
+					<layout class="stick_to_sides_attachment" alignment="left" inset="18" />
+						<record id="object_property">
+							<integer id="get_property" value="PnaS"/>
+						</record>
+				</widget>	
+		</container>
+
+		<!-- height & age & weight -->
+			<container default_height="27" minimum_height="27" priority="2">
+				<layout class="arrange_horizontal_attachment" layout="-1, -1, -1" offset="40" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<!--height-->
+					<widget class="editable_client_object_property_panel" spec="text,large,bold" id="heig" size="12" alignment="centre_x,centre_y" font="gzmain"  colour="gzk">
+						<record id="object_property">
+							<integer id="get_property" value="Phei" />
+						</record>
+					</widget>
+
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<!-- Age in years -->
+					<widget class="editable_client_object_property_panel" id="ages" spec="text,large,bold" size="13" colour="gzc1" alignment="centre_x, centre_y,can_scale" display_format="2" font="gzmain" >
+						<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+						<record id="object_property">
+							<integer id="get_property" value="Pdob"/>
+						</record>
+					</widget>
+
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<!--weight-->
+					<widget class="editable_client_object_property_panel" spec="text,large,bold" id="weig" size="12" alignment="centre_x,centre_y" font="gzmain"  colour="gzk">
+						<record id="object_property">
+							<integer id="get_property" value="Pwei" />
+						</record>
+					</widget>
+
+				</container>
+			</container>			
+<container height="5"/>
+			<!--value-->
+			<container default_height="30" minimum_height="30" priority="2">
+				<layout class="arrange_horizontal_attachment" layout="-1,150" offset="15" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<!--value-->
+					<widget class="transfer_value_label" id="valu" font="transfer value" size="12" auto_size="vertical" colour="accent" >
+						<translation id="hint" translation_id="227806" type="use" value="Value" />
+						<record id="object_property">
+							<integer id="get_property" value="Pdva" />
+						</record>
+					</widget>	
+					
+				</container>
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<!--wage-->
+					<container class="editable_client_object_property_panel" id="wkwg"  style="semi_bold" font="gzmain"  colour="gzk" size="11" alignment="centre_x, centre_y, can_scale" format="2" >
+						<translation id="hint" translation_id="227799" type="use" value="Wage" />
+						<record id="object_property">
+							<integer id="get_property" value="Pcww" />
+						</record>
+					</container>
+				</container>
+			</container>
+<container height="5"/>
+			<!-- recommendations  -->
+			<container default_height="55" minimum_height="55" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="player_scout_reports_panel" id="gsrs" file="gunzo/gunzo player scout rating small1" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
+
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container> 
+			<container height="5"/>
+		</container>
+	 </container>
+
+</panel>

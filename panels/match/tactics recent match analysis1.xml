@@ -1,0 +1,27 @@
+﻿<panel>
+<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,0,0,0" />
+<container class="animated_wipe_cycle_left_container"  interval="2.5">
+	<container>
+	<attachment_group class="vertical_arrange" vertical_layout="-1,-1,-1,-1,-1" vertical_gap="0" vertical_offset="0"/>
+
+		<widget class="picture" file="pictures/1" image_alignment="centre" width="500" scale_picture="true"/>
+	    <widget class="picture" file="pictures/2" image_alignment="centre" width="500" scale_picture="true" />	
+		<widget class="picture" file="pictures/3" image_alignment="centre" width="500" scale_picture="true" />	
+
+		<widget class="picture" file="pictures/4" image_alignment="centre" width="500" scale_picture="true"/>
+	    <widget class="picture" file="pictures/5" image_alignment="centre" width="500" scale_picture="true" />	
+     </container>
+	
+	<container>
+	<attachment_group class="vertical_arrange" vertical_layout="-1,-1,-1,-1,-1" vertical_gap="0" vertical_offset="0"/>
+
+		<widget class="picture" file="pictures/1" image_alignment="centre" width="500" scale_picture="true"/>
+	    <widget class="picture" file="pictures/2" image_alignment="centre" width="500" scale_picture="true" />	
+		<widget class="picture" file="pictures/3" image_alignment="centre" width="500" scale_picture="true" />	
+
+		<widget class="picture" file="pictures/4" image_alignment="centre" width="500" scale_picture="true"/>
+	    <widget class="picture" file="pictures/5" image_alignment="centre" width="500" scale_picture="true" />	
+</container>
+</container>
+
+</panel>

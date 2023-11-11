@@ -1,0 +1,109 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_layout="-1,-1" vertical_gap="0" vertical_offset="4"/>
+
+	<container class="inner_box" appearance="boxes/custom/match/timeline stats/paper">
+		<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_gap="12"/>
+
+		<widget class="data_analyst_visualisation_widget" id="vis1" visualisation_type="8" data_type="3" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false"/>
+		<widget class="data_analyst_visualisation_widget" id="vis2" visualisation_type="6" data_type="3"  file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false">
+			<record id="widget_properties" type="0"/>
+		</widget>
+		<widget class="data_analyst_visualisation_widget" id="vis3" visualisation_type="6" data_type="3"  file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false">
+			<record id="widget_properties" type="1"/>
+		</widget>
+	</container>
+
+        <container class="inner_box" appearance="boxes/custom/match/timeline stats/paper" >
+		    <translation id="title" translation_id="306494" type="use" value="Average Positions[COMMENT: match analysis panel; event type]" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" /> 
+	   
+	    <container class="client_object_viewer_xml_panel" id="toto" draw_vertical_dividers="true" hide_view_menu="true">
+          <attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_gap="0"/>
+		
+		<container>			
+			<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" vertical_inset="14,0,0,0"/>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_layout="60,-1,-1" vertical_gap="0"/>
+
+		<container class="home_match_incidents_panel" file="match/match left in between1" height="60">
+		    <record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</container>
+
+		<widget class="preselected_match_chalkboard_panel" id="pmcH" vertical="false" force_left_to_right_events="true" team_to_display="0" average_position_filter="1" aHiL="false" wants_global_events="false"  enable_popup="false">
+			<record id="object_property" get_property="objt" set_property="objt" />
+				<list id="chalkboard_events_to_display">
+					<!-- Heatmap -->
+					<integer value="42" />
+					<!--Average position-->
+					<integer value="62" />
+				</list>
+		</widget>
+	  
+	    <widget class="preselected_match_chalkboard_panel" pitch_draw_arrows="true" vertical="false" pitch_dont_draw_indicators="false" force_left_to_right_events="true" id="pChk" team_to_display="0" average_position_filter="0" enable_popup="ture">
+			<record id="object_property" get_property="objt" set_property="objt" />
+				<list id="chalkboard_events_to_display">
+					<!-- Pass Combinations -->
+					<integer value="63" />
+					<!--Key Pass -->
+					<integer value="43" /> 
+				</list>
+		</widget>		
+	  </container>
+	
+	<container>
+	   <attachment_group class="vertical_arrange" vertical_layout="60,-1,-1" vertical_gap="0"/>
+
+		<container class="away_match_incidents_panel" file="match/match right in between1" height="60">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</container>
+	
+
+		<widget class="preselected_match_chalkboard_panel" id="pmcA" vertical="false" force_left_to_right_events="true" team_to_display="1" average_position_filter="1" aHiL="false"  wants_global_events="false"  enable_popup="false">
+			<record id="object_property" get_property="objt" set_property="objt" />
+				<list id="chalkboard_events_to_display">
+					<!-- Heatmap -->
+					<integer value="42" />
+					<!--Average position-->
+					<integer value="62" />
+				</list>
+		</widget>
+
+		<widget class="preselected_match_chalkboard_panel" pitch_draw_arrows="true" vertical="false" pitch_dont_draw_indicators="false" force_left_to_right_events="true" id="pCak" team_to_display="1" average_position_filter="1" enable_popup="ture">
+			<record id="object_property" get_property="objt" set_property="objt" />
+				<list id="chalkboard_events_to_display">
+					<!-- Pass Combinations -->
+					<integer value="63" />
+					<!--Key Pass -->
+					<integer value="43" /> 
+				</list>
+		</widget>
+
+			
+		</container>
+    </container>
+
+		<widget class="match_view_selector_panel" id="sel1" pause_match_on_menu_opening="true" default_item="mazp" file="client_object/client object viewer selector match analysis" >
+			<record id="object_property" get_property="objt" set_property="objt" />
+			<widget class="match_action_zones_panel" id="foap" file="match/focus of attacks panel">
+				<translation id="title" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+			</widget>
+			<widget class="match_action_zones_panel" id="mazp" file="match/match action zones small">
+				<translation id="title" translation_id="247327" type="use" value="Action Zones" />
+				<colour id="ptlc" name="white" />
+			</widget>
+
+		</widget>
+
+		<widget class="match_analysis_panel" id="perf" file="match/match best and worst performers" soHP="true">
+
+		</widget>
+	</container>
+</container>
+</panel>

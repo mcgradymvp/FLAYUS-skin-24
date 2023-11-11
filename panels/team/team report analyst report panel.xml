@@ -1,0 +1,144 @@
+﻿<panel>
+	<colour id="selected_colour" name="green 700" />
+	<!--selected box colour -->
+	<colour id="box_colour" name="light_box_background" />
+	<!--unselected box colour -->
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+	<widget class="team_report_request_report_panel" id="nort" />
+	<container id="sort">
+		<attachment_group class="horizontal_arrange" vertical_inset="0" horizontal_alignment="fill" horizontal_gap="8"/>
+
+		<!-- Selectable panels -->
+		<container class="main_box" id="anlC" navigation_container="true" default_focus="true">
+
+			<attachment class="test_screen_size_attachment" skip_if_false="true">
+				<list id="properties">
+					<record>
+						<flags id="alignment" value="vertical" />
+						<integer id="min_value" value="0" />
+						<integer id="max_value" value="720" />
+						<symbol id="set_property" value="appearance" />
+						<integer id="true_value" value="" />
+						<integer id="false_value" value="" />
+					</record>
+					<record>
+						<flags id="alignment" value="vertical" />
+						<integer id="min_value" value="720" />
+						<integer id="max_value" value="10000" />
+						<symbol id="set_property" value="appearance" />
+						<integer id="true_value" value="boxes/main/standard/paper" />
+						<integer id="false_value" value="boxes/main/standard/paper" />
+					</record>
+				</list>
+			</attachment>
+
+
+			<translation id="title" translation_id="447607" type="use" value="Analyst Report[COMMENT: Panel title for when viewing analyst report]" />
+
+			<attachment_group class="vertical_arrange" vertical_alignment="fill">
+				<global id="vertical_gap" name="ui.main_contrast_box_gap" />
+			</attachment_group>
+
+			<container class="inner_contrast_box" wants_mouse_events="true" id="FUbu" navigation_focus_target="true">
+				<translation id="title" translation_id="247328" type="use" value="Formations[COMMENT - match screen; formations panel title]" />
+
+				<container id="txCo">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+					<layout class="stick_to_sides_attachment" alignment="all"  />
+				</container>
+
+				<container class="container_with_mouse_events" embed_in_frame="true">
+					<layout class="stick_to_sides_attachment" alignment="all" embed_in_frame="true" />
+					<record id="click_event">
+						<flags id="event_id" value="BoxS" />
+						<integer id="type" value="0" />
+					</record>
+				</container>
+			</container>
+
+
+			<container class="inner_contrast_box" wants_mouse_events="true" id="SCbu" navigation_focus_target="true">
+				<translation id="title" translation_id="492036" type="use" value="Scoring[COMMENT: AREA: Inbox; SUB-AREA: Opposition Scouting; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: team report label]" />
+
+
+				<container id="txCo">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+					<layout class="stick_to_sides_attachment" alignment="all"  />
+				</container>
+
+				<container class="container_with_mouse_events" embed_in_frame="true">
+					<layout class="stick_to_sides_attachment" alignment="all" embed_in_frame="true" />
+					<record id="click_event">
+						<flags id="event_id" value="BoxS" />
+						<integer id="type" value="1" />
+					</record>
+				</container>
+			</container>
+
+			<container class="inner_contrast_box" wants_mouse_events="true" id="CObu" navigation_focus_target="true">
+				<translation id="title" translation_id="492037" type="use" value="Conceding[COMMENT: AREA: Inbox; SUB-AREA: Opposition Scouting; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: team report label]" />
+
+				<container id="txCo">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+					<layout class="stick_to_sides_attachment" alignment="all"  />
+				</container>
+
+				<container class="container_with_mouse_events" embed_in_frame="true">
+					<layout class="stick_to_sides_attachment" alignment="all" embed_in_frame="true" />
+					<record id="click_event">
+						<flags id="event_id" value="BoxS" />
+						<integer id="type" value="2" />
+					</record>
+				</container>
+			</container>
+
+		
+			<container class="inner_contrast_box" wants_mouse_events="true" id="SPbu" hidden="true" navigation_focus_target="true">
+				<translation id="title" translation_id="252468" type="use" value="Set Pieces[COMMENT: strengths field scout report list]" />
+
+				<container id="txCo">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+					<layout class="stick_to_sides_attachment" alignment="all"  />
+				</container>
+
+				<container class="container_with_mouse_events" embed_in_frame="true">
+					<layout class="stick_to_sides_attachment" alignment="all" embed_in_frame="true" />
+					<record id="click_event">
+						<flags id="event_id" value="BoxS" />
+						<integer id="type" value="5" />
+					</record>
+				</container>
+			</container>
+		</container>
+
+	<!-- Displayed panels -->
+		<container class="main_box">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<container id="data" navigation_container="true">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+				<container class="tabbed_container" id="FtbC" default_item="Fuse" save_session_state="true" save_default_state="true">
+					<container class="formations_data_analyst_report_panel" id="Fuse" type="0">
+						<record id="object_property" get_property="objt" set_property="objt" />
+						<translation id="title" translation_id="492038" type="use" value="Formations Used[COMMENT: AREA: Inbox; SUB-AREA: Opposition Scouting; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: team report label]" />
+					</container>
+					<!-- Type is FORMATIONS_DATA_TYPE in formations_data_analyst_report_panel.h -->
+					<container class="formations_data_analyst_report_panel" id="FFac" type="1">
+						<record id="object_property" get_property="objt" set_property="objt" />
+						<translation id="title" translation_id="492039" type="use" value="Formations Faced[COMMENT: AREA: Inbox; SUB-AREA: Opposition Scouting; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: team report label]" />
+					</container>
+				</container>
+				<container class="goal_data_analyst_report_panel" id="scor" hidden="true"  type="0" />
+				<!-- Type is GOAL_DATA_TYPE in scoring_analyst_report_panel.h -->
+				<container class="goal_data_analyst_report_panel" id="conc" hidden="true" type="1" />
+			</container>
+			<container id="noDt">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+				<widget class="label" font="label" alignment="centre">
+					<translation id="text" translation_id="395281" type="use" value="No fixture data to display.[COMMENT: calendar fixture panel, default text if no fixtures are available]" />
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

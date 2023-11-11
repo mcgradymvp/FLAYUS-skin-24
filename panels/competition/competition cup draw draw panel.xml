@@ -1,0 +1,177 @@
+﻿<panel>
+    <attachment_group class="vertical_arrange" vertical_gap="0" vertical_alignment="top,extend" />
+	<boolean id="should_force_refresh" value="true" />
+
+	<list id="properties_to_forward">
+		<record get_property="mnsn" set_property="mnsn" target="cdLV" />
+		<record get_property="mnsn" set_property="mnsn" target="cdOV" />
+		<record get_property="sbsn" set_property="sbsn" target="cdLV" />
+		<record get_property="sbsn" set_property="sbsn" target="cdOV" />
+	</list>
+    
+    <widget class="spacer" height="60" />
+	
+    <container class="multi_box" id="mnTB" default_item="liUP" contents_kind="plain_box" top_kind="tab_strip" appearance="boxes/tabbed/standard/paper" dont_set_title_text="true">
+        <flags id="top_layout" value="horizontal" />
+        <attachment class="get_global_attachment" get_property="comp_draw_news_item_appearance" set_property="top_properties" />
+		<record id="default_properties">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</record>
+		
+		<container class="client_object_viewer_xml_panel" id="liUP">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+			<translation id="title" translation_id="557719" type="use" value="Live Updates[COMMENT: Competition Information; NOTE: Live score and event updates]" />
+            
+            <container height="90">
+            <attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="90" vertical_offset="0" />
+            
+            <widget class="spacer" height="10" />
+            
+			<container class="main_subtle_box" appearance="boxes/custom/cup draws/team slots/default/paper" height="80" transparency=".8">
+				<attachment_group class="horizontal_arrange_vertical_centre" horizontal_alignment="middle, extend" vertical_inset="2" horizontal_offset="10" horizontal_gap="20" />
+
+				<widget class="client_object_viewer_xml_panel" id="mper" width="170">
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" />
+					<flags id="child_for_sort" value="name" />
+					<widget class="object_portrait_picture" width="50" height="50" scale_picture="true" keep_aspect_ratio="true">
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" horizontal_alignment="horizontal" vertical_offset="5" />
+						<widget class="person_button" info_popup_enabled="true" auto_size="vertical" style="bold" Pcjo="0">
+							<record id="object_property" get_property="objt" set_property="valu" />
+						</widget>
+						<widget class="text" auto_size="vertical" size="regular" colour="faded text" value="test">
+							<translation id="text" translation_id="557720" type="use" value="Ceremony Host[COMMENT: AREA: Cup Draw; SUB-AREA: Live Draw; FR-BN: ; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the person speaking during the commentary, can't be feminised, we can't always use a real person for this, so they're created on the fly]" />
+						</widget>
+					</container>
+
+				</widget>
+
+				<container class="interaction_speech_bubble_panel" id="comM" width="650" size="large" red_replacement="">
+                    <attachment class="get_global_attachment" get_property="cdsb" set_property="speech_bubble_appearance_override" />
+                </container>
+				
+			</container>
+            </container>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+				<widget class="competition_stage_panel" id="cdLV" file="competition/competition stage cup draw live updates">
+                    <animation class="translate_animation" start_value="0,-50" end_value="0,0" coord_mode="absolute_to_target" duration=".7" tween="ease_out" />
+                    <animation class="fade_animation" start_value="0" end_value="1" duration=".6" tween="linear" />
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+				<container class="main_subtle_box" appearance="boxes/custom/cup draws/team slots/default/paper">
+                    <animation class="translate_animation" start_value="0,50" end_value="0,0" coord_mode="absolute_to_target" duration=".7" tween="ease_out" />
+                    <animation class="fade_animation" start_value="0" end_value="1" duration=".6" tween="linear" />
+					<string id="remove_if" value="is_fmt" />
+					<attachment class="get_global_attachment" get_property="CDdb" set_property="red_replacement" />
+					<attachment_group class="vertical_arrange_autosize" />
+
+					<widget class="text" auto_size="all" size="large" colour="white">
+						<attachment class="get_global_attachment" get_property="CDfn" set_property="font" />
+						<translation id="text" translation_id="557721" type="use" value="Live Reaction[COMMENT: AREA: Cup Draw; SUB-AREA: Splash screen; FR-BN: ; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the commentary section of the live cup draw]" />
+					</widget>
+
+					<widget class="news_feed_panel" height="150" id="socs" filter="Fsco" file="" social_item_file="human/news feed social item content panel for cup draws">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4" />
+
+						<integer id="number_of_items_to_display" value="12" />
+
+						<!-- Note that the id is important so that the league selector panels have their popups display correctly -->
+						<container id="Pnlf">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4" />
+
+							<container id="nwsl">
+								<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_gap="16" />
+
+								<!-- items added in code here -->
+							</container>
+						</container>
+					</widget>
+				</container>
+
+				<container>
+                    <animation class="translate_animation" start_value="0,50" end_value="0,0" coord_mode="absolute_to_target" duration=".7" tween="ease_out" />
+                    <animation class="fade_animation" start_value="0" end_value="1" duration=".6" tween="linear" />
+					<string id="create_if" value="is_fmt" />
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="0" vertical_inset="0" />
+				<container class="plain_box">
+					<string id="remove_if" value="platform_is_switch" />
+                    <attachment class="get_global_attachment" get_property="cdlr" set_property="appearance" />
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="0" vertical_inset="0" />
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right,extend" />
+
+						<widget class="text" auto_size="all" size="large" colour="white">
+							<attachment class="get_global_attachment" get_property="CDfn" set_property="font" />
+							<translation id="text" translation_id="557721" type="use" value="Live Reaction[COMMENT: AREA: Cup Draw; SUB-AREA: Splash screen; FR-BN: ; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the commentary section of the live cup draw]" />
+						</widget>
+
+						<widget class="icon_button" auto_size="all" size="large" colour="white" icon="icons/16px/up" controller_button="y_button" appearance="buttons/subtle/normal/button">
+							<record id="click_event" event_id="clic" event_target="clBX" />
+							<record id="click_event">
+								<integer id="event_id" value="clic" />
+								<integer id="event_target" value="clBX" />
+								<boolean id="forc" value="true" />
+							</record>
+						</widget>
+
+					</container>
+					<container class="collapsable_box" id="clBX" ddcw="true" collapsed="true" appearance="">
+						<attachment_group class="vertical_arrange_autosize" />
+
+						<widget class="news_feed_panel" height="160" id="socs" filter="Fsco" file="" social_item_file="human/news feed social item content panel for cup draws">
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+							<integer id="number_of_items_to_display" value="12" />
+
+							<!-- Note that the id is important so that the league selector panels have their popups display correctly -->
+							<container id="Pnlf">
+								<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+								<container id="nwsl">
+									<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_gap="16" />
+
+									<!-- items added in code here -->
+								</container>
+							</container>
+						</widget>
+					</container>
+                    
+
+				</container>
+				</container>
+
+			</container>
+		</container>
+		
+		<container class="client_object_viewer_xml_panel" id="ovVI">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<translation id="title" translation_id="247414" type="use" value="Overview" />
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+				
+				<widget class="competition_stage_panel" id="cdOV" file="competition/competition stage cup draw overview">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+				
+			</container>
+		</container>
+	</container>
+    
+    
+</panel>

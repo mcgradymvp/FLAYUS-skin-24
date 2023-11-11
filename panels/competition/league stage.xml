@@ -1,0 +1,50 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<translation id="title" translation_id="247324" type="use" value="League Stage Panel"/>
+	<!-- League Table Positional Styles -->
+	<flags id="cham" value="tables/custom/league/champions/row" />
+	<flags id="prom" value="tables/custom/league/promotion/row" />
+	<flags id="tppo" value="tables/custom/league/top playoff/row" />
+	<flags id="btpo" value="tables/custom/league/bottom playoff/row" />
+	<flags id="rleg" value="tables/custom/league/relegation/row" />
+	<flags id="splt" value="tables/custom/league/divider/row" />
+	<flags id="nrml" value="tables/standard/row/normal/row" />
+	<!-- main continental cup -->
+	<flags id="mncc" value="tables/custom/league/main continental/row" />
+	<!-- second continental cup -->
+	<flags id="otcc" value="tables/custom/league/other continental/row" />
+	<!-- main continental cup with split-->
+	<flags id="mncs" value="tables/custom/league/main continental divider/row" />
+	<!-- second continental cup with_split -->
+	<flags id="otcs" value="tables/custom/league/other continental divider/row" />
+
+	<container>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<widget class="table" id="list" 
+				mode="fill_rows, stripe_rows, fill_custom_rows, keyboard, printable, dont_ask_for_focus"
+				customise_view_panel_class="customise_view_advanced_panel"
+				customisation_context="league_table"
+				contextual_handler_column_id="Ttea"
+				auto_size_rows="false"
+				fixed_size_rows="true"
+				row_height="26"
+				heading_class="column_heading"
+				wants_lazy_load="true">
+
+
+			<record id="default_properties" navigation_focus_target="false" />
+
+			<list id="column_widget_properties">
+				<record index="2" navigation_focus_target="true" />
+				<record index="11" navigation_focus_target="true" />
+			</list>
+
+		</widget>
+	</container>
+
+	<!-- To avoid copy-pasting views into the variation of this panel all of the views are in a aerparate file -->
+	<string id="views_file" value="panels/competition/league stage panel views"/>
+
+</panel>

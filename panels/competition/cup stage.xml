@@ -1,0 +1,105 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" gap="4" offset ="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<widget class="label" id="date" colour="disabled" auto_size="vertical"/>
+
+	<widget class="table" id="tabl" layout="70, -1, 20, 30, 25, 30, 25, 30, 20, -1, 70" mode="fill_custom_rows, fill_rows, stripe_rows, keyboard" auto_size_rows="true" fixed_size_rows="false" save_session_state="true">
+		<translation id="title" translation_id="247184" type="use" value="Cup Stage Panel" />
+		<!-- default properties for various columns -->
+		<list id="column_widget_properties">
+			<record indx="0">
+				<flags id="alignment" value="left,centre_y" />
+				<colour id="colour" name="competition" />
+			</record>
+			<record indx="1">
+				<flags id="alignment" value="right,centre_y" />
+				<flags id="spec" value="text" />
+				<flags id="navigation_focus_target" value="true" />
+			</record>
+			<record indx="2">
+				<flags id="alignment" value="centre" />
+				<colour id="colour" name="fixture outcome" />
+			</record>
+			<record indx="3">
+				<flags id="alignment" value="centre" />
+				<colour id="colour" name="result aggregate" />
+				<flags id="navigation_focus_target" value="false" />
+			</record>
+			<record indx="4">
+				<flags id="alignment" value="centre" />
+				<flags id="spec" value="text" />
+				<colour id="colour" name="result score" />
+				<flags id="navigation_focus_target" value="false" />
+			</record>
+			<record indx="5">
+				<flags id="alignment" value="centre" />
+				<colour id="colour" name="fixture score separator" />
+			</record>
+			<record indx="6">
+				<flags id="alignment" value="centre" />
+				<flags id="spec" value="text" />
+				<colour id="colour" name="result score" />
+				<flags id="navigation_focus_target" value="false" />
+			</record>
+			<record indx="7">
+				<flags id="alignment" value="centre" />
+				<colour id="colour" name="result aggregate" />
+				<flags id="navigation_focus_target" value="false" />
+			</record>
+			<record indx="8">
+				<flags id="alignment" value="centre" />
+				<colour id="colour" name="fixture outcome" />
+			</record>
+			<record indx="9">
+				<flags id="alignment" value="left,centre_y" />
+				<flags id="spec" value="text" />
+				<flags id="navigation_focus_target" value="true" />
+			</record>
+			<record indx="10">
+				<flags id="alignment" value="right,centre_y" />
+				<colour id="colour" name="competition" />
+			</record>
+		</list>
+
+		<!-- column display properties -->
+		<list id="column_table_properties">
+			<record indx="0">
+				<flags id="id" value="hinf" />
+				<integer id="left" value="4" />
+			</record>
+			<record indx="1">
+				<flags id="id" value="htea" />
+			</record>
+			<record indx="2">
+				<flags id="id" value="hres" />
+			</record>
+			<record indx="4">
+				<flags id="id" value="hsco" />
+			</record>
+			<record indx="3">
+				<flags id="id" value="hagg" />
+			</record>
+			<record indx="5">
+				<flags id="id" value="midc" />
+			</record>
+			<record indx="7">
+				<flags id="id" value="aagg" />
+			</record>
+			<record indx="6">
+				<flags id="id" value="asco" />
+			</record>
+			<record indx="8">
+				<flags id="id" value="ares" />
+			</record>
+			<record indx="9">
+				<flags id="id" value="atea" />
+			</record>
+			<record indx="10">
+				<flags id="id" value="ainf" />
+				<integer id="rght" value="4" />
+			</record>
+		</list>
+	</widget>
+</panel>
+<!-- cup stage panel -->

@@ -1,0 +1,94 @@
+﻿<panel>
+	<list id="properties_to_forward">
+		<record get_property="TPTI" set_property="TPTI" target="tsat" /> 
+		<record get_property="Ttea" set_property="Ttea" target="tsat" />  
+	</list>
+
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="4" apply_to_children="true" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="450,1,-1" gap="10" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<container id="noTC" hidden="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<widget class="text" alignment="centre_y,left" colour="white">
+					<translation id="text" translation_id="466510" type="use" value="No Primary Tactic Selected[COMMENT: Training Overview - Primary Tactic]" />
+				</widget>
+			</container>
+			<container id="tacC">
+				<layout class="arrange_horizontal_attachment" layout="50,-3,95" offset="0" gap="10" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="6" apply_to_children="true" />
+
+				<widget class="picture" file="icons/48px/primary tactic" image_alignment="centre" scale_picture="false" />
+				<container>
+					<layout class="arrange_vertical_attachment" layout="20,-1" offset="0" gap="-2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					<widget class="link_button" font="title" alignment="left, centre_y" colour="white" red_replacement="white" appearance="buttons/link/title/button" section="tacO" auto_size="horizontal">
+						<translation id="text" translation_id="466511" type="use" value="Primary Tactic[COMMENT: Training Overview - Primary Tactic]" />
+					</widget>
+
+					<widget class="widget_popup_button" id="tacw" appearance="buttons/custom/tactics/pitch switch/normal/button" font="value" show_button_appearance="false" height="34" colour="white">
+						<string id="popup_alignment" value="left,bottom" />
+						<string id="secondary_icon_colour" value="white" />
+						<!-- <string id="icon" value="icons/16px/tactics" />-->
+						<string id="widget_type" value="property_list_viewer_xml_panel" />
+						<record id="widget_properties" file="tactics/primary trained tactic training overview popup" />
+						<record id="modal_popup_properties" file="modal popup panel auto sized">
+							<string id="darkened" value="false" />
+						</record>
+					</widget>
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="20,-1" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					<widget class="text" font="label" alignment="centre_y,left" colour="white">
+						<translation id="text" translation_id="447620" type="use" value="Familiarity[COMMENT: match preparation training tactics; label to indicate how well the squad as a whole is versed in a tactic which they're working upon]" />
+					</widget>
+
+					<container>
+
+						<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" do_not_size="true" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<container class="plain_box" id="fmiL" height="12" appearance="boxes/custom/tactic fam/paper">
+
+							<widget class="horizontal_percentage_bar" bar_value_colour="tactical_familiarity_colour_1" id="tstf" label_width="0" appearance="charts/bar/custom/tactics">
+								<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+							</widget>
+
+							<!--This is a button overlay to make the horizontal percentage bar look more like you can click on it -->
+							<container id="pfmB">
+								<translation id="hint" translation_id="326040" type="use" value="Click to see the full breakdown of tactic familiarity levels[COMMENT: hint to the user to tell them that clicking on this widget will show them a panel with their team's levels of tactical familiarity]" />
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+							</container>
+						</container>
+					</container>
+				</container>
+
+			</container>
+		</container>
+		    <widget class="vertical_divider" red_replacement="white"/>
+    
+		<container>
+			<container>
+				<layout class="arrange_vertical_attachment" layout="20,-1" offset="0" gap="2" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+				<widget class="link_button" font="title" alignment="left, centre_y" colour="white" red_replacement="white" appearance="buttons/link/title/button" section="tacO" auto_size="horizontal">
+					<translation id="text" translation_id="466512" type="use" value="Other Tactics[COMMENT: Training Overview - Other Tactics]" />
+				</widget>
+				
+				<container class="horizontal_arrange_container" inset="0" id="otTC" />
+
+			</container>
+		</container>
+	</container>
+</panel>

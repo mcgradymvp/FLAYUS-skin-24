@@ -1,0 +1,50 @@
+<!-- THIS IS THE PANEL DISPLAYED ON THE CLUB OVERVIEW SCREEN. IT HOUSES THE UPCOMING FIXTURES -->
+<!-- THE PANEL SHOWS A SINGLE FIXTURE. THE GAME REUSES IT 3 TIMES -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<!-- CONTAINER HOLDING LOGO AND OVERLAY TO ROUND LOGO -->
+	<container >
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<!-- BACKGROUND LOGO -->
+		<!-- DIFFERENT CLASS CONTAINER USED TO BE ABLE TO ROTATE THE LOGO -->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" priority="10"/>
+			<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" priority="10"/>
+
+			<!-- TEAM LOGO -->
+			<widget class="fixture_opponent_picture" id="oppi" scale_picture="true" transparency="0.4">
+				<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" priority="2"/>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="-20" priority="3"/>
+				<boolean id="keep_aspect_ratio" value="true" />
+				<flags id="image_alignment" value="centre" />
+				<record id="object_property">
+					<integer id="get_property" value="fopP" />
+					<boolean id="dont_set_object" value="true"/>
+				</record>
+			</widget>
+
+		</container>
+
+	</container>
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="middle"/>
+
+    <widget class="fixture_opponent_venue_text" id="fOpV" spec="text" style="bold" size="normal" alignment="centre" auto_size="vertical">
+      <record id="object_property">
+        <integer id="get_property" value="fOpV" />
+      </record>
+    </widget>
+
+    <widget class="fixture_full_result_text" id="FxFR" spec="text" style="bold" size="normal" alignment="centre" multiline="true" auto_size="vertical">
+      <record id="object_property">
+        <integer id="get_property" value="FxFR" />
+      </record>
+    </widget>
+
+	</container>
+
+
+</panel> 

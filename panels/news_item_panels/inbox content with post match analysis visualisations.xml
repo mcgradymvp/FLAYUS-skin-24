@@ -1,0 +1,187 @@
+﻿<panel>
+	<string id="skin_style" value="subtle box" />
+	<attachment_group class="vertical_arrange_autosize" />
+
+	<container class="title_link_box" section="mpst" hide_view_menu="true">
+		<translation id="link_title" translation_id="515056" type="use" value="Post-Match Report[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for shpwing the post-match report summary of the fixture just played]" />
+
+
+		<attachment_group class="vertical_arrange_autosize" />
+
+
+		<container class="client_object_viewer_xml_panel" id="cUnt">
+			<attachment_group class="vertical_arrange_autosize">
+						<global id="vertical_gap" name="ui.main_box_gap_vertical" />
+			</attachment_group>
+
+			<container height="60">
+				<attachment_group class="horizontal_arrange" horizontal_offset="0" horizontal_gap="8" horizontal_alignment="middle" vertical_inset="0" />
+
+				<!--home team name and xG for match-->
+				<container>
+					<attachment_group class="vertical_arrange_horizontal_autosize" vertical_alignment="middle" vertical_offset="0" horizontal_alignment="right" horizontal_inset="0" />
+
+					<widget class="client_object_label" auto_size="all" spec="text" font="title" size="xlarge" colour="text" alignment="right, centre_y">
+						<record id="object_property" get_property="home" set_property="valu" />
+					</widget>
+
+					<container>
+						<attachment_group class="horizontal_arrange_autosize_all" vertical_offset="0" horizontal_alignment="right" horizontal_inset="0" />
+
+						<widget class="formatted_label" auto_size="all" format="[%fraction#1-2.2]">
+							<record id="object_property" get_property="fhxG" alignment="right,centre_y" set_property="valu" />
+						</widget>
+
+						<widget class="picture" file="icons/16px/xg" red_replacement="text" scale_picture="false" keep_aspect_ratio="true" auto_size="all" />
+
+					</container>
+
+				</container>
+				<!-- Home team logo -->
+				<widget class="object_portrait_picture" image_alignment="centre" scale_picture="true" width="30">
+					<record id="object_property" get_property="home" dont_set_object="true" />
+				</widget>
+
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_offset="0" horizontal_gap="1" vertical_inset="0" />
+					<!-- scoreline -->
+					<widget class="fixture_button" id="FxRs" spec="text" auto_size="all" alignment="centre" style="bold" size="xlarge" swap_for_context_team="false" navigation_focus_target="true">
+						<string id="format" value="[%scoreline#1-result_h_a_result]" />
+						<record id="object_property">
+							<!-- PROP_FIXTURE_SCORELINE -->
+							<integer id="get_property" value="FxRs" />
+						</record>
+					</widget>
+				</container>
+
+				<!-- Away team logo -->
+				<widget class="object_portrait_picture" scale_picture="true" width="30" image_alignment="centre">
+					<record id="object_property" get_property="away" dont_set_object="true" />
+				</widget>
+
+				<!--away team name and xG for match-->
+				<container>
+					<attachment_group class="vertical_arrange_horizontal_autosize" vertical_alignment="middle" vertical_offset="0" horizontal_alignment="left" horizontal_inset="0" />
+
+					<widget class="client_object_label" auto_size="all" spec="text" font="title" size="xlarge" colour="text" alignment="left, centre_y">
+						<record id="object_property" get_property="away" set_property="valu" />
+					</widget>
+
+					<container>
+						<attachment_group class="horizontal_arrange_autosize_all" vertical_offset="0" horizontal_alignment="left" horizontal_inset="0" />
+						<widget class="picture" file="icons/16px/xg" red_replacement="text" scale_picture="false" keep_aspect_ratio="true" auto_size="all" />
+						<widget class="formatted_label" auto_size="all" format="[%fraction#1-2.2]">
+							<record id="object_property" get_property="faxG" alignment="right,centre_y" set_property="valu" />
+						</widget>
+					</container>
+				</container>
+			</container>
+			<widget class="text" alignment="centre" size="large" auto_size="vertical" id="desc" />
+
+			<container height="250">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill">
+					<global id="horizontal_gap" name="ui.main_box_gap_horizontal" />
+				</attachment_group>
+				<widget class="data_analyst_visualisation_widget" id="visP" visualisation_type="8" data_type="3" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false">
+						<record id="widget_properties"  />
+				</widget>
+				<widget class="data_analyst_visualisation_widget" id="visS" visualisation_type="6" data_type="3" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false">
+					<record id="widget_properties" type="0"  />
+				</widget>
+			</container>
+
+			<container draw_vertical_dividers="true">
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-9,-10,-10" horizontal_gap="15"/>
+				<container class="inner_box">
+					<translation id="title" translation_id="306494" type="use" value="Average Positions[COMMENT: match analysis panel; event type]" />
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+
+					<!--heat map-->
+					<widget class="preselected_match_chalkboard_panel" id="hMnt" aHiL="false" file="none" vertical="true" force_left_to_right_events="true">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						<record id="object_property" get_property="objt" set_property="objt" />
+
+						<widget class="chalkboard_pitch" id="Cpit" select_event="slic" hide_linked_events="true" force_left_to_right_events="true" pitch_vertical_padding="0" pitch_horizontal_padding="0" pitch_player_radius="3" pitch_player_icon_text_size="5" pitch_alignment="top,centre_x" maximum_player_size="0.22" pitch_draw_lines="true" line_width="1" show_extra_details_buttons="false" pitch_draw_grass="false" pitch_base_appearance="" pitch_draw_goals="false" enable_popup="true" pitch_draw_dugout="false" pitch_draw_markings="false" pitch_draw_ads="false" pitch_touchline_width_percentage="0" pitch_perspective="0.00000" />
+
+						<list id="chalkboard_events_to_display">
+							<!-- Heatmap -->
+							<integer value="42" />
+							<!--Average position-->
+							<integer value="62" />  
+						</list>
+					</widget>
+				</container>
+
+				<container class="inner_box" id="pasT">
+					<translation id="title" translation_id="420703" type="use" value="Pass Combinations[COMMENT - match analysis screen, event type on chalkboard]" />
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_gap="2" vertical_offset="0" horizontal_inset="0" />
+					<widget class="text" alignment="left, centre_y" auto_size="vertical" size="xsmall" multiline="false" colour="white">
+						<translation id="text" translation_id="420704" type="use" value="Length of Passes[COMMENT: match analysis, label referencing how long passes were]" />
+					</widget>
+
+					<container id="psLG" class="pie_chart_with_guide" mode="1" file="widgets/pass combo pie chart" height="100" colour="white" />
+
+					<widget class="text" alignment="left, centre_y" auto_size="vertical" size="xsmall" multiline="false" colour="white">
+						<translation id="text" translation_id="420705" type="use" value="Direction of Passes[COMMENT: match analysis, label referencing the direction of passes]" />
+					</widget>
+
+					<container id="psDG" class="pie_chart_with_guide" mode="1" file="widgets/pass combo pie chart" height="100" colour="white" />
+				</container>
+
+
+				<container class="client_object_viewer_xml_panel" id="fTbP">
+
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" />
+
+					<container class="title_link_box" section="Plov" hide_view_menu="true">
+						<string id="skin_style" value="title link" />
+
+						<translation id="link_title" translation_id="420658" type="use" value="Best Performance[COMMENT: match analysis overview, label for the best performance during the match]" />
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" />
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" />
+
+
+							<string id="skin_style" value="title link" />
+
+							<container height="70">
+								<attachment_group class="horizontal_arrange" horizontal_layout="65,85,-1" horizontal_gap="2" horizontal_offset="0" vertical_inset="0" />
+
+								<widget class="object_portrait_picture" scale_picture="true" image_alignment="left, centre_y">
+									<record id="object_property" get_property="objt" set_property="objt" />
+								</widget>
+
+								<container>
+									<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+									<widget class="number_label" id="bPmR" font="value" alignment="bottom" format="[%fraction#1-3.1]" />
+
+									<widget class="label" alignment="top" font="label">
+										<translation id="text" translation_id="229619" type="use" value="Rating" />
+									</widget>
+								</container>
+
+								<container>
+									<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_offset="0" vertical_gap="-8" horizontal_inset="0" />
+
+									<widget class="adaptive_match_player_summary" id="bSps" navigation_focus_target="false" />
+									<widget class="adaptive_match_player_summary" id="bSns" navigation_focus_target="false" />
+								</container>
+							</container>
+
+							<widget class="text" id="bpDs" auto_size="vertical" multiline="true" colour="faded text">
+							</widget>
+
+						</container>
+					</container>
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

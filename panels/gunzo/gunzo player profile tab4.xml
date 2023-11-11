@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="arrange_vertical_attachment" layout="-1, 1" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container class="bordered_box">
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		<container class="vertical_adaptive_container" id="PDvc" inset="0" offset="0" gap="0">
+
+				
+			<!--international stats row-->
+			<container default_height="80" minimum_height="20" priority="1">
+				<layout class="arrange_horizontal_attachment" layout="-1,-1,-1" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<!--int apps-->
+					<widget class="international_appearances_label" spec="text,large,bold" size="10" font="gz_title" colour="gzk" id="inta" alignment="centre_x,bottom">
+						<integer id="int_apps_label_format" value="1" />
+						<!-- 1 is for apps -->
+						<record id="object_property">
+							<integer id="get_property" value="Pist" />
+						</record>
+					</widget>
+
+					<!--int goals-->
+					<widget class="international_appearances_label" spec="text,small" font="gz_title" colour="gzk" id="intg" alignment="centre_x,top">
+						<integer id="int_apps_label_format" value="2" />
+						<!-- 2 is goals -->
+						<record id="object_property">
+							<integer id="get_property" value="Pist" />
+						</record>
+					</widget>
+				</container>
+
+				<!-- National flag image -->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />			
+					<widget class="object_portrait_picture" id="npiB" image_alignment="centre" scale_picture="true" width="80" height="80" wants_mouse_events="true" embed_in_frame="true">
+						<layout class="centre_in_parent_attachment" alignment="all" inset="0" embed_in_frame="true" />
+						<record id="object_property" dont_set_hint="true" get_property="PNat" set_property="objt" />
+					</widget>
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<!--youth apps-->
+					<widget class="international_appearances_label" spec="text,large,bold" font="gz_title" colour="gzk" size="10" id="youa" alignment="centre_x,bottom">
+						<integer id="int_apps_label_format" value="3" />
+						<!-- 3 is for youth apps -->
+						<record id="object_property">
+							<integer id="get_property" value="Pist" />
+						</record>
+					</widget>
+
+					<!--youth goals-->
+					<widget class="international_appearances_label" spec="text,small" id="youg" font="gz_title" colour="gzk" alignment="centre_x,top">
+						<integer id="int_apps_label_format" value="4" />
+						<!-- 4 is for youth goals -->
+						<record id="object_property">
+							<integer id="get_property" value="Pist" />
+						</record>
+					</widget>
+
+				</container>
+			</container>
+	
+			<!-- homegrown -->
+			<container default_height="120" minimum_height="20" priority="2">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="person_information_panel" file="gunzo/gunzo person personal information4" id="gpti">
+
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+
+			<container height="1"/>
+
+			<!-- career -->
+			<container default_height="-1" minimum_height="50" priority="3">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				<widget class="playing_history_summary_panel" id="phsp" file="gunzo/gunzo history summary small">
+					<translation id="title" translation_id="247605" type="use" value="Career Stats" />
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

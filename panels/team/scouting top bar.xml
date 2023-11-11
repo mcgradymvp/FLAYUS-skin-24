@@ -1,0 +1,156 @@
+<panel height="90">
+	<boolean id="should_force_refresh" value="true" />
+	<colour id="budget_info_positive_colour" name="positive" />
+	<colour id="budget_info_zero_colour" name="text" />
+	<colour id="budget_info_negative_colour" name="negative" />
+	<colour id="scouting_range_highlight_colour" name="bg accent" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<list id="properties_to_forward">
+		<record get_property="navigation_container" target="msbx" set_property="navigation_container" />
+		<record get_property="default_focus" target="msbx" set_property="default_focus" />
+	</list>
+
+	<container id="msbx" class="main_subtle_box" navigation_container="true">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<container class="horizontal_adaptive_container" mode="distribute_equally" inset="0" offset="0" gap="10" draw_vertical_dividers="true">
+
+			<!--Scouting responsibility-->
+			<widget class="property_list_viewer_xml_panel" file="widgets/scouting top bar widget" minimum_width="200" id="scrc" priority="1" icon="icons/custom/icon box/staff" widget_type="client_object_viewer_xml_panel" popup_alignment="left,bottom" lnkH="true">
+				<translation id="titl" translation_id="420803" type="use" value="Scouting Responsibility[COMMENT: FR 11179 - title for buttons to change who is responsible for organising scouting at the club]" />
+				<record id="toto" file="team/team container scout responsibility popup" width="950" />
+				<record id="modal_popup_properties" file="modal popup panel auto sized" />
+			</widget>
+
+			<!--Transfer Window-->
+			<widget class="property_list_viewer_xml_panel" file="widgets/scouting top bar widget" minimum_width="200" id="trwd" priority="1" widget_type="client_object_viewer_xml_panel" navigation_focus_target="false">
+				<translation id="titl" translation_id="249530" type="use" value="Transfer Window[COMMENT - competition stage rules panel, heading]" />
+				<string id="icon" value="icons/custom/icon box/transfer centre"/>
+				<string id="icbi" value="icons/16px/active" />
+				<string id="ichd" value="false" />
+				<boolean id="ustB" value="true" />
+				<boolean id="ustP" value="true" />
+				<boolean id="lnkH" value="true" />
+			</widget>
+
+			<!--Recruitment focus-->
+			<widget class="property_list_viewer_xml_panel" file="widgets/scouting top bar widget" minimum_width="220" id="scfc" priority="1" icon="icons/custom/icon box/focus" lnkH="true">
+				<translation id="title" translation_id="509169" type="use" value="Recruitment Focus[COMMENT: AREA: Scouting/Recruitment; SUB-AREA:Recruitment focus dialog; FR-BN: 24174; NOTE: Recruitment focus dialog title]" />
+				<string id="lktx" value="" />
+				<boolean id="lnkH" value="false" />
+				<boolean id="ustB" value="true" />
+				<boolean id="ustP" value="true" />
+			</widget>
+
+			<!--Assignments-->
+			<widget class="property_list_viewer_xml_panel" file="widgets/scouting top bar widget" minimum_width="220" id="assc" priority="1" icon="icons/custom/icon box/focus" puhd="true" section="tstp">
+				<translation id="lktx" translation_id="251956" type="use" value="Assignments[COMMENT - team screen section; Scouting; title; current assignments]" />
+			</widget>
+
+			<!--Scouting range-->
+			<widget class="property_list_viewer_xml_panel" file="widgets/scouting top bar widget" minimum_width="200" id="scpc" priority="1" icon="icons/custom/icon box/package" widget_type="property_list_viewer_xml_panel" popup_alignment="left,bottom" lnkH="true" navigation_focus_target="true">
+				<translation id="titl" translation_id="309245" type="use" value="Scouting Range[COMMENT: interaction manager; type of interaction]" />
+				<record id="toto" file="team/scouting range popup"/>
+			</widget>	
+					
+			<!--Recruitment team-->
+			<widget class="property_list_viewer_xml_panel" file="widgets/scouting top bar widget" minimum_width="190" id="rtec" priority="1" icon="icons/custom/icon box/staff" puhd="true" section="tcSS" navigation_focus_target="false">
+				<translation id="title" translation_id="437040" type="use" value="Recruitment Team[COMMENT: FR]" />
+				<string id="lktx" value="" />
+				<boolean id="lnkH" value="false" />
+				<boolean id="ustB" value="true" />
+				<boolean id="ustP" value="true" />
+			</widget>	
+			
+			<!--Scouting budget-->
+			<widget class="property_list_viewer_xml_panel" file="widgets/scouting top bar widget" minimum_width="220" id="scbc" priority="1" icon="icons/custom/icon box/package" widget_type="client_object_viewer_xml_panel" popup_alignment="right,bottom" lnkH="true" navigation_focus_target="true">
+				<translation id="titl" translation_id="443667" type="use" value="Scouting Budget[COMMENT: FR 21760 ; scouting centre]" />
+				<record id="toto" file="club/popup scouting budget adjustment panel" width="500" />
+				<record id="modal_popup_properties" file="modal popup panel auto sized" />
+			</widget>	
+
+			<!--Coaching team-->
+			<container class="inner_box_no_margin" appearance="boxes/inner/standard/no margin/paper" minimum_width="220" id="coac" priority="1">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="8" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+					<widget class="team_staff_subteam_overview_panel" id="coat" link="true" file="team/team staff subteam overview compact" navigation_container="true">
+					</widget>
+				</container>
+			</container>
+
+			<!--Scouting team-->
+			<container class="inner_box_no_margin" appearance="boxes/inner/standard/no margin/paper" minimum_width="220" id="scoc" priority="1">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="8" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+					<widget class="team_staff_subteam_overview_panel" id="scot" link="true" file="team/team staff subteam overview compact" navigation_container="true">
+					</widget>
+				</container>
+			</container>
+
+			<!--Medical team-->
+			<container class="inner_box_no_margin" appearance="boxes/inner/standard/no margin/paper" minimum_width="220" id="medc" priority="1">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="8" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+					<widget class="team_staff_subteam_overview_panel" id="medt" link="true" file="team/team staff subteam overview compact" navigation_container="true">
+					</widget>
+
+				</container>
+			</container>
+
+      <!--Transfer budget-->			
+			<container class="inner_box_no_margin" appearance="boxes/inner/standard/no margin/paper" minimum_width="290" id="trbc" priority="2">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+
+					<widget class="widget_popup_button" id="bact" widget_type="client_object_viewer_xml_panel" file="modal popup panel auto sized" popup_alignment="right,bottom" offset_y="2" appearance="buttons/custom/over state only/button">
+						<record id="widget_properties" file="club/popup budget adjustment panel" width="500" />
+					</widget>
+				</container>
+
+				<container wants_mouse_events="false">
+					<attachment_group class="horizontal_arrange" horizontal_layout="26,-1,15" horizontal_offset="5" horizontal_gap="10" vertical_alignment="vertical" vertical_inset="0" />
+
+					<widget class="picture" file="icons/custom/icon box/budget" red_replacement="bg accent" blue_replacement="accent button text" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" width="26" />
+
+					<container wants_mouse_events="false">
+						<attachment_group class="horizontal_arrange" horizontal_layout="-5,-4" horizontal_offset="0" horizontal_gap="5" vertical_alignment="vertical" vertical_inset="0" />
+
+						<container wants_mouse_events="false">
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="8" />
+
+							<widget class="text" auto_size="vertical" colour="faded text" font="label" alignment="left,centre_y" wants_mouse_events="false" multiline="false">
+								<translation id="text" translation_id="242603" type="use" value="Transfer Budget" />
+							</widget>
+
+							<widget class="cash_cell" format="[%cash#1-transferbudget]" id="tbva" auto_size="vertical" font="value" alignment="left, centre_y" wants_mouse_events="false" colour="fg" />
+							<widget class="text" id="nxbw" auto_size="vertical" size="small" alignment="left, centre_y, can_scale" wants_mouse_events="false" colour="faded text" />
+						</container>
+
+						<container wants_mouse_events="false">
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="8" />
+
+							<widget class="text" auto_size="vertical" colour="faded text" font="label" alignment="left,centre_y" wants_mouse_events="false" multiline="false">
+								<translation id="text" translation_id="242605" type="use" value="Wage Budget" />
+							</widget>
+
+							<widget class="text" id="wbva" auto_size="vertical" font="value" alignment="left, centre_y, can_scale" wants_mouse_events="false" colour="fg" />
+						</container>
+						
+					</container>
+                    
+                    <widget class="spacer" />
+				</container>
+			</container>
+
+		</container>
+	</container>
+</panel>

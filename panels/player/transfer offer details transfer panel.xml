@@ -1,0 +1,19 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" />
+
+	<boolean id="should_force_refresh" value="true"/>
+	
+	<container id="adop" draw_horizontal_dividers="true">
+		<attachment_group class="vertical_arrange_autosize">
+			<global id="vertical_gap" name="ui.inner_box_gap"/>
+		</attachment_group>
+		<widget class="transfer_offer_additional_fees_panel" id="fees" navigation_container="true" remove_if="is_fmt"/>
+		<widget class="transfer_offer_clauses_panel" id="clau" navigation_container="true" remove_if="is_fmt"/>
+		<widget class="transfer_offer_combined_additional_fees_and_clauses_panel" id="afac" navigation_container="true" create_if="is_fmt"/>
+
+		<widget class="transfer_offer_loan_clauses_panel" id="loin" navigation_container="true" remove_if="is_fmt"/>
+		<widget class="transfer_offer_loan_options_panel" id="lopp" navigation_container="true" remove_if="is_fmt"/>
+		<widget class="transfer_offer_combined_loan_clauses_and_options_panel" id="lcao" navigation_container="true" create_if="is_fmt"/>
+	</container>
+
+</panel>

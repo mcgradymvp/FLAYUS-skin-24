@@ -1,0 +1,19 @@
+﻿<panel>
+	<list id="properties_to_forward">
+		<record get_property="title" target="titB" set_property="link_title" />
+		<record get_property="desc" target="tmSx" set_property="text" />
+		<record get_property="KeyF" target="keyf" set_property="KeyF" />
+		<record get_property="LxGS" target="keyf" set_property="LxGS" />
+		<record get_property="objt" target="titB" set_property="objt" />
+	</list>
+	<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="0" horizontal_inset="0" />
+	<container class="title_link_box" id="titB" section="DHtO" hide_view_menu="true" force_title_borders="true">
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="0" horizontal_inset="0" />
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="8" vertical_offset="2" horizontal_inset="4" />
+			<widget class="text" id="tmSx" auto_size="vertical" alignment="centre" />
+			<widget class="horizontal_divider"/>
+			<widget class="data_analyst_key_findings_widget" file="widgets/data analyst key findings widget autosize" can_update_with_no_objects="true" id="keyf" />
+		</container>
+	</container>
+</panel>

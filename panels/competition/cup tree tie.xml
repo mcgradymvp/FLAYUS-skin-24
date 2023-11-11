@@ -1,0 +1,42 @@
+<!-- panel for a single tie in a cup tree -->
+
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	
+	<!--<widget class="main_box" id="rect" height="52">
+	</widget>-->
+		
+	<widget class="inner_subtle_box_no_margin" id="rect">
+		
+		<layout class="arrange_vertical_attachment" alignment="top" offset="2" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="2"/>
+		
+		<!-- home team / teams -->
+		<widget class="container" id="home" height="28">
+			
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+			
+			<widget class="team_button" id="team" />
+			<widget class="label" id="rety" alignment="centre" width="15" colour="attention"/>
+			<widget class="label" id="scor" alignment="centre" width="20"/>
+			
+			<widget class="container" id="list"/>
+			
+		</widget>
+
+		<!-- away team / teams -->
+		<widget class="container" id="away" height="28">
+
+			<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+			
+			<widget class="team_button" id="team" />
+			<widget class="label" id="rety" alignment="centre" width="15" colour="attention"/>
+			<widget class="label" id="scor" alignment="centre" width="20"/>
+			
+			<widget class="container" id="list"/>
+			
+		</widget>
+	</widget>
+</panel>

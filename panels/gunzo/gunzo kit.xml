@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<!--the main background-->
+	<widget class="picture" id="bSHR" image_alignment="top" scale_picture="false" keep_aspect_ratio="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="-5"/>
+	</widget>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="11"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+		<!--Name of the player: This is hidden on the player stats panel-->
+		<!-- the font size reduces one size when the name is bigger than 16 characters -->
+		<widget class="label" id="bNAM" size="13" alignment="top, centre_y, can_scale" font="fonts/kit name">
+			<layout class="stick_to_sides_attachment" alignment="top" inset="30"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10"/>
+		</widget>
+		
+		<!-- player number -large -->
+		<widget class="picture" id="bNUM" image_alignment="middle" keep_aspect_ratio="true">
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="-5"/>
+		</widget>
+
+
+
+	</container>
+
+
+	<!--overlay effect-->
+	<widget class="picture" id="bOVR" image_alignment="top" scale_picture="false" keep_aspect_ratio="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="-5"/>
+	</widget>
+
+	<container id="numc">
+
+		<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0"/>
+		<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true"/>
+
+		<container class="bordered_box">
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+			<layout class="fit_children_attachment" alignment="horizontal" offset="4" gap="0"/>
+			<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="left" inset="4" apply_to_children="true"/>
+
+			<widget class="label" id="numb" auto_size="horizontal">
+
+			</widget>
+		</container>
+
+	</container>
+
+
+
+	<!-- Rating 
+	<widget class="number_label" id="Prat" colour="gzk" alignment="centre_x,top" size="12" font="gunzo2">
+		<layout class="stick_to_sides_attachment" alignment="top" inset="24"/>
+		<layout class="stick_to_sides_attachment" alignment="left" inset="104"/>
+
+		<record id="object_property">
+			<integer id="get_property" value="Prat" />
+		</record>
+	</widget>-->
+
+
+
+</panel>

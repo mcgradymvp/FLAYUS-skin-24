@@ -1,0 +1,432 @@
+﻿<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at0F" />
+		<record entity_layout_id="at0G" />
+		<record entity_layout_id="at0H" />
+		<record entity_layout_id="at0I" />
+		<record entity_layout_id="at0J" />
+		<record entity_layout_id="at0K" />
+		<record entity_layout_id="at02" />
+		<record entity_layout_id="at0;" />
+		<record entity_layout_id="at0&lt;" />
+		<record entity_layout_id="at0=" />
+		<record entity_layout_id="at0@" />
+		<record entity_layout_id="at0C" />
+		<record entity_layout_id="at0O" />
+		<record entity_layout_id="at0D" />
+		<record entity_layout_id="at0E" />
+		<record entity_layout_id="at0P" />
+		<record entity_layout_id="at0A" />
+		<record entity_layout_id="at0B" />
+		<record entity_layout_id="at0Q" />
+		<record entity_layout_id="at0&gt;" />
+		<record entity_layout_id="at0?" />
+		<record entity_layout_id="at08" />
+		<record entity_layout_id="at05" />
+		<record entity_layout_id="at03" />
+		<record entity_layout_id="at0L" />
+		<record entity_layout_id="at32" />
+		<record entity_layout_id="at04" />
+		<record entity_layout_id="at0M" />
+		<record entity_layout_id="at06" />
+		<record entity_layout_id="at07" />
+		<record entity_layout_id="at0N" />
+		<record entity_layout_id="at0:" />
+		<record entity_layout_id="at09" />
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<container class="main_box" entity_layout_id="at01" id="at01" sub_group_id="0" name="coach team topbar" height="75" adaptive_display_flags="" navigation_container="true" default_focus="true" >
+		<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="top" set_side="top" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<widget class="link_appearance_button" entity_layout_id="at0F" auto_size="vertical" alignment="centre_x,centre_y,left" id="stfS" name="staff search link" width="130" needs_height="true" adaptive_display_flags="">
+			<string id="click_event" value="gtss" />
+			<translation id="text" value="Staff Search" translation_id="227996" type="use" />
+			<layout class="stick_to_object_attachment" id="align_top" offset="10" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" move_side="true" target="main" />
+		</widget>
+		<widget class="icon_button" entity_layout_id="at0G" alignment="centre_y,left" id="edtB" auto_size="vertical" controller_button="y_button" name="edit coach assignment button" width="200" needs_height="true" adaptive_display_flags="">
+			<string id="click_event" value="oEDT" />
+			<translation id="text" translation_id="492041" type="use" value="Edit Coach Assignments[COMMENT: AREA: Training; SUB-AREA: Coaches Overview; FR-BN: 1458; TONE: Formal; CHARLIMIT: None; REF-ID: 466575; NOTE: fix to the referenced string]" />
+			<layout class="stick_to_object_attachment" id="align_top" offset="10" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-5" get_side="left" set_side="right" move_side="true" target="at0F" />
+		</widget>
+		<widget class="link_button" entity_layout_id="at0H" auto_size="horizontal" appearance="buttons/link/title/button" alignment="centre_y,left" id="cchT" name="coaching team link" height="16" adaptive_display_flags="" navigation_focus_target="true" >
+			<string id="section" value="tcsc" />
+			<integer id="size" value="9" />
+			<translation id="text" translation_id="388030" type="use" value="Coaching Team[COMMENT: FR 8158, Staff UI revamp, displays details of a team's staff/personnel make-up]" />
+			<layout class="stick_to_object_attachment" id="align_top" offset="6" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="12" get_side="left" set_side="left" move_side="true" target="main" />
+		</widget>
+		<widget class="text" entity_layout_id="at0I" auto_size="all" alignment="left,top" id="coac" name="No. coaches" adaptive_display_flags="">
+			<string id="style" value="bold" />
+			<integer id="size" value="12" />
+			<layout class="stick_to_object_attachment" id="align_top" offset="2" get_side="bottom" set_side="top" move_side="true" target="at0H" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="12" get_side="left" set_side="left" move_side="true" target="main" />
+		</widget>
+		<container class="team_staff_little_guys_panel" entity_layout_id="at0J" file="team/team staff little guys icons only" id="ltlP" name="little coach people container" height="32" adaptive_display_flags="" navigation_focus_target="false">
+			<string id="type" value="CSsf" />
+			<record id="object_property">
+				<string id="get_property" value="objt" />
+				<string id="set_property" value="objt" />
+			</record>
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="50" get_side="right" set_side="left" target="at0H" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="left" set_side="right" target="at0G" />
+		</container>
+		<widget class="text" entity_layout_id="at0K" alignment="centre_y,left" id="at0K" name="board concerns text" height="25" adaptive_display_flags="">
+			<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" move_side="true" target="at0J" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="50" get_side="right" set_side="left" target="at0H" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="left" set_side="right" target="at0G" />
+		</widget>
+	</container>
+	<container entity_layout_id="at02" id="at02" sub_group_id="0" adaptive_display_flags="">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" target="at01" />
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container entity_layout_id="at0;" id="at0;" sub_group_id="0" adaptive_display_flags="">
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="2" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-2" get_side="right" set_side="right" target="main" />
+			<layout class="stick_to_sizes_attachment" height="50.000000" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<container class="main_box" entity_layout_id="at08" id="at08" sub_group_id="0" adaptive_display_flags="" navigation_container="true"> 
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="right" set_side="right" move_side="true" target="main" />
+				<layout class="stick_to_sizes_attachment" width="33.000000" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<widget class="icon_button" entity_layout_id="at0N" id="atib" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" name="attacking icon text" adaptive_display_flags="" navigation_focus_target="false">
+					<string id="icon_colour" value="accent" />
+					<string id="colour" value="accent" />
+					<string id="style" value="bold" />
+					<integer id="size" value="12" />
+					<string id="show_button_appearance" value="false" />
+					<translation id="text" translation_id="229305" type="use" value="Attacking[COMMENT - training category]" />
+					<string id="icon" value="icons/16px/training attacking" />
+					<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					<layout class="stick_to_sizes_attachment" height="10.000000" />
+				</widget>
+				<container class="training_category_coach_overview_widget" entity_layout_id="at0:" id="atTa" name="attacking tactical" adaptive_display_flags="">
+					<integer id="training_category" value="9" />
+					<record id="object_property">
+						<string id="get_property" value="objt" />
+						<string id="set_property" value="objt" />
+					</record>
+					<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" move_side="true" target="at0N" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					<layout class="stick_to_sizes_attachment" height="45.000000" />
+				</container>
+				<container class="training_category_coach_overview_widget" entity_layout_id="at09" id="atTc" name="attacking technical" adaptive_display_flags="">
+					<integer id="training_category" value="8" />
+					<record id="object_property">
+						<string id="get_property" value="objt" />
+						<string id="set_property" value="objt" />
+					</record>
+					<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="bottom" set_side="top" target="at0:" />
+					<layout class="stick_to_object_attachment" id="align_bottom" offset="-4" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+				</container>
+			</container>
+			<container class="main_box" entity_layout_id="at05" id="at05" sub_group_id="0" adaptive_display_flags="" navigation_container="true">
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="left" set_side="right" move_side="true" target="at08" />
+				<layout class="stick_to_sizes_attachment" width="33.000000" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<widget class="icon_button" entity_layout_id="at0M" id="psIb" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" name="possesion icon text" adaptive_display_flags="" navigation_focus_target="false">
+					<string id="icon_colour" value="accent" />
+					<string id="colour" value="accent" />
+					<string id="style" value="bold" />
+					<integer id="size" value="12" />
+					<string id="show_button_appearance" value="false" />
+					<translation id="text" value="Possession" translation_id="232851" type="use" />
+					<string id="icon" value="icons/16px/training technical" />
+					<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					<layout class="stick_to_sizes_attachment" height="10.000001" />
+				</widget>
+				<container class="training_category_coach_overview_widget" entity_layout_id="at06" id="PsTc" name="posession technical" adaptive_display_flags="">
+					<integer id="training_category" value="7" />
+					<record id="object_property">
+						<string id="get_property" value="objt" />
+						<string id="set_property" value="objt" />
+					</record>
+					<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" move_side="true" target="at0M" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					<layout class="stick_to_sizes_attachment" height="45.000000" />
+				</container>
+				<container class="training_category_coach_overview_widget" entity_layout_id="at07" id="PsTa" name="posesssion tactical" adaptive_display_flags="">
+					<integer id="training_category" value="6" />
+					<record id="object_property">
+						<string id="get_property" value="objt" />
+						<string id="set_property" value="objt" />
+					</record>
+					<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="bottom" set_side="top" target="at06" />
+					<layout class="stick_to_object_attachment" id="align_bottom" offset="-4" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+				</container>
+			</container>
+			<container class="main_box" entity_layout_id="at03" id="at03" sub_group_id="0" adaptive_display_flags="" navigation_container="true">
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="left" set_side="right" target="at05" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<widget class="icon_button" entity_layout_id="at0L" id="dfiB" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" name="defending icon text" adaptive_display_flags="" navigation_focus_target="false">
+					<string id="icon_colour" value="accent" />
+					<string id="colour" value="accent" />
+					<string id="style" value="bold" />
+					<integer id="size" value="12" />
+					<string id="show_button_appearance" value="false" />
+					<translation id="text" translation_id="229304" type="use" value="Defending[COMMENT - training category]" />
+					<string id="icon" value="icons/16px/training defending" />
+					<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					<layout class="stick_to_sizes_attachment" height="10.000001" />
+				</widget>
+				<container class="training_category_coach_overview_widget" entity_layout_id="at32" id="DfTc" name="defending - technical " adaptive_display_flags="">
+					<integer id="training_category" value="5" />
+					<record id="object_property">
+						<string id="get_property" value="objt" />
+						<string id="set_property" value="objt" />
+					</record>
+					<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" move_side="true" target="at0L" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					<layout class="stick_to_sizes_attachment" height="45.000000" />
+				</container>
+				<container class="training_category_coach_overview_widget" entity_layout_id="at04" id="DfTa" name="defending - tactical" adaptive_display_flags="">
+					<integer id="training_category" value="4" />
+					<record id="object_property">
+						<string id="get_property" value="objt" />
+						<string id="set_property" value="objt" />
+					</record>
+					<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="bottom" set_side="top" target="at32" />
+					<layout class="stick_to_object_attachment" id="align_bottom" offset="-4" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+				</container>
+			</container>
+		</container>
+		<container entity_layout_id="at0&lt;" id="at0&lt;" sub_group_id="0" adaptive_display_flags="">
+			<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" target="at0;" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="2" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-2" get_side="right" set_side="right" target="main" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<container class="main_box" entity_layout_id="at0=" id="at0=" sub_group_id="0" adaptive_display_flags="" navigation_container="true">
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="right" set_side="right" move_side="true" target="main" />
+				<layout class="stick_to_sizes_attachment" width="33.000000" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<widget class="icon_button" entity_layout_id="at0Q" id="spib" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" hidden="true" name="set piece icon text" height="28" adaptive_display_flags="" navigation_focus_target="false">
+					<string id="icon_colour" value="accent" />
+					<string id="colour" value="accent" />
+					<string id="style" value="bold" />
+					<integer id="size" value="12" />
+					<string id="show_button_appearance" value="false" />
+          <translation id="text" translation_id="306492" type="use" value="Set Pieces[COMMENT: match analysis panel; event type]" />
+					<string id="icon" value="icons/16px/training attacking" />
+					<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+				</widget>
+				<container class="training_category_coach_overview_widget" entity_layout_id="at0&gt;" id="SpSp" name="Set pieces" height="0" adaptive_display_flags="">
+					<integer id="training_category" value="10" />
+					<record id="object_property">
+						<string id="get_property" value="objt" />
+						<string id="set_property" value="objt" />
+					</record>
+					<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" move_side="true" target="at0Q" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+				</container>
+				<container class="training_category_coach_overview_widget" entity_layout_id="at0?" id="at0?" name="spare widget" adaptive_display_flags="">
+					<record id="object_property">
+						<string id="get_property" value="objt" />
+						<string id="set_property" value="objt" />
+					</record>
+					<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="bottom" set_side="top" target="at0&gt;" />
+					<layout class="stick_to_object_attachment" id="align_bottom" offset="-4" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+				</container>
+			</container>
+			<container class="main_box" entity_layout_id="at0@" id="at0@" sub_group_id="0" adaptive_display_flags="" navigation_container="true">
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="left" set_side="right" move_side="true" target="at0=" />
+				<layout class="stick_to_sizes_attachment" width="33.000000" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<widget class="icon_button" entity_layout_id="at0P" id="ftib" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" name="fitness icon text" adaptive_display_flags="" navigation_focus_target="false">
+					<string id="icon_colour" value="accent" />
+					<string id="colour" value="accent" />
+					<string id="style" value="bold" />
+					<integer id="size" value="12" />
+					<string id="show_button_appearance" value="false" />
+					<translation id="text" translation_id="258723" type="use" value="Fitness[COMMENT - staff coaching style - staff profile page]" />
+					<string id="icon" value="icons/16px/training physical" />
+					<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					<layout class="stick_to_sizes_attachment" height="10.000000" />
+				</widget>
+				<container class="training_category_coach_overview_widget" entity_layout_id="at0A" id="FtSt" name="fitness- strength" adaptive_display_flags="">
+					<integer id="training_category" value="0" />
+					<record id="object_property">
+						<string id="get_property" value="objt" />
+						<string id="set_property" value="objt" />
+					</record>
+					<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" move_side="true" target="at0P" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					<layout class="stick_to_sizes_attachment" height="45.000000" />
+				</container>
+				<container class="training_category_coach_overview_widget" entity_layout_id="at0B" id="FtQi" name="fitness quickness" adaptive_display_flags="">
+					<integer id="training_category" value="1" />
+					<record id="object_property">
+						<string id="get_property" value="objt" />
+						<string id="set_property" value="objt" />
+					</record>
+					<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="bottom" set_side="top" target="at0A" />
+					<layout class="stick_to_object_attachment" id="align_bottom" offset="-4" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+				</container>
+			</container>
+			<container class="main_box" entity_layout_id="at0C" id="at0C" sub_group_id="0" adaptive_display_flags="" navigation_container="true">
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="left" set_side="right" target="at0@" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<widget class="icon_button" entity_layout_id="at0O" id="gkib" alignment="centre_x,centre_y" icon_alignment="centre_x,centre_y" name="goalkeeping icon text" adaptive_display_flags="" navigation_focus_target="false">
+					<string id="icon_colour" value="accent" />
+					<string id="colour" value="accent" />
+					<string id="style" value="bold" />
+					<integer id="size" value="12" />
+					<string id="show_button_appearance" value="false" />
+					<translation id="text" translation_id="258722" type="use" value="Goalkeeping[COMMENT - staff coaching style - staff profile page]" />
+					<string id="icon" value="icons/16px/training goalkeeping" />
+					<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" offset="-1" get_side="right" set_side="right" target="main" />
+					<layout class="stick_to_sizes_attachment" height="10.000000" />
+				</widget>
+				<container class="training_category_coach_overview_widget" entity_layout_id="at0D" id="gkSS" name="goalkeeping - shot stopping" adaptive_display_flags="">
+					<integer id="training_category" value="2" />
+					<record id="object_property">
+						<string id="get_property" value="objt" />
+						<string id="set_property" value="objt" />
+					</record>
+					<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" move_side="true" target="at0O" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					<layout class="stick_to_sizes_attachment" height="45.000000" />
+				</container>
+				<container class="training_category_coach_overview_widget" entity_layout_id="at0E" id="gkHD" name="goalkeeping - handling and distribution" adaptive_display_flags="">
+					<integer id="training_category" value="3" />
+					<record id="object_property">
+						<string id="get_property" value="objt" />
+						<string id="set_property" value="objt" />
+					</record>
+					<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="bottom" set_side="top" target="at0D" />
+					<layout class="stick_to_object_attachment" id="align_bottom" offset="-4" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

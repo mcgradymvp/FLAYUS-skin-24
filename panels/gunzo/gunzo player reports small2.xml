@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel save_session_state="true">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="icon_box" icon="icons/custom/icon box/scouting">
+		<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+
+		<container height="15">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+
+			<widget class="link_button" section="Pccr" auto_size="all">
+				<translation id="text" type="use" value="GZ 스몰리포트 2" />
+			</widget>
+		</container>  
+
+		<container height="5"/>  
+
+
+		<!-- No scout report -->
+		<container id="nsrc">
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+
+			<container id="nocs" height="60">
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+				<!--explanatory text-->
+				<widget class="text" alignment="centre" spec="text" auto_size="vertical" size="large" style="semi_bold">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+					<translation id="text" translation_id="297209" type="use" value="Scouting Required[COMMENT: shown when the user can't view player info without scouting them first]" />
+				</widget>
+				<widget class="icon_button" id="sctP" click_event="sctc" auto_size="horizontal" height="30" icon="icons/16px/search">
+					<translation id="text" translation_id="298524" type="use" value="Scouting Assignments[COMMENT: backroom advice, button link]" />
+
+					<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" />
+				</widget>
+			</container>
+
+			<widget id="nocn" class="label" spec="text,large" size="11" alignment="centre" auto_size="vertical">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			</widget>
+		</container>
+
+		<!-- Already being scounted -->
+		<container id="arbs">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<!--explanatory text-->
+			<widget class="text" id="arbt" alignment="centre" spec="text" colour="attention">
+				<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+			</widget>
+		</container>
+
+		<!-- Already being scouted by pool -->
+		<container id="pool" >
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" colour="attention">
+				<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]" />
+			</widget>
+		</container>
+
+
+
+
+		<!-- If we have scout reports -->
+
+		<container id="main">
+
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<layout class="arrange_vertical_attachment" layout="-1" inset="0" offset="0" gap="1" />
+
+			<!-- estimate report -->
+			<widget class="player_reports_overview_summary_panel" file="gunzo/gunzo player reports summary small" height="100">
+				<record id="object_property" get_property="objt" set_property="objt" />
+			</widget>
+
+
+		</container>
+
+
+
+
+
+	</container>
+
+</panel>

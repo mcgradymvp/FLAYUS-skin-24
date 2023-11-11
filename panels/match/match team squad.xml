@@ -1,0 +1,285 @@
+<panel>
+
+	<!-- Starting XI Styles -->
+	<flags id="stxi" value="tables/standard/row/normal/row" />
+
+	<!-- Subs Styles -->
+	<flags id="subs" value="tables/custom/squad/substitute/row" />
+
+	<!-- Sent off Styles -->
+	<flags id="soff" value="tables/custom/cards/red/row" />
+
+	<!-- Not in squad Styles -->
+	<flags id="nisq" value="tables/custom/squad/outside squad/row" />
+
+	<!-- Highlighted Styles -->
+	<flags id="hisa" value="tables/custom/squad/highlight/row" />
+	<flags id="hida" value="tables/custom/squad/highlight/row" />
+
+	<!-- Unavailable Styles -->
+	<flags id="unAP" value="tables/custom/squad/unavailable/row" />
+
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="1" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container class="main_box_no_margin">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="2" />
+
+			<container height="30">
+				<layout class="arrange_horizontal_attachment" alignment="left" gap="8" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<widget class="view_menu_label" id="TitL" alignment="left,centre_y" auto_size="horizontal" embed_in_frame="false">
+					<translation id="text" translation_id="229527" type="use" value="Squad" />
+				</widget>
+
+				<!-- player view menu -->
+				<widget class="view_menu_popup" id="plvi" auto_tick_exclusive="true" embed_in_frame="false" fixed="false" />
+
+			</container>
+			<container class="main_subtle_box" height="36">
+				<attachment_group class="horizontal_arrange"/>
+
+				<widget class="text" auto_size="horizontal" font="title" colour="faded text" alignment="left,centre_y">
+					<translation id="text" translation_id="420619" type="use" value="Substitutes[COMMENT: chalkboard events filters option to show just the substitutes, not using an existing translation as the context may differ]" />
+				</widget>
+
+				<widget class="info_icon_hint_text" id="srHt" icon_alignment="centre" widget_type="posh_tooltip" width="16" auto_size="horizontal"/>
+
+				<widget class="text" id="srTx" auto_size="horizontal" alignment="left,centre_y"/>
+
+			</container>
+
+			<widget class="tactic_player_list_table" id="pltb" column_spacing="0" customisation_context="play" database_table_type="1" view_setting_name="stored_match_view" mode="fill_rows, stripe_rows, printable, store_sort_state, drag_rows, drop_on_rows" column_mode="resize_columns, move_columns, custom_views" row_spacing="1" row_height="35" fixed_row_height="25">
+
+				<boolean id="auto_size_rows" value="false" />
+				<boolean id="fixed_size_rows" value="true" />
+				<boolean id="dont_restore_selection" value="true" />
+				<boolean id="save_session_state" value="true" />
+				<boolean id="save_default_state" value="true" />
+
+				<!-- default sort by playing position (primary), then picked position, then name -->
+				<list id="default_sort_column">
+					<integer value="TPRM" />
+				</list>
+
+				<!--properties for each object we always want to request, regardless of whether or not they're displayed 
+						(this can help when for example supplying a selected object to another panel to display further info)-->
+				<!--these can be omitted, they're just a time saver-->
+				<list id="Spid">
+					<integer value="PPra" />
+					<integer value="Pnfo" />
+					<integer value="PpsC" />
+					<integer value="PCpQ" />
+				</list>
+
+				<!--default view-->
+				<flags id="default_view" value="deta" />
+
+				<!--available views-->
+				<list id="viws">
+
+					<record id="deta">
+						<record id="view_table_properties">
+							<integer id="row_height" value="35" />
+						</record>
+						<translation id="text" translation_id="227793" type="use" value="Condition" />
+						<boolean id="tick" value="false" />
+						<record id="view">
+							<!-- position role duty -->
+							<record id="TPRM" auto_hide_priority="2" width="102" />
+							<!-- current ability in role-->
+							<record id="PRPr" auto_hide_priority="9" width="70" />
+							<!-- Player Instruction-->
+							<record id="pIDa" auto_hide_priority="7" width="42" />
+							<!-- person name -->
+							<record id="PlSM" auto_hide_priority="1" width="-5" minimum_width="140" />
+							<!-- status info -->
+							<record id="Pcar" auto_hide_priority="3" />
+							<!-- captain? -->
+							<!--<record id="PisC" auto_hide_priority="4" width="18"/>-->
+							<!-- position -->
+							<record id="PpsC" auto_hide_priority="11" width="-5" minimum_width="120" />
+							<!-- player condition-->
+							<record id="PRCF" auto_hide_priority="5"  width="70"/>
+							<!-- player morale -->
+							<record id="Pmor" auto_hide_priority="14" ShTx="false" width="30" />
+							<!-- body language -->
+							<record id="Pmtc" auto_hide_priority="8" width="-4" minimum_width="120" />
+							<!-- performance -->
+							<record id="Ppfc" auto_hide_priority="13" width="-5" minimum_width="200" />
+							<!-- overall goals -->
+							<record id="Pgls" auto_hide_priority="11" width="30" />
+							<!-- overall average rating -->
+							<record id="Prat" auto_hide_priority="6" />
+						</record>
+					</record>
+
+				<record id="stat">
+						<record id="view_table_properties">
+							<integer id="row_height" value="35" />
+						</record>
+						<translation id="text" translation_id="247412" type="use" value="Stats" />
+						<boolean id="tick" value="false" />
+						<record id="view">
+							<!-- position role duty -->
+							<flags id="TPRM" />
+							<!-- current ability in role-->
+							<!--<record id="PRPr" auto_hide_priority="1400" width="70"/>-->
+							<!-- Player Instruction-->
+							<record id="pIDa" width="42" />
+							<!-- person name -->
+							<record id="PlSM" width="180" />
+							<!-- status info -->
+							<flags id="Pcar" />
+							<!-- captain? -->
+							<!--<record id="PisC" auto_hide_priority="800" width="18"/>-->
+							<!-- position -->
+							<!--<record id="PpsC" auto_hide_priority="1300" />-->
+							<!-- player condition-->
+							<record id="PcOI" auto_hide_priority="1100" />
+							<!-- player sharpness-->
+							<record id="PftI" auto_hide_priority="5" />
+							<!-- player morale -->
+							<record id="Pmor" auto_hide_priority="1200" width="20" ShTx="false" />
+							<!-- body language -->
+							<record id="Pmtc" auto_hide_priority="12" width="-5" minimum_width="200" />
+							<!-- overall goals -->
+							<record id="Pgls" auto_hide_priority="900" />
+							<!-- overall average rating -->
+							<record id="Prat" auto_hide_priority="1000" />
+						</record>
+					</record>
+
+					<record id="mora">
+						<record id="view_table_properties">
+							<integer id="row_height" value="35" />
+						</record>
+						<translation id="text" translation_id="227839" type="use" value="Morale" />
+						<record id="view">
+							<!-- position role duty -->
+							<flags id="TPRM" />
+							<!-- current ability in role-->
+							<!--<record id="PRPr" auto_hide_priority="1400" width="70"/>-->
+							<!-- Player Instruction-->
+							<record id="pIDa" width="42" />
+							<!-- person name -->
+							<record id="PlSM" width="180" />
+							<!-- status info -->
+							<flags id="Pcar" />
+							<!-- captain? -->
+							<!--<record id="PisC" auto_hide_priority="800" width="18"/>-->
+							<!-- position -->
+							<!--<record id="PpsC" auto_hide_priority="1200" />-->
+							<!-- player condition-->
+							<record id="PcOI" auto_hide_priority="900" />
+							<!-- player sharpness-->
+							<record id="PftI" auto_hide_priority="900" />
+							<!-- player morale -->
+							<record id="Pmor" auto_hide_priority="850" ShTx="true" />
+							<!-- body language -->
+							<record id="Pmtc" auto_hide_priority="12" width="-5" minimum_width="200" />
+							<!-- overall goals -->
+							<record id="Pgls" auto_hide_priority="1500" />
+							<!-- overall average rating -->
+							<record id="Prat" auto_hide_priority="1000" />
+
+						</record>
+					</record>
+
+					<record id="posi">
+						<record id="view_table_properties">
+							<integer id="row_height" value="35" />
+						</record>
+						<translation id="text" translation_id="227884" type="use" value="Position" />
+						<record id="view">
+							<!-- position role duty -->
+							<flags id="TPRM" />
+							<!-- current ability in role-->
+							<record id="PRPr" auto_hide_priority="1400" width="70" />
+							<!-- Player Instruction-->
+							<record id="pIDa" width="42" />
+							<!-- person name -->
+							<record id="PlSM" width="180" />
+							<!-- status info -->
+							<flags id="Pcar" />
+							<!-- captain? -->
+							<!--<record id="PisC" auto_hide_priority="800" width="18"/>-->
+							<!-- position -->
+							<record id="PpsC" auto_hide_priority="1" />
+							<!-- player morale -->
+							<record id="Pmor" auto_hide_priority="1100" width="20" ShTx="false" />
+							<!-- player condition-->
+							<record id="PcOI" auto_hide_priority="4" />
+							<!-- player sharpness-->
+							<record id="PftI" auto_hide_priority="5" />
+							<!-- overall goals -->
+							<record id="Pgls" auto_hide_priority="1500" />
+							<!-- overall average rating -->
+							<record id="Prat" auto_hide_priority="1000" />
+						</record>
+					</record>
+
+					<record id="subs">
+						<record id="view_table_properties">
+							<integer id="row_height" value="30" />
+						</record>
+						<translation id="text" translation_id="466547" type="use" value="Detailed[COMMENT: Table view which allows detailed information to be shown on selected players training]" />
+						<boolean id="tick" value="false" />
+						<record id="view">
+							<flags id="Pshp" />
+							<record id="TPrl" auto_hide_priority="1250" size="small" width="80" appearance="buttons/subtle/normal/button" />
+							<record id="TPdt" auto_hide_priority="1260" size="small" width="80" appearance="buttons/subtle/normal/button" />
+							<flags id="Pcar" />
+							<record id="Pnam" disable_link="true" person_is_player="true" links_enabled_in_popup="false" />
+							<record id="Pmor" auto_hide_priority="1400" />
+							<record id="PcOI" auto_hide_priority="900" />
+							<record id="PftI" auto_hide_priority="900" />
+							<record id="Pgls" auto_hide_priority="1000" />
+							<record id="Past" auto_hide_priority="1100" />
+							<record id="Prat" auto_hide_priority="1200" />
+							<record id="PpsC" auto_hide_priority="1150" disable_link="true" />
+							<record id="Pmtc" auto_hide_priority="1300" minimum_width="200" multiline="false" />
+							<record id="Ppfc" auto_hide_priority="13" minimum_width="200" />
+						</record>
+					</record>
+
+
+					<!-- This view will show the player unique IDs in a list (visible if 'show unique id' preference set) -->
+					<record id="unid">
+						<translation id="name" translation_id="247858" type="use" value="Unique IDs" />
+						<record id="view">
+							<flags id="duni" />
+							<!-- unique id -->
+							<flags id="PCrR" />
+							<!-- current ability in role-->
+							<record id="PlSM" />
+							<!-- person name -->
+							<flags id="PisC" />
+							<!-- captain? -->
+							<flags id="Pclb" />
+							<!-- person club -->
+							<flags id="Pnat" />
+							<!-- nationality -->
+							<flags id="Pdva" />
+							<!-- value -->
+						</record>
+					</record>
+				</list>
+
+			</widget>
+
+		</container>
+
+		<!-- panel showing squad selection rules for the next match -->
+		<widget class="match_squad_info_panel" id="ssnm" show_all_comps="false" />
+	</container>
+
+</panel><!-- panel -->

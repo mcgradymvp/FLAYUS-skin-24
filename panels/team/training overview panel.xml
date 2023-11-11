@@ -1,0 +1,105 @@
+<panel>
+	<layout class="arrange_vertical_attachment" layout="70,320, -1" offset="0">
+
+	</layout>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+  <container class="main_box" navigation_container="true" default_focus="true">
+    <layout class="arrange_horizontal_attachment" layout="-3,1,-8" offset="4" />
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4" />
+
+    <!--staff responsibility-->
+    <widget class="property_list_viewer_xml_panel" file="widgets/training responsibility top bar widget" id="scrc" widget_type="client_object_viewer_xml_panel" popup_alignment="left,bottom" lkhd="true" default_focus="true">
+	  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+      <translation id="title" translation_id="492044" type="use" value="Training Responsibilities[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+    </widget>
+
+    <widget class="vertical_divider" red_replacement="white"/>
+    
+    <!--tactics and tactical data-->
+	<widget class="tactic_slot_tab_container" id="prep" file="tactics/tactic slot tab container training overview" />
+  </container>
+
+  <!--weekly schedule-->
+	<container class="main_box" id="body" navigation_container="true">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<record id="mask" alignment="vertical, left" top="0" bottom="-110" width="200" file="backgrounds/pattern" offset_x="200" offset_y="200" />
+		<container>
+
+			<layout class="arrange_vertical_attachment" layout="46,-1" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="5" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+				<widget class="text" auto_size="vertical" alignment="left,bottom" font="label">
+					<translation id="text" translation_id="339927" type="use" value="This week[Comment: Training panel; label for the current week in the calendar]" />
+				</widget>
+				<widget class="text" size="large" id="schT" colour="text" style="bold" font="title" />
+			</container>
+
+			<widget class="training_schedule_week_widget" id="pwTw" file="widgets/training schedule week widget intensity">
+				<boolean id="shortened" value="false" />
+				<boolean id="should_force_refresh" value="false" />
+				<integer id="intensity_display_style" value="0" />
+				<string id="draggable" value="true" />
+				<string id="session_description_column" value="true" />
+				<string id="schedule_session_widget_file" value="widgets/training schedule large session widget" />
+				<string id="schedule_header_file" value="widgets/training schedule day month header" />
+			</widget>
+		</container>
+
+		<widget class="link_button" auto_size="all" section="ttcP" navigation_focus_target="true">
+			<layout class="stick_to_sides_attachment" alignment="right,top" inset="8,10" />
+			<translation id="text" translation_id="466488" type="use" value="Training Calendar[COMMENT: Training Overview calendar link]" />
+		</widget>
+	</container>
+
+	<!--selectable panels-->
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<container class="horizontal_adaptive_container" id="nomP" inset="0" offset="0" draw_vertical_dividers="true">
+
+			<container class="vertical_adaptive_container" mode="dont_distribute" inset="0" offset="0" minimum_width="600" default_width="-2" priority="2" draw_horizontal_dividers="true">
+				<global id="gap" name="ui.main_contrast_box_gap" />
+
+				<container class="horizontal_adaptive_container" mode="distribute_equally" inset="0" offset="0" default_height="-3" minimum_height="240" priority="1" draw_vertical_dividers="true">
+					<global id="gap" name="ui.main_contrast_box_gap" />
+
+					<container class="client_object_viewer_selector_panel" id="cos2" file="team/team training selector panel" default_width="-1" minimum_width="300" priority="2" >
+						<integer id="default_widget" value="ttHp" />
+					</container>
+
+					<container class="client_object_viewer_selector_panel" id="cos3" file="team/team training selector panel" default_width="-1" minimum_width="300" priority="3" >
+						<integer id="default_widget" value="MedC" />
+					</container>
+				</container>
+
+				<container class="horizontal_adaptive_container" id="row2" mode="distribute_equally" inset="0" offset="0" default_height="-2" minimum_height="200" priority="2" draw_vertical_dividers="true">
+					<global id="gap" name="ui.main_contrast_box_gap" />
+
+					<container class="client_object_viewer_selector_panel" id="cos4" file="team/team training selector panel" default_width="-1" minimum_width="300" priority="1" >
+						<integer id="default_widget" value="tMpr" />
+					</container>
+
+					<container class="client_object_viewer_selector_panel" id="cos5" file="team/team training selector panel" default_width="-1" minimum_width="300" priority="2" >
+						<integer id="default_widget" value="tsBr" />
+					</container>
+				</container>
+			</container>
+
+			<!--this panel always here-->
+			<container class="client_object_viewer_selector_panel" id="cos1" file="team/team training selector panel" default_width="-1" minimum_width="300" priority="1" >
+				<integer id="default_widget" value="CTTP" />
+			</container>
+
+		</container>
+
+		<container class="main_box" id="SUBP" hidden="true" navigation_container="true">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<widget class="text" id="noTi" alignment="centre">
+				<translation id="text" translation_id="241285" type="use" value="Squad end of season break[COMMENT: END_OF_SEASON_HOLIDAY_NEWS; players begin post-season holiday; headline]" />
+			</widget>
+		</container>
+	</container>
+</panel>

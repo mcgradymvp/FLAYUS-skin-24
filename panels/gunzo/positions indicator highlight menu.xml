@@ -1,0 +1,39 @@
+<!-- A specialised version of "modal table menu" used on the positions indicator panel to change the highlighting mode. Use with table popup button  -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" apply_to_children="true" />
+
+	<container class="standard_popup_box" id="ppcn" width="340">
+		<attachment_group class="vertical_arrange_autosize" horizontal_inset="6" vertical_offset="6" vertical_gap="10" />
+
+		<!-- Table of options -->
+		<widget class="table" id="tabl" layout="34,-1, 20" mode="fill_rows,select_rows,dont_allow_click_unselect_single" auto_size="vertical" fixed_size_rows="false" row_height="30" row_spacing="2" wants_mouse_events="false">
+
+			<list id="column_table_properties">
+				<!-- Radio buttons-->
+				<record id="chks" index="0" top="2">
+					<record id="widget_info" class="radio_button" auto_size="vertical" select_event="high" alignment="left, centre_y"/>
+				</record>
+				<!-- Text -->
+				<record id="labl" index="1">
+					<record id="widget_info" class="text" auto_size="none" alignment="left, centre_y"/>
+				</record>
+				<!-- Submenu arrow-->
+				<record id="SubM" index="2" top="3" bottom="3"/>
+			</list>
+		</widget>
+
+		<!-- Attributes highlighting key-->
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_offset="35" horizontal_gap="10" vertical_inset="0" />
+
+			<widget class="icon_button" icon="icons/16px/circle" auto_size="all" show_button_appearance="false" colour="text" font="text">
+				<record id="primary_icon_properties" red_replacement="required attribute" />
+				<translation id="text" translation_id="383533" type="use" value="Key[COMMENT: FR 10661; player overview positions panel; legend showing the colours of highlighting used on a player's attributes; this label identified the colour used for the most important attirbutes]" />
+			</widget>
+			<widget class="icon_button" icon="icons/16px/circle" auto_size="all" show_button_appearance="false" colour="text" font="text">
+				<record id="primary_icon_properties" red_replacement="preferred attribute" />
+				<translation id="text" translation_id="383610" type="use" value="Preferable[COMMENT: FR 10661; player overview positions panel; legend showing the colours of highlighting used on a player's attributes; this label identified the colour used for the attributes that are good to have but not vital]" />
+			</widget>
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,95 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+ 
+  <!-- position icons at centre of this panel minus 4 to cater for panel below -->
+  <integer id="icof" value="10"/>
+
+   <list id="bar_colour">
+    <!--first half-->
+    <record id="1">
+      <colour id="colour" name="match time slider"/>
+    </record>
+    <!--second half-->
+    <record id="3">
+      <colour id="colour" name="match time slider"/>
+    </record>
+    <!--first half ET-->
+    <record id="5">
+      <colour id="colour" name="match time slider added time"/>
+    </record>
+    <!--second half ET-->
+    <record id="7">
+      <colour id="colour" name="match time slider added time"/>
+    </record>
+    <!--penalties-->
+    <record id="8">
+      <colour id="colour" name="match time slider penalties"/>
+    </record>
+  </list>
+
+  <!-- sets the colour of the highlight segments on the stacked bar chart -->
+  <list id="bar_highlight_colour">
+    <!--first half-->
+    <record id="1">
+      <colour id="colour" name="match time slider highlight"/>
+    </record>
+    <!--second half-->
+    <record id="3">
+      <colour id="colour" name="match time slider highlight"/>
+    </record>
+    <!--first half ET-->
+    <record id="5">
+      <colour id="colour" name="match time slider added time highlight"/>
+    </record>
+    <!--second half ET-->
+    <record id="7">
+      <colour id="colour" name="match time slider added time highlight"/>
+    </record>
+    <!--penalties-->
+    <record id="8">
+      <colour id="colour" name="match time slider penalties highlight"/>
+    </record>
+  </list>
+
+  <!-- match progress bar chart -->
+  <widget class="horizontal_stacked_bar_chart" id="bgbc" usts="false" appearance="charts/bar/horizontal/custom/match time/progress" animation_file="none">
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="13"/>
+  </widget>
+
+  <!--slider bar chart for generic events-->
+  <widget class="horizontal_stacked_bar_chart" id="mtsG" usts="false" animation_file="none">
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="23,0,23,0"/>
+  </widget>
+
+  <!--slider bar chart for home events-->
+  <widget class="horizontal_stacked_bar_chart" id="mtsH" usts="false" animation_file="none">
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="15,0,23,0"/>
+  </widget>
+
+  <!--slider bar chart for away events-->
+  <widget class="horizontal_stacked_bar_chart" id="mtsA" usts="false" animation_file="none">
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="23,0,15,0"/>
+  </widget>
+
+  <!-- slider -->
+  <widget class="slider_horizontal" id="mtss">
+    <boolean id="draw_notches" value="yes"/>
+    <integer id="notch_frequency" value="0"/>
+    <boolean id="show_current_notch_text_only" value="false"/>
+    <boolean id="show_notch_text" value="true"/>
+    <integer id="ntlg" value="0"/>
+    <boolean id="shbg" value="true"/>
+    <symbol id="notch_text_colour" value="faded text"/>
+    <boolean id="limit_thumb_pos_to_centre" value="true"/>
+    <boolean id="limit_click_to_notch" value="false"/>
+    <boolean id="dont_use_click_offset" value="true"/>
+    <!-- Disable animations to improve performance on low-end hardware -->
+    <boolean id="animate_set_value" value="true"/>
+    
+    <flags id="changed_event" value="dggd"/>
+    <flags id="final_changed_event" value="drgf"/>
+
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+  </widget>
+
+</panel>

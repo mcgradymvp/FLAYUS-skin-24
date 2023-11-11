@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+  <real id="segment_count" value="6" />
+  <boolean id="show_inaccurate_category" value="true" />
+
+  <!-- Scale the polygon to fit the widget and draw it in code -->
+  <boolean id="scale_picture" value="true" />
+  <!-- First layer colour-->
+  <record id="line_style">
+    <colour id="colour" name="fg" />
+    <real id="width" value="3" />
+  </record>
+  <!-- Second layer colour-->
+  <record id="second_colour">
+    <colour id="colour" name="fg accent" />
+    <real id="width" value="3" />
+  </record>
+  <!-- Radial lines dividing each segment -->
+  <record id="segment_divider_line_props">
+    <colour id="colour" red="100" green="100" blue="60" alpha="10" />
+    <real id="width" value="1.5" />
+  </record>
+  <!-- Style of the line around the edge of the polygon -->
+  <record id="polygon_edge_line_props">
+    <colour id="colour" red="40" green="160" blue="200" alpha="160" />
+    <real id="width" value="0.8" />
+  </record>
+  <!-- Colours (and number) of the concentric polygon rings -->
+  <list id="ring_colours">
+    <colour name="bg range1"/>
+    <colour name="bg range8"/>
+    <colour name="bg range10"/>
+    <colour name="bg range15"/>
+    <colour name="bg range20"/>
+  </list>
+  
+  
+  <list id="items">
+    <!-- layers: only one -->
+    <list>
+      <record id="item">
+      <translation id="name" translation_id="316981" type="use" value="Shot Stopping[COMMENT: player profile, overview panel polygon category title]" />
+          <real id="max_value" value="20" />
+        <integer id="angle" value="330" />
+        <colour id="colour" name="text" />
+        <flags id="standard_spec" value="text,small" />
+
+        <list id="attributes">
+          <integer value="Pooo" />
+          <!-- one on ones -->
+          <integer value="Pref" />
+          <!-- reflexes -->
+        </list>
+      </record>
+
+      <record id="item">
+        <translation id="name" translation_id="285375" type="use" value="Physical[COMMENT: player profile, overview panel polygon category title]" />
+         <real id="max_value" value="20" />
+        <integer id="angle" value="30" />
+        <colour id="colour" name="text" />
+        <flags id="standard_spec" value="text,small" />
+
+        <list id="attributes">
+          <integer value="Pstr" />
+          <!-- strength -->
+          <integer value="Pagi" />
+          <!-- agility -->
+          <integer value="Pbal" />
+          <!-- balance -->
+       
+        </list>
+      </record>
+
+	     <record id="item">
+        <translation id="name" translation_id="247512" type="use" value="Distribution[comment - Distribution]" />
+        <!-- TODO: text lock: can't add proper comment yet -->
+        <real id="max_value" value="20" />
+        <integer id="angle" value="90" />
+        <colour id="colour" name="text" />
+        <flags id="standard_spec" value="text,small" />
+
+        <list id="attributes">
+          <integer value="Pkic" />
+          <!-- kicking -->
+          <integer value="Pthr" />
+          <!-- throwing -->
+        </list>
+      </record>
+ 
+
+      <record id="item">
+        <translation id="name" translation_id="227791" type="use" value="Communication" />
+        <!-- TODO: text lock: can't add comment here yet -->
+        <real id="max_value" value="20" />
+        <integer id="angle" value="150" />
+        <colour id="colour" name="text" />
+        <flags id="standard_spec" value="text,small" />
+
+        <list id="attributes">
+          <integer value="Pcoa" />
+          <!-- command of area -->
+          <integer value="Pcom" />
+          <!-- communication -->
+        </list>
+      </record>
+
+
+      <record id="item">
+         <translation id="name" translation_id="285380" type="use" value="Aerial[COMMENT: player profile, overview panel polygon category title]" />
+       <real id="max_value" value="20" />
+        <integer id="angle" value="210" />
+        <colour id="colour" name="text" />
+        <flags id="standard_spec" value="text,small" />
+
+        <list id="attributes">
+          <integer value="Paab" />
+          <!-- aerial reach -->
+          <integer value="Pttp" />
+          <!-- tendency to punch -->
+          <integer value="Phan" />
+          <!-- handling -->
+        </list>
+      </record>
+
+      <record id="item">
+       <translation id="name" translation_id="285381" type="use" value="Mental[COMMENT: player profile, overview panel polygon category title]" />
+          <real id="max_value" value="20" />
+        <integer id="angle" value="270" />
+        <colour id="colour" name="text" />
+        <flags id="standard_spec" value="text,small" />
+
+        <list id="attributes">
+          <integer value="Pdec" />
+          <!-- decisions -->
+          <integer value="Ptwr" />
+          <!-- teamwork -->
+          <integer value="Pant" />
+          <!-- anticipation-->
+          <integer value="Pbra" />
+          <!-- bravery -->
+          <integer value="Pdet" />
+          <!-- determination -->
+          <integer value="Pcnt" />
+          <!-- concentration -->
+        </list>
+      </record>
+   
+    </list>
+  </list>
+  <!-- goalkeeper analyser panel -->
+</panel>

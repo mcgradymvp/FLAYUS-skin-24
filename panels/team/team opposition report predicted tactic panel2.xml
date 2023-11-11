@@ -1,0 +1,16 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+   <container>
+     <layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0" />
+               <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+        
+        <widget class="pitch_with_tactics" id="otpc" pitch_vertical_padding="20" pitch_alignment="centre, can_scale" vertical="true" player_icon_file="tactics/tactics icon opposition predicted team1" icon_flags="show_name,show_number,show_role_duty_labels,dont_colour_names,dont_fade_icons,show_preview_info_popup" pitch_draw_grass="false">
+					<real id="maximum_player_size" value="0.20"/>
+				</widget>
+		</container>
+		
+	</container>			
+</panel>

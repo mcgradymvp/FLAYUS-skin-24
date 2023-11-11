@@ -1,0 +1,11 @@
+﻿<panel appearance="boxes/custom/transfer deadline day/logo alternate/paper">
+    <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="26,-1" horizontal_gap="12" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+    <!-- this widget needs the "mode" property to be set when added to a panel -->
+    <!-- mode="0" - Full layout, "Transfer Deadline Day" string displayed -->
+    <!-- mode="1" - Condensed layout,  "Deadline Day" string displayed -->
+    <!-- mode="2" - Full layout, "Transfer Window Closed" string displayed -->
+	<widget class="picture" id="tsci" file="icons/26px/transfer" auto_size="vertical" image_alignment="centre_x, centre_y" height="26" red_replacement="deadline day body text"/>
+    <widget class="text" id="DDft" auto_size="vertical" alignment="left, centre_y" multiline="true" font="title" size="xlarge" colour="text"/>
+</panel>

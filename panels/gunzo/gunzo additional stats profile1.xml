@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+ 
+
+  <widget class="label" id="nost" alignment="centre" size="11" hidden="true">
+	  <translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+  </widget>
+
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	 
+        <!--bottom section-->
+        <container class="bordered_box" appearance="boxes/bordered/standard/paper1" red_replacement="gzc2">
+          <layout class="arrange_vertical_attachment" layout="25,-1" offset="0" gap="1" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+          <container>
+            <layout class="arrange_horizontal_attachment" layout="140,-1" offset="0" gap="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+            <widget class="text" font="title" size="11" alignment="centre_y,right" colour="gzk">
+              <translation id="text" translation_id="382745" type="use" value="Per 90 Minutes[COMMENT: section title; displayed stats that the units are based per 90 minutes]" />
+            </widget>
+
+            <widget class="text" id="tmPl" size="10" alignment="centre_y, left" colour="faded text" />
+          </container>
+          
+          <container>
+            <layout class="arrange_horizontal_attachment" layout="120,115,120" offset="0" gap="3" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+            <!--left - bottom section-->
+            <container>
+              <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="2" />
+              <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+              <!--Dirbbles Made-->
+              <container id="drbV" file="gunzo/gunzo additional stats item2" />
+
+              <!--Dirbbles Made per 90-->
+              <container id="dr9V" file="gunzo/gunzo additional stats item2" />
+
+            </container>
+            <!--Middle - bottom section-->
+            <container>
+              <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="2" />
+              <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+              <!--Fouls Against-->
+              <container id="fouV" file="gunzo/gunzo additional stats item2" />
+
+              <!--Fouls Against per 90-->
+              <container id="fo9V" file="gunzo/gunzo additional stats item2" />
+
+            </container>
+            <!--Right - bottom section-->
+            <container>
+              <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="2" />
+              <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+              <!--Fouls-->
+              <container id="FouV" file="gunzo/gunzo additional stats item2" />
+              <!--Per 90 Minutes-->
+              <container id="Fo9V" file="gunzo/gunzo additional stats item2" />
+
+            </container>
+          </container>
+          
+        </container>
+		  
+	  
+        </container>
+ 
+ 
+
+</panel>

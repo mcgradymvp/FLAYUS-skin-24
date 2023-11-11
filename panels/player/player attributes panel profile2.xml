@@ -1,0 +1,268 @@
+<panel>
+	<layout class="arrange_horizontal_attachment" layout="-3, -1" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+	<flags id="required_attribute_row_appearance" value="tables/custom/attributes/required/row"/>
+	<flags id="preferred_attribute_row_appearance" value="tables/custom/attributes/preferred/row"/>
+	<flags id="not_important_attribute_row_appearance" value="tables/standard/row/normal/row"/>
+
+	<!-- Table properties to use for all attribute tables -->
+	<record id="table_properties" mode="fill_rows, stripe_rows, printable" layout="-1, 15, 45, 40, 30" row_height="20" row_spacing="1" default_sort_column="name">
+		<list id="column_table_properties">
+			<!-- Attribute name -->
+			<record index="0" id="name" left="8" top="4">
+				<record id="widget_info" class="text" alignment="left,centre_y" multiline="false"/>
+			</record>
+			<!-- Attribute training improvement offset -->
+			<record index="1" id="offs" sort_disabled="true">
+				<record id="widget_info" class="training_improvement" />
+			</record>
+			<!-- Attribute value -->
+			<record index="2" id="val " sort_disabled="true" column_alignment="centre" right="8">
+				<record id="widget_info" class="attribute_label" font="gz_attribute" size="12" alignment="centre_x, centre_y" style="bold" use_attribute_colour_as_bg="false" appearance="boxes/custom/attributes/paper" colour="white"/>
+			</record>
+			<!-- Attribute value as a bar -->
+			<record index="3" id="bar " sort_disabled="true">
+				<record id="widget_info" class="attribute_bar" />
+			</record>
+			<!-- Attribute edit widget -->
+			<record index="4" id="edit" sort_disabled="true">
+				<record id="widget_info" class="editable_client_object_property_panel" />
+			</record>
+		</list>
+	</record>
+
+	<container>
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<!-- Technical Table -->
+		<widget class="table" id="pltt" layout="-1">
+		</widget>
+		<!-- Goalkeeping Table -->
+		<widget class="table" id="plgk" layout="-1">
+		</widget>
+		<!-- Mental Table -->
+		<widget class="table" id="plmt" layout="-1">
+		</widget>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<!-- Physical Table -->
+			<widget class="table" id="plpt" layout="-1" auto_size="vertical">
+			</widget>
+
+				<!-- Separator -->
+				<widget class="horizontal_divider" />
+			
+     		<container>
+				<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<!-- Additional attributes table -->
+				<container class="client_object_viewer_xml_panel" id="attT">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+					<widget class="table" layout="-1, -1" mode="fill_rows, printable" row_height="31" row_spacing="0">
+						<list id="column_display_properties">
+							<record index="0" left="7" sort_disabled="true"/>
+							<record index="1" right="7" sort_disabled="true"/>
+						</list>
+
+						<!-- Height-->
+						<widget class="label" row="0" column="0" column_span="2" font="gz_title" colour="gzk" size="10">
+							<record id="object_property" get_property="Phei" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="Phei" row="0" column="1" font="gz_title" colour="gzk" size="10">
+							<record id="object_property" get_property="Phei"/>
+							<record id="widget_properties" alignment="right, centre_y"/>
+						</widget>
+						<!-- Weight-->
+						<widget class="label" row="1" column="0" column_span="2" font="gz_title" colour="gzk" size="10">
+							<record id="object_property" get_property="Pwei" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="Pwei" row="1" column="1" font="gz_title" colour="gzk" size="10">
+							<record id="object_property" get_property="Pwei"/>
+							<record id="widget_properties" alignment="right, centre_y" />
+						</widget>
+						<!-- Condition -->
+						<widget class="label" row="2" column="0" font="gz_title" colour="gzk" size="10">
+							<record id="object_property" get_property="Pcon" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="conv" row="2" column="1" column_span="2" font="gz_title" colour="gzk" size="10">
+							<record id="widget_info" class="condition_label" alignment="right, centre_y" ivih="false"/>
+							<record id="widget_properties" alignment="right, centre_y"/>
+							<record id="object_property" get_property="Pcon"/>
+						</widget>
+						<!-- Fitness -->
+						<widget class="label" row="3" column="0" font="gz_title" colour="gzk" size="10">
+							<record id="object_property" get_property="Pfit" name="true"/>
+						</widget>
+						<widget class="editable_client_object_property_panel" id="fitv" row="3" column="1" column_span="2" font="gz_title" colour="gzk" size="10">
+							<record id="widget_info" class="condition_label" alignment="right, centre_y" mode="1" ivih="false"/>
+							<record id="widget_properties" alignment="right, centre_y"/>
+							<record id="object_property" get_property="Pfit"/>
+						</widget>
+
+						<!--morale-->
+						<widget class="editable_client_object_property_panel" id="mora" row="4" column="0" colour="gzk" font="gz_title" alignment="left,centre_y,can_scale" should_recolour="true">
+							<record id="widget_info" class="morale_label"/>
+							<record id="object_property">
+								<integer id="get_property" value="Pmor" />
+							</record>
+						</widget>	
+
+						<!-- Squad Status -->
+						<widget class="squad_status_label" id="sqst" col="1" row="4" alignment="right,centre_y,can_scale" style="semi_bold" font="gz_title" colour="accent" size="10">
+							<record id="object_property">
+								<integer id="get_property" value="Pccs" />
+							</record>
+						</widget>	
+
+						<!--RCA-->
+						<widget class="text" row="5" column="0" style="semi_bold" alignment="left,centre_y,can_scale">
+							<string id="text" value="RCA"/>
+							<translation id="hint" type="use" value="Recommended Current Ability : RCA는 선수 능력치의 총합이라 생각하면 된다. 재분배가 이뤄지는 시기에 RCA는 CA에 수렴하게 된다. 이때, 능력치의 변동이 생긴다." />
+						</widget>
+						<widget class="label" id="rcav" row="5" column="1" alignment="centre" style="semi_bold" colour="accent">
+							<record id="object_property" get_property="KRCA"/>
+						</widget>
+
+						<!--CA-->
+						<widget class="label" row="6" column="0" style="semi_bold" alignment="left,centre_y,can_scale">
+							<string id="text" value="CA"/>
+						</widget>
+						<widget class="label" id="cavo" row="6" column="1" alignment="centre" style="semi_bold" colour="accent">
+							<record id="object_property" get_property="PCAB"/>
+						</widget>
+
+						<!--PA-->
+						<widget class="label" row="7" column="0" style="semi_bold" alignment="left,centre_y,can_scale">
+							<string id="text" value="PA"/>
+						</widget>
+						<widget class="label" id="pavo" row="7" column="1" alignment="centre" style="semi_bold" colour="accent">
+							<record id="object_property" get_property="PPAB"/>
+						</widget>
+
+						<!--BLOG-->
+						<widget class="url_text" col="0" row="8" column_span="2" alignment="centre_x,centre_y,can_scale" auto_size="all" spec="text"  style="semi_bold" size="11">
+							<translation id="hint" type="use" value="제작자 블로그"/>
+							<flags id="text" value="fmgunzo.tistory.com" />
+						</widget>
+
+
+						<!--adaptability-->
+						<widget class="label" row="9" column="0" style="semi_bold" alignment="left,centre_y,can_scale">
+							<translation id="text" translation_id="227943" type="use" value="Adaptability" />
+						</widget>
+						<widget class="attribute_label" id="Pada" row="9" column="1" alignment="centre" style="semi_bold">
+							<record id="object_property" get_property="Pada"/>
+						</widget>
+
+						<!--ambition-->
+						<widget class="label" row="10" col="0" style="semi_bold" alignment="left,centre_y,can_scale">
+							<translation id="text" translation_id="293412" type="use" value="Ambition" />
+						</widget>		
+						<widget class="attribute_label" id="Pamb" row="10" column="1" alignment="centre" style="semi_bold" >
+							<record id="object_property" get_property="Pamb"/>
+						</widget>
+
+						<!--loyalty-->
+						<widget class="label" row="11" col="0" style="semi_bold" alignment="left,centre_y,can_scale">
+							<translation id="text" translation_id="293414" type="use" value="Loyalty" />
+						</widget>		
+						<widget class="attribute_label" id="Ploy" row="11" column="1" alignment="centre" style="semi_bold" >
+							<record id="object_property" get_property="Ploy"/>
+						</widget>
+
+						<!--pressure-->
+						<widget class="label" row="12" col="0" style="semi_bold" alignment="left,centre_y,can_scale">
+							<translation id="text" translation_id="293329" type="use" value="Pressure" />
+						</widget>		
+						<widget class="attribute_label" id="Ppre" row="12" column="1" alignment="centre" style="semi_bold" >
+							<record id="object_property" get_property="Ppre"/>
+						</widget>
+
+						<!--professional-->
+						<widget class="label" row="13" col="0" style="semi_bold" alignment="left,centre_y,can_scale">
+							<translation id="text" translation_id="293415" type="use" value="Professionalism" /> 
+						</widget>	
+						<widget class="attribute_label" id="Ppro" row="13" column="1" alignment="centre" style="semi_bold" >
+							<record id="object_property" get_property="Ppro"/>
+						</widget>
+
+						<!--sportmanship-->
+						<widget class="label" row="14" col="0" style="semi_bold" alignment="left,centre_y,can_scale">
+							<translation id="text" translation_id="293416" type="use" value="Sportsmanship" />
+						</widget>
+						<widget class="attribute_label" id="Pspo" row="14" column="1" alignment="centre" style="semi_bold" >
+							<record id="object_property" get_property="Pspo"/>
+						</widget>
+
+						<!--temperament-->
+						<widget class="label" row="15" col="0" style="semi_bold" alignment="left,centre_y,can_scale">
+							<translation id="text" translation_id="349110" type="use" value="Temperament[COMMENT: how good a person is at keeping their temper]" />
+						</widget>
+						<widget class="attribute_label" id="Ptem" row="15" column="1" alignment="centre" style="semi_bold" >
+							<record id="object_property" get_property="Ptem"/>
+						</widget>
+
+						<!--controversy-->
+						<widget class="label" row="16" col="0" style="semi_bold" alignment="left,centre_y,can_scale">
+							<translation id="text" translation_id="293413" type="use" value="Controversy" />
+						</widget>
+						<widget class="attribute_label" id="Pcvy" row="16" column="1" alignment="centre" style="semi_bold" >
+							<record id="object_property" get_property="Pcvy"/>
+						</widget>
+
+						<!--consistency-->
+						<widget class="label" row="17" col="0" style="semi_bold" alignment="left,centre_y,can_scale">
+							<translation id="text" translation_id="361095" type="use" value="Cons[COMMENT: column heading; short for Consistency]" />
+						</widget>
+						<widget class="attribute_label" id="PCON" row="17" column="1" alignment="centre" style="semi_bold">
+							<record id="object_property" get_property="PCON"/>
+						</widget>
+
+						<!--dirtiness-->
+						<widget class="label" row="18" col="0" style="semi_bold" alignment="left,centre_y,can_scale">
+							<translation id="text" translation_id="230007" type="use" value="Dirtiness" />
+						</widget>
+						<widget class="attribute_label" id="Pdir" row="18" column="1" alignment="centre" style="semi_bold">
+							<record id="object_property" get_property="Pdir"/>
+						</widget>
+
+						<!--important-->
+						<widget class="label" row="19" col="0" style="semi_bold" alignment="left,centre_y,can_scale">
+							<translation id="text" translation_id="230008" type="use" value="Important Matches" />
+						</widget>
+						<widget class="attribute_label" id="Pimp" row="19" column="1" alignment="centre" style="semi_bold">
+							<record id="object_property" get_property="Pimp"/>
+						</widget>
+
+						<!--injury-->
+						<widget class="label" row="20" col="0" style="semi_bold" alignment="left,centre_y,can_scale">
+							<translation id="text" translation_id="230009" type="use" value="Injury Proneness" />
+						</widget>
+						<widget class="attribute_label" id="Pipr" row="20" column="1" alignment="centre" style="semi_bold">
+							<record id="object_property" get_property="Pipr"/>
+						</widget>
+
+						<!--Versatility-->
+						<widget class="label" row="21" col="0" style="semi_bold" alignment="left,centre_y,can_scale">
+							<translation id="text" translation_id="230011" type="use" value="Versatility" />
+						</widget>
+						<widget class="attribute_label" id="Pver" row="21" column="1" alignment="centre" style="semi_bold">
+							<record id="object_property" get_property="Pver"/>
+						</widget>	
+					</widget>
+
+				</container>
+			</container>
+		</container>
+	</container>
+
+	<!-- More attribute stuff-->
+	<container class="client_object_viewer_xml_panel" id="atT2" file="player/player additional attributes panel"/>
+</panel>

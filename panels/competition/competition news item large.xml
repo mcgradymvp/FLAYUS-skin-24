@@ -1,0 +1,51 @@
+<!-- NOTE: The property 'usoc' used on elements tells the panel to recolour them based on object colours -->
+<panel>
+  <layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+  <container usoc="true">
+    <layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="8" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+    <attachment class="hide_empty_container_attachment"/>
+
+    <container id="wcon">
+      <layout class="arrange_horizontal_attachment" layout="170,2,-1" offset="12" gap="6"/>
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+      <container >
+        <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+        <!-- News image -->
+        <container id="CNdi" height="105" >
+          <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+        </container>
+      </container>
+      
+      <widget class="picture" file="dividers/standard/vertical/line" scale_picture="false" colour="black" width="2"/>
+
+      <!-- News item -->
+      <container>
+        <layout class="arrange_vertical_attachment" alignment="middle,extend" offset="4" gap="4" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="6" />
+      <!-- Main object -->
+        <widget class="text" id="brif" font="fonts/capitals_bold" size="small" alignment="centre" style="bold" multiline="true" auto_size="vertical" background_colour="title"  colour="black"/>
+        <!-- Story title (max 2 lines of text)-->
+        <widget class="text" id="titl" style="bold" size="large" multiline="true" height="36" alignment="left, top" colour="white"/>
+      </container>
+    </container>
+
+    <!-- Related news -->
+    <container height="55">
+      <layout class="arrange_vertical_attachment" alignment="top" offset="5" gap="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="12" />
+      <attachment class="hide_empty_container_attachment" min_value="1"/>
+
+      <widget class="picture" file="dividers/standard/horizontal/line" scale_picture="false" colour="black" height="2"/>
+
+      <!-- Related items, first is match link -->
+      <container class="competition_news_item_panel" file="competition/competition news item title only light text" related_news_index="0" matR="true" height="24"/>
+      <container class="competition_news_item_panel" file="competition/competition news item title only light text" related_news_index="1" height="24"/>
+    </container>
+  </container>
+</panel>

@@ -1,0 +1,65 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box" force_title_borders="true"  id="trtb" >
+
+		<!-- buttons area -->
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<!-- view button -->
+			<widget class="view_menu_popup" id="view" sele="view" save_session_state="true">
+				<list id="items">
+					<record id="0">
+						<translation id="name" translation_id="247183" type="use" value="All" />
+					</record>
+					<record id="1">
+						<translation id="name" translation_id="227741" type="use" value="Competitions" />
+					</record>
+					<record id="2">
+						<translation id="name" translation_id="316690" type="use" value="Finance[COMMENT: team landmarks; embedded menu option to switch view to Financial landmarks achieved]" />
+					</record>
+					<record id="3">
+						<translation id="name" translation_id="316691" type="use" value="Facilities" />
+					</record>
+					<record id="4">
+						<translation id="name" translation_id="242350" type="use" value="Other" />
+					</record>
+				</list>
+
+				<flags id="slct" value="0" />
+			</widget>
+		</container>
+
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!--for landmarks-->
+		<widget class="table" id="tabl" layout="120, -1" mode="fill_rows,stripe_rows keyboard" auto_size_rows="true" fixed_size_rows="false" save_session_state="true" >
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+			<list id="headings">
+				<record alignment="left,centre_y" column="0" colour="text">
+					<translation id="text" translation_id="289998" type="use" value="Date[COMMENT:team screen; history section; heading for history table - date of event]" />
+				</record>
+				<record alignment="left,centre_y" column="1" colour="text">
+					<translation id="text" translation_id="289999" type="use" value="Event[COMMENT:team screen; history section; heading for history table - landmark event]" />
+				</record>
+			</list>
+			<list id="column_table_properties">
+				<record indx="0" left="4" sort_disabled="true" />
+				<record indx="1" sort_disabled="true"  top="3" bottom="3" />
+			</list>
+			<list id="column_widget_properties">
+				<record index="0" alignment="left,centre_y" spec="text" />
+				<record index="1" alignment="left,centre_y" spec="text" colour="selection" />
+			</list>
+		</widget>
+
+		<widget class="text" id="nolm" alignment="left,top" size="large" hidden="true">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="10" />
+			<translation id="text" translation_id="433557" type="use" value="None[COMMENT: no landmark/record available, used to be ID 247333 but some languages need a dedicated string]" />
+		</widget>
+
+	</container>
+
+
+</panel>

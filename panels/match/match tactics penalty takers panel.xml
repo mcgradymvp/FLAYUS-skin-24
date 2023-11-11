@@ -1,0 +1,13 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+
+
+	<widget class="tactics_set_piece_takers_picking_panel" id="tacc" file="match/match pick penalty takers" penalty_takers="true"/>
+
+	<container id="cBco" class="inner_box_no_margin" >
+		<attachment_group class="vertical_arrange_autosize"/>
+
+		<widget class="container" entity_layout_id="at08" id="at08" name="confirm" file="match/match confirm button" auto_size="vertical"/>
+
+	</container>
+</panel>

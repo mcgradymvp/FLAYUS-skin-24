@@ -1,0 +1,237 @@
+<panel>
+	<attachment_group class="horizontal_arrange" horizontal_alignment="right, extend" vertical_alignment="vertical" horizontal_gap="8" />
+
+	<boolean id="should_force_refresh" value="true" />
+
+	<container class="main_box">
+		<attachment_group class="vertical_arrange" vertical_alignment="top, extend" horizontal_alignment="horizontal" vertical_gap="12" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="40, -1, 8, -1, 8 -1" />
+
+			<!-- main club info -->
+			<widget class="object_portrait_picture" id="cClb" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" height="40" width="40" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle, extend" horizontal_alignment="horizontal" />
+
+				<widget class="text" font="title" auto_size="all">
+					<translation id="text" translation_id="251898" type="use" value="Transfer Information[COMMENT: scout report panel box heading]" />
+				</widget>
+
+				<widget class="text" id="ownS" auto_size="vertical" multiline="true" />
+			</container>
+
+			<widget class="spacer" width="8" />
+
+			<!-- MLS info - Team rights owned by & Team drafted by -->
+			<!-- Player rights (MLS) -->
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="40, -1," />
+
+				<widget class="object_portrait_picture" id="rigT" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" height="40" width="40" />
+				<widget class="text" id="rigL" auto_size="vertical" multiline="true" />
+			</container>
+
+			<widget class="spacer" width="8" />
+
+			<!--Drafted by (MLS)-->
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="40, -1," />
+
+				<widget class="object_portrait_picture" id="drfT" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" height="40" width="40" />
+				<widget class="text" id="drfL" auto_size="vertical" multiline="true" />
+			</container>
+		</container>
+
+		<container>
+			<attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="left, extend" horizontal_gap="50" />
+
+			<!-- Player value -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize_all" vertical_alignment="top, extend" />
+
+				<widget class="text" font="label" auto_size="all">
+					<translation id="text" translation_id="538841" type="use" value="Transfer Value[COMMENT: AREA: Transfers; SUB-AREA: Transfer Value; FR-BN: 34410; TONE: Formal; CHARLIMIT: Shortish, column header; REF-ID: 227806; NOTE: displays the player's estimated transfer value in a range]" />
+				</widget>
+				<widget class="transfer_value_label" id="TrVa" font="text" size="medium" style="bold" auto_size="all" alignment="left, centre_y" allow_link_to_transfer_info="false" />
+			</container>
+
+			<!-- Transfer Status -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize_all" vertical_alignment="top" />
+
+				<widget class="text" font="label" auto_size="all">
+					<translation id="text" translation_id="227953" type="use" value="Transfer Status" />
+				</widget>
+
+				<container>
+					<attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="left, extend" />
+
+					<widget class="info_icon_hint_text" id="TStR" height="20" width="20" hidden="true" />
+					<widget class="transfer_status_label" id="TSta" font="text" style="bold" auto_size="all" />
+				</container>
+			</container>
+
+			<!-- Loan Status -->
+			<container id="lssT">
+				<attachment_group class="vertical_arrange_autosize_all" vertical_alignment="top" />
+
+				<widget class="text" font="label" auto_size="all">
+					<translation id="text" translation_id="247489" type="use" value="Loan Status" />
+				</widget>
+
+				<container>
+					<attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="left, extend" />
+
+					<widget class="info_icon_hint_text" id="LStR" height="20" width="20" hidden="true" />
+					<widget class="loan_status_label" id="LSta" font="text" style="bold" auto_size="all" multiline="true" alignment="left, centre_y" />
+				</container>
+			</container>
+		</container>
+
+		<widget class="horizontal_divider" />
+
+		<!-- Squad selection rules -->
+		<container id="rulC" hidden="true">
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="top, extend" horizontal_alignment="horizontal" vertical_gap="4" />
+
+			<widget class="text" font="title" alignment="left, bottom" auto_size="all">
+				<translation id="text" translation_id="350956" type="use" value="Squad Selection Rules[COMMENT: transfer information; title for sub panel showing rules for selection that applicable to the human's team]" />
+			</widget>
+
+			<container id="rulS">
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="top, extend" horizontal_alignment="horizontal" />
+			</container>
+
+			<container class="spacer" height="0" />
+			
+			<widget class="horizontal_divider" />
+		</container>
+
+		<!-- interest table -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top, extend" horizontal_alignment="horizontal" vertical_gap="12" />
+
+			<widget class="text" font="title" alignment="left, bottom" auto_size="all">
+				<translation id="text" translation_id="510402" type="use" value="Interested Clubs[COMMENT: AREA: Player Transfer Information panel; FR-BN: 32754; NOTE: Interested clubs subpanel title]" />
+			</widget>
+
+			<container class="player_transfer_interest_panel" id="Pint" file="player/player transfer interest for status panel" />
+		</container>
+	</container>
+
+	<!-- sidebar -->
+	<container class="main_box" id="StSc" width="380">
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom, extend" horizontal_alignment="horizontal" />
+
+		<container class="scrolling_box">
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="bottom, extend" vertical_offset="0" vertical_gap="8" horizontal_inset="0" />
+
+				<!-- Player interest widgets -->
+				<container id="dclI" class="inner_subtle_box">
+					<attachment_group class="vertical_arrange_autosize" alignment="top, extend" horizontal_alignment="horizontal" horizontal_inset="4" />
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_alignment="top, extend" horizontal_alignment="horizontal" horizontal_inset="4" />
+
+						<widget class="text" id="FbTl" font="title" alignment="left, centre_y" auto_size="all">
+							<translation id="text" translation_id="539642" type="use" value="Agent Feedback[COMMENT: AREA: Transfers; SUB-AREA: Loan Back Offer; FR-BN: 32237; TONE: Formal; CHARLIMIT: Shortish; REF-ID: n/a; NOTE: title for loan back offer news item, the agent's feedback on the player]" />
+						</widget>
+
+						<!-- "compiled by" text -->
+						<widget class="text" id="CmpT" colour="faded text" alignment="left, centre_y" auto_size="vertical" />
+
+						<container class="plain_box" id="intC" appearance="boxes/custom/speech bubble/top/paper" red_replacement="bg">
+							<attachment_group class="vertical_arrange_autosize" vertical_alignment="top, extend" vertical_offset="6" vertical_gap="6" horizontal_inset="4" />
+
+							<!-- Player interest text summary -->
+							<widget class="text" id="intT" auto_size="vertical" multiline="true" />
+
+							<!-- ask player to hurry decision button -->
+							<widget class="player_pending_contract_discussion_panel" id="CoDi" file="player/player pending contract discussion no title panel">
+								<string id="create_if" value="allow_conversations" />
+							</widget>
+							
+							<container>
+								<attachment_group class="vertical_arrange_autosize_all" alignment="top, extend" />
+
+								<!-- Speak to agent buttons (other player) -->
+								<widget class="client_action_icon_button" id="intB" action_id="apaa" icon="icons/16px/speech bubble" appearance="buttons/subtle/normal/button" ignore_top_level_submenus="true" force_display_text="true" auto_size="all">
+									<layout class="stick_to_sides_attachment" alignment="left" />
+									<translation id="text" translation_id="510405" type="use" value="Discuss Interest with Agent[COMMENT: AREA: Player Transfer Information panel; FR-BN: 32754; NOTE: Discuss interest button text]" />
+								</widget>
+
+								<!-- Speak to agent buttons (own player) -->
+								<widget class="client_action_icon_button" id="DiMI" action_id="caoc" icon="icons/16px/speech bubble" appearance="buttons/subtle/normal/button" ignore_top_level_submenus="true" force_display_text="true" auto_size="all">
+									<layout class="stick_to_sides_attachment" alignment="left" />
+									<translation id="text" translation_id="594934" type="use" value="Discuss Generating Market Interest[COMMENT: AREA: Agent Feedback Panel; SUB-AREA: Conversation button; FR-BN: 22941; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: button label to initiate conversation with agent to discuss selling the player]" />
+								</widget>
+							</container>
+						</container>
+
+						<!-- other player transfer demamnds from agent chat -->
+						<container class="plain_box" id="ageF" appearance="boxes/custom/speech bubble/top/paper" red_replacement="FM purple light">
+							<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" vertical_offset="8" horizontal_inset="8" />
+
+							<!--player demands as supplied by agent-->
+							<widget class="player_demands_icon_list" id="PlEx" auto_size="vertical" apd_string_mode="panel" m_standard_text_and_icon_colour="text" m_locked_text_and_icon_colour="text" m_altered_text_and_icon_colour="text">
+								<record id="object_property" get_property="objt" set_property="objt" />
+							</widget>
+						</container>
+
+						<!-- transfer status agent feedback -->
+						<container class="plain_box" id="AFbC" appearance="boxes/custom/speech bubble/top/paper" red_replacement="FM purple light" hidden="true">
+							<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" vertical_offset="0" horizontal_inset="0" />
+							<string id="remove_if" value="distribution_is_ms_store" />
+
+							<!-- feedback widgets added in code -->
+						</container>
+
+						<container class="spacer" height="0" />
+
+						<widget class="horizontal_divider" />
+					</container>
+
+					<container class="spacer" height="2" />
+
+					<!-- own player transfer action buttons -->
+					<container id="OwtB">
+						<layout class="fit_children_attachment" alignment="vertical, extend" />
+						<layout class="arrange_horizontal_attachment" alignment="right" wrap_widgets="true" offset="8" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" />
+
+						<widget class="button" id="HiIn" click_event="HiIn" appearance="buttons/standard/normal/button" auto_size="horizontal">
+							<translation id="text" translation_id="594933" type="use" value="Hire an Intermediary[COMMENT: AREA: Agent Feedback Panel; SUB-AREA: Conversation button; FR-BN: 22941; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: button label to choose an intermediary agent to help sell a player]" />
+						</widget>
+
+						<widget class="offer_to_clubs_button" id="OfCl" auto_size="all"/>
+					</container>
+
+					<!-- other player transfer action buttons -->
+					<container id="OttB">
+						<layout class="fit_children_attachment" alignment="vertical, extend" offset="8" />
+						<layout class="arrange_horizontal_attachment" alignment="right" wrap_widgets="true" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" />
+
+						<!-- add to shortlist -->
+						<widget class="client_action_popup_button" id="asBT" action_id="AtSo" ignore_top_level_submenus="true" force_display_text="true" hide_if_no_actions="true" auto_size="all" />
+
+						<!-- add transfer target -->
+						<widget class="client_action_popup_button" id="atBT" action_id="ApTt" fixed="true" ignore_top_level_submenus="true" force_display_text="true" hide_if_no_actions="true" auto_size="all">
+							<translation id="text" translation_id="336159" type="use" value="Add as Transfer Target[COMMENT: right click menu item for players, Transfer Target is a new style of shortlist, multiple shortlists encouraged to be used]" />
+						</widget>
+
+						<!-- make offer -->
+						<widget class="client_action_icon_button" id="ofBT" action_id="offr" ignore_top_level_submenus="true" force_display_text="true" hide_if_no_actions="true" auto_size="all" controller_button="y_button" />
+					</container>
+				</container>
+
+				<!-- Transfer status widgets if player is controlled by human -->
+				<widget class="set_transfer_status_panel" id="StSt" hidden="true" remove_if="allow_intermediary_agents" />
+				<widget class="set_transfer_status_panel" id="StSt" file="player/set transfer status tabbed panel" hidden="true" create_if="allow_intermediary_agents" />
+			</container>
+		</container>
+	</container>
+</panel>

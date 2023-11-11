@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+
+	<translation id="title" type="new" value="Player Positions Details Panel" />
+	<layout class="arrange_vertical_attachment" alignment="fill" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	 <container class="plain_box" id="ppdt">
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+    <container class="scrolling_box">
+      <container>
+        <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="16" />
+        <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="16"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+        
+		<!-- games played in position table -->
+        <widget class="table" id="gpip" mode="fill_rows, stripe_rows" layout="-4, -1, -1, -1, -1" default_sort_column="club" auto_size="vertical" auto_size_rows="false" fixed_size_rows="true" row_height="24">
+          <list id="headings">
+            <record alignment="left,centre_y">
+              <translation id="text" translation_id="257322" type="use" value="Games Played In Position" />
+            </record>
+            <record alignment="centre,centre_y">
+              <translation id="hint" translation_id="257323" type="use" value="Games played in this position for his club" />
+              <translation id="text" translation_id="227737" type="use" value="Club" />
+            </record>
+            <record alignment="centre,centre_y">
+              <translation id="hint" translation_id="227853" type="use" value="Average rating" />
+              <translation id="text" translation_id="227852" type="use" value="Av Rat[comment - Average rating]" />
+            </record>
+            <record alignment="centre,centre_y">
+              <translation id="hint" translation_id="257325" type="use" value="Games played in this position for his national team" />
+              <translation id="text" translation_id="257324" type="use" value="Int." />
+            </record>
+            <record alignment="centre,centre_y">
+              <translation id="hint" translation_id="227853" type="use" value="Average rating" />
+              <translation id="text" translation_id="227852" type="use" value="Av Rat[comment - Average rating]" />
+            </record>
+          </list>
+
+          <list id="column_properties">
+            <record index="0" alignment="left, centre_y" spec="text" />
+            <record index="1" alignment="centre, centre_y" />
+            <record index="2" alignment="centre, centre_y" />
+            <record index="3" alignment="centre, centre_y" />
+            <record index="4" alignment="centre, centre_y" />
+          </list>
+
+          <list id="column_display_properties">
+            <record indx="0" left="4" id="posi" sort_disabled="true" />
+            <record indx="1" id="club" sort_ascending="false" />
+            <record indx="2" id="cave" sort_ascending="false" />
+            <record indx="3" id="nati" sort_ascending="false" />
+            <record indx="4" id="nave" sort_ascending="false" />
+          </list>
+        </widget>
+		
+		   <!-- Show preferred moves -->
+        <container class="preferred_moves_panel" id="pfmp" />
+      </container>
+    </container>
+  </container>
+</panel>

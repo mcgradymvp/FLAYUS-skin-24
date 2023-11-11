@@ -1,0 +1,511 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container class="scrolling_box">
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="5"/>
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="5"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+            	<!--nickname-->
+			<container height="40" >
+				<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="text" size="20" colour="accent" font="CODE Bold" id="TCnV" mode="1" alignment="centre_x,centre_y,can_scale">
+					<record id="object_property">
+						<integer id="get_property" value="TCnn" />
+					</record>
+				</widget>
+			</container>
+
+			<!-- spacer -->
+			<widget class="picture" file="dividers/standard/horizontal/line" height="2" />		
+
+			<container class="bordered_box" appearance="" height="50" priority="3">
+				<layout class="arrange_horizontal_attachment" layout="-1, -1, -1,-1" alignment="fill" offset="0" gap="2"/>
+				<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true"/>
+				<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="0"/>
+
+				<!--professional status-->
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2"/>
+					<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="professional_status_label" id="pros" spec="text" size="11" alignment="centre_x,bottom" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="Cprs" />
+						</record>
+					</widget>
+					<widget class="label" id="proL" spec="text,small" colour="faded text" alignment="centre_x,top">
+						<record id="object_property">
+							<integer id="get_property" value="Cprs" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+				</container>
+
+				<!--media prediction-->
+				<container id="MEDI">
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2"/>
+					<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="media_expectation_text" id="CmeV" spec="text" size="13" font="gzmain" colour="gzc1" alignment="centre_x,bottom" auto_size="vertical">
+						<boolean id="NumF" value="0" />
+						<record id="object_property">
+							<integer id="get_property" value="CmeD" />
+						</record>
+					</widget>
+					<widget class="label" id="CmeL" spec="text,small" colour="faded text" alignment="centre_x,top">
+						<record id="object_property">
+							<integer id="get_property" value="CmeD" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+				</container> 	
+
+				<!--league position-->
+				<container >
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2"/>
+					<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="number_label" id="TpoN" spec="text" size="13" font="gzmain" colour="accent" alignment="centre_x,bottom" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="TpoN" />
+						</record>
+					</widget>
+					<widget class="label" id="Tpot" spec="text,small" colour="faded text" alignment="centre_x,top">
+						<record id="object_property">
+							<integer id="get_property" value="Tpos" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+				</container> 				
+
+				<!--year founded-->
+				<container>
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2" />
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="dashed_number_label" id="CyfV" spec="text" size="11" alignment="centre_x,bottom" auto_size="vertical">
+						<boolean id="NumF" value="0" />
+						<record id="object_property">
+							<integer id="get_property" value="Cyfn" />
+						</record>
+					</widget>
+					<widget class="label" id="CyfL" spec="text,small" colour="faded text" alignment="centre_x,top">
+						<record id="object_property">
+							<integer id="get_property" value="Cyfn" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+				</container> 
+			</container>
+
+			<!-- spacer -->
+			<widget class="picture" file="dividers/standard/horizontal/line" height="2" />
+
+			<container height="170">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<!--logo-->
+				<widget class="object_portrait_picture" id="pict" height="80">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="20,0,30,0"/>
+
+					<boolean id="scale_picture" value="true" />
+					<boolean id="keep_aspect_ratio" value="true" />
+					<flags id="image_alignment" value="centre" />
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="5"/>
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="5"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<container class="bordered_box" appearance="" height="50" priority="4">
+						<layout class="arrange_horizontal_attachment" layout="-1,50,-1" alignment="fill" offset="0" gap="2"/>
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true"/>
+						<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="0"/>
+
+						<!--estimated value-->
+						<container>
+							<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2"/>
+							<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="2"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+							<widget class="cash_cell" format="[%cash#1-short-roundtiny]" id="CovV" spec="text" size="11" alignment="centre_x,bottom" auto_size="vertical">
+								<record id="object_property">
+									<integer id="get_property" value="Covv" />
+								</record>
+							</widget>
+							<widget class="label" id="CovL" spec="text,small" colour="faded text" alignment="centre_x,top">
+								<record id="object_property">
+									<integer id="get_property" value="Covv" />
+									<boolean id="name" value="true" />
+								</record>
+							</widget>
+						</container>			
+
+						<container/>
+						<!--continental competition-->
+						<container>
+							<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2"/>
+							<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="2"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+							<widget class="comp_button" id="ccon" spec="text" size="11" alignment="centre_x,bottom,can_scale" auto_size="vertical" icon_enabled="false">
+								<record id="object_property">
+									<integer id="get_property" value="Ccon" />
+								</record>
+							</widget>
+							<widget class="label" id="ccoL" spec="text,small" colour="faded text" alignment="centre_x,top">
+								<record id="object_property">
+									<integer id="get_property" value="Ccon" />
+									<boolean id="name" value="true" />
+								</record>
+							</widget>
+						</container>
+					</container>
+
+					<container class="bordered_box" appearance="" height="60" priority="2">
+						<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+						<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" gap="0" />
+
+						<!--country-->
+						<container>
+							<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2" />
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="object_portrait_picture" id="CnaG" height="60" scale_picture="true" image_alignment="centre">
+								<record id="object_property">
+									<integer id="get_property" value="Cnat" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</widget>
+						</container>
+
+						<container/>
+
+						<!--division-->
+						<container>
+							<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2" />
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+							<widget class="object_portrait_picture" id="lepi" height="60">
+								<boolean id="scale_picture" value="true" />
+								<boolean id="keep_aspect_ratio" value="true" />
+								<flags id="image_alignment" value="centre" />
+								<record id="object_property">
+									<integer id="get_property" value="Cdiv" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</widget>
+						</container>
+					</container>
+
+					<container class="bordered_box" appearance="" height="50" priority="4">
+						<layout class="arrange_horizontal_attachment" layout="-1,50,-1" alignment="fill" offset="0" gap="2"/>
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true"/>
+						<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="0"/>
+
+						<!--finances-->
+						<container>
+							<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2"/>
+							<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="2"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+							<widget class="financial_status_label" spec="text" id="CfiV" size="11" alignment="centre_x,bottom" auto_size="vertical">
+								<record id="object_property">
+									<integer id="get_property" value="Csfs" />
+								</record>
+							</widget>
+
+							<widget class="label" id="CfiL" spec="text,small" colour="faded text" alignment="centre_x,top" auto_size="vertical">
+								<record id="object_property">
+									<integer id="get_property" value="Csfs" />
+									<boolean id="name" value="true" />
+								</record>
+							</widget>
+						</container>
+                       <container/>
+
+						<container>
+							<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2"/>
+							<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="2"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+							<widget class="club_squad_character_label" id="CscV" spec="text" size="11"  alignment="centre_x,bottom,can_scale" auto_size="vertical" >
+								<record id="object_property">
+									<integer id="get_property" value="Csca" />
+								</record>
+							</widget>  
+
+							<widget class="label" id="CscL"  spec="text,small" colour="faded text" alignment="centre_x,top" auto_size="vertical">
+								<record id="object_property">
+									<integer id="get_property" value="Csca" />
+									<boolean id="name" value="true" />
+								</record>
+							</widget>
+
+						</container>
+					</container>
+				</container>
+			</container>	
+
+			<!-- spacer -->
+			<widget class="picture" file="dividers/standard/horizontal/line" height="2" />		
+
+			<container class="bordered_box" appearance="" height="66" priority="5">
+				<layout class="arrange_horizontal_attachment" layout="-6,-7,-6" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" gap="0" />
+
+				<!--youth facilities-->
+				<container id="YOUT">
+					<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="1" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="youth_facilities_stars_label" id="CfcSt" height="20" lrge="false" alignment="centre">
+						<layout class="centre_in_parent_attachment" alignment="horizontal" />
+						<record id="object_property">
+							<integer id="get_property" value="Cfc*" />
+						</record>
+					</widget>
+					<widget class="youth_facilities_description_text" id="TytV" format="1" multiline="false" spec="text" size="11" alignment="centre_x,bottom" mode="1" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="TytS" />
+						</record>
+					</widget>
+					<widget class="label" id="TytL" spec="text,small" colour="faded text" alignment="centre_x,top" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="TytS" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+				</container>
+
+				<!--reputation-->
+				<container id="REPU">
+					<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="1" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="club_reputation_stars_label" id="creS" height="20" alignment="centre">
+						<layout class="centre_in_parent_attachment" alignment="horizontal" />
+						<record id="object_property">
+							<integer id="get_property" value="Csta" />
+						</record>
+					</widget>
+					<widget class="reputation_label" id="CrsV" spec="text" size="11" alignment="centre_x,bottom,can_scale" mode="1" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="Crsc" />
+						</record>
+					</widget>
+					<widget class="label" id="CrsL" spec="text,small" colour="faded text" alignment="centre_x,top" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="Crsc" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+				</container>
+
+				<!--training facilities-->
+				<container id="YOUT">
+					<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="1" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="training_facilities_stars_label" id="CtfSt" height="20" lrge="false" alignment="centre">
+						<layout class="centre_in_parent_attachment" alignment="horizontal" />
+						<record id="object_property">
+							<integer id="get_property" value="Ctf*" />
+						</record>
+					</widget>
+					<widget class="training_facilities_description_text" id="TfcV" format="1" multiline="false" spec="text" size="11" alignment="centre_x,bottom" mode="1" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="TfcS" />
+						</record>
+					</widget>
+					<widget class="label" id="TfcL" spec="text,small" colour="faded text" alignment="centre_x,top" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="TfcS" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+				</container> 
+			</container>	
+
+			<!-- spacer -->
+			<widget class="picture" file="dividers/standard/horizontal/line" height="2" />		
+
+			<container height="40" priority="6">
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--ticket price-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="label" id="CtpL" alignment="centre_x,bottom" spec="text,small" auto_size="vertical" colour="faded text">
+						<record id="object_property">
+							<integer id="get_property" value="Ctpr" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+					<widget class="cash_cell" id="CtpV" spec="text" size="11" alignment="center,top">
+						<record id="object_property">
+							<integer id="get_property" value="Ctpr" />
+						</record>
+					</widget>
+				</container>
+
+				<!--season ticket holders-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					<widget class="label" id="CsTL" alignment="centre_x,bottom" spec="text,small" auto_size="vertical" colour="faded text">
+						<record id="object_property">
+							<integer id="get_property" value="Csth" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+					<widget class="number_label" id="CsTV" spec="text" size="11" alignment="center,top">
+						<record id="object_property">
+							<integer id="get_property" value="Csth" />
+						</record>
+					</widget>
+				</container>
+			</container>
+
+			<container height="40" priority="7">
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--season ticket price-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				
+					<widget class="label" id="CsLp" lignment="centre_x,bottom" spec="text,small" auto_size="vertical" colour="faded text">
+					<layout class="stick_to_sides_attachment" alignment="left" inset="45" />
+					<record id="object_property">
+							<integer id="get_property" value="Cstp" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>			
+
+					<widget class="cash_cell" id="CsVp" spec="text" size="11" alignment="centre_x,top">
+						<record id="object_property">
+							<integer id="get_property" value="Cstp" />
+						</record>
+					</widget>
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="label" id="avaL" alignment="centre_x,bottom" spec="text,small" auto_size="vertical" colour="faded text">
+						<record id="object_property">
+							<integer id="get_property" value="Tava" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+
+					<widget class="dashed_number_label" spec="text" id="avaV" size="11" alignment="centre_x,top">
+						<record id="object_property">
+							<integer id="get_property" value="Tava" />
+						</record>
+					</widget>
+
+				</container>
+			</container>
+
+			<!-- spacer -->
+			<widget class="picture" file="dividers/standard/horizontal/line" height="2" />			
+
+			<!-- FAV PERS -->
+			<container id="FAVP">
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="5"/>
+				<layout class="arrange_vertical_attachment" alignment="vertical" offset="0" gap="3"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<record id="object_property">
+					<integer id="get_property" value="TISN"/>
+					<integer id="set_property" value="hidn"/>
+				</record>
+
+				<widget class="label" id="CfaL" spec="text,small" alignment="centre_x,top" auto_size="vertical" colour="gzc2">
+					<record id="object_property">
+						<integer id="get_property" value="Cfap" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+				<widget class="person_list_text" spec="text" id="CfaV" reason="true" colour="gzk" alignment="centre_x,bottom" size="9" auto_size="vertical">
+					<record id="object_property">
+						<integer id="get_property" value="Cfap" />
+					</record>
+				</widget>	
+			</container>
+
+			<!-- spacer -->
+			<widget class="picture" file="dividers/standard/horizontal/line" height="2" />	
+
+			<!--legends-->
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="5" />
+				<layout class="arrange_vertical_attachment" alignment="vertical" offset="0" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="label" id="TLeL" spec="text,small" alignment="centre_x,top" auto_size="vertical" colour="gzc2">
+					<record id="object_property">
+						<integer id="get_property" value="TLeg" />
+						<boolean id="name" value="true" />
+					</record>
+				</widget>
+				<widget class="person_list_text" spec="text" id="TLeV" reason="false" alignment="centre_x,bottom" colour="gzk" auto_size="vertical">
+					<record id="object_property">
+						<integer id="get_property" value="TLeg" />
+					</record>
+				</widget>
+			</container>
+
+			<!-- spacer -->
+			<widget class="picture" file="dividers/standard/horizontal/line" height="2" />	
+
+			<!--icons-->
+			<container id="ICON">
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="5" />
+				<layout class="arrange_vertical_attachment" alignment="vertical" offset="0" gap="5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<record id="object_property">
+					<integer id="get_property" value="TISN" />
+					<integer id="set_property" value="hidn" />
+				</record>
+
+				<widget class="label" id="CsvL" spec="text,small" alignment="centre_x,top" auto_size="vertical" colour="gzc2">
+					<record id="object_property">
+						<integer id="get_property" value="Csvp" />
+						<boolean id="name" value="true" />
+					</record>
+				</widget>
+				<widget class="person_list_text" spec="text" id="CsvV" reason="false" alignment="centre_x,bottom" colour="gzk" auto_size="vertical">
+					<record id="object_property">
+						<integer id="get_property" value="Csvp" />
+					</record>
+				</widget>
+			</container>	
+		</container>
+	</container>
+</panel>

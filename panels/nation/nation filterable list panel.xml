@@ -1,0 +1,24 @@
+<panel>
+
+  <boolean id="save_session_state" value="true" />
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="inner_titled_box" id="TitL" >
+    <translation id="text" translation_id="234067" type="use" value="Rankings" />
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- buttons area -->
+		<container id="btna" embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_right" />
+			<!-- filter menu -->
+			<widget class="embedded_filter_button" id="plsf" target="TitL" auto_size="all" embed_in_frame="true"/>
+		</container>
+
+    <widget class="client_object_list_table" id="pltb" mode="fill_rows, stripe_rows, printable, keyboard, select_rows">
+      <boolean id="save_session_state" value="true" />
+    </widget>
+
+  </container>
+
+</panel>

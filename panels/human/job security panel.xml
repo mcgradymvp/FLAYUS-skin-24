@@ -1,0 +1,109 @@
+<panel save_session_state="true">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<widget class="main_box" id="jbsp">
+
+		<translation id="title" translation_id="247319" type="use" value="Job Security" />
+		<!-- embedded buttons -->
+		<container id="btns" height="30" embed_in_frame="true" navigation_container="true">
+			<attachment_group class="title_embedded_panel_right" />
+
+			<!-- filter menu -->
+			<widget class="embedded_filter_button" id="plsf" target="jbsp" auto_size="all" embed_in_frame="true"/>
+		</container>
+        
+
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+        
+        <container>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+        <widget class="table" id="list" save_session_state="true" save_default_state="true" layout="-6, -6, 80, 75, -8, 40, 60, 110, 100" auto_size_rows="true" row_spacing="1" wants_lazy_load="true" navigation_container="true" default_focus="true">
+			<flags id="heading_class" value="column_heading"/>
+			<flags id="mode" value="fill_rows, stripe_rows,keyboard" />
+
+			<record id="default_properties" alignment="left,centre_y" />
+			<integer id="default_sort_column" value="jobs" />
+
+			<list id="column_table_properties">
+				<record>
+					<flags id="id" value="mngr" />
+					<record id="column_heading">
+						<translation id="text" translation_id="247320" type="use" value="Current Manager" />
+						<translation id="hint" translation_id="247321" type="use" value="Current manager of the team[COMMENT: tool-tip heading on job_security panel]" />
+					</record>
+				</record>
+				<record>
+					<flags id="id" value="team" />
+					<record id="column_heading">
+						<translation id="text" translation_id="229408" type="use" value="Team" />
+						<translation id="hint" translation_id="229408" type="use" value="Team" />
+					</record>
+				</record>
+				<record>
+					<flags id="id" value="Csta" />
+					<record id="column_heading">
+						<translation id="text" translation_id="509167" type="use" value="Club Rating[COMMENT: AREA: Job Security; SUB-AREA: Club Info; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: club properties; club's reputation star rating; abbreviated]" />
+						<translation id="hint" translation_id="509168" type="use" value="Club Reputation Rating[COMMENT: AREA: Job Security; SUB-AREA: Club Info; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: club properties; club's reputation star rating]" />
+					</record>
+				</record>
+				<record>
+					<flags id="id" value="natn" />
+					<record id="column_heading">
+						<translation id="text" translation_id="229390" type="use" value="Nation" />
+						<translation id="hint" translation_id="247311" type="use" value="Team's Nation[COMMENT: tool-tip heading on job_security panel]" />
+					</record>
+				</record>
+				<record>
+					<flags id="id" value="divn" />
+					<boolean id="sort_ascending" value="false" />
+					<record id="column_heading">
+						<translation id="text" translation_id="229392" type="use" value="Division" />
+						<translation id="hint" translation_id="247310" type="use" value="Division team currently belongs to[COMMENT: tool-tip heading on job_security panel]" />
+					</record>
+				</record>
+				<record>
+					<flags id="id" value="divp" />
+					<boolean id="sort_ascending" value="true" />
+					<flags id="column_alignment" value="centre" />
+					<record id="column_heading">
+						<translation id="text" translation_id="252893" type="use" value="Position[COMMENT: team division position, title]" />
+						<translation id="hint" translation_id="232109" type="use" value="League Positions" />
+					</record>
+				</record>
+				<record>
+					<flags id="id" value="Tfrm" />
+					<flags id="column_alignment" value="left,centre_y" />
+					<record id="column_heading">
+						<translation id="text" translation_id="308194" type="use" value="Form[COMMENT: team form 5 games, all competitions, short version]" />
+						<translation id="hint" translation_id="283775" type="use" value="Overall Form[COMMENT: team form 5 games, all competitions]" />
+					</record>
+				</record>
+				<record>
+					<flags id="id" value="jobs" />
+					<record id="column_heading">
+						<translation id="text" translation_id="247322" type="use" value="Job Status" />
+						<translation id="hint" translation_id="247323" type="use" value="Current manager's job status[COMMENT: tool-tip heading on job_security panel]" />
+					</record>
+				</record>
+				<record>
+					<flags id="id" value="finc" />
+					<record id="column_heading">
+						<translation id="text" translation_id="229821" type="use" value="Finances" />
+						<translation id="hint" translation_id="229821" type="use" value="Finances" />
+					</record>
+				</record>
+				<record index="7" top="2" bottom="2" />
+			</list>
+
+			<list id="column_widget_properties">
+				<record indx="1" navigation_focus_target="true" />
+				<record indx="2" navigation_focus_target="false" />
+				<record indx="5" spec="text" />
+				<record index="7" alignment="centre" />
+			</list>
+
+		</widget>
+        </container>
+        
+	</widget>
+</panel>

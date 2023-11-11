@@ -1,0 +1,77 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="middle" horizontal_gap="0" horizontal_offset="0"/>
+
+	<colour id="status_in_progress_box_colour" name="fg"/>
+	<colour id="status_passed_box_colour" name="fg range20"/>
+	<colour id="status_failed_box_colour" name="fg range1"/>
+
+	<colour id="status_in_progress_text_icon_colour" name="white"/>
+	<colour id="status_passed_text_icon_colour" name="fg range20"/>
+	<colour id="status_failed_text_icon_colour" name="fg range1"/>
+
+	<string id="status_in_progress_icon" value="none"/>
+	<string id="status_passed_icon" value="icons/16px/thumbs up"/>
+	<string id="status_failed_icon" value="icons/16px/thumbs down"/>
+
+	<colour id="progress_failed_box_colour" name="fg range1"/>
+	<colour id="progress_struggling_box_colour" name="fg range3"/>
+	<colour id="progress_struggling_but_positive_box_colour" name="fg range6"/>
+	<colour id="progress_on_course_but_negative_box_colour" name="fg range14"/>
+	<colour id="progress_on_course_box_colour" name="fg range16"/>
+	<colour id="progress_passed_box_colour" name="fg range20"/>
+	<colour id="progress_not_judging_box_colour" name="white"/>
+	<colour id="progress_not_started_box_colour" name="white"/>
+	<colour id="progress_reserving_judgement_box_colour" name="white"/>
+	<colour id="progress_delighted_box_colour" name="fg range20"/>
+	<colour id="progress_very_pleased_box_colour" name="fg range17"/>
+	<colour id="progress_pleased_box_colour" name="fg range14"/>
+	<colour id="progress_satisfied_box_colour" name="fg blue"/>
+	<colour id="progress_disappointed_box_colour" name="fg range6"/>
+	<colour id="progress_very_disappointed_box_colour" name="fg range4"/>
+	<colour id="progress_devastated_box_colour" name="fg range1"/>
+
+	<colour id="progress_failed_text_icon_colour" name="fg range1"/>
+	<colour id="progress_struggling_text_icon_colour" name="fg range3"/>
+	<colour id="progress_struggling_but_positive_text_icon_colour" name="fg range6"/>
+	<colour id="progress_on_course_but_negative_text_icon_colour" name="fg range14"/>
+	<colour id="progress_on_course_text_icon_colour" name="fg range16"/>
+	<colour id="progress_passed_text_icon_colour" name="fg range20"/>
+	<colour id="progress_not_judging_text_icon_colour" name="white"/>
+	<colour id="progress_not_started_text_icon_colour" name="white"/>
+	<colour id="progress_reserving_judgement_text_icon_colour" name="white"/>
+	<colour id="progress_delighted_text_icon_colour" name="fg range20"/>
+	<colour id="progress_very_pleased_text_icon_colour" name="fg range17"/>
+	<colour id="progress_pleased_text_icon_colour" name="fg range14"/>
+	<colour id="progress_satisfied_text_icon_colour" name="fg blue"/>
+	<colour id="progress_disappointed_text_icon_colour" name="fg range6"/>
+	<colour id="progress_very_disappointed_text_icon_colour" name="fg range4"/>
+	<colour id="progress_devastated_text_icon_colour" name="fg range1"/>
+
+	<string id="progress_failed_icon" value="icons/16px/thumbs down"/>
+	<string id="progress_struggling_icon" value="icons/16px/thumbs down"/>
+	<string id="progress_struggling_but_positive_icon" value="icons/16px/thumbs neutral"/>
+	<string id="progress_on_course_but_negative_icon" value="icons/16px/thumbs neutral"/>
+	<string id="progress_on_course_icon" value="icons/16px/thumbs up"/>
+	<string id="progress_passed_icon" value="icons/16px/thumbs up"/>
+	<string id="progress_not_judging_icon" value="none"/>
+	<string id="progress_not_started_icon" value="none"/>
+	<string id="progress_reserving_judgement_icon" value="none"/>
+	<string id="progress_delighted_icon" value="icons/16px/thumbs up"/>
+	<string id="progress_very_pleased_icon" value="icons/16px/thumbs up"/>
+	<string id="progress_pleased_icon" value="icons/16px/thumbs up"/>
+	<string id="progress_satisfied_icon" value="icons/16px/thumbs neutral"/>
+	<string id="progress_disappointed_icon" value="icons/16px/thumbs down"/>
+	<string id="progress_very_disappointed_icon" value="icons/16px/thumbs down"/>
+	<string id="progress_devastated_icon" value="icons/16px/thumbs down"/>
+
+	<container class="main_subtle_box_no_margin" appearance="boxes/custom/vision/status/paper" id="staw" height="24">
+		<attachment_group class="horizontal_arrange_vertical_centre" horizontal_layout="-1, 16" horizontal_gap="0" horizontal_offset="0"/>
+
+		<container class="horizontal_adaptive_container" inset="0" gap="4" offset="0" height="24" alignment="left, extend">
+			<widget class="picture" id="stic" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" auto_size="horizontal" height="16" default_width="16" minimum_width="16" priority="0"/>
+			<widget class="text" id="stat" auto_size="none" alignment="left, centre_y" colour="text" style="bold" size="small" multiline="false" default_width="80" minimum_width="40" priority="1"/>
+		</container>
+
+		<widget class="button" id="stai" appearance="icons/custom/more/button" width="16" height="16" red_replacement="white" navigation_focus_target="false"/>
+	</container>
+</panel>

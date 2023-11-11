@@ -1,0 +1,37 @@
+<panel>
+
+  <boolean id="save_session_state" value="true" />
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <widget class="client_object_list_table" id="pltb" mode="fill_rows, stripe_rows, printable, store_sort_state, drag_rows, drop_on_rows, show_bullets, select_rows, select_multiple" column_mode="resize_columns, move_columns" auto_size_rows="true" fixed_size_rows="false">
+
+    <boolean id="save_session_state" value="true" />
+    <boolean id="save_default_state" value="true" />
+    <integer id="contextual_handler_column_id" value="Psnm" />
+
+    <!-- default sort by job (primary) then name -->
+    <list id="default_sort_column">     
+      <integer value="PcjN"/>
+    </list>
+
+    <list id="viws">
+      <record id="ctrc">        
+        <record id="view">          
+          <record id="PcjN" auto_hide_priority="1" width="120"/>
+          <!-- short job text -->         
+          <record id="Psnm" auto_hide_priority="2" width="100"/>
+          <!-- person name -->
+          <record id="Pnat" auto_hide_priority="3"/>
+          <!-- nationality -->
+          <record id="NIst" auto_hide_priority="4" width="100"/>       
+          <!-- end date -->
+          <record id="Pced" width="120" auto_hide_priority="5"/>
+        </record>
+      </record>
+
+    </list>
+
+  </widget>
+
+</panel>

@@ -1,0 +1,25 @@
+<panel>
+  <layout class="arrange_horizontal_attachment" alignment="fill" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="1" inset="0" />
+
+<boolean id="should_force_refresh" value="true" />
+
+	<!-- titled box containing pitch-->
+	<widget class="inner_box" id="tlBX" >
+
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+    <!-- the pitch-->
+    <widget	class="pitch_with_tactics" id="pwtc" player_icon_file="tactics/tactics icon preview info panel2" pitch_additional_touchline_pixels_left="0" pitch_additional_touchline_pixels_bottom="0" icon_flags="show_name,use_player_kits_back,show_number,show_extra_details,colour_names_for_team">
+	    <record id="pitch_base_appearance">
+        <string id="condition_perfect" value="none"/>
+      </record>
+      <boolean id="vertical" value="true"/>
+      <flags id="pitch_alignment" value="centre,can_scale" />
+      <integer id="pitch_pattern_opacity" value="0"/>
+      <integer id="pitch_detail_opacity" value="255"/>
+			<boolean id="pitch_dont_draw_indicators" value="true"/>
+			<integer id="pitch_override_icon_size" value="3"/>
+		</widget>
+</widget>
+</panel>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+
+	<layout class="arrange_vertical_attachment" layout="50,30" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+	<!-- No scout report -->
+	<container id="nsrc">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="5" />
+
+		<container id="nocs" height="50">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		
+			<widget class="icon_button" id="sctP" appearance="boxes/bordered/standard/paper1" red_replacement="secondary" font="gz_title" colour="accent" size="9" click_event="sctc" auto_size="horizontal" alignment="centre" height="25">
+				<translation id="text" translation_id="298524" type="use" value="Scouting Assignments[COMMENT: backroom advice, button link]" />
+
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			</widget>
+	<!--explanatory text-->
+			<widget class="text" alignment="centre_x,bottom" auto_size="vertical" size="9" colour="faded text">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+				<translation id="text" translation_id="297209" type="use" value="Scouting Required[COMMENT: shown when the user can't view player info without scouting them first]" />
+			</widget>
+		</container>
+
+		<widget id="nocn" class="label" spec="text,large" size="11" alignment="centre" auto_size="vertical">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		</widget>
+	</container>
+			<!-- recommendation box-->
+		<container class="main_box" id="SMbx" height="30">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,0,0" apply_to_children="true"/>
+
+			<widget class="text" id="SMtx" font="gz_title" size="9" height="12" alignment="centre_x,centre_y,can_scale" colour="gzk" multiline="true"/>
+
+		</container>
+</panel>

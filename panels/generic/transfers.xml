@@ -1,0 +1,248 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top, extend" />
+
+
+	<boolean id="should_force_refresh" value="true" />
+	<boolean id="save_immediate_state" value="true" />
+
+	<container class="main_subtle_box" navigation_container="true">
+
+		<attachment_group class="vertical_arrange_autosize" />
+
+		<!-- buttons area -->
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" />
+			<container>
+				<attachment_group class="title_embedded_panel_left" />
+
+				<widget class="view_menu_label">
+					<translation id="text" translation_id="227743" type="use" value="Transfers" />
+				</widget>
+
+				<!-- view button -->
+				<widget class="view_menu_popup" id="tsvm" sele="tchv">
+					<list id="items">
+						<record id="7">
+							<translation id="name" translation_id="348767" type="use" value="All Trades[COMMENT: team transfer section; List of MLS type trades]" />
+						</record>
+						<record id="0">
+							<translation id="name" translation_id="316767" type="use" value="All Transfers[COMMENT: team transfers section; a list of players who have joined or left the club]" />
+						</record>
+						<record id="1">
+							<translation id="name" translation_id="316768" type="use" value="Cash / Claused Transfers[COMMENT: team transfers section; a list of players who have joined or left the club]" />
+						</record>
+						<record id="2">
+							<translation id="name" translation_id="316769" type="use" value="Loan Deals[COMMENT: team transfers section; Players moved on laon]" />
+						</record>
+						<record id="3">
+							<translation id="name" translation_id="315823" type="use" value="Free Transfers[COMMENT: team transfers section; Players moved for free]" />
+						</record>
+						<record id="4">
+							<translation id="name" translation_id="316770" type="use" value="Released Players[COMMENT: team transfers section; Players who get released]" />
+						</record>
+						<record id="5">
+							<translation id="name" translation_id="316771" type="use" value="Part Exchange Transfers[COMMENT: team transfers section; Players who moved in part exchange deals]" />
+						</record>
+						<record id="8">
+							<translation id="name" translation_id="326998" type="use" value="Waived [COMMENT: team transfer section; List of players waived (MLS)]" />
+						</record>
+						<record id="----" />
+						<record id="6">
+							<translation id="name" translation_id="316773" type="use" value="Player Trials[COMMENT: team transfers section; a list of players who have had trials at the club]" />
+						</record>
+						<record id="11">
+							<translation id="name" translation_id="260358" type="use" value="Staff[COMMENT: team transfers section; a list of staff who have joined or left the club]" />
+						</record>
+						<record id="----" />
+						<record id="12">
+							<translation id="name" translation_id="248405" type="use" value="Future Transfers" />
+						</record>
+						<record id="13">
+							<translation id="name" translation_id="297746" type="use" value="Leading Transfers[COMMENT: transfers section; a list of record-breaking transfers]" />
+						</record>
+						<record id="----" />
+						<record id="9">
+							<translation id="name" translation_id="316774" type="use" value="Youth Intake[COMMENT: Players who have joined clubs youth team]" />
+						</record>
+						<record id="10">
+							<translation id="name" translation_id="316775" type="use" value="Youth Departures[COMMENT: Youth players who haven't been retained]" />
+						</record>
+					</list>
+					<flags id="slct" value="0" />
+				</widget>
+			</container>
+			<container>
+				<attachment_group class="title_embedded_panel_right" />
+
+				<widget class="icon_button" id="GTog" auto_size="all" embed_in_frame="true" click_event="toggle_graph" icon="icons/16px/up" show_button_appearance="false"/>
+			</container>
+		</container>
+
+		<container id="grac">
+
+		<attachment class="test_screen_size_attachment" skip_if_false="true">
+			<list id="properties">
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="0" />
+					<integer id="max_value" value="720" />
+					<!-- This is a very large value as we want our widget to show if > the min_value.  The attachmen itself only does values between a range so we set the max arbitrarily high to make this work -->
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="180" />
+					<integer id="false_value" value="180" />
+				</record>
+				<record min_value="720" max_value="10000" true_value="240"/>
+			</list>
+		</attachment>
+
+			<widget class="graph" id="graf" show_instant_hint="true">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+
+				<!-- How regular the entries appear -->
+				<integer id="rate" value="250" />
+				<!-- How outwardly shifted the bars are from the column title -->
+				<integer id="shft" value="5" />
+				<!-- How many points we show on the Y axis -->
+				<integer id="step_size" value="2" />
+
+				<record id="instant_hint" file="generic/graph instant hint transfers"/>
+
+				<list id="graph_series">
+					<record id="bar1" type="bar" maximum_width="25" gap="1" colour="fg blue" />
+					<record id="bar2" type="bar" maximum_width="25" gap="1" colour="fg yellow" />
+				</list>
+				<record id="x_axis" gap="0" auto_size="false" />
+			</widget>
+
+			<widget class="text" id="NoDa" auto_size="all">
+				<layout class="centre_in_parent_attachment" alignment="all" />
+				<translation id="text" translation_id="491922" type="use" value="There are no fees associated with this transfer type[COMMENT: A graph displays total fees for transfers, this string displays when the currently selected filter does not generate any data and explains that. AREA: Transfers; SUB-AREA: Transfer history; FR-BN:15505; TONE: Formal;]" />
+			</widget>
+		</container>
+
+	</container>
+
+	<!-- main table -->
+	<container class="main_box" id="trtt" force_title_borders="true">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+		<!-- embedded buttons -->
+		<container id="btns" embed_in_frame="true" navigation_container="true">
+			<attachment_group class="title_embedded_panel_left" />
+
+			<!-- month widget (used for nation and continent views)-->
+			<widget class="embedded_left_right_list" id="mont" sele="mont" height="30" width="300" embed_in_frame="true" reverse_function="true">
+				<translation id="text" translation_id="247947" type="use" value="Month" />
+			</widget>
+
+			<!-- seasons popup -->
+			<widget class="embedded_season_selection_list" id="tsbw" save_immediate_state="true" sele="tsch" height="30" width="300" embed_in_frame="true" >
+				<global id="gap_adjustment" name="ui.split_button_row_gap" />
+			</widget>
+
+			<!-- filter button -->
+			<widget class="embedded_filter_button" id="plsf" target="trtt" auto_size="horizontal" embed_in_frame="true" />
+		</container>
+
+		<widget class="text" id="Nosi" auto_size="none" alignment="centre" hidden="true">
+			<translation id="text" translation_id="315038" type="use" value="No transfers to display[COMMENT - transfer centre; used when there are no impending transfers to display]" />
+		</widget>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<!-- table for showing youth players and comp transfers-->
+			<widget class="table" id="tabl" save_session_state="true" save_default_state="true" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows, select_multiple" wants_lazy_load="true" fixed_size_rows="true" auto_size_rows="false" get_row_data_event="ustt" auto_size="none">
+				<boolean id="navigation_container" value="true" />
+				<boolean id="default_focus" value="true" />
+
+				<!-- default properties adopted by every item in table -->
+				<record id="default_properties">
+					<flags id="algn" value="left,centre_y,can_scale" />
+				</record>
+			</widget>
+
+			<container id="inou" draw_vertical_dividers="true">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill">
+					<global id="horizontal_gap" name="ui.inner_box_gap"/>
+				</attachment_group>
+
+				<container class="inner_box" id="inbx" colour="fg blue" size="large">
+					<translation id="text" translation_id="260359" type="use" value="In[COMMENT: transfers section; title for box showing players in]" />
+
+					<container id="tico" embed_in_frame="true">
+						<attachment_group class="title_embedded_panel_right" />
+
+						<widget class="text" auto_size="horizontal" height="30" size="large" colour="fg blue" embed_in_frame="true" alignment="centre">
+							<translation id="text" translation_id="242341" type="use" value="Total" />
+						</widget>
+						<widget class="text" id="tivl" auto_size="horizontal" height="30" size="large" style="bold" colour="fg blue" embed_in_frame="true" alignment="centre" />
+					</container>
+
+
+					<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+						<widget class="text" id="Noin" auto_size="none" alignment="centre" hidden="true">
+							<translation id="text" translation_id="315038" type="use" value="No transfers to display[COMMENT - transfer centre; used when there are no impending transfers to display]" />
+						</widget>
+
+						<widget class="table" id="trin" save_session_state="true" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows, select_multiple" wants_lazy_load="true" auto_size_rows="false" get_row_data_event="utit" auto_size="none" navigation_container="true">
+							<!-- default properties adopted by every item in table -->
+							<record id="default_properties">
+								<flags id="alignment" value="left,centre_y,can_scale" />
+							</record>
+						</widget>
+					</container>
+
+					<widget class="icon_button" id="wati" auto_size="all" click_event="watn" controller_button="y_button">
+						<layout class="stick_to_sides_attachment" alignment="left" />
+						<translation id="text" translation_id="275840" type="use" value="Where Are They Now?" />
+					</widget>
+				</container>
+
+				<container class="inner_box" id="oubx" colour="fg yellow" size="large">
+					<translation id="text" translation_id="260360" type="use" value="Out[COMMENT: transfers section; title for box showing players out]" />
+
+					<container id="toco" embed_in_frame="true">
+						<attachment_group class="title_embedded_panel_right" />
+
+						<widget class="text" auto_size="horizontal" size="large" colour="fg yellow" height="30" alignment="centre" embed_in_frame="true">
+							<translation id="text" translation_id="242341" type="use" value="Total" />
+						</widget>
+						<widget class="text" id="tovl" auto_size="horizontal" size="large" style="bold" colour="fg yellow" height="30" alignment="centre" embed_in_frame="true" />
+					</container>
+
+					<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+						<widget class="text" id="Noou" auto_size="none" alignment="centre" hidden="true">
+							<translation id="text" translation_id="315038" type="use" value="No transfers to display[COMMENT - transfer centre; used when there are no impending transfers to display]" />
+						</widget>
+
+						<widget class="table" id="trou" save_session_state="true" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows, select_multiple" wants_lazy_load="true" auto_size_rows="true" get_row_data_event="utot" auto_size="none" navigation_container="true">
+							<!-- default properties adopted by every item in table -->
+							<record id="default_properties">
+								<flags id="alignment" value="left,centre_y,can_scale" />
+							</record>
+						</widget>
+
+					</container>
+
+					<widget class="subtle_button" id="wato" auto_size="all" click_event="watn" navigation_focus_target="true" >
+						<layout class="stick_to_sides_attachment" alignment="left" />
+						<translation id="text" translation_id="275840" type="use" value="Where Are They Now?" />
+					</widget>
+
+				</container>
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

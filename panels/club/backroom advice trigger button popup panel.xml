@@ -1,0 +1,42 @@
+<!-- This panel is displayed in a popup by the backroom advice trigger button to indicate that there is advice available -->
+<!-- Designed to be used with a property_list_viewer_xml_panel -->
+<panel appearance="boxes/bordered/no margin/solid/paper" red_replacement="bg darker">
+	<layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+	<layout class="stick_to_object_attachment" target="BaC1" get_side="bottom" set_side="bottom" offset="0"/>
+	<layout class="stick_to_object_attachment" target="BaC1" get_side="right" set_side="right" move_side="true" offset="0"/>
+	<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+
+	<animation class="fade_on_hide_animation" duration ="0.7"/>
+
+	<!-- Setting a delay makes the panel auto-hide in this many seconds -->
+	<real id="dela" value="4" />
+
+	<container>
+		<layout class="fit_children_attachment" alignment="horizontal" offset="6" />
+		<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="left" inset="6" apply_to_children="true" />
+
+		<widget class="label" auto_size="horizontal" size="small" font="title" colour="title">
+			<translation id="text" translation_id="416321" type="use" value="New advice available[COMMENT: FR 16952; backroom advice popup; string indicating to the user that new backroom advice has been generated]" />
+		</widget>
+		<widget class="label" id="advT" auto_size="horizontal" size="small" colour="text" />
+	</container>
+
+	<container width="50">
+		<widget class="picture" file="icons/26px/staff respo" image_alignment="centre" red_replacement="normal_icon">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+
+		<!-- the bit with the number of unread news (text) -->
+		<widget class="button" id="ibic" height="20" width="20" size="7" alignment="centre" appearance="buttons/custom/interface/notification/button" wants_mouse_events="false">
+			<layout class="stick_to_sides_attachment" alignment="top,right" inset="0" />
+
+			<record id="object_property">
+				<integer id="get_property" value="numb" />
+				<integer id="set_property" value="text" />
+			</record>
+		</widget>
+	</container>
+</panel>

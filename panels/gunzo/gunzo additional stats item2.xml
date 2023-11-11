@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+    <layout class="arrange_vertical_attachment" layout="15,-1" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+    <widget class="text" id="sttx" colour="disabled" size="small" alignment="left, bottom,can_scale"/>
+  <container>
+    
+    <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="5"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+    
+    <widget class="formatted_label" format="[%fraction#1-1.0]" size="13" id="stVL" auto_size="horizontal" alignment="left, center_y"/>
+    <widget class="formatted_label" format="([%fraction#1-1.0]%)" size="13" id="PCVL" auto_size="horizontal" alignment="left, center_y"/>
+  </container>
+</panel>

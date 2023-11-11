@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="15" />
+
+    <widget class="text" id="nofr" size="9" alignment="centre">
+        <translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+    </widget>
+
+    <container id="form">
+        <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"  />
+
+        <!--form-->
+        <widget class="form_graph_panel" file="gunzo/gunzo form graph" id="FrmG" show_labels="false">
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="-4"/>
+            <record id="object_property">
+                <integer id="get_property" value="Pfrm" />
+            </record>
+        </widget>
+
+		
+		
+    </container>
+
+</panel>

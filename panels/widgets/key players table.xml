@@ -1,0 +1,27 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <widget class="client_object_list_table" mode="fill_rows, stripe_rows" database_table_type="1" column_spacing="5" should_force_refresh="true">
+    <record id="object_property">
+      <integer id="get_property" value="Cptw"/>
+      <integer id="set_property" value="objL"/>
+    </record>
+
+	  <list id="column_widget_properties">
+		  <record index="1" navigation_focus_target="true"/>
+	  </list>
+
+    <record id="viewed_property_ids">
+      <!-- Name -->
+      <record id="Pnms" auto_hide_priority="1" multiline="false" width="-1" />
+      <!-- Team -->
+      <record id="Pcte" auto_hide_priority="2" multiline="false" width="-1" />
+      <!-- Nation -->
+      <record id="Pnat" auto_hide_priority="3" multiline="false" width="100" />
+      <!-- Position -->
+      <record id="PpsC" auto_hide_priority="3" multiline="false" width="100" />
+      <!-- Value -->
+      <record id="Pdva" auto_hide_priority="3" multiline="false" width="150" />
+    </record>
+  </widget>
+</panel>

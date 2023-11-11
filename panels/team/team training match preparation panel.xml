@@ -1,0 +1,110 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<container class="main_box" entity_layout_id="at00" id="at00" sub_group_id="0" navigation_container="true">
+		<translation id="title" translation_id="308600" type="use" value="Match Preparation[COMMENT - team screen section for match preparation]" />
+		<attachment_group class="vertical_arrange" vertical_offset="0" vertical_alignment="top, extend" vertical_gap="5" />
+
+		<!--top bar-->
+		<container class="main_box" draw_vertical_dividers="true" height="140">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="12" horizontal_offset="0" vertical_inset="0" />
+			<!--Next match details-->
+			<widget id="fixt" class="team_upcoming_fixture_widget" file="widgets/team upcoming fixture match prep widget" />
+			<!--Trained tactic details-->
+			<widget class="tactic_slot_tab_container" id="prep" file="tactics/tactic slot tab container training match prep" />
+
+			<!--Set Pieces details-->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_offset="16" vertical_alignment="top" vertical_gap="12" horizontal_inset="12" />
+
+				<container height="20">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left" horizontal_gap="6" horizontal_offset="0" vertical_inset="0" />
+					<widget class="picture" file="icons/16px/training set pieces" auto_size="horizontal" image_alignment="centre" scale_picture="false" />
+					<widget class="link_button" font="title" size="small" red_replacement="faded text" colour="faded text" alignment="left, centre_y" appearance="buttons/link/title/button" section="tcSP" auto_size="horizontal">
+						<translation id="text" translation_id="596924" type="use" value="Set Piece Routines[COMMENT: FR 23334]" />
+					</widget>
+				</container>
+
+				<widget class="text" id="rotC" auto_size="vertical" size="large" style="semi_bold" />
+				
+				<widget class="text" id="cmpW" size="small" auto_size="vertical" colour="faded text" />
+			</container>
+
+			<!--Past match details-->
+			<container class="tactics_recent_match_analysis_panel" id="anLy" file="">
+				<attachment_group class="vertical_arrange" vertical_offset="16" vertical_alignment="top" vertical_gap="12" horizontal_inset="12" />
+
+				<container height="20">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left" horizontal_gap="6" horizontal_offset="0" vertical_inset="0" />
+					<widget class="picture" file="icons/26px/data hub" red_replacement="faded text" auto_size="horizontal" image_alignment="centre" scale_picture="false" />
+					<widget class="link_button" id="LnKB" section="TeRM" font="title" size="small" auto_size="horizontal" colour="faded text" red_replacement="faded text" alignment="left, centre_y" appearance="buttons/link/title/button">
+						<translation id="text" translation_id="450754" type="use" value="Recent Matches Analysis[COMMENT: Match Analysis Tab Title - Multiple recent Matches analysis]" />
+					</widget>
+				</container>
+				
+				<!-- Number of positive / number of negatives -->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_gap="6" horizontal_offset="0" vertical_inset="0" />
+		
+					<widget class="link_text" id="posC" style="semi_bold" auto_size="all" section="TeRM" />
+					<widget class="text" id="hdiv" auto_size="all">
+						<string id="text" value="/" />
+					</widget>
+					<widget class="link_text" id="negC" style="semi_bold" auto_size="all" section="TeRM" />
+				</container>
+				<widget class="text" id="cmpT" size="small" auto_size="vertical" colour="faded text" />
+			</container>
+		</container>
+		<!--main area-->
+		<container draw_vertical_dividers="true">
+			<attachment_group class="horizontal_arrange" horizontal_layout="-4,-3" horizontal_gap="8" horizontal_offset="0" vertical_inset="0" />
+			<!--match focus-->
+			<container class="main_box">
+				<translation id="title" translation_id="597634" type="use" value="Match Focus[COMMENT: AREA: team screen section for match preparation]" />
+				<attachment_group class="vertical_arrange" vertical_offset="0" vertical_alignment="top,extend" vertical_gap="6" />
+
+				<widget class="text" id="cmpM" size="small" auto_size="vertical" colour="faded text" />
+
+				<container class="main_subtle_box" id="mchC">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_alignment="top" vertical_gap="0" />
+					<widget class="text" id="mcfD" auto_size="vertical" />
+				</container>
+
+				<widget class="match_focus_session_widget" id="mchF" />
+			</container>
+			<!--match analysis-->
+			<container class="title_link_box" force_title_borders="true" id="tstf" hide_view_menu="true">
+				<translation id="link_title" translation_id="597635" type="use" value="Opposition Analysis[COMMENT: AREA: team screen section for match preparation]" />
+				<string id="section" value="Tpor" />
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<container class="team_opposition_report_predicted_tactical_style_panel" id="mOpA" draw_horizontal_dividers="true" file="">
+
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="0" vertical_gap="16" />
+					<container>
+						<attachment_group class="vertical_arrange_autosize" horizontal_inset="0" />
+						<widget class="text" auto_size="vertical" size="small" colour="faded text" font="title" id="styT" />
+						<widget class="text" auto_size="vertical" size="small" id="styD" />
+						<widget class="text" auto_size="vertical" size="small" id="opSD" />
+					</container>
+					<container class="data_analyst_key_findings_widget" key_finding_height="100" show_team_name="true" id="oppK" file="">
+						<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="all" inset="0" />
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="0" />
+
+							<widget class="text" id="titB" colour="faded text" auto_size="vertical" size="small" font="title">
+								<translation id="text" translation_id="539044" type="use" value="Key Findings[COMMENT: AREA: Data Hub; SUB-AREA: Analyst Key findings; FR: 31585; TONE: Formal; CHARLIMIT: None NOTES: Key findings of analyst header]" />
+							</widget>
+							<container class="scrolling_box">
+								<container class="vertical_arrange_container" auto_size="vertical" draw_horizontal_dividers="false" gap="4" id="keyF" />
+							</container>
+							<widget class="text" id="notA" height="300" alignment="centre" colour="faded text">
+								<translation id="text" translation_id="330275" type="use" value="Not available[COMMENT: happiness panel; text displayed when no happiness information is available]" />
+							</widget>
+						</container>
+					</container>
+				</container>
+
+			</container>
+		</container>
+	</container>
+</panel>

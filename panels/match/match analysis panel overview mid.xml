@@ -1,0 +1,85 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<panel>
+  <colour id="positive_rating_background_colour" name="positive" />
+  <colour id="neutral_rating_background_colour" name="lime" />
+  <colour id="negative_rating_background_colour" name="negative" />
+
+  <colour id="positive_rating_text_colour" name="black" />
+  <colour id="neutral_rating_text_colour" name="orange" />
+  <colour id="negative_rating_text_colour" name="white" />
+  <symbol id="positive_appearance" value="boxes/custom/positive/paper" />
+  <symbol id="negative_appearance" value="boxes/custom/negative/paper" />
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <container class="vertical_adaptive_container" inset="0" offset="0" gap="6">
+
+    <!-- Match Stats -->
+    <container class="inner_box" default_height="-6" minimum_height="150" priority="1">
+      <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+    
+      <container>
+        <layout class="arrange_horizontal_attachment" layout="-1" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="4" apply_to_children="true" />
+
+          <widget class="match_stats_panel" id="" file="match/match stats">
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+          
+        </widget>
+       
+      </container>
+    </container>
+
+    <!-- Team Analysis -->
+    <container class="inner_box" id="TeAn" default_height="-2" minimum_height="100" priority="1">
+      <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+      <string id="skin_style" value="title link" />
+
+      <container height="25">
+        <layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+        <!--title button-->
+        <widget class="link_button" id="TAln" click_event="sTaY" alignment="centre" auto_size="all" colour="match accent" red_replacement="match accent" blue_replacement="match accent">
+           <translation id="text" translation_id="441063" type="use" value="Team Analysis[COMMENT: match analysis panel title]" />
+        </widget>
+      </container>
+
+      <container>
+        <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+        <!--home team analysis-->
+        <container class="scrolling_box">
+          <container id="hlma">
+            <layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+            <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+            <record id="default_properties" multiline="true" auto_size="vertical" appearance="" size="normal" colour="text"/>
+          </container>
+        </container>
+
+        <!--away team analysis-->
+        <container class="scrolling_box">
+          <container id="alma">
+            <layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+            <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+            <record id="default_properties" multiline="true" auto_size="vertical" appearance="" size="normal" colour="text"/>
+          </container>
+        </container>
+      </container>
+
+    </container>
+   
+  </container>
+
+</panel>

@@ -1,0 +1,24 @@
+<panel>
+
+	<boolean id="save_session_state" value="true"/>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="7"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<!--choose nations and settings-->
+	<container class="new_game_settings_panel" id="ntlp"/>
+
+	<!-- buttons panel -->
+	<container class="main_box">
+		<attachment_group class="button_arrangement_right" />
+
+		<widget class="icon_button" id="canc" auto_size="all" click_event="canc" controller_button="b_button">
+			<translation id="text" translation_id="229828" type="use" value="Cancel"/>
+		</widget>
+		<widget class="primary_icon_tick_button" id="fini" auto_size="all" controller_button="right_trigger">
+			<translation id="text" translation_id="242501" type="use" value="Start Game"/>
+			<record id="click_event">
+				<flags id="event_id" value="fini"/>
+			</record>
+		</widget>
+	</container>
+</panel>

@@ -1,0 +1,103 @@
+﻿<panel>
+	<boolean id="save_session_state" value="true" />
+
+	<attachment_group class="vertical_arrange_horizontal_centre" vertical_alignment="middle" />
+
+	<container class="main_transparent_box" width="1000">
+
+		<attachment class="test_screen_size_attachment" skip_if_false="true">
+			<list id="properties">
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="0" />
+					<integer id="max_value" value="720" />
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="500" />
+					<integer id="false_value" value="650" />
+				</record>
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="720" />
+					<integer id="max_value" value="868" />
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="600" />
+					<integer id="false_value" value="650" />
+				</record>
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="868" />
+					<integer id="max_value" value="968" />
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="750" />
+					<integer id="false_value" value="700" />
+				</record>
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="968" />
+					<integer id="max_value" value="1068" />
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="850" />
+					<integer id="false_value" value="700" />
+				</record>
+				<record>
+					<flags id="alignment" value="vertical" />
+					<integer id="min_value" value="1068" />
+					<integer id="max_value" value="10000" />
+					<symbol id="set_property" value="height" />
+					<integer id="true_value" value="900" />
+					<integer id="false_value" value="700" />
+				</record>
+			</list>
+		</attachment>
+
+		<animation class="fade_animation" start_value="0" end_value="1" duration="0.6" delay="0" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" />
+
+
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="4" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="20" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" />
+
+			<widget class="text" font="title" colour="text" auto_size="all">
+				<translation id="text" translation_id="557805" type="use" value="Briefing Feedback[COMMENT: AREA: Pre-match briefing; SUB-AREA: title for a section; FR-BN: FM-2590; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: The section is showing feedback from the briefing]" />
+			</widget>
+
+			<widget class="text" id="cbtx" colour="faded text" auto_size="all">
+			</widget>
+			
+		</container>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" />
+
+			<widget class="object_portrait_picture" scale_picture="true" keep_aspect_ratio="true" id="fgop" width="53" height="53" />
+
+			<container class="inner_subtle_box" appearance="boxes/custom/speech bubble/left/paper">
+				<attachment_group class="vertical_arrange_autosize" />
+				
+				<widget class="text" id="btxt" auto_size="vertical">
+					<translation id="text" translation_id="509182" type="use" value="The chosen matchday squad has been informed of the team and tactical plan for the upcoming match[COMMENT: AREA: Pre-match briefing; SUB-AREA: description for the panel; FR-BN: 30879; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: ]" />
+				</widget>
+			</container>
+
+
+		</container>
+		
+		<widget class="horizontal_divider" height="1" />
+	
+		<widget class="text" colour="text" font="title" auto_size="all">
+			<translation id="text" translation_id="509183" type="use" value="Notable Reactions[COMMENT: AREA: Pre-match briefing; SUB-AREA: title for a section; FR-BN: 30879; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: The section is showing noteable reactions to the confirmed tactics for the match]" />
+		</widget>
+		
+		<widget class="simple_data_list" id="reac" wrap="true" alignment="left" set_property="objt" gap="10">
+			<record id="widget_properties" class="property_list_viewer_xml_panel" file="widgets/pre match topic reaction widget" width="300" height="200" />
+		</widget>
+
+		<widget class="text" id="nore" alignment="centre" style="bold" size="large">
+			<translation id="text" translation_id="520975" type="use" value="No reaction noted[COMMENT: AREA: Team Talks; SUB-AREA: Effect of Team Talk; FR-BN: 34221; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: team talk effect string]" />
+		</widget>
+
+	</container>
+
+
+</panel>

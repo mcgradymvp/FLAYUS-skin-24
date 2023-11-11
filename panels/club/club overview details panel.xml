@@ -1,0 +1,141 @@
+<panel>
+
+	<container class="main_subtle_box" navigation_container="true">
+		<attachment_group class="horizontal_arrange_vertical_centre" horizontal_layout="-6,-3,-5,-4,-3,-6" horizontal_offset="6"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+		<!--division/country-->
+		<container height="80">
+			<attachment_group class="horizontal_arrange_vertical_centre" horizontal_gap="10" horizontal_layout="50,-1"/>
+
+			<!--division logo-->
+			<widget class="object_portrait_picture" id="lepi" height="40" width="50">
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+				<boolean id="scale_picture" value="true"/>
+				<boolean id="keep_aspect_ratio" value="true"/>
+				<flags id="image_alignment" value="centre"/>
+
+				<record id="object_property">
+					<integer id="get_property" value="Cdiv"/>
+					<integer id="set_property" value="objt"/>
+				</record>
+			</widget>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="0" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+				<!--division-->
+				<widget class="comp_button" id="comp" icon_enabled="false" comp_display_type="1" alignment="left, bottom" font="value" auto_size="vertical">
+					<record id="object_property">
+						<integer id="get_property" value="Cdiv"/>
+						<boolean id="dont_set_hint" value="true"/>
+					</record>
+				</widget>
+
+				<!--country-->
+				<widget class="nation_button" id="nati" auto_size="vertical" alignment="left, centre_y">
+					<record id="object_property">
+						<integer id="get_property" value="Cnat"/>
+						<integer id="set_property" value="objt"/>
+					</record>
+				</widget>
+			</container>
+		</container>
+		
+		<!--media prediction-->
+		<container class="vertical_label_value_pair" value_widget="CfiV" label_widget="CfiL">
+
+			<widget class="media_expectation_text" id="CfiV" short_name="true">
+				<record id="object_property">
+					<integer id="get_property" value="CmeD" />
+				</record>
+			</widget>
+			<widget class="label" id="CfiL" >
+				<record id="object_property">
+					<integer id="get_property" value="CmeD" />
+					<boolean id="name" value="true"/>
+				</record>
+			</widget>
+		</container>
+	
+
+		<!--professional status-->
+		<container class="vertical_label_value_pair" value_widget="pros" label_widget="proL">
+
+			<widget class="professional_status_label" id="pros">
+				<record id="object_property">
+					<integer id="get_property" value="Cprs" />
+				</record>
+			</widget>
+			<widget class="label" id="proL">
+				<record id="object_property">
+					<integer id="get_property" value="Cprs" />
+					<boolean id="name" value="true"/>
+				</record>
+			</widget>
+		</container>
+
+		<!--reputation-->
+		<container class="vertical_label_value_pair" value_widget="crep" label_widget="creL">
+			<widget class="reputation_label" id="crep" mode="1">
+				<record id="object_property">
+					<integer id="get_property" value="Crsc" />
+				</record>
+			</widget>
+			
+			<widget class="club_reputation_stars_label" id="creS" alignment="centre" auto_size="vertical" image_alignment="centre" navigation_focus_target="false">
+				<record id="object_property">
+					<list id="get_properties">
+						<record>
+							<integer id="get_property" value="Csta" />
+							<integer id="set_property" value="valu" />
+						</record>
+						<record>
+							<integer id="get_property" value="Crsc" />
+							<integer id="set_property" value="Crsc" />
+						</record>
+					</list>
+				</record>
+			</widget>
+			
+			<widget class="label" id="creL">
+				<record id="object_property">
+					<integer id="get_property" value="Crsc" />
+					<boolean id="name" value="true"/>
+				</record>
+			</widget>
+		</container>
+
+		<!--Squad Personality-->
+		<container class="vertical_label_value_pair" value_widget="yrfd" label_widget="yrfL">
+
+			<widget class="club_squad_character_label" id="yrfd">
+				<boolean id="NumF" value="0"/>
+				<record id="object_property">
+					<integer id="get_property" value="Csca" />
+				</record>
+			</widget>
+			<widget class="label" id="yrfL">
+				<record id="object_property">
+					<integer id="get_property" value="Csca" />
+					<boolean id="name" value="true"/>
+				</record>
+			</widget>
+		</container>
+
+		<!--continental competition-->
+		<container class="vertical_label_value_pair" value_widget="ccon" label_widget="ccoL">
+
+			<widget class="comp_button" id="ccon" icon_enabled="false">
+				<record id="object_property">
+					<integer id="get_property" value="Ccon" />
+				</record>
+			</widget>
+			<widget class="label" id="ccoL">
+				<record id="object_property">
+					<integer id="get_property" value="Ccon" />
+					<boolean id="name" value="true"/>
+				</record>
+			</widget>
+		</container>
+	</container>
+</panel>

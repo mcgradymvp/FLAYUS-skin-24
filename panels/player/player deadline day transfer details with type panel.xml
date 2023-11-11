@@ -1,0 +1,26 @@
+﻿<panel>
+    <attachment_group class="vertical_arrange_autosize"/>
+
+    <!-- variation of player deadline day transfer details panel that adds a transfer status widget and lays out the team from and team to horizintally-->
+
+    <container class="main_subtle_box">
+        <attachment_group class="vertical_arrange_autosize" vertical_gap="8" horizontal_inset="5"/>
+
+        <widget class="player_transfer_offer_status_widget" id="OfTy" alignment="left, centre_y" auto_size="vertical" navigation_focus_target="false"/>
+
+        <container height="150">
+            <attachment_group class="horizontal_arrange" horizontal_alignment="right, fill"/>
+
+            <container class="client_object_viewer_xml_panel" id="Pdsc" file="widgets/player picture name and description widget1" height="140"/>
+            <widget class="text" id="TrVa" size="large" colour="text" style="bold" alignment="right, centre_y" auto_size="all"/>
+        </container>
+
+        <container>
+            <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left, extend"/>
+
+            <widget class="team_button" id="OuTm" auto_size="all" navigation_focus_target="true"/>
+            <widget class="picture" file="icons/custom/transfer deadline day/transfer status/transfer in" red_replacement="fg" scale_picture="true" image_alignment="centre" height="19" width="19"/>
+            <widget class="team_button" id="InTm" auto_size="all" navigation_focus_target="true"/>
+        </container>
+    </container>
+</panel>

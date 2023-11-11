@@ -1,0 +1,27 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
+
+	<widget class="text" auto_size="vertical" font="title" colour="accent">
+				<translation id="text" translation_id="247571" type="use" value="Fitness"/>
+			</widget>
+			
+	
+			<!-- Expected time out for injury -->
+			<widget class="label" id="injD" auto_size="vertical" size="small"/>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize"  vertical_offset="0" vertical_gap="3"  horizontal_inset="0" />
+
+				<!--CON/SHP-->
+				<widget class="client_object_viewer_xml_panel" file="player/player condition hint panel2" id="PRCF" >
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+
+				<widget class="horizontal_divider" />
+
+				<widget class="client_object_property_panel" property="Pjad" height="60">
+					<record id="object_property" get_property="objt" set_property="objt" />
+					<boolean id="hide_detail_text" value="false" />
+				</widget>
+			</container>
+</panel>

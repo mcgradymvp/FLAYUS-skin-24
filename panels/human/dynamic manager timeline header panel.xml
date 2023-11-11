@@ -1,0 +1,22 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<animation class="translate_animation" start_value="0, -1" end_value="0, 0" duration="0.2" delay="0" end_mode="hold_end" tween="ease_out_4" coord_mode="relative_to_target" trigger_id="hidden" trigger_start="false" trigger_end="true" no_clipping="true" />
+
+	<container class="main_box" appearance="boxes/custom/full screen header/paper" draw_vertical_dividers="true">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="30" />
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_offset="10" horizontal_alignment="right,extend" />
+
+			<widget class="text" auto_size="horizontal" id="tlHe" alignment="left, centre_y" font="title" size="large" colour="accent" />
+
+			<!-- continue button -->
+			<widget class="icon_button" id="endB" controller_button="right_trigger" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/continue" secondary_icon_alignment="centre_right, centre_y" font="title" colour="accent button text" width="210" height="48" default_focus="true" multiline="true">
+				<record id="secondary_icon_properties" red_replacement="accent button text" />
+				<record id="click_event" event_id="LeTm" event_target="mDyT" />
+				<translation id="text" translation_id="551828" type="use" value="Leave Timeline[COMMENT: AREA: Dynamic Manager Timeline; SUB-AREA: DMT Header; FR-BN: FM-3656; TONE: Informal; CHARLIMIT: None; REF-ID: FM-3656; NOTE: Option to leave the Dynamic Manager Timeline]" />
+			</widget>
+
+		</container>
+	</container>
+</panel>

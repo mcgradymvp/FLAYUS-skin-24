@@ -1,0 +1,17 @@
+<record>
+	<!-- resource manager options -->
+
+	<!-- we don't preload the graphics files, but we do cache them once they've loaded -->
+	<boolean id="cache" value="true"/>
+    <boolean id="preload" value="false" />
+    <list id="preload_types">
+        <record type="XML" value="true" />
+		<record type="SVG" value="true" />
+    </list>
+	
+	<!-- make sure these don't get loaded by the SIGRAPHICS::IMAGE_RESOURCE class -->
+	<list id="supported_types">
+		<record type="Image" value="true" />
+		<record type="XML" value="true" />
+	</list>
+</record>

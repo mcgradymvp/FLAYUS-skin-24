@@ -1,0 +1,34 @@
+﻿<panel>
+	<boolean id="return_to_previous_screen_after_highlight" value="false" />
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container height="24">
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<!-- score -->
+		<widget class="text" id="mits" auto_size="horizontal" style="bold" alignment="left,centre_y" >
+			<string id="text" value="0" />
+		</widget>
+
+		<!-- aggregate score -->
+		<widget class="text" id="mita" auto_size="horizontal" alignment="left,centre_y" colour="faded text"/>
+
+		<!-- team name -->
+		<widget class="text" id="mitn" style="semi_bold" alignment="right,centre_y" auto_size="vertical" />
+	</container>
+
+	<widget class="table" id="miit" layout="20,-1" mode="fill_rows" row_spacing="2" auto_size_rows="true" fixed_size_rows="false">
+		<list id="column_widget_properties">
+			<record index="0" alignment="centre" auto_size="vertical" />
+			<record index="1" alignment="left,centre_y" size="small" />
+		</list>
+
+		<list id="column_table_properties">
+			<record index="0" id="icon" left="0" top="4" bottom="4" />
+			<record index="1" id="text" top="4" bottom="4" />
+		</list>
+	</widget>
+</panel>

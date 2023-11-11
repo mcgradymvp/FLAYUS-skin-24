@@ -1,0 +1,83 @@
+﻿<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<flags id="selected_appearance" value="boxes/custom/tactics kit/selected/paper"/>
+	<flags id="appearance" value="boxes/main/contrast/paper"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="top,right" inset="0" apply_to_children="true"/>
+
+		<!--injury/red/yellow card -->
+		<container class="inner_box_no_margin" id="inji" height="16" width="16">
+		</container>
+	</container>
+
+
+	<container id="nmcN">
+		<layout class="stick_to_sides_attachment" alignment="bottom, horizontal" inset="0" apply_to_children="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+	    <container class="main_contrast_box_no_margin" red_replacement="bg lighter" height="40">      
+	    </container>
+
+	    <container class="main_contrast_box_no_margin" red_replacement="positive bg" height="40" id="hbKt">
+	    </container>
+    
+		<container height="40">
+			<layout class="arrange_vertical_attachment" alignment="fill" offset="2" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<container>
+
+			</container>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+					<!--name-->
+					<widget class="player_picker_button" entity_layout_id="it02" id="plPB" file="none" editor_group_id="it10" format="[%person#1-surname]">
+						<string id="draggable" value="false"/>
+						<widget class="person_button" id="pbtn" alignment="centre,can_scale" info_popup_enabled="false" wants_mouse_events="false" size="small" colour="text" enforce_style="true">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+						</widget>
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<!--pos/role/duty indicator-->
+		<widget class="client_object_property_panel" id="Crpi" property="PXpQ" height="24" appearance="boxes/main/contrast/no margin/paper" BRBM="true" iAbs="true" TISP="false" size="small" colour="text" alignment="centre" navigation_focus_target="false">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="2"/>
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="22"/>
+		</widget>
+
+		<widget class="picture" file="icons/16px/sub on" id="hCbt" height="16" width="16" red_replacement="positive">
+			<layout class="stick_to_sides_attachment" alignment="right" inset="2"/>
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="50"/>
+		</widget>
+	</container>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="1" apply_to_children="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="2" />
+			<!-- Player picture -->
+		<widget class="picture" id="prop" scale_picture="true" image_alignment="top,can_scale">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,44,0" />
+
+			<record id="object_property">
+				<integer id="get_property" value="prpc"/>
+				<integer id="set_property" value="valu"/>
+			</record>
+		</widget>
+	</container>
+</panel>

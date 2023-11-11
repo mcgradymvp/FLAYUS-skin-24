@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel save_session_state="true">
+
+<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+ 	  
+<container>
+  <layout class="arrange_vertical_attachment" alignment="top" offset="5" gap="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+  <!-- Pitch -->
+  <widget class="pitch_with_player_positions" id="ppip" height="110" 
+          vertical="false" 
+          pitch_alignment="centre, can_scale" 
+          pitch_draw_goals="false" 
+          pitch_draw_markings="false" 
+          show_position_strength="false" 
+          hide_player_positions="true" 
+          pitch_show_names="false" 
+          pitch_show_names_as_hint="true" 
+          pitch_draw_grass="false" 
+          pitch_line_colour="disabled" 
+          pitch_touchline_width_percentage="1" 
+          pitch_perspective="0.10" 
+          pitch_override_icon_size="2" 
+          line_width="1.4">
+
+    <string id="pitch_kit_icon" value="pitch/icons/dots" />
+  </widget>
+
+  <!-- Position label-->
+  <widget class="text" id="posT" alignment="centre" auto_size="vertical" colour="faded text" />
+
+</container>
+
+</panel>

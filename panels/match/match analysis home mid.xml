@@ -1,0 +1,143 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<colour id="positive_rating_background_colour" name="positive" />
+	<colour id="neutral_rating_background_colour" name="lime" />
+	<colour id="negative_rating_background_colour" name="negative" />
+
+	<colour id="positive_rating_text_colour" name="black" />
+	<colour id="neutral_rating_text_colour" name="orange" />
+	<colour id="negative_rating_text_colour" name="white" />
+	<symbol id="positive_appearance" value="boxes/custom/positive/paper" />
+	<symbol id="negative_appearance" value="boxes/custom/negative/paper" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+
+	<!--best players / worst players-->
+	<container class="bordered_box" appearance="boxes/bordered/no margin/paper" default_height="160" minimum_height="160" priority="1">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<string id="skin_style" value="title link" />
+
+		<container height="20">
+			<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="10" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<!--title-->
+			<widget class="link_button" auto_size="all" alignment="centre" font="title" colour="positive" red_replacement="positive" blue_replacement="positive">
+				<record id="click_event" event_id="plAn" section="mapl"/>
+				<translation id="text" translation_id="441061" type="use" value="Best Performers[COMMENT: match analysis screen title]" />
+			</widget>
+
+			<!--title-->
+			<widget class="link_button" auto_size="all" alignment="centre" font="title" colour="negative" red_replacement="negative" blue_replacement="negative">
+				<record id="click_event" event_id="plAn" section="mapl"/>
+				<translation id="text" translation_id="441062" type="use" value="Struggled to Perform[COMMENT: match analysis screen title, please try to avoid outright negatives like 'Worst Performers']" />
+			</widget>
+
+		</container>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<!--best-->
+			<container class="inner_box">
+				<layout class="arrange_vertical_attachment" layout="4,-1" offset="0" gap="8" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<container class="bordered_box" id="bPhc" appearance="boxes/popup/match/paper" red_replacement="positive"/>
+
+				<container class="client_object_viewer_xml_panel" id="bPho">
+					<layout class="arrange_horizontal_attachment" layout="-1,120" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<container>
+						<layout class="arrange_vertical_attachment" layout="22,20,-1,26" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="client_object_property_panel" property="Pers" alignment="right,centre_y" style="bold">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<widget class="client_object_property_panel" property="PpsC" alignment="right,centre_y" size="small" colour="faded text">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<container/>
+
+						<widget class="client_object_property_panel" id="PpSP" property="PpSP" alignment="right,centre_y">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+					</container>
+
+					<container>
+						<layout class="arrange_vertical_attachment" layout="120,22" offset="4" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="object_portrait_picture" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<container class="bordered_box" id="bphR" appearance="boxes/bordered/no margin/paper">
+							<!-- Rating Text -->
+							<widget class="dashed_number_label" id="bpTx" alignment="centre" style="semi_bold" format="[%fraction#1-4.1]">
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+							</widget>
+						</container>
+					</container>
+				</container>
+			</container>
+
+			<!--worst-->
+			<container class="inner_box">
+				<layout class="arrange_vertical_attachment" layout="4,-1" offset="0" gap="8"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<container class="bordered_box" id="wPhc" appearance="boxes/popup/match/paper" red_replacement="negative"/>
+
+				<container class="client_object_viewer_xml_panel" id="wPho">
+					<layout class="arrange_horizontal_attachment" layout="-1,120" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<container>
+						<layout class="arrange_vertical_attachment" layout="22,20,-1,26" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<widget class="client_object_property_panel" property="Pers" alignment="right,centre_y" style="bold">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<widget class="client_object_property_panel" property="PpsC" alignment="right,centre_y" size="small" colour="faded text">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<container/>
+
+						<widget class="client_object_property_panel" property="PpSN" alignment="right,centre_y">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+					</container>
+
+			<container>
+              <layout class="arrange_vertical_attachment" layout="120,22" offset="4" gap="0" />
+              <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+              <widget class="object_portrait_picture" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="false">
+                <record id="object_property" get_property="objt" set_property="objt" />
+              </widget>
+
+              <container class="bordered_box" id="bphR" appearance="boxes/bordered/no margin/paper">
+
+                <!-- Rating Text -->
+                <widget class="dashed_number_label" id="bpTx" alignment="centre" style="semi_bold" format="[%fraction#1-4.1]">
+                  <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+                </widget>
+              </container>
+            </container>			
+			</container>
+			</container>
+		</container>
+	</container>
+</panel>

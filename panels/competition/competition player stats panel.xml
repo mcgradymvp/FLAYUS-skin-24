@@ -1,0 +1,281 @@
+<!-- A panel used for displaying a ranked list of stats about players in a competition -->
+<panel>
+	<!-- Note: Removed Gap 10 here as it caused a scrollbar a min res-->
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="10" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<widget class="text" id="nomt" alignment="centre_x,top" hidden="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="20" />
+		<translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+	</widget>
+	<widget class="text" id="nory" alignment="centre_x,top" hidden="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="20" />
+		<translation id="text" translation_id="447506" type="use" value="No records set yet[COMMENT comp player stats panel: no records set but matches have started: title]" />
+	</widget>
+
+ <!-- Table showing the data-->
+  <widget class="object_list_table" id="stat" mode="stripe_rows" auto_size_rows="true" fixed_size_rows="false" row_spacing="0" should_force_refresh="true">
+
+    <list id="column_table_properties">
+      <!-- Ranking -->
+      <record id="csRS" width="20" auto_hide_priority="1" left="5">
+        <record id="widget_info" class="sortable_text" size="large" style="bold" alignment="left,centre_y"/>
+      </record>
+      <!-- Team -->
+      <record id="Ttea" width="35" dont_set_object="true" auto_hide_priority="4">
+        <record id="widget_info" class="object_portrait_picture" scale_picture="true" image_alignment="centre" />
+      </record>
+      <!-- Person portrait (property id doesn't matter because we just want the person object)-->
+      <record id="Port" width="60" auto_hide_priority="5" left="2">
+        <record id="widget_info" class="object_portrait_picture" scale_picture="true" image_alignment="centre" />
+      </record>
+      <!-- Person and team stacked labels -->
+      <record id="PTIf" width="-1" minimum_width="100" auto_hide_priority="2" dont_set_object="true" left="10">
+        <record id="widget_info" class="property_list_viewer_xml_panel" file="competition/player and team label panel" height="50" />
+      </record>
+      <!-- Short stat value -->
+      <record id="csSS" width="60" auto_hide_priority="1">
+        <record id="widget_info" class="label" size="large" style="bold" alignment="centre" />
+        <record id="column_heading" alignment="centre">
+          <translation id="text" translation_id="252894" type="use" value="Goals[COMMENT: team stat overall goals scored, short title]" />
+        </record>
+      </record>
+      <!-- Long stat value (mainly used to give wider columns) -->
+      <record id="csLS" width="100" auto_hide_priority="1">
+        <record id="widget_info" class="label" size="large" style="bold" alignment="centre" />
+        <record id="column_heading" alignment="centre">
+          <translation id="text" translation_id="252894" type="use" value="Goals[COMMENT: team stat overall goals scored, short title]" />
+        </record>
+      </record>
+    </list>
+
+		<list id="views">
+			<!-- General stats -->
+			<!-- Appearances -->
+			<record id="0001">
+				<!-- Appearances (1), Games Won (3), Games Lost (4) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" POgw="1" POgl="1" />
+			</record>
+			<!-- Games Won -->
+			<record id="0008">
+				<!-- Games Won (1), Games Lost (3), Appearances (4) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" POgl="1" Poap="1" />
+			</record>
+			<!-- Games Lost -->
+			<record id="0009">
+				<!-- Games Lost (1), Games Won (3), Appearances (4) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" POgw="1" Poap="1" />
+			</record>
+			<!-- Yellow Cards -->
+			<record id="0010">
+				<!-- Yellow Cards (1), Red Cards (4), Appearances (3) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Porc="1" Poap="1" />
+			</record>
+			<!-- Red Cards -->
+			<record id="0011">
+				<!-- Red Cards (1), Yellow Cards (4), Appearances (3) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Poyc="1" Poap="1" />
+			</record>
+			<!-- Player of the Match -->
+			<record id="0012">
+				<!-- Player Of The Match (1), Appearances (3), Average Rating (4) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Poap="1" Poav="1" />
+			</record>
+			<!-- Distance Covered -->
+			<record id="0017">
+				<!-- Distance Covered (1), Distance Covered / 90 mins (4), Appearances (3) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1">
+					<record id="PODr">
+						<boolean id="abbreviated_distance" value="true" />
+					</record>
+					<record id="Poap" />
+				</record>
+			</record>
+			<!-- Distance Covered / 90 -->
+			<record id="0018">
+				<!-- Distance Covered / 90 mins (1), Distance Covered (4), Appearances (3) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1">
+					<record id="POdr">
+						<boolean id="abbreviated_distance" value="true" />
+					</record>
+					<record id="Poap" />
+				</record>
+			</record>
+			<!-- Average Rating -->
+			<record id="0027">
+				<!-- Average Rating (1), Player Of The Match (4), Appearances (3) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Pomo="1" Poap="1" />
+			</record>
+
+			<!-- Attacking stats -->
+			<!-- Goals -->
+			<record id="0002">
+				<!-- Goals (1), Appearances (3), Average Minutes / Goal (4), Shots On Target (6)-->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Poap="1" POMg="1" POst="1" />
+			</record>
+			<!-- Average Minutes / Goal -->
+			<record id="0019">
+				<!-- Average Minutes / Goal (1), Appearances (3), Goals (4), Shots On Target (6)-->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Poap="1" Pogl="1" POst="1" />
+			</record>
+			<!-- Shots -->
+			<record id="0046">
+				<!-- Shots On Target (1), Appearances (3), Goals (4), Average Minutes / Goal (6)-->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Poap="1" Pogl="1" POMg="1" />
+			</record>
+			<!-- Shots On Target -->
+			<record id="0047">
+				<!-- Shots On Target (1), Appearances (3), Goals (4), Average Minutes / Goal (6)-->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Poap="1" Pogl="1" POMg="1" />
+			</record>
+			<!-- Shots On Target % -->
+			<record id="0016">
+				<!-- Shots On Target (1), Appearances (3), Goals (4), Average Minutes / Goal (6)-->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Poap="1" Pogl="1" POMg="1" />
+			</record>
+			<!-- Goals to shots -->
+			<record id="0055">
+				<!-- Goals To Shots (1), Goals (2), Shots Attempted(3), Shots On Target (4), Appearances (5) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Pogl="1" POsa="1" POst="1" Poap="1" />
+			</record>
+			<!--Team Goals -->
+			<record id="0006">
+				<!-- Team Goals (1), Goals (4), Assists (5), Appearances (3) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Pogl="1" Poas="1" Poap="1" />
+			</record>
+			<!-- Penalties -->
+			<record id="0004">
+				<!-- Penalties (1), Appearances (3) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Poap="1" />
+			</record>
+			<!-- Assists -->
+			<record id="0005">
+				<!-- Assists (1), Key Passes (4), Pass Completion (6), Cross Completion (7), App(3) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" POkp="1" Popa="1" POcr="1" Poap="1" />
+			</record>
+			<!-- Key Passes -->
+			<record id="0023">
+				<!-- Key Passes (1), Assists (4), Pass Completion (6), Cross Completion (7), App(3) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Poas="1" Popa="1" POcr="1" Poap="1" />
+			</record>
+			<!-- Chances Created -->
+			<record id="0054">
+				<!-- Key Passes (1), Assists (4), Pass Completion (6), Cross Completion (7), App(3) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Poas="1" Popa="1" POcr="1" Poap="1" />
+			</record>
+			<!-- Pass Completion -->
+			<record id="0013">
+				<!-- Pass Completion (1), Key Passes (4), Assists (6), Cross Completion (7), App(3) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" POkp="1" Poas="1" POcr="1" Poap="1" />
+			</record>
+			<!-- Cross Completion -->
+			<record id="0022">
+				<!-- Cross Completion (1), Key Passes (4), Assists (6), Pass Completion (7), App(3) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" POkp="1" Poas="1" Popa="1" Poap="1" />
+			</record>
+			<!-- Dribbles per game -->
+			<record id="0015">
+				<!-- Dribbles / Game (1), Key Passes (4), Assists (6), Goals (7), Appearances (3) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" POkp="1" Poas="1" Pogl="1" Poap="1" />
+			</record>
+			<!-- Offside -->
+			<record id="0021">
+				<!-- Offside (1), Appearances (3), Distance Covered / 90 mins (4), Goals (6), As -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Poap="1" PODr="1" Pogl="1" Poas="1" />
+			</record>
+
+			<!-- Defending stats -->
+			<!-- Team Conceded -->
+			<record id="0007">
+				<!-- Team Conceded (1), Mistakes Leading To Goal (4), Mistakes (5), Appearances, Tackles / Game (7), Key Tackles (8) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" POgm="1" POtm="1" Poap="1" Pota="1" POkt="1" />
+			</record>
+			<!-- Tackles / Game -->
+			<record id="0014">
+				<!-- Tackles / Game (1), Key Tackles (4), Mistakes Leading To Goal (6), Mistakesearances (3) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" POkt="1" POgm="1" POtm="1" Poap="1" />
+			</record>
+			<!-- Mistakes Leading To Goal -->
+			<record id="0029">
+				<!-- Mistakes Leading To Goal (1), Mistakes (4), Appearances (3) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" POtm="1" Poap="1" />
+			</record>
+			<!-- Mistakes -->
+			<record id="0028">
+				<!-- Mistakes (1), Mistakes Leading To Goal (4), Appearances (3) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" POgm="1" Poap="1" />
+			</record>
+			<!-- Key Tackles -->
+			<record id="0024">
+				<!-- Key Tackles (1), Tackles / Game (4), Mistakes Leading To Goal (6), Mistakesearances (3) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Pota="1" POgm="1" POtm="1" Poap="1" />
+			</record>
+			<!-- Key Aerial Challenges -->
+			<record id="0025">
+				<!-- Key Aerial Challenges (1), Headers (4), Header Completion Ratio, Appearance -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" POhc="1" POhr="1" Poap="1" />
+			</record>
+			<!-- Interceptions Made -->
+			<record id="0026">
+				<!-- Interceptions Made (1), Tackles / Game (4), Key Tackles (6), Appearances (3 -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Pota="1" POkt="1" Poap="1" />
+			</record>
+			<!-- Headers -->
+			<record id="0030">
+				<!-- Headers (1), Key Aerial Challenges (4), Appearances (3) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" POkh="1" Poap="1" />
+			</record>
+
+			<!-- Goalkeeping -->
+			<!-- Conceded -->
+			<record id="0003">
+				<!-- Conceded (1), Appearances (3), Average Minutes Played / Conceded (4), Clean6) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Poap="1" POcg="1" POcs="1" />
+			</record>
+			<!-- Average Minutes / Conceded ( Doesn't exist - JT )-->
+			<!--<record id="home">
+        -->
+			<!-- Average Minutes / Conceded (1), Appearances (3), Conceded (4), Clean Sheeets-->
+			<!--
+        <record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Poco="1" POcs="1"/>
+      </record>-->
+			<!-- Clean Sheets -->
+			<record id="0020">
+				<!-- Clean Sheets (1), Appearances (3), Conceded (4), Average Minutes / Conceded -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Poap="1" Poco="1" POcg="1" />
+			</record>
+			<!-- % of Shots Saved ( Doesn't exist - JT ) -->
+			<!--<record id="home">
+        -->
+			<!-- % of Shots Saved (1), Appearances (3), Conceded (4), Clean Sheets (6), Average Minutes / Conceded (7) -->
+			<!--
+        <record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" Poco="1" POcs="1" POcg="1"/>
+      </record>-->
+			<!-- Shots Saved ( Doesn't exist - JT ) -->
+			<!--<record id="home">
+        -->
+			<!-- Shots Saved (1), % of Shots Saved (3), Shots Held (4), Shots Parried (5),Appearances (7), Clean Sheets (8) -->
+			<!--
+        <record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" POvp="1" Poap="1" POcs="1"/>
+      </record>-->
+			<!-- Shots Held-->
+			<record id="0048">
+				<!-- Shots Held (1), % of Shots Saved (3), Shots Saved (4), Shots Parried (5), Appearances (7), Clean Sheets (8) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" POts="1" POvp="1" Poap="1" POcs="1" />
+			</record>
+			<!-- Shots Parried-->
+			<record id="0049">
+				Ó
+				<!-- Shots Parried (1), % of Shots Saved (3), Shots Saved (4), Shots Held (5), As (7), Clean Sheets (8) -->
+				<record id="view" csRS="1" Ttea="1" Port="1" PTIf="1" Pnat="1" Page="1" csLS="1" POts="1" POvh="1" Poap="1" POcs="1" />
+			</record>
+		</list>
+
+		<integer id="view" value="0001" />
+	</widget>
+
+	<!-- Minimum appearances label -->
+	<widget class="text" id="mina" auto_size="vertical" colour="faded text" hidden="true">
+		<translation id="hint" translation_id="395478" type="use" value="The minimum number of games played or actions attempted for the player to be included in this ranking[COMMENT: Comp player stats - minimum of x games played or minimum of x passes attempted etc.]" />
+	</widget>
+</panel>

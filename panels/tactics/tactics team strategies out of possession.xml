@@ -1,0 +1,131 @@
+﻿<panel wants_mouse_events="false" disable_animations="true">
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4" />
+
+	<!--out of possession-->
+	<container draw_vertical_dividers="true">
+
+		<attachment_group class="horizontal_arrange" horizontal_gap="20" horizontal_layout="-2,-1" />
+
+		<container class="inner_box" navigation_container="true" default_focus="true">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+			<container class="scrolling_box">
+				<container>
+					<attachment_group class="vertical_arrange_autosize_horizontal_centre" vertical_offset="0" vertical_gap="16" horizontal_inset="0" />
+
+					<container width="196">
+
+						<attachment_group class="vertical_arrange_autosize" />
+
+						<widget class="text" font="title" colour="white" alignment="centre" auto_size="vertical">
+							<translation id="text" translation_id="466522" type="use" value="Defensive Shape[COMMENT: team tactical strategy setting]" />
+						</widget>
+
+					</container>
+
+					<!--Defensive width-->
+
+					<container width="450">
+						<attachment_group class="vertical_arrange_autosize" />
+					
+
+						<widget class="pitch_with_tactics_out_of_possession" height="300" id="dwpi" icon_flags="dont_fade_icons, dont_use_player_instructions_menu, use_own_colours,dont_allow_player_links">
+							<boolean id="pitch_is_read_only" value="true" />
+							<string id="vertical" value="true" />
+							<string id="pitch_line_colour" value="white" />
+							<integer id="pitch_touchline_width_percentage" value="20" />
+							<integer id="line_width" value="1" />
+							<boolean id="pitch_draw_grass" value="false" />
+							<boolean id="pitch_dont_draw_indicators" value="true" />
+
+						</widget>
+					</container>
+
+				</container>
+
+			</container>
+
+		</container>
+
+		<container class="inner_box" navigation_container="true">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="18" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="4" />
+
+				<!-- Pressing Intensity Slider-->
+				<widget class="tactical_instructions_slider_Widget" id="cldn" icon="icons/custom/team instructions/pressing" />
+
+				<widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_PREVENT_SHORT_GOALKEEPER_DISTRIBUTION">
+					<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_PREVENT_SHORT_GOALKEEPER_DISTRIBUTION" />
+				</widget>
+
+			</container>
+
+			<container>
+
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="2" />
+
+				<!--Engagement-->
+				<widget class="text" height="20" alignment="centre" font="title" colour="white">
+					<translation id="text" translation_id="227902" type="use" value="Tackling" />
+				</widget>
+				<widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_STAY_ON_FEET">
+					<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_STAY_ON_FEET" />
+				</widget>
+				<widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_GET_STUCK_IN">
+					<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_GET_STUCK_IN" />
+				</widget>
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="2" />
+
+				<!--Offside strategy-->
+				<widget class="text" height="20" alignment="centre" font="title" colour="white">
+					<translation id="text" translation_id="466508" type="use" value="Defensive Line[COMMENT: label for a slider to choose how high up the pitch your team's defensive line should be]" />
+				</widget>
+				<widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_HOLD_LINE">
+					<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_HOLD_LINE" />
+				</widget>
+				<widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_DROP_OFF">
+					<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_DROP_OFF" />
+				</widget>
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="2" />
+
+				<!--Pressing trap strategy-->
+				<widget class="text" height="20" alignment="centre" font="title" colour="white">
+					<translation id="text" translation_id="557841" type="use" value="Pressing Trap[COMMENT: AREA: Tactics; NOTE: heading for section about what type of pressing trap to implement; Trap Inside or Outside]" />
+				</widget>
+				<widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_PRESSING_TRAP_IN">
+					<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_PRESSING_TRAP_IN" />
+				</widget>
+				<widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_PRESSING_TRAP_OUT">
+					<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_PRESSING_TRAP_OUT" />
+				</widget>
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="2" />
+
+				<!--Cross Engagement strategy-->
+				<widget class="text" height="20" alignment="centre" font="title" colour="white">
+					<translation id="text" translation_id="557842" type="use" value="Cross Engagement[COMMENT: AREA: Tactics; NOTE: How to handle crosses, TI_CROSS_STOP or TI_CROSS_INVITE]" />
+				</widget>
+				<widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_CROSS_STOP">
+					<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_CROSS_STOP" />
+				</widget>
+				<widget class="tactics_pitch_button" height="28" itID="simatchshared::TEAM_INSTRUCTION::TI_CROSS_INVITE">
+					<record id="click_event" event_id="sele" itID="simatchshared::TEAM_INSTRUCTION::TI_CROSS_INVITE" />
+				</widget>
+
+			</container>
+
+		</container>
+	</container>
+</panel>

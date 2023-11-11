@@ -1,0 +1,338 @@
+﻿<panel floating_container_appearance="boxes/floating/standard/paper"
+    hot_area_top_image="icons/custom/docking/top"
+    hot_area_bottom_image="icons/custom/docking/bottom"
+    hot_area_left_image="icons/custom/docking/left"
+    hot_area_right_image="icons/custom/docking/right"
+    default_display_position="8,140">
+
+	<record id="docking_zone_appearance">
+		<flags id="appearance" value="boxes/main/standard/paper"/>
+		<flags id="background_colour" value="bg darker"/>
+	</record>
+
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+	<boolean id="wants_mouse_events" value="true" />
+
+	<float id="minimised_docking_zone_width" value="42.0" />
+	<float id="minimised_docking_zone_height" value="42.0" />
+
+	<!--dockable content-->
+	<list id="items">
+		<!-- Match widget - this is a document so fills the rest of the remaining screen space-->
+		<record id="hilp" content_type="1">
+			<string id="text" value="Match Highlights" />
+			<record id="widget_info">
+				<symbol id="class" value="match_highlights_panel" />
+				<string id="file" value="match/match highlights small" />
+			</record>
+		</record>
+
+		<!-- Match full window widget - this is a document so fills the rest of the remaining screen space-->
+		<record id="over" content_type="1">
+			<string id="text" value="Match Full Window Panel" />
+			<record id="widget_info">
+				<symbol id="class" value="match_full_window_panel" />
+			</record>
+		</record>
+
+		<record id="gene">
+			<translation id="text" translation_id="248359" type="use" value="General" />
+			<list id="items">
+
+				<!-- Match information widget-->
+				<record id="minf" width="290" height="155" maximum_height="250" maximum_width="400" minimum_height="150" minimum_width="270">
+					<translation id="text" translation_id="233151" type="use" value="Match Information" />
+					<record id="widget_info">
+						<symbol id="class" value="match_info_panel" />
+						<string id="file" value="match/match info floating" />
+					</record>
+				</record>
+
+				<!-- Latest Scores widget-->
+				<record id="mlsp" width="370" height="220" maximum_height="500" maximum_width="500" minimum_height="100" minimum_width="200">
+					<translation id="text" translation_id="243219" type="use" value="Latest Scores" />
+					<record id="widget_info">
+						<symbol id="class" value="match_latest_scores_panel" />
+						<string id="file" value="match/match latest scores floating" />
+						<boolean id="save_session_state" value="true" />
+					</record>
+				</record>
+
+				<!-- Latest Event Updates widget-->
+				<record id="mgup" width="370" height="190" maximum_height="500" maximum_width="500" minimum_height="60" minimum_width="200">
+					<translation id="text" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+					<record id="widget_info">
+						<symbol id="class" value="match_goal_update_panel" />
+						<string id="file" value="match/match goal update floating" />
+					</record>
+				</record>
+
+				<!-- League Table widget-->
+				<record id="mltp" width="350" height="226" maximum_height="600" maximum_width="500" minimum_height="100" minimum_width="240">
+					<translation id="text" translation_id="248082" type="use" value="League Table" />
+					<record id="widget_info">
+						<symbol id="class" value="match_league_table_panel" />
+						<boolean id="MLTf" value="true" />
+					</record>
+				</record>
+
+				<!-- Match stats widget-->
+				<record id="mtst" width="420" height="360" maximum_height="700" maximum_width="500" minimum_height="200" minimum_width="200">
+					<translation id="text" translation_id="247439" type="use" value="Match Stats" />
+					<record id="widget_info">
+						<symbol id="class" value="match_stats_panel" />
+						<string id="file" value="match/match stats floating" />
+					</record>
+				</record>
+
+				<!-- Action zones widget-->
+				<record id="mazp" width="280" height="280" maximum_height="700" maximum_width="700" minimum_height="280" minimum_width="280">
+					<translation id="text" translation_id="247327" type="use" value="Action Zones" />
+					<record id="widget_info">
+						<symbol id="class" value="match_action_zones_panel" />
+						<string id="file" value="match/match action zones small" />
+						<colour id="ptlc" name="grey5" />
+					</record>
+				</record>
+
+				<!--focus of attacks-->
+				<record id="foap" width="280" height="280" maximum_height="700" maximum_width="700" minimum_height="280" minimum_width="280">
+					<translation id="text" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+					<record id="widget_info">
+						<symbol id="class" value="match_action_zones_panel" />
+						<string id="file" value="match/focus of attacks panel" />
+					</record>
+				</record>
+	
+				<!-- pass map widget-->
+				<record id="bmin" width="410" height="250" maximum_height="700" maximum_width="410" minimum_height="250" minimum_width="410">
+					<translation id="text"  type="use" value="패스맵" />
+					<record id="widget_info">
+						<symbol id="class" value="match_info_panel" />
+						<string id="file" value="match/match info floating 3" />
+					</record>
+				</record>
+
+				<!-- Radar widget-->
+				<record id="mrdr" width="250" height="220" maximum_height="700" maximum_width="500" minimum_height="220" minimum_width="250">
+					<translation id="text" translation_id="284286" type="use" value="Radar" />
+					<record id="widget_info">
+						<symbol id="class" value="match_pitch_panel" />
+						<string id="file" value="match/match pitch small" />
+					</record>
+				</record>
+			
+				<!-- Match report widget-->
+				<record id="mtrp" width="400" height="260" maximum_height="330" maximum_width="500" minimum_height="100" minimum_width="200">
+					<translation id="text" translation_id="242329" type="use" value="Match Report" />
+					<record id="widget_info">
+						<symbol id="class" value="match_report_panel" />
+						<string id="file" value="match/match report small" />
+					</record>
+				</record>
+
+				<!-- Player watch widget-->
+				<record id="mPlw" width="300" height="250" maximum_height="700" maximum_width="400" minimum_height="200" minimum_width="200">
+					<translation id="text" translation_id="447542" type="use" value="Player Watch[COMMENT: title for a match widget to allow you to follow a player's match stats]" />
+					<record id="widget_info">
+						<symbol id="class" value="match_player_watch_panel" />
+					</record>
+				</record>
+			</list>
+		</record>
+
+		<!--human team stuff-->
+		<record id="Huma">
+        <translation id="text" type="use" value="유저팀 정보" />
+			<list id="items">
+				<!-- human player ratings widget-->
+				<record id="HfMs" width="400" maximum_height="600" maximum_width="500" minimum_height="200" minimum_width="290">
+					<translation id="text" translation_id="247329" type="use" value="Player Ratings" />
+					<record id="widget_info">
+						<symbol id="class" value="match_team_stats_panel" />
+						<string id="file" value="match/match team stats floating" />
+						<boolean id="use_short_name_format" value="true" />
+					</record>
+				</record>
+
+				<!-- human team stats widget -->
+				<record id="HMTs" width="500" height="400" minimum_height="400" minimum_width="400">
+					<translation id="text" translation_id="247393" type="use" value="Team Stats" />
+					<record id="widget_info">
+						<symbol id="class" value="match_team_stats_panel" />
+						<string id="file" value="match/match team stats full floating" />
+						<boolean id="use_short_name_format" value="true" />
+					</record>
+				</record>
+
+				<!-- human player motivation widget-->
+				<record id="Htms" width="350" height="330" maximum_height="600" maximum_width="500" minimum_height="200" minimum_width="350">
+					<translation id="text" translation_id="331837" type="use" value="Body Language[COMMENT - what kind of mood the player appears to be in, formerly titled 'motivation']" />
+					<record id="widget_info">
+						<symbol id="class" value="match_team_stats_panel" />
+						<string id="file" value="match/match team motivation floating" />
+						<boolean id="use_short_name_format" value="true" />
+					</record>
+				</record>
+
+				<!-- human player performance widget-->
+				<record id="Htps" width="260" height="330" maximum_height="600" maximum_width="400" minimum_height="200" minimum_width="260">
+					<translation id="text" translation_id="447544" type="use" value="Player Performance[COMMENT: FR21692 - title for match information widget]" />
+					<record id="widget_info">
+						<symbol id="class" value="match_team_stats_panel" />
+						<string id="file" value="match/match team performance floating" />
+						<boolean id="use_short_name_format" value="true" />
+					</record>
+				</record>
+
+				<!-- human Formation widget-->
+				<record id="Hmtt" width="200" height="310" maximum_height="700" maximum_width="500" minimum_height="310" minimum_width="200">
+					<translation id="text" translation_id="298104" type="use" value="Formation" />
+					<record id="widget_info">
+						<symbol id="class" value="match_formation_panel" />
+						<string id="file" value="match/match formation small panel2" />
+						<boolean id="read_only" value="true" />
+						<integer id="pitch_kit_height" value="32" />
+						<integer id="pitch_kit_width" value="34" />
+						<flags id="icon_flags" value="use_player_kits_back,hide_bordered_box,show_number,show_name_on_hover,hide_bordered_box" />
+					</record>
+				</record>
+			</list>
+		</record>
+
+		<!--other team stuff-->
+		<record id="Othe">
+        <translation id="text" type="use" value="상대팀 정보" />
+			<list id="items">
+				<!-- other player ratings widget-->
+				<record id="OfMs" width="400" height="355" maximum_height="600" maximum_width="500" minimum_height="200" minimum_width="290">
+					<translation id="text" translation_id="247329" type="use" value="Player Ratings" />
+					<record id="widget_info">
+						<symbol id="class" value="match_team_stats_panel" />
+						<string id="file" value="match/match team stats floating" />
+						<boolean id="use_short_name_format" value="true" />
+					</record>
+				</record>
+
+				<!-- other team stats widget -->
+				<record id="OMTs" width="500" height="400" minimum_height="400" minimum_width="400">
+					<translation id="text" translation_id="247393" type="use" value="Team Stats" />
+					<record id="widget_info">
+						<symbol id="class" value="match_team_stats_panel" />
+						<string id="file" value="match/match team stats full floating" />
+						<boolean id="use_short_name_format" value="true" />
+					</record>
+				</record>
+
+				<!-- other assistant manager analysis widget -->
+				<record id="MOan" width="300" height="400" maximum_height="600" maximum_width="500" minimum_height="250" minimum_width="250">
+					<translation id="text" translation_id="447543" type="use" value="Assistant Analysis[COMMENT: FR21692 - title for match information widget]" />
+					<record id="widget_info">
+						<symbol id="class" value="match_away_analysis_panel" />
+						<string id="file" value="match/match analysis floating" />
+					</record>
+				</record>
+
+				<!-- other player motivation widget-->
+				<record id="Otms" width="350" height="330" maximum_height="600" maximum_width="500" minimum_height="200" minimum_width="260">
+					<translation id="text" translation_id="331837" type="use" value="Body Language[COMMENT - what kind of mood the player appears to be in, formerly titled 'motivation']" />
+					<record id="widget_info">
+						<symbol id="class" value="match_team_stats_panel" />
+						<string id="file" value="match/match team motivation floating" />
+						<boolean id="use_short_name_format" value="true" />
+					</record>
+				</record>
+
+				<!-- other player performance widget-->
+				<record id="Otps" width="260" height="330" maximum_height="600" maximum_width="400" minimum_height="200" minimum_width="260">
+					<translation id="text" translation_id="447544" type="use" value="Player Performance[COMMENT: FR21692 - title for match information widget]" />
+					<record id="widget_info">
+						<symbol id="class" value="match_team_stats_panel" />
+						<string id="file" value="match/match team performance floating" />
+						<boolean id="use_short_name_format" value="true" />
+					</record>
+				</record>
+
+				<!-- other Formation widget-->
+				<record id="Omtt" width="200" height="310" maximum_height="700" maximum_width="500" minimum_height="310" minimum_width="200">
+					<translation id="text" translation_id="298104" type="use" value="Formation" />
+					<record id="widget_info">
+						<symbol id="class" value="match_formation_panel" />
+						<string id="file" value="match/match formation small panel2" />
+						<boolean id="read_only" value="true" />
+						<integer id="pitch_kit_height" value="32" />
+						<integer id="pitch_kit_width" value="34" />
+						<flags id="icon_flags" value="use_player_kits_back,hide_bordered_box,show_number,show_name_on_hover,hide_bordered_box" />
+					</record>
+				</record>
+			</list>
+		</record>
+
+	</list>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="-10" horizontal_inset="0" vertical_offset="0"/>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<!--dockable widgets go in here-->
+				<container id="Pitc" navigation_focus_target="false">
+				</container>
+
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="10" vertical_inset="0"/>		
+				<!--match feed-->
+				<widget class="match_feed_panel" id="CnFD" width="400" hpco="true">
+					<layout class="stick_to_sides_attachment" alignment="bottom" inset="15" />
+					<record id="object_property" get_property="objt" set_property="objt" />
+		
+				</widget>
+
+				<widget class="spacer"/>
+				
+			</container>
+
+		</container>
+
+		<!--buttons to show highlights-->
+		<widget id="mhcp" class="match_highlights_console_panel" disable_layout_attachments_when_embedded="true">
+			<layout class="stick_to_sides_attachment" alignment="right" inset="10" />
+			<layout class="stick_to_sides_attachment" alignment="top" inset="50" />
+
+			<record id="object_property" get_property="objt" set_property="objt" />
+		</widget>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" vertical_inset="0"/>
+
+			<widget class="match_commentary_panel" id="cmif" width="700">
+
+				<animation class="fade_animation" start_value="0" end_value="1" duration="0.5" delay="1.0" end_mode="hold_end"/>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+		</container> 
+		
+	</container>
+
+		<widget class="match_caption_panel" id="MCap">
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="35" />
+			<layout class="centre_in_parent_attachment" alignment="horizontal"/>
+			<record id="object_property" get_property="objt" set_property="objt" />
+		</widget>
+	
+	<!--penalty display-->
+	<widget id="PenD" class="match_penalty_shootout_display" hidden="true">
+		<animation class="slide_in_top_animation" duration="0.6" tween="ease_out" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		<record id="object_property" get_property="objt" set_property="objt" />
+	</widget>
+
+</panel>

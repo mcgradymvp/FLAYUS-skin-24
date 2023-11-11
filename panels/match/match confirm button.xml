@@ -1,0 +1,57 @@
+﻿<panel navigation_container="true">
+    <attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left, extend" />
+
+    <container>
+        <attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="left" />
+
+        <widget class="button" id="Tbck" auto_size="all">
+            <translation id="text" type="use" translation_id="247672" value="Back"/>
+            <record id="click_event" event_id="GOTO" event_target="brow" scin="-3" />
+        </widget>
+
+        <widget class="icon_button" id="uchc" auto_size="all" >
+            <translation id="text" translation_id="230251" type="use" value="Undo"/>
+            <record id="click_event">
+                <flags id="event_id" value="uchc" />
+            </record>
+        </widget>
+    </container>
+
+    <container id="CONF">
+        <attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right,extend">
+            <global id="horizontal_gap" name="ui.button_row_gap"/>
+        </attachment_group>
+
+        <container height="30">
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0, 6, 0, 6" />
+
+            <widget class="match_commentary_panel" id="cmif">
+							<string id="remove_if" value="is_fmt"/>
+                <animation class="fade_animation" start_value="0" end_value="1" duration="0.5" delay="1.0" end_mode="hold_end"/>
+
+                <record id="object_property">
+                    <integer id="get_property" value="objt" />
+                    <integer id="set_property" value="objt" />
+                </record>
+            </widget>
+
+        </container>
+
+        <!--cancel-->
+        <widget class="icon_button" id="cntt" auto_size="all" controller_button="b_button" click_event="cntt">
+            <translation id="text" translation_id="229828" type="use" value="Cancel" />
+        </widget>
+
+        <widget class="icon_button" id="cftt" auto_size="all" alignment="centre" icon_alignment="centre_left, centre_y" click_event="cftt" icon="icons/16px/speech bubble" appearance="buttons/primary/normal/button">
+            <translation id="text" translation_id="441067" type="use" value="Give Team Talk[COMMENT: FR21700, confirm a tactical change and confirm that you want to give a team talk to the players brought on]" />
+        </widget>
+
+        <!--confirm-->
+        <widget class="primary_icon_button" auto_size="all" id="conf" click_event="aptt" controller_button="y_button"/>
+    </container>
+
+		<container height="30" id="fmtC" file="widgets/match fmt half time continue widget">
+		  <string id="create_if" value="is_fmt"/>
+	  </container>
+
+</panel>

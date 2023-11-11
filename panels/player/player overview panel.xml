@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="1" />
+
+	<container class="horizontal_adaptive_container" offset="0" inset="0" gap="0" mode="distribute_equally">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	
+		<!-- L -->
+		<container class="vertical_adaptive_container" offset="0" inset="0" gap="0" width="370" priority="1" mode="distribute_equally">
+
+			<!-- Portrait -->
+			<container class="bordered_box" offset="0" inset="-5" gap="0" default_height="474" priority="1" navigation_container="true" >    
+				<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />    
+
+				<container class="client_object_viewer_selector_panel" id="cosA" file="gunzo/gunzo player profile selector panel" default_item="gzp1" save_session_state="true" save_default_state="true" priority="1" default_height="-1">
+					<integer id="default_for_unemployed_managers" value="gzp1"/>
+					<integer id="default_for_international_managers_other_team" value="gzp1"/>
+					<integer id="default_for_everyone_else" value="gzp1"/>
+					<integer id="default_for_versus_mode" value="gzp1"/>
+				</container> 	  
+		    </container> 
+			
+			<!-- tabbed -->	  
+			<container class="tabbed_container" id="tpp1" appearance="boxes/bordered/no margin/paper" default_item="gzp0" offset="0" inset="0" gap="0" save_session_state="true" save_default_state="true" default_height="-3" minimum_height="150" priority="2">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!-- status -->
+				<widget class="player_personal_details_panel" id="gzp0" file="gunzo/gunzo player profile tab0" default_width="-1" priority="1">
+					<translation id="title" translation_id="323122" type="use" value="Overview[COMMENT: Player comparison type header]" />
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget> 	
+
+				<!-- Stats -->
+				<widget class="player_personal_details_panel" id="gzpA" file="gunzo/gunzo player profile tab1" default_width="-1" priority="1">
+					<translation id="title" translation_id="247412" type="use" value="Stats" />
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget> 	
+
+				<!-- homegrown -->
+				<widget class="player_personal_details_panel" id="gzpD" file="gunzo/gunzo player profile tab4" default_width="-1" priority="1">
+					<translation id="title" translation_id="291490" type="use" value="Nation[COMMENT: nation the team is in]" />
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget> 
+
+			</container> 
+		</container>
+       
+    	<!-- C -->
+		<container class="main_box" minimum_width="620" default_width="-1" priority="1" mode="distribute_equally" navigation_container="true">		
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+		<container class="vertical_adaptive_container" draw_horizontal_dividers="true" offset="0" inset="0" gap="0" minimum_width="610" default_width="-1" priority="1" mode="distribute_equally">
+			<container class="horizontal_adaptive_container" offset="0" inset="0" gap="0" minimum_height="510" default_height="-4" priority="1" mode="distribute_equally">	
+				<container class="vertical_adaptive_container" draw_horizontal_dividers="true" offset="0" inset="0" gap="1" default_width="-1" priority="1" mode="distribute_equally">
+
+					<container class="horizontal_adaptive_container" offset="0" inset="0" gap="0" default_height="427" priority="1" mode="distribute_equally">	
+					
+					<container class="tabbed_container" id="tpp1" default_item="patt" offset="0" inset="0" gap="0" save_session_state="true" save_default_state="true" minimum_width="610" default_width="-1" priority="1">
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+							
+							<!-- Attributes panel -->
+							<widget class="player_attributes_panel" file="gunzo/gunzo player attributes panel" id="patt" late_loading="true">
+							<translation id="title" translation_id="229822" type="use" value="Attributes" auto_size="horizontal"/>
+                                <record id="object_property" get_property="objt" set_property="objt"/>
+                            </widget>
+						    <widget class="player_training_information" id="Xfre" file="attributes/player profile training3" late_loading="true">
+								<translation id="title" translation_id="230334" type="use" value="Training[COMMENT - club training menu option on manager menu]"/>
+								<record id="object_property" get_property="objt" set_property="objt"/>
+							</widget>	
+							 <widget class="person_information_panel" file="attributes/homegrown information" late_loading="true">
+								<translation id="title" type="use" value="홈그로운 정보" />
+                                <record id="object_property">
+                                   <integer id="get_property" value="objt"/>
+                                   <integer id="set_property" value="objt"/>
+                                </record>			     
+                            </widget>  
+							<widget class="person_personal_information_panel" file="attributes/person personal information3" id="werY" late_loading="true">
+								<translation id="title" translation_id="242863" type="use" value="Work Permit" />
+							    <record id="object_property">
+                                   <integer id="get_property" value="objt"/>
+                                   <integer id="set_property" value="objt"/>
+                                </record>
+                            </widget>
+							<widget class="player_transfer_information_panel" file="attributes/player transfer information3" id="Rute" late_loading="true">
+								<translation id="title" type="use" value="이적상태 설정" />
+								<record id="object_property">
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</widget>
+							<widget class="player_injury_panel" id="pam1" file="attributes/player injury panel" late_loading="true">
+		                        <translation id="title" translation_id="247861" type="use" value="Injuries[COMMENT: squad list view menu, injuries menu item label]" />
+                                <record id="object_property" get_property="objt" set_property="objt"/>                        
+						   </widget>
+							<widget class="player_history_stats_panel" id="pahs" file="attributes/player attribute history" late_loading="true">
+								<translation id="title" translation_id="247605" type="use" value="Career Stats" />
+								<record id="object_property">
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</widget>
+							<widget class="player_form_panel" id="pafp" file="attributes/player form" late_loading="true">
+								<translation id="title" translation_id="337896" type="use" value="피드백" />
+								<record id="object_property">
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</widget>
+						</container>			
+					</container>
+					
+			<!-- Season stats-->
+			<container minimum_height="130" default_height="190" priority="1" navigation_container="true" >
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<widget class="player_additional_stats_panel" id="pcsp" file="gunzo/gunzo player additional stats small" late_loading="true">
+						<record id="object_property">
+							<list id="get_properties">
+								<!-- Hide this panel if player is in inactive league-->
+								<record id="object_property" get_property="objt" set_property="objt"/>
+								<record id="object_property" get_property="Pila" set_property="hidn"/>
+							</list>
+						</record>
+					</widget>
+					<widget class="player_stats_panel" id="pssp" file="player/player stats small" late_loading="true">
+						<record id="object_property">
+							<list id="get_properties">
+								<!-- Show this panel if player is in inactive league-->
+								<record id="object_property" get_property="Pila" set_property="Shwn"/>
+								<record id="object_property" get_property="objt" set_property="objt"/>
+							</list>
+						</record>
+					</widget>
+			</container> 	
+					<!-- 1 -->
+					<container class="horizontal_adaptive_container" offset="0" inset="0" gap="1" navigation_container="true" minimum_height="60" default_height="-1" priority="2" mode="distribute_equally">	      
+
+						<container class="client_object_viewer_selector_panel" id="cosB" file="gunzo/gunzo player overview small selector panel" late_loading="true" save_session_state="true">
+							<integer id="default_for_unemployed_managers" value="pcon"/>
+							<integer id="default_for_international_managers_other_team" value="pcon"/>
+							<integer id="default_for_everyone_else" value="pcon"/>
+							<integer id="default_for_versus_mode" value="pcon"/>
+						</container>
+						<container class="client_object_viewer_selector_panel" id="cos3" file="gunzo/gunzo player overview small selector panel" late_loading="true" priority="2" save_session_state="true">
+							<integer id="default_for_unemployed_managers" value="Pha1"/>
+							<integer id="default_for_international_managers_other_team" value="Pha1"/>
+							<integer id="default_for_everyone_else" value="Pha1"/>
+							<integer id="default_for_versus_mode" value="Pha1"/>
+						</container>
+					</container>  
+					<!-- 2 -->
+					<container class="horizontal_adaptive_container" offset="0" inset="0" gap="1" minimum_height="130" default_height="-1" priority="4" mode="distribute_equally">	      
+						<container class="client_object_viewer_selector_panel" id="cosF" file="gunzo/gunzo player overview small selector panel" late_loading="true" save_session_state="true">
+							<integer id="default_for_unemployed_managers" value="Ppl1"/>
+							<integer id="default_for_international_managers_other_team" value="Ppl1"/>
+							<integer id="default_for_everyone_else" value="Ppl1"/>
+							<integer id="default_for_versus_mode" value="Ppl1"/>
+						</container>	
+						<container class="client_object_viewer_selector_panel" id="cosE" file="gunzo/gunzo player overview small selector panel" late_loading="true" save_session_state="true">
+							<integer id="default_for_unemployed_managers" value="ifo1"/>
+							<integer id="default_for_international_managers_other_team" value="ifo1"/>
+							<integer id="default_for_everyone_else" value="ifo1"/>
+							<integer id="default_for_versus_mode" value="ifo1"/>
+						</container>	
+					</container>    
+					<!-- 3 --> 	
+					<container class="horizontal_adaptive_container" offset="0" inset="0" gap="1" minimum_height="100" default_height="-1" priority="3" mode="distribute_equally">	      
+						<container class="client_object_viewer_selector_panel" id="cosD" file="gunzo/gunzo player overview small selector panel" late_loading="true" save_session_state="true">
+							<integer id="default_for_unemployed_managers" value="pTTS"/>
+							<integer id="default_for_international_managers_other_team" value="pTTS"/>
+							<integer id="default_for_everyone_else" value="pTTS"/>
+							<integer id="default_for_versus_mode" value="pTTS"/>
+						</container>
+      					<container class="client_object_viewer_selector_panel" id="cos5" file="gunzo/gunzo player overview small selector panel" late_loading="true" priority="2" save_session_state="true">
+							<integer id="default_for_unemployed_managers" value="ptis"/>
+							<integer id="default_for_international_managers_other_team" value="ptis"/>
+							<integer id="default_for_everyone_else" value="ptis"/>
+							<integer id="default_for_versus_mode" value="ptis"/>
+						</container>	
+					</container>   	  
+				</container>  
+			</container>   	
+ 	
+		   </container>   
+		 </container>    
+		<!-- R1 -->
+		<container offset="0" inset="0" gap="1" minimum_width="320" default_width="320" default_height="200" minimum_height="200" priority="2" mode="distribute_equally" navigation_container="true" >
+			<layout class="arrange_vertical_attachment" offset="0" layout="300,-1" gap="1" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" /> 
+
+			<container class="tabbed_container" appearance="boxes/bordered/no margin/paper" default_item="gzsa" offset="0" inset="0" gap="0" save_session_state="true" save_default_state="true" navigation_container="true" default_height="200" minimum_height="200" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="-1" apply_to_children="true" />
+
+				<!-- analyser -->
+				<container class="client_object_viewer_selector_panel" id="gzsa" file="gunzo/gunzo player overview selector analyser" default_width="-1" priority="1" late_loading="true">
+					<translation id="title" translation_id="334971" type="use" value="Attribute Analysis[COMMENT: player overview; title for a panel showing an attribute analyisis diagram]" />
+					<integer id="default_for_unemployed_managers" value="gzsa"/>
+					<integer id="default_for_international_managers_other_team" value="gzsa"/>
+					<integer id="default_for_everyone_else" value="gzsa"/>
+					<integer id="default_for_versus_mode" value="gzsa"/>
+				</container> 
+
+			<container class="tabbed_container" id="tpp1" default_item="gzh2" offset="0" inset="0" gap="0" save_session_state="true" save_default_state="true" priority="2" late_loading="true">
+				<translation id="title" translation_id="361135" type="use" value="히든" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="-1" apply_to_children="true" />
+			
+                <!-- Hidden2 -->
+				<widget class="player_personal_details_panel" id="gzh2" file="gunzo/gunzo player profile tabh1" default_width="-1" priority="1" late_loading="true">
+					<translation id="title" type="use" value="Attribute view" />
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>       
+				<!-- Hidden -->
+				<widget class="player_personal_details_panel" id="gzth" file="gunzo/gunzo player profile tabh" default_width="-1" priority="1" late_loading="true">
+					<translation id="title" type="use" value="Icon view" />
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>    
+			  </container>  
+			</container>  
+			
+			<container class="main_box" navigation_container="true" >
+				<layout class="arrange_vertical_attachment" layout="-1,210" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />    
+
+			<container class="client_object_viewer_selector_panel" id="cosB" file="gunzo/gunzo player overview selector panel" save_session_state="true" priority="2" late_loading="true">
+				<integer id="default_for_unemployed_managers" value="gzp2"/>
+				<integer id="default_for_international_managers_other_team" value="gzp2"/>
+				<integer id="default_for_everyone_else" value="gzp2"/>
+				<integer id="default_for_versus_mode" value="gzp2"/>
+			</container>
+
+			<container class="client_object_viewer_selector_panel" id="cosC" file="gunzo/gunzo player overview selector panel" save_session_state="true" priority="3" late_loading="true">			
+				<integer id="default_for_unemployed_managers" value="ptgs"/>
+				<integer id="default_for_international_managers_other_team" value="ptgs"/>
+				<integer id="default_for_everyone_else" value="ptgs"/>
+				<integer id="default_for_versus_mode" value="ptgs"/>
+			</container>
+		  </container> 
+		</container> 
+		
+		<!-- R2 -->
+		<container offset="0" inset="0" gap="0" default_width="340" minimum_width="100" priority="2" mode="distribute_equally" navigation_container="true">
+			<layout class="arrange_vertical_attachment" offset="0" layout="-3 ,150,-1" gap="1" />
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" /> 
+
+		<container class="main_box" draw_horizontal_dividers="true">
+				<layout class="arrange_vertical_attachment" layout="-3,150,-1" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />    
+			<container class="client_object_viewer_selector_panel" id="cosD" file="gunzo/gunzo player overview selector panel" save_session_state="true" priority="1" late_loading="true">
+				<integer id="default_for_unemployed_managers" value="gprt"/>
+				<integer id="default_for_international_managers_other_team" value="gprt"/>
+				<integer id="default_for_everyone_else" value="gprt"/>
+				<integer id="default_for_versus_mode" value="gprt"/>
+			</container>  
+			
+			<container class="client_object_viewer_selector_panel" id="cos8" file="gunzo/gunzo player overview small selector panel" late_loading="true" save_session_state="true" minimum_height="100" default_height="-1" priority="3">
+				<integer id="default_for_unemployed_managers" value="pbop"/>
+				<integer id="default_for_international_managers_other_team" value="pbop"/>
+				<integer id="default_for_everyone_else" value="pbop"/>
+				<integer id="default_for_versus_mode" value="pbop"/>
+			</container>
+			
+			<container class="client_object_viewer_selector_panel" id="cos7" file="gunzo/gunzo player overview selector panel" late_loading="true" save_session_state="true" priority="1">
+				<integer id="default_for_unemployed_managers" value="Pcrs"/>
+				<integer id="default_for_international_managers_other_team" value="Pcrs"/>
+				<integer id="default_for_everyone_else" value="Pcrs"/>
+				<integer id="default_for_versus_mode" value="Pcrs"/>
+			</container>
+		</container> 
+	</container>
+ </container>	
+</panel>

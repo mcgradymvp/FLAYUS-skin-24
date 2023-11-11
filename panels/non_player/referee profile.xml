@@ -1,0 +1,82 @@
+<panel>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<widget class="text" id="norf" auto_size="vertical" multiline="true">
+		<translation id="text" translation_id="232879" type="use" value="Refereed by Unknown[COMMENT referee]" />
+	</widget>
+
+	<container id="refp">
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_offset="0" vertical_inset="5" />
+		<!-- profile picture -->
+		<widget class="picture" id="prop" width="65" height="65">
+			<boolean id="scale_picture" value="true" />
+			<boolean id="keep_aspect_ratio" value="true" />
+			<flags id="image_alignment" value="centre_x,top" />
+
+			<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+				<list id="value">
+					<boolean value="false" />
+				</list>
+			</attachment>
+
+			<record id="object_property">
+				<integer id="get_property" value="port" />
+				<integer id="set_property" value="valu" />
+			</record>
+		</widget>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+			<widget class="text" auto_size="vertical" font="label">
+				<translation id="text" translation_id="441094" type="use" value="Refereed by[COMMENT: referee, use top 10 matches, no person variable here, it's just a title, the referee's name is appended directly below this title]" />
+			</widget>
+
+			<!--name-->
+			<widget class="person_button" id="pers" font="value" auto_size="vertical">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="valu" />
+				</record>
+			</widget>
+
+			<!--games reffed-->
+			<widget class="text" id="gamf" spec="text" auto_size="vertical" size="small" colour="faded text" multiline="true" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" horizontal_offset="0" vertical_inset="0" />
+
+				<!-- red cards -->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_offset="0" vertical_inset="0" />
+
+					<widget class="picture" file="icons/26px/red card" width="30" height="30" scale_picture="false" />
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="text" id="redc" colour="text" style="bold" auto_size="vertical" />
+						<widget class="text" id="redr" auto_size="vertical" size="small" colour="faded text" />
+					</container>
+				</container>
+
+				<!-- yellow cards -->
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_offset="0" vertical_inset="0" />
+
+					<widget class="picture" file="icons/26px/yellow card" width="30" height="30" scale_picture="false" />
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<widget class="text" id="yelc" colour="text" style="bold" auto_size="vertical" />
+						<widget class="text" id="yelr" auto_size="vertical" size="small" colour="faded text" />
+					</container>
+				</container>
+
+			</container>
+		</container>
+	</container>
+
+</panel>

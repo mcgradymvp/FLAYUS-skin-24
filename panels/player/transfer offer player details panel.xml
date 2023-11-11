@@ -1,0 +1,45 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" />
+
+	<boolean id="should_force_refresh" value="true" />
+	<colour id="asking_price_set_colour" name="text" />
+	<colour id="asking_price_not_set_colour" name="faded text" />
+
+	<container class="inner_subtle_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<widget class="client_object_viewer_xml_panel" id="ppic" file="widgets/player picture name nationality and description" auto_size="vertical" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<container height="50">
+				<layout class="arrange_horizontal_attachment" layout="-1, -1" gap="2" offset="0" />
+				<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+
+				<!-- wage -->
+				<container height="40">
+                    <attachment_group class="vertical_arrange_autosize_all" />
+
+					<widget class="text" alignment="left, centre_y" auto_size="all" font="label" size="small">
+						<translation id="text" translation_id="227799" type="use" value="Wage" />
+					</widget>
+					<widget class="text" id="plwg" alignment="left, centre_y, can_scale" multiline="false" font="value" auto_size="all" />
+				</container>
+
+				<!-- value -->
+				<container>
+                    <attachment_group class="vertical_arrange_autosize" horizontal_inset="4"/>
+
+					<widget class="text" alignment="left, centre_y" auto_size="all" font="label" size="small">
+						<translation id="text" translation_id="538841" type="use" value="Transfer Value[COMMENT: AREA: Transfers; SUB-AREA: Transfer Value; FR-BN: 34410; TONE: Formal; CHARLIMIT: Shortish, column header; REF-ID: 227806; NOTE: displays the player's estimated transfer value in a range]" />
+					</widget>
+					<widget class="transfer_value_label" id="tnVL" font="value" hide_offer_action_button="true" />
+				</container>
+			</container>
+		</container>
+
+		<widget class="transfer_offer_player_transfer_status_panel" id="ptsc" height="30" />
+		<widget class="transfer_offer_interest_panel" id="ptin" height="30" />
+	</container>
+</panel>

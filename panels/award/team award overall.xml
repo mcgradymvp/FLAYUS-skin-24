@@ -1,0 +1,63 @@
+<panel>
+	<layout class="arrange_horizontal_attachment" alignment="fill" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	<!-- Starting XI Styles -->
+	<flags id="stxi" value="tables/standard/row/normal/row" />
+
+	<!-- Subs Styles -->
+	<flags id="subs" value="tables/custom/squad/substitute/row" />
+
+	<widget class="inner_box">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<widget class="client_object_list_table" id="awsl" database_table_type="1" mode="fill_rows, stripe_rows, printable, keyboard">
+			<integer id="contextual_handler_column_id" value="Pers" />
+			<record id="viewed_property_ids">
+				<record id="Pers" auto_hide_priority="10">
+					<boolean id="person_is_player" value="true" />
+				</record>
+				<record id="TApp" width="160" auto_hide_priority="10"/>
+				<record id="Pclb" auto_hide_priority="10"/>
+				<record id="Pnat" auto_hide_priority="40"/>
+				<record id="Poap" auto_hide_priority="30"/>
+				<record id="Pogl" auto_hide_priority="35"/>
+				<record id="Poav" auto_hide_priority="20"/>
+			</record>
+
+			<boolean id="should_force_refresh" value="true" />
+
+			<list id="column_table_properties">
+				<record id="TApp" width="80" >
+					<translation id="name" translation_id="227884" type="use" value="Position" />
+					<record id="widget_info">
+						<symbol id="class" value="position_label" />
+						<flags id="multiline" value="false" />
+						<flags id="alignment" value="left,centre_y" />
+					</record>
+					<record id="column_heading">
+						<flags id="alignment" value="left,centre_y" />
+						<translation id="text" translation_id="227884" type="use" value="Position" />
+						<translation id="hint" translation_id="227884" type="use" value="Position" />
+					</record>
+				</record>
+			</list>
+
+		</widget>
+	</widget>
+
+	<widget class="inner_box">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<widget class="pitch_with_tactics" id="attp" player_icon_file="tactics/tactics icon preview info panel12" icon_flags="show_name,use_player_kits_front,show_team_name,show_selection_image">
+			<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+			<boolean id="vertical" value="true" />
+			<integer id="pitch_vertical_padding" value="20"/>
+			<boolean id="pitch_is_read_only" value="true" />
+      <boolean id="pitch_pattern_opacity" value="0"/>
+      <boolean id="pitch_draw_grass" value="false"/>
+		</widget>
+
+	</widget>
+
+</panel>

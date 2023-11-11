@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel save_session_state="true">
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<!-- Pros icons -->
+		
+
+		<widget class="horizontal_arrange_container" alignment="left,centre" id="mpro" wrap="true" gap="1" inset="0">
+						<integer id="size" value="30" />
+					</widget>
+	
+			<container id="main">
+
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<layout class="arrange_vertical_attachment" layout="35,30" inset="0" offset="0" gap="1" />
+
+
+			
+				<!-- Cons icons -->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="-5" />
+
+					<!-- Icons get inserted into here. The 'size' attribute is the size in pixels of each icon -->
+					<widget class="horizontal_arrange_container" alignment="right,centre" id="mcon" wrap="true" gap="1" inset="0">
+						<integer id="size" value="30" />
+
+					</widget>
+				</container>
+
+				<container height="30">
+					<layout class="arrange_horizontal_attachment" layout="-7,-8" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+						<!--value/cost-->
+					<container>
+							<layout class="arrange_vertical_attachment" layout="15,15" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			
+									<widget class="label" id="esco" font="gzmain" colour="gzc2" size="9" alignment="centre_x,top,can_scale"/>
+
+						<widget class="label" alignment="centre_x,bottom" size="8" font="label" colour="faded text" >
+							<translation id="text" translation_id="335037" type="use" value="Estimated Cost[COMMENT: scout report panel label]"/>
+						</widget>
+			
+					</container>
+					
+					<!--wages/demands-->
+					<container height="30">
+							<layout class="arrange_vertical_attachment" layout="15,15" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			
+							<widget class="label" id="wade" font="gzmain" colour="gzc2" size="9" alignment="centre_x,top,can_scale"/>
+				
+						<widget class="label" alignment="centre_x,bottom" size="8" font="label" colour="faded text" >
+							<translation id="text" translation_id="335516" type="use" value="Wage Demands[COMMENT: scout report panel label]"/>
+						</widget>
+						</container>
+
+				
+	</container>
+				</container>
+
+
+
+</panel>

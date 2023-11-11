@@ -1,0 +1,117 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_subtle_box">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<widget class="text" id="npsl" style="bold" size="large" alignment="centre" height="70" />
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_layout="35,-16,-3,-4,-4,-8,-4,-4" horizontal_alignment="horizontal" vertical_gap="5" horizontal_inset="0" vertical_inset="0" />
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" colour="accent" alignment="centre" auto_size="vertical" font="label">
+					<translation id="text" translation_id="466502" type="use" value="Training Position[COMMENT: individual player training position header]" />
+				</widget>
+
+				<widget class="text" id="trpl" style="bold" size="large" alignment="centre_x,top" />
+
+			</container>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				<widget class="pitch_with_player_positions" id="pspi" allow_click="false" wants_mouse_events="false" pitch_keep_selected_icons="false" vertical="true" pitch_alignment="centre_x,top" pitch_draw_goals="false" pitch_draw_markings="false" show_position_strength="false" hide_player_positions="true" pitch_show_names="false" pitch_show_names_as_hint="true" pitch_draw_grass="false" pitch_line_colour="alt text" pitch_touchline_width_percentage="1" pitch_override_icon_size="2" line_width="1.4" pitch_vertical_padding="8">
+					<string id="pitch_kit_icon" value="pitch/icons/dots" />
+				</widget>
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<string id="skin_style" value="title link" />
+
+				<widget class="link_button" id="tuln" auto_size="all" font="label" section="TeUn">
+					<layout class="centre_in_parent_attachment" alignment="horizontal" />
+					<translation id="text" translation_id="466503" type="use" value="Training Unit[COMMENT: individual player training unit header, a training unit is a smaller group of players in a training session]" />
+
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="Pctx" />
+								<integer id="set_property" value="objt" />
+							</record>
+						</list>
+					</record>
+
+				</widget>
+
+				<widget class="text" id="trul" style="bold" size="large" alignment="centre_x,top" />
+
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" colour="accent" alignment="centre" auto_size="vertical" font="label">
+					<translation id="text" translation_id="363709" type="use" value="Position/Role/Duty[COMMENT: FR 8989 - Player position, role and duty]" />
+				</widget>
+
+				<widget class="individual_position_training_popup" show_table_legend="true" fixed="false" appearance="buttons/standard/normal/button" id="itpu" alignment="left,centre_y" auto_size="vertical" />
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" colour="accent" alignment="centre" auto_size="vertical" font="label">
+					<translation id="text" translation_id="394317" type="use" value="Additional Focus[COMMENT - individual training popup menu; specific focus training]" />
+				</widget>
+
+				<widget class="individual_training_popup" show_table_legend="true" fixed="false" appearance="buttons/standard/normal/button" id="itat" alignment="left,centre_y" auto_size="vertical" />
+
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" colour="accent" alignment="centre" auto_size="vertical" font="label">
+					<translation id="text" translation_id="347767" type="use" value="Intensity Level[COMMENT: team training; the desired default level of intensity the players will train under]" />
+				</widget>
+
+				<widget class="player_training_intensity_rest_popup_button" fixed="false" appearance="buttons/standard/normal/button" id="inPt" alignment="left,centre_y" auto_size="vertical" />
+
+					<widget class="text" id="phyL" auto_size="vertical" alignment="centre_x, centre_y" colour="faded text"  size="8"  />
+					<widget class="client_object_property_panel" id="phyR" size="8" property="pTIR"  alignment="centre_x,centre_y" colour="faded text">
+						<record id="widget_properties" auto_size="vertical" />
+						<record id="object_property">
+							<integer id="get_property" value="objt"/>
+							<integer id="set_property" value="objt"/>
+						</record>
+					</widget>
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" colour="accent" alignment="centre" auto_size="vertical" font="label">
+					<translation id="text" translation_id="505830" type="use" value="Weaker Foot Training[COMMENT: AREA: Backroom advice; SUB-AREA: Training suggestion; FR-BN: 27129; TONE: Formal; CHARLIMIT: None; REF-ID: ; NOTE: ]" />
+				</widget>
+
+				<widget class="button" show_table_legend="true" fixed="false" appearance="buttons/standard/normal/button" id="swft" alignment="left,centre_y" auto_size="vertical" />
+
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" colour="accent" alignment="centre" auto_size="vertical" font="label">
+					<translation id="text" translation_id="395255" type="use" value="Individual Training Workload[COMMENT - training schedule workload label on player training screen]" />
+				</widget>
+
+				<widget class="text" id="pWor" alignment="centre_x,top" auto_size="vertical" style="bold" size="large" multiline="true" />
+			</container>
+		</container>
+
+	</container>
+</panel>

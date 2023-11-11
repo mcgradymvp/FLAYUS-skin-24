@@ -1,0 +1,101 @@
+﻿<panel draw_vertical_dividers="true">
+  
+    <attachment_group class="horizontal_arrange" horizontal_layout="-1, -1" vertical_offset="0" horizontal_inset="0" horizontal_gap="16" />
+
+    <set_var name="tactics_confidence_table">
+        <widget class="table" mode="fill_rows" layout="20, -1" auto_size_rows="true" fixed_size_rows="false" row_spacing="4" column_spacing="6" auto_size="vertical">
+            <list id="column_widget_properties">
+                <record index="0" alignment="left, centre_y" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre" />
+                <record index="1" alignment="left, centre_y" multiline="true" />
+            </list>
+        </widget>
+    </set_var>
+
+    <container class="main_box">
+        <attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_inset="0">
+            <global id="vertical_gap" name="ui.main_box_gap" />
+        </attachment_group>
+
+        <container>
+            <attachment_group class="vertical_arrange_autosize" vertical_inset="0" vertical_gap="8" />
+
+            <widget class="icon_button" icon="icons/26px/board" icon_colour="performance board tag" appearance="" colour="performance board tag" font="title" size="xlarge" auto_size="all">
+                <translation id="text" translation_id="557643" type="use" value="Board Feedback - Tactics[COMMENT: AREA: Club Vision; SUB-AREA: Performance Tactics; FR-BN: FM-3597; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: title for tactics related board feedback]" />
+            </widget>
+            <widget class="text" id="BCmp" display_format="1" size="9" colour="faded text" auto_size="all" />
+
+            <widget class="performance_grade_box" id="bpgb" auto_size="vertical" />
+        </container>
+
+        <container class="scrolling_box">
+            <container draw_horizontal_dividers="true">
+                <attachment_group class="vertical_arrange_autosize">
+                    <global id="vertical_gap" name="ui.main_box_gap" />
+                </attachment_group>
+
+                <container class="main_box" colour="text">
+                    <attachment_group class="vertical_arrange_autosize" />
+                    <translation id="title" translation_id="298104" type="use" value="Formation" />
+
+                    <var id="fort" name="tactics_confidence_table" />
+                </container>
+
+                <container class="main_box" colour="text">
+                    <attachment_group class="vertical_arrange_autosize" />
+                    <translation id="title" translation_id="557644" type="use" value="Build-up Play[COMMENT: AREA: Confidence; SUB-AREA: Board Confidence; FR-BN: FM-3591; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: title for summary of manager performance with regards to the team's build-up play]" />
+
+                    <var id="past" name="tactics_confidence_table" />
+                </container>
+
+                <container class="main_box" colour="text">
+                    <attachment_group class="vertical_arrange_autosize" />
+                    <translation id="title" translation_id="491851" type="use" value="Entertainment[COMMENT: AREA: Confidence; SUB-AREA: Board Confidence; FR-BN: ?; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: title for summary of manager performance with regards to playing entertaining football]" />
+
+                    <var id="entt" name="tactics_confidence_table" />
+                </container>
+
+                <container class="main_box" colour="text">
+                    <attachment_group class="vertical_arrange_autosize" />
+                    <translation id="title" translation_id="298130" type="use" value="Attacking[COMMENT: tactical team instructions; team strategy]" />
+
+                    <var id="attt" name="tactics_confidence_table" />
+                </container>
+
+                <container class="main_box" colour="text">
+                    <attachment_group class="vertical_arrange_autosize" />
+                    <translation id="title" translation_id="285374" type="use" value="Defending[COMMENT: player profile, overview panel polygon category title]" />
+
+                    <var id="deft" name="tactics_confidence_table" />
+                </container>
+            </container>
+        </container>
+    </container>
+
+    <container class="main_box">
+        <attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_inset="0">
+            <global id="vertical_gap" name="ui.main_box_gap" />
+        </attachment_group>
+
+        <container>
+            <attachment_group class="vertical_arrange_autosize" vertical_inset="0" vertical_gap="8" />
+
+            <widget class="icon_button" icon="icons/26px/fans" icon_colour="performance fans tag" appearance="" colour="performance fans tag" font="title" size="xlarge" auto_size="all">
+                <translation id="text" translation_id="557645" type="use" value="Supporter Feedback - Tactics[COMMENT: AREA: Club Vision; SUB-AREA: Performance Tactics; FR-BN: FM-3597; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: title for tactics related supporter feedback]" />
+            </widget>
+            <widget class="text" id="FCmp" display_format="1" size="9" colour="faded text" auto_size="all" />
+
+            <widget class="performance_grade_box" id="fpgb" auto_size="vertical" />
+        </container>
+
+        <container>
+            <attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_gap="10" />
+
+            <widget class="text" auto_size="all" font="title" colour="text" size="large">
+                <translation id="text" translation_id="557646" type="use" value="Notable Supporter Input[COMMENT: AREA: Club Vision; SUB-AREA: Performance Tactics; FR: FM-3597; TONE: Formal; CHARLIMIT: None; REF-ID: ; NOTE: Section name for tactics related social media feed]" />
+            </widget>
+
+            <widget class="news_feed_panel" id="socp" filter="Fsco" file="human/news feed embedded social panel" social_item_file="human/news feed social item content panel fans tactics reaction" number_of_items_to_display="20" />
+        </container>
+    </container>
+
+</panel>

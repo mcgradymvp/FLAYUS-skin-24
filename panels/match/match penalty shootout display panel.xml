@@ -1,0 +1,146 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_horizontal_centre" vertical_alignment="bottom,extend" vertical_offset="60"/>
+
+	<!--Alternate UI mode-->
+	<integer id="alSM" value="0" />
+
+	<!--Score Penalty Appearance-->
+	<string id="scAP" value="icons/custom/penalty shootout/scored"/>
+	<!--Missed Penalty Appearance-->
+	<string id="msAP" value="icons/custom/penalty shootout/missed"/>
+	
+	<!-- If these are set then we will override the appearance colours, see the bundesliga version for a working example
+	Score Penalty Red Replacement
+	<colour id="scCO" value="green"/>
+	Missed Penalty Red Replacement
+	<colour id="msCO" value="red"/>
+	-->
+
+	<container/>
+
+	<container id="at00" height="120">
+		<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="middle" />
+		<container id="at07">
+			<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="right" horizontal_gap="0"/>
+			<container class="main_box_no_margin" id="at01">
+				<string id="background_colour" value="text"/>
+				<attachment_group class="vertical_arrange_autosize_all" />
+
+				<container class="main_box_no_margin" id="at03" height="20" appearance="boxes/custom/match/tv captions/si tv/caption/footer/paper" red_replacement="grey">
+					<string id="background_colour" value="grey"/>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_offset="-10"/>
+
+					<widget class="text" id="at04" alignment="centre" width="130">
+						<translation id="text" value="Penalties" translation_id="230022" type="use"/>
+						<string id="font" value="title"/>
+						<string id="colour" value="white"/>
+					</widget>
+					<widget class="text" id="amT1" alignment="centre_x,centre_y" width="32">
+						<integer id="value" value="1"/>
+						<string id="font" value="title"/>
+						<string id="colour" value="white"/>
+					</widget>
+					<widget class="text" id="amT2" alignment="centre_x,centre_y" width="32">
+						<integer id="value" value="1"/>
+						<string id="font" value="title"/>
+						<string id="colour" value="white"/>
+					</widget>
+					<widget class="text" id="amT3" alignment="centre_x,centre_y" width="32">
+						<integer id="value" value="1"/>
+						<string id="font" value="title"/>
+						<string id="colour" value="white"/>
+					</widget>
+					<widget class="text" id="amT4" alignment="centre_x,centre_y" width="32">
+						<integer id="value" value="1"/>
+						<string id="font" value="title"/>
+						<string id="colour" value="white"/>
+					</widget>
+					<widget class="text" id="amT5" alignment="centre_x,centre_y" width="32">
+						<integer id="value" value="1"/>
+						<string id="font" value="title"/>
+						<string id="colour" value="white"/>
+					</widget>
+				</container>
+				<container id="at0C" height="37">
+					<attachment_group class="horizontal_arrange_autosize" horizontal_offset="4" />
+
+					<widget class="team_button" id="hmTb" width="130" mode="1">
+						<string id="style" value="bold"/>
+						<string id="colour" value="dark text"/>
+					</widget>
+					<widget class="picture" file="icons/custom/penalty shootout/scored" id="hmA1" width="32">
+						<string id="image_alignment" value="centre"/>
+					</widget>
+					<widget class="picture" file="icons/custom/penalty shootout/scored" id="hmA2" width="32">
+						<string id="image_alignment" value="centre"/>
+					</widget>
+					<widget class="picture" file="icons/custom/penalty shootout/scored" id="hmA3" width="32">
+						<string id="image_alignment" value="centre"/>
+					</widget>
+					<widget class="picture" file="icons/custom/penalty shootout/scored" id="hmA4" width="32">
+						<string id="image_alignment" value="centre"/>
+					</widget>
+					<widget class="picture" file="icons/custom/penalty shootout/scored" id="hmA5" width="32">
+						<string id="image_alignment" value="centre"/>
+					</widget>
+				</container>
+				<container id="at0:" height="37">
+					<attachment_group class="horizontal_arrange_autosize" horizontal_offset="4" />
+
+					<widget class="team_button" id="awTb" width="130" height="30" mode="1">
+						<string id="style" value="bold"/>
+						<string id="colour" value="dark text"/>
+					</widget>
+					<widget class="picture" file="icons/custom/penalty shootout/scored" id="awA1" width="32" height="32">
+						<string id="image_alignment" value="centre"/>
+					</widget>
+					<widget class="picture" file="icons/custom/penalty shootout/scored" id="awA2" width="32" height="32">
+						<string id="image_alignment" value="centre"/>
+					</widget>
+					<widget class="picture" file="icons/custom/penalty shootout/scored" id="awA3" width="32" height="32">
+						<string id="image_alignment" value="centre"/>
+					</widget>
+					<widget class="picture" file="icons/custom/penalty shootout/scored" id="awA4" width="32" height="32">
+						<string id="image_alignment" value="centre"/>
+					</widget>
+					<widget class="picture" file="icons/custom/penalty shootout/scored" id="awA5" width="32" height="32">
+						<string id="image_alignment" value="centre"/>
+					</widget>
+				</container>
+			</container>
+			
+			<container width="40">
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom" />
+
+			<container class="main_box_no_margin" id="at05" >
+				<string id="background_colour" value="fm purple"/>
+				<attachment_group class="vertical_arrange_autosize"/>
+
+				<widget class="text" id="hmtT" alignment="centre" width="20" height="39">
+					<integer id="value" value="1"/>
+					<integer id="size" value="12"/>
+					<string id="font" value="title"/>
+					<string id="colour" value="white"/>
+				</widget>
+				<widget class="text" id="awtT" alignment="centre" width="20" height="39">
+					<integer id="value" value="1"/>
+					<integer id="size" value="12"/>
+					<string id="font" value="title"/>
+					<string id="colour" value="white"/>
+				</widget>
+			</container>
+		</container>
+		</container>
+		<container class="main_box_no_margin" id="cmpH" width="55" height="38" appearance="boxes/custom/match/tv captions/si tv/caption/footer/paper" red_replacement="primary">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="6" />
+			<layout class="stick_to_object_attachment" offset="12" get_side="left" set_side="right" move_side="true" target="at07"/>
+			<container class="object_portrait_picture" id="cmpP" width="26" height="26">
+				<string id="image_alignment" value="centre"/>
+				<string id="scale_picture" value="true"/>
+				<string id="keep_aspect_ratio" value="true"/>
+				<string id="clickable" value="false"/>
+				<string id="no_object_picture" value="pictures/comp/none/logo/league"/>
+			</container>
+		</container>
+	</container>
+</panel>

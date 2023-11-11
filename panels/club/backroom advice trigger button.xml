@@ -1,0 +1,12 @@
+<panel width="50" height="26" navigation_container="true">
+
+  <widget class="picture" file="icons/26px/staff respo" image_alignment="centre" red_replacement="text" navigation_focus_target="false">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+  </widget>
+
+  <!-- the bit with the number of unread news (text) -->
+  <widget class="button" id="ibic" height="20" width="20" size="7" alignment="centre" appearance="buttons/custom/interface/notification/button" wants_mouse_events="false" hidden="true" navigation_focus_target="false">
+    <layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+  </widget>
+</panel>

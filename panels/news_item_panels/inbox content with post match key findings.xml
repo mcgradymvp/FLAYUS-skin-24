@@ -1,0 +1,37 @@
+﻿<panel>
+	<list id="properties_to_forward">
+		<record get_property="KeyF" target="keyf" set_property="KeyF" />
+		<record get_property="FixG" target="keyf" set_property="FixG" />
+		<record get_property="Ttea" target="texB" set_property="objt" />
+	</list>
+
+	<string id="skin_style" value="subtle box" />
+	<attachment_group class="vertical_arrange_autosize" />
+
+	<container class="title_link_box" id="texB" section="DHLM" hide_view_menu="true">
+		<translation id="link_title" translation_id="515056" type="use" value="Post-Match Report[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for shpwing the post-match report summary of the fixture just played]" />
+		<attachment_group class="vertical_arrange_autosize" />
+		
+		<container class="client_object_viewer_xml_panel" id="cUnt">
+			<attachment_group class="vertical_arrange_autosize"/>
+	
+			<widget class="container" id="scRL" file="widgets/match/match result scoreline with xg widget" height="60">
+				<record id="object_property" get_property="objt" set_property="objt" />
+			</widget>
+			<widget class="text" alignment="centre" size="large" auto_size="vertical" id="desc" />
+
+			<widget class="horizontal_divider" />
+			
+			<container height="550">
+				<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_offset="0" horizontal_gap="8" vertical_inset="0" />
+	       
+		    <widget class="data_analyst_key_findings_widget" show_team_name="true" file="widgets/data analyst key findings widget autosize" can_update_with_no_objects="true" id="keyf" />
+		    
+			<widget class="client_object_viewer_xml_panel" id="pmav" file="news_item_panels/inbox content with post match analysis visualisations1" >
+				<record id="object_property" get_property="objt" set_property="objt" />
+			</widget>
+
+		   </container>
+		</container>
+	</container>
+</panel>

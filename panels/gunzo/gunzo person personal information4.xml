@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10"/>
+
+    
+        <!-- Eligibility (Home-grown status) -->
+
+	   <container id="elig">
+          <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+         
+          <container>
+            <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+            <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="5" />
+            <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+            <!-- Nations -->
+            <container>
+              <layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="0" />
+              <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+              <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+   
+              <container class="simple_data_list" id="nats" set_property="objt" alignment="horizontal, fill" height="80">
+              <record id="object_property">
+                  <integer id="get_property" value="PhgN" />
+                </record>
+                <record id="widget_properties" class="client_object_viewer_xml_panel" file="gunzo/club or nation logo panel" />
+              </container>
+			  			
+            </container>
+
+            <!-- Clubs -->
+            <container>
+              <layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="0" />
+              <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+              <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+              <container class="simple_data_list" id="clbs" set_property="objt" alignment="horizontal, fill" height="80">
+               <record id="object_property">
+                  <integer id="get_property" value="PhgC" />
+                </record>
+                <record id="widget_properties" class="property_list_viewer_xml_panel" file="gunzo/eligibility logo panel" />
+              </container>
+			               
+            </container>
+          </container>
+
+		  
+      <!-- Nation Qualifications -->
+      <widget class="player_nation_qualifications_panel" id="pnqu">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </widget>
+		  
+		  
+        </container>
+	
+  </container>
+  
+
+</panel>

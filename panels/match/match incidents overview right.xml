@@ -1,0 +1,38 @@
+<panel result_type_format="2">
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<!--background colour-->
+	<widget class="picture" id="bkcl" height="4" file="boxes/main/contrast/paper" scale_picture="true" rthr="68">
+	</widget>
+
+	<!--team name and incidents-->
+	<container height="35">
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="10" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+		<!-- score -->
+		<widget class="text" id="mits" auto_size="horizontal" alignment="left,centre_y" size="12" multiline="false" style="bold"/>
+
+		<!-- aggregate score -->
+		<widget class="text" id="mita" auto_size="horizontal" spec="title" alignment="left,centre_y" size="12" multiline="false"/>
+
+		<!-- team name -->
+		<widget class="text" id="mitn" size="12" style="semi_bold" alignment="left,centre_y"/>
+	</container>
+
+	<widget class="table" id="miit" layout="20,-1" mode="fill_rows" row_spacing="0" auto_size_rows="true" fixed_size_rows="false">
+
+		<list id="column_widget_properties">
+			<record index="0" alignment="centre" auto_size="vertical" size="small" navigation_focus_target="false"/>
+			<record index="1" spec="text" auto_size="vertical" alignment="left,centre_y" size="small" />
+		</list>
+
+		<list id="column_table_properties">
+			<record index="0" id="icon" left="4" top="4" bottom="4" />
+			<record index="1" id="text" top="4" bottom="4" />
+		</list>
+
+	</widget>
+</panel>

@@ -1,0 +1,52 @@
+﻿<panel width="300">
+	<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" />
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" horizontal_alignment="horizontal" />
+
+		<!--overall text-->
+		<widget class="fitness_label" id="OvTx" size="10.5" auto_size="vertical">
+			<record id="object_property" get_property="Pcsr"/>
+		</widget>
+
+		<!--pie and description-->
+		<widget class="pie_condition_label" id="piec" height="50" mode="2" file="">
+			<layout class="arrange_horizontal_attachment" layout="60,160,-1" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<record id="object_property" get_property="PRCF" set_property="valu"/>
+
+			<!--pie-->
+			<container width="60">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+				<widget class="percentage_pie_chart" id="piec" max_value="100" is_donut_chart="true" layout="-1,4,4"/>
+				<widget class="percentage_pie_chart" id="inPI" max_value="100" is_donut_chart="true" layout="-1,4,10"/>
+
+			</container>
+
+			<!--descriptions-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<widget class="condition_label" id="CDLB" auto_size="vertical" alignment="left,centre_y,can_scale">
+					<translation id="format" translation_id="450112" type="use" value="[%number#1]% overall condition[COMMENT: FR 20159; team risk assessment panel; players condition label]" />
+				</widget>
+				<widget class="condition_label" id="FTLB" auto_size="vertical" alignment="left,centre_y,can_scale">
+					<translation id="format" translation_id="450113" type="use" value="[%number#1]% match sharpness[COMMENT: FR 20159; team risk assessment panel; players match sharpness label]" />
+				</widget>
+			</container>
+				<!--Injury Risk-->
+				<widget class="client_object_property_labelled_panel" alignment="right" id="inRs" property="inRs">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+		</widget>
+
+		<!--injury status-->
+		<widget class="player_injury_panel" height="100" file="player/player injury panel condition hint1">
+			<record id="object_property" get_property="objt" set_property="objt" />
+		</widget>
+	</container>
+
+</panel>

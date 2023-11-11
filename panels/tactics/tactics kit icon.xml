@@ -1,0 +1,23 @@
+<panel>
+	<!--the main background-->
+	<widget class="picture" id="bSHR" image_alignment="centre"  scale_picture="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	
+	<!--Name of the player: This is hidden on the player stats panel-->
+	<!-- the font size reduces one size when the name is bigger than 16 characters -->
+		<widget class="label" id="bNAM" size="13.5" alignment="top, centre_y, can_scale" font="fonts/kit name">
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+		</widget>
+	
+	<!-- player number  -->
+	<widget class="picture" id="bNUM" image_alignment="middle" scale_picture="false" keep_aspect_ratio="true">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="23,0,0,0"/>
+	</widget>
+
+	<!--overlay effect-->
+	<widget class="picture" id="bOVR" image_alignment="centre" scale_picture="true">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+</panel>

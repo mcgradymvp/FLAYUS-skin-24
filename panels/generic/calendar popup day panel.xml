@@ -1,0 +1,39 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container class="main_box" appearance="boxes/custom/calendar/cell/paper">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+
+		<container id="daCt" height="40">
+			<attachment_group class="horizontal_arrange" horizontal_layout="40,-1,25" horizontal_offset="6" horizontal_gap="0" vertical_inset="0" />
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="-3" horizontal_inset="0" />
+
+				<widget class="text" id="datN" style="bold" size="large" alignment="centre" auto_size="vertical"/>
+				<widget class="text" id="datD" font="title" alignment="centre" auto_size="vertical"/>
+			</container>
+
+			<widget class="date_cell" id="tdAt" format="[%date#1-month_year]" size="10" colour="faded text" style="semi_bold" alignment="centre" />
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+				<widget class="popup_button" id="actn" select_event="dtcl" hidden="true" icon_alignment="right" appearance="none" />
+			</container>
+
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="1" horizontal_inset="0" />
+
+			<container id="nEvt" height="65" />
+
+			<container id="entR" >
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+				<!-- This is where the popup detailed day events get created. -->
+			</container>
+		</container>
+	</container>
+</panel>

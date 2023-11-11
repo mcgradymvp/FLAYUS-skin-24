@@ -1,0 +1,51 @@
+<!-- NOTE: The property 'usoc' used on elements tells the panel to recolour them based on object colours -->
+<panel>
+	  	
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<container id="wcon">
+			<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+	
+			<!-- Main object -->
+			<widget class="text" id="brif" font="fonts/capitals_bold" size="small" style="bold" multiline="true" alignment="centre" auto_size="vertical" background_colour="title" colour="black"/>
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1,1,-2" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0,20" apply_to_children="true"/>
+
+					<!-- News image -->
+					<widget class="competition_news_image_panel" id="impl" />				
+  
+				</container>
+				
+               <widget class="picture" file="dividers/standard/vertical/line" scale_picture="false" colour="black" width="1"/>
+
+				<!-- News item -->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+					<!-- Story title (max 2 lines of text)-->
+					<widget class="text" id="titl" style="bold" multiline="true" height="45" alignment="left, bottom" colour="white" size="large"/>
+
+					<!-- Related news -->
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5" />
+
+						<!-- Related items, first is match link -->
+						<container class="competition_news_item_panel" file="competition/competition news item title only" related_news_index="0" matR="true" />
+						<container class="competition_news_item_panel" file="competition/competition news item title only" related_news_index="1" />
+					</container>
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

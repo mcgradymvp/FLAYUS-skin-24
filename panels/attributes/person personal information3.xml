@@ -1,0 +1,18 @@
+<panel>
+	<translation id="title" type="new" value="Player Information Panel" />
+	<attachment_group class="horizontal_arrange" horizontal_layout="-1"/>
+
+	<!-- Personal Information on the left -->
+	<container draw_horizontal_dividers="true">
+		<attachment_group class="vertical_arrange" vertical_layout="-1" />
+				<!-- Work Permit -->
+				<container class="scrolling_box" id="Work">
+					<widget class="work_permit_panel" vertical="false">
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+				</container>
+			</container>
+</panel>

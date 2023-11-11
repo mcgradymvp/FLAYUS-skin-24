@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+
+	<layout class="arrange_vertical_attachment" layout="-1, 1" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		<container class="vertical_adaptive_container" id="PDvc" inset="0" offset="0" gap="0">
+
+
+		
+		
+			<!-- small report -->
+			<container default_height="90" minimum_height="80" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="player_scout_reports_panel" id="gprs" file="gunzo/gunzo player reports small11" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
+
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+			
+			<!-- transfer info -->
+			<container default_height="110" minimum_height="35" priority="2">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="player_transfer_information_small_panel" file="gunzo/gunzo player transfer information small" id="gpti">
+
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+
+			<!-- interest 
+			<container default_height="-1" minimum_height="20" priority="6">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
+
+				<widget class="player_transfer_interest_panel" file="gunzo/player transfer interest panel profile1" id="pfm2">
+
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>-->
+
+
+		</container>
+	</container>
+
+
+</panel>

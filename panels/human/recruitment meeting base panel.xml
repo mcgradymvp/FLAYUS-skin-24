@@ -1,0 +1,60 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange" vertical_layout="-1, 60" horizontal_inset="0" vertical_offset="0"/>
+	<layout class="stick_to_sides_attachment" value="all" inset="0"/>
+
+	<boolean id="save_immediate_state" value="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<record id="next_section_button_props">
+		<string id="appearance" value="buttons/primary/normal/button"/>
+		<flags id="auto_size" value="all"/>
+		<string id="click_event" value="GTnt"/>
+	</record>
+	
+	<record id="end_meeting_button_props">
+		<translation id="text" translation_id="510685" type="use" value="End Meeting[COMMENT: AREA: Recruitment meeting; FR-BN: 32765; NOTE: Recruitment meeting end meeting dialog popup title]"/>
+		<string id="appearance" value="buttons/primary/normal/button"/>
+		<flags id="auto_size" value="all"/>
+		<string id="click_event" value="GTnt"/>
+	</record>
+
+	<container id="onec">
+		<attachment_group class="vertical_arrange" vertical_layout="-1, 50" horizontal_inset="20" vertical_offset="8"/>
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top, extend" horizontal_inset="0" vertical_offset="0"/>
+			
+			<container id="PaBx">
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="200, -1" gap="12" horizontal_offset="10"/>
+
+				<container id="rmpa" file="human/recruitment meeting participant widget" height="60"/>
+
+				<container class="plain_box" id="spBB" appearance="boxes/custom/speech bubble/left/paper" auto_size="vertical">
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="top, extend" vertical_gap="12" vertical_offset="8"/>
+					
+					<widget class="text" id="spTX" auto_size="vertical"/>
+				</container>
+			</container>
+
+			<container id="mncp">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+				<!-- content panels here -->
+			</container>
+		</container>
+
+		<container class="inner_contrast_box" id="butC" red_replacement="bg" height="50">
+			<attachment_group class="horizontal_arrange_vertical_centre" horizontal_alignment="middle" horizontal_inset="10"/>
+			
+			<!-- action buttons added here -->
+		</container>
+	</container>
+
+	<container class="main_box" height="60" appearance="boxes/custom/solid/paper">
+		<attachment_group class="horizontal_arrange_vertical_centre" horizontal_alignment="right, extend"/>
+
+		<container class="person_button_with_job_description" show_person_icon="true" person_icon_file="icons/26px/manager respo" width="140" height="50">
+			<layout class="centre_in_parent_attachment" id="horizontal" alignment="horizontal" offset="0"/>
+			<record id="object_property" get_property="objt" set_property="valu"/>
+		</container>
+	</container>
+</panel>

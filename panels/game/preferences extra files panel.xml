@@ -1,0 +1,82 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="8" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" apply_to_children="true" />
+
+	<widget class="container">
+		<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="8" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container class="scrolling_box">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- EDT Files -->
+				<widget class="main_box">
+					<translation id="title" translation_id="330790" type="use" value="Which extra data files should be loaded when you create a new game?[COMMENT: preferences: game settings section title]" />
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="text" spec="text" colour="selection" multiline="true" auto_size="vertical">
+						<translation id="text" translation_id="329688" type="use" value="An EDT file consists of simple instructions that change some of the game's data without the use of the data editor.[COMMENT: preferences: user data folder text]" />
+					</widget>
+					<widget class="spacer" height="4" />
+					<widget class="table" id="eedt" layout="-1" mode="fill_rows,stripe_rows">
+						<record id="default_properties" alignment="left,centre_y" />
+						<flags id="auto_size" value="vertical" />
+						<list id="column_table_properties">
+							<record indx="0" sort_disabled="true" left="5" />
+						</list>
+						<record id="table_properties">
+							<integer id="row_spacing" value="5" />
+						</record>
+						<!-- column display properties -->
+						<list id="column_table_properties">
+							<record indx="0" sort_disabled="true">
+								<flags id="id" value=".edt" />
+							</record>
+							<record indx="1" sort_disabled="true" />
+						</list>
+					</widget>
+					<container height="8" />
+				</widget>
+			</container>
+		</container>
+
+		<container class="scrolling_box">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<!-- DDT Files -->
+				<widget class="main_box" id="cura">
+					<translation id="title" translation_id="336079" type="use" value="Which additional data files should be kept when creating a new game?[COMMENT: preferences panel; extra data files (EDT, DDT) file section]" />
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<widget class="text" spec="text" colour="selection" multiline="true" auto_size="vertical">
+						<translation id="text" translation_id="329648" type="use" value="A DDT file is used to ensure certain players are loaded into the database when a new game is created.[COMMENT: preferences: user data folder text]" />
+					</widget>
+					<widget class="spacer" height="4" />
+					<!-- DDT FILE SETTINGS -->
+					<widget class="table" id="dddt" layout="-1" mode="fill_rows,stripe_rows">
+						<record id="default_properties" alignment="left,centre_y" />
+						<flags id="auto_size" value="vertical" />
+						<record id="table_properties">
+							<integer id="row_spacing" value="5" />
+						</record>
+						<!-- column display properties -->
+						<list id="column_table_properties">
+							<record indx="0" sort_disabled="true" left="5">
+								<flags id="id" value=".ddt" />
+							</record>
+							<record indx="1" sort_disabled="true" />
+						</list>
+					</widget>
+					<container height="8" />
+				</widget>
+			</container>
+		</container>
+	</widget>
+
+</panel>

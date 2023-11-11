@@ -1,0 +1,109 @@
+﻿<panel>
+
+	<list id="properties_to_forward">
+		<record get_property="ustB" target="popU" set_property="hidden"/>
+		<record get_property="wgTy" target="popU" set_property="wgTy" />
+		<record get_property="WdgP" target="popU" set_property="WdgP" />
+		<record get_property="sltd" target="popU" set_property="sltd" />
+		<record get_property="mopp" target="popU" set_property="mopp" />
+		<record get_property="puAl" target="popU" set_property="puAl" />
+		<record get_property="puhd" target="popU" set_property="hidn" />
+		<record get_property="Jcol" target="popU" set_property="Jcol" />
+		<record get_property="stRC" target="popU" set_property="stRC" />
+		<record get_property="clke" target="popU" set_property="clke" />
+
+		<record get_property="ustP" target="popu" set_property="hidden"/>
+		<record get_property="wgTy" target="popu" set_property="wgTy" />
+		<record get_property="WdgP" target="popu" set_property="WdgP" />
+		<record get_property="sltd" target="popu" set_property="sltd" />
+		<record get_property="mopp" target="popu" set_property="mopp" />
+		<record get_property="puAl" target="popu" set_property="puAl" />
+		<record get_property="puhd" target="popu" set_property="hidn" />
+		<record get_property="Jcol" target="popu" set_property="Jcol" />
+		<record get_property="stRC" target="popu" set_property="stRC" />
+		<record get_property="clke" target="popu" set_property="clke" />
+
+		<record get_property="icon" target="icon" set_property="file" />
+
+		<record get_property="titl" target="titl" set_property="text" />
+		<record get_property="tcol" target="titl" set_property="colr" />
+
+		<record get_property="ncol" target="name" set_property="colr" />
+
+		<record get_property="jcol" target="jobw" set_property="colr" />
+
+		<record get_property="text" target="text" set_property="text" />
+		<record get_property="txcl" target="text" set_property="colr" />
+
+		<record get_property="ichd" target="icbt" set_property="hidn" />
+		<record get_property="icbi" target="icbt" set_property="file" />
+		<record get_property="iclr" target="icbt" set_property="colr" />
+
+		<record get_property="lktx" target="lkbt" set_property="text" />
+		<record get_property="sect" target="lkbt" set_property="sect" />
+		<record get_property="lnkH" target="lkbt" set_property="hidn" />
+		<record get_property="lnkH" target="liic" set_property="hidn" />
+		<record get_property="lkcl" target="lkbt" set_property="colr" />
+		<record get_property="lkrr" target="lkbt" set_property="rrep" />
+		<record get_property="lkob" target="lkbt" set_property="objt" />
+
+
+		<record get_property="atxt" target="desc" set_property="text" />
+		<record get_property="dscl" target="desc" set_property="colr" />
+
+		<record get_property="vdhd" target="vdiv" set_property="hidn" />
+	</list>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<widget class="button" id="popU" offset_y="2" appearance="buttons/custom/over state only/button"  navigation_focus_target="true" hidden="true">
+		<layout class="stick_to_sides_attachment" alignment="right,extend" inset="4" />
+	</widget>
+
+	<widget class="widget_popup_button" id="popu" offset_y="2" appearance="buttons/custom/over state only/button" navigation_focus_target="true" hidden="false">
+		<layout class="stick_to_sides_attachment" alignment="right,extend" inset="4" />
+	</widget>
+
+	<widget class="link_button" id="lkbt" offset_y="2" appearance="buttons/custom/over state only/button" navigation_focus_target="true" hidden="true">
+		<layout class="stick_to_sides_attachment" alignment="right,extend" inset="4" />
+		<record id="object_property" get_property="Ttea" set_property="objt" />
+	</widget>
+	
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="8" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+
+		<widget class="picture" id="icon" red_replacement="bg accent" blue_replacement="white" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" width="26" />
+
+		<container wants_mouse_events="false">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+			
+			<container wants_mouse_events="false">
+				<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<string id="skin_style" value="title link" />
+
+				<widget class="text" id="titl" font="label" colour="faded text" auto_size="vertical" alignment="left,centre_y, can_scale" wants_mouse_events="false" navigation_focus_target="false"/>
+
+				<widget class="text" id="name" auto_size="vertical" colour="fg" style="semi_bold" size="large" alignment="left,centre_y" wants_mouse_events="false"  navigation_focus_target="false">
+					<record id="object_property" get_property="Pnam" set_property="text" />
+				</widget>
+
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0"/>
+
+					<widget class="picture" id="icbt" height="20" width="20" alignment="left,centre_y" wants_mouse_events="false" navigation_focus_target="false" hidden="true" scale_picture="true" keep_aspect_ratio="true"/>
+					<widget class="text" id="text" auto_size="vertical" colour="fg" style="bold" alignment="left,centre_y" size="large" wants_mouse_events="false" navigation_focus_target="false" />
+				</container>
+
+				<widget class="text" id="desc" auto_size="vertical" multiline="true" colour="faded text" size="small" alignment="left,top" auto_size_maximum_height="33" wants_mouse_events="false"  navigation_focus_target="false"/>
+
+				<widget class="client_object_property_panel" id="jobw" auto_size="vertical"  property="Pcjo" size="small" colour="fg" alignment="left,top" wants_mouse_events="false" navigation_focus_target="false">
+					<record id="object_property" get_property="Pers" set_property="objt" />
+					<record id="widget_info" auto_size="vertical" />
+				</widget>
+			</container>
+
+			<widget class="picture" id="liic" file="icons/16px/advice link" red_replacement="text" image_alignment="centre" scale_picture="false" keep_aspect_ratio="true" width="16" hidden="true"/>
+		</container>
+	</container>
+</panel>

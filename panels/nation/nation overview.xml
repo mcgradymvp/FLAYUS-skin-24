@@ -1,0 +1,291 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="vertical_adaptive_container" inset="0" offset="0">
+
+    <!--top part of the panel-->
+    <container id="top" default_height="420" minimum_height="420">
+      <layout class="arrange_horizontal_attachment" layout="-2,-1" offset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+      <!--bit for the nation overview-->
+      <container class="titled_box" appearance="boxes/subsection/standard/paper">
+        <translation id="title" translation_id="316601" type="use" value="Nation Profile[COMMENT: nation overview; box title]" />
+        <layout class="arrange_horizontal_attachment" layout="-4,-3" gap="10" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				    
+      <!--flag and general info-->
+        <container>
+          <layout class="arrange_vertical_attachment" layout="140, -1" gap="0" offset="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+     	   
+        <container>
+           	<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
+			      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+          <container>
+            <layout class="arrange_vertical_attachment" layout="-1,30" gap="0" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+            <!--flag-->
+            <widget class="picture" id="flag" image_alignment="centre,top" scale_picture="true" keep_aspect_ratio="true">
+              <record id="object_property">
+                <integer id="get_property" value="flag" />
+                <integer id="set_property" value="valu" />
+              </record>
+            </widget>
+      
+      <!--world-->           
+      <container>
+		    	<layout class="arrange_horizontal_attachment" layout="250,50" offset="0" gap="0" />
+			    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			
+
+			<widget class="label" size="15" colour="white" alignment="centre" auto_size="vertical">
+			 <translation id="text" type="use" translation_id="297998" value="세계 랭킹" />
+			</widget>
+
+        <widget class="fifa_ranking_label" alignment="centre" size="15" auto_size="vertical" id="wnum" style="semi_bold">
+
+          <record id="object_property">
+            <integer id="get_property" value="Nffr" />
+          </record>
+        </widget>
+
+      </container>	
+      </container>
+         <container>
+          	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>  
+            <!--stadium picture-->
+				    <widget class="stadium_picture" id="STAp" image_alignment="top, centre_x" scale_picture="true" keep_aspect_ratio="true">
+					    <record id="object_property">
+						    <integer id="get_property" value="objt" />
+						    <integer id="set_property" value="objt" />
+					    </record>
+				    </widget>
+
+            </container>
+      </container>
+          <!--general info-->
+          <widget class="client_object_label_value_table" id="fdlv">
+
+            <record id="object_property">
+              <integer id="get_property" value="objt" />
+              <integer id="set_property" value="objt" />
+            </record>
+
+            <!--this record contains any properties you want to pass on to the table-->
+            <record id="table_properties">
+              <flags id="mode" value="fill_rows, stripe_rows" />
+              <boolean id="auto_size_rows" value="true" />
+              <boolean id="fixed_size_rows" value="false" />
+              <flags id="auto_size" value="none" />
+
+              <string id="layout" value="-3,-2" />
+              <list id="column_properties">
+                <record indx="0" auto_size="vertical" alignment="left,centre_y" spec="text" />
+                <record indx="1" spec="text" colour="selection" alignment="left,centre_y" auto_size="vertical" />
+              </list>
+
+              <!-- table isn't sortable -->
+              <list id="column_display_properties">
+                <record indx="0" alignment="left,centre_y" />
+                <record index="1" top="4" bottom="4" />
+              </list>
+            </record>
+
+            <!--this list contains the property ids you want to display in the table - if you omit it, the table will attempt to display all properties in the supplied object-->
+            <list id="viewed_property_ids">
+              <integer value="TCnn" />
+              <!--<integer value="Ncac" />-->
+              <integer value="Npop" />
+              <integer value="Nriv" />
+              <integer value="Nlan" />
+              <integer value="Naag" />
+              <integer value="NnsR" />
+              <integer value="NnsC" />
+              <integer value="Nafy" />
+              <integer value="Nfay" />
+              <integer value="Nfdy" />
+            </list>
+          </widget>
+        </container>
+
+        <!--manager profile-->
+        <container>
+          <translation id="title" translation_id="297314" type="use" value="Manager Profile" />
+		  <layout class="arrange_vertical_attachment" layout="240,-1" offset="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+          <container id="ManP" class="client_object_viewer_xml_panel" file="human/manager profile" />
+          <widget id="NMnP" class="label" alignment="top,left">
+            <translation id="text" translation_id="298047" type="use" value="No manager." />
+          </widget>
+		  
+		  		<!--key employees-->
+		<container class="titled_box" priority="1" default_height="-1" minimum_heighth="250">
+			<translation id="title" translation_id="328524" type="use" value="Key Employees[COMMENT:title for a panel showing the manager, captain and vice captain of a club]" />
+		    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="club_overview_staff_panel" id="cloS" file="club/club overview staff panel2">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+		</container>
+        </container>
+      </container>
+
+      <!--next match and ranking panel-->
+      <container>
+        <layout class="arrange_vertical_attachment" layout="-3,-2" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+        <!--next match-->
+        <container class="titled_box" id="nMat" appearance="boxes/subsection/standard/paper" format="date_and_days">
+
+          <translation id="title" translation_id="247353" type="use" value="Next Match" />
+          <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+          <!--upcoming fixtures-->
+
+          <widget class="team_upcoming_fixture_info_panel" id="tmip">
+            <record id="object_property">
+              <integer id="get_property" value="NnfP" />
+              <integer id="set_property" value="valu" />
+            </record>
+          </widget>
+
+          <!--no upcoming fixtures-->
+          <widget class="label" id="NoFi" alignment="top,left">
+            <translation id="text" translation_id="298048" type="use" value="No upcoming fixtures." />
+          </widget>
+
+          <!--buttons-->
+          <container>
+            <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+            <layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="5" />
+            <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+            <!--no continental rankings for nations-->
+            <widget class="link_button" id="gtfx" section="TeFi" auto_size="horizontal" appearance="buttons/link/button">
+              <translation id="text" translation_id="323322" type="use" value="View Fixtures" />
+            </widget>
+          </container>
+        </container>
+
+
+      </container>
+    </container>
+
+    <!--bottom part of the panel-->
+    <container default_height="-1">
+
+      <layout class="arrange_horizontal_attachment" layout="-2, -1" offset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+      <container class="horizontal_adaptive_container" offset="0" inset="0">
+
+        <widget class="major_clubs_snapshot_panel" id="MCsp" priority="1" default_width="-1" minimum_width="330">
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+        </widget>
+
+        <container class="client_object_viewer_xml_panel" file="nation/major players snapshot" id="MPsp" priority="1" default_width="-1" minimum_width="330">
+          <record id="object_property">
+            <integer id="get_property" value="objt"/>
+            <integer id="set_property" value="objt"/>
+          </record>
+        </container>
+
+        <widget class="league_ranking_snapshot_panel" id="LRsp" priority="2" default_width="-1" minimum_width="330">
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+        </widget>
+      </container>
+
+      <widget class="transfer_snapshot_panel" id="TTsp">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </widget>
+    </container>
+
+    <container id="fifc" default_height="-1" minimum_height="200">
+        <layout class="arrange_horizontal_attachment" layout="500,-1,450" offset="0" gap="1" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+	   <!--kits-->
+			<container class="titled_box" appearance="boxes/subsection/standard/paper" minimum_height="150" priority="2" default_height="-1">
+				<translation id="title" translation_id="319448" type="use" value="Kits[COMMENT: title for the club kits the club overview panel]" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<widget class="club_overview_kits_panel" id="clkK">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+        
+		<container class="inner_titled_box" appearance="boxes/subsection/standard/paper" minimum_height="150" priority="2" default_height="-1">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		<widget class="team_container_honours_panel" id="hons" default_height="200" minimum_height="170">
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="objt" />
+          </record>
+        </widget> 
+       </container>
+	    <!--ranking-->
+        <container>
+          <layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<widget class="fifa_ranking_history_panel" id="fifr">
+        <translation id="title" translation_id="321111" type="use" value="World Ranking History[COMMENT: title for the world ranking history]" />
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </widget>
+		
+          </container>	  
+
+			 
+      <container id="norn">
+        <translation id="title" translation_id="321112" type="use" value="World Ranking History[COMMENT: title for world ranking history section when not being shown]" />
+        <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+        <!--spacer-->
+        <container height="10" />
+
+        <!--explanatory text-->
+        <widget class="text" id="nort" alignment="centre" spec="text,large" style="semi_bold" auto_size="vertical">
+          <translation id="text" translation_id="321113" type="use" value="There is no world ranking history available at the current time[COMMENT: message explaining why user can't see any ranking history]" />
+        </widget>
+        <widget class="text" id="nore" alignment="centre" spec="text,large" style="semi_bold" auto_size="vertical">
+          <translation id="text" translation_id="321114" type="use" value="This nation is not included in the world rankings[COMMENT: message explaining why user can't see any ranking history]" />
+        </widget>
+
+        <!--buttons-->
+        <container>
+          <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+          <layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="5" />
+          <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+
+          <widget class="button" id="wrbt" auto_size="horizontal" appearance="buttons/link/button">
+            <translation id="text" translation_id="321115" type="use" value="View Current World Rankings[COMMENT:label for displaying all nations' world rankings]" />
+          </widget>
+        </container>
+      </container>
+    </container>
+  </container>
+
+</panel>

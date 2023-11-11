@@ -1,0 +1,83 @@
+﻿<panel >
+<!-- Touchline Tablet file which is the old IBH panel - adjusted to use split panels and increased panel count to eight, changed ids to ibh1-8 -->
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+  
+		<list id="properties_to_forward">
+			<record get_property="HSMt" target="ibh1" set_property="HSMt" />
+			<record get_property="HSMt" target="ibh2" set_property="HSMt" />
+			<record get_property="HSMt" target="ibh3" set_property="HSMt" />
+			<record get_property="HSMt" target="ibh4" set_property="HSMt" />
+			<record get_property="HSMt" target="ibh5" set_property="HSMt" />
+			<record get_property="HSMt" target="ibh6" set_property="HSMt" />
+			<record get_property="ASMt" target="ibh1" set_property="ASMt" />
+			<record get_property="ASMt" target="ibh2" set_property="ASMt" />
+			<record get_property="ASMt" target="ibh3" set_property="ASMt" />
+			<record get_property="ASMt" target="ibh4" set_property="ASMt" />
+			<record get_property="ASMt" target="ibh5" set_property="ASMt" />
+			<record get_property="ASMt" target="ibh6" set_property="ASMt" />
+		</list>
+	
+	<container>
+        <layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+ 
+	<container>
+        <layout class="arrange_horizontal_attachment" layout="-1,-1,-1" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<!-- 1 Panel -->
+			<container class="client_object_viewer_xml_panel" id="ibh1" file="match/match touchline tablet slot ibh1"  minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+ 
+			<!-- 2 Panel -->
+			<container class="client_object_viewer_xml_panel" id="ibh2" file="match/match touchline tablet slot ibh2" minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+			
+			<!-- 3 Panel -->
+			<container class="client_object_viewer_xml_panel" id="ibh3" file="match/match touchline tablet slot ibh3" minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+		</container>
+		
+		<container>
+        <layout class="arrange_horizontal_attachment" layout="-1,-1,-1" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<!-- 4 Panel -->
+			<container class="client_object_viewer_xml_panel" id="ibh4" file="match/match touchline tablet slot ibh4"  minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+ 
+			<!-- 5 Panel -->
+			<container class="client_object_viewer_xml_panel" id="ibh5" file="match/match touchline tablet slot ibh5" minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+			
+			<!-- 6 Panel -->
+			<container class="client_object_viewer_xml_panel" id="ibh6" file="match/match touchline tablet slot ibh6" minimum_width="1" default_width="-1">
+			<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+			</record>
+			</container>
+
+		</container>
+	</container>	
+</panel>

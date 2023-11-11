@@ -1,0 +1,7 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+  <!-- Story title -->
+  <widget class="icon_button" id="titl" appearance="buttons/text/button" file="icons/8px/bullet" icon_colour="white" size="small" alignment="left, centre_y" colour="white">
+  	<record id="primary_icon_properties" red_replacement="white"/>
+  </widget>
+</panel>

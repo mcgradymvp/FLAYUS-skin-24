@@ -1,0 +1,595 @@
+<panel>
+	<string id="skin_style" value="subtle box" />
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container class="client_object_viewer_xml_panel" id="cUnt">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<container class="inner_contrast_box" red_replacement="pitch_box_background" height="350">
+
+			<attachment_group class="vertical_arrange" vertical_layout="50,-1" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="-9" horizontal_offset="0" vertical_inset="0" />
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<widget class="radio_toggle_switch_left" id="radf" group="1" group_parent_level="2" selected="true" appearance="tabs/standard/normal/top/button" red_replacement="white">
+						<flags id="selected_appearance" value="tabs/standard/selected/top/button" />
+						<record id="click_event">
+							<flags id="event_id" value="mtev" />
+							<flags id="index" value="0" />
+						</record>
+					</widget>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="12" />
+
+						<widget class="text" style="semi_bold" auto_size="vertical" alignment="left, centre_y" wants_mouse_events="false" multiline="false">
+							<translation id="text" translation_id="420698" type="use" value="Match Summary[COMMENT: post match analysis news panel, section title]" />
+						</widget>
+
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left, extend" horizontal_gap="2" horizontal_offset="0" vertical_alignment="top" vertical_inset="0" />
+
+							<record id="default_properties" multiline="false" alignment="left" size="xsmall" wants_mouse_events="false" disable_link="true" colour="faded text">
+								<record id="object_property" get_property="FxFR" />
+							</record>
+
+							<widget class="fixture_full_result_text" format="[%scoreline#1-win_lose_draw]" auto_size="all" />
+							<widget class="fixture_full_result_text" format="[%scoreline#1-result_h_a_result]" auto_size="vertical" />
+						</container>
+					</container>
+				</container>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<widget class="radio_toggle_switch_middle" id="rads" group="1" group_parent_level="2" selected="false" appearance="tabs/standard/normal/top/button" red_replacement="white">
+						<flags id="selected_appearance" value="tabs/standard/selected/top/button" />
+						<record id="click_event">
+							<flags id="event_id" value="mtev" />
+							<flags id="index" value="1" />
+						</record>
+					</widget>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="12" />
+
+						<widget class="text" style="semi_bold" auto_size="vertical" alignment="left" wants_mouse_events="false" multiline="false">
+							<translation id="text" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+						</widget>
+
+						<widget class="text" id="fCOA" size="xsmall" auto_size="vertical" alignment="left" wants_mouse_events="false" colour="faded text" />
+					</container>
+				</container>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<widget class="radio_toggle_switch_middle" id="radt" group="1" group_parent_level="2" selected="false" appearance="tabs/standard/normal/top/button" red_replacement="white">
+						<flags id="selected_appearance" value="tabs/standard/selected/top/button" />
+						<record id="click_event">
+							<flags id="event_id" value="mtev" />
+							<flags id="index" value="2" />
+						</record>
+					</widget>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="12" />
+
+						<widget class="text" style="semi_bold" auto_size="vertical" alignment="left, centre_y" wants_mouse_events="false" setup_hint_for_overrun="false" multiline="false">
+							<translation id="text" translation_id="420699" type="use" value="Highest Pass Combination[COMMENT: post match stats analysis, displays the pairing with the highest passing combinations in the match]" />
+						</widget>
+
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left, extend" horizontal_gap="2" horizontal_offset="0" vertical_alignment="top" vertical_inset="0" />
+
+							<record id="default_properties" size="xsmall" colour="faded text" enforce_style="true" wants_mouse_events="false" />
+
+							<widget class="person_button" id="tpfB" format="[%person#1-surname]" auto_size="all" />
+
+							<widget class="text" auto_size="all" text="-" />
+
+							<widget class="person_button" id="tptB" format="[%person#1-surname]" auto_size="vertical" />
+						</container>
+					</container>
+				</container>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+					<widget class="radio_toggle_switch_right" id="rafr" group="1" group_parent_level="2" selected="false" appearance="tabs/standard/normal/top/button" red_replacement="white">
+						<flags id="selected_appearance" value="tabs/standard/selected/top/button" />
+						<record id="click_event">
+							<flags id="event_id" value="mtev" />
+							<flags id="index" value="3" />
+						</record>
+					</widget>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="12" />
+
+						<widget class="text" style="semi_bold" auto_size="vertical" alignment="left, centre_y" setup_hint_for_overrun="false" wants_mouse_events="false" multiline="false">
+							<translation id="text" translation_id="515097" type="use" value="Key Passes/Mistakes L2G[COMMENT: AREA: post match stats analysis; NOTE: displays those who made key passes and/or mistakes]" />
+						</widget>
+
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_gap="2" horizontal_offset="0" vertical_alignment="top" vertical_inset="0" />
+
+							<record id="default_properties" size="xsmall" wants_mouse_events="false" colour="faded text" enforce_style="true" />
+
+							<widget class="person_button" id="tPpB" auto_size="all" />
+
+							<widget class="text" auto_size="all" text="/" />
+
+							<widget class="person_button" id="mMpB" auto_size="all" format="[%person#1-initial_surname]" />
+						</container>
+					</container>
+				</container>
+			</container>
+
+			<container id="cntA">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="12" vertical_inset="8" />
+
+				<container width="220" class="inner_subtle_box" red_replacement="black">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize" vertical_inset="0" horizontal_alignment="left,as_needed" horizontal_gap="2" horizontal_offset="0" />
+
+							<widget class="text" id="verS" style="semi_bold" auto_size="all" alignment="left, centre_y" multiline="false" colour="white" />
+
+							<container>
+								<attachment_group class="horizontal_arrange_autosize_all" horizontal_offset="0" horizontal_gap="0" />
+
+								<widget class="text" value="(" auto_size="all" alignment="centre" colour="faded white" />
+								<widget class="text" id="FxVn" alignment="centre" colour="faded white" auto_size="all" format="0" />
+								<widget class="text" value=")" auto_size="all" alignment="centre" colour="faded white" />
+							</container>
+						</container>
+
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+
+							<widget class="fixture_name_text" auto_size="vertical" size="small" alignment="left, centre_y" colour="faded white">
+								<record id="object_property">
+									<integer id="get_property" value="FxNm" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</widget>
+							<widget class="text" id="daYS" size="small" auto_size="all" alignment="right, centre_y" colour="faded white" />
+						</container>
+
+						<widget class="horizontal_divider">
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+						</widget>
+					</container>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_layout="36,-6,-6" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+						<container>
+							<attachment_group class="horizontal_arrange" horizontal_alignment="middle,fill" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+
+							<widget class="object_portrait_picture" scale_picture="true" image_alignment="centre">
+								<record id="object_property">
+									<integer id="get_property" value="home" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</widget>
+
+							<widget class="fixture_button" format="[%scoreline#1-home_away]" alignment="centre" auto_size="horizontal" size="large" style="semi_bold" swap_for_context_team="false" colour="white">
+								<record id="object_property">
+									<integer id="get_property" value="FxFR" />
+								</record>
+							</widget>
+
+							<widget class="object_portrait_picture" scale_picture="true" image_alignment="centre">
+								<record id="object_property">
+									<integer id="get_property" value="away" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</widget>
+						</container>
+
+						<container>
+							<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+
+							<widget class="fixture_goalscorers_text" team_index="0" size="xsmall" alignment="left, top" separate_lines="true" show_none_if_nothing_happened="false" colour="faded white">
+								<record id="object_property">
+									<integer id="get_property" value="FxCG" />
+								</record>
+							</widget>
+
+							<widget class="fixture_goalscorers_text" team_index="1" size="xsmall" alignment="right, top" separate_lines="true" show_none_if_nothing_happened="false" colour="faded white">
+								<record id="object_property">
+									<integer id="get_property" value="FxCG" />
+								</record>
+							</widget>
+						</container>
+
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="0" vertical_gap="2" horizontal_inset="0" />
+
+							<widget class="text" alignment="left, centre_y" font="label" auto_size="vertical" colour="white">
+								<translation id="text" translation_id="232851" type="use" value="Possession" />
+							</widget>
+							<container>
+								<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="35,-1,35" horizontal_offset="0" />
+
+								<widget class="percentage_label" id="poSL" alignment="right, centre_y" auto_size="vertical" colour="white" />
+								<widget class="horizontal_comparison_bar" id="poSe" height="10" animation_file="none" />
+								<widget class="percentage_label" id="poSR" alignment="left, centre_y" auto_size="vertical" colour="white" />
+							</container>
+
+							<container height="2" />
+
+							<widget class="text" alignment="left, centre_y" font="label" auto_size="vertical" colour="white">
+								<translation id="text" translation_id="249450" type="use" value="Shots on target" />
+							</widget>
+							<container>
+								<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="35,-1,35" horizontal_offset="0" />
+
+								<widget class="label" id="shtL" alignment="right, centre_y" auto_size="vertical" colour="white" />
+								<widget class="horizontal_comparison_bar" id="shtS" height="10" animation_file="none" />
+								<widget class="label" id="shtR" alignment="left, centre_y" auto_size="vertical" colour="white" />
+							</container>
+						</container>
+					</container>
+				</container>
+
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_layout="-2,-1" horizontal_offset="0" horizontal_gap="8" vertical_inset="0" />
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="0" />
+
+						<widget class="pitch_with_tactics" id="PwTc" vertical="false" pitch_alignment="centre, can_scale" pitch_draw_goals="false" pitch_draw_markings="false" icon_flags="dont_allow_player_links, dont_colour_names, show_name, show_extra_details, dont_fade_icons, hide_top_icons, drop_initial_if_possible" show_position_strength="false" hide_player_positions="true" pitch_show_names="false" pitch_show_names_as_hint="true" pitch_draw_grass="false" pitch_line_colour="white" pitch_touchline_width_percentage="1" pitch_perspective="0" player_icon_file="widgets/player tactic icon match rating" pitch_override_icon_size="2" line_width="1.2" pitch_additional_touchline_pixels_left="5" pitch_horizontal_padding="10" pitch_additional_touchline_pixels_bottom="5">
+							<string id="pitch_kit_icon" value="pitch/icons/dots" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+						</widget>
+
+						<container id="subC">
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="4" />
+
+							<container>
+								<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="2" />
+
+								<widget class="picture" file="icons/16px/sub on" width="16" height="16" image_alignment="centre" scale_picture="true" />
+								<widget class="text" id="tSub" alignment="left, top" size="small" multiline="false" auto_size="vertical" colour="white" />
+							</container>
+
+							<container>
+								<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="2" />
+
+								<widget class="picture" file="icons/16px/sub off" width="16" height="16" image_alignment="centre" scale_picture="true" />
+								<widget class="text" id="tSuO" alignment="left, top" size="small" multiline="false" auto_size="vertical" colour="white" />
+							</container>
+						</container>
+					</container>
+
+				</container>
+
+				<container hidden="true">
+					<attachment_group class="horizontal_arrange" horizontal_layout="-2,-1" horizontal_offset="0" horizontal_gap="10" vertical_inset="0" />
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="2" horizontal_inset="0" />
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" horizontal_alignment="left" />
+
+							<widget class="link_button_title" id="hMlk" section="matm" colour="white" red_replacement="white">
+								<translation id="text" translation_id="420701" type="use" value="Positional Heat Map[COMMENT: post match analysis label for a heat map displaying coverage by player position]" />
+							</widget>
+						</container>
+
+						<widget class="preselected_match_chalkboard_panel" force_left_to_right_events="true" id="hMnt" enable_popup="false">
+							<list id="chalkboard_events_to_display">
+								<!-- Heatmap -->
+								<integer value="42" />
+								<!--Average position-->
+								<integer value="62" />
+							</list>
+						</widget>
+					</container>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="16" vertical_offset="0" horizontal_inset="0" />
+
+						<widget class="text" alignment="centre" auto_size="vertical" font="title" colour="white">
+							<translation id="text" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+						</widget>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<widget class="percentage_label" id="cent" size="xlarge" alignment="centre" auto_size="vertical" colour="white" style="semi_bold" />
+
+							<widget class="text" alignment="centre" auto_size="vertical" colour="faded white">
+								<translation id="text" translation_id="247717" type="use" value="Central" />
+							</widget>
+						</container>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<widget class="percentage_label" id="rite" size="xlarge" alignment="centre" auto_size="vertical" colour="white" style="semi_bold" />
+
+							<widget class="text" alignment="centre" auto_size="vertical" colour="faded white">
+								<translation id="text" translation_id="355639" type="use" value="Right Wing[COMMENT: Goal analysis; assist area of pitch, Fn: 3592]" />
+							</widget>
+						</container>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+							<widget class="percentage_label" id="left" size="xlarge" alignment="centre" auto_size="vertical" colour="white" style="semi_bold" />
+
+							<widget class="text" alignment="centre" auto_size="vertical" colour="faded white">
+								<translation id="text" translation_id="355536" type="use" value="Left Wing[COMMENT: Goal analysis; assist area of pitch, Fn: 3592]" />
+							</widget>
+						</container>
+					</container>
+				</container>
+
+				<container hidden="true">
+					<attachment_group class="horizontal_arrange" horizontal_layout="-2,-1" horizontal_gap="10" horizontal_offset="0" vertical_inset="0" />
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="2" vertical_offset="0" horizontal_inset="0" />
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" horizontal_alignment="left" />
+
+							<widget class="link_button_title" id="pcLk" section="matm" colour="white" red_replacement="white">
+								<translation id="text" translation_id="420702" type="use" value="Passing Network[COMMENT: post match analysis panel, displays the various combinations of passes by a team]" />
+							</widget>
+						</container>
+
+						<widget class="preselected_match_chalkboard_panel" force_left_to_right_events="true" id="pChk" enable_popup="false">
+							<list id="chalkboard_events_to_display">
+								<!-- Pass Combinations -->
+								<integer value="63" />
+							</list>
+						</widget>
+					</container>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="2" vertical_offset="0" horizontal_inset="0" />
+
+						<container>
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_gap="2" horizontal_offset="0" vertical_offset="0" />
+
+							<widget class="number_label" id="tPCn" alignment="centre" auto_size="all" style="bold" colour="white" />
+
+							<widget class="text" alignment="left, centre_y" auto_size="vertical" multiline="false" style="bold" colour="white">
+								<translation id="text" translation_id="420703" type="use" value="Pass Combinations[COMMENT - match analysis screen, event type on chalkboard]" />
+							</widget>
+						</container>
+
+						<widget class="text" alignment="left, centre_y" auto_size="vertical" size="xsmall" multiline="false" colour="white">
+							<translation id="text" translation_id="420704" type="use" value="Length of Passes[COMMENT: match analysis, label referencing how long passes were]" />
+						</widget>
+
+						<container id="psLG" class="pie_chart_with_guide" mode="1" file="widgets/pass combo pie chart" height="100" colour="white" />
+
+						<widget class="text" alignment="left, centre_y" auto_size="vertical" size="xsmall" multiline="false" colour="white">
+							<translation id="text" translation_id="420705" type="use" value="Direction of Passes[COMMENT: match analysis, label referencing the direction of passes]" />
+						</widget>
+
+						<container id="psDG" class="pie_chart_with_guide" mode="1" file="widgets/pass combo pie chart" height="100" colour="white" />
+					</container>
+				</container>
+
+				<container hidden="true">
+					<attachment_group class="horizontal_arrange" horizontal_layout="-2,-1" horizontal_gap="10" horizontal_offset="0" vertical_inset="0" />
+
+					<container>
+						<!-- This offset is to make it match the other panels vertical offset, they have link buttons to offset them so we mirror it... -->
+						<layout class="stick_to_sides_attachment" alignment="all" inset="18, 0, 0, 0" apply_to_children="true" />
+						<widget class="preselected_match_chalkboard_panel" id="kPms">
+							<list id="chalkboard_events_to_display">
+								<!--Key Pass -->
+								<integer value="43" /> 
+								<!--Mistake leading to goal-->
+								<integer value="49" />
+								<!--Key Tackle -->
+								<integer value="45" />
+								<!--Key Header -->
+								<integer value="47" />
+							</list>
+						</widget>
+					</container>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" horizontal_inset="0" />
+
+						<container class="client_object_viewer_xml_panel" id="kPas">
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+							<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" />
+
+							<widget class="link_button_title" id="kplk" auto_size_restricted_to_parent_width="true" colour="white" red_replacement="white">
+								<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+								<translation id="text" translation_id="392252" type="use" value="Most Key Passes[COMMENT: FR 8873; Competition player stats overview; stat description]" />
+							</widget>
+
+							<container>
+								<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="60,-1" horizontal_gap="2" horizontal_offset="0" vertical_offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+								<widget class="object_portrait_picture" scale_picture="true" image_alignment="left, centre_y" height="60">
+									<record id="object_property">
+										<integer id="get_property" value="objt" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</widget>
+
+								<widget class="number_label" id="kPsn" alignment="right, centre_y" size="15" style="bold" auto_size="vertical" colour="white" />
+							</container>
+
+							<widget class="person_button" alignment="left, centre_y" auto_size="vertical" info_popup_enabled="true" enforce_style="true" colour="white">
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+								<record id="object_property">
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</widget>
+						</container>
+
+						<container class="client_object_viewer_xml_panel" id="mMis">
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
+							<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" />
+
+							<widget class="link_button_title" id="mmLk" auto_size_restricted_to_parent_width="true" colour="white" red_replacement="white">
+								<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+								<translation id="text" translation_id="515098" type="use" value="Most Mistakes Leading To Goal[COMMENT: AREA: pre match analysis panel; NOTE: highlights who has made most mistakes on the team]" />
+							</widget>
+
+							<container>
+								<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="60,-1" horizontal_gap="2" horizontal_offset="0" vertical_offset="0" />
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+								<widget class="object_portrait_picture" scale_picture="true" image_alignment="left, centre_y" height="60">
+									<record id="object_property">
+										<integer id="get_property" value="objt" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</widget>
+
+								<widget class="number_label" id="mMnm" alignment="right, centre_y" size="15" style="bold" auto_size="vertical" colour="white" />
+							</container>
+
+							<widget class="person_button" alignment="left, centre_y" auto_size="vertical" info_popup_enabled="true" enforce_style="true" colour="white">
+								<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+								<record id="object_property">
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="valu" />
+								</record>
+							</widget>
+						</container>
+					</container>
+				</container>
+			</container>
+		</container>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" vertical_offset="0" />
+
+			<container class="inner_subtle_box">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" />
+
+				<container class="client_object_viewer_xml_panel" id="fTbP">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="5" gap="12" />
+					<layout class="fit_children_attachment" alignment="vertical, fill" offset="5" gap="12" />
+
+					<string id="skin_style" value="title link" />
+
+					<widget class="link_button" auto_size="horizontal" section="Plov" alignment="left, centre_y" auto_size_restricted_to_parent_width="true">
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+						<translation id="text" translation_id="420658" type="use" value="Best Performance[COMMENT: match analysis overview, label for the best performance during the match]" />
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+
+					<container height="70">
+						<attachment_group class="horizontal_arrange" horizontal_layout="65,85,-1" horizontal_gap="2" horizontal_offset="0" vertical_inset="0" />
+
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" />
+
+						<widget class="object_portrait_picture" scale_picture="true" image_alignment="left, centre_y">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+							<widget class="number_label" id="bPmR" font="value" alignment="bottom" format="[%fraction#1-3.1]" />
+
+							<widget class="label" alignment="top" font="label">
+								<translation id="text" translation_id="229619" type="use" value="Rating" />
+							</widget>
+						</container>
+
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_offset="0" vertical_gap="-8" horizontal_inset="0" />
+
+							<widget class="adaptive_match_player_summary" id="bSps" navigation_focus_target="false" />
+							<widget class="adaptive_match_player_summary" id="bSns" navigation_focus_target="false" />
+						</container>
+					</container>
+
+					<widget class="text" id="bpDs" auto_size="vertical" multiline="true">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" />
+					</widget>
+
+				</container>
+			</container>
+
+			<container class="inner_subtle_box">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" />
+				<container class="client_object_viewer_xml_panel" id="fTwP">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="5" gap="12" />
+					<layout class="fit_children_attachment" alignment="vertical, fill" offset="5" gap="12" />
+
+					<string id="skin_style" value="title link" />
+
+					<widget class="link_button" id="WPlt" auto_size="all" section="Plov" alignment="left, centre_y" auto_size_restricted_to_parent_width="true">
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+						<translation id="text" translation_id="435188" type="use" value="Room for Improvement[COMMENT: match analysis overview, label for disappointing match performances, was 420659 Worst Performance but please shy away from such obvious negatives where possible please]" />
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+
+					<widget class="text" id="WPnl" auto_size="all" alignment="left, centre_y" height="30" auto_size_restricted_to_parent_width="true" font="title" colour="title">
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+						<translation id="text" translation_id="435188" type="use" value="Room for Improvement[COMMENT: match analysis overview, label for disappointing match performances, was 420659 Worst Performance but please shy away from such obvious negatives where possible please]" />
+					</widget>
+
+					<container height="70" id="mAnP">
+
+						<attachment_group class="horizontal_arrange" horizontal_layout="65,85,-1" horizontal_gap="2" horizontal_offset="0" vertical_inset="0" />
+
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" />
+
+						<widget class="object_portrait_picture" scale_picture="true" image_alignment="left, centre_y">
+							<record id="object_property" get_property="objt" set_property="objt" />
+						</widget>
+
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+							<widget class="number_label" id="wPmR" font="value" alignment="bottom" format="[%fraction#1-3.1]" />
+
+							<widget class="label" alignment="top" font="label">
+								<translation id="text" translation_id="229619" type="use" value="Rating" />
+							</widget>
+						</container>
+
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_offset="0" vertical_gap="-8" horizontal_inset="0" />
+
+							<widget class="adaptive_match_player_summary" id="wSps" />
+							<widget class="adaptive_match_player_summary" id="wSns" />
+						</container>
+					</container>
+
+					<widget class="text" id="wPds" auto_size="vertical" multiline="true">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" />
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

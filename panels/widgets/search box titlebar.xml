@@ -1,0 +1,34 @@
+<panel>
+  <!--edit box-->
+  <widget id="find" class="edit_box" appearance="edit boxes/custom/interface/search/box" spec="text" size="large" event_delay="100" style="bold" escape_event="cloe" allow_context_menu="false" clear_text_event="DELE" show_clear_text_icon="true">
+    <attachment class="max_length_attachment" length="130"/>
+		<boolean id="disable_profanity_check" value="true" />
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+    <!-- sent the return/enter key event to the screen: it causes a quick search to be performed -->
+    <event id="return_event">
+      <flags id="event_id" value="DBSR"/>
+      <flags id="event_target" value="prnt"/>
+    </event>
+
+    <!-- sent the edit event to the screen: will store the search text to set in the next screen (could be the match title bar) -->
+    <event id="edit_event">
+      <flags id="event_id" value="DBSC"/>
+      <flags id="event_target" value="scrC"/>
+    </event>
+
+    <event id="escape_event">
+      <flags id="event_id" value="CnSR"/>
+      <flags id="event_target" value="prnt"/>
+    </event>
+
+    <!-- send the text changed event to the clear button: if the text is empty, the clear button is disabled or removed -->
+    <event id="changed_event">
+      <flags id="event_id" value="chtx"/>
+      <flags id="event_target" value="prnt"/>
+    </event>
+
+    <!-- check the global property that specifies if the game is set up or loaded (ie if we can do a quick search) -->
+    <attachment class="test_global_attachment" get_property="gset" value="false" set_property="disa"/>
+  </widget>
+</panel>

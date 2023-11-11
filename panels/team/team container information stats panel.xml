@@ -1,0 +1,1193 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="main_box_no_margin" >
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<!-- state saving information (all widgets inside this container inherit these state saving properties) -->
+		<boolean id="save_session_state" value="true" />
+		<boolean id="sdst" value="true" />
+
+		<container class="scrolling_box">
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+
+				<container class="main_box">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<record id="default_properties" height="245">
+						<list id="attachments">
+							<record class="grid_layout_attachment" row_layout="70,1,55,1,55,1,55,1" mode="auto" vertical_gap="0" vertical_offset_start="0" vertical_offset_end="0">
+								<list id="column_layout">
+									<record>
+										<string id="column_layout" value="-1" />
+										<integer id="horizontal_gap" value="0" />
+										<integer id="horizontal_offset_start" value="0" />
+										<integer id="horizontal_offset_end" value="0" />
+									</record>
+									<record>
+										<string id="column_layout" value="-1" />
+										<integer id="horizontal_gap" value="0" />
+										<integer id="horizontal_offset_start" value="0" />
+										<integer id="horizontal_offset_end" value="0" />
+									</record>
+									<record>
+										<string id="column_layout" value="-1,1,-1,1,-1,1,-1,1,-1" />
+										<integer id="horizontal_gap" value="0" />
+										<integer id="horizontal_offset_start" value="0" />
+										<integer id="horizontal_offset_end" value="0" />
+									</record>
+									<record>
+										<string id="column_layout" value="-1" />
+										<integer id="horizontal_gap" value="0" />
+										<integer id="horizontal_offset_start" value="0" />
+										<integer id="horizontal_offset_end" value="0" />
+									</record>
+									<record>
+										<string id="column_layout" value="-1,1,-1,1,-1,1,-1,1,-1" />
+										<integer id="horizontal_gap" value="0" />
+										<integer id="horizontal_offset_start" value="0" />
+										<integer id="horizontal_offset_end" value="0" />
+									</record>
+									<record>
+										<string id="column_layout" value="-1" />
+										<integer id="horizontal_gap" value="0" />
+										<integer id="horizontal_offset_start" value="0" />
+										<integer id="horizontal_offset_end" value="0" />
+									</record>
+									<record>
+										<string id="column_layout" value="-1,1,-1,1,-1,1,-1,1,-1" />
+										<integer id="horizontal_gap" value="0" />
+										<integer id="horizontal_offset_start" value="0" />
+										<integer id="horizontal_offset_end" value="0" />
+									</record>
+									<record>
+										<string id="column_layout" value="-1" />
+										<integer id="horizontal_gap" value="0" />
+										<integer id="horizontal_offset_start" value="0" />
+										<integer id="horizontal_offset_end" value="0" />
+									</record>
+								</list>
+							</record>
+						</list>
+					</record>
+					<!--Goal Attempts-->
+					<container navigation_container="true" default_focus="true">
+
+						<!--Headings-->
+						<container class="main_box_no_margin" red_replacement="dark_box_background">
+							<layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1,-1" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+							<container>
+								<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="10" gap="20" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+								<widget class="picture" file="icons/custom/icon box/goal" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" width="26" red_replacement="primary" blue_replacement="secondary">
+									<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+								</widget>
+
+								<widget class="text" multiline="true" alignment="left,centre_y" font="title" colour="accent">
+									<translation id="text" translation_id="284341" type="use" value="Goal Attempts[COMMENT: team information panel; stats section; column heading]" />
+								</widget>
+							</container>
+
+
+							<widget class="text" multiline="true" alignment="centre">
+								<translation id="text" translation_id="420727" type="use" value="|c:team report stat goal colour|Goals|/c| |c:faded text|/ Shot Attempts|/c|[COMMENT: heading; team_information_panel; Goals / Shot Attempts average per match, reference ID 284345 as this is that same string but with colour formatting applied, please apply the same to your translations]" />
+							</widget>
+
+							<widget class="text" multiline="true" alignment="centre">
+								<translation id="text" translation_id="420728" type="use" value="|c:team report stat on target colour|Shots On Target|/c| |c:faded text|/ Attempted|/c|[COMMENT: heading; team_information_panel; Shots On Target / Attempted average per match, reference ID 284346 as this is that same string but with colour formatting applied, please apply the same to your translations]" />
+							</widget>
+
+							<widget class="text" multiline="true" alignment="centre">
+								<translation id="text" translation_id="420729" type="use" value="|c:team report stat penalties colour|Penalties Scored|/c| |c:faded text|/ Taken|/c|[COMMENT: heading; team_information_panel; Penalties Scored / Taken average per match, reference ID 284347 as this is that same string but with colour formatting applied, please apply the same to your translations]" />
+							</widget>
+
+							<widget class="text" multiline="true" alignment="centre">
+								<translation id="text" translation_id="420730" type="use" value="|c:team report stat minutes colour|Minutes Since Last Goal|/c|[COMMENT: heading; team_information_panel; Minutes Since Last Goal, reference ID 284348 as this is that same string but with colour formatting applied, please apply the same to your translations]" />
+							</widget>
+
+						</container>
+
+						<widget class="horizontal_divider" />
+
+
+						<!--Team-->
+
+						<widget class="label">
+							<translation id="text" translation_id="284342" type="use" value="Team[COMMENT: team information panel; stats section; column heading]" />
+							<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Tgsa" colour="team report stat goal colour" show_player="false" view="gatp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="glsa" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Tsta" colour="team report stat on target colour" show_player="false" view="gatp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="stpa" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Tpst" colour="team report stat penalties colour" show_player="false" view="gatp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="pspt" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Tmlg" colour="team report stat minutes colour" show_player="false" show_percentage="false" show_bar="false" view="gatp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="mslg" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+						</widget>
+
+						<widget class="horizontal_divider" />
+
+
+						<!--Best Player-->
+
+						<widget class="label" colour="positive">
+							<translation id="text" translation_id="284343" type="use" value="Best Player[COMMENT: team information panel; stats section; column heading]" />
+							<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Bgsa" colour="team report stat goal colour" view="gatp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bgla" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Bsta" colour="team report stat on target colour" view="gatp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bspa" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Bpst" colour="team report stat penalties colour" view="gatp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bpst" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Bmlg" colour="team report stat minutes colour" show_percentage="false" show_bar="false" view="gatp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bmsg" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="horizontal_divider" />
+
+
+						<!--Worst Player-->
+
+						<widget class="label" colour="negative">
+							<translation id="text" translation_id="284344" type="use" value="Worst Player[COMMENT: team information panel; stats section; column heading]" />
+							<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Wgsa" colour="team report stat goal colour" view="gatp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bgla" />
+										<integer id="set_property" value="oppV" />
+									</record>
+									<record>
+										<integer id="get_property" value="wgla" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Wsta" colour="team report stat on target colour" view="gatp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bspa" />
+										<integer id="set_property" value="oppV" />
+									</record>
+									<record>
+										<integer id="get_property" value="wspa" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Wpst" colour="team report stat penalties colour" view="gatp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bpst" />
+										<integer id="set_property" value="oppV" />
+									</record>
+									<record>
+										<integer id="get_property" value="wpst" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Wmlg" colour="team report stat minutes colour" show_percentage="false" show_bar="false" view="gatp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bmsg" />
+										<integer id="set_property" value="oppV" />
+									</record>
+									<record>
+										<integer id="get_property" value="wmsg" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="horizontal_divider" />
+
+					</container>
+
+					<!--General Play-->
+					<container navigation_container="true">
+						<!--Headings-->
+						<container class="main_box_no_margin" red_replacement="dark_box_background">
+							<layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1,-1" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+							<container>
+								<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="10" gap="20" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+								<widget class="picture" file="icons/custom/icon box/centre circle" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" width="26" red_replacement="primary" blue_replacement="secondary">
+									<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+								</widget>
+
+								<widget class="text" multiline="true" alignment="left,centre_y" font="title" colour="accent">
+									<translation id="text" translation_id="284349" type="use" value="General Play[COMMENT: team information panel; stats section; column heading]" />
+								</widget>
+							</container>
+
+							<widget class="text" multiline="true" alignment="centre">
+								<translation id="text" translation_id="420731" type="use" value="|c:team report stat passes colour|Passes Succeeded|/c| |c:faded text|/ Attempted|/c|[COMMENT: heading; team_information_panel; Passes Succeeded / Attempted average per match, reference ID 284350 as this is that same string but with colour formatting applied, please apply the same to your translations]" />
+							</widget>
+
+							<widget class="text" multiline="true" alignment="centre">
+								<translation id="text" translation_id="425054" type="use" value="|c:team report stat mistakes colour|Mistakes Leading To Goals|/c| |c:faded text|/ Total Mistakes|/c|[COMMENT: heading; team_information_panel; Mistakes Leading To Goals / Total Mistakes, reference ID 420732 as this is that same string but with colour formatting applied, please apply the same to your translations, the change here was to add a missing closing formatting tag]" />
+							</widget>
+
+							<widget class="text" multiline="true" alignment="centre">
+								<translation id="text" translation_id="425055" type="use" value="|c:team report stat aerial colour|Aerial Challenges Won|/c| |c:faded text|/ Attempted|/c|[COMMENT: player combination stat:headers won to headers attempted, reference ID 420733 as this is that same string but with colour formatting applied, please apply the same to your translations, the change here was to add a missing closing formatting tag]" />
+							</widget>
+
+							<widget class="text" multiline="true" alignment="centre">
+								<translation id="text" translation_id="425056" type="use" value="|c:team report stat crosses colour|Crosses Succeeded|/c| |c:faded text|/ Attempted|/c|[COMMENT: player combination stat:crosses completed to crosses attempted, reference ID 420734 as this is that same string but with colour formatting applied, please apply the same to your translations, the change here was to add a missing closing formatting tag]" />
+							</widget>
+
+						</container>
+
+
+
+						<widget class="horizontal_divider" />
+
+						<!--Team-->
+						<widget class="label">
+							<translation id="text" translation_id="284342" type="use" value="Team[COMMENT: team information panel; stats section; column heading]" />
+							<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Tpsa" colour="team report stat passes colour" show_player="false" view="genp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="pspa" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+
+						</widget>
+
+						<widget class="vertical_divider" />
+						
+						<widget class="team_report_stat_widget" id="Tmig" colour="team report stat mistakes colour" show_player="false" view="genp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="msgm" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Thwa" colour="team report stat aerial colour" show_player="false" view="genp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="hspa" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Csca" colour="team report stat crosses colour" show_player="false" view="genp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="csca" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="horizontal_divider" />
+
+						<!--Best Player-->
+						<widget class="label" colour="positive">
+							<translation id="text" translation_id="284343" type="use" value="Best Player[COMMENT: team information panel; stats section; column heading]" />
+							<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Bpsa" colour="team report stat passes colour" view="genp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bpsa" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+						
+						<widget class="team_report_stat_widget" id="Bmig" colour="team report stat mistakes colour" view="genp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bsgm" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Bhwa" colour="team report stat aerial colour" view="genp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bhsa" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Bcra" colour="team report stat crosses colour" view="genp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bcra" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="horizontal_divider" />
+
+						<!--Worst Player-->
+						<widget class="label" colour="negative">
+							<translation id="text" translation_id="284344" type="use" value="Worst Player[COMMENT: team information panel; stats section; column heading]" />
+							<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Wpsa" colour="team report stat passes colour" view="genp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bpsa" />
+										<integer id="set_property" value="oppV" />
+									</record>
+									<record>
+										<integer id="get_property" value="wpsa" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+						
+						<widget class="vertical_divider" />
+						
+						<widget class="team_report_stat_widget" id="Wmig" colour="team report stat mistakes colour" view="genp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bsgm" />
+										<integer id="set_property" value="oppV" />
+									</record>
+									<record>
+										<integer id="get_property" value="wsgm" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Whwa" colour="team report stat aerial colour" view="genp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bhsa" />
+										<integer id="set_property" value="oppV" />
+									</record>
+									<record>
+										<integer id="get_property" value="whsa" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Wcra" colour="team report stat crosses colour" view="genp">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bcra" />
+										<integer id="set_property" value="oppV" />
+									</record>
+									<record>
+										<integer id="get_property" value="wcra" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="horizontal_divider" />
+
+					</container>
+
+					<!-- Discipline -->
+					<container navigation_container="true">
+
+						<!--Headings-->
+						<container class="main_box_no_margin" red_replacement="dark_box_background">
+							<layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1,-1" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+							<container>
+								<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="10" gap="20" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+								<widget class="picture" file="icons/custom/icon box/bans" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" width="26" red_replacement="primary" blue_replacement="secondary">
+									<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+								</widget>
+
+								<widget class="text" multiline="true" alignment="left,centre_y" font="title" colour="accent">
+									<translation id="text" translation_id="284353" type="use" value="Discipline[COMMENT: team information panel; stats section; column heading]" />
+								</widget>
+							</container>
+
+							<widget class="text" multiline="true" alignment="centre">
+								<translation id="text" translation_id="420735" type="use" value="|c:team report stat tackles colour|Tackles Won|/c| |c:faded text|/ Attempted|/c|[COMMENT: heading; team_information_panel; Tackles Won / Attempted average per match, reference ID 284351 as this is that same string but with colour formatting applied, please apply the same to your translations]" />
+							</widget>
+
+							<widget class="text" multiline="true" alignment="centre">
+								<translation id="text" translation_id="420736" type="use" value="|c:team report stat fouls colour|Fouls Made|/c| |c:faded text|/ Games Played|/c|[COMMENT: heading; team_information_panel; Fouls Made / Games Played, reference ID 284356 as this is that same string but with colour formatting applied, please apply the same to your translations]" />
+							</widget>
+
+							<widget class="text" multiline="true" alignment="centre">
+								<translation id="text" translation_id="425057" type="use" value="|c:team report stat yellow card colour|Yellow Cards|/c| |c:faded text|/ Games Played|/c|[COMMENT: heading; team_information_panel; Yellow Cards / Games Played, reference ID 420737 as this is that same string but with colour formatting applied, please apply the same to your translations, the fix here was a missing closing formatting tag]" />
+							</widget>
+
+							<widget class="text" multiline="true" alignment="centre">
+								<translation id="text" translation_id="420738" type="use" value="|c:team report stat red card colour|Red Cards|/c| |c:faded text|/ Games Played|/c|[COMMENT: heading; team_information_panel; Red Cards / Games Played, reference ID 284354 as this is that same string but with colour formatting applied, please apply the same to your translations]" />
+							</widget>
+
+						</container>
+
+
+
+						<widget class="horizontal_divider" />
+
+						<!--Team-->
+						<widget class="label">
+							<translation id="text" translation_id="284342" type="use" value="Team[COMMENT: team information panel; stats section; column heading]" />
+							<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Ttwa" colour="team report stat tackles colour" show_player="false" view="disc">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="twpa" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Tfta" colour="team report stat fouls colour" show_bar="false" show_player="false" show_percentage="false" view="disc">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="fmta" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Tygp" colour="team report stat yellow card colour" show_player="false" show_percentage="false" view="disc">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="ycgp" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Trgp" colour="team report stat red card colour" show_player="false" show_percentage="false" view="disc">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="rcgp" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="horizontal_divider" />
+
+						<!--Best Player-->
+						<widget class="label" colour="positive">
+							<translation id="text" translation_id="284343" type="use" value="Best Player[COMMENT: team information panel; stats section; column heading]" />
+							<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Btwa" colour="team report stat tackles colour" view="disc">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="btwa" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Bfta" colour="team report stat fouls colour" show_bar="false" show_percentage="false" view="disc">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bfma" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Bygp" colour="team report stat yellow card colour" show_percentage="false" view="disc">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bycp" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Brgp" colour="team report stat red card colour" show_percentage="false" view="disc">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="brcp" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="horizontal_divider" />
+
+						<!--Worst Player-->
+						<widget class="label" colour="negative">
+							<translation id="text" translation_id="284344" type="use" value="Worst Player[COMMENT: team information panel; stats section; column heading]" />
+							<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Wtwa" colour="team report stat tackles colour" view="disc">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="btwa" />
+										<integer id="set_property" value="oppV" />
+									</record>
+									<record>
+										<integer id="get_property" value="wtwa" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Wfta" colour="team report stat fouls colour" show_bar="false" show_percentage="false" view="disc">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bfma" />
+										<integer id="set_property" value="oppV" />
+									</record>
+									<record>
+										<integer id="get_property" value="wfma" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Wygp" colour="team report stat yellow card colour" show_percentage="false" view="disc">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bycp" />
+										<integer id="set_property" value="oppV" />
+									</record>
+									<record>
+										<integer id="get_property" value="wycp" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Wrgp" colour="team report stat red card colour" show_percentage="false" view="disc">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="brcp" />
+										<integer id="set_property" value="oppV" />
+									</record>
+									<record>
+										<integer id="get_property" value="wrcp" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="horizontal_divider" />
+
+					</container>
+
+
+					<!-- goalkeeper -->
+					<container navigation_container="true">
+
+						<!--Headings-->
+						<container class="main_box_no_margin" red_replacement="dark_box_background">
+							<layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1,-1" offset="0" gap="0" />
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+							<container>
+								<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="10" gap="20" />
+								<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+								<widget class="picture" file="icons/custom/icon box/goalkeeper" image_alignment="centre" keep_aspect_ratio="true" scale_picture="true" width="26" red_replacement="primary" blue_replacement="secondary">
+									<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+								</widget>
+
+								<widget class="text" multiline="true" alignment="left,centre_y" font="title" colour="accent">
+									<translation id="text" translation_id="284359" type="use" value="Goalkeeper[COMMENT: team information panel; stats section; column heading]" />
+								</widget>
+							</container>
+
+							<widget class="text" multiline="true" alignment="centre">
+								<translation id="text" translation_id="420739" type="use" value="|c:team report stat clean sheet colour|Clean Sheets|/c| |c:faded text|/ Games Played|/c|[COMMENT: heading; team_information_panel; Clean Sheets / Games Played, reference ID 284360 as this is that same string but with colour formatting applied, please apply the same to your translations]" />
+							</widget>
+
+							<widget class="text" multiline="true" alignment="centre">
+								<translation id="text" translation_id="420740" type="use" value="|c:team report stat conceded colour|Goals Conceded|/c| |c:faded text|/ Games Played|/c|[COMMENT: heading; team_information_panel; Goals Conceded / Team Conceded, reference ID 284361 as this is that same string but with colour formatting applied, please apply the same to your translations]" />
+							</widget>
+
+							<widget class="spacer" />
+
+							<widget class="spacer" />
+
+						</container>
+
+
+
+						<widget class="horizontal_divider" />
+
+						<!--Team-->
+						<widget class="label">
+							<translation id="text" translation_id="284342" type="use" value="Team[COMMENT: team information panel; stats section; column heading]" />
+							<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Tcsg" colour="team report stat clean sheet colour" view="goak">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="csgp" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Tgct" colour="team report stat conceded colour" view="goak" show_as_real_value="true">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="gcgp" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="spacer" />
+
+						<widget class="spacer" />
+
+						<widget class="spacer" />
+
+						<widget class="horizontal_divider" />
+
+						<!--Best Player-->
+						<widget class="label" colour="positive">
+							<translation id="text" translation_id="284343" type="use" value="Best Player[COMMENT: team information panel; stats section; column heading]" />
+							<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Bcsg" colour="team report stat clean sheet colour" view="goak">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bcsp" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Bgct" colour="team report stat conceded colour" view="goak" show_as_real_value="true">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bgcp" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="spacer" />
+
+						<widget class="spacer" />
+
+						<widget class="spacer" />
+
+						<widget class="horizontal_divider" />
+
+						<!--Worst Player-->
+						<widget class="label" colour="negative">
+							<translation id="text" translation_id="284344" type="use" value="Worst Player[COMMENT: team information panel; stats section; column heading]" />
+							<layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Wcsg" colour="team report stat clean sheet colour" view="goak">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bcsp" />
+										<integer id="set_property" value="oppV" />
+									</record>
+									<record>
+										<integer id="get_property" value="wcsp" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="team_report_stat_widget" id="Wgct" colour="team report stat conceded colour" view="goak" show_as_real_value="true">
+							<record id="object_property">
+								<list id="get_properties">
+									<record dont_set_hint="true">
+										<integer id="get_property" value="dref" />
+										<integer id="set_property" value="dref" />
+									</record>
+									<record>
+										<integer id="get_property" value="bgcp" />
+										<integer id="set_property" value="oppV" />
+									</record>
+									<record>
+										<integer id="get_property" value="wgcp" />
+										<integer id="set_property" value="valu" />
+									</record>
+								</list>
+							</record>
+
+						</widget>
+
+						<widget class="vertical_divider" />
+
+						<widget class="spacer" />
+
+						<widget class="spacer" />
+
+						<widget class="spacer" />
+
+						<widget class="horizontal_divider" />
+
+					</container>
+
+				</container>
+
+			</container>
+		</container>
+
+
+	</container>
+
+</panel>

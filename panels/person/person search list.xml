@@ -1,0 +1,231 @@
+<panel centre_on_focus="false">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<!--appearance and background colour of search dialog-->
+	<flags id="sdap" value="boxes/popup/standard/paper" />
+	<flags id="sdbc" value="" />
+
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+
+	<container alignment="left">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0" />
+		
+		<container class="main_subtle_box_no_margin" id="nBar" height="50" appearance="boxes/custom/interaction/promise/paper" red_replacement="FM purple light" blue_replacement="" hidden="true">
+			<string id="remove_if" value="is_fmt" />
+
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,0,0,0" />
+
+			<container>
+				<attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_gap="12" horizontal_offset="12" />
+
+				<widget class="picture" file="icons/16px/recruitment focus" height="16" width="16" red_replacement="fg" icon_alignment="left,centre_y" blue_replacement="black">	
+				</widget>
+				<widget class="text" id="fcTT" height="20" size="xlarge" colour="white" font="title" alignment="left,centre_y" />
+			
+				<widget class="formatted_label" id="notT" auto_size="horizontal" height="40" alignment="left,centre_y" font="bold" colour="text">
+					<translation id="format" translation_id="557835" type="use" value="Would you like to create a Recruitment Focus, so [%person#1-your] staff can help with this search?[COMMENT: AREA: Scouting; SUB-AREA: Person Search Panel; FR-BN: FM-4093; NOTE: Notification text shown when using the person search panel for several searches continously]" />				
+				</widget>
+
+				<widget class="icon_button" icon="icons/16px/tick" appearance="buttons/subtle/normal/button" click_event="cnfN" auto_size="all" />
+				<widget class="icon_button" icon="icons/16px/cross" appearance="buttons/subtle/normal/button" click_event="disN" auto_size="all" />
+			</container>
+		</container>
+
+		<container class="main_box" id="SBar" height="50" navigation_container="true">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right, extend" horizontal_offset="2" vertical_inset="2"/>
+
+			<container>
+				<attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_alignment="left, extend" horizontal_offset="10" horizontal_gap="2" vertical_offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+
+				<widget class="text" id="plti" font="title" auto_size="all" alignment="left,centre_y">
+					<list id="auto_size_restrictions">
+						<record>
+							<string id="type" value="property" />
+							<string id="limit_type" value="maximum" />
+							<string id="orientation" value="vertical" />
+							<flags id="target" value="plti" />
+							<integer id="value" value="2" />
+							<flags id="property" value="restrict_to_lines" />
+						</record>
+						<record id="auto_size_restrictions">
+							<string id="type" value="widget" />
+							<string id="limit_type" value="maximum" />
+							<string id="orientation" value="horizontal" />
+							<flags id="target" value="parent" />
+						</record>
+					</list>
+					<translation id="text" translation_id="247194" type="use" value="Search" />
+				</widget>
+
+				<widget class="subtle_popup_button" id="ipfp" auto_size="all" select_event="ipfc">
+					<record id="auto_size_restrictions">
+						<string id="type" value="widget" />
+						<string id="limit_type" value="maximum" />
+						<string id="orientation" value="horizontal" />
+						<flags id="target" value="parent" />
+					</record>
+				</widget>
+			</container>
+
+			<container>
+				<attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_alignment="left" horizontal_offset="0" horizontal_gap="2" vertical_offset="0">
+					<global id="gap" name="ui.button_row_gap" />
+				</attachment_group>
+
+				<widget class="text" id="intt" auto_size="horizontal" height="30" fixed="true" font="label" alignment="left,centre_y">
+					<translation id="text" translation_id="451328" type="use" value="Interested In:[COMMENT: header string indicating what sort of transfer deal a player is interested in for MLS, either a normal deal or a DP/Designated Player (283628) deal]" />
+				</widget>
+
+				<widget class="spacer" width="2" height="1" />
+
+				<widget class="widget_popup_button" id="plsf" widget_type="person_search_filter_popup_panel" auto_size="horizontal" height="30" appearance="buttons/subtle/normal/button" popup_alignment="right,bottom">
+					<record id="widget_properties" file="filter_panels/person search filter popup" width="350" />
+					<translation id="text" translation_id="394450" type="use" value="Include[COMMENT: tickbox option to include a stat on a custom chalkboard]" />
+				</widget>
+
+				<widget class="check_box" id="trin" auto_size="horizontal" height="30" fixed="true" click_event="icbc">
+					<translation id="text" translation_id="319501" type="use" value="Transfer[COMMENT: section header on Views menu to indicate that view will contain information pertaining to the person's transfer status]" />
+				</widget>
+
+				<widget class="popup_button" id="trip" auto_size="horizontal" height="30" fixed="true" show_button_appearance="false" icon="icons/16px/settings" secondary_icon_enabled="false">
+					<record id="primary_icon_properties" red_replacement="normal_icon" />
+				</widget>
+
+				<widget class="spacer" width="6" height="1" />
+
+				<widget class="check_box" id="dpin" auto_size="horizontal" height="30" fixed="true" click_event="icbc">
+					<translation id="text" translation_id="283628" type="use" value="DP[COMMENT - team screen; player status flag; Designated Player (the Beckham rule), short string]" />
+				</widget>
+
+				<widget class="popup_button" id="dpip" auto_size="horizontal" height="30" fixed="true" show_button_appearance="false" icon="icons/16px/settings" secondary_icon_enabled="false">
+					<record id="primary_icon_properties" red_replacement="normal_icon" />
+				</widget>
+
+				<widget class="check_box" id="loin" auto_size="horizontal" height="30" fixed="true" click_event="icbc">
+					<translation id="text" translation_id="330195" type="use" value="Loan[COMMENT: player transfer panel; indicates which club is interested in the person and what type of deal they're looking for]" />
+				</widget>
+
+				<widget class="popup_button" id="loip" auto_size="all" fixed="true" show_button_appearance="false" icon="icons/16px/settings" secondary_icon_enabled="false">
+					<record id="primary_icon_properties" red_replacement="normal_icon" />
+				</widget>
+
+
+				<widget class="spacer" width="2" height="1" />
+
+				<widget class="vertical_divider" height="31" />
+
+				<widget class="spacer" width="2" height="1" />
+
+				<container>
+
+					<attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="right">
+						<global id="horizontal_gap" name="ui.button_row_gap" />
+					</attachment_group>
+
+					<widget class="popup_button" id="sugs" auto_size="all" select_event="sugs" fixed="true" controller_button="x_button">
+						<translation id="text" translation_id="316605" type="use" value="Quick Search" />
+					</widget>
+
+					<widget class="icon_button" id="clea" auto_size="all" click_event="clfl" controller_button="b_button">
+						<translation id="text" translation_id="229717" type="use" value="Clear" />
+					</widget>
+
+					<widget class="primary_icon_button" id="news" auto_size="all" click_event="scdi" controller_button="y_button">
+						<translation id="text" translation_id="441055" type="use" value="New Search[COMMENT: FR 21122, person search type]" />
+					</widget>
+
+				</container>
+
+
+				<widget class="vertical_divider" height="31" id="shdv" />
+
+				<container>
+					<attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="right" horizontal_offset="0" vertical_offset="0">
+						<global id="horizontal_gap" name="ui.split_button_row_gap" />
+					</attachment_group>
+					<widget class="popup_button" id="shmn" auto_size="horizontal" height="31" appearance="buttons/standard/split/left/button" />
+
+					<widget class="embedded_popup_button" id="shom" auto_size="horizontal" height="31" fixed="true" appearance="buttons/standard/split/right/button" icon="icons/16px/settings" />
+				</container>
+
+				<widget class="icon_button" id="shpa" appearance="" click_event="tgao" height="31" width="20" icon_alignment="centre" />
+
+			</container>
+		</container>
+
+		<container class="horizontal_split_container" id="splt" starting_layout="55, -1" save_session_state="true" save_default_state="true" min_height_top="55" min_height_bottom="325" should_hide_bar_when_locked="true">
+
+			<container class="main_box">
+
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="1" />
+				<widget class="person_filter_panel" id="psfp" draw_title="true" file="person/person search filter advanced">
+
+				</widget>
+			</container>
+
+			<!-- main area -->
+			<container class="main_box" id="rslt" alignment="left" force_title_borders="true">
+
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<!-- buttons area -->
+				<container embed_in_frame="true" navigation_container="true">
+					<attachment_group class="title_embedded_panel_left" vertical_inset="0" />
+
+					<widget class="view_menu_label" id="TitL" />
+					<widget class="view_menu_popup" id="plvi" />
+				</container>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="6" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<!-- customisation context is set in code for this table, depending on if search is player or staff search -->
+					<container navigation_container="true">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<widget class="person_search_table" id="pltb" database_table_type="1" default_item="evvw" dont_restore_selection="true" mode="fill_rows, stripe_rows, printable, keyboard, manual_sort, store_sort_state, show_bullets, select_rows, select_multiple, drag_rows, show_insert_column_popup" select_event="psls" column_mode="resize_columns, move_columns, custom_views" popup_menu_class="popup_button_table_header" deferred_scrolling="true" deferred_scrolling_timeout="400" fixed_size_rows="true" auto_size_rows="false" fixed_row_height="29" default_focus="true">
+							<boolean id="save_session_state" value="true" />
+							<boolean id="save_default_state" value="true" />
+
+							<record id="common_view_table_properties">
+								<integer id="row_height" value="29" />
+							</record>
+						</widget>
+					</container>
+
+					<container height="30" navigation_container="true">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="right" horizontal_offset="0" horizontal_gap="10" vertical_offset="0" />
+
+						<record id="default_properties" auto_size="horizontal" />
+
+						<!-- assignment popup button -->
+						<widget class="label" id="assl" alignment="left,centre_y">
+							<translation id="text" translation_id="338996" type="use" value="Filter by assignment:" />
+						</widget>
+						<widget class="popup_button" id="assb" />
+
+						<!-- shortlists menu -->
+						<widget class="subtle_button" id="ansh">
+							<record id="click_event" event_id="newl" dont_copy_players="true" />
+							<translation id="text" translation_id="517592" type="use" value="Add Selected Players to New Shortlist[COMMENT: AREA: Scouting/Recruitment; SUB-AREA:Person search panel; FR-BN: 41392; NOTE: Button text to add selected players to new shortlist]" />
+						</widget>
+
+						<widget class="subtle_button" id="cffp" click_event="crfp">
+							<translation id="text" translation_id="301258" type="use" value="Create Filter From Selected Player[COMMENT - person search panel; option to create a search filter using a selected player i.e. it will choose his best stats]" />
+						</widget>
+
+						<widget class="player_scouting_centre_actions_popup_button" id="scAa">
+							<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+							<translation id="text" translation_id="337776" type="use" value="Actions...[COMMENT: menu button text which contains a series of Actions when clicked]" />
+						</widget>
+					</container>
+				</container>
+			</container>
+
+		</container>
+
+
+	</container>
+</panel>

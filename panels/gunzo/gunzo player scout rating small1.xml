@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+
+	<layout class="arrange_vertical_attachment" layout="55" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container height="50">
+		<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="110,-1,110" offset="20" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container>
+	<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="text" colour="gzc" size="8" font="gz_title" alignment="centre_x,centre_y">
+					<translation id="text" translation_id="251893" type="use" value="Current Ability[COMMENT: scout report panel box heading]" />
+				</widget>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<!-- Recommendation -->
+					<widget class="player_scout_recommendation_widget" id="RCic" file="gunzo/gunzo scout recommendation" alignment="left, centre_y" auto_size="none" click_event="ltms" show_knowledge_bar="false" width="50"/>
+
+						<widget class="scout_stars_label" id="CAic" alignment="centre_x,centre_y" height="30"/>
+
+				</container>
+			</container>
+		<container>
+		<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
+	    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+			
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+				
+				<container>
+					<layout class="arrange_vertical_attachment" layout="15,25,12" offset="0" gap="3" />
+			        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<widget class="text" colour="white" size="8" font="gz_title" alignment="centre_x,centre_y">
+					<layout class="stick_to_sides_attachment" alignment="left" inset="10"/>
+					<translation id="text" type="use" value="왼발" />
+				</widget>	
+				<!-- left foot -->
+					<widget class="value_based_picture" id="Mlft" scale_picture="true" transparency="1">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="15"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="10"/>
+						<list id="value_list">
+							<record min_value="1" max_value="4" file="icons/custom/foot/l1"/>
+							<record min_value="5" max_value="8" file="icons/custom/foot/l2"/>
+							<record min_value="9" max_value="12" file="icons/custom/foot/l3"/>
+							<record min_value="13" max_value="16" file="icons/custom/foot/l4"/>
+							<record min_value="17" max_value="20" file="icons/custom/foot/l5"/>
+						</list>
+						<record id="object_property">
+							<integer id="get_property" value="PlfG" />
+						</record>
+					</widget>
+				
+				<!-- left foot -->
+					<widget class="attribute_label" id="Mlf1" size="9.5" style="bold" alignment="centre_x,centre_y">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="10"/>
+						<record id="object_property">
+							<integer id="get_property" value="PlfG" />
+						</record>
+					</widget>
+	            </container>
+				
+				<container>
+					<layout class="arrange_vertical_attachment" layout="15,25,12" offset="0" gap="3" />
+			        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				
+				<widget class="attribute_label" id="Mrf1" colour="white" size="8" font="gz_title" alignment="centre_x,centre_y">
+				<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+					<translation id="text" type="use" value="오른발" />
+				</widget>	
+					<!-- right foot -->
+					<widget class="value_based_picture" id="Mrft" scale_picture="true" transparency="1">
+						<layout class="stick_to_sides_attachment" alignment="top" inset="15"/>
+						<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+						<list id="value_list">
+							<record min_value="1" max_value="4" file="icons/custom/foot/r1"/>
+							<record min_value="5" max_value="8" file="icons/custom/foot/r2"/>
+							<record min_value="9" max_value="12" file="icons/custom/foot/r3"/>
+							<record min_value="13" max_value="16" file="icons/custom/foot/r4"/>
+							<record min_value="17" max_value="20" file="icons/custom/foot/r5"/>
+						</list>
+						<record id="object_property">
+							<integer id="get_property" value="PrfG" />
+						</record>
+					</widget>
+					<!-- right foot -->
+					<widget class="attribute_label" id="Mrf1" size="9.5" style="bold" alignment="centre_x,centre_y">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+						<record id="object_property">
+							<integer id="get_property" value="PrfG" />
+						</record>
+					</widget>
+                   </container>
+				</container>
+
+            </container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="text" colour="gzc" size="8" font="gz_title" alignment="centre_x,centre_y">
+					<translation id="text" translation_id="251894" type="use" value="Potential Ability[COMMENT: scout report panel box heading]" />
+				</widget>
+
+				<widget class="scout_stars_label" id="PAic" alignment="centre_x,centre_y" height="30"/>
+
+			</container>
+		</container>
+	</container>
+</panel>

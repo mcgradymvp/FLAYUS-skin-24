@@ -1,0 +1,60 @@
+<panel>
+
+	<container class="inner_subtle_box" force_title_borders="true" id="MANp" >
+
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<widget class="view_menu_label">
+				<translation id="text" translation_id="284283" type="use" value="Performance" />
+			</widget>
+			<widget class="view_menu_popup" id="anvp" save_session_state="true" select_event="chpr">
+				<list id="items">
+					<record>
+						<translation id="name" translation_id="281356" type="use" value="Last 15 Minutes" />
+						<integer id="id" value="0" />
+					</record>
+					<record>
+						<translation id="name" translation_id="281357" type="use" value="Last 30 Minutes" />
+						<integer id="id" value="1" />
+					</record>
+					<record>
+						<translation id="name" translation_id="232840" type="use" value="First Half" />
+						<integer id="id" value="2" />
+					</record>
+					<record>
+						<translation id="name" translation_id="232841" type="use" value="Second Half" />
+						<integer id="id" value="3" />
+					</record>
+					<record>
+						<translation id="name" translation_id="232842" type="use" value="Extra Time" />
+						<integer id="id" value="4" />
+					</record>
+					<record>
+						<translation id="name" translation_id="232843" type="use" value="Overall" />
+						<integer id="id" value="5" />
+					</record>
+				</list>
+			</widget>
+		</container>
+
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<widget class="table" id="tble" mode="fill_table" layout="4, -8" auto_size_rows="true" fixed_size_rows="false" row_spacing="6">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+			<list id="column_table_properties">
+				<record indx="0" sort_disabled="true" left="0" top="3" alignment="left,centre_y" />
+				<record indx="1" right="4" top="2" alignment="left,centre_y" />
+			</list>
+
+			<list id="column_widget_properties">
+				<record indx="1" colour="text" />
+			</list>
+
+		</widget>
+
+	</container>
+
+</panel>

@@ -1,0 +1,42 @@
+﻿<panel>
+	<string id="skin_style" value="subtle box" />
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1"/>
+			<container draw_vertical_dividers="true">
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1" horizontal_gap="15"/>
+				
+			<container class="main_box" height="520">
+					<translation id="title" type="use" value="히트맵-패스맵" />
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+    	       <widget class="preselected_match_chalkboard_panel" id="hMnt" aHiL="false" pitch_draw_arrows="true" vertical="true" maximum_player_size="0.25" pitch_alignment="can_scale,centre_x" pitch_dont_draw_indicators="false" force_left_to_right_events="true" average_position_filter="0" maxenable_popup="ture">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						<record id="object_property" get_property="objt" set_property="objt" />
+				<list id="chalkboard_events_to_display">
+					<!-- Pass Combinations -->
+					<integer value="63" />
+					<!-- Heatmap -->
+					<integer value="42" />	
+					<integer value="62" />  	
+				</list>
+				</widget>
+			</container>
+
+			</container>
+			<container height="230">
+				<attachment_group class="vertical_arrange" vertical_layout="-1,-1"/>
+		
+				<widget class="data_analyst_visualisation_widget" id="visP" visualisation_type="8" data_type="3" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false">
+						<record id="widget_properties"  />
+				</widget>
+				<widget class="data_analyst_visualisation_widget" id="visS" visualisation_type="6" data_type="3" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false">
+					<record id="widget_properties" type="0"  />
+				</widget>
+			</container>
+
+
+		</container>
+
+</panel>

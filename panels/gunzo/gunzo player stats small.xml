@@ -1,0 +1,56 @@
+<panel>
+  <!-- hide empty rows -->
+  <boolean id="hier" value="true"/>
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <container>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+    <!-- Set icon to only show: Yel, Sus, Una -->
+    <record id="widget_properties" type="5" />
+
+    <!-- Main table -->
+    <widget class="table" id="pstt" layout="100, 35, 30, 30, 30, 30, 30, 30, 35, 35, 40, 35, 35, 35, 40, 45" mode="fill_rows, stripe_rows,printable" row_height="24" row_spacing="0">
+      <record id="default_properties" alignment="centre" colour="faded text" />
+
+      <list id="column_properties">
+        <record index="0">
+          <flags id="alignment" value="left,centre_y" />
+        </record>
+      </list>
+
+      <list id="column_display_properties">
+        <record indx="0" sort_disabled="true" minimum_width="140" auto_hide_priority="1"/>
+        <record indx="1" auto_hide_priority="2"/>
+        <record indx="2" auto_hide_priority="2"/>
+        <record indx="3" auto_hide_priority="2"/>
+        <record indx="4" auto_hide_priority="2"/>
+        <record indx="5" auto_hide_priority="2"/>
+        <record indx="6" auto_hide_priority="2"/>
+        <record indx="7" auto_hide_priority="2"/>
+        <record indx="8" auto_hide_priority="2"/>
+        <record indx="9" auto_hide_priority="2"/>
+        <record indx="10" auto_hide_priority="2"/>
+        <record indx="11" auto_hide_priority="2"/>
+        <record indx="12" auto_hide_priority="2"/>
+        <record indx="13" auto_hide_priority="2"/>
+        <record indx="14" auto_hide_priority="2"/>
+      </list>
+    </widget>
+
+    <container>
+      <layout class="fit_children_attachment" alignment="all" />
+      <layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+      <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="4" />
+
+      <string id="skin_style" value="title link" />
+
+      <!-- Linked header -->
+      <widget class="link_button" section="Psta" auto_size="all">
+        <translation id="text" translation_id="385617" type="use" value="Season Stats[COMMENT: player overview; player stats by competition panel title]" />
+      </widget>
+    </container>
+  </container>
+</panel>

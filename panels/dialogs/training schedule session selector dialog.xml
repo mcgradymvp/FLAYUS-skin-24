@@ -1,0 +1,144 @@
+﻿<panel>
+	<string id="extremely_bad_impact_colour" value="training impact very negative"/>
+	<string id="bad_impact_colour" value="training impact negative"/>
+	<string id="slightly_bad_impact_colour" value="training impact slightly negative"/>
+	<string id="normal_impact_colour" value="training impact neutral"/>
+	<string id="slightly_good_impact_colour" value="training impact slightly positive"/>
+	<string id="good_impact_colour" value="training impact positive"/>
+	<string id="extremely_good_impact_colour" value="training impact very positive"/>
+	<list id="draw_order">
+		<record entity_layout_id="at09"/>
+		<record entity_layout_id="at10"/>
+		<record entity_layout_id="at01"/>
+		<record entity_layout_id="at00"/>
+		<record entity_layout_id="at03"/>
+		<record entity_layout_id="at04"/>
+		<record entity_layout_id="at05"/>
+		<record entity_layout_id="at06"/>
+		<record entity_layout_id="at11"/>
+		<record entity_layout_id="at0:"/>
+		<record entity_layout_id="at02"/>
+		<record entity_layout_id="at07"/>
+		<record entity_layout_id="at08"/>
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true"/>
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+	</widget>
+	<container class="bordered_box" entity_layout_id="at10" id="envB" appearance="boxes/custom/training/session selector/fade/paper" name="environment overlay">
+		<layout class="stick_to_object_attachment" id="align_top" offset="10" get_side="top" set_side="top" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_bottom" offset="0" get_side="bottom" set_side="bottom" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" offset="2" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_right" offset="-2" get_side="right" set_side="right" target="main"/>
+	</container>
+	<container class="training_schedule_week_widget" entity_layout_id="at01" id="trSe" file="widgets/training schedule week widget intensity" height="240" name="training schedule widget" navigation_container="true">
+		<string id="clickable" value="false"/>
+		<integer id="intensity_display_style" value="0"/>
+		<string id="auto_update_to_server" value="false"/>
+		<string id="draggable" value="true"/>
+		<string id="should_force_refresh" value="false"/>
+		<string id="selectable" value="true"/>
+		<string id="session_description_column" value="true"/>
+		<string id="schedule_session_widget_file" value="widgets/training schedule large session widget"/>
+		<string id="schedule_header_file" value="widgets/training schedule day month header"/>
+		<layout class="stick_to_object_attachment" id="align_top" offset="18" get_side="top" set_side="top" move_side="true" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main"/>
+	</container>
+	<container entity_layout_id="at00" id="borb" >
+		<layout class="stick_to_object_attachment" id="align_top" offset="16" get_side="bottom" set_side="top" target="at01"/>
+		<layout class="stick_to_object_attachment" id="align_bottom" offset="-40" get_side="bottom" set_side="bottom" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main"/>
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+		</widget>
+		<container class="table" entity_layout_id="at03" id="stTb" layout="30,-1" select_event="eChC" mode="fill_rows,select_rows, dont_allow_empty_selection" width="160" name="session type table" navigation_focus_target="true">
+			<integer id="row_height" value="30"/>
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main"/>
+		</container>
+		<container entity_layout_id="at04" id="at04" navigation_container="true">
+			<layout class="stick_to_object_attachment" id="align_top" offset="6" get_side="top" set_side="top" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="-6" get_side="bottom" set_side="bottom" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" offset="20" get_side="right" set_side="left" target="at03"/>
+			<layout class="stick_to_object_attachment" id="align_right" offset="-6" get_side="right" set_side="right" target="main"/>
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true"/>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true"/>
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+			</widget>
+			<container class="horizontal_arrange_container" entity_layout_id="at05" offset="0" id="styC" height="30" name="session name button container">
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="left" set_side="left" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main"/>
+			</container>
+			<container class="horizontal_arrange_container" entity_layout_id="at06" offset="0" id="sDet" name="session card container">
+				<integer id="gap" value="2"/>
+				<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="bottom" set_side="top" target="at05"/>
+				<layout class="stick_to_object_attachment" id="align_bottom" offset="-4" get_side="bottom" set_side="bottom" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_left" offset="2" get_side="left" set_side="left" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main"/>
+			</container>
+			<widget class="text" entity_layout_id="at11" offset="0" id="sTex" alignment="centre_x,centre_y" name="session card hidden text">
+				<string id="style" value="semi_bold"/>
+				<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="bottom" set_side="top" target="at05"/>
+				<layout class="stick_to_object_attachment" id="align_bottom" offset="-4" get_side="bottom" set_side="bottom" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_left" offset="2" get_side="left" set_side="left" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main"/>
+			</widget>
+		</container>
+	</container>
+	<container entity_layout_id="at0:" id="at0:">
+		<layout class="stick_to_object_attachment" id="align_top" offset="5" get_side="bottom" set_side="top" target="at00"/>
+		<layout class="stick_to_object_attachment" id="align_bottom" offset="-5" get_side="bottom" set_side="bottom" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true"/>
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+		</widget>
+		<widget class="primary_icon_button" entity_layout_id="at02" alignment="left" id="at02" auto_size="horizontal" width="100" name="confirm">
+			<string id="controller_button" value="y_button"/>
+			<string id="click_event" value="ok"/>
+			<string id="icon" value="icons/16px/tick"/>
+			<translation id="text" value="Confirm" translation_id="229918" type="use"/>
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_right" offset="-5" get_side="right" set_side="right" move_side="true" target="main"/>
+		</widget>
+		<widget class="icon_button" entity_layout_id="at07" alignment="left" auto_size="horizontal" id="canc" width="75" name="cancel">
+			<string id="controller_button" value="b_button"/>
+			<translation id="text" value="Cancel" translation_id="229828" type="use"/>
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_right" offset="-5" get_side="left" set_side="right" move_side="true" target="at02"/>
+		</widget>
+		<widget class="icon_button" entity_layout_id="at08" alignment="left" id="undo" auto_size="horizontal" needs_width="true" name="undo">
+			<string id="controller_button" value="x_button"/>
+			<string id="click_event" value="UNDO"/>
+			<string id="disabled" value="true"/>
+			<translation id="text" value="Undo" translation_id="230251" type="use"/>
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main"/>
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main"/>
+		</widget>
+	</container>
+</panel>

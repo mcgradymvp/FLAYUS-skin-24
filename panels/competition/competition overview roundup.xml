@@ -1,0 +1,77 @@
+﻿<panel save_session_state="true">
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<boolean id="overview_version" value="true" />
+
+	<!-- group box which extends to include all other areas -->
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- the group box that is the main container for the competition stage panel
+			this container holds whatever league or cup panel we need to create -->
+		<container class="inner_box" id="stse" force_title_borders="true" navigation_container="true">
+
+			<!-- buttons area -->
+			<container embed_in_frame="true">
+				<attachment_group class="title_embedded_panel_left"/>
+
+				<widget class="link_button_title" section="cssp"  id="labl" embed_in_frame="true">
+					<translation id="text"  translation_id="247175" type="use" value="Stages" />
+				</widget>
+
+				<!-- the stages menu: visible if more than one stage/substage -->
+				<widget class="view_menu_popup" id="stpb" sele="acsm" auto_tick_exclusive="true" save_session_state="true" />
+
+			</container>
+
+			<!-- bottom row of the stage panel is used to store cup draw buttons -->
+			<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!-- No game panel-->
+			<container id="nots" hidden="true">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+				<widget class="spacer" height="10" />
+
+				<widget class="text" id="nost" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical" />
+			</container>
+
+			<!-- group box for stage to go into -->
+			<container id="stgb">
+
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--league stage panel-->
+				<widget class="league_stage_panel" id="lspn" hidden="true" view="oovR" league_table_heading_length="0" />
+
+				<!--cup stage_panel-->
+				<widget class="cup_stage_panel" file="competition/cup overview stage" id="cstp" hidden="true" save_session_state="true" />
+
+				<!--group stage scrolling box (to be filled in code)-->
+				<widget class="scrolling_box" id="gscb" hidden="true" save_session_state="true" />
+			</container>
+
+			<container>
+
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0" />
+
+				<!-- The exceptions so point deductions in the league etc-->
+				<widget class="table" layout="-1" id="exta" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false" hidden="true" mode="fill_rows">
+					<record id="default_properties" auto_size="vertical" />
+				</widget>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

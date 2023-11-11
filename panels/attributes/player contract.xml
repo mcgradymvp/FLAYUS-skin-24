@@ -1,0 +1,220 @@
+<panel>
+	<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="top,horizontal" apply_to_children="true" inset="5"/>
+
+	<translation id="title" translation_id="247575" type="use" value="Player Contract Panel"/>
+
+	<container id="main">
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+		<layout class="arrange_horizontal_attachment" offset="0" gap="5" layout="-1,1, -2"/>
+
+		<!-- Set the colour used for the background on loan contracts -->
+		<colour id="lnBG" name="loan out background"/>
+		<!-- Set the colour used for the title text on loan contracts -->
+		<colour id="lnFG" name="accent"/>
+
+		<widget class="table" id="pcnb" layout="-1" mode="" auto_size="vertical" row_spacing="4" all_content_same_height="false">
+			<boolean id="fixed_size_rows" value="false"/>
+			<boolean id="auto_size_rows" value="false"/>
+
+			<!-- default properties for everything in a table -->
+			<record id="default_properties">
+				<flags id="alignment" value="left,centre_y"/>
+			</record>
+
+			<!-- team -->
+			<widget class="team_button" id="team" col="0" row="0" size="12" style="semi_bold" column_span="2"/>
+
+			<widget class="picture" col="0" row="1" file="dividers/standard/horizontal/line" height="10" column_span="2"/>
+
+			<!-- wages -->
+			<container col="0" row="2">
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+				<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+				<!-- type -->
+				<widget class="text" spec="text" id="typw" auto_size="vertical"/>
+				<widget class="editable_client_object_property_panel" id="wagw" style="semi_bold" colour="text" size="large" alignment="left, top">
+					<record id="widget_properties" auto_size="vertical"/>
+				</widget>
+			</container>
+
+			<container col="0" row="3">
+				<layout class="arrange_vertical_attachment" layout="-1, -1" offset="0" gap="0"/>
+				<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+				<!-- loan monthly fee label-->
+				<widget class="text" spec="text" id="lmfl" auto_size="vertical" hidden="true">
+					<translation id="text" translation_id="423917" type="use" value="Playing Monthly Fee[COMMENT: FR 14469; transfer offer; monthly fee paid to loaning club when the player is playing]"/>
+				</widget>
+
+				<!-- loan monthly fee value -->
+				<widget class="editable_client_object_property_panel" id="lmfv" alignment="left, top" hidden="true">
+					<record id="widget_properties" size="13"/>
+				</widget>
+			</container>
+
+			<container col="1" row="3">
+				<layout class="arrange_vertical_attachment" layout="-1, -1" offset="0" gap="0"/>
+				<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+				<!-- loan monthly unused fee label-->
+				<widget class="text" spec="text" id="lufl" auto_size="vertical" hidden="true">
+					<translation id="text" translation_id="420722" type="use" value="Unused Monthly Fee[COMMENT: FR 14469; transfer offer; monthly fee paid to loaning club when the player is not playing]" />
+				</widget>
+
+				<!-- loan monthly unused fee value -->
+				<widget class="editable_client_object_property_panel" id="lufv" alignment="left, top" hidden="true">
+					<record id="widget_properties" size="13"/>
+				</widget>
+			</container>
+
+			<widget class="text" id="wagi" col="0" row="4" auto_size="vertical" column_span="2" colour="faded text"/>
+
+			<!-- future contract -->
+			<widget class="text" id="ftct" col="0" row="5" auto_size="vertical" column_span="2"/>
+
+			<widget class="picture" col="0" row="6" file="dividers/standard/horizontal/line" height="2" column_span="2"/>
+
+			<!-- start date -->
+			<!--optional!, only when player has contract-->
+			<container col="0" row="7" height="22">
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+				<layout class="arrange_horizontal_attachment" offset="0" gap="0" alignment="left,extend"/>
+
+				<widget class="label" auto_size="horizontal" >
+					<translation id="text" translation_id="247433" type="use" value="Started"/>
+				</widget>
+
+				<widget class="date_cell" id="staw" auto_size="horizontal" style="bold" alignment="left,centre_y"/>
+			</container>
+
+			<!-- expiry date -->
+			<container col="0" row="8">
+				<layout class="arrange_vertical_attachment" offset="0" gap="0" alignment="bottom,extend"/>
+				<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+				<container>
+					<layout class="arrange_horizontal_attachment" offset="0" gap="0" alignment="left,extend"/>
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0"/>
+
+					<widget class="label" auto_size="horizontal" >
+						<translation id="text" translation_id="227784" type="use" value="Expires"/>
+					</widget>
+
+					<widget class="editable_client_object_property_panel" id="expw" auto_size="vertical" height="22">
+						<record id="widget_properties" auto_size="horizontal" style="bold" alignment="left,centre_y"/>
+					</widget>
+					
+					<widget class="picture" file="icons/16px/warning" id="warn" auto_size="all" hidden="true" alignment="left, centre_y">
+					  <layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+				    </widget>
+					
+				</container>
+
+				<widget class="text" id="gues" hidden="true" auto_size="vertical" size="small" colour="faded text"/>
+			</container>
+
+			<!-- percentage of total wage bill -->
+			<widget class="horizontal_percentage_bar" id="wbpt" max_value="20" bar_value_colour="tracksuit 1" alignment="left" col="0" row="9" column_span="2" height="22" label_width="25" >
+				<flags id="bar_chart_label_type" value="bclF"/>
+				<string id="format" value="[%number#1]%"/>
+			</widget>
+
+			<widget class="label" col="0" row="10" column_span="2" id="wbpl" auto_size="vertical" colour="faded text">
+				<translation id="text" translation_id="360517" type="use" value="% of the club's total wage bill[COMMENT: FR 8964]"/>
+			</widget>
+		</widget>
+
+			<widget class="picture"  file="dividers/standard/vertical/line" width="1" />
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+			<layout class="fit_children_attachment" alignment="vertical,extend" offset="0" gap="0"/>
+			<layout class="arrange_vertical_attachment" offset="0" gap="0" alignment="bottom,extend"/>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+				<layout class="arrange_horizontal_attachment" offset="0" gap="5" layout="-1,1,-1"/>
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+					<widget class="label" id="bonc" auto_size="vertical" font="title" colour="accent">
+						<translation id="text" translation_id="242354" type="use" value="Bonuses"/>
+					</widget>
+
+					<!-- Build in code -->
+					<widget class="table" id="bons" layout="-2, -1" mode="" auto_size="vertical" row_spacing="0">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+						<boolean id="fixed_size_rows" value="false"/>
+						<boolean id="auto_size_rows" value="true"/>
+
+						<!-- default properties for everything in a table -->
+						<record id="default_properties">
+							<flags id="alignment" value="left,centre_y"/>
+						</record>
+
+						<!-- properies for specific columns in the table -->
+						<list id="column_properties">
+							<record indx="0" spec="text"/>
+							<record indx="1" alignment="right, centre_y" colour="selection"/>
+						</list>
+
+						<!-- table isn't sortable -->
+						<list id="column_display_properties">
+							<record index="0" sort_disabled="true" top="4" bottom="4"/>
+							<record index="1" sort_disabled="true" top="4" bottom="4"/>
+						</list>
+					</widget>
+				</container>
+                
+				<widget class="picture"  file="dividers/standard/vertical/line" width="1" />
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+					<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+					<widget class="label" id="clac" auto_size="vertical" font="title" colour="accent">
+						<translation id="text" translation_id="247434" type="use" value="Clauses"/>
+					</widget>
+
+					<!-- Build in code -->
+					<widget class="table" id="clau" layout="-2,-1" mode="" auto_size="vertical" row_spacing="0">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+						<boolean id="fixed_size_rows" value="false"/>
+						<boolean id="auto_size_rows" value="true"/>
+
+						<!-- default properties for everything in a table -->
+						<record id="default_properties">
+							<flags id="alignment" value="left, centre_y"/>
+						</record>
+
+						<!-- properies for specific columns in the table -->
+						<list id="column_properties">
+							<record indx="0" spec="text"/>
+							<record indx="1" spec="text" colour="selection" alignment="left, centre_y"/>
+						</list>
+
+						<!-- table isn't sortable -->
+						<list id="column_display_properties">
+							<record index="0" sort_disabled="true" top="4" bottom="4"/>
+							<record index="1" sort_disabled="true" top="4" bottom="4"/>
+						</list>
+					</widget>
+				</container>
+			</container>
+
+			<widget class="player_salary_cap_impact_adjustment_panel" id="salc" height="170" hidden="true"/>
+		</container>
+	</container>
+</panel>

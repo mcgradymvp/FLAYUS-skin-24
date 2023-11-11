@@ -1,0 +1,522 @@
+﻿<panel category_highlight_appearance="boxes/main/contrast/no margin/paper" category_highlight_colour="green 900" set_piece_pitch_icon_scale="1.1" set_piece_pitch_ball_scale="1.1" set_piece_pitch_ball_icon="icons/16px/ball">
+	<boolean id="save_session_state" value="true" />
+
+	<string id="category_negative_appearance" value="boxes/main/contrast/no margin/paper" />
+	<string id="category_negative_colour" value="bg darker" />
+	<float id="category_negative_opacity" value="0.8" />
+	
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="main_box">
+		<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0" vertical_gap="0" />
+
+		<!--Top Bar-->
+		<container class="contrast_gradient_box" id="topB" red_replacement="bg accent" height="90" transparency="1" draw_vertical_dividers="true">
+			<attachment_group class="horizontal_arrange" horizontal_layout="-6,-4,-3" horizontal_offset="10" horizontal_gap="40" />
+
+			<container height="90" draw_vertical_dividers="true" id="tut1">
+				<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_offset="0" horizontal_gap="40" />
+
+				<!--Set Piece Type-->
+				<container id="typC">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="middle" horizontal_inset="6" vertical_offset="0" vertical_gap="4" />
+
+						<widget class="label" auto_size="vertical" font="label" alignment="left, centre_y">
+							<translation id="text" translation_id="306492" type="use" value="Set Pieces[COMMENT: match analysis panel; event type]" />
+						</widget>
+						<container height="40">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="12" />
+							<widget class="picture" id="stpI" width="26" image_alignment="centre" />
+							<container>
+								<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="4" />
+								<widget class="text" id="stpT" alignment="centre_y,left" auto_size="vertical" style="semi_bold" />
+								<widget class="text" id="spST" alignment="centre_y,left" auto_size="vertical" size="small" />
+							</container>
+						</container>
+					</container>
+					<widget class="subtle_popup_button" id="spSl" appearance="buttons/custom/over state only/button" fixed="true" select_event="spAC">
+						<list id="items">
+							<record>
+								<integer id="id" value="0" />
+								<translation id="name" translation_id="227896" type="use" value="Corners" />
+							</record>
+							<record>
+								<translation id="text" translation_id="227892" type="use" value="Free Kicks" />
+								<list id="items">
+									<record>
+										<integer id="id" value="1" />
+										<translation id="name" translation_id="585434" type="use" value="Shooting Range[COMMENT: AREA: Set Pieces; SUB-AREA: Set Piece Free Kick delivery Instructions; FR:; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; delivery type text for free kicks from centeral position]" />
+
+									</record>
+									<record>
+										<integer id="id" value="3" />
+										<translation id="name" translation_id="585432" type="use" value="Wide[COMMENT: AREA: Set Pieces; SUB-AREA: Set Piece Free Kick delivery Instructions; FR:; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; delivery type text for free kicks from wide position]" />
+									</record>
+									<record>
+										<integer id="id" value="4" />
+										<translation id="name" translation_id="585433" type="use" value="Deep[COMMENT: AREA: Set Pieces; SUB-AREA: Set Piece Free Kick delivery Instructions; FR:; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; delivery type text for free kicks from deep position]" />
+									</record>
+								</list>
+							</record>
+							<record>
+								<translation id="text" translation_id="247384" type="use" value="Throw-Ins" />
+								<list id="items">
+									<record>
+										<integer id="id" value="6" />
+										<translation id="name" translation_id="585392" type="use" value="Defensive Third[COMMENT: AREA: Set Pieces; SUB-AREA: Set Piece Throw-In Area; FR:; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; third of the pitch for throw-in instructions]" />
+									</record>
+									<record>
+										<integer id="id" value="5" />
+										<translation id="name" translation_id="596515" type="use" value="Middle Third[COMMENT: AREA: Set Pieces; SUB-AREA: Set Piece Throw-In Area; FR:; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; third of the pitch for throw-in instructions]" />
+									</record>
+									<record>
+										<integer id="id" value="2" />
+										<translation id="name" translation_id="585394" type="use" value="Attacking Third[COMMENT: AREA: Set Pieces; SUB-AREA: Set Piece Throw-In Area; FR:; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; third of the pitch for throw-in instructions]" />
+									</record>
+								</list>
+							</record>
+						</list>
+						<flags id="slct" value="0" />
+					</widget>
+				</container>
+
+				<!--Scenario-->
+				<container id="scnC">
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="4" />
+
+					<widget class="label" auto_size="vertical" font="label" height="28" alignment="left, centre_y">
+						<translation id="text" translation_id="447630" type="use" value="Scenario[COMMENT: title for a box containing details of the scenario of a set piece routine that the user is setting up]" />
+					</widget>
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_offset="0" horizontal_gap="0" />
+
+						<widget class="radio_toggle_switch_left" group="0" selected="true" id="scnD" alignment="centre" auto_size="horizontal">
+							<translation id="text" translation_id="297461" type="use" value="Defend[COMMENT: player_instructions; player duty]" />
+							<record id="click_event">
+								<flags id="event_id" value="spDC" />
+								<flags id="valu" value="2" />
+							</record>
+						</widget>
+						<widget class="radio_toggle_switch_right" group="0" id="scnA" selected="false" alignment="centre" auto_size="horizontal">
+							<translation id="text" translation_id="316708" type="use" value="Attack[COMMENT: team report; header text for area of team]" />
+							<record id="click_event">
+								<flags id="event_id" value="spDC" />
+								<flags id="valu" value="1" />
+							</record>
+						</widget>
+
+					</container>
+
+				</container>
+
+			</container>
+
+			<!--Routine-->
+			<container id="rtnC">
+				<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="8" />
+
+				<widget class="label" auto_size="vertical" font="label" height="30" alignment="left, centre_y">
+					<translation id="text" translation_id="388280" type="use" value="Routine[COMMENT: title for a drop down to select which set piece routine the user is setting up]" />
+				</widget>
+
+				<widget class="set_piece_routine_selector_panel" id="Rout" />
+			</container>
+
+			<!--staff responsibility-->
+			<widget class="property_list_viewer_xml_panel" file="widgets/set pieces responsibility top bar widget" id="scrc" widget_type="client_object_viewer_xml_panel" popup_alignment="left,bottom" lnkH="true" default_focus="true">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				<translation id="title" translation_id="492044" type="use" value="Training Responsibilities[COMMENT: AREA: Responsibilities; SUB-AREA: Responsibility Panel; FR: 28191; TONE: Formal; CHARLIMIT: None]" />
+			</widget>
+
+		</container>
+
+		<!--Main Content-->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_layout="-10,-8" horizontal_offset="0" horizontal_gap="0" />
+
+				<!--LHS Instructions-->
+				<container draw_horizontal_dividers="true">
+					<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="6" vertical_gap="15" />
+
+					<!--Delivery-->
+					<container height="100" id="delC">
+						<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0" vertical_gap="0" />
+						<widget class="label" font="label" height="30" auto_size="horizontal" alignment="left, centre_y" colour="title">
+							<translation id="text" translation_id="468238" type="use" value="Delivery[COMMENT: training session calendar name for Set Piece Delivery, keep short 16 letters or under]" />
+						</widget>
+
+						<container class="inner_subtle_box" height="90">
+
+							<container draw_vertical_dividers="true">
+								<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1,-1,-1,-1" horizontal_offset="0" horizontal_gap="20" />
+								<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="false" inset="0" />
+
+								<!-- Corner Side -->
+								<container id="crSc">
+									<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="4" />
+
+									<widget class="label" auto_size="vertical" font="label" height="28" alignment="left, centre_y">
+										<translation id="text" translation_id="229400" type="use" value="Type" />
+									</widget>
+
+									<widget class="subtle_popup_button" id="swng" height="30" auto_size="horizontal" select_event="spSC">
+										<list id="items">
+											<record id="0">
+												<translation id="name" translation_id="572999" type="use" value="Inswinger[COMMENT: AREA: Set Pieces; SUB-AREA: Set Piece Corner Instructions; FR-BN: todo george.webster; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Option for corners that will swing into the box]" />
+											</record>
+											<record id="1">
+												<translation id="name" translation_id="572998" type="use" value="Outswinger[COMMENT: AREA: Set Pieces; SUB-AREA: Set Piece Corner Instructions; FR-BN: todo george.webster; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; Option for corners that will swing away from the goal]" />
+											</record>
+										</list>
+										<flags id="slct" value="0" />
+									</widget>
+								</container>
+
+								<!--Free Kick Type-->
+								<container hidden="true">
+									<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="4" />
+
+									<list id="properties_to_forward">
+										<record get_property="slct" set_property="slct" target="fkbt" />
+									</list>
+
+									<widget class="label" auto_size="vertical" font="label" height="28" alignment="left, centre_y">
+										<translation id="text" translation_id="229400" type="use" value="Type" />
+									</widget>
+									<widget class="icon_button" auto_size="horizontal" click_event="spDT" id="fkbt" appearance="buttons/subtle/normal/button" icon="icons/16px/maximise" icon_alignment="right" />
+								</container>
+
+
+								<!--Select Taker-->
+								<container id="slcT">
+									<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="4" />
+
+									<widget class="label" id="tkTx" auto_size="vertical" font="label" height="28" alignment="left, centre_y" />
+
+									<widget class="icon_button" id="tkBU" auto_size="horizontal" click_event="spKT" appearance="buttons/subtle/normal/button" icon="icons/16px/maximise" icon_alignment="right" />
+								</container>
+
+								<!--Throw In taker (warning that will always use full back) container-->
+								<container id="thWC" hidden="true">
+									<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="4" />
+
+									<widget class="label" font="label" height="28" alignment="left, centre_y">
+										<translation id="text" translation_id="393621" type="use" value="Throw-In Taker[COMMENT: FR 9552 - text to show who is the throw in taker]" />
+									</widget>
+
+									<widget class="text" height="28" alignment="left, centre_y">
+										<translation id="text" translation_id="598133" type="use" value="Throw-in will be taken by the most suitable player on designated side of the pitch[COMMENT: AREA: Set Pieces; SUB-AREA: Throw In Instructions; FR-BN: n/a; TONE: Formal; CHARLIMIT: Short; REF-ID: n/a; NOTE: Throw in taker selection warning - Throw in will always be taken by the appropriate full back player]" />
+									</widget>
+								</container>
+
+								<!--Aim For-->
+								<container id="aimC">
+									<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="4" />
+
+									<widget class="label" id="afTx" auto_size="vertical" font="label" height="28" alignment="left, centre_y" />
+
+									<widget class="subtle_popup_button" id="aimF" height="30" auto_size="horizontal" />
+								</container>
+							</container>
+						</container>
+					</container>
+
+					<!--Instructions-->
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<!--first XI preview-->
+						<container id="fstX" hidden="true">
+							
+							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="5" />
+							
+							<widget class="text" auto_size="vertical" alignment="left, centre_y" size="large" style="bold" font="title" colour="text">
+								<translation id="text" translation_id="596466" type="use" value="Preview with Starting XI[COMMENT: AREA: Set Pieces; SUB-AREA: pitch preview; FR-BN: FM-24172; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: title text for selecting to preview a set piece routine using the current starting eleven]" />
+							</widget>
+							
+							<widget class="text" auto_size="vertical" id="sXId" alignment="left, centre_y" />
+						
+	
+							<!--top container for preview-->
+							<container class="vertical_arrange_container" auto_size="vertical" vertical_gap="5" id="tpCn" />
+
+							<!--split container for in/out the box-->
+							<container>
+								<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="8" />
+								<!--In box preview container-->
+								<container class="scrolling_box" id="ibSc">
+									<container class="vertical_arrange_container" auto_size="vertical" vertical_gap="12" id="ibCn" />
+								</container>
+								<!--Out box preview container-->
+								<container class="scrolling_box" id="obSc">
+									<container class="vertical_arrange_container" auto_size="vertical" vertical_gap="12" id="obCn" />
+								</container>
+							</container>
+						</container>
+
+						<container id="iNsT">
+							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="5" />
+
+							<container>
+								<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0" />
+								<widget class="label" auto_size="horizontal" font="label" height="28" alignment="left, centre_y" colour="title">
+									<translation id="text" translation_id="343974" type="use" value="Instructions[COMMENT: title for a table that shows additional instructions to be employed by the team]" />
+								</widget>
+
+								<container hidden="true">
+									<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right" horizontal_offset="0" horizontal_gap="8" />
+									<widget class="text" auto_size="horizontal" font="label" height="30" alignment="left, centre_y">
+										<translation id="text" translation_id="229400" type="use" value="Type" />
+									</widget>
+									<widget class="icon_button" height="30" auto_size="horizontal" click_event="spDT" id="fkbD" appearance="buttons/subtle/normal/button" icon="icons/16px/maximise" icon_alignment="right" />
+
+								</container>
+
+								<container id="dsvL">
+									<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right" horizontal_offset="0" horizontal_gap="8" />
+
+									<list id="properties_to_forward">
+										<record get_property="slct" set_property="slct" target="dfbu" />
+									</list>
+
+									<widget class="label" auto_size="horizontal" font="label" height="28" alignment="left, centre_y">
+										<translation id="text" translation_id="585436" type="use" value="Defensive Line:[COMMENT: AREA: Set Pieces; SUB-AREA: Defending Free Kicks; FR-BN: FM-20905; TONE: Formal; CHARLIMIT: N/A; REF-ID: n/a; NOTE: Popup button title, choice of selecting low, balanced or high defensive line for non shooting free kicks]" />
+									</widget>
+
+									<widget class="subtle_popup_button" id="dfbu" fixed="false" auto_size="horizontal" select_event="spTC">
+										<list id="items">
+											<record>
+												<integer id="id" value="1" />
+												<integer id="value" value="1" />
+												<translation id="name" translation_id="585438" type="use" value="Deep[COMMENT: AREA: Set Pieces; SUB-AREA: Defending Free Kicks; FR-BN: FM-20905; TONE: Formal; CHARLIMIT: N/A; REF-ID: n/a; NOTE: Popup button option for a deep defensive line that sits closest to the goal]" />
+											</record>
+											<record>
+												<integer id="id" value="0" />
+												<integer id="value" value="0" />
+												<translation id="name" translation_id="585439" type="use" value="Balanced[COMMENT: AREA: Set Pieces; SUB-AREA: Defending Free Kicks; FR-BN: FM-20905; TONE: Formal; CHARLIMIT: N/A; REF-ID: n/a; NOTE: Popup button option for a balanced defensive line]" />
+											</record>
+											<record>
+												<integer id="id" value="2" />
+												<integer id="value" value="2" />
+												<translation id="name" translation_id="585437" type="use" value="High[COMMENT: AREA: Set Pieces; SUB-AREA: Defending Free Kicks; FR-BN: FM-20905; TONE: Formal; CHARLIMIT: N/A; REF-ID: n/a; NOTE: Popup button option for a high defensive line that sits far from the the goal]" />
+											</record>
+										</list>
+									</widget>
+
+								</container>
+
+
+							</container>
+
+
+							<container>
+								<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+								<!--Normal instructions-->
+								<container class="inner_subtle_box" id="nrmC">
+									<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0" vertical_gap="8" horizontal_inset="0" />
+
+									<container id="ltCN" height="60">
+										<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_offset="0" horizontal_gap="10" vertical_inset="6" />
+
+										<widget class="radio_button" id="shrN" group="2" width="200" alignment="centre" appearance="switches/toggle/normal/button" icon_enabled="false" show_button_appearance="true" red_replacement="grey 600" blue_replacement="fg accent">
+											<record id="click_event" event_id="spTC" value="0" />
+											<translation id="text" translation_id="597583" type="use" value="Work Into Box[COMMENT: AREA: Set Pieces; SUB-AREA: Throw In Instructions; FR-BN: n/a; TONE: Formal; CHARLIMIT: Short; REF-ID: n/a; NOTE: Set piece instruction title, attempt to retain possession of the balls from throw ins]" />
+										</widget>
+
+										<widget class="radio_button" id="lngN" group="2" width="200" alignment="centre" appearance="switches/toggle/normal/button" icon_enabled="false" show_button_appearance="true" red_replacement="grey 600" blue_replacement="fg accent">
+											<translation id="text" translation_id="585390" type="use" value="Long Throw[COMMENT: AREA: Set Pieces; SUB-AREA: Throw In Instructions; FR-BN: n/a; TONE: Formal; CHARLIMIT: Short; REF-ID: n/a; NOTE: Set piece instruction title, attempt to use long throws to launch the ball into the box]" />
+											<record id="click_event" event_id="spTC" value="1" />
+										</widget>
+
+									</container>
+									<container draw_vertical_dividers="true">
+										<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1" horizontal_offset="10" horizontal_gap="30" />
+
+										<!--In The Box-->
+										<container class="scrolling_box">
+											<container>
+												<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="10" />
+
+												<!--In The Box Title-->
+												<container>
+													<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" horizontal_gap="2" horizontal_offset="0" vertical_alignment="top" vertical_inset="0" />
+
+													<widget class="icon_button" id="inbH" icon="icons/custom/more/button" icon_enabled="true" appearance="" icon_colour="white" colour="white" auto_size="horizontal" />
+													<widget class="text" id="inbT" auto_size="horizontal" font="title" alignment="left, centre_y" size="large" height="28" />
+
+												</container>
+
+												<!--In The Box Types-->
+												<container id="inTB">
+													<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="10" />
+													<!--Added in code-->
+												</container>
+											</container>
+										</container>
+										<!--Out The Box-->
+										<container class="scrolling_box">
+											<container>
+												<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="10" />
+
+												<!--Out The Box Title-->
+												<container>
+													<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" horizontal_gap="2" horizontal_offset="0" vertical_alignment="top" vertical_inset="0" />
+
+													<widget class="icon_button" id="oubH" icon="icons/custom/more/button" icon_enabled="true" appearance="" icon_colour="white" colour="white" auto_size="horizontal" />
+													<widget class="text" id="oubT" auto_size="horizontal" font="title" alignment="left, centre_y" size="large" height="28" />
+												</container>
+
+												<!--Out The Box Types-->
+												<container id="otTB">
+													<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="10" />
+													<!--Added in code-->
+												</container>
+											</container>
+										</container>
+									</container>
+								</container>
+
+								<!--Specific throw in instructions-->
+								<container id="thrC" hidden="true">
+									<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+									<container class="inner_subtle_box">
+										<attachment_group class="vertical_arrange_autosize" vertical_alignment="bottom" vertical_offset="12" vertical_gap="18" horizontal_inset="12" />
+
+										<!--throw in containers-->
+										<container>
+											<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="middle" vertical_inset="2" horizontal_offset="10" horizontal_gap="30" />
+
+											<!--Short throw radio container-->
+											<container height="250" width="200">
+												<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+												<widget class="radio_button" id="shrT" group="1" group_parent_level="2" appearance="buttons/standard/flex/button" icon_enabled="false" show_button_appearance="true" red_replacement="grey 800" blue_replacement="fg accent">
+													<record id="click_event" event_id="spTC" value="0" />
+												</widget>
+												
+												<!--retain possesion/Work Into Box-->
+												<container wants_mouse_events="false">
+													<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="12" vertical_gap="24" horizontal_inset="18" />
+
+													<widget class="text" font="title" id="shtT" size="large" auto_size="vertical" colour="text" alignment="centre" wants_mouse_events="false" />
+													<container wants_mouse_events="false">
+														<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="4" horizontal_inset="0" />
+
+														<!--Pitch image-->
+														<widget class="picture" id="shtI" scale_picture="true" keep_aspect_ratio_high="true" transparency="1" wants_mouse_events="false" />
+
+														<widget class="text" colour="text" id="shtD" size="small" auto_size="vertical" alignment="centre" wants_mouse_events="false" />
+													</container>
+												</container>			
+											</container>
+
+											<!--long throw radio container-->
+											<container height="250" width="200">
+												<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+												<widget class="radio_button" id="lngT" group="1" group_parent_level="2" appearance="buttons/standard/flex/button" icon_enabled="false" show_button_appearance="true" red_replacement="grey 800" blue_replacement="fg accent">
+
+													<record id="click_event" event_id="spTC" value="1" />
+												</widget>
+
+												<!--work the line/Long throw-->
+												<container wants_mouse_events="false">
+													<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="10" vertical_gap="24" horizontal_inset="12" />
+													<widget class="text" id="lngt" font="title" size="large" auto_size="vertical" colour="text" alignment="centre" wants_mouse_events="false" />
+													<container wants_mouse_events="false">
+														<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="4" horizontal_inset="0" />
+
+														<!--Pitch image-->
+														<widget class="picture" id="lngI" scale_picture="true" keep_aspect_ratio_high="true" transparency="1" wants_mouse_events="false" />
+
+														<widget class="text" id="lngD" colour="text" size="small" auto_size="vertical" alignment="centre" wants_mouse_events="false" />
+													</container>
+												</container>
+											</container>
+										</container>
+
+										<!--throw in text-->
+										<widget class="text" auto_size="vertical" colour="text" alignment="centre">
+											<translation id="text" translation_id="585391" type="use" value="Click option to change routine preferences[COMMENT: AREA: Set Pieces; SUB-AREA: Throw In Instructions; FR-BN: n/a; TONE: Formal; CHARLIMIT: Short; REF-ID: n/a; NOTE: Set piece instruction description, explain how to change selected instruction]" />
+										</widget>
+									</container>
+								</container>
+							</container>
+						</container>
+					</container>
+				</container>
+
+				<!--RHS Pitch-->
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+					<widget class="spacer" height="6" />
+
+				<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_offset="40" horizontal_gap="8" />
+					
+					<widget class="widget_popup_button" id="setS" auto_size="all" appearance="buttons/subtle/normal/button" hidden="false">
+						<translation id="text" translation_id="597581" type="use" value="Preview Options[COMMENT: AREA: Set Pieces; SUB-AREA: Set Piece Pitch; FR:FM-30731; TONE: Formal;  CHARLIMIT: None; REF-ID: ; NOTE; button to bring up options for first xi preview on pitch]" />
+						<string id="widget_type" value="container" />
+						<record id="widget_properties" file="tactics/set piece routine pitch toggle popup" />
+						<record id="modal_popup_properties">
+							<boolean id="darkened" value="false" />
+							<boolean id="attempt_to_reposition" value="true" />
+							<list id="eTST">
+								<flags value="eVss" />
+								<flags value="plrP" />
+							</list>
+						</record>
+					</widget>
+
+				</container>
+
+					<container>
+						<container class="scrolling_box">
+							<string id="create_if" value="is_debug" />
+
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+							<widget class="text" id="dbug" auto_size="vertical" />
+						</container>
+
+						<widget class="pitch_with_set_piece_routine" id="piwd" pitch_draw_arrows="true" pitch_use_gradient="true" select_event="ppSl" pitch_horizontal_padding="35" pitch_vertical_padding="35">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+							<list id="pitch_gradient_colours">
+								<symbol value="fg" />
+								<symbol value="transparent" />
+							</list>
+						</widget>
+					</container>
+				</container>
+			</container>
+
+			<!--disable appearance for when staff in charge of set pieces-->
+			<container class="main_box" appearance="boxes/custom/darken/no margin/paper" hidden="true" id="tcRW" wants_mouse_events="true">
+				<attachment_group class="vertical_arrange_horizontal_centre" vertical_alignment="middle" vertical_offset="0" vertical_gap="5" />
+				<container class="main_contrast_box" draw_horizontal_dividers="true" width="900">
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" horizontal_inset="30" vertical_gap="24" />
+
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="16" />
+
+						<widget class="text" font="title" size="xlarge" auto_size="vertical" alignment="centre">
+							<translation id="text" translation_id="596374" type="use" value="Set Piece Responsibilities[COMMENT: AREA: Responsibilities; SUB - AREA: Responsibility Panel; FR: FM-20917; TONE: Formal; CHARLIMIT: None]" />
+						</widget>
+
+						<widget class="text" id="mrsT" auto_size="vertical" alignment="left,centre_y" />
+
+						<widget class="club_staff_responsibility_widget" id="mRsp" file="widgets/club staff responsibility widget" name="friendlies group" height="90" />
+					</container>
+
+					<container class="non_player_attributes_panel" height="200" use_combined_table="true" key_attributes_only="true" file="non_player/non player set piece attributes panel" id="mrsD" />
+				</container>
+
+			</container>
+		</container>
+	</container>
+
+
+</panel>

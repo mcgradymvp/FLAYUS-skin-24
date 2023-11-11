@@ -1,0 +1,133 @@
+<panel>
+	<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="10" />
+
+	<container class="main_box">
+		<!-- Main content always shown -->
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0" />
+
+		<container draw_vertical_dividers="true">
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1" horizontal_gap="20" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="top,extend" />
+
+				<widget class="icon_button" icon="icons/26px/board" auto_size="all" icon_colour="performance board tag" appearance="" colour="performance board tag" font="title" size="xlarge" navigation_focus_target="false">
+					<translation id="text" translation_id="560932" type="use" value="Board Feedback - Transfers[COMMENT: AREA: club vision; NOTE: title for squad related board feedback]" />
+				</widget>
+				<widget class="text" id="BCmp" display_format="1" size="9" auto_size="all" colour="faded text" />
+
+				<widget class="performance_grade_box" id="bpgb" auto_size="vertical" />
+							<widget class="spacer" height="4" />
+			</container>
+
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="top,extend" />
+
+				<widget class="icon_button" icon="icons/26px/fans" auto_size="all" icon_colour="performance fans tag" appearance="" colour="performance fans tag" font="title" size="xlarge" navigation_focus_target="false">
+					<translation id="text" translation_id="560933" type="use" value="Supporter Feedback - Transfers[COMMENT: AREA: club vision; NOTE: title for squad related supporter feedback]" />
+				</widget>
+				<widget class="text" id="FCmp" display_format="1" size="9" auto_size="all" colour="faded text" />
+
+				<widget class="performance_grade_box" id="fpgb" auto_size="vertical" />
+			</container>
+		</container>
+
+		<container draw_vertical_dividers="true">
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1" horizontal_gap="20" />
+
+			<container class="scrolling_box" height="84">
+				<container class="club_vision_viewer_panel" id="btcp" file="club/club vision board culture panel" hide_headers="true" show_objective_icon="false" show_objective_type="false" show_objective_importance="false" show_objective_status="true" use_performance_data="true" only_transfer_objectives="true" club_vision_view_type="0" />
+			</container>
+			<container class="scrolling_box" height="84">
+				<container class="club_vision_viewer_panel" id="ftcp" file="club/club vision supporter culture panel" hide_headers="true" show_objective_icon="false" show_objective_type="false" show_objective_importance="true" show_objective_status="true" use_performance_data="true" only_transfer_objectives="true" club_vision_view_type="1" />
+			</container>
+		</container>
+
+		<widget class="spacer" height="8" />
+
+		<container class="fan_transfer_reaction_panel" id="ftrp" auto_size="vertical" />
+	</container>
+
+	<widget class="vertical_divider" width="10">
+		<attachment class="show_medium_horizontal" />
+	</widget>
+
+	<container class="main_box" width="400">
+		<attachment class="show_medium_horizontal" />
+		<!-- Additional info (hidden in low res) -->
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="20" horizontal_inset="10" />
+
+		<!-- Players Signed From -->
+		<container draw_horizontal_dividers="true">
+			<attachment_group class="vertical_arrange_autosize" />
+			<container>
+				<attachment_group class="vertical_arrange_autosize" />
+				<widget class="text" minimum_width="100" alignment="left,centre_y" font="title" colour="text" auto_size="all">
+					<translation id="text" translation_id="557647" type="use" value="Players Signed From[COMMENT: AREA: Club Vision; SUB-AREA: Performance Transfer Activity; FR-BN: FM-3614; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: title text for hi res table of nations players signed from]" />					
+				</widget>
+				<widget class="text" minimum_width="100" alignment="left,centre_y" colour="faded text" auto_size="all">
+					<translation id="text" translation_id="557648" type="use" value="Data from previous 12 months[COMMENT: AREA: Club Vision; SUB-AREA: Performance Transfer Activity; FR-BN: FM-3614; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: sub title text for hi res table of nations players signed from]" />
+				</widget>
+			</container>
+			<widget class="table" id="pstb" layout="-1,40" mode="fill_rows, stripe_rows" auto_size_rows="false" fixed_size_rows="true" row_height="26" auto_size="vertical">
+				<list id="column_table_properties">
+					<record>
+						<integer id="index" value="0" />
+						<record id="widget_info">
+							<symbol id="class" value="nation_button" />
+						</record>
+					</record>
+					<record>
+						<integer id="index" value="1" />
+						<record id="widget_info">
+							<symbol id="class" value="players_signed_from_icon_widget" />
+							<string id="file" value="icons/16px/info" />
+							<flags id="icon_colour" value="grey" />
+							<flags id="icon_alignment" value="left" />
+						</record>
+					</record>
+				</list>
+				<list id="column_widget_properties">
+					<record alignment="centre_y,left">
+						<integer id="index" value="0" />
+					</record>
+					<record alignment="centre_y,right">
+						<integer id="index" value="1" />
+					</record>
+				</list>
+			</widget>
+		</container>
+
+		<widget class="horizontal_divider" height="10" />
+
+		<!-- Transfer Stats -->
+		<container draw_horizontal_dividers="true">
+			<attachment_group class="vertical_arrange_autosize" />
+			<container>
+				<attachment_group class="vertical_arrange_autosize" />
+				<widget class="text" minimum_width="100" alignment="left,centre_y" font="title" colour="text" auto_size="all">
+					<translation id="text" translation_id="557649" type="use" value="Transfer Stats[COMMENT: AREA: Club Vision; SUB-AREA: Performance Transfer Activity; FR-BN: FM-3614; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: title text for hi res table of transfer stats]" />
+				</widget>
+				<widget class="text" minimum_width="100" alignment="left,centre_y" colour="faded text" auto_size="all">
+					<translation id="text" translation_id="557650" type="use" value="Data from previous 12 months[COMMENT: AREA: Club Vision; SUB-AREA: Performance Transfer Activity; FR-BN: FM-3614; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: sub title text for hi res table of transfer stats]" />
+				</widget>
+			</container>
+			<widget class="table" id="tstb" layout="-1, -1" mode="fill_rows, stripe_rows" auto_size_rows="false" fixed_size_rows="true" row_height="26" auto_size="vertical">
+				<list id="column_widget_properties">
+					<record alignment="centre_y,left">
+						<integer id="index" value="0" />
+					</record>
+					<record alignment="centre_y,right">
+						<integer id="index" value="1" />
+					</record>
+				</list>
+			</widget>
+		</container>
+
+		<widget class="link_button" auto_size="all" section="trcn">
+			<layout class="stick_to_sides_attachment" alignment="right, bottom" inset="10" />
+			<translation id="text" translation_id="227743" type="use" value="Transfers" />
+		</widget>
+	</container>
+</panel>

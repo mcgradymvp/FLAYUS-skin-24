@@ -1,0 +1,25 @@
+﻿<panel height="500" width="400">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<container class="main_contrast_box" appearance="boxes/popup/standard/paper">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="12" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<widget class="text" auto_size="vertical" size="small" colour="faded text">
+			<translation id="text" translation_id="538900" type="use" value="Ask Data Analyst to create a visualisation for...[COMMENT: AREA: Visualisation; SUB-AREA:; FR : 32932; TONE: Formal; CHARLIMIT: None; NOTE: Visualisation Ask For popup header string indicating Analyst can provide required visuals]" />
+		</widget>
+
+		<container height="30">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" horizontal_gap="0" />
+
+			<widget class="edit_box" id="edtB" size="small" clear_text_event="eFCL" changed_event="eFlE" show_clear_text_icon="true" ignore_leading_space="true" colour="fg" appearance="edit boxes/custom/selection/box" />
+				
+
+			<widget class="subtle_popup_button" id="selL" fixed="true" select_event="epVS" width="30" secondary_icon_alignment="centre" appearance="buttons/subtle/split/right/button" />
+		</container>
+		<widget class="text" font="title" auto_size="vertical">
+			<translation id="text" translation_id="395329" type="use" value="Suggestions[COMMENT: FR 10593, user can ask DoF for transfer target suggestions]" />
+		</widget>
+		<container class="scrolling_box">
+			<container class="vertical_arrange_container" id="visC" auto_size="vertical" />
+		</container>
+	</container>
+</panel>

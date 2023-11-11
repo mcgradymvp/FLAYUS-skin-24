@@ -1,0 +1,270 @@
+﻿<panel height="650">
+	<layout class="arrange_vertical_attachment" layout="40, -1, 245" offset="0" gap="8"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+
+    <container class="client_object_viewer_xml_panel" id="opin">
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+      <record id="object_property">
+        <integer id="get_property" value="objt" />
+        <integer id="set_property" value="objt" />
+      </record>
+      
+      <container>
+        <layout class="arrange_horizontal_attachment" alignment="left" offset="2" gap="6" do_not_size="true" />
+        <layout class="fit_children_attachment" alignment="horizontal,fill" gap="6"/>
+        <layout class="stick_to_sides_attachment" alignment="left" inset="2" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+        <widget class="object_portrait_picture" height="30" width="30" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+          <record id="object_property">
+            <integer id="get_property" value="objt" />
+          </record>
+        </widget>
+        
+        <container>
+          <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+          <layout class="fit_children_attachment" alignment="horizontal" />
+          <layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+
+          <widget class="team_button" icon_enabled="false" mode="1" auto_size="all" style="semi_bold" alignment="left,centre_y">
+            <record id="object_property">
+              <integer id="get_property" value="objt" />
+            </record>
+          </widget>
+
+          <widget class="division_position_button" display_format="1" size="small" colour="faded text" auto_size="all" alignment="left,centre_y">
+            <record id="object_property">
+              <integer id="get_property" value="Tpos" />
+            </record>
+          </widget>
+
+        </container>
+        
+      </container>
+
+      <container>
+        <layout class="arrange_horizontal_attachment" alignment="left" offset="0" do_not_size="true" />
+        <layout class="fit_children_attachment" alignment="horizontal,fill" />
+        <layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+        <widget class="label" font="label" auto_size="horizontal" alignment="left,centre_y">
+          <translation id="text" translation_id="227813" type="use" value="Form" />
+        </widget>
+
+        <widget class="team_recent_form_widget" alignment="left,centre_y" width="50">
+          <record id="object_property">
+            <integer id="get_property" value="Tfrm" />
+          </record>
+        </widget>
+
+        <container width="10" />
+
+        <widget class="label" font="label" alignment="left,centre_y" auto_size="horizontal">
+          <translation id="text" translation_id="344616" type="use" value="Previous Meetings[COMMENT: title for a box containing information on previous meetings between two sides]" />
+        </widget>
+
+        <widget class="team_form_text" id="prme" alignment="left,centre_y" auto_size="horizontal" style="semi_bold" />
+      </container>
+      
+    </container>
+
+    <container class="bordered_box_no_margin">
+      <layout class="arrange_vertical_attachment" layout="34, -1" offset="8" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="8" />
+
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="-4,0,0,0" />
+
+        <string id="skin_style" value="title link" />
+
+        <widget class="link_button" id="lmal" auto_size="horizontal" alignment="left,centre_y">
+          <layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+          <translation id="text" translation_id="451327" type="use" value="Recent Match Analysis[COMMENT: oppositon team report; button to view attacking positons; old ID 450775]" />
+        </widget>
+
+        <container class="client_object_viewer_xml_panel" id="fixd">
+          <layout class="arrange_horizontal_attachment" alignment="left" offset="0" do_not_size="true" />
+          <layout class="fit_children_attachment" alignment="horizontal,fill" />
+          <layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+          
+          <widget class="fixture_name_text" id="FxNm" auto_size="horizontal" alignment="left,centre_y">
+            <record id="object_property">
+              <integer id="get_property" value="FxNm" />
+            </record>
+          </widget>
+
+          <widget class="relative_date_label" limit_to_recent_relevant_dates="true" alignment="left,centre_y" auto_size="horizontal" colour="faded text">
+            <record id="object_property">
+              <integer id="get_property" value="fdRE" />
+            </record>
+          </widget>
+
+          <widget class="weather_indicator_panel" alignment="left,centre_y" width="75" file="match/weather indicator with temp">
+            <record id="object_property">
+              <integer id="get_property" value="FxWe" />
+            </record>
+          </widget>
+
+        </container>
+
+      </container>
+
+       <container>
+        <layout class="arrange_horizontal_attachment" layout="-1, -2, -1" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+        <container>
+          <layout class="arrange_vertical_attachment" layout="-5, -4" offset="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+          <container class="client_object_viewer_xml_panel" file="team/team opposition report previous result score panel" id="opmr" />
+
+          <container class="team_opposition_report_previous_result_stats_panel" file="team/team opposition report previous result stats small panel" id="opms" />
+
+        </container>
+
+        <container id="lmpc">
+          <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+          
+          <container class="bordered_box" id="hmcn">
+            <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0" />
+
+            <string id="skin_style" value="title link" />
+
+            <widget class="link_button" id="hmlk" section="AnaN" auto_size="all" colour="white" red_replacement="white">
+              <layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+              <translation id="text" translation_id="420701" type="use" value="Positional Heat Map[COMMENT: post match analysis label for a heat map displaying coverage by player position]" />
+            </widget>
+
+            <widget class="preselected_match_chalkboard_panel" vertical="false" auto_size="all" force_left_to_right_events="true" average_position_filter="1" id="hmph">
+              <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+              <list id="chalkboard_events_to_display">
+                <integer value="43" />
+                <integer value="65" />
+              </list>
+            </widget>
+
+          </container>
+
+          <container class="bordered_box" id="lncn">
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+            <widget class="pitch_with_tactics" id="lnph" pitch_alignment="centre, can_scale" pitch_line_colour="white" pitch_draw_grass="false" vertical="false" player_icon_file="tactics/tactics icon opposition predicted team3" icon_flags="use_player_kits_back,show_number,dont_colour_names,dont_fade_icons" />
+          </container>
+          
+        </container>
+       
+        <container id="mdcn">
+          <layout class="arrange_vertical_attachment" layout="-3, -3, -1" offset="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+          <container class="bordered_box" id="focn">
+
+            <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0" />
+
+            <string id="skin_style" value="title link" />
+
+            <widget class="link_button" id="falk" section="AnaN" auto_size="all">
+              <layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+              <translation id="text" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+            </widget>
+
+            <widget class="focus_of_attacks_widget" id="foca">
+              <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+            </widget>
+
+          </container>
+
+          <container class="bordered_box">
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+            <container class="client_object_viewer_xml_panel" id="keyp">
+              <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0" />
+
+              <string id="skin_style" value="title link" />
+
+              <widget class="link_button" auto_size="all">
+                <layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+                <translation id="text" translation_id="227396" type="use" value="Key Player" />
+              </widget>
+
+              <container>
+                <layout class="arrange_horizontal_attachment" layout="-2, -2, -1" offset="0" gap="0" do_not_size="true" />
+                <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+                <widget class="object_portrait_picture" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+                  <record id="object_property">
+                    <integer id="get_property" value="objt" />
+                  </record>
+                </widget>
+
+                <widget class="person_button" style="semi_bold">
+                  <record id="object_property">
+                    <integer id="get_property" value="objt" />
+                  </record>
+                </widget>
+
+                <widget class="number_label" id="keyr" alignment="centre" />
+
+              </container>
+            </container>
+          </container>
+
+          <container class="bordered_box" id="hpcn">
+            <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="0" />
+
+            <string id="skin_style" value="title link" />
+
+            <widget class="link_button" id="hplk" section="AnaN" auto_size="all">
+              <layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+              <translation id="text" translation_id="420699" type="use" value="Highest Pass Combination[COMMENT: post match stats analysis, displays the pairing with the highest passing combinations in the match]" />
+            </widget>
+
+            <widget class="text" id="hpcc" alignment="left,centre_y">
+              <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+            </widget>
+
+          </container>
+
+        </container>
+
+      </container>
+    </container>
+
+    <container>
+      <layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" gap="6"/>
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+      <widget class="team_goal_analysis_summary_panel" file="team/team goal analysis small summary panel">
+        <record id="object_property">
+          <integer id="get_property" value="objt" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </widget>
+
+			<container>
+				<layout class="arrange_vertical_attachment" layout="165, -1" offset="0" gap="6"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				<widget class="team_tactic_analysis_summary_panel" file="team/team tactic analysis summary panel with heading inbox">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+				<container class="inner_titled_box">
+					<translation id="title" translation_id="466489" type="use" value="Set Piece Analysis[COMMENT: title on pre match opposition analysis report focusing on set pieces (free kicks, corners, throw-ins)]" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<widget class="text" colour="faded text" alignment="left,top" id="stpT">
+						<translation id="text" translation_id="233089" type="use" value="-" />
+					</widget>
+						
+				</container>
+
+				</container>
+    </container>
+  
+</panel>

@@ -1,0 +1,31 @@
+﻿<panel height="80">
+	<list id="properties_to_forward">
+		<record target="lblH" get_property="titl" set_property="text" />
+		<record target="lblB" get_property="text" set_property="text" />
+		<record target="butt" get_property="text" set_property="hint" />
+		<record target="butt" get_property="clke" set_property="clke" />
+		<record target="icnR" get_property="icon" set_property="file" />
+	</list>
+	<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="all" inset="4"/>
+	
+	<container class="main_subtle_box">
+		<layout class="arrange_horizontal_attachment" layout="50, -1, 15" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="vertical" inset="0"/>
+
+		<container>
+			<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="all" inset="0"/>
+			<widget class="picture" id="obsP" hidden="true" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" wants_mouse_events="false"  />
+			<widget class="object_portrait_picture" id="objP" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" wants_mouse_events="false"  />
+		</container>
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" apply_to_children="true" alignment="horizontal" inset="0"/>
+
+			<widget class="text" id="lblH" font="title" style="bold"  auto_size="vertical"  wants_mouse_events="false" colour="fg"/>
+			<widget class="text" id="lblB" alignment="left,centre_y" wrap="false" colour="faded text" height="24" />
+		</container>
+		<widget class="picture" id="icnR" keep_aspect_ratio="true" scale_picture="true"  red_replacement="white" image_alignment="centre"    wants_mouse_events="false"  />
+	</container>
+	
+	<widget class="button" id="butt" appearance="buttons/custom/over state only/button"/>
+</panel>

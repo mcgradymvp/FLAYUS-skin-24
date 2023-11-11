@@ -1,0 +1,87 @@
+﻿<panel>
+	<boolean id="should_force_refresh" value="true" />
+	<flags id="cham" value="tables/custom/league/champions/row" />
+
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"  />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container class="subsection_box">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<widget class="link_button_title" section="Pssr" embed_in_frame="true">
+			<translation id="text" translation_id="316845" type="use" value="Scout Report[COMMENT: Panel title for when viewing a scout report]" />
+			<layout class="stick_to_sides_attachment" alignment="left" embed_in_frame="true" inset="10" />
+			<layout class="stick_to_sides_attachment" alignment="top" embed_in_frame="true" inset="8" />
+		</widget>
+
+		<widget class="text" id="nmwt"  height="26" auto_size="all" alignment="right,centre_y" embed_in_frame="true">
+			<layout class="stick_to_sides_attachment" alignment="right" embed_in_frame="true" inset="10" />
+			<layout class="stick_to_sides_attachment" alignment="top" embed_in_frame="true" inset="5" />
+		</widget>
+
+        <container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<container class="tabbed_container" id="tabc" default_item="attr" save_session_state="true" inset="0" offset="0">
+						
+						<container id="attr">
+							<translation id="title" translation_id="229822" type="use" value="Attributes" />
+
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
+
+							<widget class="player_attributes_panel" file="attributes/gunzo player attributes panel1">
+								<record id="object_property" get_property="Pers" set_property="objt" />
+							</widget>
+
+						</container>
+
+						<container id="prcn">
+							<!--<record id="object_property" get_property="HSrt" set_property="ithd" />-->
+
+							<translation id="title" translation_id="316845" type="use" value="Scout Report[COMMENT: Panel title for when viewing a scout report]" />
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
+
+							<widget class="player_scout_reports_panel" file="player/player scout reports pro con only">
+								<record id="object_property" get_property="Pers" set_property="objt" />
+							</widget>
+
+						</container>
+
+						<container id="pacn">
+							<!--<record id="object_property" get_property="HArt" set_property="ithd" />-->
+
+							<translation id="title" translation_id="447607" type="use" value="Analyst Report[COMMENT: Panel title for when viewing analyst report]" />
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
+
+							<widget class="player_data_analyst_report_panel" file="player/player analyst reports role analysis only">
+								<record id="object_property" get_property="Pers" set_property="objt" />
+							</widget>
+
+						</container>
+
+						<container id="psrl">
+							<translation id="title" translation_id="466570" type="use" value="Position and Role[COMMENT: FR 22655, scouting centre recommendation, section title for part of report that shows a player's position and role]" />
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
+
+							<widget class="player_positions_indicator_panel" id="Ppos" file="player/player positions indicator scout card">
+								<record id="object_property" get_property="Pers" set_property="objt" />
+							</widget>
+						</container>
+						
+						<container id="medi">
+							<!--<record id="object_property" get_property="HMdt" set_property="ithd" />-->
+							<translation id="title" translation_id="422164" type="use" value="Medical[COMMENT:Job Centre- Medical team sub-section]" />
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
+							<widget class="player_injury_panel" id="Injp" file="attributes/player injury panel">
+								<record id="object_property" get_property="Pers" set_property="objt" />
+							</widget>
+						</container>
+					</container>
+    			</container>
+	          </container>
+
+	<widget class="player_reports_overview_summary_panel" height="190"  file="player/player reports overview summary for contract negotiations" cost_widgets_fixed_colour="text">
+		<record id="object_property" get_property="objt" set_property="objt" />
+	</widget>
+
+</panel>

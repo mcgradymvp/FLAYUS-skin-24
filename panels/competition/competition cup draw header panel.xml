@@ -1,0 +1,87 @@
+﻿<!-- header panel to be used during the end of season review --><panel height="50">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<boolean id="should_force_refresh" value="true" />
+
+	<container class="client_object_viewer_xml_panel" id="cdHE">
+		<attachment_group class="vertical_arrange" vertical_gap="5" vertical_alignment="bottom,extend" />
+
+		<container class="main_box" appearance="boxes/custom/uefa/cup draws/header/paper" navigation_container="true" red_replacement="bg" transparency=".5">
+			<layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0" gap="10" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+
+			<container height="50">
+				<layout class="arrange_horizontal_attachment" alignment="right, extend" offset="10" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!-- main title container -->
+				<container>
+					<layout class="arrange_horizontal_attachment" alignment="middle, extend" offset="5" gap="10" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<widget class="game_formatted_label" id="wlms" auto_size="horizontal" alignment="left,centre_y" size="large" style="bold" add_embedded_data="false" colour="white">
+					  <attachment class="get_global_attachment" get_property="CDtf" set_property="font" />
+					  <translation id="format" translation_id="557722" type="use" value="[%comp#1] - Live Draw[COMMENT: AREA: Cup Draw; SUB-AREA: header panel; FR-BN: ; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title string for the header section of the live cup draw]" />
+						<record id="object_property" get_property="objt" set_property="var1" />
+					</widget>
+				</container>
+
+				<container>
+					<attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_gap="0" />
+
+					<widget class="button" id="plEx" auto_size="all" appearance="buttons/text/button">
+						<record id="click_event" event_id="audr" event_target="lvCD" state="true" />
+						<translation id="text" translation_id="555203" type="use" value="Start Draw[COMMENT: AREA: Live Cup Draw; SUB-AREA: Live Cup Draw Splash Screen FR-BN:; NOTE: Panel title for Cup Draws]" />
+					</widget>
+
+					<container width="30" height="30">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						<widget class="percentage_pie_chart" id="tmrD" value_colour="bg lighter" filler_colour="fg" is_donut_chart="true" layout="-6, -3, -1" value="0" />
+
+						<widget class="icon_button" id="tmrB" file="icons/16px/play" appearance="" icon_colour="fg" icon_alignment="centre">
+							<record id="click_event" event_id="audr" event_target="lvCD" state="true" />
+						</widget>
+
+					</container>
+
+					<widget class="icon_button" id="satb" auto_size="horizontal" icon="icons/26px/club" secondary_icon_enabled="true" secondary_icon="icons/16px/maximise" controller_button="y_button" appearance="buttons/subtle/normal/button">
+						<record id="click_event" event_id="saCK" event_target="lvCD" />
+					</widget>
+                    
+                    
+                    <widget class="spacer" width="5" />
+
+					<!-- continue button -->
+					<widget class="icon_button" id="nxbt" appearance="chrome/buttons/continue/button" controller_button="right_trigger" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/reduce" secondary_icon_alignment="centre_right, centre_y" font="title" colour="fg" width="210" height="48" default_focus="true" multiline="true">
+					  <attachment class="get_global_attachment" get_property="CDbc" set_property="red_replacement" />
+					  <attachment class="get_global_attachment" get_property="CDfn" set_property="font" />
+					  <record id="secondary_icon_properties" red_replacement="fg" />
+						<record id="click_event" event_id="nxCK" event_target="lvCD" />
+						<translation id="text" translation_id="555203" type="use" value="Start Draw[COMMENT: AREA: Live Cup Draw; SUB-AREA: Live Cup Draw Splash Screen FR-BN:; NOTE: Panel title for Cup Draws]" />
+					</widget>
+                    
+					<widget class="icon_button" id="nxPB" width="170" height="48" controller_button="right_trigger" hidden="true" alignment="centre" appearance="buttons/custom/cup draws/advance/left/button" colour="fg">
+						<attachment class="get_global_attachment" get_property="CDbc" set_property="red_replacement" />
+						<attachment class="get_global_attachment" get_property="CDfn" set_property="font" />
+						<translation id="text" translation_id="561144" type="use" value="Advance[COMMENT: AREA: Cup Draw; SUB-AREA: header panel; FR-BN: ; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Popup button options]" />
+						<record id="click_event" event_id="nxCK" event_target="lvCD" />
+					</widget>
+					<widget class="popup_button" id="Adbt" appearance="buttons/custom/cup draws/advance/right/button" selection="0" controller_button="x_button" width="40" height="48" default_focus="true" hidden="true" fixed="true" fixed_icon="true" colour="bg">
+						<attachment class="get_global_attachment" get_property="CDbc" set_property="red_replacement" />
+						<attachment class="get_global_attachment" get_property="CDfn" set_property="font" />
+						<record id="icon_properties" red_replacement="fg" />
+                        <record id="secondary_icon_properties" red_replacement="fg" />
+						<record id="select_event" event_id="pbCK" event_target="lvCD" />
+					</widget>
+				</container>
+			</container>
+		</container>
+	
+		<!-- skip end of season review  -->
+		<container>
+
+
+		</container>
+		
+	</container>
+</panel>

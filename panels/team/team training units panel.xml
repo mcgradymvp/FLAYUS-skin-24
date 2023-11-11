@@ -1,0 +1,272 @@
+﻿<panel>
+	<list id="draw_order">
+		<record entity_layout_id="at00" />
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at02" />
+		<record entity_layout_id="at07" />
+		<record entity_layout_id="at08" />
+		<record entity_layout_id="at09" />
+		<record entity_layout_id="at0:" />
+		<record entity_layout_id="at0;" />
+		<record entity_layout_id="at04" />
+		<record entity_layout_id="at05" />
+		<record entity_layout_id="at03" />
+		<record entity_layout_id="at06" />
+		<record entity_layout_id="at0&lt;" />
+		<record entity_layout_id="at0=" />
+		<record entity_layout_id="at0&gt;" />
+		<record entity_layout_id="at0?" />
+		<record entity_layout_id="at0@" />
+		<record entity_layout_id="at0A" />
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<container class="main_box" entity_layout_id="at00" id="plti">
+		<translation id="title" translation_id="466558" type="use" value="Positional Units[COMMENT: training, breaking down the squad into positional units, Goalkeeper Unit, Defensive Unit, Attacking Unit]" />
+		<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+		<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container entity_layout_id="at01" id="at01">
+			<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" move_side="true" target="main" />
+			<layout class="stick_to_sizes_attachment" width="50.000000" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<container class="inner_subtle_box" entity_layout_id="at02" id="at02" navigation_container="true" default_focus="true">
+				<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" move_side="true" target="main" />
+				<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+				<layout class="stick_to_sizes_attachment" height="50.000000" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<container class="client_object_list_table" entity_layout_id="at04" id="gktb" name="goalkeeper table" database_table_type="1" row_height="30" mode="fill_rows, stripe_rows, printable, keyboard,  show_insert_column_popup">
+					<string id="customisation_context" value="play" />
+					<string id="contextual_handler_column_id" value="PlSC" />
+					<boolean id="should_force_refresh" value="true" />
+					<record id="viewed_property_ids">
+						<record id="Pnfo" />
+						<record id="PlSC" ShAL="true" pDDr="true" />
+						<record id="PpsC" auto_hide_priority="10" />
+						<record id="PTif" width="180" auto_hide_priority="1" />
+						<record id="Page" auto_hide_priority="20" navigation_focus_target="false"/>
+						<record id="PPst" auto_hide_priority="20" />
+						<record id="Pfit" auto_hide_priority="30" />
+					</record>
+					<layout class="stick_to_object_attachment" id="alPt" offset="2" get_side="top" set_side="top" target="main" />
+					<layout class="stick_to_object_attachment" id="alPb" offset="-2" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="alPl" offset="2" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="alPr" offset="-2" get_side="right" set_side="right" target="main" />
+				</container>
+				<container entity_layout_id="at05" wants_mouse_events="false" id="at05">
+					<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+					<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+					<widget class="spacer" id="main">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					</widget>
+					<widget class="spacer" id="fmin" embed_in_frame="true">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+					</widget>
+					<container class="main_box" entity_layout_id="at03" appearance="labels/standard/label" id="gkbx" red_replacement="goalkeeper_line" width="140" height="25">
+						<layout class="stick_to_object_attachment" id="alPt" offset="2" get_side="top" set_side="top" move_side="true" target="main" />
+						<layout class="stick_to_object_attachment" id="alPl" offset="2" get_side="left" set_side="left" move_side="true" target="main" />
+						<widget class="spacer" id="main">
+							<boolean id="exclude_from_find" value="true" />
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+						</widget>
+						<widget class="spacer" id="fmin" embed_in_frame="true">
+							<boolean id="exclude_from_find" value="true" />
+							<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+						</widget>
+						<widget class="text" entity_layout_id="at06" wants_mouse_events="false" alignment="centre_x,centre_y" id="gktx">
+							<string id="colour" value="white" />
+							<string id="style" value="bold" />
+							<translation id="text" translation_id="466559" type="use" value="Goalkeeping Unit[COMMENT:training session selector - Goalkeeping Unit training intensity header]" />
+							<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+							<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+							<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+							<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+						</widget>
+					</container>
+				</container>
+			</container>
+			<container class="inner_subtle_box" entity_layout_id="at07" id="at07" navigation_container="true">
+				<layout class="stick_to_object_attachment" id="alPt" offset="10" get_side="bottom" set_side="top" move_side="true" target="at02" />
+				<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+				<layout class="stick_to_sizes_attachment" height="50.000000" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<container class="client_object_list_table" entity_layout_id="at08" id="dftb" name="defensive table" database_table_type="1" row_height="30" mode="fill_rows, stripe_rows, printable, keyboard, drag_rows, drop_on_rows,  show_insert_column_popup">
+					<string id="customisation_context" value="play" />
+					<string id="contextual_handler_column_id" value="PlSC" />
+					<boolean id="should_force_refresh" value="true" />
+					<record id="viewed_property_ids">
+						<record id="Pnfo" />
+						<record id="PlSC" ShAL="true" />
+						<record id="PpsC" auto_hide_priority="10" />
+						<record id="PTif" width="200" auto_hide_priority="1" />
+						<record id="Page" auto_hide_priority="20" navigation_focus_target="false"/>
+						<record id="PPst" auto_hide_priority="20" />
+						<record id="Pfit" auto_hide_priority="30" />
+					</record>
+					<layout class="stick_to_object_attachment" id="alPt" offset="2" get_side="top" set_side="top" target="main" />
+					<layout class="stick_to_object_attachment" id="alPb" offset="-2" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="alPl" offset="2" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="alPr" offset="-2" get_side="right" set_side="right" target="main" />
+				</container>
+				<container entity_layout_id="at09" wants_mouse_events="false" id="at09">
+					<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+					<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+					<widget class="spacer" id="main">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					</widget>
+					<widget class="spacer" id="fmin" embed_in_frame="true">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+					</widget>
+					<container class="main_box" entity_layout_id="at0:" appearance="labels/standard/label" id="dfbx" red_replacement="defender_line" width="140" height="25">
+						<layout class="stick_to_object_attachment" id="alPt" offset="2" get_side="top" set_side="top" move_side="true" target="main" />
+						<layout class="stick_to_object_attachment" id="alPl" offset="2" get_side="left" set_side="left" move_side="true" target="main" />
+						<widget class="spacer" id="main">
+							<boolean id="exclude_from_find" value="true" />
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+						</widget>
+						<widget class="spacer" id="fmin" embed_in_frame="true">
+							<boolean id="exclude_from_find" value="true" />
+							<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+						</widget>
+						<widget class="text" entity_layout_id="at0;" wants_mouse_events="false" alignment="centre_x,centre_y" id="dftx">
+							<string id="colour" value="white" />
+							<string id="style" value="bold" />
+							<translation id="text" translation_id="466560" type="use" value="Defensive Unit[COMMENT:training session selector - Defensive Unit training intensity header]" />
+							<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+							<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+							<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+							<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+						</widget>
+					</container>
+				</container>
+			</container>
+		</container>
+		<container class="inner_subtle_box" entity_layout_id="at0&lt;" id="at0&lt;" navigation_container="true">
+			<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="alPl" offset="5" get_side="right" set_side="left" target="at01" />
+			<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<container class="client_object_list_table" entity_layout_id="at0=" id="oftb" name="offensive table" database_table_type="1" row_height="30" mode="fill_rows, stripe_rows, printable, keyboard, drag_rows, drop_on_rows,  show_insert_column_popup">
+				<string id="customisation_context" value="play" />
+				<string id="contextual_handler_column_id" value="PlSC" />
+				<boolean id="should_force_refresh" value="true" />
+				<record id="viewed_property_ids">
+					<record id="Pnfo" />
+					<record id="PlSC" ShAL="true" />
+					<record id="PpsC" auto_hide_priority="10" />
+					<record id="PTif" width="200" auto_hide_priority="1"/>
+					<record id="Page" auto_hide_priority="20" navigation_focus_target="false"/>
+					<record id="PPst" auto_hide_priority="20" />
+					<record id="Pfit" auto_hide_priority="30" />
+				</record>
+				<layout class="stick_to_object_attachment" id="alPt" offset="2" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="alPl" offset="2" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="alPr" offset="-2" get_side="right" set_side="right" target="main" />
+			</container>
+			<container entity_layout_id="at0&gt;" wants_mouse_events="false" id="at0&gt;">
+				<layout class="stick_to_object_attachment" id="alPt" offset="2" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="alPb" offset="-2" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="alPl" offset="2" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="alPr" offset="-2" get_side="right" set_side="right" target="main" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<container class="main_box" entity_layout_id="at0?" appearance="labels/standard/label" id="ofbx" red_replacement="attacker_line" width="140" height="25">
+					<layout class="stick_to_object_attachment" id="alPt" offset="2" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" move_side="true" target="main" />
+					<widget class="spacer" id="main">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					</widget>
+					<widget class="spacer" id="fmin" embed_in_frame="true">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+					</widget>
+					<widget class="text" entity_layout_id="at0@" wants_mouse_events="false" alignment="centre_x,centre_y" id="oftx">
+						<string id="colour" value="white" />
+						<string id="style" value="bold" />
+						<translation id="text" translation_id="466561" type="use" value="Attacking Unit[COMMENT:training session selector - Attacking Unit training intensity header]" />
+						<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main" />
+						<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main" />
+						<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main" />
+						<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main" />
+					</widget>
+				</container>
+			</container>
+		</container>
+		<widget class="client_action_popup_button" entity_layout_id="at0A" icon_alignment="left" id="ythP" width="270" height="30" embed_in_frame="true">
+			<string id="fixed" value="true" />
+			<string id="icon" value="icons/16px/plus" />
+			<string id="action_id" value="tAdt" />
+			<string id="ignore_top_level_submenus" value="true" />
+			<record id="dbrp">
+				<string id="get_property" value="objt" />
+				<string id="set_property" value="objt" />
+			</record>
+			<layout class="stick_to_object_attachment" id="alPt" embed_in_frame="true" offset="4" get_side="top" set_side="top" move_side="true" target="fmin" />
+			<layout class="stick_to_object_attachment" id="alPr" embed_in_frame="true" offset="-6" get_side="right" set_side="right" move_side="true" target="fmin" />
+		</widget>
+	</container>
+</panel>

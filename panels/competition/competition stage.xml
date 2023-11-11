@@ -1,0 +1,113 @@
+<panel save_session_state="true">
+  <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<!-- the group box that is the main container for the competition stage panel
+			this container holds whatever league or cup panel we need to create -->
+	<container class="main_box" id="stse" force_title_borders="true" navigation_container="true" default_focus="true">
+
+		<!-- buttons area -->
+		<container embed_in_frame="true" id="emdb">
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<widget class="view_menu_label" id="labl">
+				<translation id="text" translation_id="247175" type="use" value="Stages" />
+			</widget>
+
+			<!-- the stages menu: visible if more than one stage/substage -->
+			<widget class="view_menu_popup" id="stpb" sele="acsm" display_full_item_path="true"/>
+
+			<!-- the view menu: league/cup specific view items -->
+			<widget class="view_menu_popup" id="vmpb" sele="acvm" />
+		</container>
+
+		<!-- menu bar area -->
+		<container id="stba" embed_in_frame="true">
+
+			<attachment_group class="title_embedded_panel_right"/>
+
+
+			<!-- the year menu: visible if more than one year stored -->
+			<widget class="embedded_season_selection_list" id="yrpb" auto_size="horizontal" sele="acyr" height="30" reverse_function="true" embed_in_frame="true" />
+		</container>
+
+
+		<!-- bottom row of the stage panel is used to store cup draw buttons -->
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!-- No game panel-->
+		<container id="nots" hidden="true">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="200"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+			<widget class="spacer" height="50" />
+
+			<widget class="text" id="nost" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical" />
+		</container>
+
+		<!-- group box for stage to go into -->
+		<container id="stgb">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+			<record id="default_properties" hidden="true" />
+
+			<!--league stage panel-->
+			<widget class="league_stage_panel" id="lspn" save_session_state="true" should_force_refresh="true"/>
+
+			<!--competition rules panel-->
+			<widget class="rules_panel" id="rupa" />
+
+			<!--cup stage_panel-->
+			<widget class="cup_stage_panel" id="cstp" save_session_state="true" />
+
+			<!--cup tree panel-->
+			<widget class="cup_tree_panel" id="ctpn" save_session_state="true" />
+
+			<!--group stage scrolling box (to be filled in code)-->
+			<widget class="scrolling_box" id="gscb" scroll_enclosing_to_show="true" save_session_state="true" />
+
+			<!-- media prediction -->
+			<container class="media_predicition_league_table_panel" id="odds" />
+		</container>
+
+		<container >
+
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+			<!-- The exceptions so point deductions in the league etc-->
+			<widget class="table" layout="-1" id="exta" auto_size="vertical" row_height="22" hidden="true" mode="fill_rows" />
+
+			<!-- group box for buttons -->
+			<container id="stbt" >
+				<layout class="fit_children_attachment" alignment="vertical" offset="2" />
+				<layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+				<record id="default_properties" auto_size="all" />
+				
+				<!-- 4 cup action buttons -->
+				<widget class="button" id="dnte" click_event="dnte">
+					<translation id="text" translation_id="247176" type="use" value="Draw Next Team" />
+				</widget>
+				<widget class="icon_button" id="datm" click_event="datm" controller_button="y_button">
+					<translation id="text" translation_id="247177" type="use" value="Draw All Teams" />
+				</widget>
+				<widget class="icon_button" id="audr" click_event="audr" controller_button="x_button">
+					<translation id="text" translation_id="247178" type="use" value="Automatic Draw" />
+				</widget>
+				<widget class="icon_button" id="sadr" click_event="sadr" controller_button="x_button">
+					<translation id="text" translation_id="247179" type="use" value="Stop Automatic Draw" />
+				</widget>
+			</container>
+		</container>
+	</container>
+
+	<!-- teams left to draw for a cup stage -->
+	<widget class="comp_teams_to_draw_panel" id="ctdp" hidn="true" />
+
+	<!-- league stage fixtures-->
+	<widget class="competition_fixtures_panel" id="cmfp" height="370" display_mode="1" grhf="false" svsl="false"/>
+
+</panel>

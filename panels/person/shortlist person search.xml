@@ -1,0 +1,251 @@
+<panel>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<boolean id="save_session_state" value="true" />
+
+	<!--appearance and background colour of search dialog-->
+	<flags id="sdap" value="boxes/popup/standard/paper" />
+	<flags id="sdbc" value="" />
+
+	<container class="main_box">
+	<layout class="arrange_vertical_attachment" layout="40,40,2,-1" offset="5" gap="8" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container class="inner_subtle_box_no_margin" navigation_container="true">
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="2" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="2" />
+
+
+			<container>
+				<attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_offset="6" horizontal_gap="1" vertical_offset="0" />
+
+				<widget class="radio_toggle_switch_left" id="pspa" auto_size="horizontal" alignment="centre" height="30" click_event="pspa" ticked="true" secondary_icon="icons/custom/shortlist/list" show_button_appearance="true" appearance="switches/toggle/left/button" icon_enabled="false" secondary_icon_enabled="true" secondary_icon_alignment="left">
+					<translation id="text" translation_id="293613" type="use" value="List" />
+				</widget>
+
+				<widget class="radio_toggle_switch_right" id="posi" auto_size="horizontal" alignment="centre" height="30" click_event="posi" secondary_icon="icons/custom/shortlist/position" show_button_appearance="true" appearance="switches/toggle/right/button" icon_enabled="false" secondary_icon_enabled="true" secondary_icon_alignment="left">
+					<translation id="text" translation_id="227884" type="use" value="Position" />
+				</widget>
+			</container>
+
+
+			<container>
+				<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
+				<layout class="arrange_horizontal_attachment" alignment="right" offset="0" gap="4" />
+
+				<widget class="check_box" id="krud" click_event="krud" auto_size="all">
+					<translation id="text" translation_id="447599" type="use" value="Keep Scout Reports up to date[COMMENT: FR 21124, option to ensure that scout reports are regularly updated as opposed to scouting once and no more]" />
+				</widget>
+
+				<widget class="spacer" width="6" />
+
+				<widget class="vertical_divider" height="25" />
+
+				<widget class="spacer" width="6" />
+
+				<widget class="text" auto_size="all" alignment="centre" font="title">
+					<translation id="text" translation_id="251889" type="use" value="Shortlists[COMMENT: search/shortlist panels: shortlist manipulation menu]" />
+				</widget>
+
+				<!-- shortlists menu -->
+
+				<widget class="spacer" width="6" />
+
+        <container>
+					<attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="right" horizontal_offset="0" vertical_offset="0">
+						<global id="horizontal_gap" name="ui.split_button_row_gap" />
+					</attachment_group>
+					
+					<widget class="popup_button" id="shmn" auto_size="horizontal" height="30" appearance="buttons/subtle/split/left/button" auto_size_maximum_width="250" />
+					<widget class="embedded_popup_button" id="shom" auto_size="horizontal" height="30" fixed="true" appearance="buttons/subtle/split/right/button" icon="icons/16px/settings" />					
+				</container>
+
+				<widget class="spacer" width="6" />
+
+			</container>
+
+		</container>
+
+
+		<container navigation_container="true">
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right" horizontal_offset="0" horizontal_gap="4" vertical_offset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+
+			<!--buttons area--> 
+			<container navigation_container="true">
+				<attachment_group class="title_embedded_panel_left" horizontal_offset="0" horizontal_gap="10" />	
+				<widget class="view_menu_label" id="TitL" colour="text" />
+				<widget class="view_menu_popup" id="plvi" />
+			</container>
+
+			<widget class="text" id="intt" auto_size="all" fixed="true" font="label" alignment="left,centre_y">
+				<translation id="text" translation_id="451328" type="use" value="Interested In:[COMMENT: header string indicating what sort of transfer deal a player is interested in for MLS, either a normal deal or a DP/Designated Player (283628) deal]" />
+			</widget>
+
+			<widget class="check_box" id="trin" auto_size="all" fixed="true" click_event="icbc">
+				<translation id="text" translation_id="319501" type="use" value="Transfer[COMMENT: section header on Views menu to indicate that view will contain information pertaining to the person's transfer status]" />
+			</widget>
+
+			<widget class="popup_button" id="trip" auto_size="all" fixed="true" show_button_appearance="false" icon="icons/16px/settings" secondary_icon_enabled="false" />
+
+			<widget class="check_box" id="dpin" auto_size="all" fixed="true" click_event="icbc">
+				<translation id="text" translation_id="283628" type="use" value="DP[COMMENT - team screen; player status flag; Designated Player (the Beckham rule), short string]" />
+			</widget>
+
+			<widget class="popup_button" id="dpip" auto_size="all" fixed="true" show_button_appearance="false" icon="icons/16px/settings" secondary_icon_enabled="false" />
+
+			<widget class="check_box" id="loin" auto_size="all" fixed="true" click_event="icbc">
+				<translation id="text" translation_id="330195" type="use" value="Loan[COMMENT: player transfer panel; indicates which club is interested in the person and what type of deal they're looking for]" />
+			</widget>
+
+			<widget class="popup_button" id="loip" auto_size="all" fixed="true" show_button_appearance="false" icon="icons/16px/settings" secondary_icon_enabled="false" />
+
+			<widget class="spacer" width="5" />
+
+			<widget class="vertical_subtle_divider" height="30" />
+
+			<widget class="spacer" width="5" />
+
+			<widget class="subtle_button" id="clea" auto_size="all" click_event="clfl">
+				<translation id="text" translation_id="229717" type="use" value="Clear" />
+			</widget>
+
+			<widget class="primary_icon_button" id="news" auto_size="all" click_event="scdi" controller_button="y_button">
+				<translation id="text" translation_id="450782" type="use" value="Filter List[COMMENT: FR 21124, filter instruction]" />
+			</widget>
+		</container>
+
+		<widget class="horizontal_subtle_divider" />
+		
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8" vertical_alignment="vertical" vertical_inset="0" />
+						
+			<!--Pitch & position widgets + role popup button-->
+			<container id="posc" navigation_container="true" width="430">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<container class="client_object_viewer_xml_panel" id="tacc" embed_in_frame="true" height="26">
+					<attachment_group class="title_embedded_panel_left" />
+
+					<widget class="popup_button" id="tect" fixed="true" embed_in_frame="true" height="26" width="45" icon="icons/16px/tactics" icon_colour="fg" select_event="etas" appearance="" />
+				</container>
+
+				<container>
+					<attachment_group class="vertical_arrange" vertical_layout="352,60" vertical_gap="12" horizontal_inset="0" vertical_offset="26" />
+					
+					<!--pitch & position widgets-->
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						
+						<widget class="picture" height="330" default_path="boxes/custom/match/lineup pitch/" file="boxes/custom/match/lineup pitch/recruitment focus pitch" red_replacement="fg" blue_replacement="fg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="false" />
+							
+						<widget class="pitch_with_squad_depth" id="pitc" height="300" display_centre_side_positions="true" vertical="true" pitch_alignment="centre" pitch_draw_goals="false" pitch_draw_markings="false" show_position_strength="false" pitch_show_names="false" pitch_draw_grass="false" pitch_line_colour="transparent" pitch_touchline_width_percentage="10" pitch_perspective="0.2" pitch_override_icon_size="2" line_width="1.5" pitch_vertical_padding="16" disable_animations="true">
+							<string id="pitch_kit_icon" value="pitch/icons/dots" />
+						</widget>
+						<container file="human/tactic grid container" id="tcGD" />
+					</container>
+					
+					<!--role popup button-->
+					<container class="inner_subtle_box" entity_layout_id="at0X" id="at0X" height="60">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="6" vertical_inset="0" />
+						
+						<container class="player_basic_positions_indicator_widget" entity_layout_id="at0s" id="rPTC" width="22" />
+
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0" vertical_gap="0" horizontal_inset="6" />
+							
+							<widget class="text" entity_layout_id="at0r" id="" alignment="left,bottom" height="20" colour="white" size="medium">
+								<translation id="text" translation_id="557836" type="use" value="Players suited to playing...[COMMENT: AREA: Scouting; SUB-AREA: Recruitment Focus Dialog; FR-BN: FM-4456; NOTE: Text over popup button, where one can set the sought-after player's role within a recruitment focus]" />
+							</widget>
+						
+							<widget class="popup_button" entity_layout_id="at0q" id="rleP" appearance="" height="20" font="title" colour="fg" size="large">
+								<string id="select_event" value="sdst" />
+							</widget>
+						</container>
+					</container>
+					
+				</container>
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="4" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<container class="inner_subtle_box" id="best" height="125" appearance="boxes/titled/no margin/paper">
+
+					<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+					<container embed_in_frame="true" height="50" navigation_container="true">
+						<attachment_group class="title_embedded_panel_right" />
+
+						<!-- shortlists menu -->
+						<widget class="button" id="sugg" auto_size="horizontal" embed_in_frame="true" height="30" click_event="suge">
+							<translation id="text" translation_id="395329" type="use" value="Suggestions[COMMENT: FR 10593, user can ask DoF for transfer target suggestions]" />
+						</widget>
+
+						<widget class="button" id="nstf" auto_size="horizontal" embed_in_frame="true" height="30" click_event="nstf">
+							<translation id="text" translation_id="557608" type="use" value="Create Recruitment Focus[COMMENT: AREA: Scouting; SUB-AREA: Recruitment Focus Section; FR-BN: FM-4023; NOTE: Text on the button, which opens the create recruitment focus dialog]" />
+						</widget>
+					</container>
+
+					<container class="inner_subtle_box" navigation_container="true">
+						<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+
+						<widget class="link_button_title" font="title" id="bpct" colour="faded text" red_replacement="faded text" size="small">
+							<translation id="text" translation_id="251889" type="use" value="Shortlists[COMMENT: search/shortlist panels: shortlist manipulation menu]" />
+							<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+						</widget>
+
+						<widget class="client_object_viewer_xml_panel" id="bpac" file="team/team best players in squad for position">
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+						</widget>
+					</container>
+				</container>
+
+				<!-- main area -->
+				<container id="rslt" alignment="left">
+					<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="10" horizontal_alignment="horizontal" horizontal_inset="0" />
+					
+					<!-- customisation context is set in code for this table, depending on if search is player or staff search -->
+					<widget class="person_search_table" id="pltb" database_table_type="1" dont_restore_selection="true" mode="fill_rows, stripe_rows, printable, keyboard, manual_sort, store_sort_state, show_bullets, select_rows, select_multiple, drag_rows, show_insert_column_popup" select_event="psls" column_mode="resize_columns, move_columns, custom_views" popup_menu_class="popup_button_table_header" deferred_scrolling="true" deferred_scrolling_timeout="400" fixed_size_rows="true" auto_size_rows="false" fixed_row_height="29">
+						<boolean id="save_session_state" value="true" />
+						<boolean id="save_default_state" value="true" />
+						<boolean id="navigation_container" value="true" />
+
+						<record id="common_view_table_properties">
+							<integer id="row_height" value="29" />
+						</record>
+					
+					</widget>
+
+					<container navigation_container="true">
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right" horizontal_offset="0" vertical_offset="0" />
+
+						<widget class="client_action_popup_button" id="sapb" auto_size="all" disabled="true" piTS="true">
+							<translation id="text" translation_id="297253" type="use" value="Scouting[COMMENT: person_actions_menu; menu title for scouting related actions]" />
+							<list id="action_id">
+								<flags value="CScc" />
+							</list>
+						</widget>
+
+						<widget class="client_action_popup_button" action_id="ApTt" id="attb" auto_size="all" disabled="true" piTS="true">
+							<translation id="text" translation_id="336159" type="use" value="Add as Transfer Target[COMMENT: right click menu item for players, Transfer Target is a new style of shortlist, multiple shortlists encouraged to be used]" />
+						</widget>
+
+						<widget class="button" id="rfsb" auto_size="all" disabled="true" click_event="remo">
+							<translation id="text" translation_id="243353" type="use" value="Remove From Shortlist" />
+						</widget>
+
+					</container>
+
+				</container>
+
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

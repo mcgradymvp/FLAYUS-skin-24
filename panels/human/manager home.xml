@@ -1,0 +1,96 @@
+<panel>
+	<layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1,-1" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+    
+	<widget class="manager_upcoming_fixture_panel" id="tufp" file="human/manager upcoming fixture" default_width="-1" minimum_width="100"  priority="1" />
+			
+		<container class="client_object_viewer_selector_panel" id="cos1" file="human/manager home selector panel" default_width="-1" minimum_width="300" priority="1">
+			<integer id="default_for_club_teams" value="tlta"/>
+			<integer id="default_for_international_teams" value="pssu"/>
+			<integer id="default_for_international_youth_teams" value="pssu"/>
+			<integer id="default_for_no_team" value="mnew"/>
+
+			<integer id="default_for_pre_season" value="tlta"/>
+			<integer id="default_for_off_season" value="tlta"/>
+			<integer id="default_for_transfer_window" value="tlta"/>
+
+			<integer id="scenario_job_insecure" value="bcsn"/>
+		</container>
+
+		<container class="vertical_adaptive_container" mode="distribute_equally" inset="0" offset="0" minimum_width="600" default_width="-2" priority="2">
+	
+				<container class="client_object_viewer_selector_panel" id="cos2" file="human/manager home selector panel" default_width="-1" minimum_width="300" priority="2">
+					<integer id="default_for_club_teams" value="pssu"/>
+					<integer id="default_for_international_teams" value="bcsp"/>
+					<integer id="default_for_international_youth_teams" value="inbx"/>
+					<integer id="default_for_no_team" value="ajsn"/>
+
+					<integer id="default_for_off_season" value="pssu"/>
+					<integer id="default_for_pre_season" value="pssu"/>
+					<integer id="default_for_pre_match" value="pssu"/>
+					<integer id="default_for_transfer_window" value="pssu"/>	
+				</container>
+
+			<container class="client_object_viewer_selector_panel" id="cos5" file="human/manager home selector panel" default_width="-1" minimum_width="300" priority="1">
+					<integer id="default_for_club_teams" value="tssu"/>
+					<integer id="default_for_international_teams" value="tssu"/>
+					<integer id="default_for_international_youth_teams" value="tssu"/>
+					<integer id="default_for_no_team" value="ajsn"/>
+
+					<integer id="default_for_pre_match" value="tssu"/>
+					<integer id="default_for_post_match" value="tssu"/>
+					<integer id="default_for_off_season" value="tssu"/>
+					<integer id="default_for_transfer_window" value="tssu"/>
+				</container>
+			</container>
+
+	        <container class="vertical_adaptive_container" mode="distribute_equally" inset="0" offset="0" minimum_width="300" default_width="-1" priority="2">
+				
+				<container class="client_object_viewer_selector_panel" id="cos3" file="human/manager home selector panel" default_width="-1" minimum_width="300" priority="3">
+					<integer id="default_for_club_teams" value="mnew"/>
+					<integer id="default_for_international_teams" value="mcom"/>
+					<integer id="default_for_international_youth_teams" value="inbx"/>
+					<integer id="default_for_no_team" value="ijsn"/>
+
+					<integer id="default_for_pre_match" value="mnew"/>
+					<integer id="default_for_pre_season" value="mnew"/>
+					<integer id="default_for_off_season" value="mnew"/>
+					<integer id="default_for_transfer_window" value="mnew"/>
+				</container>
+
+				<container class="client_object_viewer_selector_panel" id="cos6" file="human/manager home selector panel" default_width="-1" minimum_width="300" priority="2">
+					<integer id="default_for_club_teams" value="MedC"/>
+					<integer id="default_for_international_teams" value="mngp"/>
+					<integer id="default_for_international_youth_teams" value="mngp"/>
+					<integer id="default_for_no_team" value="ijsn"/>
+
+					<integer id="default_for_pre_match" value="MedC"/>
+					<integer id="default_for_post_match" value="MedC"/>
+					<integer id="default_for_off_season" value="MedC"/>
+				</container>
+			</container>
+	
+		<container class="vertical_adaptive_container" mode="distribute_equally" inset="0" offset="0" minimum_width="300" default_width="-1" priority="2">
+
+			<container class="client_object_viewer_selector_panel" id="cos4" file="human/manager home selector panel" minimum_height="350" default_height="-1" priority="3">
+				<integer id="default_for_club_teams" value="bcsp"/>
+				<integer id="default_for_international_teams" value="comp"/>
+				<integer id="default_for_international_youth_teams" value="comp"/>
+
+				<integer id="default_for_pre_match" value="bcsp"/>
+				<integer id="default_for_post_match" value="bcsp"/>
+				<integer id="default_for_off_season" value="bcsp"/>
+				<integer id="default_for_pre_season" value="bcsp"/>
+				<integer id="default_for_transfer_window" value="bcsp"/>
+			</container>
+
+			<container class="client_object_viewer_selector_panel" id="cos7" file="human/manager home selector panel" minimum_height="350" default_height="-1" priority="3">
+				<integer id="default_for_club_teams" value="fsws"/>
+				<integer id="default_for_international_teams" value="comp"/>
+				<integer id="default_for_international_youth_teams" value="comp"/>
+
+				<integer id="default_for_pre_match" value="fsws"/>
+				<integer id="default_for_post_match" value="fsws"/>
+			</container>
+		</container>
+</panel>

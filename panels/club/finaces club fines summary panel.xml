@@ -1,0 +1,167 @@
+﻿<panel>
+	<boolean id="save_session_state" value="true" />
+	<list id="draw_order">
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at11" />
+		<record entity_layout_id="at00" />
+		<record entity_layout_id="at02" />
+		<record entity_layout_id="at03" />
+		<record entity_layout_id="at04" />
+		<record entity_layout_id="at05" />
+		<record entity_layout_id="at07" />
+		<record entity_layout_id="at08" />
+		<record entity_layout_id="at09" />
+		<record entity_layout_id="at10" />
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<container entity_layout_id="at11" id="mnCn">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		
+		<container class="main_box" entity_layout_id="at00" id="stAb" height="80">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container entity_layout_id="at03" id="at03">
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<container class="client_object_viewer_xml_panel" entity_layout_id="at04" file="person/person details panel small" id="lias" width="200">
+				<record id="object_property">
+					<string id="get_property" value="pLsO" />
+					<string id="set_property" value="objt" />
+				</record>
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main" />
+			</container>
+			<container entity_layout_id="at05" id="at05" width="0">
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" move_side="true" target="main" />
+			</container>
+			<container class="inner_subtle_box" entity_layout_id="at07" appearance="boxes/custom/speech bubble/left/paper" id="at07" red_replacement="secondary">
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="align_left" get_side="right" set_side="left" target="at04" />
+				<layout class="stick_to_object_attachment" id="align_right" get_side="left" set_side="right" target="at05" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<widget class="text" entity_layout_id="at08" id="liSt" alignment="centre_y,left" colour="primary">
+					<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+					<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+				</widget>
+			</container>
+		</container>
+	</container>
+		<container class="main_box" entity_layout_id="at01" id="at01" colour="title" navigation_container="true">
+		<string id="force_title_borders" value="true" />
+		<translation id="title" translation_id="491864" type="use" value="Player Fine List for the season[COMMENT: AREA: Inbox; SUB - AREA: Code of conduct; FR: 9605; TONE: Formal; CHARLIMIT: None; NOTE: Header for player fine list]" />
+		<layout class="stick_to_object_attachment" id="align_top" offset="0" get_side="bottom" set_side="top" target="at00" />
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container class="table" entity_layout_id="at02" id="finT" mode="fill_rows, stripe_rows" layout="-7,-4,-4,-4,-4" row_height="40" fixed_row_height="20">
+			<integer id="row_spacing" value="12" />
+			<integer id="column_spacing" value="10" />
+			<string id="sort_disabled" value="true" />
+			<list id="headings">
+				<record>
+					<integer id="index" value="0" />
+					<translation id="text" value="Reason" translation_id="232957" type="use" />
+				</record>
+				<record>
+					<translation id="text" translation_id="491865" type="use" value="1st Time[COMMENT: AREA: Inbox; SUB - AREA: Code of conduct; FR: 9605; TONE: Formal; CHARLIMIT: None; NOTE: Punishment occurence header]" />
+				</record>
+				<record>
+					<translation id="text" translation_id="491866" type="use" value="2nd Time[COMMENT: AREA: Inbox; SUB - AREA: Code of conduct; FR: 9605; TONE: Formal; CHARLIMIT: None; NOTE: Punishment occurence header]" />
+				</record>
+				<record>
+					<translation id="text" translation_id="491867" type="use" value="3rd Time[COMMENT: AREA: Inbox; SUB - AREA: Code of conduct; FR: 9605; TONE: Formal; CHARLIMIT: None; NOTE: Punishment occurence header]" />
+				</record>
+				<record>
+					<translation id="text" translation_id="491868" type="use" value="4th Time &amp; more[COMMENT: AREA: Inbox; SUB - AREA: Code of conduct; FR: 9605; TONE: Formal; CHARLIMIT: None; NOTE:Punishment occurence header]" />
+				</record>
+			</list>
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="-4" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="0" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="0" get_side="right" set_side="right" target="main" />
+		</container>
+
+	</container>
+	</container>
+	<container entity_layout_id="at09" id="noCn" hidden="true" navigation_container="true" navigation_container_allow_empty="true">
+		<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+
+		<container class="text" entity_layout_id="at10" alignment="centre" style="bold" size="large">
+			<translation id="text" translation_id="491869" type="use" value="No Code of Conduct has been agreed yet[COMMENT: AREA: Inbox; SUB-AREA: Code of conduct; FR: 9605; TONE: Formal; CHARLIMIT: None; NOTE: Header for player fine list]" />
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="-4" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="4" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-4" get_side="right" set_side="right" target="main" />
+		</container>
+	</container>
+
+</panel>

@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+  <real id="segment_count" value="8" />
+  <boolean id="show_inaccurate_category" value="true" />
+  
+  <!-- Scale the polygon to fit the widget and draw it in code -->
+  <boolean id="scale_picture" value="true" />
+  <!-- First layer colour-->
+  <record id="line_style">
+    <colour id="colour" name="fg" />
+    <real id="width" value="3" />
+  </record>
+  <!-- Second layer colour-->
+  <record id="second_colour">
+    <colour id="colour" name="fg accent" />
+    <real id="width" value="3" />
+  </record>
+  <!-- Radial lines dividing each segment -->
+  <record id="segment_divider_line_props">
+    <colour id="colour" red="100" green="100" blue="60" alpha="10" />
+    <real id="width" value="1.5" />
+  </record>
+  <!-- Style of the line around the edge of the polygon -->
+  <record id="polygon_edge_line_props">
+    <colour id="colour" name="text" />
+    <real id="width" value="0.8" />
+  </record>
+  <!-- Colours (and number) of the concentric polygon rings -->
+  <list id="ring_colours">
+    <colour name="bg range1"/>
+    <colour name="bg range8"/>
+    <colour name="bg range10"/>
+    <colour name="bg range15"/>
+    <colour name="bg range20"/>
+  </list>
+  <list id="items">
+    <!-- layer 1 (there is only one) -->
+    <list>
+      <record id="item">
+	   <translation id="hint" type="use" value="태클, 일대일마크, 수비위치" />
+        <translation id="name" translation_id="285374" type="use" value="Defending[COMMENT: player profile, overview panel polygon category title]" />
+       
+    
+		<real id="max_value" value="20" />
+        <integer id="angle" value="0" />
+        <colour id="colour" name="text" />
+        <flags id="standard_spec" value="text,small" />
+
+        <list id="attributes">
+          <integer value="Ptac" />
+          <!-- tackling -->
+          <integer value="Pmar" />
+          <!-- marking -->
+          <integer value="Ppsn" />
+          <!-- positioning -->
+        </list>
+      </record>
+
+      <record id="item">
+        <translation id="name" translation_id="285375" type="use" value="Physical[COMMENT: player profile, overview panel polygon category title]" />
+        <real id="max_value" value="20" />
+        <integer id="angle" value="45" />
+        <colour id="colour" name="text" />
+        <flags id="standard_spec" value="text,small" />
+
+        <list id="attributes">
+          <integer value="Pstr" />
+          <!-- strength -->
+          <integer value="Pagi" />
+          <!-- agility -->
+          <integer value="Pbal" />
+          <!-- balance -->
+          <integer value="Psta" />
+          <!-- stamina -->
+        </list>
+      </record>
+
+      <record id="item">
+        <translation id="name" translation_id="285376" type="use" value="Speed[COMMENT: player profile, overview panel polygon category title]" />
+        <real id="max_value" value="20" />
+        <integer id="angle" value="90" />
+        <colour id="colour" name="text" />
+        <flags id="standard_spec" value="text,small" />
+
+        <list id="attributes">
+          <integer value="Ppac" />
+          <!-- pace -->
+          <integer value="Pacc" />
+          <!-- acceleration-->
+        </list>
+      </record>
+
+      <record id="item">
+        <translation id="name" translation_id="230023" type="use" value="Vision" />
+        <real id="max_value" value="20" />
+        <integer id="angle" value="135" />
+        <colour id="colour" name="text" />
+        <flags id="standard_spec" value="text,small" />
+
+        <list id="attributes">
+          <integer value="Ppas" />
+          <!-- passing -->
+          <integer value="Pcre" />
+          <!-- creativity -->
+          <integer value="Pfla" />
+          <!-- flair -->
+        </list>
+      </record>
+
+
+      <record id="item">
+        <translation id="name" translation_id="285378" type="use" value="Attacking[COMMENT: player profile, overview panel polygon category title]" />
+        <real id="max_value" value="20" />
+        <integer id="angle" value="180" />
+        <colour id="colour" name="text" />
+        <flags id="standard_spec" value="text,small" />
+
+        <list id="attributes">
+          <integer value="Potb" />
+          <!-- off the ball -->
+          <integer value="Pfin" />
+          <!-- finishing -->
+          <integer value="Pcmp" />
+          <!-- composure -->
+        </list>
+      </record>
+
+      <record id="item">
+        <translation id="name" translation_id="285379" type="use" value="Technical[COMMENT: player profile, overview panel polygon category title]" />
+        <real id="max_value" value="20" />
+        <integer id="angle" value="225" />
+        <colour id="colour" name="text" />
+        <flags id="standard_spec" value="text,small" />
+
+        <list id="attributes">
+          <integer value="Ptec" />
+          <!-- technique -->
+          <integer value="Pfrs" />
+          <!-- first touch -->
+          <integer value="Pdri" />
+          <!-- dribbling -->
+        </list>
+      </record>
+
+      <record id="item">
+        <translation id="name" translation_id="285380" type="use" value="Aerial[COMMENT: player profile, overview panel polygon category title]" />
+        <real id="max_value" value="20" />
+        <integer id="angle" value="270" />
+        <colour id="colour" name="text" />
+        <flags id="standard_spec" value="text,small" />
+
+        <list id="attributes">
+          <integer value="Pjum" />
+          <!-- jumping -->
+          <integer value="Phea" />
+          <!-- heading -->
+        </list>
+      </record>
+
+      <record id="item">
+        <translation id="name" translation_id="285381" type="use" value="Mental[COMMENT: player profile, overview panel polygon category title]" />
+        <real id="max_value" value="20" />
+        <integer id="angle" value="315" />
+        <colour id="colour" name="text" />
+        <flags id="standard_spec" value="text,small" />
+
+        <list id="attributes">
+          <integer value="Pdec" />
+          <!-- decisions -->
+          <integer value="Ptwr" />
+          <!-- teamwork -->
+          <integer value="Pant" />
+          <!-- anticipation-->
+          <integer value="Pbra" />
+          <!-- bravery -->
+          <integer value="Pdet" />
+          <!-- determination -->
+          <integer value="Pcnt" />
+          <!-- concentration -->
+        </list>
+      </record>
+    </list>
+  </list>
+  <!-- outfield analyser panel -->
+</panel>

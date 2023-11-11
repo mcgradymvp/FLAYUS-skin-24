@@ -1,0 +1,29 @@
+<panel save_session_state="true" save_default_state="true" draw_horizontal_dividers="true">
+
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container draw_vertical_dividers="true">
+		<layout class="arrange_horizontal_attachment" alignment="top,extend" offset="0"/>
+
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<container navigation_container="true" default_focus="true">
+			<attachment_group class="vertical_arrange" vertical_layout="60,-5" vertical_offset="0" horizontal_inset="0" />
+
+			<widget class="player_positions_indicator_panel" id="ppos" file="player/player positions indicator panel selector">
+				<record id="object_property" get_property="objt" set_property="objt" />
+			</widget>
+
+				<widget class="data_analyst_visualisation_widget" id="visU" visualisation_type="3" data_type="2"  category="5" file="widgets/data analyst visualisation mini1">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+						<widget class="player_additional_stats_panel" id="staP" hidden="true" file="player/player additional stats mini report1">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+		</container>
+
+	</container>
+
+</panel>

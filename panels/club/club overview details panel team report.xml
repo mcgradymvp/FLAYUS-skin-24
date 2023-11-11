@@ -1,0 +1,137 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="4" apply_to_children="true" />
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_layout="50,-6,-6" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+		<!--Team logo, name and league pos-->
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0" />
+			<!--logo-->
+			<widget class="object_portrait_picture" id="pict" width="48" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+			<!--Team name and league pos-->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="client_object_label" id="tmnm" auto_size="vertical" alignment="left,centre_y" style="bold" size="large">
+					<record id="object_property">
+						<integer id="get_property" value="Tlna"/>
+					</record>
+				</widget>
+
+				<widget class="text" id="lgps" spec="text" colour="faded text" size="small"/>
+			</container>
+		</container >
+
+		<!--Team rep and status-->
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+
+			<!--Reputation-->
+			<container>
+
+				<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" id="creL" alignment="left,centre_y" auto_size="vertical" font="label" colour="white">
+					<record id="object_property">
+						<integer id="get_property" value="Crsc" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+
+				<widget class="stars_range_strip" id="creS" alignment="left,centre_y" height="24" >
+					<record id="object_property">
+						<integer id="get_property" value="Trst" />
+					</record>
+				</widget>
+			</container>
+
+			<!--Status-->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+				<widget class="label" id="proL" alignment="left,top" auto_size="vertical" font="label" colour="white">
+					<record id="object_property">
+						<integer id="get_property" value="Cprs" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+
+				<widget class="professional_status_label" spec="text" id="pros" alignment="left,bottom" auto_size="vertical" font="value">
+					<record id="object_property">
+						<integer id="get_property" value="Cprs" />
+					</record>
+				</widget>
+			</container>
+		</container>
+
+		<!--Team form and league pos graph-->
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0" />
+
+			<!--form-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+
+				<widget class="label" id="prfd" alignment="left,top" auto_size="vertical" font="label" colour="white">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" />
+					<record id="object_property">
+						<integer id="get_property" value="Tfrm" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+
+				<widget class="team_recent_form_widget" alignment="left" width="80" height="30">
+					<layout class="stick_to_sides_attachment" alignment="left" inset="8" />
+					<record id="object_property">
+						<list id="get_properties">
+							<record>
+								<integer id="get_property" value="Tfrm"/>
+								<integer id="set_property" value="valu"/>
+							</record>
+              <record>
+                <integer id="get_property" value="objt"/>
+                <integer id="set_property" value="objt"/>
+              </record>
+						</list>
+					</record>
+				</widget>
+			</container>
+
+			<!--League Positions-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="middle,extend" offset="0" gap="2" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="text" alignment="left,top" auto_size="vertical" font="label" multiline="false" colour="white">
+					<translation id="text" translation_id="232109" type="use" value="League Positions" />
+				</widget>
+
+				<!-- league progress graph -->
+				<container class="league_positions_panel" id="psgr" file="" >
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<!-- league progress graph -->
+					<widget class="graph" id="grph" draw_shadows="false">
+						<record id="instant_hint" file="generic/graph instant hint positions small" alignment="right,bottom"/>
+						<record id="default_series_properties" line_width="2" point_radius="0"/>
+						<record id="x_axis" show_labels="false"/>
+						<record id="y_axis" min_value="0" show_labels="false" grid_lines_per_mark="0.25" mark_size="0" reverse_order="true"/>
+						<list id="grid_line_styles">
+							<record colour="graph row"/>
+							<record/>
+						</list>
+					</widget>
+
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

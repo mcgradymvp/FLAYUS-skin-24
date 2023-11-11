@@ -1,0 +1,104 @@
+﻿<panel>
+	<attachment_group class="horizontal_arrange" horizontal_alignment="right"/>
+
+	<record id="default_properties" appearance="buttons/subtle/normal/button" />
+
+	<!--team instructions-->
+		<widget class="team_instructions_panel" id="ShIP" file="team/team instructions button panel match" appearance="buttons/standard/flex/button" icon="icons/16px/squad" auto_size="horizontal" width="130" height="30">
+			<record id="click_event">
+				<flags id="event_id" value="tinD" />
+				<flags id="type" value="poSE" />
+			</record>
+		</widget>
+
+	<!--quick sub-->
+	<widget class="icon_button" id="qsub" appearance="buttons/standard/flex/button" icon="icons/26px/substitution" auto_size="horizontal">
+		<translation id="text" type="use" value="빠른 교체" />
+		<translation id="hint" translation_id="330203" type="use" value="Make Substitution[COMMENT: match tactics shortcuts, change tactics dialog title]" />
+	</widget>
+
+	<!--formation-->
+			<widget class="menu_strip_popup_button" id="form" secondary_icon_alignment="centre_right" icon="icons/16px/formation" icon_alignment="left" popup_alignment="left,top" appearance="buttons/standard/flex/button" font="title" size="small" auto_size="horizontal" auto_size_maximum_width="200" alignment="centre">
+				<translation id="hint" translation_id="332222" type="use" value="Change tactic for your team[COMMENT: hint for a popup button that allows the user to change tactic during a match]" />
+				<record id="modal_popup_properties" dcep="true" />
+				<record id="widget_properties">
+					<translation id="title" translation_id="316746" type="use" value="Tactic[COMMENT:team report, tactic name]" />
+					<integer id="width" value="400" />
+					<flags id="auto_size" value="vertical" />
+					<flags id="alignment" value="top" />
+					<symbol id="appearance" value="boxes/popup/standard/titled/paper" />
+					<symbol id="default_widget_type" value="hint_text_button" />
+					<symbol id="submenu_type" value="subtle_popup_button" />
+					<symbol id="separator_type" value="picture" />
+					<record id="default_widget_properties" />
+					<record id="submenu_properties" fixed="true">
+						<event id="click_notification_event" event_id="DMCN" item="NULL" />
+						<event id="menu_layout_notification_event" event_id="MLNO" />
+					</record>
+					<record id="separator_properties" file="dividers/standard/vertical/line" auto_size="vertical" />
+				</record>
+				<string id="mpmF" value="generic/modal popup panel match" />
+
+			</widget>
+
+	<widget class="mentality_table_popup_button" id="ment" icon="icons/16px/mentality" auto_size="horizontal" alignment="centre" icon_alignment="centre" secondary_icon_alignment="centre" appearance="buttons/standard/flex/button" default_focus="true">
+	    <translation id="hint" translation_id="348297" type="use" value="Select your match mentality[COMMENT: team instructions: match mentality hint]" />
+	</widget>
+
+	<!--shouts-->
+	<widget class="widget_popup_button" id="shou" height="30" width="50" auto_size="horizontal" popup_alignment="left,bottom" widget_type="match_tactic_popup_panel" appearance="buttons/standard/flex/button" icon="icons/26px/team talk" secondary_icon_enabled="false">
+		<translation id="text" translation_id="319627" type="use" value="Shouts[COMMENT: sections.xml, touchline shoust header text]" />
+		<translation id="hint" translation_id="516090" type="use" value="Shouts allow for motivational instructions to be issued to the players on the pitch.[COMMENT: AREA: Match; SUB-AREA: Shouts; NOTE: hint text for the Shouts button]" />
+		<record id="modal_popup_properties">
+			<boolean id="darkened" value="false" />
+			<boolean id="attempt_to_reposition" value="true" />
+		</record>
+		<record id="widget_properties">
+			<string id="file" value="match/match tactic popup panel shout" />
+		</record>
+	</widget>
+
+			<!--content menu-->
+			<widget class="popup_check_box_button" id="conm" fixed="true" auto_size="horizontal" appearance="buttons/standard/flex/button" icon="icons/16px/widget" secondary_icon_enabled="false">
+				<record id="primary_icon_properties" red_replacement="white" />
+				<record id="secondary_icon_properties" red_replacement="white" />
+               <translation id="hint" translation_id="468964" type="use" value="Select for more match information[COMMENT: hint for the widgets button in the match]" />
+				<attachment class="get_global_attachment" get_property="CMIT" set_property="itms" />
+				<attachment class="get_global_attachment" get_property="CMDI" set_property="disa" />
+				<attachment class="test_multiple_globals_attachment" default_value="false">
+					<list id="get_properties">
+						<record get_property="section" test_mode="equal" value="hilp" skip_if_null="false" />
+					</list>
+					<integer id="set_property" value="Shwn" />
+				</attachment>
+			</widget>
+	
+	<!--container when advanced changes have been made-->
+	<container id="advc">
+		<attachment_group class="horizontal_arrange_autosize" horizontal_offset="0" vertical_inset="0" />
+
+		<!--explanatory text-->
+		<widget class="text" alignment="centre" background_colour="black" colour="text">
+			<translation id="text" translation_id="466457" type="use" value="Tactical changes will take effect at the next break in play[COMMENT: match screen; text showing that the user's tactical changes will take effect when the ball next goes out of play]" />
+		</widget>
+
+			<container>
+
+				<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="right">
+			   		<global id="horizontal_gap" name="ui.button_row_gap"/>
+		        </attachment_group>
+
+		<!--edit pending changes button-->
+				<widget class="icon_button" id="ediP" event_id="eptt" icon="icons/16px/edit" click_event="EsFT" auto_size="horizontal" appearance="buttons/standard/flex/button">
+					<translation id="text" translation_id="229690" type="use" value="Edit" />
+				</widget>
+
+				<!--cancel pending changes button-->
+				<widget class="icon_button" id="canP" event_id="cptt" icon="icons/16px/cross" auto_size="horizontal" appearance="buttons/standard/flex/button">
+					<translation id="text" translation_id="229828" type="use" value="Cancel" />
+				</widget>
+
+			</container>
+	       </container>
+
+</panel>

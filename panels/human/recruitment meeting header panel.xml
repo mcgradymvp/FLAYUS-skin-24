@@ -1,0 +1,51 @@
+﻿<!-- header panel to be used during the recruitment meetings -->
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<boolean id="should_force_refresh" value="true" />
+
+	<animation class="translate_animation" start_value="0, -1" end_value="0, 0" duration="0.2" delay="0" end_mode="hold_end" tween="ease_out_4" coord_mode="relative_to_target" trigger_id="hidden" trigger_start="false" trigger_end="true" no_clipping="true"/>
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_gap="5" vertical_alignment="bottom, extend" />
+		
+		<container class="main_box" appearance="boxes/custom/full screen header/paper">
+			<layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0" gap="10" />
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<!-- Back Button -->
+			<widget class="icon_button" id="wlbk" fixed="true" width="40" appearance="buttons/custom/interface/navigation bar/button" icon="icons/26px/back" icon_alignment="centre">
+				<record id="primary_icon_properties" red_replacement="text" />
+				<record id="click_event" event_id="GOTO" event_target="brow" scin="-3" />
+			</widget>
+
+			<widget class="vertical_divider" />
+
+			<container height="50">
+				<layout class="arrange_horizontal_attachment" alignment="right, extend" offset="10" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!-- main title container -->
+				<container>
+					<layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0" gap="10" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<widget class="object_portrait_picture" id="tmlg" height="35" width="35" scale_picture="true" image_alignment="centre" clickable="false">
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>
+
+					<widget class="label" id="wlms" auto_size="horizontal" alignment="left, centre_y" font="title" colour="accent" size="xlarge">
+						<translation id="text" translation_id="509177" type="use" value="Recruitment Meeting[COMMENT: AREA: Recruitment meeting; FR-BN: 32765; NOTE: Recruitment meeting title]" />
+					</widget>
+				</container>
+
+				<widget class="icon_button" id="emCK" click_event="emCK" fixed="true" controller_button="right_trigger" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/continue" secondary_icon_alignment="centre_right, centre_y" font="title" colour="text" width="135" height="48" hidden="true">
+					<record id="secondary_icon_properties" red_replacement="text"/>
+					<record id="click_event" event_id="emCK" event_target="onec" />
+					<translation id="text" translation_id="510685" type="use" value="End Meeting[COMMENT: AREA: Recruitment meeting; FR-BN: 32765; NOTE: Recruitment meeting end meeting dialog popup title]"/>
+					<layout class="stick_to_sides_attachment" alignment="right" inset="20"/>
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

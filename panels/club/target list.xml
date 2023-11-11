@@ -1,0 +1,300 @@
+<panel>
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+    <boolean id="save_immediate_state" value="true" />
+
+    <container class="main_box">
+        <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+        <container class="main_subtle_box" height="90" navigation_container="true" default_focus="true">
+
+            <layout class="arrange_horizontal_attachment" layout="-1, 26, -2, 215" offset="0" gap="10" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+            <container class="client_object_viewer_xml_panel" id="dofc" width="300">
+                <layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0" />
+                <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="4" />
+
+                <widget class="object_portrait_picture" width="80" id="dofp" image_alignment="centre" scale_picture="true">
+                    <layout class="stick_to_sides_attachment" alignment="vertical" inset="8" />
+                    <record id="object_property" get_property="objt" set_property="objt" />
+                </widget>
+
+                <container width="200">
+                    <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="2" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+                    <widget class="job_label" id="dofj" alignment="left, centre_y" colour="faded text" auto_size="vertical">
+                        <record id="object_property" get_property="Pcjo" set_property="valu" />
+                    </widget>
+
+                    <widget class="person_button" id="dofn" auto_size="vertical">
+                        <record id="object_property" get_property="objt" set_property="valu" />
+                    </widget>
+
+                    <widget class="global_reputation_stars_label" id="dofs" alignment="left" auto_size="vertical" navigation_focus_target="false">
+                        <record id="object_property" get_property="NrSr" set_property="valu" />
+                    </widget>
+                </container>
+            </container>
+
+            <widget class="picture" width="26" file="icons/26px/info" image_alignment="centre" scale_picture="true" red_replacement="normal_icon" />
+
+            <widget class="text" id="expl" multiline="true" size="10" alignment="left, centre_y" />
+
+            <widget class="icon_button" id="sugb" click_event="supl" auto_size="vertical" icon="icons/16px/tick" size="normal" appearance="buttons/primary/normal/button" default_focus="true">
+                <layout class="centre_in_parent_attachment" alignment="vertical" offset="0" />
+                <translation id="text" translation_id="483628" type="use" value="Request DoF Suggestion[COMMENT: AREA: Director of Football; SUB-AREA: Transfer Targets to the right of DoF description; FR: 27629; TONE: Formal; CHARLIMIT: None;]" />
+            </widget>
+        </container>
+
+        <container draw_vertical_dividers="true">
+            <layout class="arrange_horizontal_attachment" layout="-1, 450" offset="0">
+                <global id="gap" name="ui.main_box_gap" />
+            </layout>
+            <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+            <container class="tabbed_container" appearance="boxes/main/standard/paper" id="mult" default_item="ttar" save_session_state="true" save_default_state="true" navigation_container="true">
+
+                <container class="inner_box_no_margin" id="ttar">
+                    <translation id="title" translation_id="336873" type="use" value="Transfer Targets[COMMENT: target list.xml; list name for shortlist of players you're interested in buying]" />
+                    <layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="4" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+                    <container>
+                        <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" />
+                        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+                        <container>
+                            <attachment_group class="vertical_arrange_autosize" horizontal_alignment="right" horizontal_offset="0" />
+
+                            <widget class="icon_button" id="grbt" auto_size="all" click_event="newg" icon="icons/16px/target group">
+                                <translation id="text" translation_id="437024" type="use" value="Create New Group[COMMENT: FR 5080, button text]" />
+                            </widget>
+                        </container>
+
+                        <widget class="table" id="tltb" mode="fill_rows, stripe_rows, printable, select_rows, show_bullets, select_multiple, drag_rows, drop_on_rows, dont_allow_clear_selection" save_immediate_state="true" wants_lazy_load="true" layout="100,130,100,100,100,130,-1,100,120,90,130,20" row_spacing="2" select_event="itsl" drag_drop_handler_column="Pers" navigation_container="true">
+                            <list id="headings">
+                                <record index="0" alignment="left, centre_y" auto_hide_priority="1">
+                                    <translation id="text" translation_id="336017" type="use" value="Priority[COMMENT: transfers lists; column header, prioritise the importance of a particular deal]" />
+                                    <translation id="hint" translation_id="336017" type="use" value="Priority[COMMENT: transfers lists; column header, prioritise the importance of a particular deal]" />
+                                </record>
+                                <record index="1" alignment="left, centre_y" auto_hide_priority="2">
+                                    <translation id="text" translation_id="229689" type="use" value="Name" />
+                                    <translation id="hint" translation_id="229689" type="use" value="Name" />
+                                </record>
+                                <record index="2" alignment="left, centre_y" auto_hide_priority="50">
+                                    <translation id="text" translation_id="316794" type="use" value="Type[COMMENT: default properties.xml; list header to describe the type of game object shown - a game object is anything the user can interact with]" />
+                                    <translation id="hint" translation_id="336071" type="use" value="Transfer Type[COMMENT: transfer lists; column header, type of transfer proposed for a player]" />
+                                </record>
+                                <record index="3" alignment="left, centre_y" auto_hide_priority="60">
+                                    <translation id="text" translation_id="492002" type="use" value="Agreed Playing Time[COMMENT: AREA: Player Happiness; SUB-AREA: Contract Promises; FR-BN: 14013; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: contract promise type]" />
+                                    <translation id="hint" translation_id="492002" type="use" value="Agreed Playing Time[COMMENT: AREA: Player Happiness; SUB-AREA: Contract Promises; FR-BN: 14013; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: contract promise type]" />
+                                </record>
+                                <record index="4" alignment="left, centre_y" auto_hide_priority="3">
+                                    <translation id="text" translation_id="342366" type="use" value="Max. Offer Amount[COMMENT: transfers target list; column header, use top 10 matches, minor change, Max. is abbreviation of Maximum]" />
+                                    <translation id="hint" translation_id="342366" type="use" value="Max. Offer Amount[COMMENT: transfers target list; column header, use top 10 matches, minor change, Max. is abbreviation of Maximum]" />
+                                </record>
+                                <record index="5" alignment="left, centre_y" auto_hide_priority="70">
+                                    <translation id="text" translation_id="348991" type="use" value="Max. Wage Amount[COMMENT: transfers target list; column header]" />
+                                    <translation id="hint" translation_id="348991" type="use" value="Max. Wage Amount[COMMENT: transfers target list; column header]" />
+                                </record>
+                                <record index="6" alignment="left, centre_y" auto_hide_priority="4">
+                                    <translation id="text" translation_id="242853" type="use" value="Status" />
+                                    <translation id="hint" translation_id="242853" type="use" value="Status" />
+                                </record>
+                                <record index="7" alignment="left, centre_y" auto_hide_priority="80">
+                                    <translation id="text" translation_id="227884" type="use" value="Position" />
+                                    <translation id="hint" translation_id="227884" type="use" value="Position" />
+                                </record>
+                                <record index="8" alignment="left, centre_y" auto_hide_priority="90">
+                                    <translation id="text" translation_id="538841" type="use" value="Transfer Value[COMMENT: AREA: Transfers; SUB-AREA: Transfer Value; FR-BN: 34410; TONE: Formal; CHARLIMIT: Shortish, column header; REF-ID: 227806; NOTE: displays the player's estimated transfer value in a range]" />
+                                    <translation id="hint" translation_id="538841" type="use" value="Transfer Value[COMMENT: AREA: Transfers; SUB-AREA: Transfer Value; FR-BN: 34410; TONE: Formal; CHARLIMIT: Shortish, column header; REF-ID: 227806; NOTE: displays the player's estimated transfer value in a range]" />
+                                </record>
+                                <record index="9" alignment="left, centre_y" auto_hide_priority="100">
+                                    <translation id="text" translation_id="227799" type="use" value="Wage" />
+                                    <translation id="hint" translation_id="227799" type="use" value="Wage" />
+                                </record>
+                                <record index="10" alignment="left, centre_y" auto_hide_priority="110">
+                                    <translation id="text" translation_id="227737" type="use" value="Club" />
+                                    <translation id="hint" translation_id="227737" type="use" value="Club" />
+                                </record>
+                                <record index="11" alignment="left, centre_y" auto_hide_priority="1" />
+                            </list>
+
+                            <list id="column_table_properties">
+                                <record index="0" auto_hide_priority="1" left="2" />
+                                <record index="1" auto_hide_priority="2" left="2" right="2" bottom="1" />
+                                <record index="2" auto_hide_priority="50" />
+                                <record index="3" auto_hide_priority="60" />
+                                <record index="4" auto_hide_priority="3" />
+                                <record index="5" auto_hide_priority="70" />
+                                <record index="6" auto_hide_priority="4" minimum_width="150" />
+                                <record index="7" auto_hide_priority="80" />
+                                <record index="8" auto_hide_priority="90" minimum_width="120"/>
+                                <record index="9" auto_hide_priority="100" />
+                                <record index="10" auto_hide_priority="110" />
+                                <record index="11" auto_hide_priority="1" />
+                            </list>
+
+                            <list id="column_widget_properties">
+                                <record indx="0" alignment="left, centre_y" />
+                                <record indx="1" id="Pers" alignment="left, centre_y" />
+                                <record indx="2" alignment="left, centre_y" />
+                                <record indx="3" alignment="left, centre_y" />
+                                <record indx="4" alignment="left, centre_y" />
+                                <record indx="5" alignment="left, centre_y" />
+                                <record indx="6" alignment="left, centre_y" />
+                                <record indx="7" alignment="left, centre_y" />
+                                <record indx="9" alignment="left, centre_y, can_scale" />
+                                <record indx="10" alignment="left, centre_y" />
+                                <record indx="11" alignment="centre" />
+                            </list>
+                        </widget>
+                    </container>
+                    
+                    <container height="30">
+                        <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+                        <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+                        <layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+
+                        <widget class="icon_button" id="rmbt" auto_size="all" click_event="rmsl" controller_button="y_button">
+                            <translation id="text" translation_id="229716" type="use" value="Remove" />
+                        </widget>
+
+                        <widget class="icon_button" id="rfgt" auto_size="all" click_event="rsfg" controller_button="x_button">
+                            <translation id="text" translation_id="437025" type="use" value="Remove From Group[COMMENT: FR 5080]" />
+                            <global id="hidden" name="ui.is_fmt_controller_skin" />
+                        </widget>
+                    </container>
+                </container>
+
+                <container id="sugg">
+                    <layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="4" />
+                    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                    <translation id="title" translation_id="395329" type="use" value="Suggestions[COMMENT: FR 10593, user can ask DoF for transfer target suggestions]" />
+
+                    <container>
+                        <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" />
+                        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+                        <widget class="table" id="sugt" layout="130, 100, 100, 120, 90, 130, 45, 45" mode="fill_rows, stripe_rows, printable, select_rows, show_bullets, select_multiple, drag_rows, dont_allow_clear_selection" save_immediate_state="true" auto_size_rows="true" row_spacing="2" select_event="itsl" navigation_container="true">
+                            <list id="headings">
+                                <record index="0" alignment="left, centre_y" auto_hide_priority="1">
+                                    <translation id="text" translation_id="229689" type="use" value="Name" />
+                                    <translation id="hint" translation_id="229689" type="use" value="Name" />
+                                </record>
+                                <record index="1" alignment="left, centre_y" auto_hide_priority="2">
+                                    <translation id="text" translation_id="227884" type="use" value="Position" />
+                                    <translation id="hint" translation_id="227884" type="use" value="Position" />
+                                </record>
+                                <record index="2" alignment="left, centre_y" auto_hide_priority="3">
+                                    <translation id="text" translation_id="383263" type="use" value="Best Role[COMMENT - person list view column heading - abbreviation of Best Role - an opinion of the best role for this player]" />
+                                    <translation id="hint" translation_id="316815" type="use" value="Scout's opinion of this player's best tactical role[COMMENT - person list view column heading hint]" />
+                                </record>
+                                <record index="3" alignment="left, centre_y" auto_hide_priority="400">
+                                    <translation id="text" translation_id="538841" type="use" value="Transfer Value[COMMENT: AREA: Transfers; SUB-AREA: Transfer Value; FR-BN: 34410; TONE: Formal; CHARLIMIT: Shortish, column header; REF-ID: 227806; NOTE: displays the player's estimated transfer value in a range]" />
+                                    <translation id="hint" translation_id="538841" type="use" value="Transfer Value[COMMENT: AREA: Transfers; SUB-AREA: Transfer Value; FR-BN: 34410; TONE: Formal; CHARLIMIT: Shortish, column header; REF-ID: 227806; NOTE: displays the player's estimated transfer value in a range]" />
+                                </record>
+                                <record index="4" alignment="left, centre_y" auto_hide_priority="500">
+                                    <translation id="text" translation_id="227799" type="use" value="Wage" />
+                                    <translation id="hint" translation_id="227799" type="use" value="Wage" />
+                                </record>
+                                <record index="5" alignment="left, centre_y" auto_hide_priority="600">
+                                    <translation id="text" translation_id="227737" type="use" value="Club" />
+                                    <translation id="hint" translation_id="227737" type="use" value="Club" />
+                                </record>
+                                <record index="6" alignment="centre" auto_hide_priority="700">
+                                    <translation id="text" translation_id="255666" type="use" value="Rec[COMMENT - person list view column heading; short for Scout Recommendation]" />
+                                    <translation id="hint" translation_id="251864" type="use" value="Scout recommendation[COMMENT - person list view column heading hint]" />
+                                </record>
+                                <record index="7" alignment="left, centre_y" auto_hide_priority="800">
+                                    <translation id="text" translation_id="227770" type="use" value="Age[comment - person age]" />
+                                    <translation id="hint" translation_id="229407" type="use" value="Age" />
+                                </record>
+                            </list>
+
+                            <list id="column_table_properties">
+                                <record index="0" auto_hide_priority="1" />
+                                <record index="1" auto_hide_priority="2" />
+                                <record index="2" auto_hide_priority="3" />
+                                <record index="3" auto_hide_priority="400" />
+                                <record index="4" auto_hide_priority="500" left="2" right="2"/>
+                                <record index="5" auto_hide_priority="600" />
+                                <record index="6" auto_hide_priority="700" />
+                                <record index="7" auto_hide_priority="800" />
+                            </list>
+
+                            <list id="column_widget_properties">
+                                <record index="0" alignment="left, centre_y"/>
+                                <record index="1" alignment="left, centre_y" navigation_focus_target="false"/>
+                                <record index="3" alignment="centre, can_scale"/>
+                                <record index="4" alignment="left, centre_y, can_scale"/>
+                                <record index="5" alignment="left, centre_y" navigation_focus_target="true"/>
+                                <record index="6" alignment="left, centre_y"/>
+                            </list>
+                        </widget>
+                    </container>
+
+                    <container navigation_container="true">
+                        <layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+                        <layout class="fit_children_attachment" alignment="vertical" offset="0" />
+                        <layout class="arrange_horizontal_attachment" alignment="right" offset="0" />
+
+                        <widget class="icon_button" id="rmbt" auto_size="all" click_event="rmsl" controller_button="y_button">
+                            <translation id="text" translation_id="229716" type="use" value="Remove" />
+                        </widget>
+
+                        <widget class="icon_button" id="cleb" auto_size="all" click_event="DELE" controller_button="x_button">
+                            <translation id="text" translation_id="229717" type="use" value="Clear" />
+                        </widget>
+                    </container>
+                </container>
+            </container>
+
+            <container class="scrolling_box">
+                
+                <container class="main_box_no_margin" navigation_container="true">
+                    <attachment_group class="vertical_arrange_autosize" />
+
+                        <container id="1sel">
+                            <attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_inset="0" />
+
+                            <widget class="table" id="splt" mode="" layout="-1" row_height="85" height="85" />
+                            <widget class="player_scout_reports_panel" id="scor" file="player/player scout reports for target list" />
+                            <widget id="deta" class="player_transfer_target_details_panel" />
+                            <widget class="player_pending_contract_discussion_panel" id="CoDi">
+                                <string id="create_if" value="allow_conversations"/>
+                            </widget>
+                        </container>
+
+                        <container id="ssel">
+                            <attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="8" horizontal_inset="0" />
+
+                            <widget class="table" id="splt" mode="fill_rows" layout="-1" row_height="80" auto_size="vertical" />
+                                                    <widget class="horizontal_divider" />
+                            <widget id="deta" class="player_transfer_target_details_panel" />
+                        </container>
+
+                    <container height="30" id="bobt">
+                        <attachment_group class="horizontal_arrange" horizontal_alignment="right" />
+
+                        <widget class="transfer_target_get_scout_report_widget" id="gsrb">
+                            <attachment_group class="horizontal_arrange_autosize" horizontal_alignment="right" />
+
+                            <widget class="button" id="mybt" auto_size="horizontal" click_event="egsr">
+                                <translation id="text" translation_id="335069" type="use" value="Get Scout Report[COMMENT: person actions menu; shortcut to get a scout report card from the scouting pool]" />
+                            </widget>
+                        </widget>
+
+                        <widget class="primary_button" id="addb" auto_size="horizontal" click_event="addt" controller_button="y_button" navigation_focus_target="true">
+                            <translation id="text" translation_id="336159" type="use" value="Add as Transfer Target[COMMENT: right click menu item for players, Transfer Target is a new style of shortlist, multiple shortlists encouraged to be used]" />
+                        </widget>
+                    </container>
+                </container>
+            </container>
+        </container>
+    </container>
+
+</panel>

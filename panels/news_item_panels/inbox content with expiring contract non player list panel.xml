@@ -1,0 +1,67 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" alignment="top, extend" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+	<boolean id="check_for_multiple_requests" value="true"/>
+
+	<!-- main body text -->
+	<widget class="inbox_body_text" id="bdtx" colour="inbox_text" auto_size="vertical"/>
+
+	<container id="icbx" class="inner_subtle_box" appearance="boxes/custom/inbox attachment/personal/paper">
+		<layout class="arrange_vertical_attachment" alignment="bottom, extend" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+		<widget class="table" id="list" layout="-1, 120, 90, 75, 220" mode="fill_rows, stripe_rows, printable, keyboard, dont_ask_for_focus, show_bullets, select_rows, select_multiple" select_event="sele" fixed_size_rows="true" row_spacing="4" row_height="50">
+			<list id="headings">
+				<record index="0" alignment="left, centre_y">
+					<translation id="text" translation_id="227765" type="use" value="Name[comment - Person Name]"/>
+				</record>
+				<record index="1" alignment="left, centre_y">
+					<translation id="text" translation_id="227784" type="use" value="Expires"/>
+				</record>
+				<record index="2" alignment="left, centre_y">
+					<translation id="text" translation_id="227964" type="use" value="Job"/>
+				</record>
+				<record index="3" alignment="left, centre_y">
+					<translation id="text" translation_id="227799" type="use" value="Wage"/>
+				</record>
+				<record index="4" alignment="left, centre_y">
+					<translation id="text" translation_id="316647" type="use" value="Actions[COMMENT: popup information panel actions button title]"/>
+				</record>
+			</list>
+
+			<!-- use the col id for the property to view -->
+			<list id="column_table_properties">
+				<record index="0" id="Pnam" alignment="left, centre_y" minimum_width="120"/>
+				<record index="1" alignment="left, centre_y"/>
+				<record index="2" alignment="left, centre_y"/>
+				<record index="3" alignment="left, centre_y"/>
+				<record index="4" alignment="left, centre_y" minimum_width="175"/>
+			</list>
+
+			<list id="column_widget_properties">
+				<record index="0" alignment="left, centre_y"/>
+				<record index="1" alignment="left, centre_y"/>
+				<record index="2" alignment="left, centre_y"/>
+				<record index="3" alignment="left, centre_y"/>
+				<record index="4" alignment="left, centre_y"/>
+			</list>
+		</widget>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left">
+				<global id="horizontal_gap" name="ui.button_row_gap"/>
+			</attachment_group>
+
+			<!--set for release button-->
+			<widget class="button" id="spfr" click_event="spfr" auto_size="all" disabled="true" controller_button="x_button">
+				<translation id="text" translation_id="334040" type="use" value="Set For Release[COMMENT: sets the player to be released at the end of his contract]"/>
+			</widget>
+
+			<!--DoF button-->
+			<widget class="button" id="sdof" click_event="sdof" auto_size="all" disabled="true" controller_button="y_button">
+				<translation id="text" translation_id="491967" type="use" value="Instruct DoF to Negotiate Renewal[COMMENT: AREA: Inbox; SUB-AREA: Contract expiting news item; FR-BN: 13862; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: button label for requesting the director of football negotiates contract renewals on your behalf]"/>
+			</widget>
+		</container>
+	</container>
+</panel>

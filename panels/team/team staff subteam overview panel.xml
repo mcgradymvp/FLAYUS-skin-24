@@ -1,0 +1,27 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<boolean id="should_force_refresh" value="true" />
+
+	<container >
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+
+		<string id="skin_style" value="title link" />
+
+		<widget class="link_button" height="25" id="tlnk" auto_size="horizontal" />
+
+		<widget class="label" height="25" id="titl"  font="title" colour="accent" navigation_focus_target="false" />
+
+		<widget class="label" height="25" id="nump" style="semi_bold" size="large" />
+
+		<widget class="text" height="40" id="boac" colour="faded text" />
+
+		<widget class="team_staff_little_guys_panel" id="tslg" height="60"/>
+
+		<widget class="horizontal_divider" />
+
+		<container id="tsst" class="property_list_viewer_xml_panel" file="team/team staff subteam table" />
+
+	</container>
+
+</panel>

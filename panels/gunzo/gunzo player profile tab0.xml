@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container >
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		<container class="vertical_adaptive_container" id="PDvc" inset="0" offset="0" gap="0">
+		
+			<!--squad number-->
+			<container default_height="180" minimum_height="180" priority="1">
+	          <layout class="arrange_vertical_attachment" layout="120,-1,-1" offset="0" gap="0" />
+	          <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				
+				<widget id="cKit" class="kit_icon" file="tactics/tactics kit icon" height="120" scale_picture="true" kit_zoom_level="2" priority="1" alignment="centre_x,top">				
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+					<record id="object_property" get_property="Pers" set_property="objt"/>
+				</widget> 
+
+				<!-- Logo -->
+				<widget class="object_portrait_picture" id="npiB" image_alignment="centre_x,top" scale_picture="true" width="75" height="80" wants_mouse_events="true" embed_in_frame="true">
+					<layout class="stick_to_sides_attachment" alignment="top" inset="2"/>
+					<layout class="stick_to_sides_attachment" alignment="left" inset="2"/>
+					<record id="object_property" dont_set_hint="true" get_property="PNat" set_property="objt" />
+				</widget>
+
+				<widget class="object_portrait_picture" id="pclB" image_alignment="centre_x,top" scale_picture="true" width="75" height="80" wants_mouse_events="true" embed_in_frame="true" transparency="1">
+					<layout class="stick_to_sides_attachment" alignment="top" inset="2"/>
+					<layout class="stick_to_sides_attachment" alignment="right" inset="2"/>
+					<record id="object_property" dont_set_hint="true" get_property="Pclb" set_property="objt" />
+				</widget>
+
+			<!--condition-->
+				<container default_height="100" minimum_height="100">
+					<layout class="arrange_horizontal_attachment" layout="100,-1,100" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						<widget class="pie_condition_label" file="gunzo/pie condition label big" id="conv" size="11" style="semi_bold" mode="0">
+							<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+							<record id="object_property">
+								<integer id="get_property" value="Pcon" />
+							</record>
+						</widget>
+
+						<widget class="text" id="conl" alignment="centre_x,left,can_scale" font="gz_title" colour="white" multiline="false" size="7">
+							<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+
+							<record id="object_property">
+								<integer id="get_property" value="Pcon" />
+								<boolean id="name" value="true" />
+							</record>
+						</widget>	
+					</container>
+							<widget class="player_scout_reports_panel" id="gsra" file="gunzo/gunzo player scout rating small2" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
+                  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				  <record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>	
+      
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="pie_condition_label" file="gunzo/pie condition label big" id="fitv" size="11" style="semi_bold" mode="1">
+							<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+							<record id="object_property">
+								<integer id="get_property" value="Pfit" />
+							</record>
+						</widget>
+
+						<widget class="text" id="fitl" alignment="centre_x,right,can_scale" font="gz_title" colour="white" multiline="false" size="7">
+							<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+							<record id="object_property">
+								<integer id="get_property" value="Pfit" />
+								<boolean id="name" value="true" />
+							</record>
+						</widget>
+					</container>
+				</container>
+				</container>
+
+			<!-- preferred moves -->
+			<container default_height="-3" minimum_height="20" priority="3">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="preferred_moves_panel" file="gunzo/gunzo player information preferred moves" id="pfmp">
+
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+
+	        <!-- Separator -->
+				<widget class="picture" file="dividers/standard/horizontal/line" height="1" image_alignment="centre"/>
+
+				<!-- fitness-->
+				<container default_height="-5" priority="4" >
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			
+				<widget class="player_personal_details_panel" id="tb01" file="gunzo/gunzo player profile tab0_1" default_width="-1" priority="1">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget> 	
+			</container> 
+
+			<container height="1" priority="3"/>
+		</container>
+	</container>
+
+</panel>

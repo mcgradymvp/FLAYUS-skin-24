@@ -1,0 +1,94 @@
+﻿<panel navigation_container="true">
+
+	<attachment_group class="vertical_arrange_autosize"/>
+
+	<list id="properties_to_forward">
+		<record get_property="text" set_property="text" target="Ltit"/>
+		<record get_property="objt" set_property="objt" target="Ltit"/>
+		<record get_property="sect" set_property="sect" target="Ltit"/>
+		<record get_property="file" set_property="file" target="Limg"/>
+		<record get_property="rrep" set_property="rrep" target="Limg"/>
+	</list>
+
+	<container height="26">
+		<layout class="arrange_horizontal_attachment" alignment="left"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+		<widget class="picture" entity_layout_id="at02" id="Limg" width="26" height="26">
+			<string id="image_alignment" value="centre_y"/>
+		</widget>
+		<widget class="link_button_title" entity_layout_id="at03" id="Ltit" alignment="centre_y,left" auto_size="horizontal" height="26"/>
+	</container>
+
+	<container class="main_box">
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" vertical_inset="15"/>
+
+		<container class="table" entity_layout_id="at05" id="ort1" auto_size="vertical" mode="fill_rows, stripe_rows, select_rows, select_multiple" layout="-1, 16" name="table of resp" row_spacing="4" sort_disabled="true">
+			<boolean id="save_session_state" value="true" />
+			<string id="fixed_size_rows" value="false" />
+			<string id="auto_size_rows" value="true" />
+
+
+			<list id="column_table_properties">
+				<record id="txt1" alignment="left,centre_y">
+					<record id="widget_info" class="icon_button" auto_size="vertical" navigation_focus_target="false">
+						<string id="show_button_appearance" value="false"/>
+						<string id="icon" value="icons/16px/bullet"/>
+						<string id="colour" value="text"/>
+						<string id="multiline" value="true"/>
+					</record>
+				</record>
+				<record id="pop1">
+					<record id="widget_info" class="widget_popup_button" icon="icons/16px/down" appearance="none">
+						<string id="widget_type" value="club_staff_responsibility_widget"/>
+					</record>
+				</record>
+			</list>
+		</container>
+
+		<container class="table" id="ort2" auto_size="vertical" mode="fill_rows, stripe_rows, select_rows, select_multiple" layout="-1, 16" name="table of resp" row_spacing="4" sort_disabled="true">
+			<boolean id="save_session_state" value="true" />
+			<string id="fixed_size_rows" value="false" />
+			<string id="auto_size_rows" value="true" />
+
+
+			<list id="column_table_properties">
+				<record id="txt1" alignment="left,centre_y">
+					<record id="widget_info" class="icon_button" auto_size="vertical" navigation_focus_target="false" >
+						<string id="show_button_appearance" value="false"/>
+						<string id="icon" value="icons/16px/bullet"/>
+						<string id="colour" value="text"/>
+						<string id="multiline" value="true"/>
+					</record>
+				</record>
+				<record id="pop1">
+					<record id="widget_info" class="widget_popup_button" icon="icons/16px/down" appearance="none">
+						<string id="widget_type" value="club_staff_responsibility_widget"/>
+					</record>
+				</record>
+			</list>
+		</container>
+
+		<container class="table" id="ort3" auto_size="vertical" mode="fill_rows, stripe_rows, select_rows, select_multiple" layout="-1, 16" name="table of resp" row_spacing="4" sort_disabled="true">
+			<boolean id="save_session_state" value="true" />
+			<string id="fixed_size_rows" value="false" />
+			<string id="auto_size_rows" value="true" />
+			<list id="column_table_properties">
+				<record id="txt1" alignment="left,centre_y">
+					<record id="widget_info" class="icon_button" auto_size="vertical" navigation_focus_target="false">
+						<string id="show_button_appearance" value="false"/>
+						<string id="icon" value="icons/16px/bullet"/>
+						<string id="colour" value="text"/>
+						<string id="multiline" value="true"/>
+					</record>
+				</record>
+				<record id="pop1">
+					<record id="widget_info" class="widget_popup_button" icon="icons/16px/down" appearance="none">
+						<string id="widget_type" value="club_staff_responsibility_widget"/>
+					</record>
+				</record>
+			</list>
+		</container>
+	</container>
+
+</panel>

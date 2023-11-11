@@ -1,0 +1,63 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+	<widget class="team_report_request_report_panel" id="nort" />
+	<container id="sort">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill"/>
+		<container>
+			<attachment_group class="vertical_arrange" vertical_layout="-1,-1,-1" vertical_gap="8" />
+			
+			<container class="bordered_box">
+				<translation id="title" translation_id="395148" type="use" value="Best XI[COMMENT: squad depth panel displaying the team's best eleven; roman numerals are somewhat common in this case in English but don't feel obliged to do so if it's not in your language]" />
+
+				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+				<widget class="pitch_with_tactics" id="tacP" player_icon_file="tactics/tactics icon info panel team report1" icon_flags="show_name,show_number,show_role_duty_labels">
+					<boolean id="vertical" value="false" />
+					<boolean id="pitch_is_read_only" value="true" />
+					<boolean id="pitch_draw_grass" value="false" />
+					<boolean id="draw_analysis_overlay" value="true" />
+				</widget>
+				<widget class="text" id="nota" hidden="true" alignment="centre">
+					<translation id="text" translation_id="376529" type="use" value="No Tactics selected[COMMENT: team report squad information panel, default text when no tactic has been selected to generate a formation depth report on]" />
+				</widget>
+			</container>
+			
+			<container>
+					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="1" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+					<!--Pros-->
+					<container class="bordered_box" appearance="boxes/bordered/no margin/paper">
+						<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<container class="bordered_box" height="40" red_replacement="pro high">
+							<layout class="arrange_vertical_attachment" alignment="middle" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+
+							<widget class="text" auto_size="all" alignment="left, centre" spec="text" font="font/gz_title" size="13" colour="white">
+								<translation id="text" translation_id="420664" type="use" value="Strengths[COMMENT: team report, strengths (positives) section]" />
+							</widget>
+						</container>
+
+						<widget class="table" mode="fill_rows,sort_ascending" id="prot" layout="-1" inset="0" stretch_to_fit_rows="false" fixed_size_rows="false" row_height="20" auto_size_rows="true" />
+					</container>
+					<!--Cons-->
+					<container class="bordered_box" appearance="boxes/bordered/no margin/paper">
+						<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+						<container class="bordered_box" height="40" red_replacement="con high">
+							<layout class="arrange_vertical_attachment" alignment="middle" offset="0" />
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+
+							<widget class="text" auto_size="all" alignment="left, centre" spec="text" font="font/gz_title" size="13" colour="white">
+								<translation id="text" translation_id="420665" type="use" value="Weaknesses[COMMENT: team report, weaknesses (negatives) section]" />
+							</widget>
+						</container>
+
+						<widget class="table" mode="fill_rows,sort_ascending" id="weak" layout="-1" inset="0" stretch_to_fit_rows="false" fixed_size_rows="false" row_height="20" auto_size_rows="true" />
+					</container>
+				</container>		
+		    </container>
+	</container>
+</panel>

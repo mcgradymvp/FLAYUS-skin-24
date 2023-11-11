@@ -1,0 +1,32 @@
+<panel tactics_pitch_mode="true">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<widget class="widget_popup_button" id="WdPP" disable_layout_attachments_when_embedded="true" appearance="buttons/custom/tactics/player picker/pitch/button" offset_x="0" offset_y="0" secondary_icon="icons/custom/misc/small down">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<record id="modal_popup_properties" file="modal popup panel auto sized" ARep="true" IPid="true" stick_to_parent="right" target="pltb" propagate_mouse_events="false" auto_size_maximum_width="963" auto_size_minimum_width="800">
+		</record>
+	</widget>
+
+	<container class="container_with_mouse_events" id="pSBC">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="2" horizontal_gap="2"/>
+
+		<widget class="person_button" id="pbtn" alignment="centre,can_scale" icon_alignment="centre" enforce_style="true" secondary_icon_colour="white" navigation_focus_target="false" width="14"/>
+
+		<container>
+
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="0"/>
+
+			<widget class="text" id="name" alignment="centre,can_scale" info_popup_enabled="false"/>
+
+			<widget class="spacer" width="5"/>
+
+		</container>
+
+	</container>
+
+	<widget class="text" id="emTx" alignment="centre,can_scale" hidden="true" wants_mouse_events="false" colour="faded white">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0,5,0,20" />
+	</widget>
+
+</panel>

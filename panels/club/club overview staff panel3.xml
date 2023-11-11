@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+  <container class="vertical_adaptive_container" inset="0" offset="0" gap="0">
+    
+    <container default_height="10" priority="1">
+      <layout class="arrange_horizontal_attachment" layout="-1,-1,-1" />
+      <layout class="stick_to_sides_attachment" alignmnet="vertical" inset="0" apply_to_children="true" />
+     
+			<widget class="label" size="7" alignment="centre,centre_y" colour="gzc">
+        <translation id="text" translation_id="300013" type="use" value="Captain" />
+      </widget>
+      <widget class="label" size="7" alignment="centre,centre_y" colour="gzc">
+        <translation id="text" translation_id="300014" type="use" value="Vice Captain" />
+      </widget>
+      <widget class="label" size="7" alignment="centre,centre_y" colour="gzc">
+        <translation id="text" translation_id="227396" type="use" value="Key Player" />
+      </widget>
+
+    </container>
+		<container height="1"/>  
+    <!--captain-->
+    <container default_height="-1" priority="1">
+      <layout class="arrange_horizontal_attachment" layout="-1,-1,-1" />
+      <layout class="stick_to_sides_attachment" alignmnet="vertical" inset="0" apply_to_children="true" />
+
+			<widget class="person_snapshot_club_overview_panel" id="capt" file="person/person snapshot club overview1">
+        <record id="object_property">
+          <integer id="get_property" value="TCap" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </widget>
+      <widget class="person_snapshot_club_overview_panel" id="vice" file="person/person snapshot club overview1">
+        <record id="object_property">
+          <integer id="get_property" value="TVca" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </widget>
+      <widget class="person_snapshot_club_overview_panel" id="KeyP" file="person/person snapshot club overview1">
+        <record id="object_property">
+          <integer id="get_property" value="TKpL" />
+          <integer id="set_property" value="objt" />
+        </record>
+      </widget>
+
+    </container>
+  </container>
+</panel>

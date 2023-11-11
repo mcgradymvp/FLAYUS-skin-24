@@ -1,0 +1,245 @@
+﻿<panel save_session_state="true">
+	<list id="draw_order">
+		<record entity_layout_id="at00" />
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at0R" />
+		<record entity_layout_id="at0B" />
+		<record entity_layout_id="at0N" />
+		<record entity_layout_id="at0E" />
+		<record entity_layout_id="at0P" />
+		<record entity_layout_id="at0O" />
+		<record entity_layout_id="at0?" />
+		<record entity_layout_id="at0C" />
+		<record entity_layout_id="at0@" />
+		<record entity_layout_id="at0D" />
+		<record entity_layout_id="at02" />
+		<record entity_layout_id="at0A" />
+		<record entity_layout_id="at03" />
+		<record entity_layout_id="at09" />
+		<record entity_layout_id="at04" />
+		<record entity_layout_id="at0:" />
+		<record entity_layout_id="at05" />
+		<record entity_layout_id="at0;" />
+		<record entity_layout_id="at06" />
+		<record entity_layout_id="at0&lt;" />
+		<record entity_layout_id="at07" />
+		<record entity_layout_id="at0=" />
+		<record entity_layout_id="at08" />
+		<record entity_layout_id="at0&gt;" />
+	</list>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<container class="bordered_box_no_margin" entity_layout_id="at00" id="at00" sub_group_id="0" >
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container entity_layout_id="at01" id="at01" sub_group_id="0" height="60">
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<widget class="widget_popup_button" entity_layout_id="at02" id="scBu" icon_alignment="centre_y,right" alignment="centre_y,left" auto_size="horizontal" name="schedule name popup" needs_width="true">
+				<string id="style" value="semi_bold" />
+				<string id="popup_alignment" value="top,left" />
+				<string id="widget_type" value="calendar_week_schedule_selector_popup" />
+				<string id="colour" value="highlighted" />
+				<record id="widget_properties" height="400" width="930" file="generic/calendar schedule selector creator popup" piSC="true" />
+				<record id="modal_popup_properties">
+					<string id="darkened" value="false" />
+					<string id="attempt_to_reposition" value="true" />
+				</record>
+				<integer id="size" value="10" />
+				<translation id="text" translation_id="463513" type="use" value="Select Schedule...[COMMENT: Training schedule panel - select schedule button]" />
+				<layout class="stick_to_object_attachment" id="align_top" offset="12" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="align_left" offset="10" get_side="left" set_side="left" move_side="true" target="main" />
+			</widget>
+			<container entity_layout_id="at0A" id="contents" sub_group_id="0" width="626">
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" move_side="true" target="main" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<container entity_layout_id="at03" wants_mouse_events="false" file="widgets/training schedule impact bar" id="hapB" width="85" height="24">
+					<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" offset="-9" get_side="right" set_side="right" move_side="true" target="main" />
+				</container>
+				<widget class="text" entity_layout_id="at09" alignment="centre_x,centre_y" id="at09" width="85" height="20">
+					<string id="font" value="title" />
+					<integer id="size" value="7" />
+					<translation id="text" value="Happiness" translation_id="247463" type="use" />
+					<layout class="stick_to_object_attachment" id="align_bottom" offset="-5" get_side="top" set_side="bottom" move_side="true" target="at03" />
+					<layout class="stick_to_object_attachment" id="align_right" offset="-10" get_side="right" set_side="right" move_side="true" target="main" />
+				</widget>
+				<container entity_layout_id="at04" wants_mouse_events="false" file="widgets/training schedule impact bar" id="bleB" width="85" height="24">
+					<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" offset="-21" get_side="left" set_side="right" move_side="true" target="at03" />
+				</container>
+				<widget class="text" entity_layout_id="at0:" alignment="centre_x,centre_y" id="at0:" width="85" height="20">
+					<string id="font" value="title" />
+					<integer id="size" value="7" />
+					<translation id="text" translation_id="463514" type="use" value="Team Cohesion[COMMENT:Training Calendar Schedule Selector - Training Team Cohesion Impact header]" />
+					<layout class="stick_to_object_attachment" id="align_bottom" offset="-5" get_side="top" set_side="bottom" move_side="true" target="at04" />
+					<layout class="stick_to_object_attachment" id="align_right" offset="-21" get_side="left" set_side="right" move_side="true" target="at09" />
+				</widget>
+				<container entity_layout_id="at05" file="widgets/training schedule impact bar" wants_mouse_events="false" id="shaB" width="85" height="24">
+					<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" offset="-21" get_side="left" set_side="right" move_side="true" target="at04" />
+				</container>
+				<widget class="text" entity_layout_id="at0;" alignment="centre_x,centre_y" id="at0;" width="85" height="20">
+					<string id="font" value="title" />
+					<integer id="size" value="7" />
+					<translation id="text" translation_id="395316" type="use" value="Sharpness[COMMENT: short for match sharpness, which is what used to be match fitness]" />
+					<layout class="stick_to_object_attachment" id="align_bottom" offset="-5" get_side="top" set_side="bottom" move_side="true" target="at05" />
+					<layout class="stick_to_object_attachment" id="align_right" offset="-21" get_side="left" set_side="right" move_side="true" target="at0:" />
+				</widget>
+				<container entity_layout_id="at06" file="widgets/training schedule impact bar" wants_mouse_events="false" id="fatB" width="85" height="24">
+					<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" offset="-21" get_side="left" set_side="right" move_side="true" target="at05" />
+				</container>
+				<widget class="text" entity_layout_id="at0&lt;" alignment="centre_x,centre_y" id="at0&lt;" width="85" height="20">
+					<string id="font" value="title" />
+					<integer id="size" value="7" />
+					<translation id="text" translation_id="463515" type="use" value="Fatigue[COMMENT:Training Calendar Schedule Selector - Training Fatigue Impact header]" />
+					<layout class="stick_to_object_attachment" id="align_bottom" offset="-5" get_side="top" set_side="bottom" move_side="true" target="at06" />
+					<layout class="stick_to_object_attachment" id="align_right" offset="-21" get_side="left" set_side="right" move_side="true" target="at0;" />
+				</widget>
+				<container entity_layout_id="at07" wants_mouse_events="false" file="widgets/training schedule impact bar" id="conB" width="85" height="24">
+					<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" offset="-21" get_side="left" set_side="right" move_side="true" target="at06" />
+				</container>
+				<widget class="text" entity_layout_id="at0=" alignment="centre_x,centre_y" id="at0=" width="85" height="20">
+					<string id="font" value="title" />
+					<integer id="size" value="7" />
+					<translation id="text" value="Condition" translation_id="227793" type="use" />
+					<layout class="stick_to_object_attachment" id="align_bottom" offset="-5" get_side="top" set_side="bottom" move_side="true" target="at07" />
+					<layout class="stick_to_object_attachment" id="align_right" offset="-21" get_side="left" set_side="right" move_side="true" target="at0&lt;" />
+				</widget>
+				<container entity_layout_id="at08" wants_mouse_events="false" file="widgets/training schedule impact bar" id="injB" width="85" height="24">
+					<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" offset="-21" get_side="left" set_side="right" move_side="true" target="at07" />
+				</container>
+				<widget class="text" entity_layout_id="at0&gt;" alignment="centre_x,centre_y" id="at0&gt;" width="85" height="20">
+					<string id="font" value="title" />
+					<integer id="size" value="7" />
+					<translation id="text" translation_id="450118" type="use" value="Injury Risk[COMMENT: player injury panel section detailing susceptibility to injury, title]" />
+					<layout class="stick_to_object_attachment" id="align_bottom" offset="-5" get_side="top" set_side="bottom" move_side="true" target="at08" />
+					<layout class="stick_to_object_attachment" id="align_right" offset="-21" get_side="left" set_side="right" move_side="true" target="at0=" />
+				</widget>
+			</container>
+		</container>
+		<widget class="text" entity_layout_id="at0R" id="wrnM" alignment="centre_x,centre_y">
+			<integer id="size" value="11" />
+			<string id="style" value="bold" />
+			<translation id="text" value="No Schedule Selected" translation_id="462565" type="use" />
+			<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="bottom" set_side="top" target="at01" />
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="-50" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="right" set_side="right" target="main" />
+		</widget>
+		<widget class="icon_button" entity_layout_id="at0B" alignment="centre_x,centre_y" id="exBu" name="export button" width="100" height="32">
+			<string id="click_event" value="exSC" />
+			<string id="icon" value="icons/16px/export" />
+			<translation id="text" translation_id="255263" type="use" value="Export[COMMENT: filter list dialog: button used to export the selected item]" />
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="-7" get_side="bottom" set_side="bottom" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-10" get_side="right" set_side="right" move_side="true" target="main" />
+		</widget>
+		<widget class="button" entity_layout_id="at0N" alignment="centre_x,centre_y" id="savE" name="save button" width="100" height="32">
+			<string id="click_event" value="saEV" />
+			<translation id="text" value="Save" translation_id="247111" type="use" />
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="-7" get_side="bottom" set_side="bottom" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-10" get_side="left" set_side="right" move_side="true" target="at0B" />
+		</widget>
+		<widget class="icon_button" entity_layout_id="at0E" alignment="centre_x,centre_y" id="saBu" name="export button" width="140" height="32" controller_button="y_button">
+			<string id="click_event" value="saVA" />
+			<string id="icon" value="icons/16px/export" />
+			<translation id="text" value="Save As..." translation_id="247112" type="use" />
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="-7" get_side="bottom" set_side="bottom" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-10" get_side="left" set_side="right" move_side="true" target="at0N" />
+		</widget>
+		<widget class="icon_button" entity_layout_id="at0O" alignment="centre_x,centre_y" id="caNC" name="cancel" width="90" height="32" controller_button="b_button">
+			<string id="click_event" value="caNC" />
+			<string id="disabled" value="true" />
+			<translation id="text" value="Cancel" translation_id="229828" type="use" />
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="-7" get_side="bottom" set_side="bottom" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-10" get_side="left" set_side="right" move_side="true" target="at0E" />
+		</widget>
+		<widget class="button" entity_layout_id="at0P" alignment="centre_x,centre_y" id="UndO" auto_size="horizontal" name="undo" needs_width="true" height="32">
+			<string id="click_event" value="UNDO" />
+			<string id="disabled" value="true" />
+			<translation id="text" value="Undo" translation_id="230251" type="use" />
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="-8" get_side="bottom" set_side="bottom" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="left" set_side="left" move_side="true" target="main" />
+		</widget>
+		<widget class="text" entity_layout_id="at0?" alignment="left,top" id="desC" height="60">
+			<layout class="stick_to_object_attachment" id="align_top" offset="10" get_side="bottom" set_side="top" move_side="true" target="at01" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="10" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-10" get_side="right" set_side="right" target="main" />
+		</widget>
+		<container entity_layout_id="at0C" id="perW" hidden="true" sub_group_id="0" name="per week container" navigation_container="true">
+			<layout class="stick_to_object_attachment" id="align_top" offset="136" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" offset="-50" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="right" set_side="right" target="main" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<container class="training_schedule_week_widget" entity_layout_id="at0D" id="pwTw" file="widgets/training schedule week widget intensity" name="per week training week">
+				<boolean id="shortened" value="true" />
+				<integer id="intensity_display_style" value="1" />
+				<string id="auto_update_to_server" value="false" />
+				<string id="draggable" value="true" />
+				<string id="session_description_column" value="true" />
+				<string id="schedule_session_widget_file" value="widgets/training schedule large session widget" />
+				<string id="schedule_header_file" value="widgets/training schedule weekday header" />
+				<record id="object_property">
+					<string id="get_property" value="objt" />
+					<string id="set_property" value="objt" />
+				</record>
+				<layout class="stick_to_object_attachment" id="align_top" offset="10" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="align_bottom" offset="-10" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="align_left" offset="8" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" offset="-8" get_side="right" set_side="right" target="main" />
+			</container>
+		</container>
+		<widget class="edit_box" entity_layout_id="at0@" alignment="left,top" id="edBX" hidden="true" height="60">
+			<string id="multiline" value="true" />
+			<layout class="stick_to_object_attachment" id="align_top" offset="69" get_side="top" set_side="top" move_side="true" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="10" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" offset="-10" get_side="right" set_side="right" target="main" />
+		</widget>
+	</container>
+</panel>

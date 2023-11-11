@@ -1,0 +1,205 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0"/>
+
+	<!--top bit (nation/capacity etc)-->
+	<container class="main_box" height="80">
+		<attachment_group class="horizontal_arrange_vertical_centre" horizontal_alignment="fill" horizontal_offset="0" />
+
+		<!--nation-->
+		<container class="vertical_label_value_pair" value_widget="SnaV" label_widget="SnaL">
+
+			<widget class="label" id="SnaL">
+				<record id="object_property">
+					<integer id="get_property" value="Snat" />
+					<boolean id="name" value="true"/>
+				</record>
+			</widget>
+			<widget class="nation_button" id="SnaV" icon_alignment="centre" alignment="centre" appearance="none">
+				<record id="object_property">
+					<integer id="get_property" value="Snat" />
+				</record>
+			</widget>
+		</container>
+
+		<!--capacity-->
+		<container class="vertical_label_value_pair" value_widget="ScpV" label_widget="ScpL">
+
+			<widget class="label" id="ScpL">
+				<record id="object_property">
+					<integer id="get_property" value="Scpy" />
+					<boolean id="name" value="true"/>
+				</record>
+			</widget>
+			<widget class="dashed_number_label" id="ScpV">
+				<record id="object_property">
+					<integer id="get_property" value="Scpy" />
+				</record>
+			</widget>
+		</container>
+
+		<!--year built-->
+		<container class="vertical_label_value_pair" value_widget="SbdV" label_widget="SbdL">
+
+			<widget class="label" id="SbdL">
+				<record id="object_property">
+					<integer id="get_property" value="Sbdy" />
+					<boolean id="name" value="true"/>
+				</record>
+			</widget>
+			<widget class="dashed_number_label" id="SbdV">
+				<boolean id="NumF" value="0" />
+				<record id="object_property">
+					<integer id="get_property" value="Sbdy" />
+				</record>
+			</widget>
+		</container>
+
+		<!--stadium condition-->
+		<container class="vertical_label_value_pair" value_widget="SdcV" label_widget="SdcL">
+			<widget class="label" id="SdcL">
+				<record id="object_property">
+					<integer id="get_property" value="Sdcy" />
+					<boolean id="name" value="true"/>
+				</record>
+			</widget>
+			<widget class="stadium_condition_label" id="SdcV">
+				<list id="value_list">
+					<record min_value="0" max_value="1" colour="very good" />
+					<record min_value="2" max_value="5" colour="good" />
+					<record min_value="6" max_value="10" colour="text" />
+					<record min_value="11" max_value="15" colour="poor" />
+					<record min_value="16" max_value="20" colour="negative" />
+				</list>
+				<record id="object_property">
+					<integer id="get_property" value="Sdcy" />
+				</record>
+			</widget>
+		</container>
+	</container>
+
+	<!--bottom bit (pitch/info etc)-->
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_layout="-2,-3" horizontal_offset="0" vertical_inset="0" />
+
+		<!--pitch box-->
+		<container class="main_box">
+			<attachment_group class="vertical_arrange" vertical_layout="30,-1,-1,60,60" vertical_offset="0" horizontal_inset="0" />
+
+			<!--title-->
+			<widget class="label" spec="title" auto_size="vertical">
+				<translation id="text" translation_id="349831" type="use" value="Pitch Details[COMMENT: team report summary, title for an area showing details of the team's pitch]" />
+			</widget>
+	
+	        <!--stadium picture-->	  
+	        <widget class="stadium_picture" id="STAp" auto_size="vertical" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+		        <record id="object_property">
+			      <integer id="get_property" value="objt" />
+			      <integer id="set_property" value="objt" />
+		        </record>
+	        </widget>
+		
+			<!--pitch-->
+			<widget class="pitch_with_dimensions" id="Pitc">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+		<!--information-->
+			<container id="info">
+				<translation id="title" translation_id="292589" type="use" value="Information[COMMENT: top level menu title for team information screens]" />
+
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" vertical_inset="4" />
+				<!--city-->
+				<container class="vertical_label_value_pair" value_widget="SctI" label_widget="ScCT">
+
+					<widget class="text" id="ScCT">
+						<translation id="text" translation_id="319589" type="use" value="City[COMMENT: team stadium city, short title]" />
+					</widget>
+					<widget class="city_label" id="SctI">
+						<record id="object_property">
+							<integer id="get_property" value="SctI" />
+						</record>
+					</widget>
+				</container>
+
+				<!--undersoil heating-->
+				<container class="vertical_label_value_pair" value_widget="SusV" label_widget="SusL">
+
+					<widget class="label" id="SusL">
+						<record id="object_property">
+							<integer id="get_property" value="Sush" />
+							<boolean id="name" value="true"/>
+						</record>
+					</widget>
+					<widget class="yes_no_label" id="SusV">
+						<record id="object_property">
+							<integer id="get_property" value="Sush" />
+						</record>
+					</widget>
+				</container>
+
+				<!--retractable roof-->
+				<container class="vertical_label_value_pair" value_widget="ScoV" label_widget="ScoL">
+
+					<widget class="label" id="ScoL">
+						<record id="object_property">
+							<integer id="get_property" value="Scov" />
+							<boolean id="name" value="true"/>
+						</record>
+					</widget>
+					<widget class="yes_no_label" id="ScoV">
+						<record id="object_property">
+							<integer id="get_property" value="Scov" />
+						</record>
+					</widget>
+				</container>
+
+			</container>
+			<!--pitch condition-->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0"/>
+
+				<!--condition label-->
+				<container class="vertical_label_value_pair" value_widget="SptV" label_widget="SptL">
+					<widget class="label" id="SptL">
+						<record id="object_property">
+							<integer id="get_property" value="Sptc" />
+							<boolean id="name" value="true"/>
+						</record>
+					</widget>
+
+					<widget class="pitch_condition_label" id="SptV">
+						<list id="value_list">
+							<record min_value="0" max_value="30" colour="negative" />
+							<record min_value="31" max_value="50" colour="very poor" />
+							<record min_value="51" max_value="80" colour="poor" />
+							<record min_value="81" max_value="130" colour="text" />
+							<record min_value="131" max_value="170" colour="good" />
+							<record min_value="171" max_value="200" colour="positive" />
+						</list>
+						<record id="object_property">
+							<integer id="get_property" value="Sptc" />
+						</record>
+					</widget>
+				</container>
+
+				<!--condition bar-->
+				<widget class="horizontal_percentage_bar" id="SptB" max_value="200" show_label_on_bar="false" label_width="0" height="20">
+					<record id="object_property">
+						<integer id="get_property" value="Sptc" />
+					</record>
+				</widget>
+			</container>
+		</container>
+
+		<!--info-->
+		<widget class="stadium_overview_info" id="info">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+	</container>
+
+</panel>

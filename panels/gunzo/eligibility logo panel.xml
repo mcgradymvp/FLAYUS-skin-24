@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- A panel showing a nation or club logo and it's name below. Designed to be used with a CLIENT_OBJECT_VIEWER_XML_PANEL parent.-->
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<container class="client_object_viewer_xml_panel">
+		<record id="object_property">
+			<integer id="get_property" value="dref" />
+			<integer id="set_property" value="objt" />
+		</record>
+
+		<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				
+		<container>
+			<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+			<widget class="nation_button" id="natb" icon_enabled="false" auto_size="vertical" font="text" size="8" alignment="centre">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="valu" />
+				</record>
+			</widget>
+			<widget class="club_button" id="clbb" icon_enabled="false" auto_size="vertical" font="text" size="8" alignment="centre">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="valu" />
+				</record>
+			</widget>
+		</container>
+		
+		
+		<widget class="object_portrait_picture" id="mbdg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+			<translation id="hint" translation_id="363611" type="use" value="Club trained at[COMMENT: player information; nation player trained at for purposes of domestic eligibility]"/>
+
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+		
+
+		
+		
+	</container>
+	
+	<!-- 
+  <widget class="formatted_label" id="natb" icon_enabled="false" height="20" font="text" alignment="centre">
+    <record id="object_property">
+      <integer id="get_property" value="numb" />
+      <integer id="set_property" value="valu" />
+    </record>
+    <list id="format">
+      <record value="0" />
+      <record default_value="true">
+        <translation id="format" translation_id="412464" type="use" value="Due [%date#1-short][COMMENT: person homegrown eligibility; date player will bo considered 'homegrown' at a club]" />
+      </record>
+    </list>
+  </widget>-->
+</panel>

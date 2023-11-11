@@ -1,0 +1,132 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<container class="subsection_box">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" gap="4" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<!--header-->
+		<widget class="link_button" auto_size="all" spec="text" embed_in_frame="true" alignment="left,centre_y" font="title" colour="text" red_replacement="text" appearance="buttons/link/title/button" section="tHie">
+			<translation id="text" translation_id="447647" type="use" value="Squad Hierarchy[COMMENT: Team Dynamics: Team Hierarchy Link]" />
+			<layout class="stick_to_sides_attachment" alignment="top,left" inset="8,8" />
+			<record id="object_property">
+				<integer id="get_property" value="Pcte" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+		<!--body-->
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-7, -5,1,35" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		
+
+			<!--category and description-->
+			<container>
+				<layout class="arrange_vertical_attachment" layout="28, -1" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+
+				<!-- Hierarchy category header-->
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+
+					<container class="bordered_box" id="tmCc" appearance="boxes/custom/hierarchy/header/paper"  height="22">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="text" id="tmCl" multiline="false" alignment="centre" spec="text" style="semi_bold" colour="black" />
+					</container>
+				</container>
+
+				<!-- Hierarchy description and prop/cons-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+						<layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0" gap="3" />
+
+						<container width="16" id="inDC">
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+							<widget class="picture" id="hrcI" file="icons/16px/change up" image_alignment="centre" scale_picture="true" />
+							<widget class="picture" id="hrcD" file="icons/16px/change down" image_alignment="centre" scale_picture="true" />
+						</container>
+						<widget class="label" id="tmde" multiline="true" alignment="top,left" height="40" />
+					</container>
+
+					<!--support pros/cons-->
+					<container class="scrolling_box">
+						<container id="Ppcn">
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+							<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="0"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+						</container>
+					</container>
+				</container>
+			</container>
+
+			<!--social group-->
+			<!--Social group and description-->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="6" apply_to_children="true" />
+				<layout class="arrange_vertical_attachment" layout="1,30,-1" offset="0" />
+				<widget class="picture" file="dividers/standard/horizontal/line" />
+				<container class="bordered_box" appearance="boxes/custom/solid/rounded/paper" red_replacement="chemistry_influences_colour">
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="6" gap="5" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="4" apply_to_children="true" />
+					<!--Social group Icon and text-->
+					<widget class="picture" width="16" file="icons/16px/dynamics" image_alignment="centre" scale_picture="true" red_replacement="black" />
+
+					<widget class="link_button" id="infL" spec="text" alignment="left,centre_y" auto_size="horizontal" style="semi_bold" colour="black" red_replacement="black" appearance="buttons/link/title/button" section="tHSg">
+						<record id="object_property">
+							<integer id="get_property" value="Pcte" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+				</container>
+				<widget class="label" id="Sgds" multiline="true" alignment="top,left" />
+			</container>
+			
+			
+			<widget class="picture" file="dividers/standard/horizontal/line" />
+			
+				<!--Player Personal Details-->
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+				<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" gap="0" />
+
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="12" apply_to_children="true" />
+					<widget class="label" alignment="left, centre_y" auto_size="vertical" size="small" font="title">
+						<translation id="text" translation_id="227783" type="use" value="Squad Status" />
+					</widget>
+
+					<widget class="squad_status_label" id="squP" style="bold" alignment="left, top" auto_size="vertical">
+						<record id="object_property" get_property="Pccs" />
+					</widget>
+				</container>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+					<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" gap="0" />
+
+					<container>
+						<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="12" apply_to_children="true" />
+						<widget class="label" alignment="left, centre_y" auto_size="vertical" size="small" font="title">
+							<translation id="text" translation_id="247713" type="use" value="Personality" />
+						</widget>
+
+						<widget class="personality_label" id="PPr2" spec="text" alignment="left,top" auto_size="vertical">
+							<record id="object_property" get_property="PPst" />
+						</widget>
+					</container>
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

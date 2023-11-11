@@ -1,0 +1,641 @@
+﻿<panel draw_vertical_dividers="true">
+	<!--very close relationship colour-->
+	<colour id="pVgC" name="very close relationship" />
+	<!--close relationship colour-->
+	<colour id="pgCl" name="close relationship" />
+	<!--aquaintance relationship colour-->
+	<colour id="pACl" name="aquaintance relationship" />
+	<!--contact relationship colour-->
+	<colour id="pCTr" name="contact relationship" />
+	<!--rival relationship colour-->
+	<colour id="prVr" name="rival relationship" />
+	<!--adversary relationship colour-->
+	<colour id="pAdv" name="adversary relationship" />
+	<!--distant relationship colour-->
+	<colour id="pCds" name="distant relationship" />
+
+	<attachment_group class="horizontal_arrange" horizontal_alignment="fill">
+		<global id="horizontal_gap" name="ui.main_box_gap" />
+	</attachment_group>
+
+	<!--Happiness-->
+	<container class="main_box" id="happ">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="6" gap="12" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		<translation id="title" translation_id="247463" type="use" value="Happiness" />
+
+		<!--morale-->
+		<container id="mrlC" class="inner_subtle_box">
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" />
+
+			<widget class="label" auto_size="all" alignment="left,centre_y" font="label">
+				<translation id="text" translation_id="227839" type="use" value="Morale" />
+			</widget>
+
+			<widget class="morale_label" id="resL" auto_size="all" alignment="left,centre_y" font="value">
+				<record id="object_property">
+					<integer id="get_property" value="Pmor" />
+				</record>
+			</widget>
+
+		</container>
+
+		<widget class="person_happiness_panel" id="phap" file="person/person happiness relationships">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+
+
+	</container>
+
+	<!--Plans for non players-->
+	<widget class="person_happiness_panel" file="person/person happiness plans for staff" id="nppc">
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+		</record>
+	</widget>
+
+
+	<!-- Playing time panel-->
+	<container class="main_box" draw_horizontal_dividers="true" id="plaC">
+		<attachment_group class="vertical_arrange" vertical_layout="-8,-3,-3" />
+		<translation id="title" translation_id="491902" type="use" value="Playing Time Pathway[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
+
+
+		<container class="scrolling_box">
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="20" />
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="20" vertical_offset="6" />
+
+					<!--Playing time for normal players-->
+					<container id="CptC">
+						<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="16" />
+
+
+						<!-- Current Playing Time -->
+						<container class="inner_subtle_box">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-2,-1,-1" />
+
+							<container class="vertical_label_value_pair" label_widget="Ptla" value_widget="Ptva">
+
+								<widget class="text" id="Ptla" alignment="left,centre_y">
+									<translation id="text" translation_id="492001" type="use" value="Actual Playing Time[COMMENT: AREA: Playing Time for Players; SUB-AREA: Contract Negotiations; FR-BN: 25975; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: concerns how much playing time a player is being promised]" />
+								</widget>
+
+								<widget class="client_object_property_panel" id="Ptva" property="Pctp" font="value" auto_size="vertical">
+									<record id="object_property">
+										<integer id="get_property" value="objt" />
+										<integer id="set_property" value="objt" />
+									</record>
+									<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" />
+								</widget>
+
+							</container>
+
+							<!--Appearances-->
+							<container class="vertical_label_value_pair" label_widget="Papl" value_widget="Papv">
+
+								<widget class="text" id="Papl" alignment="centre">
+									<translation id="text" translation_id="227844" type="use" value="Apps[comment - Appearances]" />
+								</widget>
+
+								<widget class="client_object_property_panel" id="Papv" property="Poap" font="text" style="bold" auto_size="vertical">
+									<record id="object_property">
+										<integer id="get_property" value="objt" />
+										<integer id="set_property" value="objt" />
+									</record>
+									<record id="widget_properties" alignment="centre" auto_size="vertical" />
+								</widget>
+							</container>
+
+							<!--Average Rating-->
+							<container>
+								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="5" horizontal_inset="0" />
+
+								<widget class="text" id="Pavl" alignment="centre" auto_size="vertical" font="label" colour="faded text">
+									<translation id="text" translation_id="227852" type="use" value="Av Rat[comment - Average rating]" />
+								</widget>
+
+								<widget class="client_object_property_panel" id="Pavv" property="Poav" auto_size="vertical" navigation_focus_target="false">
+									<record id="object_property">
+										<integer id="get_property" value="objt" />
+										<integer id="set_property" value="objt" />
+									</record>
+									<record id="widget_properties" auto_size="vertical" />
+								</widget>
+							</container>
+						</container>
+
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="2" />
+
+							<!-- Agreed Playing Time -->
+							<container class="icon_box" file="icon box vertical centre" icon="icons/custom/icon box/complete" icon_red_replacement="fg" icon_blue_replacement="bg">
+								<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="12" />
+
+								<container>
+									<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right,extend" />
+
+									<container class="vertical_label_value_pair" label_widget="Pptl" value_widget="Pptv">
+										<attachment_group class="vertical_arrange" vertical_alignment="top" />
+
+										<widget class="text" id="Pptl" auto_size="vertical" alignment="left,centre_y" colour="text">
+											<translation id="text" translation_id="492002" type="use" value="Agreed Playing Time[COMMENT: AREA: Player Happiness; SUB-AREA: Contract Promises; FR-BN: 14013; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: contract promise type]" />
+										</widget>
+
+										<widget class="client_object_property_panel" id="Pptv" property="Pcpt" auto_size="vertical">
+											<record id="object_property">
+												<integer id="get_property" value="objt" />
+												<integer id="set_property" value="objt" />
+											</record>
+											<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" />
+										</widget>
+									</container>
+
+									<!--Future Playing Time-->
+									<widget class="icon_button" id="chgb" auto_size="horizontal" click_event="EcPt" controller_button="x_button">
+										<translation id="text" translation_id="295066" type="use" value="Change[COMMENT: button for changing a kit style]" />
+									</widget>
+
+
+								</container>
+							</container>
+
+
+							<!--Playing Time Happiness-->
+							<widget class="client_object_property_panel" id="ptha" property="Ppth" auto_size="vertical">
+								<record id="object_property">
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+								<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" abbt="false" show_hover_popup="false" size="small" colour="faded text" />
+							</widget>
+						</container>
+
+
+						<!-- Expected Playing Time -->
+						<container id="ptex">
+							<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" gap="2" />
+
+							<container class="icon_box" file="icon box vertical centre" icon="icons/custom/icon box/complete" icon_red_replacement="fg darker" icon_blue_replacement="bg">
+								<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="0" />
+
+								<container class="vertical_label_value_pair" label_widget="Eptl" value_widget="Eptv">
+									<attachment_group class="vertical_arrange" vertical_alignment="top" />
+
+									<widget class="text" id="Eptl" auto_size="vertical" alignment="left,centre_y" colour="text">
+										<translation id="text" translation_id="492003" type="use" value="Expectations (Next 5 Matches)[COMMENT: AREA: Playing Time; SUB-AREA: Expected Playing Time to come; FR: 27981; TONE: Formal; CHARLIMIT: None; NOTE: gives the user info on how much a player expects to play in the next five matches]" />
+									</widget>
+
+									<widget class="client_object_property_panel" id="Eptv" property="Ppte" auto_size="vertical">
+										<record id="object_property">
+											<integer id="get_property" value="objt" />
+											<integer id="set_property" value="objt" />
+										</record>
+										<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" />
+									</widget>
+								</container>
+
+							</container>
+
+							<!--Playing Time Expectations-->
+							<widget class="client_object_property_panel" property="Ppte" auto_size="vertical">
+								<record id="object_property">
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+								<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" abbt="false" size="small" colour="faded text" />
+							</widget>
+
+
+						</container>
+
+					</container>
+
+					<!--Loan Playing time for players loaned out-->
+					<container id="lolC">
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="10" />
+						<!-- Agreed Playing Time at main club -->
+						<container class="vertical_label_value_pair" label_widget="Aptl" value_widget="Aptv">
+							<attachment_group class="vertical_arrange" vertical_alignment="top" />
+
+							<widget class="text" id="Aptl" auto_size="vertical" alignment="left,centre_y">
+								<translation id="text" translation_id="492002" type="use" value="Agreed Playing Time[COMMENT: AREA: Player Happiness; SUB-AREA: Contract Promises; FR-BN: 14013; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: contract promise type]" />
+							</widget>
+
+							<widget class="client_object_property_panel" id="Aptv" property="PcpH" auto_size="vertical">
+								<record id="object_property">
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+								<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" />
+							</widget>
+						</container>
+
+						<container class="inner_subtle_box" red_replacement="loan out background">
+							<attachment_group class="vertical_arrange_autosize" />
+
+							<widget class="client_object_property_panel" property="PExD" auto_size="vertical">
+								<record id="object_property">
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+								<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" colour="loan out" />
+							</widget>
+
+							<container class="inner_subtle_box">
+								<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-2,-1,-1" />
+
+								<!-- Current Loan Playing Time -->
+								<container class="vertical_label_value_pair" label_widget="lPtl" value_widget="lPtv">
+
+									<widget class="text" id="lPtl" alignment="left,centre_y">
+										<translation id="text" translation_id="492001" type="use" value="Actual Playing Time[COMMENT: AREA: Playing Time for Players; SUB-AREA: Contract Negotiations; FR-BN: 25975; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: concerns how much playing time a player is being promised]" />
+									</widget>
+
+									<widget class="client_object_property_panel" id="lPtv" property="Pltp" auto_size="vertical">
+										<record id="object_property">
+											<integer id="get_property" value="objt" />
+											<integer id="set_property" value="objt" />
+										</record>
+										<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" />
+									</widget>
+
+								</container>
+
+								<!--Appearances-->
+								<container class="vertical_label_value_pair" label_widget="lPal" value_widget="lPav">
+
+									<widget class="text" id="lPal" alignment="centre">
+										<translation id="text" translation_id="227844" type="use" value="Apps[comment - Appearances]" />
+									</widget>
+
+									<widget class="client_object_property_panel" id="lPav" property="PlSp" auto_size="vertical">
+										<record id="object_property">
+											<integer id="get_property" value="objt" />
+											<integer id="set_property" value="objt" />
+										</record>
+										<record id="widget_properties" alignment="centre" auto_size="vertical" />
+									</widget>
+								</container>
+
+								<!--Average Rating-->
+								<container>
+									<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="3" horizontal_inset="0" />
+
+									<widget class="text" id="lPrl" alignment="centre" auto_size="vertical" font="label" colour="faded text">
+										<translation id="text" translation_id="227852" type="use" value="Av Rat[comment - Average rating]" />
+									</widget>
+
+									<widget class="client_object_property_panel" id="lPrv" property="PlSa" auto_size="vertical">
+										<record id="object_property">
+											<integer id="get_property" value="objt" />
+											<integer id="set_property" value="objt" />
+										</record>
+										<record id="widget_properties" auto_size="vertical" />
+									</widget>
+								</container>
+
+							</container>
+
+
+							<widget class="spacer" height="4" />
+
+							<container class="icon_box" file="icon box vertical centre" icon="icons/custom/icon box/complete" icon_red_replacement="fg" icon_blue_replacement="bg">
+								<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="0" />
+
+								<!-- Agreed Loan Playing Time -->
+								<container class="vertical_label_value_pair" label_widget="lAPl" value_widget="lApv">
+
+									<widget class="text" id="lAPl" alignment="left,centre_y">
+										<translation id="text" translation_id="492002" type="use" value="Agreed Playing Time[COMMENT: AREA: Player Happiness; SUB-AREA: Contract Promises; FR-BN: 14013; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: contract promise type]" />
+									</widget>
+
+									<widget class="client_object_property_panel" id="lApv" property="Plte" auto_size="vertical">
+										<record id="object_property">
+											<integer id="get_property" value="objt" />
+											<integer id="set_property" value="objt" />
+										</record>
+										<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" colour="loan out" />
+									</widget>
+
+								</container>
+
+							</container>
+
+						</container>
+					</container>
+
+					<!--Loan Playing time for players loaned in-->
+					<container id="lilC" class="inner_subtle_box" red_replacement="loan out background">
+						<attachment_group class="vertical_arrange_autosize" />
+
+						<widget class="client_object_property_panel" property="PExD" auto_size="vertical">
+							<record id="object_property">
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+							<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" colour="loan in" />
+						</widget>
+
+						<container class="inner_subtle_box">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-2,-1,-1" />
+
+							<!-- Current Loan Playing Time -->
+							<container class="vertical_label_value_pair" label_widget="iPtl" value_widget="iPtv">
+
+								<widget class="text" id="iPtl" alignment="left,centre_y">
+									<translation id="text" translation_id="492001" type="use" value="Actual Playing Time[COMMENT: AREA: Playing Time for Players; SUB-AREA: Contract Negotiations; FR-BN: 25975; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: concerns how much playing time a player is being promised]" />
+								</widget>
+
+								<widget class="client_object_property_panel" id="iPtv" property="Pltp" auto_size="vertical">
+									<record id="object_property">
+										<integer id="get_property" value="objt" />
+										<integer id="set_property" value="objt" />
+									</record>
+									<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" />
+								</widget>
+
+							</container>
+
+							<!--Appearances-->
+							<container class="vertical_label_value_pair" label_widget="iapl" value_widget="iapv">
+
+								<widget class="text" id="iapl" alignment="centre">
+									<translation id="text" translation_id="227844" type="use" value="Apps[comment - Appearances]" />
+								</widget>
+
+								<widget class="client_object_property_panel" id="iapv" property="PlSp" auto_size="vertical">
+									<record id="object_property">
+										<integer id="get_property" value="objt" />
+										<integer id="set_property" value="objt" />
+									</record>
+									<record id="widget_properties" alignment="centre" auto_size="vertical" />
+								</widget>
+							</container>
+
+							<!--Average Rating-->
+							<container>
+								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="3" horizontal_inset="0" />
+
+								<widget class="text" id="iavl" alignment="centre" auto_size="vertical" font="label" colour="faded text">
+									<translation id="text" translation_id="227852" type="use" value="Av Rat[comment - Average rating]" />
+								</widget>
+
+								<widget class="client_object_property_panel" id="iavv" property="PlSa" auto_size="vertical">
+									<record id="object_property">
+										<integer id="get_property" value="objt" />
+										<integer id="set_property" value="objt" />
+									</record>
+									<record id="widget_properties" auto_size="vertical" />
+								</widget>
+							</container>
+
+						</container>
+
+
+						<widget class="spacer" height="4" />
+
+						<container class="icon_box" file="icon box vertical centre" icon="icons/custom/icon box/complete" icon_red_replacement="fg" icon_blue_replacement="bg">
+							<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="0" />
+
+							<!-- Agreed Loan Playing Time -->
+							<container class="vertical_label_value_pair" label_widget="oAPl" value_widget="oApv">
+
+								<widget class="text" id="oAPl" alignment="left,centre_y" colour="text">
+									<translation id="text" translation_id="492002" type="use" value="Agreed Playing Time[COMMENT: AREA: Player Happiness; SUB-AREA: Contract Promises; FR-BN: 14013; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: contract promise type]" />
+								</widget>
+
+								<widget class="client_object_property_panel" id="oApv" property="Plte" auto_size="vertical">
+									<record id="object_property">
+										<integer id="get_property" value="objt" />
+										<integer id="set_property" value="objt" />
+									</record>
+									<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" colour="loan in" />
+								</widget>
+
+							</container>
+
+						</container>
+
+
+
+						<!--Playing Time Happiness-->
+						<widget class="client_object_property_panel" id="lpth" property="Ppth" auto_size="vertical">
+							<record id="object_property">
+								<integer id="get_property" value="objt" />
+								<integer id="set_property" value="objt" />
+							</record>
+							<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" abbt="false" show_hover_popup="false" size="small" colour="faded text" />
+						</widget>
+
+						<widget class="spacer" height="4" />
+
+						<!-- Expected Playing Time -->
+						<container id="ptex">
+							<attachment_group class="vertical_arrange_autosize" />
+
+							<container class="icon_box" file="icon box vertical centre" icon="icons/custom/icon box/complete" icon_red_replacement="fg darker" icon_blue_replacement="bg">
+								<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="0" />
+
+								<container class="vertical_label_value_pair" label_widget="Eptl" value_widget="lEtv">
+									<attachment_group class="vertical_arrange" vertical_alignment="top" />
+
+									<widget class="text" id="Eptl" auto_size="vertical" alignment="left,centre_y" colour="text">
+										<translation id="text" translation_id="492003" type="use" value="Expectations (Next 5 Matches)[COMMENT: AREA: Playing Time; SUB-AREA: Expected Playing Time to come; FR: 27981; TONE: Formal; CHARLIMIT: None; NOTE: gives the user info on how much a player expects to play in the next five matches]" />
+									</widget>
+
+									<widget class="client_object_property_panel" id="lEtv" property="Ppte" auto_size="vertical">
+										<record id="object_property">
+											<integer id="get_property" value="objt" />
+											<integer id="set_property" value="objt" />
+										</record>
+										<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" />
+									</widget>
+								</container>
+
+							</container>
+							<!--Playing Time Expectations-->
+							<widget class="client_object_property_panel" property="Ppte" auto_size="vertical">
+								<record id="object_property">
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+								<record id="widget_properties" alignment="left,centre_y" auto_size="vertical" abbt="false" size="small" colour="faded text" />
+							</widget>
+
+						</container>
+
+					</container>
+
+					<container id="Fptc">
+						<attachment_group class="vertical_arrange_autosize" />
+
+						<container class="icon_box" file="icon box vertical centre" icon="icons/custom/icon box/complete" icon_red_replacement="fg darker" icon_blue_replacement="bg">
+							<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="0" />
+
+							<!--Future Playing Time-->
+
+							<widget class="text" alignment="left,centre_y" auto_size="vertical" font="label" colour="text">
+								<translation id="text" translation_id="492004" type="use" value="Future Playing Time[COMMENT: AREA: Playing Time; SUB-AREA: Playing Time Pathways; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: displays the agreed playing time for the player in years to come]" />
+							</widget>
+
+							<container class="simple_data_list" id="Fptl" set_property="objt">
+								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="2" />
+
+								<record id="widget_properties" class="property_list_viewer_xml_panel" file="widgets/player future playing time" />
+							</container>
+
+							<widget class="text" id="Fptn" auto_size="vertical">
+								<translation id="text" translation_id="227487" type="use" value="None" />
+							</widget>
+						</container>
+
+					</container>
+
+				</container>
+
+			</container>
+
+		</container>
+
+		<!--Plans-->
+		<widget class="person_happiness_panel" file="person/person happiness plans">
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="12" />
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" />
+
+				<widget class="link_button_title" id="talb" section="Mtar" alignment="centre" font="title" colour="text" auto_size="all" red_replacement="text">
+				</widget>
+
+				<widget class="spacer" />
+
+			</container>
+
+			<container>
+				<layout clas="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container class="scrolling_box" id="talc">
+					<widget class="simple_data_list" id="talw">
+						<record id="widget_properties" class="property_list_viewer_xml_panel" file="person/happiness panel player targets item widget" auto_size="vertical" />
+					</widget>
+				</container>
+
+
+				<widget class="text" id="tano" alignment="centre">
+					<translation id="text" translation_id="596174" type="use" value="No outstanding targets at this time.[COMMENT: AREA: Player Targets; SUB-AREA: Targets Panel; FR-BN: FM-23145; TONE: Formal; CHARLIMIT: None; REF-ID: 374449; NOTE; string displayed when there is no data]" />
+				</widget>
+
+				
+			</container>
+
+			
+
+		</container>
+
+	</container>
+
+
+	<!--Squad Hierarchy-->
+	<container class="main_box" navigation_container="true" draw_horizontal_dividers="true">
+		<attachment_group class="vertical_arrange" vertical_alignment="fill" offset="6">
+			<global id="vertical_gap" name="ui.main_box_gap" />
+		</attachment_group>
+		<translation id="title" translation_id="447541" type="use" value="Relationship[COMMENT: player Relationships panel; panel header title for player relationship with manager]" />
+
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="16" vertical_offset="6" />
+
+			<container class="inner_subtle_box">
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1" horizontal_gap="0" />
+				
+				<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="4" />
+
+					<widget class="text" auto_size="vertical" alignment="left,centre_y" font="label">
+					<translation id="text" translation_id="243508" type="use" value="Relationship With You" />
+					</widget>
+
+					<widget class="text" id="dreL" auto_size="vertical" alignment="left,centre_y" font="value" />
+					<widget class="relationship_label" id="relL" display_format="0" auto_size="vertical" alignment="left,centre_y" font="value" />
+				</container>
+
+				<container class="vertical_label_value_pair" label_widget="opHd" value_widget="opiL">
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="0" />
+					<widget class="text" id="opHd" alignment="left">
+						<translation id="text" translation_id="447596" type="use" value="Opinion of [%person#1-you][COMMENT: player Relationships panel; panel header title for players opinion of manager]" />
+					</widget>
+					<widget class="text" id="opiL" alignment="left" auto_size="vertical" font="text" multiline="true">
+					</widget>
+				</container>
+
+
+			</container>
+
+			<!--Favoured Personnel-->
+			<widget class="label" auto_size="all" alignment="left,centre_y" font="title" colour="text">
+				<translation id="text" translation_id="247454" type="use" value="Favoured Personnel" />
+			</widget>
+
+			<widget class="text" id="favs" alignment="left" spec="text" auto_size="vertical">
+				<translation id="text" translation_id="297209" type="use" value="Scouting Required[COMMENT: shown when the user can't view player info without scouting them first]" />
+			</widget>
+
+			<widget class="table" id="tabl" layout="-2,-2,-1,-1,-1" auto_size_rows="true">
+				<list id="headings">
+					<record index="0" alignment="left,centre_y" auto_hide_priority="1">
+						<translation id="text" translation_id="229689" type="use" value="Name" />
+					</record>
+					<record index="1" alignment="left,centre_y" auto_hide_priority="1">
+						<translation id="text" translation_id="447597" type="use" value="Reason[COMMENT: table heading; reason for relationship]" />
+					</record>
+					<record index="2" alignment="left,centre_y" auto_hide_priority="1">
+						<translation id="text" translation_id="248033" type="use" value="Nationality[COMMENT - Hall of fame section]" />
+					</record>
+					<record index="3" alignment="left,centre_y" auto_hide_priority="1">
+						<translation id="text" translation_id="323297" type="use" value="Club[COMMENT: Person table type name]" />
+					</record>
+					<record index="4" alignment="left,centre_y" auto_hide_priority="1">
+						<translation id="text" translation_id="227964" type="use" value="Job" />
+					</record>
+				</list>
+
+				<list id="column_table_properties">
+					<record index="0" sort_disabled="true" auto_hide_priority="1" />
+					<record index="1" sort_disabled="true" auto_hide_priority="1" />
+					<record index="2" sort_disabled="true" auto_hide_priority="1" minimum_width="300" />
+					<record index="3" sort_disabled="true" auto_hide_priority="1" minimum_width="180" />
+					<record index="4" sort_disabled="true" auto_hide_priority="1" minimum_width="90" />
+				</list>
+
+				<list id="column_widget_properties">
+					<record index="1" alignment="left,centre_y" />
+				</list>
+			</widget>
+
+
+
+		</container>
+
+		<container id="plHr">
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			<container class="team_hierarchy_player_details_panel" id="pHrc" file="team/team hierarchy player details basic panel" />
+		</container>
+
+	</container>
+
+
+</panel>

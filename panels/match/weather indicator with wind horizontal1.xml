@@ -1,0 +1,18 @@
+<panel>
+
+	<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="5" />
+
+	<!--icon-->
+	<widget class="picture" id="icon" image_alignment="centre" width="60" scale_picture="true" keep_aspect_ratio="true" />
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+		
+		<widget class="text" id="desc" spec="text" size="normal" auto_size="vertical" alignment="left,top" style="bold" />
+
+		<widget class="text" id="wind" spec="text" size="xsmall" auto_size="vertical" alignment="left,top" colour="faded text"/>
+
+	</container>
+
+</panel>
+

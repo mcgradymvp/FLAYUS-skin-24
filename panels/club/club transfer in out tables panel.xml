@@ -1,0 +1,32 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+  <container id="inou">
+			<layout class="arrange_vertical_attachment" alignment="fill" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+			<container class="titled_box" id="inbx" appearance="boxes/main/standard/paper">
+        <translation id="text" translation_id="420572" type="use" value="Players In[COMMENT: competition preview panel, transfers section showing arrivals to a league or team]" />
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"  />
+
+				<widget class="table" id="trin" save_session_state="true" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows, select_multiple, dont_ask_for_focus" wants_lazy_load="true" auto_size_rows="true" get_row_data_event="utit" row_height="28">
+					<!-- default properties adopted by every item in table -->
+					<record id="default_properties">
+						<flags id="alignment" value="left, centre_y,can_scale" />
+					</record>
+				</widget>
+			</container>
+
+			<container class="titled_box" id="oubx" appearance="boxes/main/standard/paper">
+        <translation id="text" translation_id="420573" type="use" value="Players Out[COMMENT: competition preview panel, transfers section showing departures from a league or team]" />
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="table" id="trou" save_session_state="true" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows, select_multiple, dont_ask_for_focus" wants_lazy_load="true" auto_size_rows="true" get_row_data_event="utot" row_height="28">
+					<!-- default properties adopted by every item in table -->
+					<record id="default_properties">
+						<flags id="alignment" value="left, centre_y,can_scale" />
+					</record>
+				</widget>
+			</container>
+		</container>
+</panel>

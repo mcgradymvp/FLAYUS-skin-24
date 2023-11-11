@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+	
+		<container class="vertical_adaptive_container" id="PDvc" inset="0" offset="0" gap="5">
+		
+		<container height="30">
+			<layout class="arrange_horizontal_attachment" layout="-1" offset="0" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />							
+                
+				<container embed_in_frame="true">
+                    <attachment_group class="title_embedded_panel_right" />
+
+                <widget class="label" id="rMpl" auto_size="all" height="30" colour="alt text" embed_in_frame="true">
+                    <translation id="text" translation_id="400497" type="use" value="능력치 비교" />
+                </widget>
+          
+                <widget class="popup_button" id="rMpo" select_event="rMCh" auto_size="all" fixed="true" embed_in_frame="true"/>
+
+            </container>
+         </container>
+
+			<widget class="horizontal_divider">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			</widget>
+			
+			<container height="48">
+				<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+		
+				<!--player extra details (e.g. onloan at...)-->
+					<widget class="player_extra_details_text" id="plex" appearance="boxes/bordered/standard/paper1" red_replacement="secondary" auto_size="vertical" font="gz_title" alignment="centre_x,centre_y,can_scale" colour="accent" size="9">
+						<record id="object_property">
+							<integer id="get_property" value="PExD" />
+						</record>
+					</widget>
+								
+						<!-- Media Description -->
+					<widget class="player_description_text" id="Pdes" colour="gzc" font="gz_title" style="bold" size="10" alignment="centre_x,centre_y,can_scale" auto_size="vertical">
+						<record id="object_property">
+							<integer id="get_property" value="Pdes" />
+						</record>
+					</widget> 					
+			</container>	
+			
+			<!-- World Reputation -->
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical, extend" inset="0" gap="0" offset="0"/>
+				<layout class="arrange_vertical_attachment" layout="30,30" gap="5" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<widget class="link_button" section="Ppin" appearance="boxes/bordered/standard/paper1" red_replacement="secondary" auto_size="vertical" font="gz_title" alignment="centre_x,centre_y,can_scale" colour="accent" size="9">
+					<translation id="text" translation_id="227963" type="use" value="Reputation" />
+				</widget>
+
+				<widget class="global_reputation_stars_label" id="PrSr" mode="0" alignment="centre_x,top" auto_size="vertical">
+					<record id="object_property" get_property="PrSr" dont_set_object="true"/>
+				</widget>  
+			</container>		
+
+			<!-- playing style-->
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical, extend" inset="0" gap="0" offset="0"/>
+				<layout class="arrange_vertical_attachment" layout="30,23" gap="-1" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+		
+				<widget class="link_button" section="Psta" appearance="boxes/bordered/standard/paper1" red_replacement="secondary" auto_size="vertical" font="gz_title" alignment="centre_x,centre_y,can_scale" colour="accent" size="9" >
+					<translation id="text" translation_id="242530" type="use" value="Playing Style" />
+					</widget>
+			
+				<widget class="player_style_label" id="PpPs" alignment="centre_x,top,can_scale" auto_size="vertical" >
+					<record id="object_property">
+						<integer id="get_property" value="PpPs" />
+					</record>
+				</widget>
+			</container>
+
+			<!-- Personality -->
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical, extend" inset="0" gap="0" offset="0"/>
+				<layout class="arrange_vertical_attachment" layout="30,23" gap="-1" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<widget class="menubar_icon_button" appearance="boxes/bordered/standard/paper1" red_replacement="secondary" id="PPs:" auto_size="vertical" alignment="centre_x,centre_y,can_scale" font="gz_title" colour="accent" size="9">
+					<record id="object_property" get_property="PPst" name="true"/>
+					<event id="click_event" event_id="gzp1"/>
+					<attachment class="event_relay_attachment" event_id="gzp1">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="per1"/>
+						</record>
+					</attachment>
+
+				</widget>
+				<widget class="personality_label" id="PPst" alignment="centre_x,top,can_scale" auto_size="vertical">
+					<record id="object_property" get_property="PPst"/>
+				</widget>
+			</container>
+
+			<!-- Media Handling -->
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical, extend" inset="0" gap="0" offset="0"/>
+				<layout class="arrange_vertical_attachment" layout="30,23" gap="-1" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+				<widget class="menubar_icon_button" appearance="boxes/bordered/standard/paper1" red_replacement="secondary" auto_size="vertical" font="gz_title" alignment="centre_x,centre_y,can_scale" colour="accent" size="9">
+					<translation id="text" translation_id="310463" type="use" value="Media Handling[COMMENT: player transfer panel; how staff handles media]" />
+					<event id="click_event" event_id="gzp2"/>
+					<attachment class="event_relay_attachment" event_id="gzp2">
+						<record id="action_event">
+							<flags id="event_id" value="show"/>
+							<flags id="event_target" value="med1"/>
+						</record>
+					</attachment>
+				</widget>
+				<widget class="media_handling_label" id="Pghm" alignment="centre_x,top" auto_size="vertical">
+					<record id="object_property" get_property="Pghm"/>
+				</widget>
+			</container>
+
+			<!-- form -->
+			<container default_height="110" minimum_height="60" priority="1">
+				<layout class="arrange_vertical_attachment" layout="30,80" gap="0" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="-15" apply_to_children="true"/>
+
+				<widget class="link_button" section="Pfrm" appearance="boxes/bordered/standard/paper1" red_replacement="secondary" auto_size="vertical" font="gz_title" alignment="centre_x,centre_y,can_scale" colour="accent" size="9">
+					<translation id="text" translation_id="395236" type="use" value="Form (Last 5 Matches)[COMMENT: player overview; sub panel title for player form graph]" />
+				</widget>
+
+				<container default_height="70" minimum_height="50" priority="1">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+
+					<widget class="player_form_overview_panel" file="gunzo/gunzo player form5" alignment="centre" id="pfop" auto_size="vertical" default_for_unemployed_managers="true" default_for_international_managers_other_team="true">
+				        <layout class="stick_to_sides_attachment" alignment="all" inset="10,0,0,0" apply_to_children="true"/>
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+
+
+					<widget class="player_form_summary_panel" file="gunzo/gunzo player form bottom" alignment="right" auto_size="vertical">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,0,0" apply_to_children="true"/>
+						<record id="object_property">
+							<integer id="get_property" value="objt" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+
+				</container>
+
+			</container>
+			
+		</container>
+		
+	</container>
+</panel>

@@ -1,0 +1,227 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container id="nvab">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="50" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="10" />
+
+		<!--explanatory text-->
+		<widget class="text" alignment="centre" auto_size="vertical" size="11">
+			<translation id="text" translation_id="395313" type="use" value="Set Piece Instructions cannot be viewed without control of the team.[COMMENT: FR 9552 - explanatory text when you can't see AI team's set pieces]" />
+		</widget>
+
+	</container>
+
+	<container id="ntac">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="50" gap="5" />
+		<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" />
+
+		<widget class="manager_text" auto_size="all" size="11">
+			<translation id="text" translation_id="395563" type="use" value="[%person#1-You] need to create a tactic before [%person#1-you] can set up set-piece routines.[COMMENT: FR 9552 - explanatory text to show that the user hasn't created a tactic yet, so can't set up any set piece routines]" />
+		</widget>
+
+		<widget class="link_button" section="tacO" auto_size="all">
+			<translation id="text" translation_id="363642" type="use" value="Go To Tactics[COMMENT: FR 8989 - text for a button to take you to the tactics page]" />
+		</widget>
+
+	</container>
+
+	<container id="CtEd">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="50" gap="5" />
+		<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" />
+
+		<widget class="text" id="cted" auto_size="all" size="11" >
+		</widget>
+
+		<widget class="link_button" section="tacO" auto_size="all">
+			<translation id="text" translation_id="363642" type="use" value="Go To Tactics[COMMENT: FR 8989 - text for a button to take you to the tactics page]" />
+		</widget>
+
+	</container>
+
+	<container class="vertical_split_container" id="vabl" starting_layout="-4, -3" save_default_state="true" min_width_left="525" min_width_right="425">
+
+		<widget class="match_team_squad_panel" id="tesq" file="match/match team squad set piece views"/>
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="fill" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!--corners-->
+			<container class="main_transparent_box" id="titl">
+				<translation id="text" translation_id="227896" type="use" value="Corners" />
+
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<widget class="set_piece_takers_panel" id="cr l" set_piece_type="6" set_piece_side="0" navigation_container="true">
+				</widget>
+
+				<widget class="set_piece_takers_panel" id="cr r" set_piece_type="6" set_piece_side="1" navigation_container="true">
+				</widget>
+
+			</container>
+
+			<container class="multi_box" default_item="ti1D" view_widget="view" contents_kind="container">
+
+				<!--Direct free kicks-->
+				<container class="main_transparent_box" id="ti1D" force_title_borders="true">
+					<translation id="name" translation_id="447626" type="use" value="Direct[COMMENT: Popup button item; showing different types of free kick]" />
+
+					<container embed_in_frame="true" height="35" id="ti1e" navigation_container="true">
+						<attachment_group class="title_embedded_panel_left" horizontal_gap="8" horizontal_offset="6" vertical_inset="0"/>
+
+						<widget class="text" id="fkdi" auto_size="horizontal" height="25" font="title" size="large" alignment="centre" colour="accent" embed_in_frame="true" >
+							<translation id="text" translation_id="227892" type="use" value="Free Kicks" />
+						</widget>
+
+						<widget class="embedded_popup_button" id="view" sele="chaw" height="25" auto_size="horizontal" fixed="true" embed_in_frame="true" appearance="buttons/custom/very subtle/button" font="title" >
+							<translation id="text" translation_id="447626" type="use" value="Direct[COMMENT: Popup button item; showing different types of free kick]" />
+						</widget>
+						
+					</container>
+
+
+					<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="4"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+
+						<widget class="set_piece_takers_panel" id="fdkl" set_piece_type="7" set_piece_side="0" navigation_container="true">
+						</widget>
+
+						<widget class="set_piece_takers_panel" id="fdkr" set_piece_type="7" set_piece_side="1" navigation_container="true">
+						</widget>
+					</container>
+
+
+				</container>
+
+				<!--Indirect Free Kick Takers - Central-->
+				<container class="main_transparent_box" id="ti2D"  >
+					<translation id="title" translation_id="451481" type="use" value="Direct (Small Chance of Shot)[COMMENT: Popup button item; showing different types of free kick, change from ID 447627]" />
+
+					<container embed_in_frame="true" height="35" id="ti2e" navigation_container="true">
+						<attachment_group class="title_embedded_panel_left" horizontal_gap="8" horizontal_offset="6" vertical_inset="8"/>
+
+						<widget class="text" id="fkds" auto_size="horizontal" height="25" font="title" size="large" alignment="centre" colour="accent" embed_in_frame="true" >
+							<translation id="text" translation_id="227892" type="use" value="Free Kicks" />
+						</widget>
+
+						<widget class="embedded_popup_button" id="view" sele="chaw" height="25" auto_size="horizontal" fixed="true" embed_in_frame="true" appearance="buttons/custom/very subtle/button" font="title" >
+							<translation id="text" translation_id="451481" type="use" value="Direct (Small Chance of Shot)[COMMENT: Popup button item; showing different types of free kick, change from ID 447627]" />
+						</widget>
+
+					</container>
+					
+					<layout class="arrange_vertical_attachment" layout="-1" offset="0"  gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="4"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<widget class="set_piece_takers_panel" id="ficl" set_piece_type="8" set_piece_side="0" navigation_container="true">
+						</widget>
+
+						<widget class="set_piece_takers_panel" id="ficr" set_piece_type="8" set_piece_side="1" navigation_container="true">
+						</widget>
+					</container>
+
+
+				</container>
+
+				<!--Indirect Free Kick Takers - Wide-->
+				<container class="main_transparent_box" id="ti3D">
+					<translation id="title" translation_id="447628" type="use" value="Indirect (Wide)[COMMENT: Popup button item; showing different types of free kick]" />
+
+					<container embed_in_frame="true" height="35" id="ti3e" navigation_container="true">
+						<attachment_group class="title_embedded_panel_left" horizontal_gap="8" horizontal_offset="6" vertical_inset="8"/>
+
+						<widget class="text" id="fkiw" auto_size="horizontal" height="25" font="title" size="large" alignment="centre" colour="accent" embed_in_frame="true" >
+							<translation id="text" translation_id="227892" type="use" value="Free Kicks" />
+						</widget>
+
+						<widget class="embedded_popup_button" id="view" sele="chaw" height="25" auto_size="horizontal" fixed="true" embed_in_frame="true" appearance="buttons/custom/very subtle/button" font="title" >
+							<translation id="text" translation_id="447628" type="use" value="Indirect (Wide)[COMMENT: Popup button item; showing different types of free kick]" />
+						</widget>
+
+					</container>
+
+					<layout class="arrange_vertical_attachment" layout="-1" offset="0"  gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />					
+
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="4"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<widget class="set_piece_takers_panel" id="fiwl" set_piece_type="9" set_piece_side="0" navigation_container="true">
+						</widget>
+
+						<widget class="set_piece_takers_panel" id="fiwr" set_piece_type="9" set_piece_side="1" navigation_container="true">
+						</widget>
+					</container>
+
+				</container>
+
+				<!--Indirect Free Kick Takers - Deep-->
+				<container class="main_transparent_box" id="ti4D" >
+					<translation id="title" translation_id="447629" type="use" value="Indirect (Deep)[COMMENT: Popup button item; showing different types of free kick]" />
+
+					<container embed_in_frame="true" height="35" id="ti4e" navigation_container="true">
+						<attachment_group class="title_embedded_panel_left" horizontal_gap="8" horizontal_offset="6" vertical_inset="8"/>
+
+						<widget class="text" id="fkid" auto_size="horizontal" height="25" font="title" size="large" alignment="centre" colour="accent" embed_in_frame="true" >
+							<translation id="text" translation_id="227892" type="use" value="Free Kicks" />
+						</widget>
+
+						<widget class="popup_button" id="view" sele="chaw" height="25" auto_size="horizontal" fixed="true" embed_in_frame="true" appearance="buttons/custom/very subtle/button" font="title">
+							<translation id="text" translation_id="447629" type="use" value="Indirect (Deep)[COMMENT: Popup button item; showing different types of free kick]" />
+						</widget>
+
+					</container>
+
+
+					<layout class="arrange_vertical_attachment" layout="-1" offset="0"  gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					
+					<container>
+						<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="4"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+						<widget class="set_piece_takers_panel" id="fidl" set_piece_type="10" set_piece_side="0" navigation_container="true">
+						</widget>
+
+						<widget class="set_piece_takers_panel" id="fidr" set_piece_type="10" set_piece_side="1" navigation_container="true">
+						</widget>
+					</container>
+
+				</container>
+
+
+			</container>
+
+
+			<!--throw ins-->
+			<container class="main_transparent_box" id="titl">
+				<translation id="title" translation_id="247690" type="use" value="Throw Ins" />
+
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<widget class="set_piece_takers_panel" id="ti l" set_piece_type="11" set_piece_side="0" navigation_container="true">
+				</widget>
+
+				<widget class="set_piece_takers_panel" id="ti r" set_piece_type="11" set_piece_side="1" navigation_container="true">
+				</widget>
+
+			</container>
+
+		</container>
+	</container>
+
+</panel>

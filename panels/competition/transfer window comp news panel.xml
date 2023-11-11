@@ -1,0 +1,90 @@
+<panel>
+    <attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_gap="8" />
+<container class="main_box">
+	<attachment_group class="vertical_arrange" vertical_alignment="top, extend" />
+    <container height="40">
+        <attachment_group class="horizontal_arrange" horizontal_layout="-1, -1" />
+
+        <widget class="text" auto_size="all" font="title">
+            <layout class="centre_in_parent_attachment" alignment="vertical" />
+            <translation id="text" translation_id="538880" type="use" value="Transfer News[COMMENT: AREA: UI; SUB-AREA: Transfer Deadline Day; FR: 34747; TONE: Formal; CHARLIMIT: None; REF-ID: ; NOTE: Section name for transfer related news on transfer deadline day]" />
+        </widget>
+
+        <container class="transfer_window_countdown_panel" id="tdhr" />
+    </container>
+
+    <container class="main_box" height="55">
+        <attachment_group class="horizontal_arrange_vertical_centre" horizontal_layout="-1, 1, -1, 1, -1, 1, -1, 1, -1" horizontal_gap="10" />
+
+        <!-- done deals -->
+        <container class="icon_box" file="icon box vertical centre" icon="icons/custom/transfer deadline day/totals/done deals" icon_red_replacement="title" icon_blue_replacement="bg">
+            <attachment_group class="vertical_arrange_autosize_all" vertical_alignment="middle" vertical_gap="0" />
+
+            <widget class="icon_button" id="DoDl" auto_size="all" icon="icons/custom/more/button" show_button_appearance="false" font="bold" colour="text" size="large" />
+            <widget class="text" font="label" auto_size="all" alignment="left, centre_y" colour="faded text">
+                <translation id="text" translation_id="538886" type="use" value="Done Deals[COMMENT: AREA: UI; SUB-AREA: Transfer Deadline Day Round Up News; FR: 34774; TONE: Formal; CHARLIMIT: None; REF-ID: ; NOTE: Title for number of transfer deals done]" />
+            </widget>
+        </container>
+
+        <widget class="vertical_divider" auto_size="horizontal" />
+
+        <!-- foreign imports -->
+        <container class="icon_box" file="icon box vertical centre" icon="icons/custom/transfer deadline day/totals/foreign imports" icon_red_replacement="title" icon_blue_replacement="bg">
+            <attachment_group class="vertical_arrange_autosize_all" vertical_alignment="middle" vertical_gap="0" />
+
+            <widget class="icon_button" id="FoIm" auto_size="all" icon="icons/custom/more/button" show_button_appearance="false" font="bold" colour="text" size="large" />
+            <widget class="text" font="label" colour="faded text" auto_size="all" alignment="left, centre_y">
+                <translation id="text" translation_id="412437" type="use" value="Foreign Import[COMMENT: FR 15125]" />
+            </widget>
+        </container>
+
+        <widget class="vertical_divider" />
+        
+        <!-- average transfer value -->
+        <container class="icon_box" file="icon box vertical centre" icon="icons/custom/transfer deadline day/totals/average spent" icon_red_replacement="title" icon_blue_replacement="bg">
+            <attachment_group class="vertical_arrange_autosize_all" vertical_alignment="middle" vertical_gap="0" />
+
+            <widget class="icon_button" id="AvSp" auto_size="all" icon="icons/custom/more/button" show_button_appearance="false" font="bold" colour="text" size="large" />
+            <widget class="text" font="label" colour="faded text" auto_size="all" alignment="left, centre_y">
+                <translation id="text" translation_id="538884" type="use" value="Avg. Transfer Value[COMMENT: AREA: UI; SUB-AREA: transfer deadline day news panel; FR: 34759; TONE: Formal; CHARLIMIT: None; REF-ID: ; NOTE: info about the average expenditure in a country throughout one transfer window, abbreviated version of translation id 343281]" />
+            </widget>
+        </container>
+
+        <widget class="vertical_divider" />
+
+        <!-- total spent -->
+        <container class="icon_box" file="icon box vertical centre" icon="icons/custom/transfer deadline day/spent" icon_red_replacement="title" icon_blue_replacement="bg">
+            <attachment_group class="vertical_arrange_autosize_all" vertical_alignment="middle" vertical_gap="0" />
+
+            <widget class="icon_button" id="ToSp" auto_size="all" icon="icons/custom/more/button" show_button_appearance="false" font="bold" colour="text" size="large" />
+            <widget class="text" font="label" colour="faded text" auto_size="all" alignment="left, centre_y">
+                <translation id="text" translation_id="538887" type="use" value="Total Spent[COMMENT: AREA: UI; SUB-AREA: Transfer Deadline Day Round Up News; FR: 34774; TONE: Formal; CHARLIMIT: None; REF-ID: ; NOTE: Title for total value of all transfer deals done]" />
+            </widget>
+        </container>
+
+        <widget class="vertical_divider" />
+
+        <!-- net spend -->
+        <container class="icon_box" file="icon box vertical centre" icon="icons/custom/transfer deadline day/totals/net spend" icon_red_replacement="title" icon_blue_replacement="bg">
+            <attachment_group class="vertical_arrange_autosize_all" vertical_alignment="middle" vertical_gap="0" />
+
+            <widget class="icon_button" id="NeSp" auto_size="all" icon="icons/custom/more/button" show_button_appearance="false" font="bold" colour="text" size="large" />
+            <widget class="text" font="label" colour="faded text" auto_size="all" alignment="left, centre_y">
+                <translation id="text" translation_id="538888" type="use" value="Net Spend[COMMENT: AREA: team stat title for the amount of money a team has spent during this season]" />
+            </widget>
+        </container>
+    </container>
+
+    <widget class="text" auto_size="all" font="title">
+        <translation id="text" translation_id="538889" type="use" value="Headline Stories[COMMENT: AREA: UI; SUB-AREA: deadline day transfer news panel; FR: 34747; TONE: Formal; CHARLIMIT: None; REF-ID: ; NOTE: section title for list of deadline day headline transfer stories]" />
+    </widget>
+
+    <container class="horizontal_adaptive_container" id="Hdln" mode="distribute_equally" height="230" gap="10">
+        <record id="default_properties" class="property_list_viewer_xml_panel" file="player/player deadline day transfer details with type panel" use_short_fee_string="true" minimum_width="300" />
+
+        <!-- headline transfers added here in code -->
+    </container>
+
+    <container class="transfer_window_news_activity_list_panel" id="TaAc" />
+     </container>
+</panel>

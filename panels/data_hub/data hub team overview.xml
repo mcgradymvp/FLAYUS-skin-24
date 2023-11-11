@@ -1,0 +1,46 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<widget class="data_hub_splashscreen">
+		<record id="object_property" get_property="Ttea" dont_set_hint="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container class="main_box" id="dflt">
+			<attachment_group class="horizontal_arrange" horizontal_layout="-2,1,350" horizontal_offset="0" horizontal_gap="8" />
+
+			<container class="team_report_summary_panel" file="data_hub/data hub team summary panel" id="tmSu" />
+
+			<widget class="vertical_divider" image_alignment="centre_x" />
+
+			<container  id="rptC" navigation_container="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<container class="main_box">
+					<translation id="title" translation_id="515024" type="use" value="Reports &amp; Visuals[COMMENT: AREA: Data Hub; SUB-AREA: Reports and visualisations header; FR: 31585; TONE: Formal; CHARLIMIT: None]" />
+					<widget class="widget_popup_button" auto_size="all" appearance="buttons/primary/normal/button" id="askF" embed_in_frame="true">
+
+						<string id="remove_if" value="is_fmt" />
+
+						<string id="widget_type" value="data_hub_request_visualisation_popup" />
+						<record id="modal_popup_properties" file="modal popup panel auto sized" />
+						<translation id="text" translation_id="526852" type="use" value="Ask For[COMMENT: AREA: Data Hub; SUB-AREA: Ask for new visualisation; FR: 31585; TONE: Formal; CHARLIMIT: None]" />
+						<layout class="stick_to_sides_attachment" alignment="top,right" inset="0" embed_in_frame="true" />
+					</widget>
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" embed_in_frame="true" />
+
+						<container class="scrolling_box" >
+							<container class="vertical_arrange_container" id="repF" gap="4" auto_size="vertical" />
+						</container>
+
+						<widget class="text" id="noRp" alignment="centre" colour="faded text">
+							<translation id="text" translation_id="538902" type="use" value="No recent reports or visuals to display[COMMENT: AREA: Data Hub; SUB-AREA: Reports and Visuals section; FR: 31585; TONE: Formal; CHARLIMIT: None Notes: No reports or visuals have been requested to display]" />
+						</widget>
+
+					</container>
+				</container>
+			</container>
+		</container>
+	</widget>
+</panel>

@@ -1,0 +1,211 @@
+<panel height="550">
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<list id="properties_to_forward">
+		<record get_property="tact" set_property="tact" target="ptch"/>
+	</list>
+
+	<string id="skin_style" value="subtle box" />
+
+	<!-- Content area -->
+	<container class="vertical_arrange_container" alignment="top,extend" inset="0" gap="12" offset="0">
+		<container class="horizontal_arrange_container" layout="-1,-1" inset="0" gap="1" offset="0">
+
+			<container class="inner_box">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<!-- Stats and awards -->
+				<container class="tabbed_container" appearance="" save_session_state="true">
+
+					<!-- Awards-->
+					<container class="property_list_viewer_xml_panel" id="awas">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						<translation id="title" translation_id="251258" type="use" value="Awards[COMMENT: manager stats screen; column heading text for number of awards won]" />
+
+						<container class="vertical_arrange_container" alignment="top" inset="0" gap="0" offset="0">
+							<!-- Fans player of the season -->
+							<container id="fpos">
+								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+								<container class="titled_box">
+									<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+									<layout class="arrange_horizontal_attachment" layout="80,-1" offset="0" />
+									<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+									<translation id="title" translation_id="394411" type="use" value="Fans Player of the Season[COMMENT: FR 10309; season review news item; award title]" />
+
+									<!-- Portrait -->
+									<widget class="object_portrait_picture" image_alignment="left,bottom" scale_picture="true" height="80">
+										<layout class="centre_in_parent_attachment" alignment="vertical" />
+										<record id="object_property" get_property="fnP1" set_property="objt" />
+									</widget>
+
+									<!-- Info -->
+									<container class="vertical_arrange_container" alignment="top" inset="0" gap="0" offset="0" auto_size="vertical">
+										<widget class="game_formatted_label" var1="1" auto_size="vertical" size="large" style="bold" id="gmf1">
+											<translation id="format" translation_id="394800" type="use" value="[%number#1-nth] - [%person#2] ([%number#3]%)[COMMENT: FR 10309; season review news item; fans player of the season ranking, player and percentage of the vote]" />
+											<record id="object_property">
+												<list id="get_properties">
+													<record get_property="fnP1" set_property="var2" />
+													<record get_property="fn%1" set_property="var3" />
+												</list>
+											</record>
+										</widget>
+										<widget class="game_formatted_label" var1="2" auto_size="vertical" colour="faded text">
+											<translation id="format" translation_id="394800" type="use" value="[%number#1-nth] - [%person#2] ([%number#3]%)[COMMENT: FR 10309; season review news item; fans player of the season ranking, player and percentage of the vote]" />
+											<record id="object_property">
+												<list id="get_properties">
+													<record get_property="fnP2" set_property="var2" />
+													<record get_property="fn%2" set_property="var3" />
+												</list>
+											</record>
+										</widget>
+										<widget class="game_formatted_label" var1="3" auto_size="vertical" colour="faded text">
+											<translation id="format" translation_id="394800" type="use" value="[%number#1-nth] - [%person#2] ([%number#3]%)[COMMENT: FR 10309; season review news item; fans player of the season ranking, player and percentage of the vote]" />
+											<record id="object_property">
+												<list id="get_properties">
+													<record get_property="fnP3" set_property="var2" />
+													<record get_property="fn%3" set_property="var3" />
+												</list>
+											</record>
+										</widget>
+									</container>
+								</container>
+								<widget class="horizontal_divider" />
+							</container>
+
+							<!-- Goal of the season -->
+							<container id="glsc">
+								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+								<container class="titled_box">
+									<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+									<layout class="arrange_horizontal_attachment" layout="80,-1" offset="0" />
+									<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+									<translation id="title" translation_id="394423" type="use" value="Goal of the Season[COMMENT: FR 10309; season review news item; award title]" />
+
+									<!-- View Goal -->
+									<container embed_in_frame="true">
+										<attachment_group class="title_embedded_panel_right" />
+
+										<widget class="icon_button" id="vwgl" width="36" height="28" icon="icons/custom/highlights/highlights" appearance="buttons/subtle/normal/button" embed_in_frame="true" >
+											<record id="primary_icon_properties" red_replacement="text" />
+											<translation id="hint" translation_id="232872" type="use" value="View Goal[COMMENT: navigation description for viewing a goal on the match screen]" />
+										</widget>
+									</container>
+
+									<!-- Portrait -->
+									<widget class="object_portrait_picture" image_alignment="right,bottom" scale_picture="true" height="80">
+										<layout class="centre_in_parent_attachment" alignment="vertical" />
+										<record id="object_property" get_property="glsP" set_property="objt" />
+									</widget>
+
+									<!-- Info -->
+									<container class="vertical_arrange_container" alignment="top" inset="0" gap="0" offset="0" auto_size="vertical">
+
+										<widget class="person_button" auto_size="vertical" size="large" style="bold">
+											<record id="object_property" get_property="glsP" />
+										</widget>
+
+										<widget class="game_formatted_label" auto_size="vertical" colour="faded text">
+											<translation id="format" translation_id="394885" type="use" value="vs [%team#1-short] - [%date#2-long][COMMENT: FR 10309; season review news item; best goal of the season opponent and date]" />
+											<record id="object_property">
+												<list id="get_properties">
+													<record get_property="glsT" set_property="var1" />
+													<record get_property="glsD" set_property="var2" />
+												</list>
+											</record>
+										</widget>
+									</container>
+
+								</container>
+								<widget class="horizontal_divider" />
+							</container>
+
+							<!-- Signing of the season -->
+							<container id="bssc">
+								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+								<record id="object_property" get_property="sigH" set_property="Shwn" />
+
+								<container class="titled_box">
+									<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+									<layout class="arrange_horizontal_attachment" layout="80,-1" offset="0" />
+									<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+									<translation id="title" translation_id="394588" type="use" value="Signing of the Season[COMMENT: FR 10309; season review news item; award title]" />
+
+									<!-- Portrait -->
+									<widget class="object_portrait_picture" image_alignment="right,bottom" scale_picture="true" height="80">
+										<layout class="centre_in_parent_attachment" alignment="vertical" />
+										<record id="object_property" get_property="sigP" set_property="objt" />
+									</widget>
+
+									<!-- Info -->
+									<container class="vertical_arrange_container" alignment="top" inset="5" gap="0" offset="7" auto_size="vertical">
+										<widget class="person_button" auto_size="vertical" size="large" style="bold">
+											<record id="object_property" get_property="sigP" />
+										</widget>
+										<widget class="label" auto_size="vertical" colour="faded text">
+											<record id="object_property" get_property="sigS" />
+										</widget>
+									</container>
+								</container>
+								<widget class="horizontal_divider" />
+							</container>
+
+							<container id="ypos">
+								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+								<!-- Young player of the season -->
+								<container class="titled_box">
+									<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+									<layout class="arrange_horizontal_attachment" layout="80,-1" offset="0" />
+									<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+									<translation id="title" translation_id="394671" type="use" value="Young Player of the Season[COMMENT: FR 10309; season review news item; award title]" />
+
+									<!-- Portrait -->
+									<widget class="object_portrait_picture" image_alignment="right,bottom" scale_picture="true" height="80">
+										<layout class="centre_in_parent_attachment" alignment="vertical" />
+										<record id="object_property" get_property="yunP" set_property="objt" />
+									</widget>
+
+									<!-- Info -->
+									<container class="vertical_arrange_container" alignment="top" inset="0" gap="0" offset="7" auto_size="vertical">
+										<widget class="person_button" auto_size="vertical" size="large" style="bold">
+											<record id="object_property" get_property="yunP" />
+										</widget>
+										<widget class="game_formatted_label" auto_size="vertical" colour="faded text">
+											<translation id="format" translation_id="242551" type="use" value="[%number#1] years old" />
+											<record id="object_property" get_property="yunA" set_property="var1" />
+										</widget>
+									</container>
+								</container>
+							</container>
+						</container>
+					</container>
+
+					<!-- Stats-->
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						<translation id="title" translation_id="247412" type="use" value="Stats" />
+
+						<widget class="player_stats_summary_panel" id="stas" late_loading="false" />
+					</container>
+				</container>
+			</container>
+
+			<!-- Pitch -->
+			<container class="inner_box">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container class="vertical_arrange_container" alignment="top,extend" inset="0" gap="8" offset="6">
+					<widget class="text" auto_size="vertical" font="title" colour="accent">
+						<translation id="text" translation_id="394616" type="use" value="Team of the Season[COMMENT: FR 10309; season review news item; best player for each position last season]" />
+					</widget>
+
+					 <widget class="pitch_with_tactics" id="ptch" icon_flags="show_name,use_player_kits_back,show_numbers" navigation_disabled="true" pitch_is_read_only="true" pitch_dont_draw_indicators="true" pitch_draw_goals="false" pitch_kit_height="32" pitch_touchline_width_percentage="20" pitch_additional_touchline_pixels_left="4" player_icon_file="tactics/tactics icon opposition predicted team2" pitch_draw_grass="false" pitch_width_percentage="100" vertical="false" alignment="centre" />
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

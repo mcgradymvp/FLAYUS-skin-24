@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="-1" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container >
+		<layout class="arrange_vertical_attachment" layout="-1,1,-1" offset="-1" />
+	    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<container default_height="-1">		
+			<layout class="arrange_horizontal_attachment" layout="100,-2" offset="250" gap="0" />
+	        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+			<widget class="label" alignment="centre,top" size="10" colour="gzc" font="gz_title">
+				<translation id="text" translation_id="227981" type="use" value="Manager" />
+			</widget>			
+			<widget class="person_snapshot_club_overview_panel" id="mana" file="person/person snapshot club overview4">
+				<record id="object_property">
+					<integer id="get_property" value="TMnR" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+
+		</container>
+			
+	<!-- Separator -->
+	<widget class="picture" file="dividers/standard/horizontal/line" height="1" image_alignment="centre"/>
+
+<container >
+	<layout class="arrange_horizontal_attachment" layout="-1,1,-1,1,-1,1,-1" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+		<container default_height="-1">
+			
+			<layout class="stick_to_sides_attachment" alignmnet="all" inset="0" apply_to_children="true" />
+			
+			
+			<widget class="person_snapshot_club_overview_panel" id="capt" file="person/person snapshot club overview4">
+				<record id="object_property">
+					<integer id="get_property" value="TCap" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+			<widget class="label" alignment="center,top" size="9" colour="gzc" font="gz_title">
+				<translation id="text" translation_id="300013" type="use" value="Captain" />
+			</widget>
+		</container>
+			
+	<!-- Separator -->
+	<widget class="picture" file="dividers/standard/vertical/line" height="1" image_alignment="centre"/>
+
+	<container default_height="-1">
+		<layout class="stick_to_sides_attachment" alignmnet="all" inset="0" apply_to_children="true" />
+			
+			<widget class="person_snapshot_club_overview_panel" id="vice" file="person/person snapshot club overview4">
+				<record id="object_property">
+					<integer id="get_property" value="TVca" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+			<widget class="label" alignment="center,top" size="9" colour="gzc" font="gz_title">
+				<translation id="text" translation_id="300014" type="use" value="Vice Captain" />
+			</widget>
+		</container>
+			
+		<!-- Separator -->
+		<widget class="picture" file="dividers/standard/vertical/line" height="1" image_alignment="centre"/>
+			
+		<container default_height="-1">
+			<layout class="stick_to_sides_attachment" alignmnet="all" inset="0" apply_to_children="true" />
+				
+			
+			<widget class="person_snapshot_club_overview_panel" id="KeyP" file="person/person snapshot club overview4">
+				<record id="object_property">
+					<integer id="get_property" value="TKpL" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+			<widget class="label" alignment="center,top" size="9" colour="gzc" font="gz_title">
+				<translation id="text" translation_id="227396" type="use" value="Key Player" />
+			</widget>
+		</container>
+	
+	<!-- Separator -->
+	<widget class="picture" file="dividers/standard/vertical/line" height="1" image_alignment="centre"/>
+
+		<container default_height="-1">
+		<layout class="stick_to_sides_attachment" alignmnet="all" inset="0" apply_to_children="true" />
+				
+			<widget class="person_snapshot_club_overview_panel" id="HotP" file="person/person snapshot club overview4"/>
+		    <widget class="label" alignment="center,top" size="9" colour="gzc" font="gz_title">
+				<translation id="text" translation_id="227404" type="use" value="Hot Prospect" />
+			</widget>
+		</container>
+	</container>
+	</container>
+</panel>

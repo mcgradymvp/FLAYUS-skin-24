@@ -1,0 +1,186 @@
+<panel>
+
+	<flags id="rleg" value="tables/custom/league/relegation/row" />
+	<flags id="burc" value="comp person bar 1" />
+	<flags id="bucc" value="comp person bar 2" />
+
+	<flags id="Bwbn" value="fg blue"/>
+	<flags id="Bwbc" value="yellow"/>
+	<flags id="Bwbr" value="red"/>
+	<flags id="Bwbg" value="transparent"/>
+	<flags id="Btbn" value="fg blue"/>
+	<flags id="Btbc" value="yellow"/>
+	<flags id="Btbr" value="red"/>
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="plain_box">
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="4"/>
+
+		<!-- agent and contract offer -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="8"/>
+
+			<container id="flin">
+
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="8"/>
+				<container>
+
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4,0,0,0" />
+
+					<!--This panel we contain all the information about the contract offer-->
+					<widget class="contract_offer_details_panel" id="conD" />
+					<widget class="contract_offer_details_panel" id="HcoD" hidden="true" file="human/human contract offer details" />
+
+					<!-- debug panel for contract evaluation output -->
+					<container class="bordered_box" id="devc" hidden="true">
+						<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+						<container class="bordered_box">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1, -1"/>
+
+							<container>
+								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+								<widget class="text" auto_size="vertical" font="title" size="10" value="Negotiation Info" />
+								<widget class="table" id="deng" auto_size="vertical" mode="fill_rows, stripe_rows" layout="300, -1" auto_size_rows="true" />
+
+							</container>
+
+							<container>
+								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+								<widget class="text" auto_size="vertical" font="title" size="10" value="Negotiator Info" />
+								<widget class="table" id="deno" auto_size="vertical" mode="fill_rows, stripe_rows" layout="300, -1" auto_size_rows="true" />
+							</container>
+
+						</container>
+
+						<container class="main_box">
+							<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+
+							<container>
+								<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+								<widget class="text" id="deoi" auto_size="vertical" />
+
+								<widget class="table" id="dest" mode="fill_rows, stripe_rows" layout="500,-1,-1,100" fixed_size_rows="false" auto_size_rows="true" row_spacing="4">
+
+									<record id="default_properties">
+										<flags id="auto_size" value="vertical" />
+										<boolean id="multiline" value="true" />
+									</record>
+
+									<!-- headings -->
+									<list id="headings">
+										<record alignment="left,centre_y">
+											<string id="text" value="Component" />
+										</record>
+										<record alignment="left,centre_y">
+											<string id="text" value="Desired" />
+										</record>
+										<record alignment="left,centre_y">
+											<string id="text" value="Offered" />
+										</record>
+										<record alignment="left,centre_y">
+											<string id="text" value="Valuation" />
+										</record>
+									</list>
+								</widget>
+							</container>
+
+							<widget class="text" id="delw" alignment="right" auto_size="vertical" font="title" size="10" />
+							<widget class="text" id="deov" alignment="right" auto_size="vertical" font="title" size="10" />
+							<widget class="text" id="deoo" alignment="right" auto_size="vertical" font="title" size="10" />
+
+						</container>
+					</container>
+
+				</container>
+			</container>
+
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" />
+
+			<container id="waco">
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+				<widget class="label" hidden="true" alignment="right,centre_y" auto_size="all" colour="contract negotiation restriction" id="mwrs" height="25" size="8" />
+
+			</container>
+
+			<container id="comc">
+				<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+				<layout class="arrange_horizontal_attachment" offset="0" gap="2" alignment="right,extend" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="6" />
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_inset="0" />
+
+					<widget class="label" hidden="true" alignment="left" colour="contract negotiation restriction" id="repl" />
+					<widget class="label" hidden="true" alignment="left" colour="contract negotiation restriction" id="comp" />
+				</container>
+
+				<widget class="label" auto_size="horizontal">
+					<translation id="text" translation_id="395175" type="use" value="Current Compensation:[COMMENT: backroom staff changes panel column header showing compensation paid out thus far]" />
+				</widget>
+
+				<widget class="label" auto_size="horizontal" style="bold" id="comt" />
+			</container>
+
+			<container class="plain_box" appearance="boxes/custom/warning/rounded/paper"  id="wrnc" hidden="true" red_replacement="negative dark">
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend"/>
+				
+				<widget class="picture" file="icons/16px/urgent" auto_size="all" image_alignment="centre" red_replacement="white" />
+				<widget class="text" auto_size="vertical" alignment="left,centre_y" id="wrnt" colour="white" multiline="true"/>
+				
+			</container>
+
+      <container id="buts" height="36">
+        <attachment_group class="horizontal_arrange"  horizontal_alignment="left,extend"/>
+
+        <container>
+          <attachment_group class="horizontal_arrange_autosize"/>
+
+          <record id="default_properties" auto_size="horizontal" />
+
+          <widget class="icon_button" id="undo" click_event="undo" icon="icons/16px/reset">
+            <translation id="text" translation_id="230013" type="use" value="Reset" />
+          </widget>
+
+          <widget class="button" click_event="dela" id="dela" hidden="true">
+            <translation id="text" translation_id="234328" type="use" value="Delay" />
+          </widget>
+
+          <widget class="icon_button" id="rfbn" icon="icons/16px/speech bubble">
+            <translation id="text" translation_id="308032" type="use" value="Interact with Board[COMMENT: Links to the board request panel]" />
+          </widget>
+        </container>
+
+        <container>
+          <attachment_group class="horizontal_arrange"  horizontal_alignment="right">
+          	  <global id="horizontal_gap" name="ui.button_row_gap"/>
+		  </attachment_group>
+
+          <widget class="icon_button" height="30" auto_size="horizontal" click_event="walk" id="walk" controller_button="b_button">
+            <translation id="text" translation_id="313553" type="use" value="Walk Away[COMMENT: contract offer panel; walk away from the current contract negotiation]" />
+          </widget>
+
+          <!--Updated in code-->
+          <widget class="primary_icon_button" height="30" auto_size="horizontal" id="deal" click_event="deal" controller_button="y_button">
+            <translation id="text" translation_id="308462" type="use" value="Suggest Terms" />
+          </widget>
+          <widget class="primary_icon_tick_button" auto_size="horizontal" disabled="true" id="done" click_event="done" controller_button="y_button">
+            <translation id="text" translation_id="313556" type="use" value="Finalise Deal[COMMENT: contract offer panel; sign the dotted line and confirm the deal to sign a player]" />
+          </widget>
+        </container>
+      </container>
+
+		</container>
+	</container>
+
+
+</panel>

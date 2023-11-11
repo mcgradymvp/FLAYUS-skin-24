@@ -1,0 +1,25 @@
+<panel>
+
+  <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
+  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+  <!--scoreboard-->
+  <widget class="text" id="Scor" size="xlarge" alignment="centre" height="60">
+  </widget>
+
+  <!-- penalty score -->
+  <widget class="text" id="Pent" alignment="centre" auto_size="vertical" style="shadowed, bold"/>
+  
+  <container>
+		<attachment_group class="vertical_arrange_autosize" />
+
+    <!--HT score-->
+    <widget class="text" id="Httt" alignment="centre" auto_size="vertical" style="shadowed, bold">
+    </widget>
+
+    <!--aggregate score-->
+    <widget class="text" id="Aggg" alignment="centre" auto_size="vertical" style="shadowed, bold">
+    </widget>
+
+  </container>
+</panel>

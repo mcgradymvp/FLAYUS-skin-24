@@ -1,0 +1,278 @@
+﻿<panel>
+	<boolean id="should_force_refresh" value="true" />
+	<boolean id="save_session_state" value="true" />
+
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+	<widget class="scouting_top_panel" id="stop">
+
+		<record id="object_property">
+			<integer id="get_property" value="objt" />
+			<integer id="set_property" value="objt" />
+		</record>
+		<list id="visible_items">
+			<flags value="trwd" />
+			<flags value="scfc" />
+			<flags value="scpc" />
+			<flags value="scbc" />
+			<flags value="trbc" />
+			<flags value="assc" />
+		</list>
+	</widget>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" />
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
+
+		<container class="main_box" id="sccn" navigation_container="true">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+				<container id="tbar" navigation_container="true">
+
+					<!--@note lachezar.hubanov 29/07/21 
+					this cavalcade of layout attachments is due to an edge case, where we only have
+					an attachment group for widgets embedded in frame that align like this, but not if they are not-->
+
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="0" />
+					<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
+					<layout class="stick_to_sides_attachment" alignment="top, left" />
+					<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+					<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" />
+
+					<container id="togs">
+						<attachment_group class="horizontal_arrange_autosize_all_centre" horizontal_offset="0" horizontal_gap="0" />
+
+						<widget class="radio_toggle_switch_left" id="crdb" auto_size="all" selected="true" font="text" select_event="crdE">
+							<translation id="text" translation_id="466474" type="use" value="Cards[COMMENT: FR 22655, scouting centre button, takes the user to the scouting report cards]" />
+						</widget>
+
+						<widget class="radio_toggle_switch_right" id="lstb" auto_size="all" select_event="lstE">
+							<translation id="text" translation_id="293613" type="use" value="List" />
+						</widget>
+					</container>
+
+					<container height="22" id="recI">
+						<attachment_group class="horizontal_arrange_autosize" horizontal_offset="8" horizontal_gap="8" vertical_inset="0" />
+
+						<widget class="vertical_divider" width="2" height="22" />
+						<widget class="icon_button" auto_size="horizontal" height="30" id="rcBY" alignment="left,centre_y" font="title" size="medium" colour="text" icon_colour="text" appearance="" />
+					</container>
+
+					<container height="22" id="recS">
+						<attachment_group class="horizontal_arrange_autosize" horizontal_offset="0" horizontal_gap="2" vertical_inset="0" />
+
+						<widget class="text" auto_size="horizontal" colour="faded text" alignment="left,centre_y" size="small">
+							<translation id="text" translation_id="242854" type="use" value="From" />
+						</widget>
+
+						<widget class="client_object_property_panel" id="senn" auto_size="horizontal">
+							<record id="widget_properties" auto_size="horizontal" alignment="left,centre_y" colour="text" enforce_style="true" size="small" />
+						</widget>
+
+						<container>
+							<attachment_group class="horizontal_arrange_autosize" horizontal_offset="0" horizontal_gap="2" vertical_inset="0" />
+
+							<widget class="text" auto_size="horizontal" colour="text" alignment="left,centre_y" size="small">
+								<string id="text" value="-" />
+							</widget>
+
+							<widget class="client_object_property_panel" id="senj" property="PcJj" size="small" auto_size="horizontal">
+								<record id="widget_properties" colour="text" alignment="left,centre_y" auto_size="horizontal" />
+							</widget>
+
+							<widget class="client_object_property_panel" id="senh" property="THic" height="20" size="small" auto_size="horizontal">
+								<record id="widget_properties" colour="text" alignment="left,centre_y" show_category_colour="false" size="small" auto_size="horizontal" />
+							</widget>
+						</container>
+
+						<container>
+							<attachment_group class="horizontal_arrange_autosize" horizontal_offset="0" horizontal_gap="2" vertical_inset="0" />
+
+							<attachment class="test_screen_size_attachment" skip_if_false="true">
+								<list id="properties">
+									<record>
+										<flags id="alignment" value="vertical" />
+										<integer id="min_value" value="0" />
+										<integer id="max_value" value="850" />
+										<symbol id="set_property" value="hidden" />
+										<integer id="true_value" value="true" />
+									</record>
+									<record>
+										<flags id="alignment" value="vertical" />
+										<integer id="min_value" value="1000" />
+										<integer id="max_value" value="30000" />
+										<symbol id="set_property" value="hidden" />
+										<integer id="true_value" value="false" />
+									</record>
+								</list>
+							</attachment>
+
+							<widget class="text" id="senL" auto_size="horizontal" colour="faded text" alignment="left,centre_y" size="small" hidden="true">
+								<translation id="text" translation_id="491872" type="use" value="Report by:[COMMENT: AREA: Development Centre; SUB-AREA: youth_development_club_overview; FR-BN:26991; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: appears next to dropdown of coaches who potentially wrote the relevent report]" />
+							</widget>
+
+							<widget class="client_object_property_panel" id="senS" auto_size="horizontal" hidden="true">
+								<record id="widget_properties" auto_size="horizontal" alignment="left,centre_y" colour="text" enforce_style="true" size="small" />
+							</widget>
+
+							<container>
+								<attachment_group class="horizontal_arrange_autosize" horizontal_offset="0" horizontal_gap="2" vertical_inset="0" />
+
+								<widget class="text" auto_size="horizontal" id="senD" colour="text" alignment="left,centre_y" size="small">
+									<string id="text" value="-" />
+								</widget>
+
+								<widget class="client_object_property_panel" id="senJ" property="PcJj" size="small" auto_size="horizontal" hidden="true">
+									<record id="widget_properties" colour="text" alignment="left,centre_y" auto_size="horizontal" />
+								</widget>
+
+								<widget class="client_object_property_panel" id="senH" property="THic" height="20" size="small" auto_size="horizontal" hidden="true">
+									<record id="widget_properties" colour="text" alignment="left,centre_y" show_category_colour="false" size="small" auto_size="horizontal" />
+								</widget>
+							</container>
+						</container>
+
+					</container>
+				</container>
+
+				<container navigation_container="true">
+					<attachment_group class="title_embedded_panel_right">
+						<global id="horizontal_gap" name="ui.button_row_gap" />
+					</attachment_group>
+
+					<layout class="stick_to_sides_attachment" alignment="top, left" />
+					<attachment_group class="horizontal_arrange_autosize_all_centre" horizontal_offset="0" horizontal_gap="5" />
+
+					<widget class="widget_popup_button" id="PrFi" auto_size="all" appearance="buttons/subtle/normal/button" embed_in_frame="true" widget_type="scouting_centre_preferences_and_filters_popup" popup_alignment="right,top" offset_y="2" icon="icons/16px/settings">
+						<record id="widget_properties" width="550" />
+					</widget>
+
+					<widget class="subtle_popup_button" id="filt" auto_size="horizontal" height="30" embed_in_frame="true" select_event="fils" fixed="true" auto_tick_exclusive="true">
+						<translation id="text" translation_id="229912" type="use" value="Filter" />
+					</widget>
+				</container>
+			</container>
+
+			<widget class="scouting_centre_inbox_panel" id="scic" navigation_container="true" />
+
+			<container id="lisC">
+				<layout class="stick_to_sides_attachment" alignment="all" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container id="lvni" hidden="true">
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" horizontal_inset="0" vertical_offset="0" vertical_gap="0" />
+
+					<widget class="text" auto_size="vertical" alignment="centre" style="semi_bold" size="large">
+						<translation id="text" translation_id="443663" type="use" value="No recommendations[COMMENT: FR 21760, no recommendations are made by the scouting team]" />
+					</widget>
+					<widget class="manager_text" colour="faded text" auto_size="vertical" alignment="centre">
+						<translation id="text" translation_id="450793" type="use" value="[%person#1-Your] scouting team is working hard to bring [%person#1-you] more recommendations of this type soon.[COMMENT: FR 21760, 'status pending' sort of string indicating that the scouting team are at work]" />
+					</widget>
+				</container>
+
+				<container id="lvns" hidden="true">
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="text" auto_size="vertical" alignment="centre" style="semi_bold" size="large">
+						<translation id="text" translation_id="562252" type="use" value="No Scouts in Senior Recruitment Team[COMMENT: AREA: Scouting; SUB-AREA: Scouting Overview; FR-BN: FM-12770; NOTE: Fallback text for when the user has no scouts in their team]" />
+					</widget>
+
+					<widget class="manager_text" colour="faded text" auto_size="vertical" alignment="centre">
+						<translation id="text" translation_id="562253" type="use" value="There are currently no scouts in the senior recruitment team. If [%person#1-you] want scouting recommendations, [%person#1-you] will need to hire staff members.[COMMENT: AREA: Scouting; SUB-AREA: Scouting Overview; FR-BN: FM-12770; NOTE: Fallback text for when the user has no scouts in their team]" />
+					</widget>
+
+					<widget class="link_button" id="sFSC" auto_size="all" section="stfs">
+						<layout class="centre_in_parent_attachment" alignment="horizontal" />
+						<translation id="text" translation_id="320500" type="use" value="Staff Search[COMMENT: team report; link to the staff search]" />
+					</widget>
+				</container>
+
+				<container id="lvip">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="0" vertical_offset="4" vertical_gap="0" />
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_offset="0" vertical_inset="0" />
+
+						<widget class="text" id="remt" auto_size="horizontal" height="30" alignment="left,centre_y" font="title" colour="accent">
+							<translation id="text" translation_id="247116" type="use" value="Select All" />
+						</widget>
+
+						<container navigation_container="true">
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right">
+								<global id="horizontal_gap" name="ui.button_row_gap" />
+							</attachment_group>
+
+							<widget class="button" auto_size="all" click_event="sela">
+								<translation id="text" translation_id="247116" type="use" value="Select All" />
+							</widget>
+							<widget class="button" auto_size="all" click_event="Clea">
+								<translation id="text" translation_id="451325" type="use" value="Clear All[COMMENT: button text to clear all previously given touchline shouts]" />
+							</widget>
+						</container>
+					</container>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" horizontal_inset="0" vertical_offset="0" vertical_gap="0" />
+
+						<widget class="client_object_list_table" id="scet" mode="fill_rows, stripe_rows, printable, keyboard, show_bullets, select_rows, select_multiple" select_event="epsl" fixed_size_rows="true" auto_size_rows="false" fixed_row_height="29" navigation_container="true">
+							<boolean id="save_session_state" value="true" />
+
+							<list id="views">
+								<record id="ovvw">
+									<record id="view_table_properties">
+										<integer id="row_height" value="60" />
+									</record>
+									<translation id="name" translation_id="247414" type="use" value="Overview" />
+									<record id="view">
+										<record id="PSpi" auto_hide_priority="4" />
+										<!-- player status/info -->
+										<record id="PFrM" auto_hide_priority="2">
+											<global id="hidden" name="is_fmt" />
+										</record>
+										<!-- rf matches -->
+										<record id="PNaC" auto_hide_priority="1" minimum_width="120" />
+										<!-- player name/club -->
+										<record id="PpsP" auto_hide_priority="2" width="110" />
+										<!-- person position-->
+										<record id="PSag" auto_hide_priority="4" width="25" />
+										<!-- person age -->
+										<record id="Pcab" auto_hide_priority="7" />
+										<!-- CA stars -->
+										<record id="Ppab" auto_hide_priority="8" />
+										<!-- PA Stars -->
+										<record id="Pdva" auto_hide_priority="9" />
+										<!-- value -->
+										<record id="PNat" auto_hide_priority="13" />
+										<!-- person nationality -->
+										<record id="PSCc" auto_hide_priority="2" minimum_width="100" />
+										<!-- category-->
+										<record id="PRpo" auto_hide_priority="3" width="70" />
+										<!-- recommended -->
+										<record id="PsKL" auto_hide_priority="3" minimum_width="150" />
+										<!-- knowledge -->
+									</record>
+
+								</record>
+
+							</list>
+
+						</widget>
+
+						<widget class="spacer" height="4" />
+
+						<widget class="horizontal_divider" height="1" />
+
+						<widget class="spacer" height="8" />
+
+						<widget class="player_scouting_centre_actions_panel" id="lsac" navigation_container="true">
+							<boolean id="save_immediate_state" value="true" />
+						</widget>
+					</container>
+				</container>
+			</container>
+		</container>
+	</container>
+
+</panel>

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel maximum_items="5" ompl="true">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<layout class="fit_children_attachment" alignment="vertical" inset="0" offset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="27" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="top" apply_to_children="true" inset="0" />
+
+			<widget class="picture" file="icons/16px/goal" auto_size="horizontal" image_alignment="top" red_replacement="amber a200" />
+
+			<!-- goals scored -->
+			<widget class="formatted_label" id="glsc" auto_size="all" colour="amber a200">
+				<list id="format">
+					<record value="1">
+						<translation id="format" type="use" value="1" />
+					</record>
+					<record default_value="true">
+						<translation id="format" type="use" value="[%number#1]" />
+					</record>
+				</list>
+			</widget>
+			<!-- goals conceded -->
+			<widget class="formatted_label" id="glcd" auto_size="all" colour="amber a200">
+				<list id="format">
+					<record value="1">
+						<translation id="format" type="use" value="-1" />
+					</record>
+					<record default_value="true">
+						<translation id="format" type="use" value="-[%number#1]" />
+					</record>
+				</list>        
+			</widget>
+
+			<!-- Spacer-->
+			<container width="15" />
+
+			<widget class="picture" file="icons/16px/assist" id="assp" auto_size="horizontal" image_alignment="top" red_replacement="blue 200" />
+
+			<!-- assists rating -->
+			<widget class="formatted_label" id="asst" auto_size="all" colour="blue 200">
+				<list id="format">
+					<record value="1">
+						<translation id="format" type="use" value="1" />
+					</record>
+					<record default_value="true">
+						<translation id="format" type="use" value="[%number#1]" />
+					</record>
+				</list>
+			</widget>
+
+			<!-- Spacer-->
+			<container width="15" />
+
+			<!-- average rating -->
+			<widget class="formatted_label" id="avrt" auto_size="all" spec="bold" colour="gzc">
+				<translation id="format" type="use" value="[%fraction#1-3.2]" />
+			</widget>
+
+			<!-- Spacer-->
+			<container width="5" />
+
+		</container>
+
+
+	</container>
+
+</panel>

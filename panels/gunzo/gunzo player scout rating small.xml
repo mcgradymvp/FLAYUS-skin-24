@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+
+
+	<container>
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="40" gap="30" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1,75" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<widget class="text" colour="gzc" size="7.5" font="gz_title" alignment="centre_x,centre_y">
+				<translation id="text" translation_id="251893" type="use" value="Current Ability[COMMENT: scout report panel box heading]" />
+			</widget>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<!-- Recommendation -->
+				<widget class="player_scout_recommendation_widget" id="RCic" alignment="left, centre_y" auto_size="none" click_event="ltms" show_knowledge_bar="false" width="50">
+				</widget>
+
+				<widget class="scout_stars_label" id="CAic" alignment="centre_x,centre_y" height="30">
+
+				</widget>
+			</container>
+
+		</container>
+
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1,75" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<widget class="text" colour="gzc" size="7.5" font="gz_title" alignment="centre_x,centre_y">
+				<translation id="text" translation_id="251894" type="use" value="Potential Ability[COMMENT: scout report panel box heading]" />
+			</widget>
+
+			<widget class="scout_stars_label" id="PAic" alignment="centre_x,centre_y" height="30">
+
+			</widget>
+
+		</container>
+
+	</container>
+
+
+
+
+</panel>

@@ -1,0 +1,57 @@
+﻿<panel>
+
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<container class="tabbed_container" default_item="firT" save_session_state="true">
+
+			<container class="scrolling_box" id="firT">
+				<translation id="title" translation_id="515091" type="use" value="Pre-Match Tactical Advice[COMMENT: AREA: Pre-match advice tab; SUB-AREA:  a sub-tab for the pre-match advice panl; BN: 35836; TONE: Formal; CHARLIMIT: none; REF-ID: n/a; NOTE; showing the main and cirtical pre-match advices]" />
+
+				<container wants_mouse_events="true" id="topX" item_file="news_item_panels/backroom advice news topic panel pre match">
+					<translation id="title" translation_id="515091" type="use" value="Pre-Match Tactical Advice[COMMENT: AREA: Pre-match advice tab; SUB-AREA:  a sub-tab for the pre-match advice panl; BN: 35836; TONE: Formal; CHARLIMIT: none; REF-ID: n/a; NOTE; showing the main and cirtical pre-match advices]" />
+					<attachment_group class="horizontal_arrange_wrapped" horizontal_alignment="middle" horizontal_gap="8" />
+
+				</container>
+			</container>
+
+			<container class="scrolling_box" id="secT">
+				<translation id="title" translation_id="515092" type="use" value="Other Advice[COMMENT: AREA: Pre-match advice tab; SUB-AREA: a sub-tab for the pre-match advice panl; BN: 35836; TONE: Formal; CHARLIMIT: None; NOTE:showing non-critical pre-match advices]" />
+
+				<container wants_mouse_events="true" id="topL" item_file="news_item_panels/backroom advice news topic panel">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="8" horizontal_alignment="horizontal" horizontal_inset="0" vertical_gap="6" />
+				</container>
+			</container>
+
+
+		</container>
+	</container>
+
+
+	<!--Match Options-->
+	<widget class="match_tactics_toggle_button" id="mTgl" file="none">
+
+		<attachment_group class="horizontal_arrange_autosize_all_centre" horizontal_alignment="right" vertical_alignment="centre" horizontal_gap="6" />
+		<layout class="stick_to_sides_attachment" alignment="top, right" inset="5" />
+
+		<container>
+			<attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="right">
+				<global id="horizontal_gap" name="ui.split_button_row_gap" />
+			</attachment_group>
+			<widget class="radio_button" id="NMon" show_button_appearance="true" icon="none" selected="true" click_event="SnMo" auto_size="all" appearance="switches/toggle/left/button">
+				<translation id="text" translation_id="509201" type="use" value="Next Match Only[COMMENT: AREA: tactics panel; SUB-AREA: tactics panel beforet the match; FR-BN: 30876; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: option to apply tactical changes only to the next matche]" />
+			</widget>
+			<widget class="radio_button" id="alMT" show_button_appearance="true" icon="none" click_event="SlAM" auto_size="all" appearance="switches/toggle/right/button">
+				<translation id="text" translation_id="509200" type="use" value="All Matches[COMMENT: AREA: tactics panel; SUB-AREA: tactics panel beforet the match; FR-BN: 30876; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: option to apply tactical changes to all other matches ]" />
+			</widget>
+
+		</container>
+
+
+	</widget>
+
+
+
+</panel>

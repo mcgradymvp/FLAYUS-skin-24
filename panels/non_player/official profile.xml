@@ -1,0 +1,199 @@
+<panel>
+	<translation id="title" translation_id="247464" type="use" value="Official Profile Panel" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="inner_box_no_margin">
+		<attachment_group class="vertical_arrange" vertical_offset="0" horizontal_inset="0" />
+
+		<!-- main box -->
+		<container>
+			
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0" />
+			
+			<!-- Personal Information Panel -->
+			<container class="main_box">
+				<translation id="title" translation_id="247436" type="use" value="Personal Details" />
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+				
+				<!-- WITH PORTRAIT -->
+				<!-- this version of the table is used if the player portrait is visible -->
+				<widget class="table" id="pld1" mode="fill_rows, stripe_rows" layout="-1,-1,-1" row_height="24" auto_size="vertical" row_spacing="0">
+
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="right,centre_y" colour="selection" />
+						<record indx="2" alignment="right,centre_y" colour="selection" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0" left="4" sort_disabled="true" />
+						<record indx="1" left="4" sort_disabled="true" />
+						<record indx="2" rght="4" sort_disabled="true" />
+					</list>
+
+					<record id="default_properties" column_span="2" />
+
+					<!-- Player Picture -->
+					<widget class="picture" id="ppic" scale_picture="true" image_alignment="centre" row="0" col="0" row_span="6" />
+
+					<widget class="person_nationality_button" id="pfna" col="1" row="0" icon_alignment="far_right" dspf="1" />
+					<widget class="gender_label" id="pife" col="1" row="1" />
+					<widget class="label" id="pdob" col="1" row="2" />
+					<widget class="label" id="pfag" col="1" row="3" />
+					<widget class="global_reputation_stars_label" id="prps" col="1" row="4" />
+					<widget class="label" id="Prjo" col="1" row="5" />
+					<widget class="label" id="Puct" col="1" row="6" />
+				</widget>
+
+				<!-- WITHOUT PORTRAIT -->
+				<!-- this version of the table is used if the player portrait is hidden -->
+				<widget class="table" id="pld2" mode="fill_rows, stripe_rows" layout="-1,-1,-1" row_height="24" auto_size="vertical" row_spacing="0">
+					<list id="headings">
+						<record alignment="left,centre_y" column_span="3">
+							<translation id="text" translation_id="247436" type="use" value="Personal Details" />
+						</record>
+					</list>
+
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="right,centre_y" colour="selection" />
+						<record indx="2" alignment="right,centre_y" colour="selection" />
+					</list>
+
+					<list id="column_table_properties">
+						<record indx="0" left="4" sort_disabled="true" />
+						<record indx="1" left="4" sort_disabled="true" />
+						<record indx="2" rght="4" sort_disabled="true" />
+					</list>
+
+					<record id="default_properties" column_span="2" />
+
+
+					<widget class="label" col="0" row="0">
+						<translation id="text" translation_id="227841" type="use" value="Nationality" />
+					</widget>
+					<widget class="person_nationality_button" id="pfna" col="1" row="0" icon_alignment="far_right" dspf="1" />
+					<widget class="label" col="0" row="1">
+						<translation id="text" translation_id="227787" type="use" value="Born" />
+					</widget>
+					<widget class="label" id="pdob" col="1" row="1" />
+					<widget class="label" col="0" row="2">
+						<translation id="text" translation_id="229407" type="use" value="Age" />
+					</widget>
+					<widget class="label" id="pfag" col="1" row="2" />
+					<widget class="label" col="0" row="3">
+						<translation id="text" translation_id="227963" type="use" value="Reputation" />
+					</widget>
+					<widget class="global_reputation_stars_label" id="prps" col="1" row="3" />
+					<widget class="label" col="0" row="4">
+						<translation id="text" translation_id="227964" type="use" value="Job" />
+					</widget>
+					<widget class="label" id="Prjo" col="1" row="4" />
+					<widget class="label" col="0" row="5">
+						<translation id="text" translation_id="349025" type="use" value="Official Category[COMMENT: FR 3677, Match Officials (referees etc) category]" />
+					</widget>
+					<widget class="label" id="Puct" col="1" row="5" />
+
+				</widget>
+			</container>
+
+			<!-- Stats panel -->
+			<container class="main_box">
+				<translation id="title" translation_id="229984" type="use" value="Statistics" />
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+				<widget class="table" id="opst" mode="fill_rows, stripe_rows" layout="-6,-1" row_height="26" auto_size="vertical" row_spacing="0">
+
+					<list id="column_widget_properties">
+						<record indx="0" alignment="left,centre_y" />
+						<record indx="1" alignment="right,centre_y" colour="selection" />
+					</list>
+
+					<!-- small inset from sides of table -->
+					<list id="column_table_properties">
+						<record indx="0" left="4" sort_disabled="true" />
+						<record indx="1" rght="4" sort_disabled="true" />
+					</list>
+
+					<record id="default_properties" column_span="2" />
+
+
+					<widget class="label" col="0" row="0">
+						<translation id="text" translation_id="247159" type="use" value="Games" />
+					</widget>
+					<widget class="label" id="Prgc" col="1" row="0" />
+					<widget class="label" col="0" row="1">
+						<translation id="text" translation_id="247392" type="use" value="Red Cards" />
+					</widget>
+					<widget class="label" id="Prrc" col="1" row="1" />
+					<widget class="label" col="0" row="2">
+						<translation id="text" translation_id="247391" type="use" value="Yellow Cards" />
+					</widget>
+					<widget class="label" id="Pryc" col="1" row="2" />
+					<widget class="label" col="0" row="3">
+						<translation id="text" translation_id="247466" type="use" value="Home Penalties" />
+					</widget>
+					<widget class="label" id="Prhp" col="1" row="3" />
+					<widget class="label" col="0" row="4">
+						<translation id="text" translation_id="247467" type="use" value="Away Penalties" />
+					</widget>
+					<widget class="label" id="Prap" col="1" row="4" />
+					<widget class="label" col="0" row="5">
+						<translation id="text" translation_id="233158" type="use" value="Average Rating" />
+					</widget>
+					<widget class="label" id="Prra" col="1" row="5" />
+
+				</widget>
+			</container>
+		</container>
+		<!--Main Box-->
+
+		<!-- Past Fixtures Panel -->
+		<container class="main_box" id="fixt">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+			<widget class="table" mode="fill_rows, stripe_rows" id="opft" layout="150,-1,64,64,64,64,64,64" auto_size_rows="true" auto_size="vertical" row_spacing="0">
+
+				<record id="default_properties" alignment="centre" />
+				<flags id="default_sort_column" value="date" />
+
+				<list id="headings">
+					<record alignment="left,centre_y" column_span="2">
+						<translation id="text" translation_id="251247" type="use" value="Recent Fixtures[COMMENT: official_profile; heading]" />
+					</record>
+					<record alignment="left,centre_y" column_span="1">
+						<translation id="text" translation_id="251248" type="use" value="Comp[COMMENT: official_profile; competition three letter name heading]" />
+					</record>
+					<record alignment="centre" column_span="1">
+						<translation id="text" translation_id="251249" type="use" value="H Pens[COMMENT: official_profile; home team penalties awarded heading]" />
+					</record>
+					<record alignment="centre" column_span="1">
+						<translation id="text" translation_id="251250" type="use" value="A Pens[COMMENT: official_profile; away team penalties awarded heading]" />
+					</record>
+					<record alignment="centre" colour="yellow card" column_span="1">
+						<translation id="text" translation_id="251251" type="use" value="Yel[COMMENT: official_profile; yellow cards given heading]" />
+					</record>
+					<record alignment="centre" colour="red card" column_span="1">
+						<translation id="text" translation_id="251252" type="use" value="Red[COMMENT: official_profile; red cards given heading]" />
+					</record>
+					<record alignment="centre" column_span="1">
+						<translation id="text" translation_id="251253" type="use" value="Rating[COMMENT: official_profile; match rating heading]" />
+					</record>
+				</list>
+
+				<list id="column_table_properties">
+					<record index="0" id="date" />
+				</list>
+
+				<list id="column_widget_properties">
+					<record indx="0" alignment="left,centre_y" spec="text" />
+					<record indx="1" alignment="left,centre_y" spec="text" />
+					<record indx="2" alignment="left,centre_y" spec="text" />
+				</list>
+
+			</widget>
+		</container>
+
+	</container>
+	<!--MAIN AREA-->
+</panel>

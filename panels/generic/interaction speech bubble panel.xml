@@ -1,0 +1,48 @@
+﻿<panel>
+    <attachment_group class="vertical_arrange_autosize"/>
+
+    <!-- "standard" appearance path for speech bubble appearance, the "top"/"bottom"/"left"/"right" is set in code -->
+    <!-- can be over-ridden with "speech_bubble_appearance_override" where this panel is added in xml-->
+    <string id="speech_bubble_base_appearance" value="boxes/custom/speech bubble/"/>
+
+    <!-- main appearance box -->
+    <container class="plain_box" id="sbbx" red_replacement="bg lighter">
+        <attachment_group class="vertical_arrange_autosize" vertical_offset="6" />
+
+        <container id="maxb">
+            <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right, extend" horizontal_offset="8"/>
+
+            <container>
+                <attachment_group class="vertical_arrange_autosize" vertical_gap="4" />
+
+                <!-- what is being said -->
+                <widget class="text" id="qusl" colour="text" auto_size="vertical"/>
+                
+                <!--Container for special in-text widgets to show e.g. player demands during "Ask Agent about Availability" remote chat-->
+                <container class="scrolling_box" auto_size="vertical" auto_size_maximum_height="240">
+                    <container id="spcL">
+                        <attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="8" />
+
+                        <!--interaction panels add widgets at run-time here-->
+                    </container>
+                </container>
+                
+                <widget class="button" id="StFb" click_event="StFi" appearance="buttons/subtle/normal/button" auto_size="all" width="100" hidden="true">
+                    <translation id="text" translation_id="284304" type="use" value="No Comment[Press Conference; don't want to give an answer]"/>
+                </widget>
+
+                <widget class="spacer" height="1"/>
+            </container>
+
+            <!-- minimise button -->
+            <widget class="icon_button" id="Tmin" click_event="Tmin" icon="icons/16px/minimise bar" icon_colour="text" width="10" height="10" show_button_appearance="false" icon_alignment="top">
+                <layout class="stick_to_sides_attachment" alignment="top" inset="4"/>
+            </widget>
+        </container>
+
+        <!-- maximise button -->
+        <widget class="icon_button" id="Tmax" click_event="Tmin" icon="icons/16px/maximise" icon_colour="text" width="10" height="10" show_button_appearance="false" hidden="true" icon_alignment="top">
+            <layout class="stick_to_sides_attachment" alignment="top" inset="8"/>
+        </widget>
+    </container>
+</panel>

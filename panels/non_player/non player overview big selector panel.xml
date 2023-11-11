@@ -1,0 +1,23 @@
+<panel>
+  <container id="SUBP">
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+  
+  <widget class="popup_button" id="popv" auto_size="horizontal" height="20" click_event="msis" appearance="buttons/custom/customise panel/button" fixed="true" embed_in_frame="true">
+		<layout class="stick_to_sides_attachment" alignment="top,right" inset="1"/>
+	</widget>
+  </container>
+
+				<widget class="person_happiness_panel" id="phap" file="person/person happiness profile plans">
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			<!-- Hidden -->
+				    <widget class="client_object_viewer_xml_panel" id="gzth" file="non_player/gunzo non player profile h" default_height="-1" priority="1">
+					    <translation id="title" translation_id="348857" type="use" value="Hidden[COMMENT: steam workshop publishing panel; user can set the level of publicity for their steam workshop content]" />
+					    <record id="object_property" get_property="objt" set_property="objt"/>
+				    </widget>
+           
+</panel>

@@ -1,0 +1,318 @@
+<panel>
+	<boolean id="should_force_refresh" value="true" />
+	<boolean id="show_last_month_data" value="true" />
+
+	<string id="skin_style" value="subtle box"/>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+	<!--Financial data-->
+	<container class="bordered_box">
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="left" horizontal_inset="0" />
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" id="link" section="tfin" auto_size="all" alignment="left,centre_y" icon_alignment="top">
+				<translation id="text" translation_id="229821" type="use" value="Finances" />
+			</widget>
+		</container>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_offset="0" vertical_inset="0" />
+
+			<widget class="label" auto_size="all" colour="faded text" font="inbox_body" size="large">
+				<translation id="text" translation_id="412430" type="use" value="Current financial status:[COMMENT: FR 13660]" />
+			</widget>
+
+			<widget class="club_finances_description_text" id="CfiV" spec="text" alignment="left,centre_y" font="inbox_body" size="large" auto_size="vertical" />
+
+		</container>
+
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+				<!--balance-->
+				<container class="icon_box" icon="icons/custom/icon box/balance">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_inset="0" />
+
+					<widget class="label" auto_size="vertical" font="label" colour="accent" >
+						<translation id="text" translation_id="383591" type="use" value="Overall Balance[COMMENT: Finances panel]" />
+					</widget>
+
+					<widget class="cash_cell" height="20" alignment="left" auto_size="vertical" id="obal" font="value" />
+
+					<widget class="finance_history_panel" id="obag" finance_history_type="bala" height="145" show_instant_hint="true">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</list>
+						</record>
+					</widget>
+
+				</container>
+
+				<!--Income-->
+				<container class="icon_box" icon="icons/custom/icon box/income">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_inset="0" />
+
+					<widget class="label" font="label" colour="accent" auto_size="vertical">
+						<translation id="text" translation_id="383418" type="use" value="Income This Month[COMMENT: Finances panel]" />
+					</widget>
+
+					<widget class="cash_cell" id="incw" alignment="left" auto_size="vertical" font="value"/>
+
+					<widget class="finance_history_panel" id="incg" finance_history_type="toti" height="120" show_instant_hint="true">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</list>
+						</record>
+					</widget>
+
+					<container >
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" vertical_offset="0" />
+
+						<widget class="text" colour="faded text" auto_size="all">
+							<translation id="text" translation_id="412431" type="use" value="Main Income:[COMMENT: FR 13660]" />
+						</widget>
+
+						<widget class="text" id="maii" auto_size="vertical" />
+
+					</container>
+
+
+				</container>
+
+			</container>
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+				<!--profit loss-->
+				<container class="icon_box" icon="icons/custom/icon box/profitloss">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+
+					<widget class="label" auto_size="vertical" font="label" colour="accent">
+						<translation id="text" translation_id="383614" type="use" value="Profit / (Loss) This Month[COMMENT: Finances panel]" />
+					</widget>
+
+					<widget class="cash_cell" alignment="left" auto_size="vertical" id="pltm" font="value" />
+
+
+					<widget class="finance_history_panel" id="plog" finance_history_type="prls" height="145" show_instant_hint="true">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</list>
+						</record>
+					</widget>
+
+				</container>
+
+				<!--Expenditure-->
+				<container class="icon_box" icon="icons/custom/icon box/expenditure">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="2" horizontal_inset="0" />
+
+					<widget class="label" font="label" colour="accent" auto_size="vertical">
+						<translation id="text" translation_id="383320" type="use" value="Expenditure This Month[COMMENT: Finances panel]" />
+					</widget>
+
+					<widget class="cash_cell" id="expw" alignment="left" font="value" auto_size="vertical"/>
+
+					<widget class="finance_history_panel" id="expg" finance_history_type="tote" height="120" show_instant_hint="true">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</list>
+						</record>
+					</widget>
+
+					<container >
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" vertical_offset="0" />
+
+
+						<widget class="text" colour="faded text" auto_size="all">
+							<translation id="text" translation_id="412432" type="use" value="Main Expenditure:[COMMENT: FR 13660]" />
+						</widget>
+
+						<widget class="text" id="maie" auto_size="vertical" />
+
+					</container>
+
+				</container>
+
+			</container>
+
+		</container>
+
+
+	</container>
+
+	<container height="95">
+
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" vertical_inset="0" />
+
+
+		<container class="bordered_box">
+			<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+			<widget class="label" font="title" auto_size="vertical" alignment="left,centre_y" colour="accent" >
+				<translation id="text" translation_id="412433" type="use" value="Merchandise Income[COMMENT: FR 13660]" />
+			</widget>
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-2,-5" horizontal_offset="0" horizontal_gap="10" vertical_inset="0" />
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" vertical_offset="0" />
+
+						<widget class="cash_cell" id="merc" auto_size="all" size="14" />
+
+						<widget class="picture" id="meri" image_alignment="left,centre_y" auto_size="vertical"/>
+
+					</container>
+
+					<widget class="label" auto_size="vertical" font="label" colour="faded text" alignment="left,top">
+						<translation id="text" translation_id="383813" type="use" value="Total Income[COMMENT: FR 10982, content for Finances Screen]" />
+					</widget>
+
+				</container>
+
+				<container id="shic">
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+					<container>
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left" horizontal_offset="0" vertical_offset="0" />
+
+						<widget class="cash_cell" id="shir" auto_size="all" size="14" />
+
+						<widget class="picture" id="shii" image_alignment="centre" auto_size="all" />
+
+						<widget class="label" id="ndsh" auto_size="all" />
+
+					</container>
+
+					<widget class="label"  font="label" colour="faded text" auto_size="vertical" alignment="left,top">
+						<translation id="text" translation_id="412434" type="use" value="Monthly Shirt Sales[COMMENT: FR 13660]" />
+					</widget>
+				</container>
+			</container>
+		</container>
+
+		<container class="bordered_box">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="left" horizontal_inset="0" />
+
+				<string id="skin_style" value="title link" />
+
+				<!-- Linked header -->
+				<widget class="link_button" id="link" section="tcft" auto_size="horizontal" height="26">
+					<translation id="text" translation_id="306528" type="use" value="Transfer Clauses[COMMENT: news item button; links to Clauses section for a club]" />
+				</widget>
+			</container>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<widget class="text" id="0trc" auto_size="none" alignment="centre" multiline="true">
+					<translation id="text" translation_id="412435" type="use" value="No buyout fees currently available.[COMMENT: FR 13660]" />
+				</widget>
+
+				<container id="strc" hidden="true">
+					<attachment_group class="horizontal_arrange_vertical_centre" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="8" />
+
+					<container width="26" height="26">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+
+						<widget class="picture" file="icons/26px/circle" width="26" height="26" image_alignment="centre" red_replacement="yellow2" auto_size="vertical" />
+
+						<widget class="text" id="curw" size="large" width="26" alignment="centre" colour="black" auto_size="none" />
+
+					</container>
+
+					<widget class="text" multiline="true" id="strw" alignment="left,centre_y" font="inbox_body" auto_size="vertical" />
+
+				</container>
+			</container>
+		</container>
+
+	</container>
+
+
+	<!--FFP box that can be hidden if not relevant-->
+	<container class="bordered_box" id="ffpb" height="125">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="left" horizontal_inset="0" />
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" id="link" section="tFfp" auto_size="horizontal">
+				<translation id="text" translation_id="383324" type="use" value="Financial Fair Play Progress[COMMENT: finances screen label]" />
+			</widget>
+		</container>
+
+		<container class="horizontal_adaptive_container" inset="0" offset="0" gap="4" mode="distribute_equally" id="ffpc" height="100">
+			<!--FFP box 1-->
+			<container default_width="-1" minimum_width="320" id="ffp1">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="8" />
+
+				<widget class="label" height="25" id="f1cn" font="value" />
+
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" vertical_inset="8" />
+
+					<widget class="picture" id="f1ic" height="16" width="16" image_alignment="left,top" />
+
+					<widget class="text" auto_size="none" id="f1sl" font="text" size="small" />
+
+				</container>
+
+			</container>
+			<!--FFP box 2-->
+			<container default_width="-1" minimum_width="320" id="ffp2">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="8" />
+
+				<widget class="label" height="25" id="f2cn" font="value" />
+
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" vertical_inset="8" />
+
+					<widget class="picture" id="f2ic" height="16" width="16" image_alignment="left,top" />
+
+					<widget class="text" auto_size="none" id="f2sl" font="text" size="small" />
+
+				</container>
+
+			</container>
+		</container>
+	</container>
+</panel>

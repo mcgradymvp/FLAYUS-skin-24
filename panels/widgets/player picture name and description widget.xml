@@ -1,0 +1,49 @@
+﻿<panel auto_size_minimum_height="45">
+	<layout class="arrange_horizontal_attachment" layout="45, -1" offset="2" gap="2"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+    
+	<flags id="child_for_sort" value="PnmP"/>
+    
+	<widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x" height="45" >
+		<record id="object_property">
+			<list id="get_properties">
+				<!--Facegen data request-->
+				<record get_property="fcgn" />
+				<!--Fake name request-->
+				<record get_property="Pfke" />
+				<record get_property="prpc" set_property="valu" />
+			</list>
+		</record>
+	</widget>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+        
+		<flags id="child_for_sort" value="PnmP"/>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+			<widget class="person_button" id="PnmP" info_popup_enabled="true" style="bold">
+				<record id="object_property" get_property="PnmP" set_property="valu" />
+			</widget>
+		</container>
+		
+		<widget class="game_formatted_label" alignment="left,centre_y" size="small" colour="faded text" auto_size="vertical" multiline="false" >
+			<record id="format">
+				<translation id="text" translation_id="388547" type="use" value="[%number#1] year-old [%player_description#2][COMMENT: transfer window opening news, rumoured player moving, graphical display]"/>
+				<integer id="var2" value="vf_player_description"/>
+			</record>
+
+			<record id="object_property">
+				<list id="get_properties">
+					<!-- age -->
+					<record get_property="Page" set_property="var1" dont_set_object="true"/>
+					<!-- description -->
+					<record get_property="Pdes" set_property="var2" dont_set_object="true"/>
+				</list>
+			</record>
+		</widget>
+	</container>
+</panel>

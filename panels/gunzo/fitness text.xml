@@ -1,0 +1,19 @@
+<panel>
+  <layout class="arrange_vertical_attachment" layout="170, 25" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+  <container/>
+  
+  
+  <container class="bordered_box">
+   <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+    <!-- Fitness text -->
+    <widget class="fitness_label" id="fitL" multiline="false" auto_size="vertical" alignment="centre_x,top,can_scale" style="semi_bold">
+    <layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+
+	</widget>	
+  </container>
+  
+  
+  
+</panel>

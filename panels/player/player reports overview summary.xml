@@ -1,0 +1,89 @@
+﻿<panel>
+	<boolean id="should_force_refresh" value="true" />
+	<attachment_group class="vertical_arrange_autosize"/>
+
+	<list id="properties_to_forward">
+		<record get_property="recommendation_widget_mode" set_property="recommendation_mode" target="sriW"/>
+	</list>
+	<container class="inner_box">
+		<translation id="text" translation_id="361263" type="use" value="Recommendation[COMMENT: FR 8316]" />
+
+		<attachment_group class="vertical_arrange_autosize" vertical_gap="10"/>
+
+		<container height="60">
+			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="10" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<widget class="player_scout_recommendation_widget" id="sriW" width="60" show_knowledge_bar="false">
+				<record id="object_property" get_property="Psrk" set_property="objt" />
+			</widget>
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" gap="4" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<widget class="text" id="recw" alignment="left,centre_y" multiline="true" />
+				<widget class="player_scouting_centre_actions_popup_button" id="scAa" fixed="true" appearance="buttons/subtle/normal/button" hidden="true" auto_size="horizontal" >
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+			</container>
+		</container>
+		<container height="50" id="trif"  >
+			<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="text" font="label" auto_size="vertical">
+					<translation id="text" translation_id="335037" type="use" value="Estimated Cost[COMMENT: scout report panel label]" />
+				</widget>
+
+				<widget class="text" id="cosw" style="semi_bold" auto_size="vertical" multiline="false" />
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="text" font="label" auto_size="vertical">
+					<translation id="text" translation_id="450789" type="use" value="Estimated Wage[COMMENT: FR 21116, scout report panel label]" />
+				</widget>
+
+				<widget class="text" id="ewaw" style="semi_bold" auto_size="vertical" multiline="false" />
+				<widget class="text" id="wagw" auto_size="vertical" />
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="text" font="label" auto_size="vertical">
+					<translation id="text" translation_id="450790" type="use" value="Transfer Interest[COMMENT: FR 21116, scout report panel label]" />
+				</widget>
+
+				<widget class="text" id="triw"  style="semi_bold" auto_size="vertical" multiline="false" />
+
+			</container>
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<widget class="text" font="label" auto_size="vertical">
+					<translation id="text" translation_id="450791" type="use" value="Loan Interest[COMMENT: FR 21116, scout report panel label]" />
+				</widget>
+
+				<widget class="text" id="loiw"  style="semi_bold" auto_size="vertical" multiline="false" />
+
+			</container>
+
+
+
+
+		</container>
+
+		<widget class="text" id="wkpw" colour="faded text" auto_size="vertical" alignment="left" />
+
+
+	</container>
+
+</panel>

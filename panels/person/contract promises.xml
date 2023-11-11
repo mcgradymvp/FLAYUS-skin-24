@@ -1,0 +1,76 @@
+<panel>
+	<flags id="rleg" value="tables/custom/league/relegation/row" />
+	
+
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container >
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="8"/>
+
+		<container navigation_container="true">
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" vertical_offset="0"/>
+
+			<widget class="icon_button" id="nego" click_event="chek" icon="icons/lock/button_off" auto_size="all">
+			</widget>
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right" vertical_offset="0"/>
+				
+				<!--action buttons-->
+				<widget class="popup_button" id="prmp" sele="prmp" icon="icons/16px/plus" icon_alignment="left" auto_size="all" fixed="true">
+					<record id="primary_icon_properties" red_replacement="normal_icon" />
+					<translation id="text" translation_id="420714" type="use" value="Add Promise[COMMENT: FR 14013, button text to add a promise into contract negotiations, eg promise a player a particular squad number]" />
+				</widget>
+			</container>
+
+
+		</container>
+		
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0"/>
+
+    		<widget class="table" id="tabl" layout="-1" mode="fill_rows" auto_size_rows="true" fixed_size_rows="false" row_spacing="6" navigation_container="true" default_focus="true">
+   
+    		</widget>
+
+			<container id="buts" height="30" navigation_container="true">
+
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+
+				<container>
+					<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="left" horizontal_offset="2"/>
+
+					<record id="default_properties" auto_size="all" />
+
+					<widget class="icon_button" id="undo" click_event="undo" icon="icons/16px/reset" appearance="buttons/subtle/normal/button">
+						<translation id="text" translation_id="230013" type="use" value="Reset" />
+					</widget>
+
+
+				</container>
+
+				<container id="Acbt">
+					<attachment_group class="button_arrangement_right" />
+
+					<record id="default_properties" auto_size="all" />
+
+					<widget class="icon_button" click_event="walk" id="walk" controller_button="x_button">
+						<translation id="text" translation_id="313553" type="use" value="Walk Away[COMMENT: contract offer panel; walk away from the current contract negotiation]" />
+					</widget>
+
+					<!--Updated in code-->
+					<widget class="primary_icon_button" id="deal" click_event="deal" controller_button="y_button">
+						<translation id="text" translation_id="416362" type="use" value="Suggest Promises[COMMENT: FR 14013]" />
+					</widget>
+					<widget class="primary_icon_tick_button" id="done" click_event="done" controller_button="y_button">
+						<translation id="text" translation_id="420715" type="use" value="Finalise Promises[COMMENT: promises offer panel; user finalises the agreed promises to a player and advances to contract negotiations]" />
+					</widget>
+				</container>
+			</container>
+
+		</container>
+
+	</container>
+
+</panel>

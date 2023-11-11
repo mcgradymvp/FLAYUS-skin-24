@@ -1,0 +1,487 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+
+	<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		<container class="vertical_adaptive_container" inset="1" offset="0" gap="1">
+
+			<!-- RCA, CA, PA -->
+			<container default_height="30" minimum_height="30" priority="2">
+				<layout class="arrange_horizontal_attachment" layout="5,-1, -1, -1,5" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<container/>
+
+				<!-- RCA -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="15,-1" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="label" font="semibold" size="8" colour="faded text" alignment="centre_x,bottom" auto_size="vertical">
+						<translation id="text" translation_id="349063" type="use" value="추천 현재 능력"/>
+						<translation id="hint" translation_id="349114" type="use" value="The Current Ability level recommended based on player attributes set[COMMENT: player edit panel]" />
+					</widget>
+
+					<widget class="label" size="10" alignment="centre_x,top" font="semibold" colour="accent">
+						<record id="object_property">
+							<integer id="get_property" value="PRCA" />
+						</record>
+					</widget>
+
+				</container>
+
+				<!-- CA -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="15,-1" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="label" font="semibold" size="8" colour="faded text" alignment="centre_x,bottom" auto_size="vertical">
+						<translation id="text" translation_id="252139" type="use" value="어빌"/>
+						<translation id="hint" translation_id="310135" type="use" value="Current Ability[COMMENT: contract offer screen - comments table]" />
+					</widget>
+
+					<widget class="editable_client_object_property_panel" size="10" alignment="centre_x,top" font="semibold" colour="accent">
+						<record id="object_property">
+							<integer id="get_property" value="PCAB" />
+						</record>
+					</widget>
+
+				</container>
+
+				<!-- PA -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="15,-1" offset="0" gap="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="label" font="semibold" size="8" colour="faded text" alignment="centre_x,bottom" auto_size="vertical">
+						<translation id="text" translation_id="252141" type="use" value="포텐"/>
+						<translation id="hint" translation_id="310136" type="use" value="Potential Ability[COMMENT: contract offer screen - comments table]" />
+					</widget>
+
+					<widget class="editable_client_object_property_panel" size="10" alignment="centre_x,top" font="semibold" colour="accent">						
+						<record id="object_property">
+							<integer id="get_property" value="PPAB" />
+						</record>
+					</widget>
+
+				</container>
+
+				<container/>
+
+			</container>
+
+			<container height="5"/>
+
+			<!-- hidden 1 -->
+			<container default_height="60" minimum_height="30" priority="1">
+				<layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!-- adaptability -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="35,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="value_based_picture" id="adap" scale_picture="true" transparency="1">
+					<translation id="hint" translation_id="227943" type="use" value="Adaptability" />
+						<list id="value_list">
+							<record min_value="1" max_value="2" file="icons/custom/hidden/positive/1"/>
+							<record min_value="3" max_value="4" file="icons/custom/hidden/positive/2"/>
+							<record min_value="5" max_value="6" file="icons/custom/hidden/positive/3"/>
+							<record min_value="7" max_value="8" file="icons/custom/hidden/positive/4"/>
+							<record min_value="9" max_value="10" file="icons/custom/hidden/positive/5"/>
+							<record min_value="11" max_value="12" file="icons/custom/hidden/positive/6"/>
+							<record min_value="13" max_value="14" file="icons/custom/hidden/positive/7"/>
+							<record min_value="15" max_value="16" file="icons/custom/hidden/positive/8"/>
+							<record min_value="17" max_value="18" file="icons/custom/hidden/positive/9"/>
+							<record min_value="19" max_value="20" file="icons/custom/hidden/positive/10"/>
+						</list>						
+						<record id="object_property">
+							<integer id="get_property" value="Pada" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="7.5" colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="227943" type="use" value="Adaptability" />
+					</widget>
+
+				</container>
+
+				<!-- ambition -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="35,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="value_based_picture" id="ambi" scale_picture="true" transparency="1">
+						<translation id="hint" translation_id="293412" type="use" value="Ambition" />
+						<list id="value_list">
+							<record min_value="1" max_value="2" file="icons/custom/hidden/positive/1"/>
+							<record min_value="3" max_value="4" file="icons/custom/hidden/positive/2"/>
+							<record min_value="5" max_value="6" file="icons/custom/hidden/positive/3"/>
+							<record min_value="7" max_value="8" file="icons/custom/hidden/positive/4"/>
+							<record min_value="9" max_value="10" file="icons/custom/hidden/positive/5"/>
+							<record min_value="11" max_value="12" file="icons/custom/hidden/positive/6"/>
+							<record min_value="13" max_value="14" file="icons/custom/hidden/positive/7"/>
+							<record min_value="15" max_value="16" file="icons/custom/hidden/positive/8"/>
+							<record min_value="17" max_value="18" file="icons/custom/hidden/positive/9"/>
+							<record min_value="19" max_value="20" file="icons/custom/hidden/positive/10"/>
+						</list>						
+						<record id="object_property">
+							<integer id="get_property" value="Pamb" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="7.5" colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="293412" type="use" value="Ambition" />
+					</widget>
+
+				</container>
+
+				<!-- loyalty -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="35,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="value_based_picture" id="loya" scale_picture="true" transparency="1">
+						<translation id="hint" translation_id="293414" type="use" value="Loyalty" />
+						<list id="value_list">
+							<record min_value="1" max_value="2" file="icons/custom/hidden/positive/1"/>
+							<record min_value="3" max_value="4" file="icons/custom/hidden/positive/2"/>
+							<record min_value="5" max_value="6" file="icons/custom/hidden/positive/3"/>
+							<record min_value="7" max_value="8" file="icons/custom/hidden/positive/4"/>
+							<record min_value="9" max_value="10" file="icons/custom/hidden/positive/5"/>
+							<record min_value="11" max_value="12" file="icons/custom/hidden/positive/6"/>
+							<record min_value="13" max_value="14" file="icons/custom/hidden/positive/7"/>
+							<record min_value="15" max_value="16" file="icons/custom/hidden/positive/8"/>
+							<record min_value="17" max_value="18" file="icons/custom/hidden/positive/9"/>
+							<record min_value="19" max_value="20" file="icons/custom/hidden/positive/10"/>
+						</list>
+						<record id="object_property">
+							<integer id="get_property" value="Ploy" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="7.5" colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="293414" type="use" value="Loyalty" />
+					</widget>
+
+				</container>
+
+				<!-- pressure -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="35,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="value_based_picture" id="pres" scale_picture="true" transparency="1">
+						<list id="value_list">
+							<record min_value="1" max_value="2" file="icons/custom/hidden/positive/1"/>
+							<record min_value="3" max_value="4" file="icons/custom/hidden/positive/2"/>
+							<record min_value="5" max_value="6" file="icons/custom/hidden/positive/3"/>
+							<record min_value="7" max_value="8" file="icons/custom/hidden/positive/4"/>
+							<record min_value="9" max_value="10" file="icons/custom/hidden/positive/5"/>
+							<record min_value="11" max_value="12" file="icons/custom/hidden/positive/6"/>
+							<record min_value="13" max_value="14" file="icons/custom/hidden/positive/7"/>
+							<record min_value="15" max_value="16" file="icons/custom/hidden/positive/8"/>
+							<record min_value="17" max_value="18" file="icons/custom/hidden/positive/9"/>
+							<record min_value="19" max_value="20" file="icons/custom/hidden/positive/10"/>
+						</list>
+						<translation id="hint" translation_id="293329" type="use" value="Pressure" />
+						<record id="object_property">
+							<integer id="get_property" value="Ppre" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="7.5" colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="293329" type="use" value="Pressure" />
+					</widget>
+
+				</container>
+			</container>
+
+			<container height="5"/>
+
+			<!-- hidden 3 -->
+			<container default_height="60" minimum_height="30" priority="1">
+				<layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1,-1" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+
+				<!-- consistency -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="35,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					<widget class="value_based_picture" id="cont" scale_picture="true" transparency="1">
+						<translation id="hint" translation_id="361095" type="use" value="Cons[COMMENT: column heading; short for Consistency]" />
+						<list id="value_list">
+							<record min_value="1" max_value="2" file="icons/custom/hidden/positive/1"/>
+							<record min_value="3" max_value="4" file="icons/custom/hidden/positive/2"/>
+							<record min_value="5" max_value="6" file="icons/custom/hidden/positive/3"/>
+							<record min_value="7" max_value="8" file="icons/custom/hidden/positive/4"/>
+							<record min_value="9" max_value="10" file="icons/custom/hidden/positive/5"/>
+							<record min_value="11" max_value="12" file="icons/custom/hidden/positive/6"/>
+							<record min_value="13" max_value="14" file="icons/custom/hidden/positive/7"/>
+							<record min_value="15" max_value="16" file="icons/custom/hidden/positive/8"/>
+							<record min_value="17" max_value="18" file="icons/custom/hidden/positive/9"/>
+							<record min_value="19" max_value="20" file="icons/custom/hidden/positive/10"/>
+						</list>
+						<record id="object_property">
+							<integer id="get_property" value="PCON" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="7.5" colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="361095" type="use" value="Cons[COMMENT: column heading; short for Consistency]" />
+					</widget>
+				</container>
+
+				<!-- dirtiness -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="35,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					<widget class="value_based_picture" id="dirt" scale_picture="true" transparency="1">
+						<translation id="hint" translation_id="230007" type="use" value="Dirtiness" />
+						<list id="value_list">
+							<record min_value="1" max_value="2" file="icons/custom/hidden/negative/1"/>
+							<record min_value="3" max_value="4" file="icons/custom/hidden/negative/2"/>
+							<record min_value="5" max_value="6" file="icons/custom/hidden/negative/3"/>
+							<record min_value="7" max_value="8" file="icons/custom/hidden/negative/4"/>
+							<record min_value="9" max_value="10" file="icons/custom/hidden/negative/5"/>
+							<record min_value="11" max_value="12" file="icons/custom/hidden/negative/6"/>
+							<record min_value="13" max_value="14" file="icons/custom/hidden/negative/7"/>
+							<record min_value="15" max_value="16" file="icons/custom/hidden/negative/8"/>
+							<record min_value="17" max_value="18" file="icons/custom/hidden/negative/9"/>
+							<record min_value="19" max_value="20" file="icons/custom/hidden/negative/10"/>
+						</list>
+						<record id="object_property">
+							<integer id="get_property" value="Pdir" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="7.5" colour="red 300" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="230007" type="use" value="Dirtiness" />
+					</widget>
+				</container>
+
+				<!-- important -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="35,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					<widget class="value_based_picture" id="impo" scale_picture="true" transparency="1">
+						<translation id="hint" translation_id="230008" type="use" value="Important Matches" />
+						<list id="value_list">
+							<record min_value="1" max_value="2" file="icons/custom/hidden/positive/1"/>
+							<record min_value="3" max_value="4" file="icons/custom/hidden/positive/2"/>
+							<record min_value="5" max_value="6" file="icons/custom/hidden/positive/3"/>
+							<record min_value="7" max_value="8" file="icons/custom/hidden/positive/4"/>
+							<record min_value="9" max_value="10" file="icons/custom/hidden/positive/5"/>
+							<record min_value="11" max_value="12" file="icons/custom/hidden/positive/6"/>
+							<record min_value="13" max_value="14" file="icons/custom/hidden/positive/7"/>
+							<record min_value="15" max_value="16" file="icons/custom/hidden/positive/8"/>
+							<record min_value="17" max_value="18" file="icons/custom/hidden/positive/9"/>
+							<record min_value="19" max_value="20" file="icons/custom/hidden/positive/10"/>
+						</list>
+						<record id="object_property">
+							<integer id="get_property" value="Pimp" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="7.5" colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" type="use" translation_id="230008" value="중요 경기" />
+					</widget>
+				</container>
+
+				<!-- injury -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="35,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					
+					<widget class="value_based_picture" id="injy" scale_picture="true" transparency="1">
+						<translation id="hint" translation_id="230009" type="use" value="Injury Proneness" />
+						<list id="value_list">
+							<record min_value="1" max_value="2" file="icons/custom/hidden/negative/1"/>
+							<record min_value="3" max_value="4" file="icons/custom/hidden/negative/2"/>
+							<record min_value="5" max_value="6" file="icons/custom/hidden/negative/3"/>
+							<record min_value="7" max_value="8" file="icons/custom/hidden/negative/4"/>
+							<record min_value="9" max_value="10" file="icons/custom/hidden/negative/5"/>
+							<record min_value="11" max_value="12" file="icons/custom/hidden/negative/6"/>
+							<record min_value="13" max_value="14" file="icons/custom/hidden/negative/7"/>
+							<record min_value="15" max_value="16" file="icons/custom/hidden/negative/8"/>
+							<record min_value="17" max_value="18" file="icons/custom/hidden/negative/9"/>
+							<record min_value="19" max_value="20" file="icons/custom/hidden/negative/10"/>
+						</list>						
+						<record id="object_property">
+							<integer id="get_property" value="Pipr" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="7.5" colour="red 300" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="230009" type="use" value="Injury Proneness" />
+					</widget>
+				</container>
+
+				<!-- Versatility -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="35,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					
+					<widget class="value_based_picture" id="vesa" scale_picture="true" transparency="1">
+						<translation id="hint" translation_id="230011" type="use" value="Versatility" />
+						<list id="value_list">
+							<record min_value="1" max_value="2" file="icons/custom/hidden/positive/1"/>
+							<record min_value="3" max_value="4" file="icons/custom/hidden/positive/2"/>
+							<record min_value="5" max_value="6" file="icons/custom/hidden/positive/3"/>
+							<record min_value="7" max_value="8" file="icons/custom/hidden/positive/4"/>
+							<record min_value="9" max_value="10" file="icons/custom/hidden/positive/5"/>
+							<record min_value="11" max_value="12" file="icons/custom/hidden/positive/6"/>
+							<record min_value="13" max_value="14" file="icons/custom/hidden/positive/7"/>
+							<record min_value="15" max_value="16" file="icons/custom/hidden/positive/8"/>
+							<record min_value="17" max_value="18" file="icons/custom/hidden/positive/9"/>
+							<record min_value="19" max_value="20" file="icons/custom/hidden/positive/10"/>
+						</list>
+						<record id="object_property">
+							<integer id="get_property" value="Pver" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="7.5" colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="230011" type="use" value="Versatility" />
+					</widget>
+				</container>
+
+			</container>
+
+			<container height="5"/>
+
+			<!-- hidden 2 -->
+			<container default_height="60" minimum_height="30" priority="1">
+				<layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!-- professional -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="35,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="value_based_picture" id="prof" scale_picture="true" transparency="1">
+						<translation id="hint" translation_id="293415" type="use" value="Professionalism" /> 
+						<list id="value_list">
+							<record min_value="1" max_value="2" file="icons/custom/hidden/positive/1"/>
+							<record min_value="3" max_value="4" file="icons/custom/hidden/positive/2"/>
+							<record min_value="5" max_value="6" file="icons/custom/hidden/positive/3"/>
+							<record min_value="7" max_value="8" file="icons/custom/hidden/positive/4"/>
+							<record min_value="9" max_value="10" file="icons/custom/hidden/positive/5"/>
+							<record min_value="11" max_value="12" file="icons/custom/hidden/positive/6"/>
+							<record min_value="13" max_value="14" file="icons/custom/hidden/positive/7"/>
+							<record min_value="15" max_value="16" file="icons/custom/hidden/positive/8"/>
+							<record min_value="17" max_value="18" file="icons/custom/hidden/positive/9"/>
+							<record min_value="19" max_value="20" file="icons/custom/hidden/positive/10"/>
+						</list>
+						<record id="object_property">
+							<integer id="get_property" value="Ppro" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="7.5" colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="293415" type="use" value="Professionalism" /> 
+					</widget>
+
+				</container>
+
+				<!-- sportmanship -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="35,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="value_based_picture" id="spor" scale_picture="true" transparency="1">
+						<translation id="hint" translation_id="293416" type="use" value="Sportsmanship" />
+						<list id="value_list">
+							<record min_value="1" max_value="2" file="icons/custom/hidden/positive/1"/>
+							<record min_value="3" max_value="4" file="icons/custom/hidden/positive/2"/>
+							<record min_value="5" max_value="6" file="icons/custom/hidden/positive/3"/>
+							<record min_value="7" max_value="8" file="icons/custom/hidden/positive/4"/>
+							<record min_value="9" max_value="10" file="icons/custom/hidden/positive/5"/>
+							<record min_value="11" max_value="12" file="icons/custom/hidden/positive/6"/>
+							<record min_value="13" max_value="14" file="icons/custom/hidden/positive/7"/>
+							<record min_value="15" max_value="16" file="icons/custom/hidden/positive/8"/>
+							<record min_value="17" max_value="18" file="icons/custom/hidden/positive/9"/>
+							<record min_value="19" max_value="20" file="icons/custom/hidden/positive/10"/>
+						</list>
+						<record id="object_property">
+							<integer id="get_property" value="Pspo" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="7.5" colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="293416" type="use" value="Sportsmanship" />
+					</widget>
+
+				</container>
+
+				<!-- temperament -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="35,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="value_based_picture" id="temp" scale_picture="true" transparency="1">
+						<translation id="hint" translation_id="349110" type="use" value="Temperament[COMMENT: how good a person is at keeping their temper]" />
+						<list id="value_list">
+							<record min_value="1" max_value="2" file="icons/custom/hidden/positive/1"/>
+							<record min_value="3" max_value="4" file="icons/custom/hidden/positive/2"/>
+							<record min_value="5" max_value="6" file="icons/custom/hidden/positive/3"/>
+							<record min_value="7" max_value="8" file="icons/custom/hidden/positive/4"/>
+							<record min_value="9" max_value="10" file="icons/custom/hidden/positive/5"/>
+							<record min_value="11" max_value="12" file="icons/custom/hidden/positive/6"/>
+							<record min_value="13" max_value="14" file="icons/custom/hidden/positive/7"/>
+							<record min_value="15" max_value="16" file="icons/custom/hidden/positive/8"/>
+							<record min_value="17" max_value="18" file="icons/custom/hidden/positive/9"/>
+							<record min_value="19" max_value="20" file="icons/custom/hidden/positive/10"/>
+						</list>
+						<record id="object_property">
+							<integer id="get_property" value="Ptem" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="7.5" colour="faded text" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="349110" type="use" value="Temperament[COMMENT: how good a person is at keeping their temper]" />
+					</widget>
+
+				</container>
+
+				<!-- controversy -->
+				<container>
+					<layout class="arrange_vertical_attachment" layout="35,10" offset="0" gap="2"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+					<widget class="value_based_picture" id="conr" scale_picture="true" transparency="1">
+						<translation id="hint" translation_id="293413" type="use" value="Controversy" />
+						<list id="value_list">
+							<record min_value="1" max_value="2" file="icons/custom/hidden/negative/1"/>
+							<record min_value="3" max_value="4" file="icons/custom/hidden/negative/2"/>
+							<record min_value="5" max_value="6" file="icons/custom/hidden/negative/3"/>
+							<record min_value="7" max_value="8" file="icons/custom/hidden/negative/4"/>
+							<record min_value="9" max_value="10" file="icons/custom/hidden/negative/5"/>
+							<record min_value="11" max_value="12" file="icons/custom/hidden/negative/6"/>
+							<record min_value="13" max_value="14" file="icons/custom/hidden/negative/7"/>
+							<record min_value="15" max_value="16" file="icons/custom/hidden/negative/8"/>
+							<record min_value="17" max_value="18" file="icons/custom/hidden/negative/9"/>
+							<record min_value="19" max_value="20" file="icons/custom/hidden/negative/10"/>
+						</list>
+						<record id="object_property">
+							<integer id="get_property" value="Pcvy" />
+						</record>
+					</widget>
+
+					<widget class="label" font="semibold" size="7.5" colour="red 300" alignment="centre_x,top, can_scale" auto_size="vertical">
+						<translation id="text" translation_id="293413" type="use" value="Controversy" />
+					</widget>
+
+			   </container>
+			</container>
+		</container>
+	</container>
+
+</panel>

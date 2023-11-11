@@ -1,0 +1,85 @@
+﻿<panel>
+	<string id="progress_bar_left_appearance" value="boxes/contrast/standard/left/paper" />
+	<string id="progress_bar_middle_appearance" value="boxes/contrast/standard/middle/paper" />
+	<string id="progress_bar_right_appearance" value="boxes/contrast/standard/right/paper" />
+	<boolean id="save_session_state" value="true" />
+
+	<!--bar colours and opacities-->
+	<colour id="progress_bar_unfilled_colour" name="fg" />
+	<colour id="progress_bar_filled_colour"		name="bg accent" />
+	<colour id="progress_bar_current_step_colour"		name="bg accent" />
+	
+	<real id="progress_bar_unfilled_opacity" value="0.4" />
+	<real id="progress_bar_filled_opacity"		value="0.6" />
+	<real id="progress_bar_current_step_opacity"		value="1.0" />
+	
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<container class="main_box">
+		<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="16" gap="0" horizontal_inset="26"/>
+		<!--topbar-->
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" gap="0" inset="0"/>
+
+			<container class="client_object_viewer_xml_panel" id="stpC" width="200" >
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_gap="8"/>
+
+				<widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x" height="45" width="45">
+					<record id="object_property">
+						<list id="get_properties">
+							<!--Facegen data request-->
+							<record get_property="fcgn"/>
+							<!--Fake name request-->
+							<record get_property="Pfke"/>
+							<record get_property="prpc" set_property="valu"/>
+						</list>
+					</record>
+				</widget>
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize"/>
+
+					<widget class="person_button" id="PerB" style="bold" height="17" navigation_focus_target="true" info_popup_enabled="true" icon_enabled="true" person_is_player="false" auto_size="horizontal">
+						<record id="object_property" get_property="objt" set_property="valu"/>
+					</widget>
+
+					<!-- Nationality -->
+					<widget class="person_nationality_button" navigation_focus_target="true" height="17" id="natp" colour="text">
+						<record id="object_property">
+							<integer id="get_property" value="Pnat" />
+						</record>
+					</widget>
+
+					<widget class="job_label" colour="faded text" height="17" >
+						<record id="object_property" get_property="PcJj" set_property="valu"/>
+					</widget>
+				</container>
+			</container>
+
+			<container class="interaction_speech_bubble_panel" id="spCT" speech_bubble_appearance_override="boxes/custom/speech bubble/left/paper" text_colour="black" red_replacement="bg accent" show_minimise_icon="false" auto_size="vertical" />
+		</container>
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" gap="0" horizontal_inset="0"/>
+			<!--Main container-->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="32" vertical_gap="26" horizontal_inset="16"/>
+				<!--progress bar-->
+				<container class="horizontal_arrange_container" id="prgC" height="13" alignment="middle"  gap="2"/>
+				<!--descrition text-->
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_offset="0" vertical_gap="4" horizontal_inset="0"/>
+					<widget class="text" id="qstT" auto_size="vertical" alignment="centre" size="xlarge" font="title" colour="text" />
+					<widget class="text"  id="qstD" auto_size="vertical" colour="faded text" alignment="centre"  />
+				</container>
+				<!--tactic buttons-->
+				<container class="horizontal_arrange_container" id="strC" alignment="middle" auto_size="vertical" gap="28" />
+			</container>
+
+			<!--bottom bar-->
+			<container height ="30">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left" />
+				<widget class="icon_button" id="bckB" icon="icons/16px/left" auto_size="horizontal" hidden="true"  click_event="spCB" />
+			</container>
+		</container>
+	</container>
+</panel>

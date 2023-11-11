@@ -1,0 +1,30 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_layout="40,-1" vertical_gap="0"/>
+    
+  	<!--team logos-->
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_layout="-1,-1"/>
+
+		<!--logo-->
+		<widget class="match_team_logo_picture" id="hoLo" team_index="0" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="40">
+
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+
+		<!--logo-->
+		<widget class="match_team_logo_picture" id="awLo" team_index="1" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" width="40">
+
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+		</widget>
+	</container>
+  
+  <widget class="focus_of_attacks_pitch" id="fcat" vertical="false" fixed="true" auto_tick_exclusive="true" font_colour="white" alignment="centre" pitch_draw_grass="false" line_width="1" pitch_line_colour="text" pitch_touchline_width_percentage="5">
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+  </widget>
+</panel>

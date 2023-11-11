@@ -1,0 +1,18 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
+
+
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="-5" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+				<!--previous meetings-->
+				<widget class="label" alignment="left,bottom" size="9">
+					<translation id="text" translation_id="344616" type="use" value="Previous Meetings[COMMENT: title for a box containing information on previous meetings between two sides]" />
+				</widget>
+				<widget class="team_recent_form_widget" id="pmet">
+				</widget>
+			</container>
+
+</panel>

@@ -1,0 +1,92 @@
+<panel navigation_container="true" height="36">
+  <attachment_group class="vertical_arrange" vertical_offset="0"/>
+
+  <container class="plain_box" id="mbbg">
+    <attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right,extend" horizontal_offset="0" vertical_inset="0"/>
+
+    <container>
+      <attachment_group class="horizontal_arrange_vertical_autosize_centre"  horizontal_alignment="left,extend" vertical_inset="0"/>
+
+      <widget class="check_box" id="lock" click_event="lock" label_disabled="true" width="20" height="30" alignment="centre" icon="switches/lock/button" appearance="buttons/embedded/normal/button">
+        <translation id="hint" translation_id="350950" type="use" value="Select to mark this as non-negotiable[COMMENT: contract offer panel and transfer offer panel; offer condition lock; the contract term or transfer condition is not negotiable, i.e. the wage, squad status etc]" />
+      </widget>
+
+      <widget class="picture" id="pict" width="20" height="20" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" hidden="true"/>
+
+      <container>
+        <attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right,extend" vertical_inset="0"/>
+
+        <container>
+          <attachment_group class="vertical_arrange_autosize" vertical_gap="-2" vertical_offset="0"/>
+
+          <widget class="text" id="text" size="9.7" style="semi_bold" alignment="left, centre_y" auto_size="vertical" multiline="false" colour="text">
+            <string id="text" value="Temp" />
+          </widget>
+
+          <widget class="text" id="reas" size="8.8" alignment="left, centre_y" auto_size="vertical" multiline="false" hidden="true">
+            <string id="text" value="Temp" />
+          </widget>
+
+          <widget class="text" id="eiwi" size="8.8" alignment="left, centre_y" auto_size="vertical" multiline="false" hidden="true" colour="faded text" >
+            <string id="text" value="Temp" />
+          </widget>
+
+        </container>
+
+
+        <container id="ppcn" height="30">
+          <attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_alignment="right,extend" vertical_offset="0"/>
+
+          <widget class="left_right_list" id="left" auto_size="horizontal" hidden="true" minus_kind="selection_subtle_left" plus_kind="selection_subtle_right" main_kind="selection_subtle_popup" default_focus="true"/>
+
+          <widget class="popup_button" id="popU" alignment="left, centre_y" multiline="false" auto_size="horizontal" hidden="true" auto_size_minimum_width="140" appearance="buttons/subtle/normal/button" default_focus="true"/>
+          <widget class="popup_button" id="PVpu" alignment="left, centre_y" multiline="false" auto_size="horizontal" hidden="true"  auto_size_minimum_width="140" appearance="buttons/subtle/normal/button" default_focus="true"/>
+
+          <widget class="edit_date_cell" id="SdtP" auto_size="horizontal" hidden="true" colour="text" default_focus="true">
+            <translation id="format" translation_id="466566" type="use" value="Start Date: [%date#1-short][COMMENT: FR 9603, date a transfer or contract clause is enabled from]" />
+            <translation id="alternate_text" translation_id="466410" type="use" value="No Start Date[COMMENT: FR 9603, transfer or contract clause has no start date]" />
+            <record id="dialog_properties">
+              <string id="file" value="dialogs/clause start date dialog" />
+            </record>
+          </widget>
+          <widget class="edit_date_cell" id="EdtP" auto_size="horizontal" hidden="true" colour="text" default_focus="true">
+            <translation id="format" translation_id="437043" type="use" value="Expiry Date: [%date#1-short][COMMENT: FR 18181, date a transfer or contract clause expires on]" />
+            <translation id="alternate_text" translation_id="437044" type="use" value="No Expiry Date[COMMENT: FR 18181, transfer or contract clause has no expiry date]" />
+            <record id="dialog_properties">
+              <string id="file" value="dialogs/clause expiry date dialog" />
+            </record>
+          </widget>
+          <widget class="cash_selection_list" id="cash" width="210" hidden="true" minus_kind="selection_subtle_minus" plus_kind="selection_subtle_plus" default_focus="true">
+            <record id="edit_kind" class="button">
+              <record id="properties">
+                <flags id="appearance" value="selection/text" />
+                <flags id="auto_size" value="horizontal" />
+              </record>
+            </record>
+
+            <record id="alternative_main_kind" class="edit_box">
+              <record id="properties">
+                <integer id="width" value="125" />
+                <boolean id="show_clear_text_icon" value="false"/>
+              </record>
+            </record>
+          </widget>
+        </container>
+
+
+      </container>
+
+    </container>
+
+    <container height="30" width="20">
+      <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+      <widget class="popup_button" id="icon" draw_arrow="false" secondary_icon_enabled="false" icon="icons/16px/remove from list" appearance="buttons/custom/over state only/button"  icon_alignment="left" hidden="true" >
+        <record id="primary_icon_properties" red_replacement="fg" />
+      </widget>
+    </container>
+
+  </container>
+
+
+
+</panel>

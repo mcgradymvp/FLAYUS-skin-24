@@ -1,0 +1,97 @@
+<panel>
+
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container>
+    <layout class="arrange_horizontal_attachment" offset="0" gap="1" layout="-2,-5" />
+    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+    <!-- Left Bar -->
+    <container>
+      <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+      <container class="mini_information_panel" id="mini" file="generic/mini information" />
+      
+      <container>
+        <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+        <!-- The liked and disliked table-->
+        <widget class="person_relationships_panel" id="rela" />
+
+        <!-- The agents attributes-->
+        <widget class="agent_attributes_panel" id="attP" />
+      </container>
+    </container>
+
+    <!-- Right Bar -->
+    <container>
+      <layout class="arrange_vertical_attachment" offset="0" layout="130,-5" gap="1"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+      <!-- The Agent Banner-->
+      <container class="bordered_box">
+        <layout class="arrange_horizontal_attachment" offset="0" gap="0" layout="-1,-1,-1" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+        <!-- Number of clients-->
+        <container>
+          <layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+          <widget class="number_label" id="ncli" height="20" alignment="centre_x,bottom" font="value" />
+          <widget class="label" height="12" alignment="centre_x,top" font="label" colour="faded text">
+            <translation id="text" translation_id="308446" type="use" value="Clients[COMMENT: number of clients]" />
+          </widget>
+        </container>
+        
+        <!-- Scope -->
+        <container>
+          <layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+          <widget class="label" id="nsco" height="20" alignment="centre_x,bottom" font="value" />
+          <widget class="label" height="12" alignment="centre_x,top" font="label" colour="faded text">
+            <translation id="text" translation_id="308447" type="use" value="Scope[COMMENT: agents operates in, so eg. national, regional etc]" />
+          </widget>
+        </container>
+        
+        <!-- Based in -->
+        <container>
+          <layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" />
+          <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+          <widget class="label" id="nsba" height="20" alignment="centre_x,bottom" font="value" />
+          <widget class="label" height="12" alignment="centre_x,top" font="label" colour="faded text">
+            <translation id="text" translation_id="308448" type="use" value="Based[COMMENT: agents based in this country etc]" />
+          </widget>
+        </container>
+      </container>
+
+      <!-- The client list -->
+      <container class="subsection_box" id="plti" alignment="left">
+        <translation id="title" translation_id="308449" type="use" value="Client List[COMMENT: the client list of an agent]" />
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+        <widget class="client_object_list_table" id="clie" database_table_type="1" mode="fill_rows, stripe_rows,show_bullets, select_rows, select_multiple">
+          <integer id="contextual_handler_column_id" value="Pnms" />
+          <record id="viewed_property_ids">
+            <record id="Pnms" width="120"/>            <!-- Name -->
+            <record id="PpsC" />            <!-- Position -->
+            <record id="Page" width="40"/>            <!-- Age-->
+            <record id="Pclb" />            <!-- Club -->
+            <record id="Pctr" />            <!-- Transfer Status -->
+            <record id="Pdva" width="60"/>            <!-- Value -->
+            <record id="PagP" width="80"/>            <!-- Percentage -->
+          </record>
+        </widget>
+        
+      </container>
+      <!-- managers titled box -->
+
+    </container>
+
+  </container>
+  
+</panel>

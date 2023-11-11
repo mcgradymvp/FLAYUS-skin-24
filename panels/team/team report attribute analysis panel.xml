@@ -1,0 +1,365 @@
+<panel>
+
+	<flags id="bcol" value="bg positive" />
+	<flags id="wcol" value="bg blue lighter" />
+	<flags id="acol" value="text" />
+	<flags id="ncol" value="bg blue" />
+
+	<flags id="bbco" value="transparent" />
+	<flags id="wbco" value="bg alpha" />
+	
+	<record id="btpr" font="text" style="bold" col2="text"/> <!-- bar label text above line -->
+	<record id="wtpr" font="text" style="bold" col2="white"/> <!-- bar label text below line -->
+
+	<flags id="alwt" value="4" />
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	
+	<container class="main_box">
+	  <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<widget class="team_report_request_report_panel" id="nort" />
+
+	<set_var name="graph_container">
+		<container>
+			<var id="widget_id" name="container_id" />
+			<var id="title" name="container_title"/>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<container embed_in_frame="true" >
+				<attachment_group class="title_embedded_panel_right" />
+
+				<widget class="picture" file="icons/16px/line" width="16" height="30" embed_in_frame="true" scale_picture="true" image_alignment="centre" keep_aspect_ratio="true" red_replacement="grey 500" />
+				<widget class="label" auto_size="horizontal" height="30" embed_in_frame="true" colour="grey">
+					<translation id="text" translation_id="297338" type="use" value="Average" />
+				</widget>
+			</container>
+
+			<widget class="horizontal_divider" />
+
+			<widget class="label" auto_size="all" font="title" size="small">
+				<translation id="text" translation_id="420743" type="use" value="Show Only[COMMENT: FR 14427, filter options for positions on team comparison stats screens]" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="14" />
+			</widget>
+
+			<container height="30">
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="10" gap="12" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<record id="default_properties" select_event="cbsl" selected="true" auto_size="horizontal" />
+
+				<widget class="check_box" id="gkcb">
+					<translation id="text" translation_id="231451" type="use" value="Goalkeepers" />
+				</widget>
+
+				<widget class="check_box" id="dfcb">
+					<translation id="text" translation_id="231452" type="use" value="Defenders" />
+				</widget>
+
+				<widget class="check_box" id="mdcb">
+					<translation id="text" translation_id="231453" type="use" value="Midfielders" />
+				</widget>
+
+				<widget class="check_box" id="atcb">
+					<translation id="text" translation_id="320462" type="use" value="Strikers[COMMENT: match team talk panel; position divider if user wants to deliver a team talk to a positional group]" />
+				</widget>
+
+			</container>
+
+			<widget class="horizontal_divider" />
+
+			<widget class="spacer" height="5" />
+
+			<widget class="graph" file="team/team report attribute analysis graph">
+				<var id="widget_id" name="graph_id" />
+			</widget>
+		</container>
+	</set_var>
+
+	<set_var name="table_container">
+		<container>
+			<var id="widget_id" name="container_id" />
+			<var id="title" name="container_title"/>
+			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+			<widget class="table" layout="-3, -3, -3, -4, -3" mode="fill_rows, stripe_rows" auto_size_rows="false" row_height="24" row_spacing="4">
+				<var id="widget_id" name="table_id" />
+
+				<list id="headings">
+					<record alignment="left,centre_y" column="0">
+						<translation id="text" translation_id="316697" type="use" value="Attribute[COMMENT:team report, Attribute name]" />
+					</record>
+					<record alignment="left,centre_y" column="1">
+						<translation id="text" translation_id="326093" type="use" value="Team Rating[COMMENT: team report, Own team column]" />
+					</record>
+					<record alignment="left,centre_y" column="2">
+						<translation id="text" translation_id="316703" type="use" value="Worst Team[COMMENT: team report, Worst team column]" />
+					</record>
+					<record alignment="left,centre_y" column="3" />
+					<record alignment="left,centre_y" column="4">
+						<translation id="text" translation_id="318253" type="use" value="Best Team[COMMENT: team report, best team column]" />
+					</record>
+				</list>
+
+				<record id="default_properties" alignment="left,centre_y" />
+
+				<list id="column_table_properties">
+					<record index="0" left="5" />
+					<record index="1" right="5" />
+					<record index="2" right="5" />
+					<record index="3" top="6" bottom="6" />
+					<record index="4" left="5" />
+				</list>
+			</widget>
+		</container>
+	</set_var>
+	
+	<container id="sort">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<container class="tabbed_container" id="gcon" default_item="gene" save_session_state="true" navigation_container="true" default_focus="true">
+
+				<var name="graph_container">
+					<set_var name="container_id">
+						<flags value="gene" />
+					</set_var>
+					<set_var name="container_title">
+						<translation id="title" translation_id="316696" type="use" value="General[COMMENT: team report; header text for area of team]" />
+					</set_var>
+					<set_var name="graph_id">
+						<flags value="gngp" />
+					</set_var>
+				</var>
+
+				<var name="graph_container">
+					<set_var name="container_id">
+						<flags value="over" />
+					</set_var>
+					<set_var name="container_title">
+						<translation id="title" translation_id="316702" type="use" value="All Positions[COMMENT: team report; header text for area of team]" />
+					</set_var>
+					<set_var name="graph_id">
+						<flags value="ovgp" />
+					</set_var>
+				</var>
+
+				<var name="graph_container">
+					<set_var name="container_id">
+						<flags value="goal" />
+					</set_var>
+					<set_var name="container_title">
+						<translation id="title" translation_id="231451" type="use" value="Goalkeepers" />
+					</set_var>
+					<set_var name="graph_id">
+						<flags value="gkgp" />
+					</set_var>
+				</var>
+
+				<var name="graph_container">
+					<set_var name="container_id">
+						<flags value="defe" />
+					</set_var>
+					<set_var name="container_title">
+						<translation id="title" translation_id="316706" type="use" value="Defence[COMMENT: team report; header text for area of team]" />
+					</set_var>
+					<set_var name="graph_id">
+						<flags value="dfgp" />
+					</set_var>
+				</var>
+
+				<var name="graph_container">
+					<set_var name="container_id">
+						<flags value="midf" />
+					</set_var>
+					<set_var name="container_title">
+						<translation id="title" translation_id="316707" type="use" value="Midfield[COMMENT: team report; header text for area of team]" />
+					</set_var>
+					<set_var name="graph_id">
+						<flags value="mdgp" />
+					</set_var>
+				</var>
+
+				<var name="graph_container">
+					<set_var name="container_id">
+						<flags value="atta" />
+					</set_var>
+					<set_var name="container_title">
+						<translation id="title" translation_id="316708" type="use" value="Attack[COMMENT: team report; header text for area of team]" />
+					</set_var>
+					<set_var name="graph_id">
+						<flags value="atgp" />
+					</set_var>
+				</var>
+
+				<var name="graph_container">
+					<set_var name="container_id">
+						<flags value="phys" />
+					</set_var>
+					<set_var name="container_title">
+						<translation id="title" translation_id="230003" type="use" value="Physical" />
+					</set_var>
+					<set_var name="graph_id">
+						<flags value="phgp" />
+					</set_var>
+				</var>
+
+				<var name="graph_container">
+					<set_var name="container_id">
+						<flags value="ment" />
+					</set_var>
+					<set_var name="container_title">
+						<translation id="title" translation_id="230106" type="use" value="Mental" />
+					</set_var>
+					<set_var name="graph_id">
+						<flags value="megp" />
+					</set_var>
+				</var>
+
+				<var name="graph_container">
+					<set_var name="container_id">
+						<flags value="tech" />
+					</set_var>
+					<set_var name="container_title">
+						<translation id="title" translation_id="229413" type="use" value="Technical" />
+					</set_var>
+					<set_var name="graph_id">
+						<flags value="tcgp" />
+					</set_var>
+				</var>
+							
+			</container>
+
+			<container class="tabbed_container" id="tcon" default_item="gene" save_session_state="true" navigation_container="true">
+
+				<container id="gene">
+					<translation id="title" translation_id="316696" type="use" value="General[COMMENT: team report; header text for area of team]" />
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+					<widget class="table" id="gntb" layout="-3, -3, -3, -4, -3" mode="fill_rows, stripe_rows" auto_size_rows="false" row_height="24" row_spacing="4">
+
+						<list id="headings">
+							<record alignment="left,centre_y" column="0">
+								<translation id="text" translation_id="316697" type="use" value="Attribute[COMMENT:team report, Attribute name]" />
+							</record>
+							<record alignment="left,centre_y" column="1">
+								<translation id="text" translation_id="326092" type="use" value="Team Average[COMMENT: team report, Own team value]" />
+							</record>
+							<record alignment="left,centre_y" column="2">
+								<translation id="text" translation_id="316700" type="use" value="Lowest[COMMENT: team report, Worst team column]" />
+							</record>
+							<record alignment="left,centre_y" column="3" />
+							<record alignment="left,centre_y" column="4">
+								<translation id="text" translation_id="319563" type="use" value="Highest[COMMENT: team report, best team column]" />
+							</record>
+						</list>
+
+						<record id="default_properties" alignment="left,centre_y" />
+
+						<list id="column_table_properties">
+							<record index="0" left="5" />
+							<record index="1" right="5" />
+							<record index="2" right="5" />
+							<record index="3" top="6" bottom="6" />
+							<record index="4" left="5" />
+						</list>
+
+					</widget>
+				</container>
+
+				<var name="table_container">
+					<set_var name="container_id">
+						<flags value="over" />
+					</set_var>
+					<set_var name="container_title">
+						<translation id="title" translation_id="316702" type="use" value="All Positions[COMMENT: team report; header text for area of team]" />
+					</set_var>
+					<set_var name="table_id">
+						<flags value="ovtb" />
+					</set_var>
+				</var>
+
+				<var name="table_container">
+					<set_var name="container_id">
+						<flags value="goal" />
+					</set_var>
+					<set_var name="container_title">
+						<translation id="title" translation_id="231451" type="use" value="Goalkeepers" />
+					</set_var>
+					<set_var name="table_id">
+						<flags value="gktb" />
+					</set_var>
+				</var>
+
+				<var name="table_container">
+					<set_var name="container_id">
+						<flags value="defe" />
+					</set_var>
+					<set_var name="container_title">
+						<translation id="title" translation_id="316706" type="use" value="Defence[COMMENT: team report; header text for area of team]" />
+					</set_var>
+					<set_var name="table_id">
+						<flags value="dftb" />
+					</set_var>
+				</var>
+
+				<var name="table_container">
+					<set_var name="container_id">
+						<flags value="midf" />
+					</set_var>
+					<set_var name="container_title">
+						<translation id="title" translation_id="316707" type="use" value="Midfield[COMMENT: team report; header text for area of team]" />
+					</set_var>
+					<set_var name="table_id">
+						<flags value="mdtb" />
+					</set_var>
+				</var>
+
+				<var name="table_container">
+					<set_var name="container_id">
+						<flags value="atta" />
+					</set_var>
+					<set_var name="container_title">
+						<translation id="title" translation_id="316708" type="use" value="Attack[COMMENT: team report; header text for area of team]" />
+					</set_var>
+					<set_var name="table_id">
+						<flags value="attb" />
+					</set_var>
+				</var>
+
+				<var name="table_container">
+					<set_var name="container_id">
+						<flags value="phys" />
+					</set_var>
+					<set_var name="container_title">
+						<translation id="title" translation_id="230003" type="use" value="Physical" />
+					</set_var>
+					<set_var name="table_id">
+						<flags value="phtb" />
+					</set_var>
+				</var>
+
+				<var name="table_container">
+					<set_var name="container_id">
+						<flags value="ment" />
+					</set_var>
+					<set_var name="container_title">
+						<translation id="title" translation_id="230106" type="use" value="Mental" />
+					</set_var>
+					<set_var name="table_id">
+						<flags value="metb" />
+					</set_var>
+				</var>
+
+				<var name="table_container">
+					<set_var name="container_id">
+						<flags value="tech" />
+					</set_var>
+					<set_var name="container_title">
+						<translation id="title" translation_id="229413" type="use" value="Technical" />
+					</set_var>
+					<set_var name="table_id">
+						<flags value="tetb" />
+					</set_var>
+				</var>
+			</container>
+      </container>
+	</container>
+</panel>

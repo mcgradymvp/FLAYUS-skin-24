@@ -1,0 +1,17 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+		
+		<container>
+				<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0" />
+				<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" />
+
+				<widget class="icon_button" icon="icons/16px/speech bubble" id="ptbn" click_event="ptev" auto_size="all">
+					<layout class="centre_in_parent_attachment" alignment="vertical" />
+				</widget>
+
+				<widget class="icon_button" icon="icons/16px/speech bubble" id="ctbn" click_event="ctev" auto_size="all">
+					<layout class="centre_in_parent_attachment" alignment="vertical" />
+				</widget>
+		</container>
+
+</panel>

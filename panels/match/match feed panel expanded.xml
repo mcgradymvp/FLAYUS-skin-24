@@ -1,0 +1,24 @@
+﻿<panel>
+
+	<boolean id="cancel_mouse_hide" value="true"/>
+	<integer id="max_feed_items" value="-1"/>
+	<boolean id="always_enable_feed" value="true"/>
+
+	<record id="match_feed_item_panel_properties">
+		<boolean id="dfou" value="true"/>
+	</record>
+	
+	<list id="ignored_notification_types">
+		<integer value="30"/>
+	</list>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<container class="scrolling_box" alignment="top">
+		<!--standard feed items in here-->
+		<container id="feed">
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="12"/>
+		</container>
+	</container>
+
+</panel>

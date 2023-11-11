@@ -1,0 +1,198 @@
+<record>
+  <flags id="current_view" value="sssv" />
+  
+  <list id="views">
+    <record id="sssv">
+      <translation id="text" type="use" value="스토크님 스탭 검색 패널" />
+      <record id="view">
+	  	    <!-- 선수 상황 정보 -->  <!-- status flags -->
+					<record id="Pnfo" auto_hide_priority="1"  width="20" />                 								
+          <!-- person name with information icon -->  					
+					<record id="Psnm" auto_hide_priority="2" width="125" />		
+					<!-- Pife 성별 [COMMENT: the non-player's gender e.g. female]		-->    
+					<record id="Pife"  width="30"  colour="purple a100"   alignment="centre" />
+					<!-- 나이  -->  
+          <record id="PSag" width="18" />                      								
+					<!-- 국적 -->  
+          <record id="Pnat" width="33"/>
+					<!-- 2차 국적   -->  
+          <record id="Psnt" width="30"/>
+					<!-- 선호 직책  -->  
+					<record id="Ppfj" width="60" colour="cyan" multiline="false" alignment="centre, can_scale,centre_y" />					
+				  <!-- 	npcs  훈련 방식 -->
+					<record id="npcs"  width="45"   colour="pink"  multiline="false" alignment="centre, can_scale,centre_y"  />			
+					<!-- 	Nsta 평점 staf stars_range_strip  Rating -->
+					<record id="Nsta"  width="48"  auto_hide_priority="1" /> 			
+					<!-- 세계 명성   -->  
+					<record id="NrSr"  width="45" alignment="centre, can_scale,centre_y" />					  
+					<!-- club team -->
+					<record id="Pclb" width="100" alignment="left, can_scale,centre_y" iconalignment="centre" multiline="ture"  />	
+					<!-- 직책 -->
+          <record id="Pcsj"  width="120" alignment="left, can_scale,centre_y" />		 						
+					<!-- 코치 자격 -->  
+					<record id="Pcqu"  width="70" colour="yellow" alignment="centre, can_scale,centre_y"/>	
+					<!-- 보조 직책  -->
+          <record id="Psjb" width="50"   alignment="centre, can_scale,centre_y"/>		
+					<!-- internationl job text -->
+					<record id="PCij" width="75"  alignment="centre, can_scale,centre_y" />							 
+					<!--preferred formation-->
+					<record id="Nppf"  width="90" colour="cyan"  multiline="ture" alignment="centre, can_scale,centre_y"  />														
+					<!-- npps  경기 스타일 -->
+					<record id="npps"  width="55" multiline="ture" alignment="centre, can_scale,centre_y"  />
+					<!-- Npmm  선수 관리 -->
+					<record id="Npmm" width="25" auto_hide_priority="55"/>  
+					<!-- 의욕을 불어넣는 능력  -->
+					<record id="Npmo" width="25" auto_hide_priority="55"/>  
+					<!-- level of discipline -->		
+					<record id="Npld" width="20" auto_hide_priority="55"/>
+					<!--   승부욕  Npde -->
+					<record id="Npde" width="20" auto_hide_priority="55"/>			
+					<!-- Npad  적응력 -->
+					<record id="Npad" width="20" auto_hide_priority="55"/>
+		
+      </record>
+    </record>
+   
+   <record id="----" />	
+   
+    <record id="ctrc">
+      <translation id="text" translation_id="230163" type="use" value="Contract" />
+      <record id="view">
+        <record id="PSpi" />                          <!-- status flags -->
+        <record id="Psnm" />                          <!-- person name with information icon -->
+        <flags id="PSag" />                           <!-- person age -->
+        <record id="Ppfj" multiline="false" />        <!-- Role Desired -->
+        <flags id="Pclb" />                           <!-- club team -->
+        <record id="PCcj" multiline="false" />        <!-- club job text -->
+        <record id="PCij" multiline="false" />        <!-- internationl job text -->
+        <flags id="Pcif" />                           <!-- full time or part-time contract -->
+        <flags id="Pnrs" />                           <!-- reputation -->
+        <flags id="Pcty" />                           <!-- contact type -->
+        <flags id="Pcww" />                           <!-- weekly wage -->
+        <flags id="Pced" />                           <!-- end date -->
+      </record>
+    </record>
+
+    <record id="rate">
+      <translation id="text" translation_id="229619" type="use" value="Rating" />
+
+      <!-- Define attributes/properties to view in this view type on the panel.
+								  Any properties not defined here will be hidden for this view. -->
+      <record id="view">
+        <record id="PSpi" />                         <!-- status flags -->
+        <record id="Psnm" />                         <!-- person name with information icon -->
+        <flags id="Pclb" />                          <!-- club team -->
+        <record id="PCcj" multiline="false" />       <!-- club job text -->
+        <record id="NCst" auto_hide_priority="1" />  <!-- rating for current role-->
+        <record id="PCij" multiline="false" />       <!-- internationl job text -->
+        <record id="Ppfj" multiline="false" />       <!-- Role Desired -->
+        <record id="NIst" auto_hide_priority="1" />  <!-- rating for preferred role-->
+      </record>
+    </record>
+
+    <record id="coat">
+      <translation id="text" translation_id="230027" type="use" value="Coaching Attributes" />
+
+      <!-- Define attributes/properties to view in this view type on the panel.
+								  Any properties not defined here will be hidden for this view. -->
+      <record id="view">
+        <record id="PSpi" />       <!-- status flags -->
+        <record id="Psnm" />       <!-- person name with information icon -->
+        <record id="Ppfj" multiline="false" />  <!-- Role Desired -->
+        <flags id="Pclb" />        <!-- club team -->
+        <flags id="Npgd" />        <!-- goalkeeper coaching distribution -->
+        <flags id="Npgh" />        <!-- goalkeeper coaching handling -->
+        <flags id="Npgs" />        <!-- goalkeeper coaching shot stopping -->
+        <flags id="Ncha" />        <!-- coaching attacking-->
+        <flags id="Nchd" />        <!-- coaching defending-->
+        <flags id="Nchf" />        <!-- fitness coaching -->
+        <flags id="Nchm" />        <!-- mental coaching-->
+        <flags id="Ncte" />        <!-- technical coaching-->
+        <flags id="Ncta" />        <!-- tactical coaching-->
+        <flags id="Npmm" />        <!-- man management -->
+        <flags id="Npwy" />        <!-- working with youngsters -->
+      </record>
+    </record>
+
+	  <record id="miat">
+		  <translation id="text" translation_id="394485" type="use" value="Medical Team Attributes[COMMENT: team staff attributes panel label]" />
+
+		  <!-- Define attributes/properties to view in this view type on the panel.
+								  Any properties not defined here will be hidden for this view. -->
+		  <record id="view">
+			  <record id="PSpi" />			<!-- status flags -->
+			  <record id="Psnm" />      <!-- person name with information icon -->
+			  <record id="Ppfj" multiline="false" />  <!-- Role Desired -->
+			  <flags id="Pclb" />			  <!-- club team -->
+			  <flags id="Nppd" />			  <!-- presenting data -->
+			  <flags id="Npld" />			  <!-- level of discipline -->
+			  <flags id="Npph" />			  <!-- physiotherapy -->
+			  <flags id="NpIM" />			  <!-- injury management -->
+			  <flags id="Npmo" />			  <!-- motivating -->
+			  <flags id="Npad" />			  <!-- adaptability -->
+			  <flags id="Npde" />			  <!-- determination -->
+		  </record>
+	  </record>
+
+    <record id="MEat">
+      <translation id="text" translation_id="230062" type="use" value="Mental Attributes" />
+
+      <!-- Define attributes/properties to view in this view type on the panel.
+								  Any properties not defined here will be hidden for this view. -->
+      <record id="view">
+        <record id="PSpi" />       <!-- status flags -->
+        <record id="Psnm" />       <!-- person name with information icon -->
+        <record id="Ppfj" multiline="false" />  <!-- Role Desired -->
+        <flags id="Pclb" />        <!-- club team -->
+        <flags id="Npad" />        <!-- adaptability -->
+        <flags id="Npde" />        <!-- determination -->
+        <flags id="Npmo" />        <!-- motivating -->
+        <flags id="Nptk" />        <!-- tactical knowledge -->
+        <flags id="Npld" />        <!-- level of discipline -->
+        <flags id="Npja" />        <!-- judging ability -->
+        <flags id="Npjp" />        <!-- judging potential -->
+        <flags id="Npjs" />        <!-- judging staff ability -->
+        <flags id="Npjd" />        <!-- judging player data -->
+        <flags id="Npjt" />        <!-- judging team data -->
+		<flags id="Nneg" />			<!--negotiating-->
+       
+      </record>
+    </record>
+
+    <record id="----" />
+
+    <record id="nige">
+      <translation id="name" translation_id="361135" type="use" value="Hidden Attributes[COMMENT: attirbute filters; hidden attributes filterable in the editor]" />
+      <!-- Define attributes/properties to view in this view type on the panel.
+									  Any properties not defined here will be hidden for this view. -->
+      <record id="view">
+        <record id="Psnm" />
+        <flags id="Pcsj" />
+        <flags id="PSag" />
+        <flags id="Ncra" />
+        <flags id="Npta" />
+        <flags id="Nwrr" />
+        <flags id="Ncrr" />
+        <flags id="Nhmr" />
+      </record>
+    </record>
+
+    <record id="ndbg">
+      <translation id="name" translation_id="247109" type="use" value="Debug" />
+      <!-- Define attributes/properties to view in this view type on the panel.
+									  Any properties not defined here will be hidden for this view. -->
+      <record id="view">
+        <flags id="Pcsj" />         <!-- short job text -->
+        <record id="PSpi" />        <!-- status flags -->
+        <record id="Psnm" />        <!-- person name with information icon -->
+        <flags id="PSag" />         <!-- person age -->
+        <flags id="Ncra" />
+        <flags id="Npta" />
+        <flags id="Nwrr" />
+        <flags id="Ncrr" />
+        <flags id="Nhmr" />
+        <flags id="Npqs" />
+      </record>
+    </record>
+  </list>
+</record>

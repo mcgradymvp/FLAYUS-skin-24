@@ -1,0 +1,37 @@
+﻿<panel>
+	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="3" gap="-8"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+	<container>
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-3,-4" offset="0" gap="-20"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+			<widget class="tactics_kit_picture" id="kitp" number_inset_left="0" number_inset_right="0" number_inset_top="0" number_inset_bottom="0"/>
+		</container>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" alignment="right" offset="" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+			<record id="default_properties" image_alignment="centre" hidden="true" width="16" height="16" />
+
+			<widget class="picture" id="PTrt" file="icons/16px/key player" />
+			<widget class="picture" id="PTgs" file="icons/16px/goal" />
+			<widget class="picture" id="PTas" file="icons/16px/assist" />
+			<widget class="picture" id="PHNO" file="icons/16px/debut" />
+			<widget class="picture" id="PNba" file="icons/16px/yellow card" />
+		</container>
+
+	</container>
+
+	<container class="main_transparent_box_no_margin" red_replacement="grey 900">
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="fill" vertical_gap="-1"/>
+
+		<widget class="text" id="name" colour="text" size="8" alignment="centre,can_scale" auto_size="vertical" multiline="false" style="semi_bold"/>
+		<widget class="tactical_role_label" id="role" abbt="true" size="xsmall" auto_size="vertical" alignment="centre,can_scale"/>
+	</container>
+
+
+</panel>

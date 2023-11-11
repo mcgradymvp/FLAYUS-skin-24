@@ -1,0 +1,31 @@
+﻿<panel colour_team_names="true" colour_team_scores="true">
+  <!--background colour-->
+  <widget class="picture" id="bkcl" auto_size="vertical" file="boxes/custom/match/scoreboard/team/paper" cached="true" rthr="68" alignment="centre">
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+    <layout class="centre_in_parent_attachment" alignment="vertical" />
+  </widget>
+
+  <container>
+    <layout class="arrange_horizontal_attachment" layout="50,-1,45" gap="10" offset="10"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+  
+
+    <widget class="kit_picture" id="teKP" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre"/>
+     
+    <!-- team name -->
+    <widget class="text" id="mitn" font="title" size="normal" style="semi_bold" alignment="centre" multiline="false"/>
+    <!--logo-->
+    <container>
+      <layout class="arrange_horizontal_attachment" alignment="right" gap="0" offset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+	   
+     <widget class="match_team_logo_picture" id="TeLo" width="45" height="45"/>
+
+    </container>
+
+
+
+</container>
+
+</panel>

@@ -1,0 +1,20 @@
+﻿<panel>
+
+	<boolean id="cancel_mouse_hide" value="true"/>
+	<integer id="max_feed_items" value="1"/>
+	<boolean id="always_enable_feed" value="true"/>
+	<boolean id="revO" value="true"/>
+
+	<record id="match_feed_item_panel_properties">
+		<boolean id="hpco" value="true"/>
+		<boolean id="dfou" value="true"/>
+		<boolean id="isPM" value="true"/>
+		<flags id="iapp" value=""/>
+	</record>
+
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	
+	<container id="feed">
+			<attachment_group class="vertical_arrange" vertical_alignment="middle" horizontal_offset="0"/>
+		</container>
+</panel>

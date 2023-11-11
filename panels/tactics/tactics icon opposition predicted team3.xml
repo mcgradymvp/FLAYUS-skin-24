@@ -1,0 +1,29 @@
+﻿<panel use_hit_mask="true">
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container>
+    <layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="-1" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+   
+	 <!-- Player picture -->
+		<widget class="object_portrait_picture" id="pict" scale_picture="true" image_alignment="centre, top">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0,0,20,0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+			<record id="object_property">
+				<integer id="get_property" value="objt"/>
+				<integer id="set_property" value="objt"/>
+			</record>
+		</widget>
+		
+    <container class="bordered_box" appearance="boxes/custom/darken/rounded/no margin/paper">
+      <layout class="arrange_vertical_attachment" alignment="top" offset="3" gap="0" do_not_size="true"/>
+      <layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="0"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+      <widget class="tactical_role_label" id="role" abbt="false" size="xsmall" auto_size="vertical" alignment="centre, can_scale" colour="faded white"/>
+    </container>
+
+  </container>
+
+</panel>

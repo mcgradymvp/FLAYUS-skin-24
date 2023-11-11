@@ -1,0 +1,150 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_layout="180,-1" vertical_offset="0" vertical_gap="-10" horizontal_inset="0" />
+
+	<container class="client_object_viewer_xml_panel" file="team/team upcoming fixture badges manager home" id="tmbp" />
+
+	<string id="skin_style" value="contrast box" />
+	<!-- Comp name, stadium details and weather-->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="4" horizontal_inset="0" />
+		
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="4" vertical_gap="0" horizontal_inset="0" />
+
+			<container id="titl" height="40">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+				<widget class="label" id="titT" font="title" alignment="centre_y,centre_x" colour="text" auto_size="vertical">
+					<translation id="text" translation_id="308589" type="use" value="Next Match[COMMENT: Text on match preparation fixture tab]" />
+				</widget>
+
+				<widget class="label" id="nMat" alignment="centre_y,centre_x" format="date_and_days" />
+			</container>
+
+			<widget class="horizontal_divider" />
+
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+				<!-- Team names. Need lots of vertical space here as for cup matches there could be 2 teams on the right-->
+				<widget class="text" id="fixt" size="large" style="semi_bold" auto_size="vertical" alignment="centre_y,centre_x"/>
+
+				<container>
+					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+					<!-- team relative positions -->
+					<widget class="text" id="temp" colour="secondary_text" auto_size="vertical" alignment="centre_y,centre_x" size="small" />
+
+					<!--competition-->
+					<widget class="text" id="comp" auto_size="vertical" colour="secondary_text" alignment="centre_y,centre_x" multiline="false" size="small"/>
+
+					<!-- stadium name & weather-->
+					<container height="50">
+						<attachment_group class="vertical_arrange" vertical_alignment="left,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+
+						<widget class="stadium_button" id="stad" alignment="left,centre_y" auto_size="horizontal">
+              <translation id="no_object_text" translation_id="227505" type="use" value="Unknown Stadium"/>
+							<string id="format" value="[%stadium#1-short]" />
+							<record id="auto_size_restrictions">
+								<string id="type" value="widget_percent" />
+								<string id="limit_type" value="maximum" />
+								<string id="orientation" value="horizontal" />
+								<string id="target" value="parent" />
+								<real id="value" value="0.60" />
+							</record>
+						</widget>
+
+						<container class="weather_indicator_panel_horizontal" id="weat" text_colour="text">
+							<boolean id="show_weather_label" value="true" />
+							<boolean id="show_weather_icon" value="true" />
+							<boolean id="show_temperature_on_icon" value="true" />
+							<boolean id="weather_icon_size" value="12" />
+						</container>
+					</container>
+				</container>
+			</container>
+
+			<container height="5" />
+
+				<widget class="picture" file="dividers/standard/horizontal/line" height="1" />
+    
+  <!-- Manager and past meetings-->
+  <container>
+    <layout class="arrange_vertical_attachment" layout="-1,26" offset="0" gap="0" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <!-- Labels-->
+    <container height="26">
+      <layout class="arrange_vertical_attachment" layout="-1,-1,1,-1" offset="0" gap="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+      <widget class="label" alignment="bottom, left" font="title" auto_size="vertical" colour="faded text">
+        <translation id="text" translation_id="227980" type="use" value="Manager[COMMENT - manager, short text]" />
+      </widget>
+
+      <widget class="person_button" id="mang" spec="text" size="9" height="26" alignment="top, left">
+        <translation id="no_object_text" translation_id="424586" type="use" value="None[COMMENT: string indicating a club has no manager, different to the previously used ID 227487 so translate accordingly if needed]" />
+      </widget>
+      <widget class="picture" file="dividers/standard/horizontal/line" height="1" />
+      <widget class="label" alignment="bottom, left" font="title" auto_size="vertical" height="26" colour="faded text">
+        <translation id="text" translation_id="447705" type="use" value="All-Time Past Meetings[COMMENT: manager home; title for sectiond displaying past meetings between teams]" />
+      </widget>
+    </container>
+
+     <!-- Data -->
+    <container height="26">
+      <layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+      <container class="property_list_viewer_xml_panel" id="pmet">
+        <layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1,-1,-1" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+        <!-- Wins -->
+        <widget class="label" alignment="left, centre_y">
+          <translation id="text" translation_id="249367" type="use" value="승" />
+          <translation id="hint" translation_id="249411" type="use" value="Games Won[COMMENT: player stat: games won table label]" />
+        </widget>
+        <container>
+          <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+          <widget class="picture" file="icons/26px/circle" image_alignment="centre" red_replacement="team_form_win" />
+          <widget class="number_label" id="hmWl" alignment="centre">
+            <translation id="hint" translation_id="249411" type="use" value="Games Won[COMMENT: player stat: games won table label]" />
+          </widget>
+        </container>
+        <!-- Draws -->
+        <widget class="label" alignment="left, centre_y">
+          <translation id="text" translation_id="249065" type="use" value="무" />
+          <translation id="hint" translation_id="249412" type="use" value="Games Drawn[COMMENT: player stat: games drawn table label]" />
+        </widget>
+        <container>
+          <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+          <widget class="picture" file="icons/26px/circle" image_alignment="centre" red_replacement="orange" />
+          <widget class="number_label" id="hmDl" alignment="centre">
+            <translation id="hint" translation_id="249412" type="use" value="Games Drawn[COMMENT: player stat: games drawn table label]" />
+          </widget>
+        </container>
+        <!-- Losses -->
+        <widget class="label" alignment="left, centre_y">
+          <translation id="text" translation_id="242496" type="use" value="패" />
+          <translation id="hint" translation_id="249413" type="use" value="Games Lost[COMMENT: player stat: games lost table label]" />
+        </widget>
+        <container>
+          <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+          <widget class="picture" file="icons/26px/circle" image_alignment="centre" red_replacement="team_form_loss" />
+          <widget class="number_label" id="hmLl" alignment="centre">
+            <translation id="hint" translation_id="249413" type="use" value="Games Lost[COMMENT: player stat: games lost table label]" />
+          </widget>
+          
+        </container>
+      </container>     
+    </container>
+  </container>
+ </container>
+ 		<widget class="horizontal_divider" />
+ </container>
+ 
+</panel>

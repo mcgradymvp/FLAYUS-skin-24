@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel save_session_state="true">
+
+ <layout class="arrange_vertical_attachment" layout="-1" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	
+	<!-- No scout report -->
+	<container id="nsrc">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="5" />
+
+		<container id="nocs" height="50">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+			
+			
+			<widget class="icon_button" id="sctP" appearance="boxes/bordered/standard/paper1" red_replacement="secondary" font="gz_title" colour="accent" size="9" click_event="sctc" auto_size="horizontal" alignment="centre" height="25">
+				<translation id="text" translation_id="298524" type="use" value="Scouting Assignments[COMMENT: backroom advice, button link]" />
+
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			</widget>
+	<!--explanatory text-->
+			<widget class="text" alignment="centre_x,bottom" auto_size="vertical" size="9" colour="faded text">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+
+				<translation id="text" translation_id="297209" type="use" value="Scouting Required[COMMENT: shown when the user can't view player info without scouting them first]" />
+			</widget>
+		</container>
+
+		<widget id="nocn" class="label" spec="text,large" size="11" alignment="centre" auto_size="vertical">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+		</widget>
+	</container>
+
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="10" gap="30" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<!-- Recommendation -->
+					<widget class="player_scout_recommendation_widget" id="RCic" file="gunzo/gunzo scout recommendation" alignment="left, centre_y" auto_size="none" click_event="ltms" show_knowledge_bar="false" width="50">
+					</widget>
+
+					<widget class="scout_stars_label" id="CAic" alignment="centre_x,centre_y" height="30">
+
+					</widget>
+				</container>
+
+			</container>
+
+
+			<container>
+				<layout class="arrange_horizontal_attachment" layout="-1" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+			
+				<widget class="scout_stars_label" id="PAic" alignment="centre_x,centre_y" height="30">
+
+				</widget>
+
+			</container>
+
+		</container>
+
+		<!-- recommendation box
+		<container class="bordered_box" id="SMbx" appearance="boxes/custom/gunzo/rec" scale_picture="true" height="50">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+			
+		</container>-->
+
+
+
+
+</panel>

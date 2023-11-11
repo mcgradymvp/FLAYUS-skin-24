@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+    	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="5"/>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+			<layout class="arrange_vertical_attachment" layout="45,5,-1" offset="0" gap="0" />
+
+			<!-- Value, Squad Status, Asking price -->
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<layout class="arrange_horizontal_attachment" layout="-1,-1,-1" offset="0" gap="0" />
+
+				<!-- expire -->
+				<container>
+			     	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
+				
+					<widget class="date_cell" style="plain" alignment="centre_x,top,can_scale" size="9.5" colour="faded text">
+						<record id="object_property">
+							<integer id="get_property" value="Pced" />
+						</record>
+					</widget>
+					<widget class="label" alignment="centre_x,bottom" font="label" size="8.5" colour="faded text">
+						<translation id="text" translation_id="227784" type="use" value="Expires" />
+					</widget>
+				</container>
+
+				<!-- Squad Status -->
+				<container>
+				   <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+				<container>
+	                <layout class="arrange_vertical_attachment" layout="-1,-1" gap="0" offset="-1" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				
+					<widget class="playing_time_label" id="sqst" font="gzmain" multiline="true" colour="accent" size="9" auto_size="vertical" alignment="centre_x, top" >
+						<record id="object_property">
+								<integer id="get_property" value="Pcpt" />
+							</record>
+					</widget>	
+					
+				  	<widget class="label" id="lsqs" alignment="centre_x, bottom" font="label"  multiline="true" auto_size="vertical" colour="faded text">
+						<translation id="text" translation_id="492002" type="use" value="Actual Playing Time[COMMENT: AREA: Playing Time for Players; SUB-AREA: Contract Negotiations; FR-BN: 25975; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: concerns how much playing time a player is being promised]" />
+					</widget>					
+				  </container>
+
+			    </container>
+                
+			</container>
+			
+			<widget class="picture" file="dividers/standard/horizontal/line" />
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+				<layout class="arrange_horizontal_attachment" layout="-1, 1,100" offset="0" gap="8" />
+
+				<!-- Transfer status - appearance and text set in code -->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" gap="4" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<widget class="link_button" id="trnc" alignment="centre_x, centre_y" height="26" section="Ptin"/>
+					<widget class="link_button" id="lonc" alignment="centre_x, centre_y" height="26" section="Ptin"/>
+				</container>
+
+				<widget class="picture" file="dividers/standard/vertical/line" />
+
+				<!-- Transfer interest / Offers -->
+				<widget class="table" id="pctb" layout="24, -1" mode="" fixed_size_rows="true" auto_size_rows="false" row_height="26" row_spacing="4">
+					<list id="column_display_properties">
+						<record index="1" left="4" />
+					</list>
+
+					<!-- Offers -->
+					<container class="plain_box" appearance="" row="0" col="0" height="26">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+						<!-- Change the box colour if there are/aren't offers -->
+						<widget class="value_based_picture" id="tovp">
+							<list id="value_list">
+								<record value="0" file="boxes/custom/listed/no/paper" red_replacement="" />
+								<record default_value="true" file="boxes/custom/listed/yes/paper" red_replacement="" />
+							</list>
+						</widget>
+
+            <widget class="button" id="toff" alignment="centre" size="11" disabled_colour="faded text" style="semi_bold"  mouse_entered_event="shwb" mouse_exited_event="hipo" />
+					</container>
+					<widget class="text" alignment="left,centre_y" row="0" col="1" id="totx">
+						<translation id="text" translation_id="383265" type="use" value="Bids made[COMMENT: FR 10253, player overview; trandfers sub panel; label for number of bids (transfer offers) made for a player]" />
+					</widget>
+
+					<!-- Interest -->
+					<container class="plain_box" appearance="" row="1" col="0" height="26">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+						<!-- Change the box colour if there are/aren't offers -->
+						<widget class="value_based_picture" id="icvp">
+							<list id="value_list">
+								<record value="0" file="boxes/custom/listed/no/paper" red_replacement="" />
+								<record default_value="true" file="boxes/custom/listed/yes/paper" red_replacement="" />
+							</list>
+						</widget>
+
+            <widget class="button" id="iclb" alignment="centre" size="11" disabled_colour="faded text" style="semi_bold" mouse_entered_event="shwi" mouse_exited_event="hipo" />
+					</container>
+					<widget class="text" alignment="left,centre_y" row="1" col="1" id="ictx">
+						<translation id="text" translation_id="383284" type="use" value="Clubs Interested[COMMENT: FR 10253, player overview; trandfers sub panel; label for number of clubs interested in a player]" />
+					</widget>
+				</widget>
+						
+			</container>
+			
+			<widget class="picture" file="dividers/standard/horizontal/line" />
+
+		</container>
+	</container>
+</panel>

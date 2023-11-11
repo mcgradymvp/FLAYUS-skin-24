@@ -1,0 +1,106 @@
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="standard_popup_box">
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="10" />
+
+    <!-- Slide on from above the screen -->
+    <animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="0,-1" end_value="0,0" duration="0.1" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen" apply_to_mouse="false" />
+    <!-- Fade animation -->
+    <animation class="fade_on_hide_animation" duration="0.2"/>
+
+
+    <container>
+      <attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+
+      <!-- Title and buttons -->
+      <container navigation_container="true" default_focus="true">
+        <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-4" horizontal_offset="0" horizontal_gap="0" vertical_inset="4" />
+
+        <!-- Title -->
+        <container>
+          <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" horizontal_offset="5" vertical_inset="6" />
+
+          <widget class="link_button_panel_title" id="calL">
+            <translation id="text" translation_id="258189" type="use" value="Calendar[COMMENT: manager section heading]" />
+          </widget>
+        </container>
+
+        <!-- Buttons -->
+        <container>
+          <attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="right" horizontal_offset="0" horizontal_gap="0" vertical_offset="0"/>
+           
+
+          <widget class="button" id="nxMt" click_event="next" auto_size="all">
+            <translation id="text" translation_id="247353" type="use" value="Next Match" />
+          </widget>
+
+          <widget class="spacer" width="10"/>
+
+          <widget class="text" id="dayA" font="text" auto_size="all" colour="faded text" alignment="left,centre_y"/>
+          <widget class="spacer" width="4"/>
+          <widget class="text" id="verS" font="text" auto_size="all" colour="text" alignment="left,centre_y"/>
+          <widget class="text" id="comN" font="text" auto_size="all" colour="text" alignment="left,centre_y"/>
+
+          <widget class="spacer" width="10"/>
+
+          <widget class="button" id="rsBt" click_event="rseT" auto_size="all">
+            <translation id="text" translation_id="330706" type="use" value="Today[COMMENT: Deadline option on transfer offer screen]" />
+          </widget>
+
+          <container>
+            <attachment_group class="horizontal_arrange_autosize_all_centre" horizontal_alignment="right" horizontal_offset="0" vertical_offset="0">
+              <global id="horizontal_gap" name="ui.split_button_row_gap" />
+            </attachment_group>
+            <widget class="icon_button" id="lEft" click_event="navL" appearance="buttons/standard/split/left/button" icon="icons/16px/left" icon_alignment="centre" width="35" height="30"/>
+            <widget class="icon_button" id="rIghT" click_event="navR" appearance="buttons/standard/split/right/button" icon="icons/16px/right" icon_alignment="centre" width="35" height="30" />
+          </container>
+        </container>
+      </container>
+
+      <!-- Today -->
+      <container class="main_box" id="popH">
+        <attachment_group class="horizontal_arrange" horizontal_alignment="left, extend" horizontal_offset="0" horizontal_gap="-1" vertical_inset="0" />
+
+        <container width="200">
+          <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+          <widget class="calendar_popup_day_panel" id="toad"/>
+        </container>
+
+        <widget class="spacer" width="20"/>
+
+        <container>
+          <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,-200,0,-200" />
+
+          <container id="cald" ignore_error_detection="true" width="1200">
+            <attachment_group class="horizontal_arrange" horizontal_alignment="left" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+
+            <record id="default_properties" width="200">
+              <list id="animations">
+                <record class="position_animation" duration="0.15"/>
+              </list>
+            </record>
+            <widget class="calendar_popup_day_panel"/>
+            <widget class="calendar_popup_day_panel"/>
+            <widget class="calendar_popup_day_panel"/>
+            <widget class="calendar_popup_day_panel"/>
+            <widget class="calendar_popup_day_panel"/>
+
+            <widget class="calendar_popup_day_panel"/>
+            <widget class="calendar_popup_day_panel"/>
+            <widget class="calendar_popup_day_panel"/>
+            <widget class="calendar_popup_day_panel"/>
+            <widget class="calendar_popup_day_panel"/>
+
+            <widget class="calendar_popup_day_panel"/>
+            <widget class="calendar_popup_day_panel"/>
+            <widget class="calendar_popup_day_panel"/>
+            <widget class="calendar_popup_day_panel"/>
+            <widget class="calendar_popup_day_panel"/>
+          </container>
+        </container>
+      </container>
+
+    </container>
+  </container>
+</panel>

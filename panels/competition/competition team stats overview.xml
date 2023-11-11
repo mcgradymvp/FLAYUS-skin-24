@@ -1,0 +1,122 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+	<boolean id="save_session_state" value="true" />
+
+	<!-- Default stat type to select -->
+	<integer id="default_value" value="15"/>
+
+	<!-- panel for no data available-->
+	<container class="empty_state" id="nost" header_widget="BShe" hidden="true">
+		<widget class="text" id="BShe">
+			<translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+		</widget>
+	</container>
+
+	<container class="subsection_box" height="480" >
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="1" />
+
+		<!-- Label and stage selector -->
+		<container embed_in_frame="true">
+			<attachment_group class="title_embedded_panel_left"/>
+
+			<widget class="view_menu_label" id="labl" colour="yellow">
+				<translation id="text" translation_id="392264" type="use" value="Team Stats Overview[COMMENT: FR 8873; Competition team stats overview; panel title]" />
+			</widget>
+
+			<!-- The stages menu: visible if more than one stage/substage -->
+			<widget class="view_menu_popup" id="sviw" auto_tick_exclusive="true" save_session_state="true" />
+		</container>
+
+		<!-- Large box with single selectable stats and a list displaying more when one is highlighted -->
+		<container width="560">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<!-- Background pitch-->
+			<widget class="pitch" vertical="true" pitch_alignment="centre" pitch_draw_goals="false" pitch_draw_markings="false" pitch_draw_grass="false" pitch_line_colour="faded white" pitch_touchline_width_percentage="1" pitch_perspective="0.15" line_width="1.4" />
+
+			<!-- Single stats items. This container or one above it must have this id to make the radio buttons work -->
+			<container class="vertical_arrange_container" id="radC" alignment="fill" offset="30" gap="30" inset="0">
+
+				<record id="default_properties" layout="-1, -1" offset="20" gap="20" inset="0" />
+				
+				<container class="horizontal_arrange_container" >
+					<!-- CCS_SHOTS_ON_TARGET_RATIO -->
+					<widget class="competition_team_stats_panel" file="competition/competition team stats item panel left" maximum_items="top_only_with_count" type="39" />
+					<!-- CCS_GOALS -->
+					<widget class="competition_team_stats_panel" file="competition/competition team stats item panel right" maximum_items="top_only_with_count" type="15" />
+				</container>
+
+				<container class="horizontal_arrange_container">
+					<!-- CCS_CROSSES_COMPLETED -->
+					<widget class="competition_team_stats_panel" file="competition/competition team stats item panel left" maximum_items="top_only_with_count" type="37" />
+					<!-- CCS_HEADERS_WON -->
+					<widget class="competition_team_stats_panel" file="competition/competition team stats item panel right" maximum_items="top_only_with_count" type="35" />
+				</container>
+
+				<container class="horizontal_arrange_container">
+					<!-- CCS_PASSES_COMPLETED -->
+					<widget class="competition_team_stats_panel" file="competition/competition team stats item panel left" maximum_items="top_only_with_count" type="30" />
+					<!-- CCS_AVERAGE_POSSESSION -->
+					<widget class="competition_team_stats_panel" file="competition/competition team stats item panel right" maximum_items="top_only_with_count" type="28" />
+				</container>
+
+				<container class="horizontal_arrange_container">
+					<!-- CCS_FOULS_MADE -->
+					<widget class="competition_team_stats_panel" file="competition/competition team stats item panel left" maximum_items="top_only_with_count" type="31" />
+					<!-- CCS_TACKLES_WON -->
+					<widget class="competition_team_stats_panel" file="competition/competition team stats item panel right" maximum_items="top_only_with_count" type="33" />
+				</container>
+
+				<container class="horizontal_arrange_container">
+					<!-- CCS_CLEAN_SHEETS -->
+					<widget class="competition_team_stats_panel" file="competition/competition team stats item panel left" maximum_items="top_only_with_count" type="41" />
+					<!-- CCS_CONCEDED -->
+					<widget class="competition_team_stats_panel" file="competition/competition team stats item panel right" maximum_items="top_only_with_count" type="16" />
+				</container>
+
+			</container>
+
+		</container>
+
+		<!-- Stats panel showing the highlighted stat -->
+		<container class="competition_team_stats_panel" id="selP" maximum_items="8" type="2">
+			<!-- Header with stat type string and stat selector button -->
+			<widget class="link_button_title" id="stit" font="title" colour="yellow" embed_in_frame="true" red_replacement="yellow">
+				<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" embed_in_frame="true"/>
+			</widget>
+		</container>
+	</container>
+
+	<!-- Adaptive rows of little stat boxes-->
+	<container class="vertical_adaptive_container" inset="0" offset="0"  mode="distribute_equally">
+
+		<record id="default_properties" inset="0" offset="0"  minimum_height="160" mode="distribute_equally">
+			<record id="default_properties" file="competition/competition team stats panel small" maximum_items="7" minimum_width="280" store_config_id="tmSC" />
+		</record>
+		
+		<container class="horizontal_adaptive_container"  priority="1">
+			<!-- CCS_FORM -->
+			<container class="competition_team_stats_panel" id="sta1" type="5" priority="1" option="true"/>
+			<!-- CCS_GAMES_WITHOUT_LOSING -->
+			<container class="competition_team_stats_panel" id="sta2" type="10" priority="2" option="true"/>
+			<!-- CCS_GAMES_WITHOUT_WINNING -->
+			<container class="competition_team_stats_panel" id="sta3" type="11" priority="3" option="true"/>
+			<!-- CCS_GAMES_WITHOUT_CONCEDING -->
+			<container class="competition_team_stats_panel" id="sta4" type="12" priority="4" option="true"/>
+		</container>
+
+		<container class="horizontal_adaptive_container" priority="2">
+			<!-- CCS_AVERAGE_ATTENDANCE -->
+			<container class="competition_team_stats_panel" id="sta5" type="2" priority="2" option="true"/>
+			<!-- CCS_RED_CARDS -->
+			<container class="competition_team_stats_panel" id="sta6" type="25" priority="4" option="true"/>
+			<!-- CCS_NET_TRANSFER_SPEND -->
+			<container class="competition_team_stats_panel" id="sta7" type="27" priority="1" option="true"/>
+			<!-- CCS_SALARY_PER_ANNUM -->
+			<container class="competition_team_stats_panel" id="sta8" type="28" priority="3" option="true"/>
+		</container>
+	</container>
+</panel>

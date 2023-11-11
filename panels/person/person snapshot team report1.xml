@@ -1,0 +1,137 @@
+<panel>
+
+  <layout class="arrange_horizontal_attachment" layout="-1,1,-1" />
+  <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+  		<container>
+		    <layout class="arrange_vertical_attachment" layout="180,-1,-1,-1" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<!-- profile picture -->
+			<widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x,centre_y">
+				<record id="object_property">
+					<list id="get_properties">
+						<!--Facegen data request-->
+						<record get_property="fcgn" />
+						<!--Fake name request-->
+						<record get_property="Pfke" />
+						<record get_property="prpc" set_property="valu" />
+					</list>
+				</record>
+			</widget>
+
+            <widget class="person_button" id="perM" size="13" style="bold" alignment="bottom,can_scale">
+               <record id="object_property">
+			     <integer id="get_property" value="objt" />
+		      	 <integer id="set_property" value="valu" />
+		       </record>
+	        </widget>
+			
+			<widget class="text"  spec="text,large" size="8" alignment="centre,can_scale" colour="faded text">
+				<translation id="text" translation_id="229407" type="use" value="Age" />
+			</widget>
+			
+			<widget class="label" id="age " spec="text,large,bold" colour="gzc" size="13" alignment="centre,can_scale">
+				<record id="object_property">
+					<integer id="get_property" value="Page" />
+				</record>
+			</widget>
+		</container>
+		
+		<widget class="picture" file="dividers/standard/vertical/line"  />
+
+		<container class="vertical_adaptive_container" mode="distribute_equally" layout="-1,1,-1,1,-1,1,-1,1,-1" offset="0" inset="0" gap="0">
+
+			<!-- Reputation -->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					<widget class="label" alignment="centre,top" spec="text,small" colour="faded white" auto_size="vertical">
+						<translation id="text" translation_id="227963" type="use" value="Reputation" />
+					</widget>
+					<widget class="global_reputation_stars_label" lrge="true" id="pReP" image_alignment="centre,top">
+						<record id="object_property" get_property="Prsa" dont_set_hint="true" />
+					</widget>
+				</container>
+			
+			<widget class="picture" file="dividers/standard/horizontal/line"  />
+			
+				<!--Personality-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="label" alignment="centre,top" spec="text,small" colour="faded text" auto_size="vertical">
+						<translation id="text" translation_id="247713" type="use" value="Personality" />
+					</widget>
+
+					<widget class="personality_label" id="peRs" size="11" colour="gzc" multiline="true" alignment="centre,top" auto_size="vertical" >
+						<record id="object_property">
+							<integer id="get_property" value="PPst" />
+						</record>
+					</widget>
+				</container>
+			
+			<widget class="picture" file="dividers/standard/horizontal/line"  />
+
+			<!--preferred formation-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="label" id="frmL" alignment="centre,top" spec="text,small" colour="faded text" auto_size="vertical">
+					<record id="object_property">
+						<integer id="get_property" value="Nppf" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+				<widget class="formation_label" id="frmV" spec="text" size="11" alignment="centre,top" auto_size="vertical">
+					<record id="object_property">
+						<integer id="get_property" value="Nppf" />
+					</record>
+				</widget>
+			</container>		
+			
+			<widget class="picture" file="dividers/standard/horizontal/line"  />
+
+			<!--playing style-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="label" id="plsL" alignment="centre,top" spec="text,small" colour="faded text" auto_size="vertical">
+					<record id="object_property">
+						<integer id="get_property" value="npps" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+				<widget class="playing_style_label" id="plsV" spec="text" size="11" alignment="centre,top" auto_size="vertical">
+					<record id="object_property">
+						<integer id="get_property" value="npps" />
+					</record>
+				</widget>
+			</container>
+			
+			<widget class="picture" file="dividers/standard/horizontal/line"  />
+			
+			<!--playing mentality-->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+				<widget class="label" id="plmL" alignment="centre,top" spec="text,small" colour="faded text" auto_size="vertical">
+					<record id="object_property">
+						<integer id="get_property" value="nppm" />
+						<boolean id="name" value="true"/>
+					</record>
+				</widget>
+				<widget class="playing_mentality_label" id="plmV" spec="text" size="11" alignment="centre,top" auto_size="vertical">
+					<record id="object_property">
+						<integer id="get_property" value="nppm" />
+					</record>
+				</widget>
+			</container>
+		</container>
+
+  
+</panel>
