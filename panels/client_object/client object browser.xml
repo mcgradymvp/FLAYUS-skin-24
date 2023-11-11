@@ -21,23 +21,20 @@
                 <record get_property="MatS" test_mode="equal" value="true" skip_if_null="true" />
                 <!-- PROP_FULL_SCREEN_3D_BEING_DRAWN -->
                 <record get_property="Ma3D" test_mode="equal" value="true" comparison_mode="or" skip_if_null="true" />
-            </list>
-            <integer id="set_property" value="hidn" />
-        </attachment>
-    </widget>
-
-	<widget class="picture" file="backgrounds/bg" scale_picture="true" transparency="0.7">
-        <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
-        <attachment class="test_multiple_globals_attachment" default_value="false">
-            <list id="get_properties">
-                <record get_property="MatS" test_mode="equal" value="true" skip_if_null="true" />
-                <!-- PROP_FULL_SCREEN_3D_BEING_DRAWN -->
+				</list>
+				<integer id="set_property" value="hidn" />
+			</attachment>
+	</widget>
+	<!-- background selector -->
+	<container file="background_selector/backgrounds">
+			<attachment class="test_multiple_globals_attachment" default_value="false">
+				<list id="get_properties">
+				<record get_property="MatS" test_mode="equal" value="true" skip_if_null="true" />
                 <record get_property="Ma3D" test_mode="equal" value="true" comparison_mode="or" skip_if_null="true" />
-            </list>
-            <integer id="set_property" value="hidn" />
-        </attachment>
-    </widget>
-	
+				</list>
+				<integer id="set_property" value="hidn" />
+			</attachment>
+	</container>
 	<widget>
         <layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="mai1"/>
         <layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="mai1"/>
@@ -231,7 +228,19 @@
 							<flags id="colour_property" value="bkcl" />
 						</attachment>
 					</widget>
-				 </container>					  
+				 </container>	
+				<!-- Graphics Options (background selector) -->
+				<widget class="menubar_icon_button" id="bgs2" appearance="chrome/buttons/items/button" icon="icons/shortcuts/graphics_options" width="60">
+					<translation id="hint" type="use" value="Background Selector"/>
+				    <record id="primary_icon_properties" red_replacement="white"/>
+						<event id="click_event" event_id="kev3"/>
+						<attachment class="event_relay_attachment" event_id="kev3">
+					<record id="action_event">
+						<flags id="event_id" value="show"/>
+						<flags id="event_target" value="bgs1"/>
+					</record>
+						</attachment>
+				</widget>					  
 				</container>							
 				</container>
 
