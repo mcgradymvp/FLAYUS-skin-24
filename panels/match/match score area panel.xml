@@ -1,4 +1,4 @@
-﻿<panel width="700">
+<panel width="700">
 <!--Alternate UI mode-->
 	<integer id="alSM" value="0" />
 
@@ -39,7 +39,7 @@
             </container>
 			</container>
 
-			<container class="contrast_box" id="MInf" appearance="boxes/contrast/no margin/paper" red_replacement="faded black" transparency="0.8">
+			<container class="contrast_box" id="MInf" appearance="boxes/contrast/no margin/paper" red_replacement="blue 900" transparency="0.9">
 	            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 				<container >
 					<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="-2" vertical_offset="0" horizontal_inset="0" />
@@ -51,7 +51,6 @@
 						<widget class="text" size="xlarge" font="text" alignment="centre" text="-" colour="white" auto_size="horizontal"/>
 
 						<widget class="text" id="T2sc" size="xlarge" font="text" alignment="left,centre_y" colour="white" auto_size="horizontal"/>
-
 					</container>
 
 					<container id="asco">
@@ -79,7 +78,7 @@
 		</container>
 
 		<!--clock-->
-		<container class="contrast_box" appearance="boxes/contrast/no margin/paper" red_replacement="faded black" transparency="0.8" width="110">
+		<container class="contrast_box" appearance="boxes/contrast/no margin/paper" red_replacement="blue 900" transparency="0.9" width="110">
 			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="0" />
 
 			<!--clock-->
@@ -93,7 +92,7 @@
 
 					<record id="default_properties" auto_size="all" alignment="centre" />
 
-					<widget class="text" id="Mclk" size="xlarge" font="title" auto_size="all" >
+					<widget class="text" id="Mclk" size="xlarge" font="text" auto_size="all" >
 						<!--Alternate UI mode-->
 						<integer id="alSM" value="0" />
 					</widget>
@@ -107,7 +106,7 @@
 					</container>
 				</container>
 
-				<widget class="text" id="ClkT" font="title" size="normal" multiline="true">
+				<widget class="text" id="ClkT" font="text" size="normal" multiline="true">
 					<!--Alternate UI mode-->
 					<integer id="alSM" value="0" />
 				</widget>
