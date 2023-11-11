@@ -1,0 +1,134 @@
+﻿<panel>	
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="16" />
+
+	<list id="properties_to_forward">
+		<record get_property="shso" target="tstx" set_property="text" />
+		<record get_property="tpsl" target="kits" set_property="valu" />
+		<record get_property="Cclu" target="gsbt" set_property="objt" />
+		<record get_property="Cclu" target="ssbt" set_property="objt" />
+		<record get_property="srgr" target="smgb" set_property="valu" />
+	</list>
+
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" vertical_gap="6" />
+		
+		<widget class="text" auto_size="vertical" name="notable_events_text">
+			<translation id="text" translation_id="509713" type="use" value="Shirt Sales[COMMENT: AREA: End of Season Review; SUB-AREA: Financial; FR-BN: ?; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title, will be followed by a cash value]" />
+			<string id="size" value="large" />
+			<string id="font" value="title" />
+		</widget>
+		
+		<widget class="text" id="tstx" font="bold" colour="text" auto_size="vertical" />
+		
+		<widget class="text" text="These shirts have sold particularly well:" colour="faded text" auto_size="vertical" />
+		
+		<widget class="simple_data_list" maximum_items="5" height="148" id="kits" set_property="prop">
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			<layout class="arrange_horizontal_attachment" alignment="left" gap="6" offset="0" />
+			<record id="widget_properties" class="kit_icon" file="gunzo/emon kit panel" width="180" scale_picture="true" show_question_mark_when_no_squad_num="true" />
+		</widget>
+	</container>
+
+	<widget class="horizontal_divider" height="2" />
+
+	<container>
+		<string id="remove_if" value="show_global_supporters_ui" />
+		<global id="hidden" name="is_fmt" />
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="top,extend" />
+
+		<container>
+			<string id="skin_style" value="title link" />
+
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="6" horizontal_alignment="left" horizontal_inset="0" />
+
+			<widget class="link_button" id="ssbt" section="sppo" auto_size="all" size="large">
+				<translation id="text" translation_id="557813" type="use" value="Supporter Reactions[COMMENT: AREA: Club Finance News Item; SUB-AREA: Club Merchandise Increase News; FR-BN: FM-3691; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title of international supporters update section]" />
+			</widget>
+		</container>
+
+		<widget class="performance_grade_box" id="smgb" auto_size="vertical" />
+	</container>
+	
+	<container>
+		<string id="create_if" value="show_global_supporters_ui" />
+		<global id="hidden" name="is_fmt" />
+		<attachment_group class="vertical_arrange_autosize" vertical_alignment="top,extend" />
+
+		<container>
+			<string id="skin_style" value="title link" />
+
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="left" horizontal_inset="0" />
+
+			<widget class="link_button" id="gsbt" section="gsup" auto_size="all" size="large">
+				<translation id="text" translation_id="557814" type="use" value="Updates to International Supporters[COMMENT: AREA: Club Finance News Item; SUB-AREA: Club Merchandise Increase News; FR-BN: FM-3691; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: how is the club's international fanbase developing?]" />
+			</widget>
+		</container>
+
+		<widget class="table" mode="fill_rows, stripe_rows" id="istb" layout="-1,-1,30,-4" auto_size_rows="false" fixed_size_rows="true" row_height="40" auto_size="vertical" navigation_container="true">
+			<list id="headings">
+				<record>
+					<integer id="index" value="0" />
+					<translation id="text" translation_id="292796" type="use" value="Nation[COMMENT: nation the club is in]" />
+				</record>
+				<record>
+					<integer id="index" value="1" />
+					<translation id="text" translation_id="557815" type="use" value="Support Base[COMMENT: AREA: Club Finance News Item; SUB-AREA: Club Merchandise Increase News; FR-BN: FM-3691; TONE: Formal; CHARLIMIT: None; REF - ID: n/a; NOTE: Column title string for updates to international supporters table.]" />
+				</record>
+				<record>
+					<integer id="index" value="2" />
+				</record>
+				<record>
+					<integer id="index" value="3" />
+					<translation id="text" translation_id="330386" type="use" value="Reason[COMMENT: the reason why a relationship exists]" />
+				</record>
+			</list>
+			<list id="column_table_properties">
+				<record>
+					<integer id="index" value="0" />
+					<record id="widget_info">
+						<symbol id="class" value="nation_button" />
+					</record>
+				</record>
+				<record>
+					<integer id="index" value="1" />
+					<record id="widget_info">
+						<symbol id="class" value="text" />
+					</record>
+				</record>
+				<record>
+					<integer id="index" value="2" />
+					<record id="widget_info">
+						<symbol id="class" value="picture" />
+						<boolean id="hidden" value="true" />
+						<flags id="image_alignment" value="centre" />
+					</record>
+				</record>
+				<record>
+					<integer id="index" value="3" />
+					<record id="widget_info">
+						<symbol id="class" value="icon_button" />
+						<boolean id="show_button_appearance" value="false" />
+						<boolean id="navigation_focus_target" value="false" />
+						<string id="file" value="icons/16px/all" />
+						<string id="font" value="text" />
+						<record id="primary_icon_properties" red_replacement="text" blue_replacement="positive" />
+					</record>
+				</record>
+			</list>
+			<list id="column_widget_properties">
+				<record alignment="centre_y,left">
+					<integer id="index" value="0" />
+				</record>
+				<record alignment="centre_y,left">
+					<integer id="index" value="1" />
+				</record>
+				<record alignment="centre_y,left">
+					<integer id="index" value="2" />
+				</record>
+				<record alignment="centre_y,left">
+					<integer id="index" value="3" />
+				</record>
+			</list>
+		</widget>
+	</container>
+</panel>

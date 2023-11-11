@@ -177,7 +177,7 @@
 
 						<!--jadedness-->
 						<widget class="label" row="7" column="0" style="semi_bold" alignment="left,centre_y,can_scale">
-							<translation id="text" type="use" value="피로도" />
+							<translation id="text" type="use" value="疲劳" />
 						</widget>
 						<widget class="editable_client_object_property_panel" id="jade" row="7" column="1" alignment="centre" style="semi_bold" use_attribute_colour_as_bg="false" appearance="boxes/custom/attributes/paper" colour="white">
 							<record id="widget_info" class="number_label"/>

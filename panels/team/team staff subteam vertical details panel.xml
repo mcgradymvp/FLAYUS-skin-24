@@ -20,11 +20,12 @@
         <record id="view">          
           <record id="PcjN" auto_hide_priority="1" width="120"/>
           <!-- short job text -->         
-          <record id="Psnm" auto_hide_priority="2" width="100"/>
+          <record id="Psnm" auto_hide_priority="2" width="120"/>
           <!-- person name -->
-          <record id="Pnat" auto_hide_priority="3"/>
           <!-- nationality -->
-          <record id="NIst" auto_hide_priority="4" width="100"/>       
+          <record id="Pnat" auto_hide_priority="3" width="50"/>
+          <!-- reputation -->
+          <record id="Nsta" uto_hide_priority="4" width="100"/>
           <!-- end date -->
           <record id="Pced" width="120" auto_hide_priority="5"/>
         </record>

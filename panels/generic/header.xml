@@ -17,7 +17,7 @@
 		<widget class="titlebar_panel" id="NHdr" height="60" />
 
 		<!-- match titlebar -->
-		<widget class="match_titlebar_panel" id="MHdr" height="45" />
+		<widget class="match_titlebar_panel" id="MHdr" height="50" />
 	</container>
 
 	<!--tabs/match feed/content menu-->

@@ -18,13 +18,15 @@
 		<layout class="arrange_vertical_attachment" layout="350,10,80,90,90" offset="0" gap="0" />
 		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 
-			<!-- Profile picture -->
-			<container>
+		<!-- Profile picture -->
+		<container>
 				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
-
-				<!-- Player Picture -->
-				<widget class="picture" id="ppic" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" />
-
+		<container class="client_object_viewer_selector_panel" id="cosA" file="non_player/gunzo non player profile selector panel" default_item="gzp1" save_session_state="true" save_default_state="true" priority="1" default_height="350">
+					<integer id="default_for_unemployed_managers" value="gzp1"/>
+					<integer id="default_for_international_managers_other_team" value="gzp1"/>
+					<integer id="default_for_everyone_else" value="gzp1"/>
+					<integer id="default_for_versus_mode" value="gzp1"/>
+				</container> 	
 			</container>
         <container height="10"/>
 	
@@ -399,7 +401,7 @@
 				
 					<list id="headings">
 						<record alignment="left,centre_y" column_span="5" auto_size_minimum_height="20">
-							<translation id="text" type="use" value="구단 경력 기록" />
+							<translation id="text" type="use" value="俱乐部生涯记录" />
 						</record>
 					</list>
 					
@@ -620,12 +622,12 @@
 			</container>
 		</container>
 
-		<container id="cskr" class="horizontal_adaptive_container" offset="0" inset="0" >
+		<container class="horizontal_adaptive_container" offset="0" inset="0" >
 			
-			<container class="bordered_box" minimum_width="300" default_width="-1" priority="1">
+			<container class="main_box" minimum_width="300" default_width="-1" priority="1">
 				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 					
-					<widget class="non_player_roles_panel" id="nprp" />
+					<widget class="non_player_roles_panel" file="non_player/non player roles popup panel1" id="nprp" />
 								
 			</container>
 
@@ -687,7 +689,7 @@
 					
 					<list id="headings">
 						<record alignment="left,centre_y" column_span="5" auto_size_minimum_height="26">
-							<translation id="text" type="use" value="전체 경력 기록" />
+							<translation id="text" type="use" value="职业生涯记录" />
 						</record>
 					</list>
 					

@@ -2,14 +2,17 @@
 <panel>
 	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
+
 	<boolean id="should_force_refresh" value="true"/>
 	
 	<list id="properties_to_forward">
 		<record get_property="titl" set_property="text" target="titl"/>
 	</list>
 	
-	<container class="main_box" appearance="boxes/custom/full screen header/paper">
-		<layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0" gap="10"/>
+	<container class="main_box" appearance="boxes/plain/standard/paper">
+		<layout class="arrange_horizontal_attachment" alignment="left, extend" gap="10">
+			<global id="offset" name="ui.safe_area_left"/>
+		</layout>
 		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
 		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
 
@@ -21,8 +24,8 @@
 
 		<widget class="vertical_divider"/>
 
-		<container height="52">
-			<layout class="arrange_horizontal_attachment" alignment="right, extend" offset="10"/>
+		<container height="50">
+			<layout class="arrange_horizontal_attachment" alignment="right, extend" offset="4"/>
 			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
 
 			<!--Title container -->
@@ -37,18 +40,18 @@
 			<container id="FMbt">
 				<attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_gap="8" horizontal_offset="0"/>
 				<!-- FM button -->
-				<widget class="popup_button" id="fmst" fixed="true" appearance="chrome/buttons/items/button" icon="icons/26px/fm" width="60" height="42" disable_wheel="true">
+				<widget class="popup_button" id="fmst" fixed="true" appearance="chrome/buttons/items/button" icon="icons/26px/fm" auto_size="horizontal" auto_size_minimum_width="60" icon_always_spaced="true" height="38" disable_wheel="true" secondary_icon_enabled="false" icon_alignment="centre_left" focus_appearance="chrome/buttons/items/button_controller" gamepad_icon_alignment="centre_right" controller_button="select_button">
 					<event id="click_notification_event" event_id="FM" item="NULL" />
 					<event id="menu_layout_notification_event" event_id="mlne" event_target="fmst" />
 					<record id="items" file="menus/game" />
 					<translation id="hint" translation_id="292829" type="use" value="Options[COMMENT: menubar game options button]" />
 				</widget>
-				<widget class="icon_button" id="nxt1"  alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/continue" secondary_icon_alignment="centre_right, centre_y" font="title" width="175" multiline="true">
+				<widget class="icon_button" id="nxt1" controller_button="right_trigger" appearance="chrome/buttons/continue/button" alignment="centre" red_replacement="title" secondary_icon_enabled="true" secondary_icon="icons/16px/continue" secondary_icon_alignment="centre_right, centre_y" font="title" width="175" multiline="true">
 					<record id="secondary_icon_properties" red_replacement="text"/>
 					<record id="click_event" event_id="n1pa"/>
 					<attachment class="get_global_attachment" get_property="ctcl" set_property="colr" />
 				</widget>
-				<widget class="icon_button" id="fini"  alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/continue" secondary_icon_alignment="centre_right, centre_y" font="title" width="175" multiline="true">
+				<widget class="icon_button" id="fini" controller_button="right_trigger" appearance="chrome/buttons/continue/button" alignment="centre" red_replacement="title" secondary_icon_enabled="true" secondary_icon="icons/16px/continue" secondary_icon_alignment="centre_right, centre_y" font="title" width="175" multiline="true">
 					<record id="secondary_icon_properties" red_replacement="text"/>
 					<translation id="text" translation_id="229918" type="use" value="Confirm" />
 					<record id="click_event" event_id="fnwz"/>

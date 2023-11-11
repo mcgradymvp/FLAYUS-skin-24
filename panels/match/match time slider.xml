@@ -1,10 +1,11 @@
 <panel>
 	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
- 
+  
   <!-- position icons at centre of this panel minus 4 to cater for panel below -->
   <integer id="icof" value="10"/>
 
-   <list id="bar_colour">
+  <!-- sets the colour of the progress segments on the stacked bar chart -->
+  <list id="bar_colour">
     <!--first half-->
     <record id="1">
       <colour id="colour" name="match time slider"/>
@@ -53,7 +54,7 @@
 
   <!-- match progress bar chart -->
   <widget class="horizontal_stacked_bar_chart" id="bgbc" usts="false" appearance="charts/bar/horizontal/custom/match time/progress" animation_file="none">
-    <layout class="stick_to_sides_attachment" alignment="vertical" inset="13"/>
+   <layout class="stick_to_sides_attachment" alignment="vertical" inset="13"/>
   </widget>
 
   <!--slider bar chart for generic events-->
@@ -72,19 +73,19 @@
   </widget>
 
   <!-- slider -->
-  <widget class="slider_horizontal" id="mtss">
+  <widget class="slider_horizontal" id="mtss" appearance="sliders/custom/match time slider/slider">
     <boolean id="draw_notches" value="yes"/>
     <integer id="notch_frequency" value="0"/>
     <boolean id="show_current_notch_text_only" value="false"/>
     <boolean id="show_notch_text" value="true"/>
     <integer id="ntlg" value="0"/>
-    <boolean id="shbg" value="true"/>
+    <boolean id="shbg" value="false"/>
     <symbol id="notch_text_colour" value="faded text"/>
     <boolean id="limit_thumb_pos_to_centre" value="true"/>
     <boolean id="limit_click_to_notch" value="false"/>
     <boolean id="dont_use_click_offset" value="true"/>
     <!-- Disable animations to improve performance on low-end hardware -->
-    <boolean id="animate_set_value" value="true"/>
+    <boolean id="animate_set_value" value="false"/>
     
     <flags id="changed_event" value="dggd"/>
     <flags id="final_changed_event" value="drgf"/>

@@ -14,7 +14,7 @@
 					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 					<widget class="text" auto_size="vertical" font="title">
-						<translation id="text" type="use" value="포지션/역할 훈련" />
+						<translation id="text" type="use" value="位置/角色训练" />
 					</widget>
 
                 <widget class="individual_position_training_popup" show_table_legend="true" fixed="false" appearance="buttons/standard/normal/button" id="itpu" alignment="left,centre_y" auto_size="vertical" />
@@ -126,7 +126,7 @@
 			<widget class="picture" file="dividers/standard/horizontal/line" auto_size="vertical" />
 
 			<widget class="label" colour="accent" alignment="left,centre_y" auto_size="all" font="title">
-					<translation id="text" type="use" translation_id="466504" value="훈련 평점" />
+					<translation id="text" type="use" translation_id="466504" value="训练评分" />
 			</widget>
 
 			<widget class="training_rating_label_formatted" id="rttx" auto_size="horizontal" style="bold" alignment="centre_y,left" >

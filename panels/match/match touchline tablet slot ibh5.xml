@@ -122,10 +122,10 @@
 			<translation id="title" translation_id="230056" type="use" value="Tactics" />
 		</widget>
 
-<widget class="both_match_formation_panels" title="포메이션" file="match/match both formations ibh" id="bmfs"/>
+<widget class="both_match_formation_panels" title="阵型" file="match/match both formations ibh" id="bmfs"/>
 	
 	<container id="bmf2">
- 	    <translation id="title" type="use" value="원정팀 포메이션-패스맵-히트맵" />
+ 	    <translation id="title" type="use" value="客队阵型-传球图-热力图" />
             <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="1" />
             <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 		    <boolean id="save_session_state" value="true" />

@@ -37,7 +37,7 @@
     <!-- layer 1 (there is only one) -->
     <list>
       <record id="item">
-	   <translation id="hint" type="use" value="태클, 일대일마크, 수비위치" />
+	   <translation id="hint" type="use" value="铲球、一对一盯防、防守位置" />
         <translation id="name" translation_id="285374" type="use" value="Defending[COMMENT: player profile, overview panel polygon category title]" />
        
     

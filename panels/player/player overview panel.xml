@@ -51,13 +51,13 @@
 		<container class="main_box" minimum_width="620" default_width="-1" priority="1" mode="distribute_equally" navigation_container="true">		
 			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
-		<container class="vertical_adaptive_container" draw_horizontal_dividers="true" offset="0" inset="0" gap="0" minimum_width="610" default_width="-1" priority="1" mode="distribute_equally">
+		<container class="vertical_adaptive_container" draw_horizontal_dividers="true" offset="0" inset="0" gap="0" minimum_width="620" default_width="-1" priority="1" mode="distribute_equally">
 			<container class="horizontal_adaptive_container" offset="0" inset="0" gap="0" minimum_height="510" default_height="-4" priority="1" mode="distribute_equally">	
 				<container class="vertical_adaptive_container" draw_horizontal_dividers="true" offset="0" inset="0" gap="1" default_width="-1" priority="1" mode="distribute_equally">
 
 					<container class="horizontal_adaptive_container" offset="0" inset="0" gap="0" default_height="427" priority="1" mode="distribute_equally">	
 					
-					<container class="tabbed_container" id="tpp1" default_item="patt" offset="0" inset="0" gap="0" save_session_state="true" save_default_state="true" minimum_width="610" default_width="-1" priority="1">
+					<container class="tabbed_container" id="tpp1" default_item="patt" offset="0" inset="0" gap="0" save_session_state="true" save_default_state="true" minimum_width="620" default_width="-1" priority="1">
 							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 							
@@ -71,7 +71,7 @@
 								<record id="object_property" get_property="objt" set_property="objt"/>
 							</widget>	
 							 <widget class="person_information_panel" file="attributes/homegrown information" late_loading="true">
-								<translation id="title" type="use" value="홈그로운 정보" />
+								<translation id="title" type="use" value="本土信息" />
                                 <record id="object_property">
                                    <integer id="get_property" value="objt"/>
                                    <integer id="set_property" value="objt"/>
@@ -85,7 +85,7 @@
                                 </record>
                             </widget>
 							<widget class="player_transfer_information_panel" file="attributes/player transfer information3" id="Rute" late_loading="true">
-								<translation id="title" type="use" value="이적상태 설정" />
+								<translation id="title" type="use" value="转会状态" />
 								<record id="object_property">
 									<integer id="get_property" value="objt" />
 									<integer id="set_property" value="objt" />
@@ -103,7 +103,7 @@
 								</record>
 							</widget>
 							<widget class="player_form_panel" id="pafp" file="attributes/player form" late_loading="true">
-								<translation id="title" translation_id="337896" type="use" value="피드백" />
+								<translation id="title" translation_id="337896" type="use" value="反馈" />
 								<record id="object_property">
 									<integer id="get_property" value="objt" />
 									<integer id="set_property" value="objt" />
@@ -205,7 +205,7 @@
 				</container> 
 
 			<container class="tabbed_container" id="tpp1" default_item="gzh2" offset="0" inset="0" gap="0" save_session_state="true" save_default_state="true" priority="2" late_loading="true">
-				<translation id="title" translation_id="361135" type="use" value="히든" />
+				<translation id="title" translation_id="361135" type="use" value="隐藏" />
 				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 				<layout class="stick_to_sides_attachment" alignment="vertical" inset="-1" apply_to_children="true" />
 			

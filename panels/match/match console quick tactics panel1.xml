@@ -13,7 +13,7 @@
 
 	<!--quick sub-->
 	<widget class="icon_button" id="qsub" appearance="buttons/standard/flex/button" icon="icons/26px/substitution" auto_size="horizontal">
-		<translation id="text" type="use" value="빠른 교체" />
+		<translation id="text" type="use" value="快速换人" />
 		<translation id="hint" translation_id="330203" type="use" value="Make Substitution[COMMENT: match tactics shortcuts, change tactics dialog title]" />
 	</widget>
 

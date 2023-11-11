@@ -10,11 +10,11 @@
 
         <!-- Hidden2 -->
 				<widget class="player_personal_details_panel" id="gzh2" file="gunzo/gunzo player profile tabh1" late_loading="true">
-					<translation id="title" type="use" value="히든 능력치" />  
+					<translation id="title" type="use" value="隐藏能力" />  
 				</widget>    
 				<!-- Hidden -->
 				<widget class="player_personal_details_panel" id="gzth" file="gunzo/gunzo player profile tabh" late_loading="true">
-					<translation id="title" type="use" value="히든 아이콘" />
+					<translation id="title" type="use" value="隐藏图标" />
 				</widget> 
            
 </panel>

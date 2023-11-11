@@ -8,9 +8,11 @@
 	<flags id="Bwbc" value="yellow"/>
 	<flags id="Bwbr" value="red"/>
 	<flags id="Bwbg" value="transparent"/>
-	<flags id="Btbn" value="fg blue"/>
+	<flags id="Btbn" value="fg purple"/>
 	<flags id="Btbc" value="yellow"/>
 	<flags id="Btbr" value="red"/>
+	<flags id="BafN" value="blue 700"/>
+	<flags id="Bafg" value="grey 700"/>
 
 	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
@@ -43,7 +45,7 @@
 								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
 
 								<widget class="text" auto_size="vertical" font="title" size="10" value="Negotiation Info" />
-								<widget class="table" id="deng" auto_size="vertical" mode="fill_rows, stripe_rows" layout="300, -1" auto_size_rows="true" />
+								<widget class="table" id="deng" auto_size="vertical" mode="fill_rows, stripe_rows" layout="-1,30" auto_size_rows="true" />
 
 							</container>
 
@@ -51,7 +53,7 @@
 								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
 
 								<widget class="text" auto_size="vertical" font="title" size="10" value="Negotiator Info" />
-								<widget class="table" id="deno" auto_size="vertical" mode="fill_rows, stripe_rows" layout="300, -1" auto_size_rows="true" />
+								<widget class="table" id="deno" auto_size="vertical" mode="fill_rows, stripe_rows" layout="-1,30" auto_size_rows="true" />
 							</container>
 
 						</container>
@@ -62,9 +64,11 @@
 							<container>
 								<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
 
+
+
 								<widget class="text" id="deoi" auto_size="vertical" />
 
-								<widget class="table" id="dest" mode="fill_rows, stripe_rows" layout="500,-1,-1,100" fixed_size_rows="false" auto_size_rows="true" row_spacing="4">
+								<widget class="table" id="dest" mode="fill_rows, stripe_rows" layout="-2,-1,-1,100" fixed_size_rows="false" auto_size_rows="true" row_spacing="4">
 
 									<record id="default_properties">
 										<flags id="auto_size" value="vertical" />
@@ -139,7 +143,7 @@
 				
 			</container>
 
-      <container id="buts" height="36">
+      <container id="buts" height="36" navigation_container="true">
         <attachment_group class="horizontal_arrange"  horizontal_alignment="left,extend"/>
 
         <container>
@@ -147,11 +151,11 @@
 
           <record id="default_properties" auto_size="horizontal" />
 
-          <widget class="icon_button" id="undo" click_event="undo" icon="icons/16px/reset">
+          <widget class="icon_button" id="undo" click_event="undo" icon="icons/16px/reset" appearance="buttons/subtle/normal/button">
             <translation id="text" translation_id="230013" type="use" value="Reset" />
           </widget>
 
-          <widget class="button" click_event="dela" id="dela" hidden="true">
+          <widget class="icon_button" click_event="dela" id="dela" hidden="true" auto_size="horizontal" appearance="buttons/subtle/normal/button">
             <translation id="text" translation_id="234328" type="use" value="Delay" />
           </widget>
 
@@ -165,7 +169,7 @@
           	  <global id="horizontal_gap" name="ui.button_row_gap"/>
 		  </attachment_group>
 
-          <widget class="icon_button" height="30" auto_size="horizontal" click_event="walk" id="walk" controller_button="b_button">
+          <widget class="icon_button" height="30" auto_size="horizontal" click_event="walk" id="walk" controller_button="x_button">
             <translation id="text" translation_id="313553" type="use" value="Walk Away[COMMENT: contract offer panel; walk away from the current contract negotiation]" />
           </widget>
 

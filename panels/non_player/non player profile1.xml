@@ -1,0 +1,29 @@
+
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container class="vertical_adaptive_container" inset="0" gap="0" mode="distribute_equally">
+
+			<container minimum_height="350" priority="1">
+                <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	
+				<widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x,centre_y">
+					<record id="object_property">
+						<list id="get_properties">
+							<!--Facegen data request-->
+							<record get_property="fcgn" />
+							<!--Fake name request-->
+							<record get_property="Pfke" />
+							<record get_property="prpc" set_property="valu" />
+						</list>
+					</record>
+				</widget>
+		
+		</container>
+	 </container>
+  </container>
+</panel>

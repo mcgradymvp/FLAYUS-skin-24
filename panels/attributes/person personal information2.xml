@@ -10,7 +10,7 @@
 
 	<!-- Linked header -->
     <widget class="link_button" section="Ppin" auto_size="all">
-        <translation id="text"  type="use" value="선수 정보"/>
+        <translation id="text"  type="use" value="球员信息"/>
     </widget>
        </container>
   

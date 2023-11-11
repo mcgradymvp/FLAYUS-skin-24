@@ -124,7 +124,7 @@
 						<!--RCA-->
 						<widget class="text" row="5" column="0" style="semi_bold" alignment="left,centre_y,can_scale">
 							<string id="text" value="RCA"/>
-							<translation id="hint" type="use" value="Recommended Current Ability : RCA는 선수 능력치의 총합이라 생각하면 된다. 재분배가 이뤄지는 시기에 RCA는 CA에 수렴하게 된다. 이때, 능력치의 변동이 생긴다." />
+							<translation id="hint" type="use" value="Recommended Current Ability : RCA 可以被认为是玩家能力的总和。在再分配期间，RCA收敛于CA。这个时候，能力就会发生变化。" />
 						</widget>
 						<widget class="label" id="rcav" row="5" column="1" alignment="centre" style="semi_bold" colour="accent">
 							<record id="object_property" get_property="KRCA"/>
@@ -148,7 +148,7 @@
 
 						<!--BLOG-->
 						<widget class="url_text" col="0" row="8" column_span="2" alignment="centre_x,centre_y,can_scale" auto_size="all" spec="text"  style="semi_bold" size="11">
-							<translation id="hint" type="use" value="제작자 블로그"/>
+							<translation id="hint" type="use" value="创作者博客"/>
 							<flags id="text" value="fmgunzo.tistory.com" />
 						</widget>
 

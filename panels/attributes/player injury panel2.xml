@@ -5,7 +5,7 @@
 
   <boolean id="should_force_refresh" value="true"/>
   <container class="inner_box">
-   <translation id="title" type="use" value="부상 상태"/>
+   <translation id="title" type="use" value="受伤状况"/>
           <layout class="arrange_horizontal_attachment" layout="-2, -3"/>
           <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
           

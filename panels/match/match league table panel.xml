@@ -1,0 +1,9 @@
+<panel save_session_state="true">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container class="scrolling_box" id="ScrB" save_session_state="true">
+		<container id="cont">
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+		</container>
+	</container>
+</panel>

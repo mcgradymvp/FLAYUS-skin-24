@@ -6,47 +6,12 @@
 		<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
 
 		<container>
-			<!-- Main content always shown -->
-			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
-
-			<container>
-				<attachment_group class="vertical_arrange_autosize" />
-
-				<container>
-					<attachment_group class="vertical_arrange_autosize" horizontal_inset="4" vertical_offset="0" />
-
-					<widget class="text" auto_size="all" style="semi_bold" font="title" size="large" colour="text">
-						<translation id="text" translation_id="557710" type="use" value="Supporter Profile[COMMENT:AREA: Club vision; SUB - AREA: Supporter profile panel FR - BN: FM-3272; TONE: Formal; CHARLIMIT: None; REF - ID: n/a; NOTE: Supporters profile title text.]" />	
-					</widget>
-					<widget class="text" id="sptx" display_format="1" auto_size="all" colour="text" />
-				</container>
-
-				<widget id="gslb" class="link_button" auto_size="all" section="gsup" navigation_focus_target="true">
-					<layout class="stick_to_sides_attachment" alignment="right, bottom" inset="10" />
-					<translation id="text" translation_id="557711" type="use" value="Global Supporters[COMMENT:AREA: Club vision; SUB - AREA: Supporter profile panel FR - BN: FM-3272; TONE: Formal; CHARLIMIT: None; REF - ID: n/a; NOTE: Global supporters button text.]" />
-				</widget>
-			</container>
-
-			<container>
-				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-2, 1, -1" vertical_inset="0" horizontal_offset="0" />
-
-				<container class="supporter_percentage_panel" id="spcp" pitch_inset="36,36,40,36" />
-
-				<widget class="vertical_divider" width="2" height="236" image_alignment="centre_x" />
-
-				<container class="supporter_stats_panel" id="sstp" />
-			</container>
-
-			<container>
-			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" />
-				
-				<widget class="horizontal_divider" image_alignment="centre_y" />
-			</container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-2, 1, -1" vertical_inset="0" horizontal_offset="0" />
 
 		<container>
 			<attachment class="show_medium_horizontal" />
 			<!-- Additional info (hidden in low res) -->
-			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="5" horizontal_inset="0" />
+			<attachment_group class="vertical_arrange_autosize" horizontal_inset="4" vertical_offset="0" />
 
 			<!-- Last Match -->
 			<container>
@@ -122,11 +87,10 @@
 					</list>
 				</widget>
 			</container>
-
+		
+			<container height="400">
+				<attachment_group class="vertical_arrange" vertical_alignment="top, extend" vertical_offset="0"/>
 			<!-- Rivals -->
-			<container>
-				<attachment_group class="vertical_arrange_autosize" />
-
 				<container>
 					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_gap="0" />
 
@@ -138,8 +102,8 @@
 						<translation id="text" translation_id="557714" type="use" value="Rivals[COMMENT:AREA: Club vision; SUB - AREA: Supporter profile panel FR - BN: FM-3272; TONE: Formal; CHARLIMIT: None; REF - ID: n/a; NOTE: title string for rivals reason section.]" />
 					</widget>
 				</container>
-				
-				<widget class="table" id="ritb" layout="-2, -1, -1" mode="fill_rows, stripe_rows" auto_size_rows="false" fixed_size_rows="true" default_sort_column="1" row_height="23" height="130">
+	            
+				<widget class="table" id="ritb" layout="-2, -1, -1" mode="fill_rows, stripe_rows" auto_size_rows="false" fixed_size_rows="true" default_sort_column="1" row_height="22" height="125">
 					<list id="headings">
 						<record>
 							<integer id="index" value="0" />
@@ -182,6 +146,12 @@
 				</widget>
 			</container>
 		</container>
-	</container>
-</container>
+
+				<widget class="vertical_divider" width="2" height="236" image_alignment="centre_x" />
+
+				<container class="supporter_stats_panel" id="sstp" file="club/supporter stats panel1"/>
+			</container>
+
+		</container>
+
 </panel>

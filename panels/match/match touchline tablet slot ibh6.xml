@@ -102,7 +102,7 @@
 		</widget>
         <!--shot map-->
 		<widget class="match_analysis_panel" id="maha" file="match/match analysis summary panel1" >
-			<translation id="title" type="use" value="슈팅맵" />
+			<translation id="title" type="use" value="射门图" />
 				<record id="object_property">
 					<integer id="get_property" value="objt" />
 					<integer id="set_property" value="objt" />
@@ -123,7 +123,7 @@
 			<translation id="title" translation_id="230056" type="use" value="Tactics" />
 		</widget>
 
-<widget class="both_match_formation_panels" title="포메이션" file="match/match both formations ibh" id="bmfs"/>
+<widget class="both_match_formation_panels" title="阵型" file="match/match both formations ibh" id="bmfs"/>
 <!-- Match Stats -->
 		<widget class="match_stats_panel" id="mtst" file="match/match stats floating">
 			<translation id="title" translation_id="247439" type="use" value="Match Stats" />

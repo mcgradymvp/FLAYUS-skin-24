@@ -52,8 +52,8 @@
 							<record id="widget_properties" file="team/match day responsibility popup panel" width="850" height="270" />
 							<record id="modal_popup_properties" file="modal popup panel auto sized" />
 						</widget>
+		
 					</container>
-
 				</container>
 
 				<container>
@@ -93,35 +93,38 @@
 								<translation id="text" translation_id="376571" type="use" value="Set All[COMMENT: FR 8157; Player availability news item; text for button for changing all player's availabilities at once]" />
 							</widget>
 						</container>
-					</container>
-					<container height="60">
-						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_alignment="left" horizontal_inset="8" />
-
-						<widget class="link_button_title" id="lnkR" auto_size="all" >
-							<translation id="text" translation_id="242302" type="use" value="Rules"/>
-						</widget>
-						<container>
-							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
-							<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" vertical_alignment="bottom"  />
-
-							<container class="scrolling_box">
-								<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
-								<widget class="fixture_rules_text" entity_layout_id="at0=" id="FxRl">
-									<string id="set_property" value="objt" />
-								</widget>
-							</container>
-							<container class="team_squad_panel" entity_layout_id="ffdf" id="filt" file="" >
+										
+					<container class="team_squad_panel" entity_layout_id="ffdf" id="filt" file="" >
 								<layout class="stick_to_sides_attachment" alignment="bottom,right" apply_to_children="true" inset="0" />
 								<layout class="fit_children_attachment" alignment="vertical" offset="0" />
 								<layout class="fit_children_attachment" alignment="horizontal" offset="0" />
 
-								<widget class="embedded_filter_button" entity_layout_id="adad"  allow_pin="false" id="plsf" target="mnCn" auto_size="all"/>
-							</container>
-						</container>
-					</container>
-				</container>
-			</container>
+								<widget class="embedded_filter_button" entity_layout_id="adad" allow_pin="false" id="plsf" target="mnCn" auto_size="horizontal"/>
+					</container>	
+					</container>	
+				</container>		
+			</container>		
 		</container>
+			
+		<container height="80">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_alignment="left" horizontal_inset="8" />
+
+			<widget class="link_button_title" id="lnkR" auto_size="all" >
+			    <translation id="text" translation_id="242302" type="use" value="Rules"/>
+			</widget>
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" vertical_alignment="bottom"  />
+
+		<container class="scrolling_box">
+			<layout class="stick_to_sides_attachment" alignment="vertical,extend" inset="0" />
+				<widget class="fixture_rules_text" entity_layout_id="at0=" id="FxRl">
+					<string id="set_property" value="objt" />
+				</widget>
+		    </container>
+		  </container>
+		</container>
+		
 		<container id="mnBx" height="450">
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
@@ -147,10 +150,12 @@
 					<integer id="line_width" value="1" />
 					<string id="image_alignment" value="centre" />
 				</container>
+				
 				<container class="subs_bench_panel" id="Subs" file="tactics/subs bench panel reserve playing time" width="200">
 					<widget class="subs_bench_icon_panel" id="subs" iche="50" ichx="54" icon_flags="show_name,show_number, show_injury_indicator,drop_initial_if_possible,show_extra_details,show_reserves_playing_time" player_icon_file="tactics/tactics icon info panel with reserve playing time no kit"/>
 				</container>
 			</container>
+			
 			<container id="lstv" name="list container" navigation_container="true">
 				<container class="tactic_player_list_table" id="pltb" save_session_state="true" save_default_state="true">
 					<integer id="database_table_type" value="1" />
@@ -213,7 +218,8 @@
 				<widget class="subtle_popup" id="plvi" auto_size="vertical" width="200" needs_height="true">
 					<layout class="stick_to_sides_attachment" alignment="top,left" inset="10,5" />
 				</widget>
-			</container>
+				
+			</container>	
 		</container>
 	</container>
 	<container class="text" alignment="centre" colour="faded text" id="noTT" height="350" hidden="true">

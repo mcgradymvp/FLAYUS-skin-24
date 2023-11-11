@@ -1,0 +1,10 @@
+<panel width="40">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<container class="horizontal_adaptive_container" alignment="middle" inset="0" offset="0" gap="0">
+
+  <widget class="condition_label" size="normal" alignment="centre_x,centre_y,can_scale" id="CDLB" default_width="-1" minimum_width="18" />
+
+
+  </container>
+</panel>

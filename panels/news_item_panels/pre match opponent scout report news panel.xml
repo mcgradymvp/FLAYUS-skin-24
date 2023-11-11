@@ -96,7 +96,7 @@
 				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
 				
 				<widget class="text" auto_size="vertical" font="title" colour="faded white">
-					<translation id="text" type="use" value="감독" />
+					<translation id="text" type="use" value="总监" />
 				</widget>
 			    
 				<widget class="person_button" id="perM" auto_size="vertical" font="semibold" colour="white">
@@ -136,7 +136,7 @@
 					<layout class="arrange_vertical_attachment" alignment="top" offset="4" gap="0"/>
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
                     <widget class="text" id="CmeL" font="title" auto_size="vertical" colour="faded text">
-					<translation id="text" type="use" value="언론의 예상" />
+					<translation id="text" type="use" value="媒体期望" />
 					</widget>
 					<widget class="media_expectation_text" id="CmeV" size="11" font="semibold" colour="white" auto_size="vertical">
 						<boolean id="NumF" value="0" />
@@ -182,7 +182,7 @@
 		<container class="titled_box">
         <layout class="arrange_horizontal_attachment" alignment="top,extend" offset="0" gap="0" />
         <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
-		    <translation id="text" type="use" value="선수 기록" />
+		    <translation id="text" type="use" value="球员记录" />
 			      	
 		<!-- player stats -->
 			<widget class="team_report_summary_panel" id="ress" file="team/team report summary scout panel2">				
@@ -192,7 +192,7 @@
 	<widget class="horizontal_divider" />
 		<!-- formation -->
 			<container class="titled_box">	 
-		   	<translation id="title" type="use" value="포메이션" /> 
+		   	<translation id="title" type="use" value="阵型" /> 
 					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="-10" gap="0" />
           <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 			      

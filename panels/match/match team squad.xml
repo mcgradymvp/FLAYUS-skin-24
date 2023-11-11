@@ -104,7 +104,7 @@
 							<!-- status info -->
 							<record id="Pcar" auto_hide_priority="3" />
 							<!-- captain? -->
-							<!--<record id="PisC" auto_hide_priority="4" width="18"/>-->
+							<record id="PisC" auto_hide_priority="800" alignment="centre" width="40"/>
 							<!-- position -->
 							<record id="PpsC" auto_hide_priority="11" width="-5" minimum_width="120" />
 							<!-- player condition-->

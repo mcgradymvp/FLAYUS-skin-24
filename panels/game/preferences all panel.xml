@@ -59,7 +59,7 @@
               <integer id="event_id" value="pPsl" />
               <integer id="selection" value="prMC" />
             </record>
-            <translation id="text" type="use" value="기타 설정" />
+            <translation id="text" type="use" value="其他设置" />
           </widget>
           <widget class="radio_button" auto_size="all" appearance="tabs/subsection/normal/top/button" show_button_appearance="true" icon="none">
             <record id="click_event">

@@ -29,7 +29,7 @@
 				</widget>
 			</container>
 			
-		<container>
+		<container class="main_box"> 
         <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
         <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 		
@@ -99,17 +99,17 @@
           <translation id="title" translation_id="248079" type="use" value="Report" />
         </widget>
 
-				<widget class="match_action_zones_panel" id="foap" file="match/focus of attacks panel">
-					<translation id="title" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
-				</widget>
+		<widget class="match_action_zones_panel" id="foap" file="match/focus of attacks panel">
+			<translation id="title" translation_id="420657" type="use" value="Focus of Attacks[COMMENT: match action zones label, indicates the main focuses of team attacking moves]" />
+		</widget>
 
         <widget class="match_goal_update_panel" id="mgup" file="match/match goal update small">
-          <translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
+            <translation id="title" translation_id="336459" type="use" value="Latest Event Updates[COMMENT: match screen panel; information on goals, red cards, injuries etc from all matches taking place on a matchday]" />
         </widget>
 
         <widget class="match_league_table_panel" id="mltp" MLTs="true">
-					<translation id="title" translation_id="248082" type="use" value="League Table" />
-				</widget>
+			<translation id="title" translation_id="248082" type="use" value="League Table" />
+		</widget>
 
       </widget>
 
@@ -221,11 +221,11 @@
                   <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />			
 	
 					<widget class="post_match_report_widget" file="widgets/match/post match report widget1" id="pstL">
-					<translation id="title" type="use" value="기대 득점 내역" />
+					<translation id="title" type="use" value="预期得分" />
 						<record id="object_property" get_property="objt" set_property="objt" />
 					</widget>
 				    <widget class="post_match_report_widget" file="widgets/match/post match report widget2" id="pst2">
-	                   <translation id="title" type="use" value="슈팅맵" />
+	                   <translation id="title" type="use" value="射门图" />
 						<record id="object_property" get_property="objt" set_property="objt" />
 					</widget>
 			     </container>

@@ -36,11 +36,11 @@
 	</widget> 
 
   	<widget class="player_history_achievements_panel" id="pac1" file="player/player history achievements small" late_loading="true">
-		<translation id="title" translation_id="329749" type="use" value="Career Achievements" />
+		<translation id="title" type="use" value="职业成就" />
 	</widget>
 
 	<widget class="player_training_stats_panel" id="pitf" late_loading="true" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
-		<translation id="title" translation_id="363655" type="use" value="Individual training[COMMENT: training players panel, column heading for Individual Training Focus]" />
+		<translation id="title" type="use" value="训练" />
 	</widget>  
 
 	<widget class="client_object_viewer_xml_panel" file="player/player attribute analyser panel" id="paAn" late_loading="true">
@@ -52,7 +52,7 @@
 		<record id="object_property" get_property="objt" set_property="objt"/>
 	</widget>   
 	<widget class="player_scout_reports_panel" file="gunzo/gunzo player stats1" id="pc1a" late_loading="true">
-		<translation id="title" type="use" value="전반적인 기록" />
+		<translation id="title" type="use" value="总记录" />
 	</widget>   
 	<widget class="playing_history_summary_panel" file="gunzo/playing history summary small" id="Pcrs" late_loading="true">
 		<translation id="title" translation_id="247605" type="use" value="Career Stats" />

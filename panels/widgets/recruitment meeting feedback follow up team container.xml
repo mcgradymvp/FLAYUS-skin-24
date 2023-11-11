@@ -1,0 +1,33 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_layout="16,-1" vertical_alignment="top,extend" horizontal_alignment="horizontal" horizontal_inset="0" vertical_offset="0"/>
+
+	<list id="properties_to_forward">
+		<record get_property="objL" set_property="objL" target="plyT"/>
+		<record get_property="titl" set_property="text" target="tite"/>
+	</list>
+
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="16, -1" horizontal_offset="0" horizontal_gap="6" vertical_offset="0"/>
+
+		<widget class="picture" file="icons/16px/kit" auto_size="vertical" scale_picture="true" image_alignment="centre" red_replacement="title"/>
+		<widget class="text" id="tite" font="title" size="10" auto_size="vertical" alignment="left,centre_y">
+			<translation id="text" translation_id="227398" type="use" value="First Team" />
+		</widget>
+	</container>
+
+	<widget class="client_object_list_table" horizontal_inset="4" horizontal_offset="4" id="plyT" mode="fill_rows, stripe_rows, show_bullets" auto_size="vertical">
+		<integer id="row_height" value="50" />
+		<integer id="fixed_row_height" value="30" />
+		<integer id="row_spacing" value="2" />
+		<integer id="column_spacing" value="4" />
+		<integer id="database_table_type" value="1" />
+		<boolean id="should_force_refresh" value="false" />
+		<record id="viewed_property_ids">
+			<record id="Pnad" auto_hide_priority="1"/>
+			<record id="Pced" auto_hide_priority="5" width="120"/>
+			<record id="Pcab" auto_hide_priority="4" minimum_width="250" />
+			<record id="RMea" auto_hide_priority="3"/>
+			<record id="RMcb" auto_hide_priority="2" minimum_width="400" is_feedback_follow_up="false"/>
+		</record>
+	</widget>
+</panel>

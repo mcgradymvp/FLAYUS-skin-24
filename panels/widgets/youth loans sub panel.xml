@@ -1,12 +1,12 @@
-﻿<panel>
+﻿<panel draw_horizontal_dividers="true">
 	<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" />
 	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 	
-	<container class="inner_titled_box" force_title_borders="true" id="plti" navigation_container="true" default_focus="true">
+	<container class="main_box" force_title_borders="true" id="plti">
 		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="4" />
 		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 		<!-- buttons area -->
-		<container embed_in_frame="true">
+		<container embed_in_frame="true" navigation_container="true">
 			<attachment_group class="title_embedded_panel_left" />
 
 			<widget class="view_menu_label" id="TitL" embed_in_frame="true" navigation_focus_target="false">
@@ -19,7 +19,7 @@
 		</container>
 
 		<!-- buttons area -->
-		<container id="btna" embed_in_frame="true">
+		<container id="btna" embed_in_frame="true" navigation_container="true">
 			<attachment_group class="title_embedded_panel_right" />
 
 			<widget class="widget_popup_button" id="devR" appearance="buttons/subtle/normal/button" auto_size="all" embed_in_frame="true">
@@ -33,10 +33,12 @@
 			</widget>
 
 			<!-- filter menu -->
-			<widget class="embedded_filter_button" id="plsf" target="plti" auto_size="all" embed_in_frame="true" />
+			<widget class="embedded_filter_button" id="plsf" target="plti" auto_size="all" embed_in_frame="true" >
+				<string id="remove_if" value="ui.is_fmt_controller_skin" />
+			</widget>
 		</container>
 
-		<container class="client_object_list_table" id="pltb" column_mode="resize_columns,move_columns,custom_views" navigation_container="true">
+		<container class="client_object_list_table" id="pltb" column_mode="resize_columns,move_columns,custom_views" navigation_container="true" default_focus="true">
 			<boolean id="save_session_state" value="true" />
 			<boolean id="save_default_state" value="true" />
 
@@ -271,7 +273,7 @@
 								<integer id="player_stats_scope" value="3" />
 							</record>
 						</record>
-						<record id="step_type">
+						<record id="inst">
 							<translation id="text" translation_id="320542" type="use" value="International[COMMENT: squad list view type]" />
 							<record id="view">
 								<string id="player_status_info" value="" />
@@ -472,38 +474,27 @@
 		</container>
 	</container>
 
-	<container class="inner_titled_box" id="lnbx"  navigation_container="true">
-		<string id="size" value="large" />
+	<container class="main_box" id="lnbx"  navigation_container="true">
 		<translation id="title" translation_id="492062" type="use" value="Loan suggestions[COMMENT: AREA: Development Centre; SUB-AREA: Loans panel; FR-BN: 28432; TONE: Formal; NOTE: Header for information about Loan suggestions for player from staff]" />
-		<attachment_group class="vertical_arrange_autosize" vertical_gap="0" horizontal_inset="0" />
+		<attachment_group class="vertical_arrange_autosize"/>
 
-		<widget class="horizontal_divider" id="at07" height="4" />
-
-		<container class="client_object_list_table" id="lnST" name="loan suggestions table" auto_size="vertical" auto_size_maximum_height="230">
-			<integer id="row_height" value="50" />
-			<integer id="fixed_row_height" value="30" />
+		<widget class="client_object_list_table" id="lnST" name="loan suggestions table" database_table_type="1" mode="fill_rows, stripe_rows, printable, keyboard" auto_size="vertical"  fixed_size_rows="true" auto_size_rows="false" row_height="50"  auto_size_maximum_height="250">
 			<string id="customisation_context" value="play" />
-			<string id="mode" value="fill_rows, stripe_rows, printable, keyboard" />
-			<integer id="database_table_type" value="1" />
 			<boolean id="should_force_refresh" value="true" />
 			<string id="contextual_handler_column_id" value="Pnms" />
-			<string id="default_view" value="over" />
 			<list id="default_sort_column">
 				<integer value="Pppc" />
 			</list>
-			<list id="views">
-				<record id="over">
-					<record id="view">
-						<record id="Pnpd" width="-1" auto_hide_priority="1" />
-						<record id="PpAH" auto_hide_priority="10" />
-						<record id="Pppc" auto_hide_priority="20" />
-						<record id="Ptrt" auto_hide_priority="20" navigation_focus_target="false" />
-						<record id="player_overall_average_rating" auto_hide_priority="10" />
-						<record id="plSr" colour="white" auto_hide_priority="1" navigation_focus_target="false" />
-					</record>
-				</record>
-			</list>
-		</container>
+			<record id="viewed_property_ids">
+				<record id="Pnpd" width="-1" auto_hide_priority="1" />
+				<record id="OfCb" auto_hide_priority="10" />
+				<record id="PpAH" auto_hide_priority="10" />
+				<record id="Pppc" auto_hide_priority="20" />
+				<record id="Ptrt" auto_hide_priority="20" navigation_focus_target="false" />
+				<record id="player_overall_average_rating" auto_hide_priority="10" />
+				<record id="plSr" colour="white" auto_hide_priority="1" navigation_focus_target="false" />
+			</record>
+		</widget>
 		<widget class="text" id="lntx" alignment="centre_x,centre_y" height="100">
 			<string id="style" value="semi_bold" />
 			<translation id="text" translation_id="492063" type="use" value="No loan suggestions[COMMENT: AREA: Development Centre; SUB-AREA: Loans panel; FR-BN: 28432; TONE: Formal; NOTE: title when no loans to suggest]" />

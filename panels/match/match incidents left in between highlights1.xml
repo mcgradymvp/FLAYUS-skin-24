@@ -6,15 +6,9 @@
   </widget>
 
   <container>
-    <layout class="arrange_horizontal_attachment" layout="50,-1,45" gap="10" offset="10"/>
+    <layout class="arrange_horizontal_attachment" layout="45,-1,50" gap="10" offset="10"/>
     <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
     <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-
-    <widget class="kit_picture" id="teKP" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre"/>
-
-    <!-- team name -->
-    <widget class="text" id="mitn" font="title" size="xlarge" alignment="centre" multiline="false"/>
-
     <!--logo-->
     <container>
       <layout class="arrange_horizontal_attachment" alignment="right" gap="0" offset="0"/>
@@ -23,6 +17,12 @@
     <widget class="match_team_logo_picture" id="TeLo" width="45" height="45"/>
 
     </container>
+
+    <!-- team name -->
+    <widget class="text" id="mitn" font="title" size="xlarge" alignment="centre" multiline="false"/>
+
+    <widget class="kit_picture" id="teKP" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre"/>
+
   </container>
 
 </panel>

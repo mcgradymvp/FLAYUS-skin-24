@@ -21,7 +21,7 @@
 		<!-- Clean Sheets (GK)-->
 		<record id="PScs" format="[%fraction#1-2.0]">
 			<translation id="hint" translation_id="317291" type="use" value="Clean Sheets[COMMENT: player stats; goalkeeper statistic for games where he didn't concede a goal]" />
-			<translation id="text"  type="use" value="클린 시트" />
+			<translation id="text"  type="use" value="零封" />
 		</record>
 		<!-- Save Tipped -->
 		<record id="stip" format="[%fraction#1-2.0]">
@@ -71,7 +71,7 @@
 		<!-- Dribbles made per game-->
 		<record id="PSdg" format="[%fraction#1-2.2]">
 			<translation id="text" translation_id="337882" type="use" value="DrbPG[COMMENT: dribbles made per game for an individual player, used as a column header, needs to be short as poss but different to 'Drb', which is total dribbles]" />
-			<translation id="hint" type="use" value="경기 당 드리블" />
+			<translation id="hint" type="use" value="每场比赛盘带数" />
 		</record>
 		<!-- Shots ratio -->
 		<record id="PSst" class="dashed_record_percentage_label">

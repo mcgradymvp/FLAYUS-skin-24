@@ -11,7 +11,7 @@
  
  	
    <widget class="link_button" font="label" section="Ptac" auto_size="all" colour="cyan"  >
-        <translation id="text" type="use" value="선호하는 플레이-스토크검증" />
+        <translation id="text" type="use" value="Preferred Play-Stalk Verification" />
       </widget>
 	  
   </container>

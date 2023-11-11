@@ -153,24 +153,21 @@
 	</container>
 
 	<container class="horizontal_adaptive_container" id="adSP" draw_vertical_dividers="true">
-		<global id="gap" name="ui.main_contrast_box_gap" />
 
 		<container priority="1" minimum_width="250" default_width="-1" id="pcCL">
-			<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0">
-				<global id="gap" name="ui.main_box_gap" />
-			</layout>
+			<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0"/>
+		
 			<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
 
-			<container id="mtFC" class="recruitment_focus_widget" width="250" hide_container_title="false" enable_linking="true">
+			<container id="mtFC" class="recruitment_focus_widget" width="400" hide_container_title="false" enable_linking="true">
 				<string id="remove_if" value="platform_is_handheld" />
 				<record id="object_property" get_property="PFrM" set_property="valu" />
 				<translation id="text" translation_id="557838" type="use" value="Recruitment Focus Matches[COMMENT: AREA: Scouting; SUB-AREA: Scouting card; FR-BN: FM-4003; NOTE: Title above recruitment focus widget shown on scouting card]" />
 			</container>
 
 			<container>
-				<layout class="arrange_vertical_attachment" layout="-1,-1,-1" offset="0">
-					<global id="gap" name="ui.main_box_gap" />
-				</layout>
+				<layout class="arrange_vertical_attachment" layout="-1,-1,-1" offset="0"/>
+		
 				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
 				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 									

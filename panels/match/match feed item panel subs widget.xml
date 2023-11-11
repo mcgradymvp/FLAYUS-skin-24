@@ -2,9 +2,9 @@
 	<attachment_group class="horizontal_arrange" horizontal_layout="-1,30,-1" vertical_inset="8"/>
 
 	<container>
-		<attachment_group class="horizontal_arrange" horizontal_layout="-1,120"/>
-		<widget class="spacer"/>
-		<widget class="match_players_bar_widget" width="120">
+		<attachment_group class="horizontal_arrange" horizontal_layout="-1,180"/>
+		<widget class="spacer"/>	
+		<widget class="match_players_bar_widget" width="180">
 			<record id="object_property" get_property="MNPp" set_property="prop" />
 		</widget>
 
@@ -16,13 +16,11 @@
 	</widget>
 
 	<container>
-		<attachment_group class="horizontal_arrange" horizontal_layout="120,-1"/>
+		<attachment_group class="horizontal_arrange" horizontal_layout="180,-1"/>
 
-		<widget class="match_players_bar_widget" width="120">
+		<widget class="match_players_bar_widget" width="180">
 			<record  id="object_property" get_property="MNP2" set_property="prop" />
 		</widget>
-
-		<widget class="spacer"/>
-
+<widget class="spacer"/>	
 	</container>
 </panel>

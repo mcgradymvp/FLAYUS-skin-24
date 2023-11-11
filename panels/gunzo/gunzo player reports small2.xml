@@ -16,7 +16,7 @@
 			<!-- Linked header -->
 
 			<widget class="link_button" section="Pccr" auto_size="all">
-				<translation id="text" type="use" value="GZ 스몰리포트 2" />
+				<translation id="text" type="use" value="GZ小报告2" />
 			</widget>
 		</container>  
 

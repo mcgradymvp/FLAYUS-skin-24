@@ -1,6 +1,8 @@
 ﻿<panel save_session_state="true">
-
-	<animation class="fade_animation" start_value="0" end_value="1" duration="0.3" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true"/>
+	<!--Modify these two properties for the Development Graph table column for topics that require it.-->
+	<integer id="topic_dev_graph_width" value="100" />
+	<integer id="topic_dev_graph_height" value="70" />
+	<animation class="fade_animation" start_value="0" end_value="1" duration="0.3" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" />
 
 	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
 	<container id="meet">
@@ -31,6 +33,8 @@
 				</container>
 			</container>
 
+
+
 			<!--meeting content container-->
 			<container>
 				<attachment_group class="horizontal_arrange" horizontal_alignment="middle,extend" />
@@ -58,7 +62,7 @@
 
 					<!--topic content-->
 					<container class="inner_contrast_box" red_replacement="bg" draw_vertical_dividers="true">
-						<attachment_group class="horizontal_arrange" horizontal_layout="180,-1,270" vertical_inset="0" horizontal_gap="24" />
+						<attachment_group class="horizontal_arrange" horizontal_layout="200, -1, 270" vertical_inset="0" horizontal_gap="16" />
 
 						<container class="inner_box" draw_horizontal_dividers="true">
 							<string id="colour" value="text" />
@@ -99,12 +103,13 @@
 
 							<container>
 								<attachment_group class="vertical_arrange_autosize" vertical_gap="8" />
+								
 								<widget class="text" font="label" id="sthd" auto_size="vertical" colour="faded text" alignment="top,left" />
 								<widget class="non_player_attributes_panel" height="150" id="npat" view="5" ucmt="true" file="non_player/non player attributes panel combined" />
 							</container>
 
 							<!-- Another Staff popup widget  -->
-							<widget class="widget_popup_button" id="AaSm" auto_size="vertical" multiline="true" icon="icons/16px/staff" appearance="buttons/subtle/flex/button" default_focus="true">
+							<widget class="widget_popup_button" id="AaSm" auto_size="vertical" multiline="true" icon="icons/16px/staff" appearance="buttons/subtle/flex/button">
 								<translation id="text" translation_id="534799" type="use" value="Ask Another Staff Member[COMMENT: AREA: backroom advice; SUB-AREA: staff advice; NOTE: change the staff member giving the advice]" />
 								<string id="popup_alignment" value="left, bottom" />
 								<string id="widget_type" value="client_object_viewer_xml_panel" />
@@ -186,10 +191,24 @@
 							<widget class="icon_button" icon="icons/16px/tick" click_event="Anat" id="ackn" auto_size="all" appearance="buttons/primary/normal/button" hidden="true">
 								<translation id="text" translation_id="447507" type="use" value="Acknowledge[COMMENT: Scouting centre action, acknowledges a report without necessarily performing a further action on it]" />
 							</widget>
-							<widget class="button" click_event="GTnt" id="mvon" auto_size="all" appearance="buttons/subtle/normal/button">
-								<translation id="text" translation_id="534804" type="use" value="Move On[COMMENT: AREA: Staff Meeting; SUB-AREA: Staff Meeting Summary; FR-BN: 35392; TONE: Informal;]" />
-								<translation id="hint" translation_id="534805" type="use" value="Move to next agenda item without agreeing to any further suggested actions.[COMMENT: AREA: Staff Meeting; SUB-AREA: Staff Meeting Summary; FR-BN: 35392; TONE: Informal;]" />
-							</widget>
+
+							<container>
+								<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="left" horizontal_gap="1" />
+
+								<widget class="button" click_event="GTnt" id="mvon" auto_size="all" appearance="buttons/subtle/split/left/button">
+									<translation id="text" translation_id="534804" type="use" value="Move On[COMMENT: AREA: Staff Meeting; SUB-AREA: Staff Meeting Summary; FR-BN: 35392; TONE: Informal;]" />
+									<translation id="hint" translation_id="534805" type="use" value="Move to next agenda item without agreeing to any further suggested actions.[COMMENT: AREA: Staff Meeting; SUB-AREA: Staff Meeting Summary; FR-BN: 35392; TONE: Informal;]" />
+								</widget>
+
+								<widget class="popup_button" id="DIMb" select_event="DIce" fixed="true" width="40" height="30" appearance="buttons/subtle/split/right/button" icon_alignment="centre">
+									<list id="items">
+										<record id="publ">
+											<translation id="text" translation_id="551826" type="use" value="Don't show this topic again[COMMENT: AREA: Ignore Topic Button; FR-BN: 37058; TONE: Formal; CHARLIMIT: ; REF-ID: ; NOTE: String to let people choose to ignore this topic from future meetings.]" />
+										</record>
+									</list>
+								</widget>
+							</container>
+
 
 						</container>
 
@@ -203,14 +222,12 @@
 									<translation id="text" translation_id="534806" type="use" value="Remind in a Week[COMMENT: AREA: Staff Meeting; SUB-AREA: Staff Meeting In-Meeting; FR-BN: 35389; TONE: Informal; NOTE: Action for the button]" />
 									<translation id="hint" translation_id="534807" type="use" value="Advice will be repeated in a future meeting[COMMENT: AREA: Staff Meeting; SUB-AREA: Staff Meeting In-Meeting; FR-BN: 35389; TONE: Informal; NOTE: Action for the button]" />
 								</widget>
-								<widget class="popup_button" id="rpop" select_event="slRm" fixed="true" width="40" height="30" appearance="buttons/subtle/split/right/button" icon_alignment="centre"/>
+								<widget class="popup_button" id="rpop" select_event="slRm" fixed="true" width="40" height="30" appearance="buttons/subtle/split/right/button" icon_alignment="centre" />
 							</container>
-
 
 							<widget class="button" click_event="GTnc" id="nxct" auto_size="all" appearance="buttons/subtle/normal/button">
 								<translation id="hint" translation_id="534808" type="use" value="Move to next advice category without accepting any further advice for this category[COMMENT: AREA: Staff Meeting; SUB-AREA: Staff Meeting In-Meeting; FR-BN: 35389; TONE: Informal; NOTE: Action for the button]" />
 							</widget>
-
 
 						</container>
 
@@ -263,7 +280,7 @@
 	</container>
 
 	<container id="summ">
-		<attachment_group class="vertical_arrange" vertical_layout="-1,-80,-13" />
+		<attachment_group class="vertical_arrange" vertical_layout="-7,-80,-13" />
 
 		<container />
 
@@ -303,7 +320,7 @@
 							</widget>
 
 							<widget class="simple_data_list" id="apex" gap="8" auto_size="vertical" set_property="prop">
-								<record id="widget_properties" class="icon_button" icon_spacing="10" size="large" icon_colour="white" auto_size="vertical" multiline="true" icon="icons/26px/inbox" appearance=""/>
+								<record id="widget_properties" class="icon_button" icon_spacing="10" size="large" icon_colour="white" auto_size="vertical" multiline="true" icon="icons/26px/inbox" appearance="" />
 							</widget>
 
 						</container>
@@ -316,12 +333,17 @@
 					</container>
 
 					<container>
-						<attachment_group class="vertical_arrange_autosize" horizontal_alignment="right" />
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right" />
+						<widget class="link_button" id="advi" appearance="buttons/standard/normal/button" alignment="right,centre_y" auto_size="horizontal" height="26">
+							<string id="section" value="mnar" />
+							<translation id="text" translation_id="596582" type="use" value="Meeting Preferences[COMMENT: AREA: Staff Meeting; SUB-AREA: Staff Meeting Preferences Button; FR-BN: FM-23036; TONE: Informal; CHARLIMIT: None; REF-ID: XXXXXX; NOTE: Title for the Button that takes us to the Advice and Reports responsibilities]" />
+						</widget>
+						
 						<widget class="widget_popup_button" auto_size="all" id="MFPU" icon="icons/16px/settings">
 							<translation id="text" translation_id="229824" type="use" value="Preferences" />
 							<string id="popup_alignment" value="left, centre_y" />
 							<string id="widget_type" value="client_object_viewer_xml_panel" />
-							<record id="WdgP" file="widgets/staff meeting frequency popup" width="1024" height="200" IMeS="true" send_responsibility_change_event="true" />
+							<record id="WdgP" file="widgets/staff meeting frequency popup" width="400" height="200" IMeS="true" send_responsibility_change_event="true" />
 							<record id="mopp" file="modal popup panel auto sized" />
 						</widget>
 					</container>

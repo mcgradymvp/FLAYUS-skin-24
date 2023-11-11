@@ -1,9 +1,11 @@
 ﻿<panel>
+<attachment class="test_screen_size_attachment" test_on_layout="false" alignment="horizontal" min_value="1366" max_value="100000" set_property="hdPR" />
+
 	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 
 	<container>
-		<attachment_group class="horizontal_arrange" horizontal_layout="-1,500,-1" horizontal_offset="0" vertical_inset="0" horizontal_gap="0" />
+		<attachment_group class="horizontal_arrange" horizontal_layout="-1,550,-1" horizontal_offset="0" vertical_inset="0" horizontal_gap="0" />
 		<!--left side -->
 		<container class="bordered_box" appearance="boxes/custom/match/timeline stats/paper" default_width="530" minimum_width="500" priority="1">
 			<layout class="arrange_vertical_attachment" layout="-1,400" offset="0" />
@@ -36,7 +38,7 @@
         <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 		
 	<container id="bmf1">
- 	    <translation id="title" type="use" value="홈팀 포메이션-패스맵" />
+ 	    <translation id="title" type="use" value="主队阵型-传球图" />
             <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="1" />
             <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 		    <boolean id="save_session_state" value="true" />
@@ -60,6 +62,8 @@
 			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
 			
 		<container class="main_box" appearance="boxes/custom/match/timeline stats/paper" red_replacement="bg">
+		<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="0.4" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top" />
+				<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="0.2" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top" trigger_id="hidden" trigger_value="false" />
         <layout class="arrange_vertical_attachment" layout="230,310,-1" offset="0" />
         <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 
@@ -85,11 +89,11 @@
 					<integer id="set_property" value="objt" />
 				</record>
 					<widget class="post_match_report_widget" file="widgets/match/post match report widget1" id="pstL">
-					<translation id="title" type="use" value="기대 득점 내역" />
+					<translation id="title" type="use" value="预期得分" />
 						<record id="object_property" get_property="objt" set_property="objt" />
 					</widget>
 				    <widget class="post_match_report_widget" file="widgets/match/post match report widget2" id="pst2">
-	                   <translation id="title" type="use" value="슈팅맵" />
+	                   <translation id="title" type="use" value="射门图" />
 						<record id="object_property" get_property="objt" set_property="objt" />
 					</widget>
 				</widget>
@@ -123,7 +127,7 @@
 			</container>
 
 	<container id="bmf2">
- 	    <translation id="title" type="use" value="원정팀 포메이션-패스맵" />
+ 	    <translation id="title" type="use" value="客队阵型-传球图" />
             <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="1" />
             <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 		    <boolean id="save_session_state" value="true" />

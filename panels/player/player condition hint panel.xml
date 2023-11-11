@@ -14,7 +14,7 @@
 			<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0"/>
 			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
 
-			<record id="object_property" get_property="PRCF" set_property="valu"/>
+			<record id="object_property" get_property="PRCF"/>
 
 			<!--pie-->
 			<container width="60">

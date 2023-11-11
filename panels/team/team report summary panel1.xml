@@ -6,7 +6,7 @@
 			<container class="bordered_box">
 				<layout class="arrange_vertical_attachment" layout="-1,1,-1,1,-1,1,-1" offset="0" gap="0" />
 				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
-				<translation id="title" type="use" value="최고 기량 선수"/>
+				<translation id="title" type="use" value="最佳球员"/>
 				<!--best form-->
 				<container>
 					<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0"/>

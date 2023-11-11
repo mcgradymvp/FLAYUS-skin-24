@@ -42,7 +42,7 @@
 			
 
 			<widget class="label" size="15" colour="white" alignment="centre" auto_size="vertical">
-			 <translation id="text" type="use" translation_id="297998" value="세계 랭킹" />
+			 <translation id="text" type="use" translation_id="297998" value="世界排名" />
 			</widget>
 
         <widget class="fifa_ranking_label" alignment="centre" size="15" auto_size="vertical" id="wnum" style="semi_bold">

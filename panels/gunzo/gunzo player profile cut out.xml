@@ -12,8 +12,8 @@
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 			
 		<!-- Profile picture -->
-        <widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" width="150" height="150" image_alignment="centre_x,centre_y">   
-           <layout class="stick_to_sides_attachment" alignment="all" inset="60,0,87,0"/>
+        <widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" width="200" height="200" image_alignment="centre_x,centre_y">   
+           <layout class="stick_to_sides_attachment" alignment="all" inset="30,0,40,0"/>
           <record id="object_property">
             <list id="get_properties">
               <!--Facegen data request-->
@@ -24,6 +24,15 @@
             </list>
           </record>
         </widget>		
+		
+		<widget class="person_button" spec="text" size="20" alignment="centre_x, bottom" font="signature" colour="secondary">
+		   <layout class="stick_to_sides_attachment" alignment="all" inset="0,0,5,0"/>
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="valu" />
+			</record>
+		</widget>
+
 			<!-- Player Status  -->
 				<widget class="player_status_all_button" appearance="buttons/custom/gzstatus" id="Pnfa" alignment="bottom" gap="1" maximised="true">
 					<layout class="stick_to_sides_attachment" alignment="top" inset="88" />
@@ -34,8 +43,8 @@
 				</widget>	
 				</container>	
 
-			<!-- height & age & weight -->
-			<container default_height="27" minimum_height="27" priority="2">
+	<!-- height & age & weight -->
+		<container default_height="27" minimum_height="27" priority="2">
 				<layout class="arrange_horizontal_attachment" layout="-1, -1, -1" offset="40" gap="0" />
 				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 
@@ -51,7 +60,6 @@
 					</widget>
 
 				</container>
-
 				<container>
 					<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
 					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
@@ -63,7 +71,6 @@
 							<integer id="get_property" value="Pdob"/>
 						</record>
 					</widget>
-
 				</container>
 
 				<container>
@@ -79,38 +86,27 @@
 
 				</container>
 			</container>			
-<container height="5"/>
-			<!--value-->
-			<container default_height="30" minimum_height="30" priority="2">
-				<layout class="arrange_horizontal_attachment" layout="-1,150" offset="15" gap="0" />
+		
+			<container default_height="27" minimum_height="27" priority="2">
+				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="0" />
 				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 
-				<container>
-					<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
-					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-
 					<!--value-->
-					<widget class="transfer_value_label" id="valu" font="transfer value" size="12" auto_size="vertical" colour="accent" >
+					<widget class="transfer_value_label" id="valu" font="text" size="12" auto_size="vertical" alignment="centre_x, centre_y, can_scale" >
 						<translation id="hint" translation_id="227806" type="use" value="Value" />
 						<record id="object_property">
 							<integer id="get_property" value="Pdva" />
 						</record>
 					</widget>	
-					
-				</container>
-				<container>
-					<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
-					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-
 					<!--wage-->
-					<container class="editable_client_object_property_panel" id="wkwg"  style="semi_bold" font="gzmain"  colour="gzk" size="11" alignment="centre_x, centre_y, can_scale" format="2" >
+					<container class="editable_client_object_property_panel" id="wkwg" style="bold" font="text" colour="gzk" size="12" alignment="centre_x, centre_y, can_scale" format="2" >
 						<translation id="hint" translation_id="227799" type="use" value="Wage" />
 						<record id="object_property">
 							<integer id="get_property" value="Pcww" />
 						</record>
 					</container>
 				</container>
-			</container>
+		
 <container height="5"/>
 			<!-- recommendations  -->
 			<container default_height="55" minimum_height="55" priority="1">

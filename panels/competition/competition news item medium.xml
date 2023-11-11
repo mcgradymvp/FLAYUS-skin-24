@@ -1,6 +1,4 @@
-<!-- NOTE: The property 'usoc' used on elements tells the panel to recolour them based on object colours -->
-<panel>
-	  	
+<panel navigation_focus_target="true">
 	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 	<container>

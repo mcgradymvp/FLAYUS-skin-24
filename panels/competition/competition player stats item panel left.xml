@@ -2,21 +2,21 @@
   <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
   <container class="property_list_viewer_xml_panel" id="tops">
-    <layout class="arrange_horizontal_attachment" layout="50, -1, 40" offset="6" gap="6" />
+    <layout class="arrange_horizontal_attachment" layout="55, -1, 40" offset="8" gap="8" />
     <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 
     <!-- Radio button for selecting this stat -->
-    <widget class="radio_button" id="selc" group="psrb" group_parent_level="radC" click_event="PstS" icon_enabled="false" appearance="switches/custom/competition stats/pitch/button" show_button_appearance="true" embed_in_frame="true">
+    <widget class="radio_button" id="selc" group="psrb" group_parent_level="radC" click_event="PstS" select_event="PstS" icon_enabled="false" appearance="switches/custom/competition stats/pitch/button" show_button_appearance="true" embed_in_frame="true">
       <layout class="stick_to_sides_attachment" alignment="all" inset="0" embed_in_frame="true" />
     </widget>
 
     <!-- Stat string (csSS for short version, csLS for long version)-->
-    <widget class="label" size="10" style="semi_bold" alignment="left,centre_y" auto_size="horizontal" colour="white">
-      <layout class="stick_to_sides_attachment" alignment="left" inset="10" />
+    <widget class="label" size="medium" style="semi_bold" alignment="left,centre_y" colour="text">
+      <layout class="stick_to_sides_attachment" alignment="left" inset="16" />
       <record id="object_property" get_property="csSS" dont_set_object="true" />
     </widget>
 
-    <!-- Player name and team-->
+		<!-- Player name and team-->
     <container class="container_with_mouse_events" propagate_mouse_events="true">
       <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
       <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="2" />
@@ -24,36 +24,36 @@
       <widget class="formatted_label" alignment="right,bottom" colour="faded white" auto_size="vertical" size="xsmall" multiline="false">
         <record id="object_property" get_property="type" dont_set_object="true" />
         <list id="format">
-          <record value="16">
-            <translation id="format" translation_id="392239" type="use" value="Best At Hitting Target[COMMENT: FR 8873; Competition player stats overview; stat description, most on-target shots at goal]" />
-          </record>
-          <record value="2">
-            <translation id="format" translation_id="247695" type="use" value="Top Goalscorer[COMMENT: manager home panel: player stats: top goalscorer label]" />
-          </record>
-          <record value="23">
-            <translation id="format" translation_id="392252" type="use" value="Most Key Passes[COMMENT: FR 8873; Competition player stats overview; stat description]" />
-          </record>
-          <record value="5">
-            <translation id="format" translation_id="232095" type="use" value="Most Assists" />
-          </record>
-          <record value="15">
-            <translation id="format" translation_id="392248" type="use" value="Most Dribbles / Match[COMMENT: FR 8873; Competition player stats overview; stat description, most dribbles per match]" />
-          </record>
-          <record value="18">
-            <translation id="format" translation_id="392247" type="use" value="Most Distance / 90 Min[COMMENT: FR 8873; Competition player stats overview; stat description, most distance run in 90 minutes]" />
-          </record>
-          <record value="14">
-            <translation id="format" translation_id="392255" type="use" value="Most Tackles / Match[COMMENT: FR 8873; Competition player stats overview; stat description, most tackles per match]" />
-          </record>
-          <record value="24">
-            <translation id="format" translation_id="392253" type="use" value="Most Key Tackles[COMMENT: FR 8873; Competition player stats overview; stat description]" />
-          </record>
-          <record value="20">
-            <translation id="format" translation_id="336497" type="use" value="Most Clean Sheets[COMMENT: title for table showing players who have the most clean sheets]" />
-          </record>
-          <record value="3">
-            <translation id="format" translation_id="392245" type="use" value="Least Conceded[COMMENT: FR 8873; Competition player stats overview; stat description]" />
-          </record>
+					<record value="2">
+						<translation id="format" translation_id="392250" type="use" value="Most Goals[COMMENT: FR 8873; Competition player stats overview; stat description, most goals]" />
+					</record>
+					<record value="5">
+						<translation id="format" translation_id="336496" type="use" value="Most Assists[COMMENT: title for table showing players who have the most assists]" />
+					</record>
+					<record value="46">
+						<translation id="format" translation_id="515009" type="use" value="Most Shots[COMMENT: AREA: Competition Stats; SUB-AREA: Player Overview; FR-BN: 32056; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Stat description]" />
+					</record>
+					<record value="12">
+						<translation id="format" translation_id="515010" type="use" value="Most Player of the Match[COMMENT: AREA: Competition Stats; SUB-AREA: Player Overview; FR-BN: 32056; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Stat description]" />
+					</record>
+					<record value="23">
+						<translation id="format" translation_id="392252" type="use" value="Most Key Passes[COMMENT: FR 8873; Competition player stats overview; stat description]" />
+					</record>
+					<record value="13">
+						<translation id="format" translation_id="392241" type="use" value="Best Pass Completion[COMMENT: FR 8873; Competition player stats overview; stat description, best pass completion ratio]" />
+					</record>
+					<record value="63">
+						<translation id="format" translation_id="515011" type="use" value="Most Tackles Won[COMMENT: AREA: Competition Stats; SUB-AREA: Player Overview; FR-BN: 32056; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Stat description]" />
+					</record>
+					<record value="62">
+						<translation id="format" translation_id="515012" type="use" value="Most Dribbles Made[COMMENT: AREA: Competition Stats; SUB-AREA: Player Overview; FR-BN: 32056; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Stat description]" />
+					</record>
+					<record value="20">
+						<translation id="format" translation_id="336497" type="use" value="Most Clean Sheets[COMMENT: title for table showing players who have the most clean sheets]" />
+					</record>
+					<record value="3">
+						<translation id="format" translation_id="515013" type="use" value="Fewest Conceded[COMMENT: AREA: Competition Stats; SUB-AREA: Player Overview; FR-BN: 32056; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Stat description]" />
+					</record>
         </list>
       </widget>
       <widget class="game_formatted_label" style="semi_bold" alignment="right,top" auto_size="vertical" multiline="false" colour="white">
@@ -90,7 +90,7 @@
         </record>
 
         <!-- Picture coloured to match team colours-->
-        <widget class="picture" file="icons/26px/circle" image_alignment="centre" scale_picture="true">
+        <widget class="picture" file="icons/26px/circle" image_alignment="centre" scale_picture="true" hidden="true">
           <record id="object_property">
             <list id="get_properties">
               <record get_property="tbcl" set_property="rrep" dont_set_object="true" />

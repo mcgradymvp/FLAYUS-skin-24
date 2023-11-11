@@ -49,7 +49,7 @@
 			<boolean id="keep_aspect_ratio" value="true" />
 			<string id="image_alignment" value="centre" />
 			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
-			<layout class="stick_to_object_attachment" id="align_left" offset="20" get_side="right" set_side="left" move_side="true" target="at00" />
+			<layout class="stick_to_object_attachment" id="align_left" offset="-50" get_side="right" set_side="left" move_side="true" target="at00" />
 		</container>
 		<widget class="person_button" entity_layout_id="at01" alignment="left,bottom" id="name" height="30">
 			<string id="size" value="large" />
@@ -65,9 +65,9 @@
 			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
 		</widget>
 	</container>
-	<container entity_layout_id="at0;" id="at0;" width="110" height="75">
+	<container entity_layout_id="at0;" id="at0;" width="100" height="75">
 		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
-		<layout class="stick_to_object_attachment" id="align_left" offset="-40" get_side="right" set_side="left" move_side="true" target="at0:" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="5" get_side="right" set_side="left" move_side="true" target="at0:" />
 		<widget class="spacer" id="main">
 			<boolean id="exclude_from_find" value="true" />
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
@@ -76,7 +76,7 @@
 			<boolean id="exclude_from_find" value="true" />
 			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
 		</widget>
-		<widget class="text" entity_layout_id="at09" alignment="left,top" id="wagL" width="110" height="20">
+		<widget class="text" entity_layout_id="at09" alignment="left,top" id="wagL" width="100" height="20">
 			<string id="font" value="label" />
 			<string id="size" value="small" />
 			<string id="value" value="text" />
@@ -84,12 +84,12 @@
 			<layout class="stick_to_object_attachment" id="align_bottom" offset="-35" get_side="bottom" set_side="bottom" move_side="true" target="main" />
 			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main" />
 		</widget>
-		<widget class="wage_label" entity_layout_id="at03" alignment="left,bottom" id="Cwwa" width="110" height="20">
+		<widget class="wage_label" entity_layout_id="at03" alignment="left,bottom" id="Cwwa" width="100" height="20">
 			<layout class="stick_to_object_attachment" id="align_bottom" offset="-17" get_side="bottom" set_side="bottom" move_side="true" target="main" />
 			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main" />
 		</widget>
 	</container>
-	<container entity_layout_id="at0&lt;" id="at0&lt;" alignment="left,bottom" width="150" height="75">
+	<container entity_layout_id="at0&lt;" id="at0&lt;" alignment="left,bottom" width="100" height="75">
 		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
 		<layout class="stick_to_object_attachment" id="align_left" offset="5" get_side="right" set_side="left" move_side="true" target="at0;" />
 		<widget class="spacer" id="main">
@@ -100,14 +100,14 @@
 			<boolean id="exclude_from_find" value="true" />
 			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
 		</widget>
-		<widget class="label" entity_layout_id="at05" alignment="left,top" id="expL" width="150" height="20">
+		<widget class="label" entity_layout_id="at05" alignment="left,top" id="expL" width="100" height="20">
 			<string id="font" value="label" />
 			<string id="size" value="small" />
 			<translation id="text" value="Expires" translation_id="227784" type="use" />
 			<layout class="stick_to_object_attachment" id="align_bottom" offset="-36" get_side="bottom" set_side="bottom" move_side="true" target="main" />
 			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main" />
 		</widget>
-		<widget class="date_cell" entity_layout_id="at06" alignment="left,bottom" id="cEnd" width="150" height="20">
+		<widget class="date_cell" entity_layout_id="at06" alignment="left,bottom" id="cEnd" width="100" height="20">
 			<string id="navigation_focus_target" value="false" />
 			<string id="value" value="text" />
 			<layout class="stick_to_object_attachment" id="align_top" offset="38" get_side="top" set_side="top" move_side="true" target="main" />
@@ -119,9 +119,9 @@
 		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
 		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
 	</widget>
-	<container entity_layout_id="at0=" id="at0=" width="130" height="70">
+	<container entity_layout_id="at0=" id="at0=" width="145" height="70">
 		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
-		<layout class="stick_to_object_attachment" id="align_left" offset="0" get_side="right" set_side="left" move_side="true" target="at0&lt;" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="5" get_side="right" set_side="left" move_side="true" target="at0&lt;" />
 		<widget class="spacer" id="main">
 			<boolean id="exclude_from_find" value="true" />
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />

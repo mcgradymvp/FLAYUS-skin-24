@@ -28,7 +28,7 @@
                     <attachment_group class="vertical_arrange_autosize"/>
                 </container>
 
-                <container class="plain_box" width="500" appearance="boxes/custom/quick chat/ai_quick_chat_speech"  alignment="left">
+                <container class="plain_box" width="500" appearance="boxes/custom/quick chat/ai_quick_chat_speech"  alignment="left" red_replacement="bg darker">
                     <attachment_group class="vertical_arrange_autosize"/>
                     <widget class="text" id="stQU" height="50" alignment="left, centre_y">
                     </widget>

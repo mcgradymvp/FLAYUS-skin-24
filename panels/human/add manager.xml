@@ -11,7 +11,7 @@
 
 	<!-- A wizard panel to provide standard wizard buttons and panel handling -->
 	<container class="wizard_panel" id="wzrd" nnPB="false">
-		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="8" gap="0" />
 		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 
 		<!--header-->
@@ -24,14 +24,14 @@
 			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 
 			<container>
-				<container class="main_transparent_box">
+				<container class="main_transparent_box" appearance="boxes/inner/contrast/paper" red_replacement="bg">
 					<attachment_group class="horizontal_arrange_autosize_all_centre_centered_in_parent" horizontal_alignment="middle" />
 
 					<container id="wWid">
 						<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" />
 
 						<container>
-							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right, extend" />
+							<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="fill" />
 							
 							<container navigation_container="true">
 								<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" />
@@ -55,6 +55,10 @@
 											<integer id="id" value="tsat" />
 										</record>
 										<record>
+											<translation id="name" translation_id="594857" type="use" value="Ability Aids[COMMENT: AREA: Manager Creation Panel; SUB-AREA: Manager Creation Panel; FR-BN: FM-21263; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Panel heading heading for when customising the ability aids of the manager avatar]" />
+											<integer id="id" value="taba" />
+										</record>
+										<record>
 											<translation id="name" translation_id="557751" type="use" value="Accessories[COMMENT: AREA: Manager Creation Panel; SUB-AREA: Manager Creation Panel; FR: FM-1259; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Panel heading heading for when customising the accessories of the manager avatar]" />
 											<integer id="id" value="tacc" />
 										</record>
@@ -62,19 +66,13 @@
 									<integer id="selection" value="tspi" />
 								</widget>
 							</container>
-							
-							<container navigation_container="true">
-								<attachment_group class="horizontal_arrange_autosize_all" horizontal_alignment="right" />
-								
-								<widget class="icon_button" id="amrb" icon="icons/26px/transfer" auto_size="horizontal" hidden="true" />
-							</container>	
 						</container>
 						
 						<!-- wizard panel container, the actual panels will be added here -->
 						<container id="plco">
 							<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" />
 
-							<container class="add_manager_select_profile_panel" id="slPP" wizard_next1_step="6" wizard_next2_step="1">
+							<container class="add_manager_select_profile_panel" id="slPP" wizard_next1_step="7" wizard_next2_step="1">
 								<translation id="wizard_panel_title" translation_id="361087" type="use" value="Choose Profile[COMMENT: add manager screen; short panel title used on next/previous button]" />
 							</container>
 							
@@ -92,6 +90,10 @@
 							
 							<container class="manager_profile_panel" file="human/add manager attire panel" id="apMP">
 								<translation id="wizard_panel_title" translation_id="538962" type="use" value="Attire[COMMENT: AREA: Manager Creation Panel; SUB-AREA: Manager Creation Panel; FR-BN: 32003; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Panel heading heading for when customising the clothing of the manager man]" />
+							</container>
+
+							<container class="manager_profile_panel" file="human/add manager ability aids panel" check_profile="true">
+								<translation id="wizard_panel_title" translation_id="594857" type="use" value="Ability Aids[COMMENT: AREA: Manager Creation Panel; SUB-AREA: Manager Creation Panel; FR-BN: FM-21263; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Panel heading heading for when customising the ability aids of the manager avatar]" />
 							</container>
 							
 							<container class="manager_profile_panel" file="human/add manager accessories panel">
@@ -139,7 +141,7 @@
 								
 								<record id="shown_event">
 									<flags id="event_id" value="wzPc" />
-									<flags id="index" value="7" />
+									<flags id="index" value="8" />
 									<flags id="event_target" value="self" />
 								</record>
 							</container>
@@ -166,7 +168,7 @@
 								
 								<record id="shown_event">
 									<flags id="event_id" value="wzPc" />
-									<flags id="index" value="7" />
+									<flags id="index" value="8" />
 									<flags id="event_target" value="self" />
 								</record>
 							</container>
@@ -193,7 +195,7 @@
 								
 								<record id="shown_event">
 									<flags id="event_id" value="wzPc" />
-									<flags id="index" value="7" />
+									<flags id="index" value="8" />
 									<flags id="event_target" value="self" />
 								</record>
 							</container>
@@ -217,7 +219,7 @@
 								
 								<record id="shown_event">
 									<flags id="event_id" value="wzPc" />
-									<flags id="index" value="7" />
+									<flags id="index" value="8" />
 									<flags id="event_target" value="self" />
 								</record>
 							</container>
@@ -252,7 +254,7 @@
 							<container>
 
 								<layout class="fit_children_attachment" alignment="vertical,extend" offset="0" />
-								<layout class="arrange_horizontal_attachment" alignment="right" offset="0" wrap="true">
+								<layout class="arrange_horizontal_attachment" alignment="right" offset="12" wrap="true">
 									<global id="gap" name="ui.button_row_gap" />
 								</layout>
 								

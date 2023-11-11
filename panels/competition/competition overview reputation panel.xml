@@ -7,7 +7,7 @@
 			<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
 		</widget>
 
-		<container id="rpcn" height="300">
+		<container id="rpcn" height="323">
 			<layout class="arrange_horizontal_attachment" layout="-3, -5" offset="0" gap="5" />
 			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />

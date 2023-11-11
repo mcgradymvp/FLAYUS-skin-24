@@ -371,7 +371,7 @@
 
 							<list id="headings">
 								<record alignment="left,centre_y" column_span="2">
-									<translation id="text" type="use" translation_id="361135" value="히든" />
+									<translation id="text" type="use" translation_id="361135" value="隐藏" />
 								</record>
 							</list>
 
@@ -460,7 +460,7 @@
 				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 	        
 			<container  id="takn">
-			   <translation id="title" type="use" value="전술/정보력" />
+			   <translation id="title" type="use" value="战术/情报" />
 		        	<layout class="arrange_horizontal_attachment" layout="400,-1" offset="0" gap="0"/>
 					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 					     

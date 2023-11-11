@@ -41,16 +41,16 @@
         </container>
 
 	<container id="RInf" height="50">
-		<layout class="arrange_vertical_attachment" layout="20,20" offset="0" />
+		<layout class="arrange_vertical_attachment" layout="30,20" gap="-5" offset="0" />
 		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 	
 	<container>
 		<layout class="arrange_horizontal_attachment" layout="-1,-1" />
 		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-			<widget class="text" auto_size="horizontal" id="RfNT" alignment="centre_y">
-				<translation id="text" translation_id="496115" type="use" value="Referee Rating: [COMMENT: Text describing how well a referee performed within a match]" /> 
+			<widget class="text" auto_size="horizontal" id="RfNT" alignment="centre_x, centre_y">
+				<translation id="text"  type="use" value="裁判评分" /> 
 			</widget>
-			<widget class="person_button" id="RefN" alignment="centre" auto_size="horizontal" />
+			<widget class="person_button" id="RefN" alignment="centre_x, centre_y" size="9" auto_size="horizontal" />
 	</container>
 
 			<widget class="dashed_number_label" id="RefR" alignment="centre_x, centre_y" size="11" format="[%fraction#1-4.1]" />		
@@ -63,7 +63,7 @@
 		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 
 		<!--  home incidents panel -->
-		<widget class="home_match_incidents_panel" id="hmip" small_version="true" file="match/match incidents overview left" />
+		<widget class="home_match_incidents_panel" id="hmip" small_version="false" file="match/match incidents overview left" />
 
 		<container/>
 		

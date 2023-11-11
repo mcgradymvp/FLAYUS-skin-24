@@ -3,7 +3,7 @@
   
   <list id="views">
     <record id="sssv">
-      <translation id="text" type="use" value="스토크님 스탭 검색 패널" />
+      <translation id="text" type="use" value="Stoke面板" />
       <record id="view">
 	  	    <!-- 선수 상황 정보 -->  <!-- status flags -->
 					<record id="Pnfo" auto_hide_priority="1"  width="20" />                 								

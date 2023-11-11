@@ -108,7 +108,7 @@
 				</record>
 		</widget>
 
-<widget class="both_match_formation_panels" title="포메이션" file="match/match both formations ibh" id="bmfs"/>
+<widget class="both_match_formation_panels" title="阵型" file="match/match both formations ibh" id="bmfs"/>
 <!-- Match Stats -->
 		<widget class="match_stats_panel" id="mtst" file="match/match stats floating">
 			<translation id="title" translation_id="247439" type="use" value="Match Stats" />

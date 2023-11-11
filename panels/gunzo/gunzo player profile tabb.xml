@@ -61,8 +61,8 @@
 
 					<!-- Jadedness -->
 					<widget class="text" alignment="centre,bottom" size="8" font="gz_title" colour="faded text">
-						<translation id="text" type="use" value="피로도" />
-						<translation id="hint" type="use" value="피로 누적에 관한 수치. 높은 경기력과 낮은 피로도를 유지하면서 로테이션시키는 것이 이상적인 체력관리라 볼 수 있다. 높은 피로도는 선수가 혹사당하고 있음을 뜻한다."/>
+						<translation id="text" type="use" value="疲劳" />
+						<translation id="hint" type="use" value="有关累积疲劳的数据。在保持高性能和低疲劳的同时进行轮转可以被视为理想的体力管理。高度疲劳意味着运动员过度劳累。"/>
 					</widget>
 					<widget class="number_label" id="Pjad" alignment="centre,top" font="gz_title" colour="gzc">
 						<record id="object_property" get_property="MPjd"/>

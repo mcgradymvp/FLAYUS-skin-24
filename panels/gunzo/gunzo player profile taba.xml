@@ -17,7 +17,7 @@
                     <attachment_group class="title_embedded_panel_right" />
 
                 <widget class="label" id="rMpl" auto_size="all" height="30" colour="alt text" embed_in_frame="true">
-                    <translation id="text" type="use" value="능력치 비교" />
+                    <translation id="text" type="use" value="能力对比" />
                 </widget>
           
                 <widget class="popup_button" id="rMpo" select_event="rMCh" auto_size="all" fixed="true" embed_in_frame="true"/>

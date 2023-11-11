@@ -77,10 +77,10 @@
 								<layout class="arrange_horizontal_attachment" layout="180,-1" offset="0" gap="1" />
 								<layout class="fit_children_attachment" alignment="vertical" offset="3" />
 							<widget class="label" auto_size="vertical">
-								<translation id="text" translation_id="329791" type="use" value="캐시 초기화" />
+								<translation id="text" translation_id="329791" type="use" value="清除缓存" />
 							</widget>
-	                        <widget class="button" id="rels" click_event="CnfR" auto_size="all">
-                                <translation id="text" type="use" value="캐시 초기화 하기" />
+	                      <widget class="clear_cache_button" auto_size="vertical">
+                                <translation id="text" type="use" value="清除缓存" />
                             </widget>
 							</container>
 					</widget>
@@ -175,7 +175,7 @@
                 
 					<!-- Match -->
 					<widget class="inner_titled_box" id="cura" red_replacement="bg darker">
-						<translation id="title"  type="use" value="경기 그래픽/사운드 설정" />
+						<translation id="title"  type="use" value="图形/声音设置" />
 						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
 
 						<container height="28">
@@ -213,7 +213,7 @@
 	</widget>
 	<!-- etc -->
     <container class="inner_titled_box" red_replacement="bg darker">
-      <translation id="text" type="use" value="기타" />
+      <translation id="text" type="use" value="ETC" />
       <attachment_group class="vertical_arrange_autosize" vertical_offset="0" />	
 			
 	  	<container id="show_all_player_names" file="game/preferences match item" navigation_container="true" >

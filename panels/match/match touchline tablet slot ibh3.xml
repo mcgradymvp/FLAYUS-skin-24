@@ -111,7 +111,7 @@
 		</widget>
        <!--shot map-->
 		<widget class="match_analysis_panel" id="mHha" file="match/match analysis summary panel1" >
-			<translation id="title" type="use" value="슈팅맵" />
+			<translation id="title" type="use" value="射门图" />
 				<record id="object_property">
 					<integer id="get_property" value="objt" />
 					<integer id="set_property" value="objt" />
@@ -121,7 +121,7 @@
 		<widget class="match_live_data_analyst_visualisation_panel" id="afMM" visualisation_type="momentum">
 			<translation id="title" translation_id="535500" type="use" value="Match Momentum[COMMENT: AREA: Data Visualisation; SUB-AREA: Pass map FR: 32708; TONE: Formal; CHARLIMIT: None; NOTE: dataviz title string, the match momentum data viz charts how the match went with regards to each team enjoying spells on top/chances created]" />
 		</widget>
-<widget class="both_match_formation_panels" title="포메이션" file="match/match both formations ibh" id="bmfs"/>
+<widget class="both_match_formation_panels" title="阵型" file="match/match both formations ibh" id="bmfs"/>
 <!-- Match Stats -->
 		<widget class="match_stats_panel" id="mtst" file="match/match stats floating">
 			<translation id="title" translation_id="247439" type="use" value="Match Stats" />
@@ -136,7 +136,7 @@
             <colour id="ptlc" name="white" />
         </widget>
         <widget class="match_action_zones_panel" id="Foa1" file="match/focus of attacks panel1">
-            <translation id="title" type="use" value="공격 중심/경기 모멘텀" />
+            <translation id="title" type="use" value="进攻重点/比赛势头" />
         </widget>
 				<widget class="match_home_analysis_panel" id="Mhan" file="match/match analysis floating">
 			<translation id="title" translation_id="281395" type="use" value="Home Analysis" />

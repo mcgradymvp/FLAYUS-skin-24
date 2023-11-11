@@ -40,7 +40,7 @@
 	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
 
 	<!-- Season tabs -->
-	<container class="bordered_box" id="tabc">
+	<container class="main_box" id="tabc">
 		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" vertical_offset="0" horizontal_gap="1" />
 
 		<widget class="radio_toggle_switch_left" id="csea" auto_size="horizontal" click_event="sspt" type="0" />
@@ -63,7 +63,7 @@
 	</container>
 
 	<!--main content box-->
-	<container class="bordered_box">
+	<container class="main_box">
 
 		<layout class="stick_to_sides_attachment" inset="0" alignment="all" apply_to_children="true" />
 		<container id="mnbx">
@@ -87,11 +87,11 @@
 				</container>
 
 				<!-- Container for when pitch mid sized -->
-				<container  id="maxc" file="widgets/squad planner position pitch container" />
+				<container class="main_box" id="maxc" file="widgets/squad planner position pitch container" />
 			</container>
 
 			<!-- Main content -->
-			<container>
+			<container class="main_box">
 				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0" />
 
 				<!-- Recruitment focus bar and "New focus" button -->
@@ -190,7 +190,7 @@
 								<record id="view">
 									<record id="Movp" width="110" auto_hide_priority="0" sort_disabled="true" alignment="centre" />
 									<!-- Choice -->
-									<record id="PcnD" minimum_width="240" width="-1"  auto_hide_priority="0" sort_disabled="true"/>
+									<record id="Pnpd" minimum_width="250" auto_hide_priority="0" sort_disabled="true" />
 									<!-- Player -->
 									<record id="PSpi" auto_hide_priority="1" sort_disabled="true" />
 									<!-- INF -->

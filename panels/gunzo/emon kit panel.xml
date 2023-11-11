@@ -1,29 +1,29 @@
+<!-- XML for the KIT_ICON widget used as a dynamic image for news items -->
 <panel>
-	<!-- We are limiting the extend width here so our licensed kit images remain at most their maximum height of 256 so they aren't scaled -->
-	<layout class="arrange_vertical_attachment" alignment="middle,extend" offset="0">
-		<record id="auto_size_restrictions">
-			<string id="type" value="value" />
-			<integer id="value" value="256" />
-			<string id="limit_type" value="maximum" />
-			<string id="orientation" value="vertical" />
-		</record>
-	</layout>
-	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-	<!-- We are using a spacer here so we can limit our images size, but still remain centered in our parent -->
-	<widget class="spacer" height="1" />
+	<integer id="kit_path" value="zoomed/large"/>
+
+	<!-- Background image -->
+	<widget class="picture" id="bgim" file="photos/dynamic/back of shirt/bg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+	<!-- Coloured overlay -->
+	<widget class="picture" id="nsci" file="photos/dynamic/back of shirt/shirt" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+	<!-- Shirt shading overlay -->
+	<widget class="picture" id="ssha" file="photos/dynamic/back of shirt/shirt shading" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
 
 	<container>
-		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" horizontal_gap="0" vertical_inset="0" />
+		<layout class="arrange_vertical_attachment" layout="-1,80" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
 
-		<record id="default_properties" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" always_use_latest_object_list="true">
-			<record id="object_property">
-				<integer id="get_property" value="Tidx" />
-				<integer id="set_property" value="indx" />
-			</record>
-		</record>
 
-		<widget class="kit_picture" id="T_hk" kit_id="0" />
+		<!--Name of the player: This is hidden on the player stats panel-->
+		<widget class="text" id="bnm2" alignment="centre" font="fonts/kit name"/>
+
+		<!-- player number -large -->
+
+		<widget class="picture" id="bNUM" image_alignment="centre">
+		<layout class="stick_to_sides_attachment" alignment="bottom" inset="20"/>
+		</widget>
 	</container>
 
 </panel>

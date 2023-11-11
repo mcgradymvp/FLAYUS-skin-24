@@ -1,9 +1,8 @@
 <panel>
 	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
-	<container>
-		<layout class="arrange_vertical_attachment" layout="25,-1,10" offset="0" gap="0"/>
-		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="2"/>
+	<container class="main_box_no_margin">
+		<attachment_group class="vertical_arrange" vertical_layout="25, -1" vertical_offset="8" horizontal_inset="2" />
 
 		<widget class="label" id="titl" font="title" colour="accent" />
 
@@ -17,13 +16,13 @@
 
 			<widget class="graph" id="tadg" show_instant_hint="false" inset="1" >
 				<record id="default_series_properties" type="bar" maximum_width="15"/>
-				<record id="x_axis" gap="1" consistent_label_width="false"/>
+				<record id="x_axis" gap="1" consistent_label_width="false">
+					<record id="label_font" font="text" size="xxsmall"/>
+				</record>
 				<record id="y_axis" hidden="true"/>
 			</widget>
 
 		</container>
-
-		<widget class="spacer" />
 
 	</container>
 

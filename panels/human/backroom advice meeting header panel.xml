@@ -36,11 +36,12 @@
 			</container>
 
 			<!-- continue button -->
-			<widget class="icon_button" id="endB" hidden="true" controller_button="right_trigger" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/continue" secondary_icon_alignment="centre_right, centre_y" font="title" colour="fg" width="210" height="48" default_focus="true" multiline="true">
-				<record id="secondary_icon_properties" red_replacement="fg" />
+			<widget class="icon_button" id="endB" hidden="true" appearance="chrome/buttons/continue/button" controller_button="right_trigger" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/continue" secondary_icon_alignment="centre_right, centre_y" font="title" red_replacement="title" colour="text" width="210" height="48" default_focus="true" multiline="true">
+				<record id="secondary_icon_properties" red_replacement="text" />
 				<record id="click_event" event_id="emCK" event_target="PBAm" />
 				<translation id="text" translation_id="510685" type="use" value="End Meeting[COMMENT: AREA: Recruitment meeting; FR-BN: 32765; NOTE: Recruitment meeting end meeting dialog popup title]" />
 			</widget>
+
 
 		</container>
 	</container>

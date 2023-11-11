@@ -23,7 +23,7 @@
               <translation id="text" translation_id="247523" type="use" value="Injury[COMMENT: Player Injury name, table header]"/>
             </record>
             <record index="2">
-              <translation id="text" type="use" value="결장 기간"/>
+              <translation id="text" type="use" value="持续时间"/>
             </record>
           </list>
 

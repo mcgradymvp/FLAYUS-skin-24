@@ -4,20 +4,20 @@
 <class class="national_service_label" parent="label" alignment="centre">
   <list id="value_list">
     <record value="-1">
-      <translation id="text" type="use" value="미징집"/>
-		  <translation id="hint" type="use" value="아직 징집 되지 않은 상태."/>
+      <translation id="text" type="use" value="非征兵制"/>
+		  <translation id="hint" type="use" value="还没有入伍。"/>
     </record> 
     <record value="1">
-      <translation id="text" type="use" value="병역 완료" />
-		  <translation id="hint" type="use" value="복무를 마친 상태."/>
+      <translation id="text" type="use" value="服完兵役" />
+		  <translation id="hint" type="use" value="服完兵役。"/>
     </record> 
     <record value="2">
-      <translation id="text" type="use" value="병역 면제" />
-		  <translation id="hint" type="use" value="병역을 면제 받은 상태."/>
+      <translation id="text" type="use" value="免除兵役" />
+		  <translation id="hint" type="use" value="免除兵役。"/>
     </record> 
     <record value="3">
-      <translation id="text" type="use" value="복무중" />
-		  <translation id="hint" type="use" value="현재 복무중인 상태."/>
+      <translation id="text" type="use" value="服务" />
+		  <translation id="hint" type="use" value="目前正在服役。"/>
     </record> 
 
   </list>
