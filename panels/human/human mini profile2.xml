@@ -60,7 +60,7 @@
 				<container>
 					<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-					<widget class="label" id="Lowr" spec="text,small" alignment="centre_x,bottom" font="title" colour="faded text">
+					<widget class="label" id="Lowr" spec="text,normal" alignment="centre_x,bottom" font="title" colour="faded text">
 						<record id="object_property">
 							<integer id="get_property" value="Tgwr" />
 							<boolean id="name" value="true" />
@@ -78,10 +78,10 @@
 				<container>
 					<layout class="arrange_vertical_attachment" layout="-2,-3" offset="0" />
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-					<widget class="text"  spec="text,large" size="8" alignment="centre, bottom, can_scale" colour="faded text">
+					<widget class="text"  spec="text,normal" size="8" alignment="centre, bottom, can_scale" colour="faded text">
 						<translation id="text" translation_id="229407" type="use" value="Age" />
 					</widget>
-					<widget class="label" id="age " spec="text,large,bold" colour="gzc" size="14" alignment="centre, top, can_scale" height="20">
+					<widget class="label" id="age " spec="text,bold" colour="gzc" size="14" alignment="centre, top, can_scale" height="20">
 						<record id="object_property">
 							<integer id="get_property" value="Page" />
 						</record>
@@ -92,7 +92,7 @@
 				<container>
 					<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-					<widget class="label" alignment="centre_x,bottom" spec="text,small" font="title">
+					<widget class="label" alignment="centre_x,bottom" spec="text,normal" font="title">
 						<translation id="text" translation_id="227963" type="use" value="Reputation" />
 					</widget>		  
 
@@ -122,7 +122,7 @@
 						</record>
 					</widget>
 					<!--int goals-->
-					<widget class="international_appearances_label" spec="text,small" colour="faded text" font="title" id="intg" alignment="centre_x,top">
+					<widget class="international_appearances_label" spec="text,normal" colour="faded text" font="title" id="intg" alignment="centre_x,top">
 						<integer id="int_apps_label_format" value="2" />
 						<!-- 2 is goals -->
 						<record id="object_property">
@@ -167,7 +167,7 @@
 						</record>
 					</widget>
 					<!--youth goals-->
-					<widget class="international_appearances_label" spec="text,small" colour="faded text" font="title" id="youg" alignment="centre_x,top">
+					<widget class="international_appearances_label" spec="text,normal" colour="faded text" font="title" id="youg" alignment="centre_x,top">
 						<integer id="int_apps_label_format" value="4" />
 						<!-- 4 is for youth goals -->
 						<record id="object_property">
@@ -186,7 +186,7 @@
 				<container>
 					<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-					<widget class="label" id="wglb" spec="text,small" alignment="centre_x,bottom" font="title" colour="faded text">
+					<widget class="label" id="wglb" spec="text,normal" alignment="centre_x,bottom" font="title" colour="faded text">
 						<translation id="text" translation_id="242353" type="use" value="Wages" />          
 					</widget>
 
@@ -201,11 +201,11 @@
 				<container>
 					<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-					<widget class="label" alignment="centre_x,bottom" spec="text,small" font="title">
+					<widget class="label" alignment="centre_x,bottom" spec="text,normal" font="title">
 						<translation id="text" translation_id="247713" type="use" value="Personality" />
 					</widget>
 
-					<widget class="personality_label" id="peRs" size="9.2" colour="gzc" multiline="true" alignment="centre_x,bottom" auto_size="vertical">
+					<widget class="personality_label" id="peRs" size="9" alignment="centre_x,bottom" auto_size="vertical">
 						<record id="object_property">
 							<integer id="get_property" value="PPst" />
 						</record>
@@ -216,7 +216,7 @@
 				<container>
 					<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-					<widget class="label" spec="text,small" font="title"  colour="faded text" alignment="centre_x,bottom">
+					<widget class="label" spec="text,normal" font="title"  colour="faded text" alignment="centre_x,bottom">
 						<translation id="text" translation_id="227784" type="use" value="Expires" />
 					</widget>
 
@@ -228,10 +228,8 @@
 				</container>
 			</container>
 
-			<container height="10"/>
-
 			<!--Goals for, against and matches W/D/L row-->
-			<container default_height="60" minimum_height="30" priority="3">
+			<container default_height="60" priority="3">
 				<layout class="arrange_horizontal_attachment" layout="-1, -3, -3, -3, -1" offset="0" gap="0" />
 				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 
@@ -293,7 +291,7 @@
 				<container/>
 			</container>
 
-			<container height="10"/>
+			<container height="5"/>
 
 			<!--info3 -->
 			<container default_height="60">
@@ -302,37 +300,34 @@
 
 				<!-- past experience -->
 				<container>
-					<layout class="arrange_vertical_attachment" layout="-1,-1,-1" offset="0" />
+					<layout class="arrange_vertical_attachment" layout="20,-1" offset="0" />
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 				
-					<widget class="label" alignment="centre,bottom, can_scale" colour="faded text" size="8">
+					<widget class="label" alignment="centre,bottom" colour="faded text" size="8">
 						<translation id="text" translation_id="319440" type="use" value="Past Playing Experience[COMMENT: add_manager_panel; select starting reputation; define past football experience]" />
 					</widget>	
-					<widget class="label" id="paex" alignment="centre_x,centre_y, can_scale" spec="text,bold" font="gzmain" size="8" colour="gzc" multiline="true">
+					<widget class="label" id="paex" alignment="centre_x,centre_y" spec="text,bold" font="gzmain" size="8" colour="gzc" multiline="true">
 					</widget>	
-                
-				<container height="3"/>
+
 				</container>
 
 				<container>
 					<layout class="arrange_vertical_attachment" layout="-1,-1,-1" offset="0" />
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-					<widget class="label" alignment="centre,bottom, can_scale" colour="faded text" size="8">
+					<widget class="label" alignment="centre,bottom" colour="faded text" size="8">
 						<translation id="text" translation_id="329843" type="use" value="Coaching Qualifications[COMMENT: non-player profile; coaching qualification]" />
 					</widget>	
-					<widget class="coaching_badge_label" id="coaq" alignment="centre_x,centre_y, can_scale" font="gzmain" colour="gzc" size="8">
+					<widget class="coaching_badge_label" id="coaq" alignment="centre_x,centre_y" font="gzmain" colour="gzc" size="8">
 						<record id="object_property">
 							<integer id="get_property" value="Pcqu"/>
 						</record>
 					</widget> 
-					<widget class="label" id="coco" alignment="centre_x,centre_y, can_scale" colour="faded text" size="8"/>
+					<widget class="label" id="coco" alignment="centre_x,centre_y" colour="faded text" size="8"/>
 				</container>
 			</container>
 
-			<container height="3"/>
-
 			<!--Trasnfer behaviour row-->
-			<container default_height="40" minimum_height="30" priority="3">
+			<container default_height="45" priority="3">
 				<layout class="arrange_horizontal_attachment" layout="-1, -1, -1" offset="0" gap="0" />
 				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 
@@ -340,11 +335,11 @@
 					<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
 					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 
-					<widget class="label" id="Lbou" spec="text,small" alignment="centre_x,bottom" font="title" colour="faded text">
+					<widget class="label" id="Lbou" spec="text,normal" alignment="centre_x,bottom" font="title" colour="faded text">
 						<translation id="text" translation_id="347264" type="use" value="No. Players Bought[COMMENT: Stat label; partially abbreviated version of 'Number of players bought']" />
 					</widget>
 					<!--Players bought-->
-					<widget class="label" id="Vbou" size="11" style="" alignment="centre_x,bottom" format="2" auto_size="vertical">
+					<widget class="label" id="Vbou" size="11" style="bold" alignment="centre_x,bottom" format="2" auto_size="vertical">
 						<record id="object_property">
 							<integer id="get_property" value="Nnpb" />
 						</record>
@@ -355,14 +350,14 @@
 					<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
 					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 
-					<widget class="label" id="Lear" spec="text,small" alignment="centre_x,bottom" font="title" colour="faded text">
+					<widget class="label" id="Lear" spec="text,normal" alignment="centre_x,bottom" font="title" colour="faded text">
 						<record id="object_property">
 							<integer id="get_property" value="Nhsa" />
 							<boolean id="name" value="true" />
 						</record>
 					</widget>
 					<!--Spend-->
-					<widget class="value_label" id="Vear" size="11" style="" alignment="centre_x,bottom" >
+					<widget class="value_label" id="Vear" size="11" style="bold" alignment="centre_x,bottom" >
 						<translation id="alternate_text" translation_id="233089" type="use" value="-" />
 						<record id="object_property">
 							<integer id="get_property" value="Nhsa" />
@@ -374,11 +369,11 @@
 					<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
 					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 
-					<widget class="label" id="Lsol" spec="text,small" font="title"  colour="faded text" alignment="centre_x,bottom">
+					<widget class="label" id="Lsol" spec="text,normal" font="title"  colour="faded text" alignment="centre_x,bottom">
 						<translation id="text" translation_id="351449" type="use" value="No. Players Sold[COMMENT: Stat label; partially abbreviated version of 'Number of players sold']" />
 					</widget>
 					<!--Players sold-->
-					<widget class="label" id="Vsol" size="11" style="" alignment="centre_x,bottom" >
+					<widget class="label" id="Vsol" size="11" style="bold" alignment="centre_x,bottom" >
 						<record id="object_property">
 							<integer id="get_property" value="Nnps" />
 						</record>

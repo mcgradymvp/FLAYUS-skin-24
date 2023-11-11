@@ -1,0 +1,120 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="30"/>
+
+	<!-- Relationship With Board -->
+	<container class="icon_box" id="rbrd">
+		<record id="icon_properties" auto_size="" width="26" height="26" scale_picture="true"/>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_inset="0" />
+
+		<widget class="label" id="slab" auto_size="vertical" font="label" colour="text"/>
+		<container height="15">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="8"/>
+			<widget class="value_based_picture" id="rbri" scale_picture="true" image_alignment="left" keep_aspect_ratio="true" width="73" >
+				<list id="value_list">
+					<record min_value="16" max_value="10000" file="icons/custom/supporter/very high" red_replacement="white"/>
+					<record min_value="12" max_value="15" file="icons/custom/supporter/high" red_replacement="white"/>
+					<record min_value="9" max_value="11" file="icons/custom/supporter/moderate" red_replacement="white"/>
+					<record min_value="5" max_value="8" file="icons/custom/supporter/low" red_replacement="white"/>
+					<record min_value="0" max_value="7" file="icons/custom/supporter/very low" red_replacement="white"/>
+				</list>
+			</widget>
+			<widget class="text" id="sbtn" auto_size="horizontal" style="bold"/>
+		</container>
+	</container>
+
+	<!-- International Reach -->
+	<container class="icon_box" id="intr">
+		<record id="icon_properties" auto_size="" width="26" height="26" scale_picture="true"/>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_inset="0" />
+
+		<widget class="label" id="slab" auto_size="vertical" font="label" colour="text"/>
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend"/>
+			
+			<widget class="icon_button" id="sbtn" minimum_width="100" height="20" alignment="left,centre_y" appearance="buttons/text/button" navigation_focus_target="false" auto_size="horizontal"/>
+			<widget class="picture" id="ichg" scale_picture="true" auto_size="vertical" hidden="true"/>
+		</container>
+	</container>
+
+	<!-- Season Ticket Holders -->
+	<container class="icon_box" id="stkh">
+		<record id="icon_properties" auto_size="" width="26" height="26" scale_picture="true"/>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_inset="0" />
+
+		<widget class="label" id="slab" auto_size="vertical" font="label" colour="text"/>
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend"/>
+			
+			<widget class="icon_button" id="sbtn" minimum_width="100" height="20" alignment="left,centre_y" appearance="buttons/text/button" navigation_focus_target="false" auto_size="horizontal"/>
+			<widget class="picture" id="ichg" scale_picture="true" auto_size="vertical" hidden="true"/>
+		</container>
+	</container>
+
+	<!-- Season Ticket Waiting List -->
+	<container class="icon_box" id="stwl">
+		<record id="icon_properties" auto_size="" width="26" height="26" scale_picture="true"/>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="6" vertical_gap="6" horizontal_inset="0" />
+
+		<widget class="label" id="slab" auto_size="vertical" font="label" colour="text"/>
+		<container>
+			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend"/>
+			
+			<widget class="icon_button" id="sbtn" minimum_width="100" height="20" alignment="left,centre_y" appearance="buttons/text/button" navigation_focus_target="false" auto_size="horizontal"/>
+			<widget class="picture" id="ichg" scale_picture="true" auto_size="vertical" hidden="true"/>
+		</container>
+	</container>
+	
+	<!-- spacer -->
+	<widget class="picture" file="dividers/standard/horizontal/line" height="2" />		
+
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1, -1" vertical_inset="0" horizontal_offset="0" />
+			<container height="40" >
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--ticket price-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<widget class="label" id="CtpL" alignment="centre_x,bottom" spec="text,small" auto_size="vertical" colour="faded text">
+						<record id="object_property">
+							<integer id="get_property" value="Ctpr" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>
+					<widget class="cash_cell" id="CtpV" spec="text" size="11" alignment="center,top">
+						<record id="object_property">
+							<integer id="get_property" value="Ctpr" />
+						</record>
+					</widget>
+				</container>
+			</container>
+			<container height="40">
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="1" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+				<!--season ticket price-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="2" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				
+					<widget class="label" id="CsLp" alignment="centre_x,bottom" spec="text,small" auto_size="vertical" colour="faded text">
+					<record id="object_property">
+							<integer id="get_property" value="Cstp" />
+							<boolean id="name" value="true" />
+						</record>
+					</widget>			
+
+					<widget class="cash_cell" id="CsVp" spec="text" size="11" alignment="centre,top">
+						<record id="object_property">
+							<integer id="get_property" value="Cstp" />
+						</record>
+					</widget>
+				</container>
+	          </container>
+
+			</container>
+
+</panel>

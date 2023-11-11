@@ -1,7 +1,8 @@
 <panel>
-
-	<translation id="title" type="new" value="Player Profile Panel" />
+	<boolean id="should_force_refresh" value="true"/>
+	<string id="title" value="Player Profile Panel" />
 	<!-- PANEL PROPERTIES -->
+
 
 	<!--Player 1 ability comparison table appearance-->
 	<flags id="cham" value="tables/custom/comparison/player 1/row" />
@@ -18,7 +19,7 @@
 
 		<!-- Top section displaying personal details side-by side -->
 		<!-- The fixed height is a bug-fix to avoid using fit_children (too slow) -->
-		<container id="namh" height="122">
+		<container id="namh" height="140">
 			<!-- Vertical stack, both names then combined portrait & details table below -->
 			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
 
@@ -29,7 +30,7 @@
 				<!-- Person 1 -->
 				<container id="p1tp" class="main_contrast_box" red_replacement="comp person 1" navigation_container="true">
 					<!--Horizontal stack, table expanded to fill space-->
-					<attachment_group class="horizontal_arrange" horizontal_layout="105,230,150,-1" horizontal_offset="4" />
+					<attachment_group class="horizontal_arrange" horizontal_layout="120,230,150,-1" horizontal_offset="4" />
 
 					<!--Person 1 portrait-->
 					<widget class="object_portrait_picture" id="pic1" scale_picture="true" width="105" keep_aspect_ratio="true" image_alignment="left,bottom" />
@@ -54,7 +55,7 @@
 					</container>
 
 	    <container>
-			<layout class="arrange_vertical_attachment" layout="-1,-1,-1,-1" offset="5"/>
+			<layout class="arrange_vertical_attachment" layout="-1,-1,-1,-1" offset="15"/>
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 						
 			<!-- Preferred Foot-->
@@ -123,7 +124,7 @@
 
 					<container id="p2tp">
 						<!-- Horizontal stack, table expanded to fill space -->
-			            <attachment_group class="horizontal_arrange" horizontal_layout="-1,150,230,105" horizontal_offset="4" />
+			            <attachment_group class="horizontal_arrange" horizontal_layout="-1,150,230,140" horizontal_offset="4" />
 						<!--Person 2 additional info box-->
 						<container id="p2id">
 							<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
@@ -149,7 +150,7 @@
 						</container>
 		<!--Player Two attributes -->
 		<container>
-			<layout class="arrange_vertical_attachment" layout="-1,-1,-1,-1" offset="5"/>
+			<layout class="arrange_vertical_attachment" layout="-1,-1,-1,-1" offset="15"/>
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 
 			<!-- Preferred Foot-->
@@ -189,7 +190,7 @@
 
 							<container>
 								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
-								<widget class="popup_button" id="pccw" alignment="right,centre_y" height="25" sele="pccw" fixed="true" appearance="buttons/custom/very subtle/button" font="title" size="10" colour="alt text"  auto_tick_exclusive="true" save_default_state="true" default_focus="true">
+						    <widget class="popup_button" id="pccw" alignment="right,centre_y" height="25" sele="pccw" fixed="true" appearance="buttons/custom/very subtle/button" font="title" size="10" colour="alt text"  auto_tick_exclusive="true" save_default_state="true" default_focus="true">
 									<translation id="text" translation_id="329857" type="use" value="Compared With: No Person Selected[COMMENT: Button text on compare person screen]" />
 								</widget>
 							</container>

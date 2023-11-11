@@ -74,6 +74,9 @@
 	<boolean id="set_seen_when_shown" value="true"/>
 
 
+	<!-- Assistant advice speech bubble colour-->
+	<colour id="anCo" name="blue" />
+
 	<list id="properties_to_forward">
 		<record get_property="htim" set_property="hidn" target="time"/>
 		<record get_property="hpco" set_property="hidn" target="pcon"/>
@@ -85,16 +88,10 @@
 
 	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-4" horizontal_alignment="horizontal" horizontal_inset="0" />
 
+	<animation class="fade_animation" start_value="0" end_value="1" duration="1" delay="0" end_mode="hold_auto_reverse" trigger_id="hidden" />
+
 	<container class="main_transparent_box" id="fico" appearance="boxes/custom/match/dugout advice/paper">
 		<attachment_group class="vertical_arrange_autosize"/>
-
-		<!--
-		<container>
-			<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" horizontal_offset="0" vertical_inset="0" />
-			<widget class="icon_button" appearance="" font="title" auto_size="all" alignment="centre" icon="icons/16px/dugout" icon_colour="title" navigation_focus_target="false">
-				<translation id="text" translation_id="516207" type="use" value="The Dugout[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: section title to show the manager instructions that can be given from the dugout/managerial area - subs, tactics etc]" />
-			</widget>
-		</container>-->
 
 		<container>
 			<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" />
@@ -114,14 +111,22 @@
 				<container class="main_box" id="ptcC" width="200">
 					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
 
-					<widget class="preselected_match_chalkboard_panel" id="pitc" height="140" />
-					<widget class="data_analyst_visualisation_widget" id="visW"  height="200" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false"/>
+						<container class="preselected_match_chalkboard_panel" id="pitc" force_heat_map="true" file="">
+							<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" vertical_gap="0" />
+							<widget class="chalkboard_pitch" id="Cpit"  height="140" select_event="slic" hide_linked_events="true" pitch_draw_arrows="true" pitch_keep_selected_icons="false" pitch_draw_grass="false" pitch_player_icon_text_font="match pitch players" wants_mouse_events="true" pitch_draw_dugout="false" enable_popup="true" line_width="1" pitch_line_colour="text" pitch_touchline_width_percentage="80"/>
+						<widget class="text" auto_size="vertical" alignment="centre" size="xsmall" colour="faded text" id="htmL" />
+					</container>
+						<widget class="data_analyst_visualisation_widget" id="visW"  can_pin_visualisation="false"   height="200" file="widgets/data analyst visualisation mini" show_mini_visualisation_text="false"/>
 
-				</container>
+					</container>
 
 				<!--subs-->
 				<widget class="simple_data_list" set_property="objt" id="subC" auto_size="vertical" >
 					<record id="widget_properties" class="property_list_viewer_xml_panel" file="match/match feed item panel subs widget"/>
+				</widget>
+
+				<widget class="text" id="suRt" height="25" alignment="centre">
+					
 				</widget>
 
 				<widget class="table" id="conX" layout="-1,20" auto_size="vertical" auto_size_rows="true">
@@ -162,18 +167,13 @@
 								<widget class="embeddable_button" id="aspe" info_popup_enabled="false" auto_size="vertical" size="small" show_button_appearance="false" colour="fg alert" navigation_focus_target="false"/>
 							</container>
 						</container>
-
 					</container>
-
 				</container>
-
 			</container>
-
 		</container>
-		
+
 		<!--advice-->
 		<widget class="text" id="avtx" size="normal" auto_size="vertical" alignment="centre" colour="fg alert"/>
-
 
 		<!--buttons-->
 		<container>
@@ -181,7 +181,7 @@
 				<global id="horizontal_gap" name="ui.button_row_gap" />
 			</attachment_group>
 
-			<widget class="primary_icon_button" id="but1" auto_size="horizontal" default_focus="true" controller_button="y_button"/>
+			<widget class="primary_icon_button" id="but1" auto_size="horizontal" default_focus="true"/>
 			<widget class="button" id="but2" auto_size="horizontal" />
 
 			<container>
@@ -189,18 +189,14 @@
 					<global id="horizontal_gap" name="ui.split_button_row_gap" />
 				</attachment_group>
 
-				<widget class="icon_button" id="but3" auto_size="horizontal" controller_button="b_button"/>
+				<widget class="icon_button" id="but3" auto_size="horizontal" />
 				<widget class="popup_button" id="but4" fixed="true" auto_size="all" appearance="buttons/standard/split/right/button" />
 
 			</container>
 
-
-
 			<!--advice has been taken picture-->
 			<widget class="picture" id="adtk" width="32" image_alignment="centre" file="icons/16px/tick"/>
 		</container>
-
-
 	</container>
 
 	<!--person/role/time-->
@@ -216,7 +212,7 @@
 		<widget class="text" id="Pers" font="title" size="small" auto_size="all" colour="text"/>
 
 		<widget class="text" id="time" alignment="right" size="small" colour="faded text" auto_size="vertical" />
-	
+
 	</container>
 
 </panel>

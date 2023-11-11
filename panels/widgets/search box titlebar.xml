@@ -1,6 +1,6 @@
 <panel>
   <!--edit box-->
-  <widget id="find" class="edit_box" appearance="edit boxes/custom/interface/search/box" spec="text" size="large" event_delay="100" style="bold" escape_event="cloe" allow_context_menu="false" clear_text_event="DELE" show_clear_text_icon="true">
+  <widget id="find" class="edit_box" appearance="edit boxes/custom/interface/search/box" spec="text" size="17" event_delay="100" style="semi_bold" escape_event="cloe" allow_context_menu="false" clear_text_event="DELE" show_clear_text_icon="true" font="mt_title" alignment="left,centre_y" colour="fg">
     <attachment class="max_length_attachment" length="130"/>
 		<boolean id="disable_profanity_check" value="true" />
     <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>

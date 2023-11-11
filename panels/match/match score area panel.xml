@@ -7,35 +7,28 @@
 		<record get_property="disable_animations" set_property="disable_animations" target="temc"/>
 	</list>
 
-	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,0,0" apply_to_children="true"/>
 	
 	<container id="mtSA">
-		<attachment_group class="horizontal_arrange" horizontal_gap="-13" horizontal_offset="0" vertical_inset="0" />
+	
+		<attachment_group class="horizontal_arrange" horizontal_gap="5" horizontal_offset="0" vertical_inset="0" />
 		<!-- Competition icon -->
 		<container class="client_object_viewer_xml_panel"  width="47" >
 
 			<record id="object_property" get_property="fxCo" set_property="objt" />
 			<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
-			<container class="main_box_no_margin" appearance="boxes/custom/match/tv captions/si tv/score/comp/paper" >
-				<record id="object_property" get_property="bkcl" set_property="rrep" />
-				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="10,0"/>
-
 				<widget class="object_portrait_picture" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
 					<record id="object_property" get_property="objt" set_property="objt" />
 				</widget>
 				
-			</container>
 		</container>
 
 		<!--team names and score-->
 		<container width="500" id="temc">
-			<animation class="scale_animation" start_value="0, 1" end_value="1, 1" duration="0.5" delay="0.9" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="left"/>
-			<animation class="fade_animation" start_value="0" end_value="1" duration="0.4" delay="1" end_mode="hold_end"/>
+			<attachment_group class="horizontal_arrange" horizontal_gap="0" horizontal_layout="-1,100,-1" vertical_inset="0" />
 
-			<attachment_group class="horizontal_arrange" horizontal_gap="-13" horizontal_layout="-1,100,-1" vertical_inset="0" />
-
-			<container class="main_box_no_margin" red_replacement="faded white" appearance="boxes/custom/match/tv captions/si tv/score/home team/paper" id="T1Co">
+			<container class="main_box_no_margin" red_replacement="faded white" appearance="boxes/custom/efl/match/scorebar/left/paper" id="T1Co">
 				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 				
 			<container class="home_match_incidents_panel" id="Hnkp" file="match/match incidents left in between highlights2" height="60">
@@ -46,35 +39,34 @@
             </container>
 			</container>
 
-			<container id="MInf">
-				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
-				<container class="main_box_no_margin" appearance="boxes/custom/match/tv captions/si tv/score/time/paper" red_replacement="faded black" >
+			<container class="contrast_box" id="MInf" appearance="boxes/contrast/no margin/paper" red_replacement="faded black" transparency="0.8">
+	            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+				<container >
 					<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="-2" vertical_offset="0" horizontal_inset="0" />
-
 					<container navigation_focus_target="false">
 						<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_gap="2" horizontal_offset="0" vertical_inset="0" />
 
-						<widget class="text" id="T1sc" size="xlarge" font="title" alignment="right,centre_y" colour="white" auto_size="horizontal"/>
+						<widget class="text" id="T1sc" size="xlarge" font="text" alignment="right,centre_y" colour="white" auto_size="horizontal"/>
 
-						<widget class="text" size="xlarge" font="title" alignment="centre" text="-" colour="white" auto_size="horizontal"/>
+						<widget class="text" size="xlarge" font="text" alignment="centre" text="-" colour="white" auto_size="horizontal"/>
 
-						<widget class="text" id="T2sc" size="xlarge" font="title" alignment="left,centre_y" colour="white" auto_size="horizontal"/>
+						<widget class="text" id="T2sc" size="xlarge" font="text" alignment="left,centre_y" colour="white" auto_size="horizontal"/>
 
 					</container>
 
 					<container id="asco">
 						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" horizontal_gap="2" horizontal_offset="0" vertical_inset="0" />
-						<widget class="text" id="T1as" font="title" alignment="right,centre_y" auto_size="all"/>
+						<widget class="text" id="T1as" font="text" alignment="right,centre_y" auto_size="all"/>
 
-						<widget class="text" font="title" alignment="centre" text="-" auto_size="all"/>
+						<widget class="text" font="text" alignment="centre" text="-" auto_size="all"/>
 
-						<widget class="text" id="T2as" font="title" alignment="left,centre_y" auto_size="all"/>
+						<widget class="text" id="T2as" font="text" alignment="left,centre_y" auto_size="all"/>
 
 					</container>
 				</container>
 			</container>
 
-			<container class="main_box_no_margin" red_replacement="faded white" appearance="boxes/custom/match/tv captions/si tv/score/away team/paper" id="T2Co">
+			<container class="main_box_no_margin" red_replacement="faded white" appearance="boxes/custom/efl/match/scorebar/right/paper" id="T2Co">
 	    		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 	           	
 			<container class="away_match_incidents_panel" id="Ankp" file="match/match incidents right in between highlights2" height="60">
@@ -87,16 +79,12 @@
 		</container>
 
 		<!--clock-->
-		<container width="110" class="main_box_no_margin" appearance="boxes/custom/match/tv captions/si tv/score/time/paper" red_replacement="faded black" id="clkc">
-
-			<animation class="translate_animation" start_value="-1, 0" end_value="0, 0" duration="0.4" delay="0" end_mode="hold_end" tween="ease_out_4" coord_mode="relative_to_target"/>
-			<animation class="fade_animation" start_value="0" end_value="1" duration="0.3" delay="0.8" end_mode="hold_end"/>
-
+		<container class="contrast_box" appearance="boxes/contrast/no margin/paper" red_replacement="faded black" transparency="0.8" width="110">
 			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="0" />
 
 			<!--clock-->
 			<container id="ClkC">
-				<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0" horizontal_inset="6" />
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="0" horizontal_inset="6" />
 
 				<record id="default_properties" auto_size="vertical" alignment="centre" />
 
@@ -105,28 +93,27 @@
 
 					<record id="default_properties" auto_size="all" alignment="centre" />
 
-
-					<widget class="text" id="Mclk" size="10.5" font="title" auto_size="all" >
-				<!--Alternate UI mode-->
+					<widget class="text" id="Mclk" size="xlarge" font="title" auto_size="all" >
+						<!--Alternate UI mode-->
 						<integer id="alSM" value="0" />
 					</widget>
+
 					<!--injury time indicator-->
 					<container id="MijC" height="16">
 						<attachment_group class="horizontal_arrange_autosize"/>
 
-						<widget class="text" id="Mijt" auto_size="horizontal" size="normal" alignment="centre" colour="fg positive"/>
-					</container>
+						<widget class="text" id="Mijt" auto_size="horizontal"  alignment="centre" colour="fg positive"/>
 
+					</container>
 				</container>
 
-				<widget class="text" id="ClkT" font="title" size="small" multiline="true">
-							<!--Alternate UI mode-->
+				<widget class="text" id="ClkT" font="title" size="normal" multiline="true">
+					<!--Alternate UI mode-->
 					<integer id="alSM" value="0" />
 				</widget>
+				<!--<widget class="text" id="Pent" size="14" style="semi_bold" />-->
 			</container>
-
 		</container>
-
 	</container>
 
 	<widget class="button" appearance="" navigation_focus_target="false">

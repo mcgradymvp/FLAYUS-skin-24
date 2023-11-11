@@ -3,20 +3,25 @@
 
 	<boolean id="should_force_refresh" value="true" />
 
-	<container >
+	<container>
 		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
 
 		<string id="skin_style" value="title link" />
 
-		<widget class="link_button" height="25" id="tlnk" auto_size="horizontal" />
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" horizontal_alignment="left" />
+			<widget class="link_button" id="tlnk" auto_size="all" />
+		</container>			
 
-		<widget class="label" height="25" id="titl"  font="title" colour="accent" navigation_focus_target="false" />
+		<widget class="label" auto_size="vertical" id="titl"  font="title" colour="accent" navigation_focus_target="false" />
 
-		<widget class="label" height="25" id="nump" style="semi_bold" size="large" />
+		<widget class="label" auto_size="vertical" id="nump" style="semi_bold" size="large" />
 
-		<widget class="text" height="40" id="boac" colour="faded text" />
+        <widget class="text" height="60" id="boac" colour="faded text">
+            <string id="create_if" value="allow_board_confidence"/>
+        </widget>
 
-		<widget class="team_staff_little_guys_panel" id="tslg" height="60"/>
+		<widget class="team_staff_little_guys_panel" id="tslg" height="80"/>
 
 		<widget class="horizontal_divider" />
 

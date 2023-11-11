@@ -1,0 +1,135 @@
+﻿<panel>
+
+	<!--Alternate UI mode-->
+	<integer id="alSM" value="6" />
+
+	<list id="properties_to_forward">
+		<record get_property="disable_animations" set_property="disable_animations" target="clkc"/>
+		<record get_property="disable_animations" set_property="disable_animations" target="temc"/>
+	</list>
+
+	<attachment_group class="vertical_arrange_autosize_all" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container id="scbr">
+		<attachment_group class="vertical_arrange_autosize_all" vertical_gap="0"/>
+		<container height="10">
+			<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0" horizontal_offset="10" vertical_inset="3,0,0,0"/>
+
+			<!--Make sure this matches the mtSA container below-->
+			<widget class="spacer" width="140"/>
+
+			<container class="main_box_no_margin" id="T1rc" red_replacement="red" blue_replacement="red" appearance="boxes/custom/solid/paper" height="5" width="10" />
+
+			<widget class="spacer" width="160"/>
+
+			<container class="main_box_no_margin" id="T2rc" red_replacement="red" blue_replacement="red" appearance="boxes/custom/solid/paper" height="5" width="10" />
+
+		</container>
+		<container height="30" id="mtSA">
+			<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0" horizontal_offset="10"/>
+
+			<container class="main_box_no_margin" appearance="boxes/custom/uefa/super cup/match/scorebar/time/paper" id="clkc" width="120">
+				<attachment_group class="horizontal_arrange" horizontal_gap="10" horizontal_offset="10" vertical_alignment="vertical" horizontal_alignment="left, extend" vertical_inset="0"/>
+				<widget class="picture" file="pictures/comp/1301397/logo" image_alignment="top" width="22" height="22" colour="white" scale_picture="true" >
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="3"/>
+				</widget>
+
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+					<widget class="text" id="Mclk" size="14" font="supercup" auto_size="horizontal" colour="white" alignment="left,centre_y">
+						<!--Alternate UI mode-->
+						<integer id="alSM" value="6" />
+					</widget>
+					<widget class="text" id="ClkT" size="14" font="supercup" colour="white" alignment="centre_y,auto_fit">
+						<integer id="alSM" value="6" />
+					</widget>
+
+				</container>
+
+
+			</container>
+
+			<widget class="spacer" width="6"/>
+
+			<!--team names and score-->
+			<container id="temc">
+				<attachment_group class="horizontal_arrange_autosize" vertical_inset="0" horizontal_gap="0"/>
+
+				<container class="client_object_viewer_xml_panel" id="T1Co" override_with_object="true" width="180">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" vertical_inset="0" horizontal_gap="0"/>
+
+					<container class="main_box_no_margin" id="t1CB" width="4" appearance="boxes/custom/solid/paper">
+					</container>
+
+					<container class="main_box_no_margin" appearance="boxes/custom/uefa/super cup/match/scorebar/left/paper">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="fill" vertical_inset="0" horizontal_gap="0"/>
+
+						<widget class="text_button" id="T1nm" font="supercup" size="14" alignment="centre" click_event="htac" colour="white" navigation_focus_target="false" multiline="true">
+						</widget>
+					</container>
+				</container>
+
+				<container id="MInf" width="70">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+					<container class="main_box_no_margin" appearance="boxes/custom/uefa/super cup/match/scorebar/solid/paper" red_replacement="super cup bg" navigation_focus_target="false" >
+						<attachment_group class="horizontal_arrange" horizontal_layout="-1, 1 ,-1"  horizontal_gap="4" horizontal_offset="2" vertical_inset="0" />
+
+						<widget class="text" id="T1sc" size="15" font="supercup" alignment="centre" colour="white" >
+						</widget>
+
+						<widget class="picture"  file="boxes/custom/uefa/super cup/match/scorebar/separator/paper" red_replacement="super cup accent" />
+
+						<widget class="text" id="T2sc" size="15" font="supercup" alignment="centre" colour="white" >
+						</widget>
+					</container>
+				</container>
+
+				<container class="client_object_viewer_xml_panel" id="T2Co" override_with_object="true" width="180">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" vertical_inset="0" horizontal_gap="0"/>
+
+					<container class="main_box_no_margin" appearance="boxes/custom/uefa/super cup/match/scorebar/right/paper">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="fill" vertical_inset="0" horizontal_gap="0"/>
+
+						<widget class="text_button" id="T2nm" font="supercup" size="14" alignment="centre" click_event="htac" colour="white" navigation_focus_target="false" multiline="true">
+						</widget>
+					</container>
+
+					<container class="main_box_no_margin" id="t2CB" width="4" appearance="boxes/custom/solid/paper">
+					</container>
+				</container>
+				
+			</container>
+
+			<widget class="spacer" width="6"/>
+
+			<container id="McIC" class="main_box_no_margin" appearance="boxes/custom/solid/paper" red_replacement="black" >
+				<attachment_group class="horizontal_arrange_autosize" vertical_inset="0" horizontal_offset="4"/>
+
+				<widget class="text" id="McIt" font="supercup"  alignment="centre" colour="white" size="14" width="55"/>
+
+			</container>
+			<!--injury time indicator-->
+			<container id="MijC" class="main_box_no_margin" appearance="boxes/custom/solid/paper" red_replacement="super cup bg" >
+				<attachment_group class="horizontal_arrange_autosize" vertical_inset="0" horizontal_offset="4"/>
+
+				<widget class="text" id="Mijt" auto_size="horizontal" font="supercup" alignment="centre" colour="white" size="14" usMT="true"/>
+
+			</container>
+
+		</container>
+	</container>
+	<widget class="button" appearance="" navigation_focus_target="false">
+		<!--Dark Magic xml shenanigans to make this button match the above container, while also allowing us to keep the autosize horizontal-->
+		<layout class="stick_to_object_attachment" id="align_top" offset="0" get_side="top" set_side="top" target="scbr" />
+		<layout class="stick_to_object_attachment" id="align_bottom" offset="0" get_side="bottom" set_side="bottom" target="scbr" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="0" get_side="left" set_side="left" target="scbr" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="scbr" />
+		<record id="click_event">
+			<flags id="event_id" value="TNeV" />
+			<integer id="evfl" value="7" />
+			<flags id="evtg" value="root" />
+		</record>
+	</widget>
+
+</panel>

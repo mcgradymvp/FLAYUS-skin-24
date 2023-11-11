@@ -1,0 +1,143 @@
+﻿<panel>
+
+	<!--Alternate UI mode-->
+	<integer id="alSM" value="5" />
+
+	<list id="properties_to_forward">
+		<record get_property="disable_animations" set_property="disable_animations" target="clkc"/>
+		<record get_property="disable_animations" set_property="disable_animations" target="temc"/>
+	</list>
+	<attachment_group class="vertical_arrange_autosize_all" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container id="scbr">
+		<attachment_group class="vertical_arrange_autosize_all" vertical_gap="0"/>
+		<container height="10">
+			<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0" horizontal_offset="10" vertical_inset="3,0,0,0"/>
+			<!--Make sure this matches the mtSA container below-->
+			<widget class="spacer" width="320"/>
+			<container class="main_box_no_margin" id="T1rc" red_replacement="red" blue_replacement="red" appearance="boxes/custom/solid/paper" height="5" width="10" />
+			<widget class="spacer" width="55"/>
+
+			<container class="main_box_no_margin" id="T2rc" red_replacement="red" blue_replacement="red" appearance="boxes/custom/solid/paper" height="5" width="10" />
+
+		</container>
+		
+		<container id="mtSA" height="30">
+			<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0" horizontal_offset="10"/>
+			
+			<container  class="main_box_no_margin" appearance="boxes/custom/efl/match/scorebar/round/paper" red_replacement="white"  >
+				<attachment_group class="horizontal_arrange_autosize" horizontal_gap="-15"/>
+
+				<container id="clkc" width="180">
+					<attachment_group class="horizontal_arrange" horizontal_gap="10" horizontal_offset="1" vertical_alignment="vertical" horizontal_alignment="left, extend" vertical_inset="0"/>
+					
+					<widget class="value_based_picture" id="coIC" image_alignment="centre" red_replacement="efl blue" scale_picture="true" width="100">
+						<list id="value_list">
+							<record value="12" file="pictures/logos/custom/comps/eng/efl_skybet_horizontal_short"/>
+							<record value="13" file="pictures/logos/custom/comps/eng/efl_skybet_horizontal_short"/>
+							<record value="14" file="pictures/logos/custom/comps/eng/efl_skybet_horizontal_short"/>
+							<record value="1301427" file="pictures/logos/custom/comps/eng/efl_cup_horizontal_short"/>
+							<record value="1301429" file="pictures/logos/custom/comps/eng/efl_trophy_horizontal_short"/>
+						</list>
+					</widget>
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+						<widget class="text" id="Mclk" size="12" font="efl bold" colour="efl blue" alignment="left,centre_y" >
+							<layout class="stick_to_sides_attachment" alignment="bottom" inset="2"/>
+							<!--Alternate UI mode-->
+							<integer id="alSM" value="5" />
+						</widget>
+
+						<widget class="text" id="ClkT" font="efl bold"  colour="efl blue" alignment="left,centre_y">
+							<layout class="stick_to_sides_attachment" alignment="bottom" inset="2"/>
+							<!--Alternate UI mode-->
+							<integer id="alSM" value="5" />
+						</widget>
+					</container>				
+				</container>
+
+				<widget class="spacer" width="25"/>
+
+				<!--team names and score-->
+				<container id="temc">
+					<attachment_group class="horizontal_arrange_autosize" vertical_inset="0" horizontal_gap="0"/>
+
+					<container class="client_object_viewer_xml_panel" width="130" id="T1Co" override_with_object="true">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" vertical_inset="0" horizontal_gap="0"/>
+
+						<container class="main_box_no_margin" appearance="boxes/custom/efl/match/scorebar/left/paper" id="t1CB">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" vertical_inset="0" horizontal_gap="0"/>
+
+							<widget class="text_button" id="T1nm" font="efl bold" size="12" alignment="centre" click_event="htac" navigation_focus_target="false" multiline="true">
+								<layout class="stick_to_sides_attachment" alignment="bottom" inset="2"/>
+							</widget>
+
+						</container>
+					</container>
+
+					<container id="MInf" width="55">
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+						<container class="main_box_no_margin" appearance="boxes/custom/efl/match/scorebar/middle/paper" red_replacement="white" navigation_focus_target="false" >
+							<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_gap="4" horizontal_offset="0" vertical_inset="0,0,4,0"/>
+							<widget class="text" id="T1sc" size="14" font="efl bold" alignment="right,centre_y" colour="efl blue" auto_size="horizontal"/>
+							<widget class="text" size="13" font="efl bold" alignment="centre" text="•" colour="efl blue" auto_size="horizontal"/>
+							<widget class="text" id="T2sc" size="14" font="efl bold" alignment="left,centre_y" colour="efl blue" auto_size="horizontal"/>
+						</container>
+					</container>
+
+					<container class="client_object_viewer_xml_panel" width="130"  override_with_object="true">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" vertical_inset="0" horizontal_gap="0"/>
+
+						<container class="main_box_no_margin" appearance="boxes/custom/efl/match/scorebar/right/paper" id="t2CB">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" vertical_inset="0" horizontal_gap="0"/>
+
+							<widget class="text_button" id="T2nm" font="efl bold" size="12" alignment="centre" click_event="htac" navigation_focus_target="false" multiline="true">
+								<layout class="stick_to_sides_attachment" alignment="bottom" inset="2"/>
+							</widget>
+						</container>
+					</container>
+
+
+				</container>
+
+				<container class="main_box_no_margin" width="70" id="asco" appearance="boxes/custom/efl/match/scorebar/aggregate/paper" red_replacement="efl blue">
+					<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="middle"  horizontal_gap="2" horizontal_offset="8" vertical_inset="0,0,4,0" />
+
+					<widget class="text" id="T1as" size="13" font="efl bold" alignment="right,centre_y" colour="white" auto_size="horizontal"/>
+					<widget class="text" size="13" font="efl bold" alignment="centre" text="•" colour="white" auto_size="horizontal"/>
+					<widget class="text" id="T2as" size="13" font="efl bold" alignment="left,centre_y" colour="white" auto_size="horizontal"/>
+
+				</container>
+
+				<container id="McIC" class="main_box_no_margin" >
+					<attachment_group class="horizontal_arrange_autosize" vertical_inset="0,0,4,0" horizontal_offset="4" horizontal_gap="4"/>
+					
+					<widget class="text" id="McIt" font="efl bold" alignment="centre" colour="efl blue" size="14" width="65"/>
+
+					<!--injury time indicator-->
+					<container id="MijC" class="main_box_no_margin">
+						<attachment_group class="horizontal_arrange_autosize" vertical_inset="0" horizontal_offset="0"/>
+
+						<widget class="text" id="Mijt" auto_size="horizontal" font="efl bold" alignment="centre" colour="red" size="14" usMT="true"/>
+
+					</container>
+				</container>	
+			</container>
+		</container>
+		
+	</container>
+	<widget class="button" appearance="" navigation_focus_target="false">
+		<!--Dark Magic xml shenanigans to make this button match the above container, while also allowing us to keep the autosize horizontal-->
+		<layout class="stick_to_object_attachment" id="align_top" offset="0" get_side="top" set_side="top" target="scbr" />
+		<layout class="stick_to_object_attachment" id="align_bottom" offset="0" get_side="bottom" set_side="bottom" target="scbr" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="0" get_side="left" set_side="left" target="scbr" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="scbr" />
+		<record id="click_event">
+			<flags id="event_id" value="TNeV" />
+			<integer id="evfl" value="7" />
+			<flags id="evtg" value="root" />
+		</record>
+	</widget>
+
+</panel>

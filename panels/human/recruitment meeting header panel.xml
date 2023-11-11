@@ -39,7 +39,7 @@
 					</widget>
 				</container>
 
-				<widget class="icon_button" id="emCK" click_event="emCK" fixed="true" controller_button="right_trigger" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/continue" secondary_icon_alignment="centre_right, centre_y" font="title" colour="text" width="135" height="48" hidden="true">
+				<widget class="icon_button" id="emCK" click_event="emCK" fixed="true" appearance="chrome/buttons/continue/button" controller_button="right_trigger" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/continue" red_replacement="title" secondary_icon_alignment="centre_right, centre_y" font="title" colour="text" width="135" height="48" hidden="true">
 					<record id="secondary_icon_properties" red_replacement="text"/>
 					<record id="click_event" event_id="emCK" event_target="onec" />
 					<translation id="text" translation_id="510685" type="use" value="End Meeting[COMMENT: AREA: Recruitment meeting; FR-BN: 32765; NOTE: Recruitment meeting end meeting dialog popup title]"/>

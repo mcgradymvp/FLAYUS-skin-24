@@ -1,0 +1,192 @@
+﻿<panel>
+
+	<!--Alternate UI mode-->
+	<integer id="alSM" value="1" />
+
+	<list id="properties_to_forward">
+		<record get_property="disable_animations" set_property="disable_animations" target="clkc"/>
+		<record get_property="disable_animations" set_property="disable_animations" target="temc"/>
+	</list>
+
+	<attachment_group class="vertical_arrange_autosize_all" vertical_alignment="top" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+
+	<container id="scbr">
+		<attachment_group class="vertical_arrange_autosize_all" vertical_gap="0"/>
+		<container height="10">
+			<animation class="scale_animation" start_value="0, 1" end_value="1, 1" duration="0.5" delay="0.9" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="left"/>
+			<animation class="fade_animation" start_value="0" end_value="1" duration="0.4" delay="1" end_mode="hold_end"/>
+
+			
+			<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0" horizontal_offset="10" />
+            
+			<widget class="spacer">
+				<string id="create_if" value="distribution_is_apple"/>
+				<global id="width" name="ui.safe_area_left"/>
+			</widget>
+
+			<!--Make sure this matches the mtSA container below-->
+			<widget class="spacer" width="88"/>
+
+			<widget class="spacer" id="BLsp" width="45" hidden="true"/>
+
+			<container width="255">
+				<attachment_group class="horizontal_arrange" horizontal_layout="-1,75,-1" vertical_inset="2" horizontal_gap="0"/>
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_gap="0" horizontal_offset="10" />
+					<container class="main_box_no_margin" id="T1rc" red_replacement="red" blue_replacement="red" appearance="boxes/custom/solid/paper" height="10" width="13" />
+				</container>
+				<widget class="spacer"/>
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_gap="0" horizontal_offset="10" horizontal_alignment="right"/>
+					<container class="main_box_no_margin" id="T2rc" red_replacement="red" blue_replacement="red" appearance="boxes/custom/solid/paper" height="10" width="13" />
+				</container>
+			</container>
+			<widget class="spacer"/>
+			<widget class="spacer"/>
+
+		</container>
+		<container height="30" id="mtSA">
+
+			<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0" horizontal_offset="10"/>
+			<widget class="spacer">
+				<string id="create_if" value="distribution_is_apple"/>
+				<global id="width" name="ui.safe_area_left"/>
+			</widget>
+			<container width="38">
+				<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="0" vertical_gap="0" />
+				<container height="30" class="main_box_no_margin" appearance="boxes/custom/solid/paper" red_replacement="grey 300">
+
+					<animation class="translate_animation" start_value="-1, 0" end_value="0, 0" duration="0.4" delay="0" end_mode="hold_end" tween="ease_out_4" coord_mode="relative_to_target"/>
+					<animation class="fade_animation" start_value="0" end_value="1" duration="0.3" delay="0.8" end_mode="hold_end"/>
+
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" />
+					<!-- Competition icon -->
+					<widget class="value_based_picture" id="coIC" scale_picture="true" image_alignment="centre" height="30" >
+						<list id="value_list">
+							<record value="22" file="pictures/logos/custom/comps/ger/BL grey small"/>
+							<record value="23" file="pictures/logos/custom/comps/ger/BL2 grey small"/>
+							<record value="92030194" file="pictures/logos/custom/comps/ger/supercup grey small"/>
+						</list>
+					</widget>
+
+				</container>
+			</container>
+
+			<!--clock-->
+			<container width="55">
+				<attachment_group class="vertical_arrange" vertical_alignment="top" vertical_offset="0" vertical_gap="0" />
+				<container height="30" class="main_box_no_margin" appearance="boxes/custom/solid/paper" red_replacement="grey 800" id="clkc">
+
+					<animation class="translate_animation" start_value="-1, 0" end_value="0, 0" duration="0.4" delay="0" end_mode="hold_end" tween="ease_out_4" coord_mode="relative_to_target"/>
+					<animation class="fade_animation" start_value="0" end_value="1" duration="0.3" delay="0.8" end_mode="hold_end"/>
+
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_offset="0" vertical_gap="0" />
+
+					<!--clock-->
+					<container id="ClkC">
+						<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_gap="0" horizontal_inset="0" />
+
+						<record id="default_properties" auto_size="vertical" alignment="centre" />
+
+						<container height="22">
+							<attachment_group class="horizontal_arrange" horizontal_alignment="middle,extend" horizontal_gap="4" horizontal_offset="2" vertical_inset="0,0,4,0" />
+
+							<widget class="text" id="Mclk" size="12" font="bundesliga" alignment="centre" >
+								<!--Alternate UI mode-->
+								<integer id="alSM" value="1" />
+							</widget>
+							<widget class="text" id="ClkT" size="12" font="bundesliga" alignment="centre_y,auto_fit">
+								<integer id="alSM" value="1" />
+							</widget>
+						</container>
+					</container>
+				</container>
+			</container>
+
+			<container height="30" width="40" id="MijC"  class="main_box_no_margin" appearance="boxes/custom/solid/paper" red_replacement="grey 800">
+
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle,extend" horizontal_gap="4" horizontal_offset="2" vertical_inset="0,0,4,0" />
+				<!--injury time indicator-->
+				<widget class="text" id="Mijt" size="12" font="bundesliga" colour="white" hidden="true" alignment="centre" >
+					<integer id="alSM" value="1" />
+				</widget>
+			</container>
+
+			<!--team names and score-->
+			<container width="247" id="temc">
+
+				<animation class="scale_animation" start_value="0, 1" end_value="1, 1" duration="0.5" delay="0.9" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="left"/>
+				<animation class="fade_animation" start_value="0" end_value="1" duration="0.4" delay="1" end_mode="hold_end"/>
+
+				<attachment_group class="horizontal_arrange" horizontal_layout="-1,55,-1,70" vertical_inset="0" horizontal_gap="0"/>
+
+				<container class="client_object_viewer_xml_panel" id="T1Co" override_with_object="true">
+					<attachment_group class="horizontal_arrange" horizontal_layout="-1" vertical_inset="0" horizontal_gap="0"/>
+					<container class="main_box_no_margin" id="t1CB" appearance="boxes/custom/bundesliga/match/bundesliga team background">
+						<attachment_group class="horizontal_arrange" horizontal_layout="-1" vertical_inset="-3" horizontal_gap="0"/>
+						<record id="object_property">
+							<integer id="get_property" value="tbcl" />
+							<integer id="set_property" value="blue_replacement" />
+						</record>
+
+						<widget class="text_button" id="T1nm" font="bundesliga-condensed" size="12" alignment="top" click_event="htac" navigation_focus_target="false" multiline="true">
+							<record id="object_property">
+								<integer id="get_property" value="ttbw" />
+								<integer id="set_property" value="colour" />
+							</record>
+						</widget>
+					</container>
+				</container>
+
+				<container id="MInf">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+					<container class="main_box_no_margin" appearance="boxes/custom/bundesliga/match/bundesliga score" red_replacement="grey 800" navigation_focus_target="false" >
+						<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_gap="4" horizontal_offset="0" vertical_inset="-1" />
+						<widget class="text" id="T1sc" size="12" font="bundesliga" alignment="right" colour="white" auto_size="all"/>
+						<widget class="text" size="12" font="bundesliga" alignment="top" text="-" colour="white" auto_size="all"/>
+						<widget class="text" id="T2sc" size="12" font="bundesliga" alignment="left" colour="white" auto_size="all"/>
+					</container>
+				</container>
+
+				<container class="client_object_viewer_xml_panel" id="T2Co" override_with_object="true">
+					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+					<container class="main_box_no_margin" id="t2CB" appearance="boxes/custom/bundesliga/match/bundesliga team background">
+						<attachment_group class="horizontal_arrange" horizontal_layout="-1" vertical_inset="-3" horizontal_gap="0"/>
+
+						<record id="object_property">
+							<integer id="get_property" value="tbcl" />
+							<integer id="set_property" value="blue_replacement" />
+						</record>
+						<widget class="text_button" id="T2nm" font="bundesliga-condensed" size="12" alignment="top" click_event="htac" navigation_focus_target="false" multiline="true">
+							<record id="object_property">
+								<integer id="get_property" value="ttbw" />
+								<integer id="set_property" value="colour" />
+							</record>
+						</widget>
+					</container>
+				</container>
+
+				<container class="main_box_no_margin" id="asco" appearance="boxes/custom/bundesliga/match/bundesliga score" red_replacement="grey 800" >
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle"  horizontal_gap="2" horizontal_offset="0" vertical_inset="0" />
+
+					<widget class="text" id="T1as" size="12" font="bundesliga" alignment="right" colour="white" auto_size="all"/>
+					<widget class="text" size="12" font="bundesliga" alignment="top" text="-" colour="white" auto_size="all"/>
+					<widget class="text" id="T2as" size="12" font="bundesliga" alignment="left" colour="white" auto_size="all"/>
+
+				</container>
+			</container>
+		</container>
+	</container>
+	<widget class="button" appearance="" navigation_focus_target="false">
+		<!--Dark Magic xml shenanigans to make this button match the above container, while also allowing us to keep the autosize horizontal-->
+		<layout class="stick_to_object_attachment" id="align_top" offset="0" get_side="top" set_side="top" target="scbr" />
+		<layout class="stick_to_object_attachment" id="align_bottom" offset="0" get_side="bottom" set_side="bottom" target="scbr" />
+		<layout class="stick_to_object_attachment" id="align_left" offset="0" get_side="left" set_side="left" target="scbr" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="scbr" />
+		<record id="click_event">
+			<flags id="event_id" value="TNeV" />
+			<integer id="evfl" value="7" />
+			<flags id="evtg" value="root" />
+		</record>
+	</widget>
+</panel>

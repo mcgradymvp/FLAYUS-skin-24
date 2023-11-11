@@ -22,11 +22,8 @@
 					<translation id="text" translation_id="420714" type="use" value="Add Promise[COMMENT: FR 14013, button text to add a promise into contract negotiations, eg promise a player a particular squad number]" />
 				</widget>
 			</container>
-
-
 		</container>
 		
-
 		<container>
 			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0"/>
 

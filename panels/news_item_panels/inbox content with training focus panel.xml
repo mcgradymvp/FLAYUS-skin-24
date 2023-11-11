@@ -8,7 +8,7 @@
 		<layout class="arrange_vertical_attachment" layout="-1,-3" offset="0"/>
 		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
 
-		<container class="inner_subtle_box">
+		<container class="main_box">
 			<layout class="arrange_horizontal_attachment" layout="160,300,-1" gap="10" offset="0"/>
 			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
 				
@@ -27,7 +27,7 @@
 				</widget>
 				</container>
 
-				<container class="inner_box">
+				<container class="main_box">
 					<layout class="arrange_vertical_attachment" layout="-1,-1,-1,-1,30" offset="0" gap="0" />
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
                 
@@ -113,7 +113,7 @@
 				  </container>
                 </container>
 		    
-			<container class="inner_box">
+			<container class="main_box">
 			   <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
 			<container class="icon_box" icon="icons/custom/icon box/progress">
@@ -151,7 +151,7 @@
 				<layout class="arrange_vertical_attachment" layout="90, 400" offset="0"/>
 				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
 
-				<container class="inner_box">
+				<container class="main_box">
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
 					<container>
@@ -236,7 +236,7 @@
 						<container height="20">
 							<layout class="arrange_vertical_attachment" alignment="top" offset="0" />
 							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
-			            <widget class="label" colour="accent" alignment="centre" auto_size="vertical" font="label">
+			            <widget class="text" auto_size="vertical" alignment="centre_y, left" colour="faded alt text" >
 					        <translation id="text" translation_id="505830" type="use" value="Weaker Foot Training[COMMENT: AREA: Backroom advice; SUB-AREA: Training suggestion; FR-BN: 27129; TONE: Formal; CHARLIMIT: None; REF-ID: ; NOTE: ]" />
 				        </widget>
 
@@ -251,7 +251,7 @@
 					<layout class="arrange_horizontal_attachment" layout="-1,-3" offset="0"/>
 					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
 
-					<container class="inner_titled_box" hidden="false" >
+					<container class="titled_box" hidden="false" >
 						<translation id="title" translation_id="227884" type="use" value="Position"/>
 						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 

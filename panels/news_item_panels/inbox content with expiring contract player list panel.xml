@@ -69,17 +69,17 @@
 			<layout class="arrange_horizontal_attachment" alignment="right" wrap="true" gap="0" offset="0"/>
 
 			<!--set for release button-->
-			<widget class="icon_button" id="spfr" click_event="spfr" auto_size="all" disabled="true" controller_button="x_button">
+			<widget class="icon_button" id="spfr" click_event="spfr" auto_size="all" disabled="true">
 				<translation id="text" translation_id="334040" type="use" value="Set For Release[COMMENT: sets the player to be released at the end of his contract]"/>
 			</widget>
 
 			<!--DoF button-->
-			<widget class="icon_button" id="sdof" click_event="sdof" auto_size="all" disabled="true" controller_button="y_button">
+			<widget class="icon_button" id="sdof" click_event="sdof" auto_size="all" disabled="true">
 				<translation id="text" translation_id="491967" type="use" value="Instruct DoF to Negotiate Renewal[COMMENT: AREA: Inbox; SUB-AREA: Contract expiting news item; FR-BN: 13862; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: button label for requesting the director of football negotiates contract renewals on your behalf]"/>
 			</widget>
 
 			<widget class="icon_button" id="apal" click_event="apal" auto_size="all">
-				<translation id="text" translation_id="491969" type="use" value="Apply Recommended Action To All[COMMENT: AREA: Inbox; SUB-AREA: Contract expiting news item; FR-BN: 13862; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: button label for requesting the recommended contract renewal action is applied to all players in the list]"/>
+				<translation id="text" translation_id="553118" type="use" value="Apply Remaining Recommended Actions[COMMENT: AREA: contract advice news item; NOTE: button to automatically apply all remaining actions recommended]"/>
 			</widget>
 		</container>
 	</container>

@@ -44,13 +44,13 @@
 		</list>
 	</widget>
 
-	<container class="main_box" id="tcmn" draw_horizontal_dividers="true">
+	<container id="tcmn" draw_horizontal_dividers="true">
 		<attachment_group class="vertical_arrange" vertical_alignment="top, extend">
 			<global id="vertical_gap" name="ui.main_box_gap" />
 		</attachment_group>
 
 		<!-- clauses -->
-		<container  id="ClTb" navigation_container="true">
+		<container class="main_box" id="ClTb" navigation_container="true">
 			<attachment_group class="vertical_arrange_autosize" vertical_alignment="top" />
 
 			<container height="28">
@@ -82,7 +82,7 @@
 				<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 
 				<!-- overall titled box -->
-				<container navigation_container="true" default_focus="true">
+				<container class="main_box" navigation_container="true" default_focus="true">
 					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 					<layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="0" gap="8" />
 					<translation id="title" translation_id="330721" type="use" value="Transfer Activity[COMMENT: how to system; help string]" />

@@ -448,15 +448,13 @@
 					<container />
 
 					<container>
-						<attachment_group class="vertical_arrange" vertical_layout="5,60,-2,-12" vertical_gap="0" />
-
-						    <container />
+						<attachment_group class="vertical_arrange" vertical_layout="60,35,25,-1" vertical_gap="0" />
 
 					<!-- Logos, stadium, detials -->
-					<container height="60">
+					<container height="50">
 						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-1,-2,-1" horizontal_gap="2" />
 
-						<container id="tsHL" height="60" class="main_box" appearance="boxes/custom/match/team sheet/home team layer/paper">
+						<container id="tsHL" height="50" class="main_box" appearance="boxes/custom/match/team sheet/home team layer/paper">
 							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 							
 							<widget class="object_portrait_picture" id="htpc" scale_picture="true" image_alignment="centre" />
@@ -476,8 +474,7 @@
 
 							<container height="34">
 								<attachment_group class="horizontal_arrange" horizontal_offset="0" horizontal_alignment="middle,fill"/>
-
-								<container/>
+	                           <container/>
 								<container >
 									<attachment_group class="horizontal_arrange_autosize" horizontal_offset="0"/>
 
@@ -498,11 +495,11 @@
 									</widget>
 
 								</container>
-								<container/>
+					        	<container/>	
 							</container>			
 						</container>
 
-						<container id="tsAL" height="60" class="main_box" appearance="boxes/custom/match/team sheet/away team layer/paper">
+						<container id="tsAL" height="50" class="main_box" appearance="boxes/custom/match/team sheet/away team layer/paper">
 							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 							<widget class="object_portrait_picture" id="atpc" scale_picture="true" image_alignment="centre" />
@@ -521,7 +518,7 @@
 						<container>
 							<attachment_group class="vertical_arrange_autosize"  vertical_offset="0" vertical_gap="0"/>
 
-							<widget class="client_object_label" id="htlb" font="title" size="xlarge"  style="bold" alignment="right" disable_link="true" auto_size="vertical">
+							<widget class="client_object_label" id="htlb" font="title" size="large"  style="bold" alignment="right" disable_link="true" auto_size="vertical">
 								<var id="colour" name="sheet_text_colour" />
 							</widget>
 
@@ -551,7 +548,7 @@
 								<var id="colour" name="sheet_text_colour" />
 							</record>
 
-							<widget class="client_object_label" id="atlb" font="title" size="xlarge"  style="bold" alignment="left" disable_link="true" auto_size="vertical"/>
+							<widget class="client_object_label" id="atlb" font="title" size="large"  style="bold" alignment="left" disable_link="true" auto_size="vertical"/>
 
 							<container class="client_object_viewer_xml_panel" id="awam">
 
@@ -567,12 +564,32 @@
 							</container>
 						</container>
 					</container>
+				
+		        <container class="bordered_box" height="24">
+					<attachment_group class="horizontal_arrange_autosize"  horizontal_gap="0" />
+					<layout class="centre_in_parent_attachment" alignment="horizontal" />
 
+					<widget class="game_formatted_label" id="date" alignment="right, centre_y" font="title" size="normal" colour="sheet_text_colour" auto_size="horizontal">
+						<translation id="format" translation_id="515082" type="use" value="[%date#2-long]. Kick-off [%date#3-time][COMMENT: AREA: Match; SUB-AREA: Pre match flow; FR: 30889; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: text for the kick off date and time]" />
+						
+						<record id="object_property">
+							<list id="get_properties">
+								<record get_property="fxdt" set_property="var2" />
+								<record get_property="fxdt" set_property="var3" />
+							</list>
+						</record>
+					</widget>
+
+					<widget class="stadium_button" font="title" alignment="left, centre_y" size="normal" colour="sheet_text_colour" auto_size="horizontal" icon_enabled="false" disable_link="true" id="stad" navigation_focus_target="false">
+						<record id="object_property" get_property="stad" set_property="valu" />
+					</widget>
+				</container>
+				
 					<container>
-						<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="10" vertical_offset="0" horizontal_inset="0"/>
+						<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="0" vertical_offset="0" horizontal_inset="0"/>
 
 						<container>
-							<attachment_group class="vertical_arrange" vertical_layout="-1,25,-1"/>
+							<attachment_group class="vertical_arrange" vertical_layout="-1,20,-1"/>
 
 							<!-- Starting XI -->
 							<container>
@@ -657,9 +674,7 @@
 									<var id="pltb" name="players_table"/>
 
 								</container>
-
 							</container>
-
 						</container>
 
 						<!-- Ref -->
@@ -670,7 +685,7 @@
 						</widget>
 					</container>
 				   </container>
-			      <container />
+				   <container/>
 		     	 </container>
 		        </container>
               </container>

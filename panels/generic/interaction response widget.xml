@@ -1,7 +1,7 @@
 ﻿<panel>
     <attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0"/>
 
-    <container class="main_transparent_box" id="anbx" red_replacement="bg" appearance="buttons/standard/flex/button">
+    <container class="main_transparent_box" id="anbx" red_replacement="bg info" appearance="buttons/standard/flex/button">
         <attachment_group class="vertical_arrange_autosize" vertical_offset="5" vertical_gap="0" horizontal_inset="0"/>
 
         <!-- the response text -->

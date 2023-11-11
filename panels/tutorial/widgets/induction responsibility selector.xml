@@ -1,0 +1,20 @@
+﻿<panel width="375">
+
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="4" />
+	
+	<widget class="text" id="titl" alignment="left, bottom" font="label" colour="white" auto_size="vertical" multiline="true"/>
+
+	<container height="32">
+		<attachment_group class="horizontal_arrange" vertical_alignment="bottom" horizontal_layout="-1,-1" horizontal_gap="0" >
+			<global id="horizontal_gap" name="ui.split_button_row_gap"/>
+		</attachment_group>
+				<widget class="radio_button" appearance="switches/toggle/left/induction/button" id="MAbu" show_button_appearance="true" icon_enabled="false" secondary_icon_enabled="true" secondary_icon="icons/16px/manager respo" secondary_icon_alignment="left, centre_y" alignment="left, centre_y" select_event="MAse" auto_size="vertical" >
+				<translation id="text" translation_id="227981" type="use" value="Manager" />
+				<record id="secondary_icon_properties" red_replacement="manager responsibility" blue_replacement="bg"/>
+		</widget>
+		<widget class="radio_button" appearance="switches/toggle/right/induction/button" id="BSbu" show_button_appearance="true" icon_enabled="false" secondary_icon_enabled="true" secondary_icon="icons/16px/staff respo" secondary_icon_alignment="left, centre_y" alignment="left, centre_y" select_event="BSse" auto_size="vertical" >
+			<record id="secondary_icon_properties" red_replacement="staff responsibility" blue_replacement="bg"/>
+			<translation id="text" translation_id="339593" type="use" value="Backroom Staff[COMMENT: person likes a person because he worked as backroom staff]" />
+		</widget>
+	</container>
+</panel>

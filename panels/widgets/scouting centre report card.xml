@@ -99,7 +99,7 @@
 					<widget class="vertical_divider" width="2">
 						<layout class="stick_to_sides_attachment" alignment="vertical" inset="8"/>
 					</widget>
-
+ 
 					<container id="pLRC">
 						<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="left,extend" horizontal_gap="8" vertical_inset="0"/>
 
@@ -184,7 +184,26 @@
 								</container>
 							</container>
 						</container>
-					</container>
+									<widget class="vertical_divider" width="2">
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="8"/>
+						</widget>
+			<!-- Buttons -->
+            <container width="200">
+              <layout class="arrange_horizontal_attachment" alignment="top,extend" offset="0" gap="10" />           
+              <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+          <widget class="button" id="psh2" appearance="buttons/primary/normal/button" auto_size="all">
+              <translation id="text" type="use" value="능력치 보기" />
+              <event id="click_event" event_id="kev3"/>
+              <attachment class="event_relay_attachment" event_id="kev3">
+                <record id="action_event">
+                  <flags id="event_id" value="show"/>
+                  <flags id="event_target" value="psh1"/>
+                </record>
+              </attachment>
+            </widget>
+          </container> 
+		</container>
 
 					<widget class="client_object_property_panel" property="PSpi">
 						<layout class="centre_in_parent_attachment" alignment="vertical"/>
@@ -283,11 +302,11 @@
 			</container>
 
 			<container id="recC">
-				<attachment_group class="horizontal_arrange" horizontal_layout="340,-1" vertical_inset="10" horizontal_offset="10" horizontal_gap="4"/>
+				<attachment_group class="horizontal_arrange" horizontal_layout="400,-1" vertical_inset="0" horizontal_offset="0" horizontal_gap="4"/>
 
 				<!--Scouting recommendation subpanel on the LHS-->
-				<container class="inner_subtle_box" navigation_container="true" width="340">
-					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="4" vertical_offset="0" vertical_gap="4" />
+				<container navigation_container="true" width="400">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="0" vertical_offset="0" vertical_gap="4" />
 
 					<container>
 						<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_inset="0" vertical_gap="4"/>
@@ -350,4 +369,29 @@
 			</container>
 		</container>
 	</container>
+	
+	<!-- Attributes & Hidden popup -->
+    <container>     
+    <container width="700" height="600">
+      <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0"/>
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+      <layout class="stick_to_sides_attachment" alignment="left" inset="0" />
+      <layout class="stick_to_sides_attachment" alignment="top" inset="0" />
+
+      <container class="player_attributes_panel" id="psh1" file="attributes/gunzo player attributes panel2" hidn="true" width="700">
+        <record id="object_property">
+          <list id="get_properties">
+            <record>
+              <integer id="get_property" value="Pers" />
+              <integer id="set_property" value="objt" />
+            </record>      
+		<record>
+              <integer id="get_property" value="objt" />
+              <integer id="set_property" value="objt" />
+            </record>
+          </list>
+        </record>
+      </container>
+    </container>
+  </container>
 </panel>

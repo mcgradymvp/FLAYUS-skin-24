@@ -36,11 +36,11 @@
 	</widget> 
 
   	<widget class="player_history_achievements_panel" id="pac1" file="player/player history achievements small" late_loading="true">
-		<translation id="title" translation_id="329749" type="use" value="Career Achievements" />
+		<translation id="title" type="use" value="경력 업적" />
 	</widget>
 
 	<widget class="player_training_stats_panel" id="pitf" late_loading="true" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
-		<translation id="title" translation_id="363655" type="use" value="Individual training[COMMENT: training players panel, column heading for Individual Training Focus]" />
+		<translation id="title" type="use" value="훈련" />
 	</widget>  
 
 	<widget class="client_object_viewer_xml_panel" file="player/player attribute analyser panel" id="paAn" late_loading="true">

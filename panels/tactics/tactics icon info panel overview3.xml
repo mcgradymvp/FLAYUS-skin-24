@@ -54,8 +54,8 @@
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 
 					<!--role/duty-->
-		            <widget class="position_role_duty_popup_button_mini" appearance="buttons/tactic/normal/button" id="rodu" size="8.5" font="gzmain" auto_size="vertical" secondary_icon="icons/custom/misc/small down" alignment="centre_x,centre_y" disabled_colour="faded white">
-                     <layout class="stick_to_sides_attachment" alignment="all" inset="0,10,0,0" />
+		            <widget class="position_role_duty_popup_button_mini" appearance="switches/custom/team picker/button_showing" id="rodu" size="8.5" font="gzmain" auto_size="vertical" secondary_icon="icons/custom/misc/small down" alignment="centre_x,centre_y" disabled_colour="faded white">
+                     <layout class="stick_to_sides_attachment" alignment="all" inset="0,0,0,0" />
 					</widget>
 
 					<!--info (morale, rating, condition)-->

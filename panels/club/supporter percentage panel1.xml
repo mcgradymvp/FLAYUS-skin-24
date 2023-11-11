@@ -1,0 +1,40 @@
+﻿<panel>
+	<list id="properties_to_forward">
+		<record get_property="pIST" set_property="pIST" target="spic"/>
+	</list>
+
+	<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="-1,-1" />
+
+	<container>
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_gap="0" horizontal_offset="0" vertical_inset="0"/>
+		
+		<widget class="table" id="slst" auto_size="vertical" row_spacing="16">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+			<flags id="layout" value="20, 16, -1, 35, 26" />
+			<flags id="mode" value="fill_rows" />
+			<boolean id="fixed_size_rows" value="true" />
+			<boolean id="auto_size_rows" value="false" />
+			<integer id="row_height" value="23"/>
+
+			<list id="column_table_properties">
+				<record index="0" id="icon" column_alignment="centre" />
+				<record index="1" id="info" column_alignment="centre" />
+				<record index="2" id="name" />
+				<record index="3" id="perc" />
+				<record index="4" id="schg" />
+			</list>
+
+			<list id="column_widget_properties">
+				<record index="0" auto_size="all" />
+				<record index="1" auto_size="all"/>
+				<record index="2" spec="text" alignment="left,centre_y" navigation_focus_target="true" font="bold" colour="text"/>
+				<record index="3" spec="text" alignment="left,centre_y" font="bold" colour="faded text"/>
+				<record index="4" spec="picture" alignment="left,centre_y" hidden="true" height="" scale_picture="true"/>
+			</list>
+		</widget>
+	</container>
+
+	<widget class="supporter_percentage_picture" id="spic" overlay_image_file="charts/stadium/stadium detail">
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+	</widget>
+</panel>

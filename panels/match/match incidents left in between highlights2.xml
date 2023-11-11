@@ -15,7 +15,7 @@
 				<!--home team main logo-->
 	            <widget class="object_portrait_picture" id="picH" height="50" width="50" should_force_refresh="true" scale_picture="true" keep_aspect_ratio="true" image_alignment="left" transparency="0.3">
 	                <layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" priority="3"/>
-		            <layout class="stick_to_sides_attachment" alignment="all" inset="-15,0,0,0" priority="3"/>
+		            <layout class="stick_to_sides_attachment" alignment="all" inset="-20,0,0,0" priority="3"/>
 							<record id="object_property">
 								<integer id="get_property" value="home" />
 							</record>
@@ -23,7 +23,7 @@
     </container>
    
     <!-- team name -->
-   			<widget class="text_button" id="T1nm" font="title" style="bold" size="10.5" alignment="centre" click_event="htac" navigation_focus_target="false" colour="black" multiline="true"/>
+   			<widget class="text_button" id="T1nm" font="title" style="semi_bold" size="11" alignment="centre" click_event="htac" navigation_focus_target="false" colour="black" multiline="true"/>
 
   </container>
 </panel>

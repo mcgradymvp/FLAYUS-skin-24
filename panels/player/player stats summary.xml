@@ -12,11 +12,11 @@
 		<container class="vertical_arrange_container" alignment="top" gap="4" inset="0" offset="0" auto_size="vertical" draw_horizontal_dividers="true">
 
 			<set_var name="shared_top_layout">
-				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0" />
+				<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="10" />
 			</set_var>
 
 			<set_var name="portrait_picture_container">
-				<container width="80" height="58">
+				<container width="110" height="58">
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
 					<widget class="picture" image_alignment="left,top" scale_picture="false">

@@ -79,7 +79,7 @@
 							<widget class="label" auto_size="vertical">
 								<translation id="text" translation_id="329791" type="use" value="캐시 초기화" />
 							</widget>
-	                        <widget class="button" id="rels" click_event="CnfR" auto_size="all">
+	                      <widget class="clear_cache_button" auto_size="vertical">
                                 <translation id="text" type="use" value="캐시 초기화 하기" />
                             </widget>
 							</container>

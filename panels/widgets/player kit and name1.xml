@@ -1,0 +1,23 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize"/>
+
+	<list id="properties_to_forward">
+		<record get_property="appearance" set_property="appearance" target="rowc"/>
+		<record get_property="icon" set_property="file" target="icon"/>
+		<record get_property="red_replacement" set_property="red_replacement" target="icon"/>
+		<record get_property="blue_replacement" set_property="blue_replacement" target="icon"/>
+		<record get_property="text" set_property="text" target="text"/>
+	</list>
+
+	<container class="main_box_no_margin" id="rowc">
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend"/>
+
+		<widget class="picture" id="icon" width="30" height="40" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+		<widget class="text" id="text" auto_size="vertical" alignment="left"/>
+		
+	</container>
+
+	
+	
+</panel>

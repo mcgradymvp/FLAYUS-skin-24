@@ -1,10 +1,10 @@
-<panel save_session_state="true" >
+<panel save_session_state="true">
 	<flags id="icbc" value="" />
 	<!--interested club background colour-->
 	<flags id="ocbc" value="positive bg" />
 	<!--own club background colour-->
 	<flags id="bnap" value="tabs/standard/normal/top/button" />
-	<flags id="bsap" value="tabs/standard/selected/top/button" />
+	<flags id="bsap" value="tabs/standard/normal/top/button_showing" />
 
 	<list id="properties_to_forward">
 		<record get_property="hinc" set_property="hinc" target="left" />
@@ -17,11 +17,11 @@
 		<record get_property="hcor" set_property="hidn" target="pcra" />
 		<record get_property="hlft" set_property="hidn" target="left" />
 	</list>
-
+ 
 	<string id="title" value="Contract Offer Panel" />
 	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
-	<animation class="fade_animation" start_value="0" end_value="1" duration="0.3" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true"/>
+	<animation class="fade_animation" start_value="0" end_value="1" duration="0.3" end_mode="hold_end" trigger_id="hidden" trigger_start="false" trigger_end="true" />
 
 
 	<container id="off" navigation_container="true" default_focus="true">
@@ -29,7 +29,7 @@
 
 		<record id="default_properties" hidden="true" />
 
-		<container id="offe" class="empty_state">
+		<container id="offe" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="20" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -50,7 +50,7 @@
 			</container>
 		</container>
 
-		<container id="out" class="empty_state">
+		<container id="out" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -64,7 +64,7 @@
 			<widget class="text" id="oure" auto_size="all" alignment="centre" size="10" />
 		</container>
 
-		<container id="ythc" class="empty_state">
+		<container id="ythc" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -83,7 +83,7 @@
 			</widget>
 		</container>
 
-		<container id="loac" class="empty_state">
+		<container id="loac" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -96,7 +96,7 @@
 			</widget>
 		</container>
 
-		<container id="ontr" class="empty_state">
+		<container id="ontr" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -109,7 +109,7 @@
 			</widget>
 		</container>
 
-		<container id="pago" class="empty_state">
+		<container id="pago" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -122,7 +122,7 @@
 			</widget>
 		</container>
 
-		<container id="rndc" class="empty_state">
+		<container id="rndc" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -141,7 +141,7 @@
 			</widget>
 		</container>
 
-		<container id="cafc" class="empty_state">
+		<container id="cafc" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -160,7 +160,7 @@
 			</widget>
 		</container>
 
-		<container id="lvcc" class="empty_state">
+		<container id="lvcc" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -176,13 +176,13 @@
 			</widget>
 		</container>
 
-		<container id="huma" class="empty_state">
+		<container id="huma" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
 			<!--explanatory text-->
 			<widget class="text" id="hnco" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
-				<translation id="text" translation_id="320414" type="use" value="You haven't been offered a contract at this time[COMMENT:contract information; can't be offered a contract]" />
+				<translation id="text" translation_id="320414" type="use" value="You haven't been offered a contract at this time.[COMMENT:contract information; can't be offered a contract]" />
 			</widget>
 			<widget class="text" id="hodc" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
 				<translation id="text" translation_id="382488" type="use" value="[%person#1-You] have a delayed contract offer outstanding[COMMENT:contract information; can't be offered a contract]" />
@@ -191,7 +191,7 @@
 				<translation id="text" translation_id="382490" type="use" value="[%person#1-You] have multiple delayed contract offers outstanding[COMMENT:contract information; can't be offered a contract]" />
 			</widget>
 			<widget class="text" id="hjob" auto_size="vertical" alignment="centre" size="10">
-				<translation id="text" translation_id="320415" type="use" value="You could either negotiate your contract with your board or look for alternative employement.[COMMENT: contract information; the user can neg. their contract with the board]" />
+				<translation id="text" translation_id="320415" type="use" value="You could either negotiate your contract with your board or look for alternative employment.[COMMENT: contract information; the user can neg. their contract with the board]" />
 			</widget>
 			<widget class="text" id="gjob" auto_size="vertical" alignment="centre" size="10">
 				<translation id="text" translation_id="327249" type="use" value="You should look for employment.[COMMENT: contract information; tell the user to get a job]" />
@@ -199,7 +199,13 @@
 
 			<container id="noCB" class="empty_state_button_container">
 				<widget class="link_appearance_button" id="intb" icon="icons/16px/speech bubble">
+					<string id="remove_if" value="is_fmt"/>
 					<translation id="text" translation_id="349844" type="use" value="Request New Contract[COMMENT: FR 5715, trigger to ask board for a new contract]" />
+				</widget>
+
+				<widget class="link_button" auto_size="all" section="bfbk">
+					<string id="create_if" value="is_fmt"/>
+					<translation id="text" translation_id="333910" type="use" value="Make Board Request[COMMENT: popup button to make a board request]" />
 				</widget>
 
 				<widget class="link_appearance_button" id="viej">
@@ -208,20 +214,20 @@
 			</container>
 		</container>
 
-		<container id="with" class="empty_state">
+		<container id="with" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
 			<!--explanatory text-->
 			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
-				<translation id="text" translation_id="326983" type="use" value="You have offered a contract; you can withdraw or change this offer[COMMENT:contract information; can't be offered a contract]" />
+				<translation id="text" translation_id="326983" type="use" value="You have offered a contract; you can withdraw or change this offer.[COMMENT:contract information; can't be offered a contract]" />
 			</widget>
 			<widget class="text" alignment="centre" size="10" auto_size="vertical">
 				<translation id="text" translation_id="338226" type="use" value="This can be done via the 'Contract' actions menu.[COMMENT: contract information; the user can withdraw the contract, use top 10 matches as the location has changed, it's just Contracts now]" />
 			</widget>
 		</container>
 
-		<container id="cnot" class="empty_state">
+		<container id="cnot" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -235,7 +241,7 @@
 		</container>
 
 		<!-- panel for boardover the transfer-->
-		<container id="btop" class="empty_state">
+		<container id="btop" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -245,7 +251,7 @@
 			</widget>
 		</container>
 
-		<container id="wpla" class="empty_state">
+		<container id="wpla" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -258,7 +264,7 @@
 			</widget>
 		</container>
 
-		<container id="halo" class="empty_state">
+		<container id="halo" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -271,7 +277,7 @@
 			</widget>
 		</container>
 
-		<container id="halt" class="empty_state">
+		<container id="halt" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -284,7 +290,7 @@
 			</widget>
 		</container>
 
-		<container id="hatr" class="empty_state">
+		<container id="hatr" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -297,7 +303,7 @@
 			</widget>
 		</container>
 
-		<container id="stok" class="empty_state">
+		<container id="stok" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -310,7 +316,7 @@
 			</widget>
 		</container>
 
-		<container id="stac" class="empty_state">
+		<container id="stac" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -319,11 +325,11 @@
 				<translation id="text" translation_id="317863" type="use" value="You cannot make a contract offer for this player." />
 			</widget>
 			<widget class="manager_text" auto_size="vertical" alignment="centre" size="10">
-				<translation id="text" translation_id="376621" type="use" value="The player has already accepted a contract offer. [%person#1-You] can still cancel the transfer via the Transfer Centre.[COMMENT FR 7490, information as to why user cannot negotiate with a player]." />
+				<translation id="text" translation_id="376621" type="use" value="The player has already accepted a contract offer. [%person#1-You] can still cancel the transfer via the Transfer Centre..[COMMENT FR 7490, information as to why user cannot negotiate with a player]" />
 			</widget>
 		</container>
 
-		<container id="exch" class="empty_state">
+		<container id="exch" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -333,7 +339,28 @@
 			</widget>
 		</container>
 
-		<container id="impo" class="empty_state">
+		<container id="pfnc" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+			<!--explanatory text-->
+			<widget class="text" alignment="centre" spec="text" size="large" style="semi_bold, embossed" auto_size="vertical">
+				<translation id="text" translation_id="557834" type="use" value="Due to the recent breakdown in talks, this player is currently unwilling to enter contract negotiations.[COMMENT: AREA: Contracts; SUB-AREA: Contract Negotiations; FR-BN: 4310; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Text for why contract negotiations can't be held currently]" />
+			</widget>
+			<widget class="text" id="pfnd" auto_size="vertical" alignment="centre" size="10" />
+
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" />
+
+				<!--resolve contract talks with agent button-->
+				<widget class="link_button" appearance="buttons/standard/normal/button" id="RewA" auto_size="all" alignment="centre" hidden="true" click_event="RewA">
+					<translation id="text" type="use" translation_id="554514" value="Resolve Contract Talks With Agent[COMMENT: AREA: Interaction; SUB-AREA: Agent Interaction; FR-BN: FM-4316; TONE: Formal; CHARLIMIT: Short, appears on a button; REF-ID: n/a; NOTE: title of interaction topic]" />
+				</widget>
+			</container>
+
+		</container>
+
+		<container id="impo" class="empty_state" navigation_container="true" navigation_container_allow_empty="true">
 			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
 
@@ -346,9 +373,7 @@
 	</container>
 
 	<container id="cneg">
-		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend">
-			<global id="horizontal_gap" name="ui.main_contrast_box_gap" />
-		</attachment_group>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
 
 		<container file="person/contract negotiations left panel" id="left" auto_size="horizontal">
 			<list id="auto_size_restrictions">
@@ -374,7 +399,7 @@
 		<container width="400" id="huco" hidden="true">
 			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
 
-			<container class="main_transparent_box" >
+			<container class="main_transparent_box">
 				<attachment_group class="vertical_arrange_autosize" />
 
 				<!-- multiple offers popup -->
@@ -390,7 +415,7 @@
 				</container>
 
 				<!-- The agents demands -->
-				<container class="property_list_viewer_xml_panel" id="hcll" file="generic/response holder panel for promises" height="75"/>
+				<container class="property_list_viewer_xml_panel" id="hcll" file="generic/response holder panel for promises" height="80" />
 			</container>
 
 			<!-- main contract offer area -->
@@ -407,7 +432,7 @@
 							<container>
 								<attachment_group class="vertical_arrange_autosize" />
 
-								<container class="club_vision_viewer_panel" id="Cvis" show_objective_type="false" show_objective_importance="false" show_objective_status="false" auto_size="vertical" vision_type="1" file="club/club vision panel for human contract offer">
+								<container class="club_vision_viewer_panel" id="Cvis" show_objective_type="false" show_objective_importance="false" show_objective_status="false" auto_size="vertical" vision_panel_type="1" file="club/club vision panel for human contract offer">
 
 								</container>
 
@@ -522,10 +547,8 @@
 		</container>
 
 		<container>
-			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" vertical_inset="0">
-				<global id="horizontal_gap" name="ui.main_contrast_box_gap" />
-			</attachment_group>
-
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" vertical_inset="0"/>
+	
 			<container class="main_transparent_box">
 				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="0" />
 
@@ -545,15 +568,14 @@
 							<translation id="text" translation_id="320154" type="use" value="Promises[COMMENT: player status panel; panel header title for a section listing all promises a manager has made to a player]" />
 						</widget>
 
-						<widget class="popup_button" id="ctpb" select_event="slcv" auto_size="horizontal" click_event="slcv">
+						<widget class="popup_button" id="ctpb" select_event="slcv" auto_size="horizontal" click_event="slcv" appearance="tabs/standard/normal/top/button">
 							<flags id="icon_enabled" value="true" />
 							<flags id="icon_alignment" value="left,centre_y" />
-							<flags id="secondary_icon_enabled" value="false" />
-							<flags id="icon" value="icons/custom/interface/tab bar/down" />
-							<flags id="icon_alignment" value="right,centre_y" />
+							<flags id="secondary_icon_enabled" value="true" />
+							<flags id="secondary_icon_alignment" value="centre_x,centre_y" />
 							<flags id="draw_arrow" value="false" />
 							<flags id="menu_appearance" value="menus/custom/interface/tab bar" />
-							<flags id="alignment" value="left,centre_y" />
+							<flags id="alignment" value="centre,centre_y" />
 							<flags id="size" value="normal" />
 							<flags id="font" value="fonts/text" />
 							<flags id="auto_size" value="all" />
@@ -562,7 +584,7 @@
 							<flags id="menu_selected_font_colour" value="text" />
 							<flags id="menu_icon_colour" value="text" />
 							<boolean id="allow_hover_to_open" value="true" />
-							<boolean id="close_on_mouse_exit" value="false"/>
+							<boolean id="close_on_mouse_exit" value="false" />
 							<translation id="text" translation_id="491993" type="use" value="Contract Terms[COMMENT: AREA: Contracts; SUB-AREA: Contract Negotiations; FR-BN: TBC; TONE: Formal; CHARLIMIT: Shortish; REF-ID: n/a; NOTE: title for the overall contract terms section of the contract negotiations screen]" />
 							<list id="items">
 								<record>
@@ -593,7 +615,6 @@
 						</widget>
 
 					</container>
-
 				</container>
 
 				<container>
@@ -607,19 +628,19 @@
 			</container>
 
 			<container class="main_transparent_box" id="pldl" width="650" navigation_container="true">
-				<attachment class="show_large_horizontal" id="PDla"/>
+				<attachment class="show_large_horizontal" id="PDla" />
 				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 				<list id="properties_to_forward">
 					<record get_property="objt" set_property="objt" target="pldc" />
 				</list>
 				<container class="client_object_viewer_xml_panel" id="pldc">
 
-					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="0" vertical_offset="0" />
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="10" vertical_offset="10" />
 
 					<container>
 						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_gap="8" />
 
-						<widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x" height="150" width="155">
+						<widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x" height="45" width="45">
 							<record id="object_property">
 								<list id="get_properties">
 									<!--Facegen data request-->
@@ -632,7 +653,7 @@
 						</widget>
 
 						<container>
-							<attachment_group class="vertical_arrange_autosize" vertical_gap="0" vertical_offset="50"/>
+							<attachment_group class="vertical_arrange_autosize" />
 
 							<widget class="person_button" auto_size="all" size="large" style="bold" info_popup_enabled="true" icon_enabled="true" person_is_player="true">
 								<record id="object_property" get_property="objt" set_property="valu" />
@@ -653,12 +674,13 @@
 									</widget>
 								</widget>
 
+
 							</container>
 						</container>
 					</container>
 
 					<container>
-						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="5" />
 
 						<container class="player_reports_overview_panel" id="psra" file="player/player reports overview for contract negotiations" hidden="true">
 							<record id="object_property" get_property="objt" set_property="objt" />

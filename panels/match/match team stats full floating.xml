@@ -44,6 +44,7 @@
 						<record id="PsnS" width="25" auto_hide_priority="1" auto_size="horizontal"/>
 						<!-- Name -->
 						<record id="Pnam" auto_hide_priority="1" />
+						<record id="PisC" auto_hide_priority="800" alignment="centre" width="30"/>
 						<record id="Pcar" width="30"/>
 						<!--- Goals -->
 						<record id="MPgl" auto_hide_priority="4"/>

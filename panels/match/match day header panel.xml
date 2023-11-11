@@ -124,7 +124,19 @@
 
 			<container>
 				<attachment_group class="horizontal_arrange_autosize" horizontal_gap="6" />
-
+                <!--in game editor edit object button-->
+				<container width="40">
+					<attachment class="test_global_attachment" get_property="gset" value="false" set_property="hidn" />
+					<attachment_group class="horizontal_arrange_autosize_vertical_centre" horizontal_gap="-15" />
+					<widget class="edit_object_icon_button" id="edit" fixed="true" cant_be_toggled="true" icon="icons/16px/locked" icon_alignment="centre" appearance="chrome/buttons/items/button" auto_size="none" multiline="false" width="40" height="42" secondary_icon_enabled="false">
+						<record id="primary_icon_properties" red_replacement="white" />
+						<attachment class="flash_colour_attachment" auto_start="false" rate="850">
+							<colour id="first_colour" red="49" green="52" blue="63" />
+							<colour id="second_colour" red="46" green="103" blue="182" />
+							<flags id="colour_property" value="bkcl" />
+						</attachment>
+					</widget>
+				</container>
 				<!-- FM button -->
 				<widget class="popup_button" id="fmst" fixed="true" appearance="chrome/buttons/items/button" icon="icons/26px/fm" width="58" height="39" disable_wheel="true" secondary_icon_enabled="false" icon_alignment="centre_left" controller_button="select_button" gamepad_icon_alignment="centre_right">
 					<event id="click_notification_event" event_id="FM" item="NULL" />

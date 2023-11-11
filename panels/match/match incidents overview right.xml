@@ -1,5 +1,4 @@
-<panel result_type_format="2">
-
+<panel>
 	<layout class="arrange_vertical_attachment" alignment="top,extend" gap="0" offset="0"/>
 	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
 
@@ -9,7 +8,7 @@
 
 	<!--team name and incidents-->
 	<container height="35">
-		<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="10" offset="0"/>
+		<layout class="arrange_horizontal_attachment" alignment="left,extend" gap="0" offset="0"/>
 		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
 
 		<!-- score -->
@@ -19,7 +18,11 @@
 		<widget class="text" id="mita" auto_size="horizontal" spec="title" alignment="left,centre_y" size="12" multiline="false"/>
 
 		<!-- team name -->
-		<widget class="text" id="mitn" size="12" style="semi_bold" alignment="left,centre_y"/>
+		<widget class="text" id="mitn" size="12" style="semi_bold"  width="200" alignment="centre_x,centre_y"/>
+	
+	<widget class="match_team_logo_picture" id="TeLo" width="45" height="45" alignment="right,centre_y">
+		<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+    </widget>
 	</container>
 
 	<widget class="table" id="miit" layout="20,-1" mode="fill_rows" row_spacing="0" auto_size_rows="true" fixed_size_rows="false">

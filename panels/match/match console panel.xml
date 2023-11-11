@@ -41,7 +41,7 @@
 			<list id="items">
 
 				<!-- Match information widget-->
-				<record id="minf" width="290" height="155" maximum_height="250" maximum_width="400" minimum_height="150" minimum_width="270">
+				<record id="minf" width="200" height="310" maximum_height="700" maximum_width="500" minimum_height="310" minimum_width="200">
 					<translation id="text" translation_id="233151" type="use" value="Match Information" />
 					<record id="widget_info">
 						<symbol id="class" value="match_info_panel" />
@@ -114,15 +114,6 @@
 					</record>
 				</record>
 
-				<!-- Radar widget-->
-				<record id="mrdr" width="250" height="220" maximum_height="700" maximum_width="500" minimum_height="220" minimum_width="250">
-					<translation id="text" translation_id="284286" type="use" value="Radar" />
-					<record id="widget_info">
-						<symbol id="class" value="match_pitch_panel" />
-						<string id="file" value="match/match pitch small" />
-					</record>
-				</record>
-			
 				<!-- Match report widget-->
 				<record id="mtrp" width="400" height="260" maximum_height="330" maximum_width="500" minimum_height="100" minimum_width="200">
 					<translation id="text" translation_id="242329" type="use" value="Match Report" />
@@ -178,7 +169,7 @@
 
 				<!-- human player performance widget-->
 				<record id="Htps" width="260" height="330" maximum_height="600" maximum_width="400" minimum_height="200" minimum_width="260">
-					<translation id="text" translation_id="447544" type="use" value="Player Performance[COMMENT: FR21692 - title for match information widget]" />
+					<translation id="text" type="use" value="선수 성적" />
 					<record id="widget_info">
 						<symbol id="class" value="match_team_stats_panel" />
 						<string id="file" value="match/match team performance floating" />
@@ -246,7 +237,7 @@
 
 				<!-- other player performance widget-->
 				<record id="Otps" width="260" height="330" maximum_height="600" maximum_width="400" minimum_height="200" minimum_width="260">
-					<translation id="text" translation_id="447544" type="use" value="Player Performance[COMMENT: FR21692 - title for match information widget]" />
+					<translation id="text" type="use" value="선수 성적" />
 					<record id="widget_info">
 						<symbol id="class" value="match_team_stats_panel" />
 						<string id="file" value="match/match team performance floating" />
@@ -283,16 +274,13 @@
 				</container>
 
 			<container>
-				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="10" vertical_inset="0"/>		
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right" horizontal_offset="10" vertical_inset="0"/>		
 				<!--match feed-->
-				<widget class="match_feed_panel" id="CnFD" width="400" hpco="true">
+				<widget class="match_feed_panel" id="CnFD" width="550" hpco="true">
 					<layout class="stick_to_sides_attachment" alignment="bottom" inset="15" />
 					<record id="object_property" get_property="objt" set_property="objt" />
-		
 				</widget>
 
-				<widget class="spacer"/>
-				
 			</container>
 
 		</container>
@@ -322,12 +310,14 @@
 		
 	</container>
 
+
 		<widget class="match_caption_panel" id="MCap">
 			<layout class="stick_to_sides_attachment" alignment="bottom" inset="35" />
 			<layout class="centre_in_parent_attachment" alignment="horizontal"/>
 			<record id="object_property" get_property="objt" set_property="objt" />
 		</widget>
-	
+
+
 	<!--penalty display-->
 	<widget id="PenD" class="match_penalty_shootout_display" hidden="true">
 		<animation class="slide_in_top_animation" duration="0.6" tween="ease_out" />

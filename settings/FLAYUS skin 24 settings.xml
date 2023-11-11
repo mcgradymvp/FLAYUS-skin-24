@@ -549,6 +549,13 @@
     <colour name="search filter inactive" 				    value="grey 900"/>
     <colour name="team talk addressing" 					value="blue grey 900" />
 
+	<!-- player/object colours -->
+	<colour name="virtual player" 							value="fg alpha"/>
+	<colour name="loan out" 								value="rgba(113,119,214)"/>
+	<colour name="loan out background" 						value="rgb(223,219,4)"/>
+	<colour name="loan in" 									value="fg blue"/>
+	<colour name="co own in" 								value="fg lime lighter"/>
+
 	<colour name="gzk"                                                                          value="rgb(250,250,250)"/>
 	<colour name="gzc"                                                                          value="rgb(217,177,40)"/>
 	<colour name="gzc1"                                                                         value="rgb(255,185,34)"/>

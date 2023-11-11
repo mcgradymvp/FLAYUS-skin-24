@@ -2,8 +2,8 @@
 
 	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
 
-	<container class="main_contrast_box" appearance="boxes/custom/match/titlebar/paper" red_replacement="grey 900">
-		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="20" gap="0"/>
+	<container class="main_box_no_margin" appearance="boxes/custom/match/titlebar/paper" red_replacement="grey 900">
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="5" gap="0"/>
 		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
 
 		<!--normal time-->

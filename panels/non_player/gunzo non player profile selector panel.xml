@@ -1,0 +1,28 @@
+<panel>
+  <container id="SUBP">
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+  </container>
+
+  <widget class="popup_button" id="popv"  auto_size="horizontal" height="20" click_event="msis" appearance="buttons/custom/customise panel/button" fixed="true" embed_in_frame="true">
+  <layout class="stick_to_sides_attachment" alignment="top,right" inset="0"/>
+
+		<!-- This is a bit clumsy but I can't think of a better way without using equally clumsy code -->
+		<!-- Animation to 'hide' the widget by drawing it out of the clipping area -->
+		<!--<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="100.0,0.0" end_value="100.0,0.0" duration="0.1" end_mode="hold_end" apply_to_mouse="false"/>-->
+		<!-- Animations to move it back and fade it in when moused over  -->
+		<!--<animation class="translate_animation" trigger_start="msen" trigger_end="msex" start_value="-100.0,0.0" end_value="-100.0,0.0" duration="0.01" end_mode="hold_auto_reverse" apply_to_mouse="false"/>-->
+		<!--<animation class="fade_animation" trigger_start="msen" trigger_end="msex" start_value="0.0" end_value="1.0" duration="0.4" end_mode="hold_auto_reverse"/>-->
+	</widget>
+
+  <widget class="player_personal_details_panel" id="gzn1" file="non_player/non player profile1">
+    <translation id="title" type="use" value="GZ" />
+       <record id="object_property" get_property="object" set_property="object"/>
+  </widget>
+  
+  <widget class="player_personal_details_panel" id="gzn4" file="non_player/non player profile cut out">
+    <translation id="title" type="use" value="Cut-Out" />
+       <record id="object_property" get_property="object" set_property="object"/>
+  </widget>
+
+</panel>

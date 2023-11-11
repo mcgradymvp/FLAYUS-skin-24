@@ -1,9 +1,11 @@
 ﻿<panel>
+<attachment class="test_screen_size_attachment" test_on_layout="false" alignment="horizontal" min_value="1366" max_value="100000" set_property="hdPR" />
+
 	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 
 	<container>
-		<attachment_group class="horizontal_arrange" horizontal_layout="-1,500,-1" horizontal_offset="0" vertical_inset="0" horizontal_gap="0" />
+		<attachment_group class="horizontal_arrange" horizontal_layout="-1,550,-1" horizontal_offset="0" vertical_inset="0" horizontal_gap="0" />
 		<!--left side -->
 		<container class="bordered_box" appearance="boxes/custom/match/timeline stats/paper" default_width="530" minimum_width="500" priority="1">
 			<layout class="arrange_vertical_attachment" layout="-1,400" offset="0" />
@@ -60,6 +62,8 @@
 			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
 			
 		<container class="main_box" appearance="boxes/custom/match/timeline stats/paper" red_replacement="bg">
+		<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="0.4" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top" />
+				<animation class="scale_animation" start_value="1, 0" end_value="1, 1" duration="0.3" delay="0.2" end_mode="hold_end" tween="ease_out" coord_mode="relative_to_target" centre_point="top" trigger_id="hidden" trigger_value="false" />
         <layout class="arrange_vertical_attachment" layout="230,310,-1" offset="0" />
         <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 

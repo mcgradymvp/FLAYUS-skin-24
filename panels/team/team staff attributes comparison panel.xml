@@ -2,14 +2,13 @@
 	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
 	<flags id="bcol" value="fg yellow" />
-	<flags id="wcol" value="black" />
+	<flags id="wcol" value="fg blue lighter" />
 	<flags id="acol" value="bg grey" />
 	<flags id="ncol" value="fg positive" />
 
 	<flags id="bbco" value="transparent" />
-	<flags id="wbco" value="white" />
+	<flags id="wbco" value="bg alpha" />
 	
-
 	<flags id="alwt" value="2"/>
 
 	<boolean id="show_all_properties_in_popup" value="false"/>
@@ -33,7 +32,9 @@
 					<record id="bar2" type="bar" maximum_width="19" appearance="charts/bar/custom/top line/thin" animation_file="none" show_instant_hint="false"/>
 					<record id="mark" type="marker" line_width="2" label_alignment="top"/>
 				</list>
-				<record id="x_axis" gap="1" consistent_label_width="false"/>
+				<record id="x_axis" gap="1" consistent_label_width="false">
+					<record id="label_font" font="text" size="xsmall"/>
+				</record>
 				<record id="y_axis" round_min_max="false" hidden="true"/>
 			</widget>
 		</container>

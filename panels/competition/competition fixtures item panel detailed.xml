@@ -1,66 +1,71 @@
-<panel id="fxco">
+<panel id="fxco" >
 
 	<!-- Note: Height is defined statically on many of these widgets and there is some magic going on with padding widgets-->
-	<layout class="fit_children_attachment" alignment="vertical" offset="5" />
-	<layout class="arrange_horizontal_attachment" layout="50, 85, -1, 60, 110, 60, -1, 180" gap="4" offset="4" />
-	<layout class="stick_to_sides_attachment" alignment="top" inset="10" apply_to_children="true" />
+	<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_layout="50, 1, 60, -1, 40, 118, 40, -1, 120" horizontal_gap="4" horizontal_offset="0" vertical_inset="8"/>
 
 	<!-- Kick off time-->
-	<widget class="button" id="time" appearance="boxes/custom/result/time/paper" colour="white" alignment="centre" wants_mouse_events="false" auto_size="vertical" red_replacement="blue 500">
-		<layout class="stick_to_sides_attachment" alignment="top" inset="20" />
+	<widget class="button" id="time" appearance="boxes/custom/result/time/paper" colour="white" alignment="centre" wants_mouse_events="false" auto_size="vertical" red_replacement="blue 500" navigation_focus_target="false">
+		<layout class="stick_to_sides_attachment" alignment="top" inset="17" />
 	</widget>
 
-	<!-- Home position or nation -->
-	<container height="40">
-		<layout class="arrange_vertical_attachment" alignment="top" offset="10" gap="0" />
-		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="2" apply_to_children="true" />
+	<container/>
 
-		<widget id="hpos" class="text" colour="league position" font="text" size="10" alignment="left,top" auto_size="vertical" />
-		<widget id="hnat" class="nation_button" hidden="true" font="text" size="10" auto_size="vertical" />
+	<!-- Home position or nation -->
+	<container height="30">
+		<layout class="arrange_vertical_attachment" alignment="top" offset="11" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+		<widget id="hpos" class="text" colour="league position" font="text" alignment="left,top" auto_size="vertical" />
+		<widget id="hnat" class="nation_button" hidden="true" font="text" size="small"  auto_size="vertical" />
 	</container>
 
 	<!-- Home team & scorers -->
 	<container>
 		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="2" />
 
-		<container height="8" />
+		<container height="6" />
 
 		<!-- Home team name -->
-		<widget id="hnam" class="team_button" icon_enabled="false" size="large" colour="text" font="bold" alignment="right,top" auto_size="vertical" />
+		<widget id="hnam" class="team_button" icon_enabled="false" size="large" colour="text" style="bold" alignment="right,centre_y" auto_size="vertical" navigation_focus_target="true" />
 		<!-- Home team scorers-->
 		<widget id="hscr" class="text" font="text" size="small" auto_size="vertical" alignment="right,top" colour="faded text" />
 	</container>
 
-	<!-- Home team logo -->
-	<widget id="hlog" class="object_portrait_picture" scale_picture="true" alignment="centre_x,top" image_alignment="centre" height="35" />
+	
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="2"  />
+
+		<!-- Home team logo -->
+		<widget id="hlog" class="object_portrait_picture" scale_picture="true" alignment="centre_x,top" image_alignment="centre" height="30" />
+	</container>
 
 	<!-- Score / Result-->
 	<container>
-		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="-2" horizontal_alignment="horizontal" horizontal_inset="12" />
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="2" vertical_gap="-2" horizontal_alignment="horizontal" horizontal_inset="2" />
 
 		<!-- JT: This setup is quite fiddly. We are trying to get the aggregate score to overlap either the result from the second leg or the 'attend fixture' button -->
 		<!-- Getting this to look the way it does in the mockup might be tricky. Give me a shout if you need help -->
 
 		<!-- Match result-->
-		<container id="rmat" class="inner_contrast_box_no_margin" appearance="boxes/custom/result/standard/paper" red_replacement="cyan 800" auto_size="vertical">
+		<container id="rmat" class="inner_contrast_box_no_margin" appearance="boxes/custom/result/standard/paper" auto_size="vertical" red_replacement="bg accent">
 			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
-			<layout class="arrange_horizontal_attachment" layout="15, -1, 15" offset="0" gap="0" />
+			<layout class="arrange_horizontal_attachment" layout="30, -1, 30" offset="0" gap="0" />
 
 			<!-- Home result -->
-			<widget id="hres" class="text" font="text" alignment="right,centre_y" size="large" colour="yellow" auto_size="vertical" />
+			<widget id="hres" class="text" font="text" alignment="right,centre_y" size="large" colour="bg darker" auto_size="vertical" />
 			<!-- Score -->
-			<widget id="scor" class="text" colour="white" font="bold" size="12" alignment="centre" auto_size="vertical" />
+			<widget id="scor" class="text" colour="bg darker" style="bold" size="large" alignment="centre" auto_size="vertical" navigation_focus_target="true" default_focus="true"/>
 			<!-- Away result -->
-			<widget id="ares" class="text" font="text" alignment="left,centre_y" size="large" colour="yellow" auto_size="vertical" />
+			<widget id="ares" class="text" font="text" alignment="left,centre_y" size="large" colour="bg darker" auto_size="vertical" />
 		</container>
 
 		<!-- View fixture button-->
-		<widget id="attd" class="button" appearance="boxes/custom/result/standard/paper" red_replacement="blue 900" size="large" alignment="centre" auto_size="vertical" />
+		<widget id="attd" class="button" appearance="boxes/inner/contrast/no margin/paper" red_replacement="bg lighter" alignment="centre" auto_size="vertical" colour="text" navigation_focus_target="target"/>
 
 		<!-- Aggregate total result -->
-		<container class="plain_box" id="ragg" appearance="boxes/custom/result/aggregate/paper">
-			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+		<container class="inner_box" id="ragg" appearance="boxes/custom/result/aggregate/paper">
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="4, 0, 0, 0" apply_to_children="true"/>
 			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
 			<layout class="arrange_horizontal_attachment" layout="14, -1, 14" offset="0" gap="0" />
 
@@ -73,35 +78,39 @@
 		</container>
 	</container>
 
-	<!-- Away team logo -->
-	<widget id="alog" class="object_portrait_picture" scale_picture="true" alignment="centre_x,top" image_alignment="centre" height="35" />
+	<container>
+		<attachment_group class="vertical_arrange_autosize" vertical_offset="2"  />
+		<!-- Away team logo -->
+		<widget id="alog" class="object_portrait_picture" scale_picture="true" alignment="centre_x,top" image_alignment="centre" height="30" />
+	</container>
 
 	<!-- Away team & scorers -->
 	<container>
 		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="2" />
 
-		<container height="8" />
+		<container height="6" />
 
 		<!-- Away team name -->
-		<widget id="anam" class="team_button" icon_enabled="false" size="large" font="bold" colour="text" auto_size="vertical" />
+		<widget id="anam" class="team_button" icon_enabled="false" size="large" style="bold" colour="text" alignment="left,centre_y" auto_size="vertical" navigation_focus_target="true"/>
 		<!-- Away team scorers-->
 		<widget id="ascr" class="text" font="text" size="small" auto_size="vertical" colour="faded text" />
 	</container>
 
 	<!-- Away position or nation -->
-	<container height="40">
+	<container height="30">
 		<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
 		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 
 		<container height="22">
-			<layout class="arrange_horizontal_attachment" layout="-1, 25, 50" offset="0" gap="0" />
+			<layout class="arrange_horizontal_attachment" layout="-1, 16, 40" offset="0" gap="4" />
 			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 
 			<container>
-				<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0,10,0,10" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="top" inset="2" apply_to_children="true" />
 
-				<widget id="apos" class="text" colour="league position" size="10" alignment="right,top" auto_size="vertical" />
-				<widget id="anat" class="nation_button" hidden="true" size="10" auto_size="vertical" />
+				<widget id="apos" class="text" colour="league position" alignment="right,top" auto_size="vertical" />
+				<widget id="anat" class="nation_button" hidden="true" size="small" auto_size="vertical" />
 			</container>
 
 			<container>
@@ -116,19 +125,19 @@
 			<container>
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
-				<widget class="popup_button" id="spop" alignment="centre" icon="icons/16px/search" icon_alignment="left,centre_y" select_event="esms">
+				<widget class="subtle_popup_button" id="spop" icon="icons/16px/search" icon_alignment="left,centre_y" select_event="esms" appearance="buttons/custom/over state only/button">
+					<string id="create_if" value="allow_scouting"/>
 					<list id="items">
 						<record id="0" icon="icons/16px/search" red_replacement="button_icon">
 							<translation id="text" translation_id="451321" type="use" value="No action[COMMENT: FR 21106, take no action on a scouting reminder recommendation for a competition]" />
 						</record>
 						<record id="1" icon="icons/16px/search" red_replacement="green 500">
 							<translation translation_id="450039" type="use" id="text" value="Scout match[COMMENT: FR 21106, take action on a scouting reminder recommendation for a competition]" />
-            </record>
-						<record id="2" icon="icons/16px/search" red_replacement="blue 500">
-							<translation id="text" translation_id="451322" type="use" value="Attend match[COMMENT: FR 21106, take action on a scouting reminder recommendation for a competition]" />
-
 						</record>
-
+						<record id="2" icon="icons/16px/search" red_replacement="blue 500">
+							<global id="hidden" name="platform_is_handheld"/>
+							<translation id="text" translation_id="451322" type="use" value="Attend match[COMMENT: FR 21106, take action on a scouting reminder recommendation for a competition]" />
+						</record>
 					</list>
 				</widget>
 			</container>

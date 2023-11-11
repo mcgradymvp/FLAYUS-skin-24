@@ -11,7 +11,7 @@
 			<widget class="text" auto_size="horizontal" id="tlHe" alignment="left, centre_y" font="title" size="large" colour="accent" />
 
 			<!-- continue button -->
-			<widget class="icon_button" id="endB" controller_button="right_trigger" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/continue" secondary_icon_alignment="centre_right, centre_y" font="title" colour="accent button text" width="210" height="48" default_focus="true" multiline="true">
+			<widget class="icon_button" id="endB" appearance="chrome/buttons/continue/button" controller_button="right_trigger" alignment="centre" secondary_icon_enabled="true" secondary_icon="icons/16px/continue" secondary_icon_alignment="centre_right, centre_y" red_replacement="title" font="title" colour="text" width="210" height="48" default_focus="true" multiline="true">
 				<record id="secondary_icon_properties" red_replacement="accent button text" />
 				<record id="click_event" event_id="LeTm" event_target="mDyT" />
 				<translation id="text" translation_id="551828" type="use" value="Leave Timeline[COMMENT: AREA: Dynamic Manager Timeline; SUB-AREA: DMT Header; FR-BN: FM-3656; TONE: Informal; CHARLIMIT: None; REF-ID: FM-3656; NOTE: Option to leave the Dynamic Manager Timeline]" />

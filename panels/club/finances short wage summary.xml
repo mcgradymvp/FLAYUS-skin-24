@@ -69,16 +69,15 @@
 	</widget>
 
 	<!--button-->
-	<container>
-		<layout class="arrange_horizontal_attachment" alignment="middle" offset="0" gap="10" />
-		<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" apply_to_children="true" />
-		<layout class="fit_children_attachment" alignment="vertical" offset="0" />
+	<container height="30">
+		<layout class="arrange_horizontal_attachment" layout="-1,-2,-1,-1" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
     <!--sugar label-->
-    <widget class="label" auto_size="horizontal">
-      <translation id="text" translation_id="293002" type="use" value="Sugar Daddy" />
-      <layout class="stick_to_sides_attachment" alignment="top" inset="4" />
+    <widget class="label" height="30" width="100" colour="title" auto_size="horizontal" size="11">
+      <translation id="text" type="use" value="슈가 대디" />
+      <layout class="stick_to_sides_attachment" alignment="top" inset="0" />
     </widget>
-    <!--sugar-->
+	<!--sugar-->
     <widget class="value_based_picture" width="100" height="30">
       <record id="object_property">
         <integer id="get_property" value="Chsd" />
@@ -101,10 +100,11 @@
         </record>
       </list>
     </widget>
-		<widget class="button" id="sali" auto_size="horizontal" appearance="buttons/link/button">
-			<translation id="text" translation_id="316565" type="use" value="Salary[COMMENT: Link to club salary]" />
+
+		<widget class="button" id="sali" auto_size="vertical" appearance="buttons/link/button">
+			<translation id="text" type="use" value="급료" />
 		</widget>
-		<widget class="button" id="fili" auto_size="horizontal" appearance="buttons/link/button">
+		<widget class="button" id="fili" auto_size="vertical" appearance="buttons/link/button">
 			<translation id="text" translation_id="316566" type="use" value="Finances[COMMENT: Link to club finances]" />
 		</widget>
 	</container>

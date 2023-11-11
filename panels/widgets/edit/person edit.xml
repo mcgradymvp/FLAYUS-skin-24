@@ -43,10 +43,6 @@
 					<integer value="Pcna" />
 					<integer value="Pfln" />
 					<integer value="PShN" />
-					<integer value="Piap" />
-					<integer value="Pigl" />
-					<integer value="Puia" />
-					<integer value="Puig" />
 					<integer value="Psnu" />
                     <integer value="Ppsq" />
 					<integer value="Pdfn" />
@@ -62,9 +58,9 @@
 				</list>
 
 			</widget>
-
 		</container>
-  		  <container id="cpe1">
+
+			  <container id="cpe1">
 				  <translation id="title" translation_id="229390" type="use" value="Nation" />
 					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
 

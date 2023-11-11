@@ -20,7 +20,7 @@
 			</container>
 
 			<!--finance-->
-			<container class="main_box" default_height="270" minimum_height="240" priority="2">
+			<container class="main_box" default_height="280" minimum_height="280" priority="2">
 				<translation id="title" translation_id="329952" type="use" value="Finance &amp; Salary[COMMENT: manager snapshot/home: wage &amp; finances summary panel heading]" />
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />			
 				<widget class="finances_short_wage_summary_panel" id="fina">
@@ -57,7 +57,7 @@
 		
 		<!--results-->
 		<container>
-			<attachment_group class="vertical_arrange" vertical_layout="130,-1" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+			<attachment_group class="vertical_arrange" vertical_layout="130,-1,-1" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
         
 		<container class="main_box">
           <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
@@ -75,7 +75,35 @@
 						<integer id="get_property" value="objt" />
 						<integer id="set_property" value="objt" />
 					</record>
-			</container>	
+			</container>
+		
+			<container class="main_box" default_height="150" minimum_height="150">
+				<translation id="title" translation_id="230056" type="use" value="Tactics" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+				<container class="team_tactics_overview_panel" file="none">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<record id="object_property" get_property="Tftm" set_property="objt"/>
+
+					<container class="tactics_overview_panel" id="TacO" file="none">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+					<widget class="pitch_with_tactics" id="pitc" pitch_perspective="0.0"  pitch_draw_goals="true" pitch_draw_markings="true" default_width="-3" minimum_width="200" priority="1" navigation_disabled="true" player_icon_file="tactics/tactics icon preview info panel3" icon_flags="use_player_kits_back,drop_initial_if_possible,show_name,show_number,show_role_duty_labels, show_captain,show_preview_info_popup">
+						<record id="pitch_base_appearance">
+							<string id="condition_perfect" value="boxes/custom/pitch pattern/grass_circles"/>
+						</record>  
+						<integer id="pitch_pattern_opacity" value="0"/>
+						<integer id="pitch_detail_opacity" value="255"/>							
+						<boolean id="vertical" value="false" />
+						<boolean id="pitch_dont_draw_indicators" value="true" />
+						<real id="maximum_player_size" value="0.22" />
+					</widget>
+					<widget class="text" id="noma">
+						<translation id="text" translation_id="349015" type="use" value="No match played." />
+					</widget>
+
+					</container>
+				</container>
+			</container>
 	      </container>							
 		</container>
 
@@ -118,6 +146,10 @@
 					<widget class="club_league_history_graph" id="clh1" default_item="true">
 						<translation id="title" translation_id="319446" type="use" value="League History[COMMENT: title for the league position history on the club overview panel]" />
                            <record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+					<widget class="supporter_profile_panel" id="tso1" file="club/supporter profile panel2">
+						<translation id="title" type="use" value="서포터 프로필" />
+						   <record id="object_property" get_property="objt" set_property="objt"/>
 					</widget>
 					<widget class="team_container_overview_teams_panel" id="tco1">
 						<translation id="title" translation_id="229362" type="use" value="Teams" />

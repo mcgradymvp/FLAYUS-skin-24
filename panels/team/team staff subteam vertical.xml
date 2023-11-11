@@ -1,9 +1,9 @@
 <panel>
 	<list id="draw_order">
-		<record entity_layout_id="at03"/>
+		<record entity_layout_id="at04"/>
 		<record entity_layout_id="at01"/>
+		<record entity_layout_id="at03"/>
 		<record entity_layout_id="at02"/>
-    <record entity_layout_id="at04"/>
 	</list>
 	<widget class="spacer" id="main">
 		<boolean id="exclude_from_find" value="true"/>
@@ -13,34 +13,52 @@
 		<boolean id="exclude_from_find" value="true"/>
 		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
 	</widget>
-	<container class="main_box" entity_layout_id="at03" id="at03">
-		<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" target="main"/>
-		<layout class="stick_to_object_attachment" id="alPb" get_side="bottom" set_side="bottom" target="main"/>
-		<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main"/>
-		<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main"/>
-		<widget class="spacer" id="main">
-			<boolean id="exclude_from_find" value="true"/>
-			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-		</widget>
-		<widget class="spacer" id="fmin" embed_in_frame="true">
-			<boolean id="exclude_from_find" value="true"/>
-			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
-		</widget>
-		<container class="team_staff_subteam_overview_panel" entity_layout_id="at01" id="ovvw" height="280" navigation_container="true">
-			<string id="link" value="true"/>
-			<layout class="stick_to_object_attachment" id="alPt" get_side="top" set_side="top" move_side="true" target="main"/>
-			<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main"/>
-			<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main"/>
-		</container>
-		<container class="team_staff_attributes_comparison_panel" entity_layout_id="at02" id="tsac" height="280">
-			<layout class="stick_to_object_attachment" id="alPt" get_side="bottom" set_side="top" move_side="true" target="at01"/>
-			<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main"/>
-			<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main"/>
-		</container>
-    <container class="team_container_staff_details_panel" entity_layout_id="at04" file="team/team staff subteam vertical details panel" id="deta" height="280">
+	<container class="smart_scrolling_box" entity_layout_id="at04" id="at04" file="none">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+		<container id="test">
+			<layout class="fit_children_attachment" alignment="vertical,extend" offset="0" gap="0"/>
+			<widget class="spacer" id="main" auto_size="12">
+				<boolean id="exclude_from_find" value="true"/>
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true"/>
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+			</widget>
+			<container class="main_box" entity_layout_id="at03" id="at03" height="980">
+				<layout class="stick_to_object_attachment" id="align_top" offset="1" get_side="top" set_side="top" move_side="true" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+				<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true"/>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true"/>
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0"/>
+				</widget>
+				<container class="team_staff_subteam_overview_panel" entity_layout_id="at01" id="ovvw" height="360">
+					<string id="navigation_container" value="true"/>
+					<string id="link" value="true"/>
+					<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main"/>
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+				</container>
+				<container class="team_staff_attributes_comparison_panel" entity_layout_id="at02" id="tsac" height="320">
+					<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" move_side="true" target="at01"/>
+
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main"/>
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main"/>
+				</container>
+				    <container class="team_container_staff_details_panel" entity_layout_id="at04" file="team/team staff subteam vertical details panel" id="deta" height="280">
 			<layout class="stick_to_object_attachment" id="alPt" get_side="bottom" set_side="top" move_side="true" target="at02"/>
 			<layout class="stick_to_object_attachment" id="alPl" get_side="left" set_side="left" target="main"/>
 			<layout class="stick_to_object_attachment" id="alPr" get_side="right" set_side="right" target="main"/>
     </container>
+			</container>
+		</container>
 	</container>
 </panel>

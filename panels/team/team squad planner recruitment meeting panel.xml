@@ -21,11 +21,11 @@
 
 	<!--general props for birds eyev view pitch columns-->
 	<list id="bipV">
-		<record id="plyR" auto_hide_priority="1" colour="faded text" alignment="centre" width="25"/>
+		<record id="plyR" auto_hide_priority="1" colour="faded text" alignment="centre" width="25" />
 		<record id="Pers" auto_hide_priority="10">
-			<boolean id="person_is_player" value="true"/>
-			<integer id="minimum_width" value="60"/>
-			<boolean id="info_popup_enabled" value="false"/>
+			<boolean id="person_is_player" value="true" />
+			<integer id="minimum_width" value="60" />
+			<boolean id="info_popup_enabled" value="false" />
 		</record>
 	</list>
 
@@ -56,51 +56,7 @@
 				</container>
 
 				<!-- Container for when pitch mid sized -->
-				<container class="main_box" id="maxc" width="370">
-					<attachment_group class="vertical_arrange" horizontal_inset="0" vertical_gap="6" />
-
-					<widget class="text" font="title" size="large" auto_size="vertical">
-						<translation id="text" translation_id="553540" type="use" value="Squad Planner[COMMENT: AREA: Squad; SUB-AREA: Squad Planner; FR-BN: FM-4063; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Section name for squad planner screen]" />
-					</widget>
-
-					<widget class="text" auto_size="vertical" id="bgmt"/>
-
-					<widget class="spacer" height="6" />
-
-					<!--buttons box-->
-					<container>
-						<attachment_group class="horizontal_arrange_vertical_autosize" vertical_inset="0" horizontal_alignment="left,extend" />
-						<widget class="icon_button" id="mdmn" show_button_appearance="false" icon_colour="text" icon_alignment="centre" auto_size="horizontal" height="40" icon="icons/16px/expand">
-							<!--set pitch state mini-->
-							<record id="click_event" event_id="PiSt" index="0" />
-						</widget>
-
-						<!--tactics popup and full screen button-->
-						<container>
-							<attachment_group class="vertical_arrange_autosize_horizontal_centre" vertical_alignment="top" vertical_gap="12" />
-							<widget class="icon_button" id="mdmx" icon_colour="text" icon_alignment="right" icon="icons/16px/maximise" auto_size="all">
-								<!--set pitch state maximised-->
-								<record id="click_event" event_id="PiSt" index="2" />
-								<translation id="text" translation_id="560962" type="use" value="Show full squad view[COMMENT: AREA: Team Squad; SUB-AREA: Squad Planner; FR-BN: FM-11545; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: button to show the full squd view panel.]" />
-
-							</widget>
-							
-							<widget class="tactic_popup_button" alignment="centre" auto_size="all" show_button_appearance="false" request_tactic="false" id="tsbn" dont_add_reset_text="true" value="0" />
-						</container>
-					</container>
-
-					<!--pitch container-->
-					<container>
-						<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="140,0,0,0"/>
-						<layout class="stick_to_sides_attachment" alignment="vertical"/>
-							
-						<widget class="picture" height="335" default_path="boxes/custom/match/lineup pitch/" file="boxes/custom/match/lineup pitch/recruitment focus pitch" red_replacement="fg" blue_replacement="fg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="false"/>
-
-						<widget class="pitch_with_squad_depth" id="pitc" height="360" display_centre_side_positions="true" vertical="true" pitch_alignment="centre_x,top" pitch_draw_goals="false" pitch_draw_markings="false" show_position_strength="false" pitch_show_names="false" pitch_draw_grass="false" pitch_line_colour="transparent" pitch_touchline_width_percentage="10" pitch_perspective="0.2" pitch_override_icon_size="2" line_width="1.5" pitch_vertical_padding="16" disable_animations="true">
-						<string id="pitch_kit_icon" value="pitch/icons/dots" />
-						</widget>
-					</container>
-				</container>
+				<container class="main_box" id="maxc" file="widgets/squad planner position pitch container" hidC="true"/>
 			</container>
 
 			<!-- Main content -->
@@ -190,6 +146,11 @@
 						<flags id="default_view" value="plan" />
 						<boolean id="should_force_refresh" value="true" />
 						<boolean id="force_refresh_on_object_list" value="true" />
+						<list id="Spid">
+							<flags value="Pced" />
+							<flags value="form" />
+							<flags value="CcoR" />
+						</list>
 						
 						<!--available views-->
 						<list id="viws">
@@ -197,10 +158,9 @@
 								<translation id="name" translation_id="553541" type="use" value="Planning[COMMENT: AREA: Team Squad; SUB-AREA: Squad Planner; FR-BN: FM-4070; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: View type for table.]" />
 								<record id="view">
 									<record id="Movp" width="110" auto_hide_priority="0" sort_disabled="true" alignment="centre" />
-									<!-- Choice -->
 									<record id="Pnpd" minimum_width="250" auto_hide_priority="0" sort_disabled="true" />
 									<!-- Player -->
-									<record id="Pnfo" auto_hide_priority="0" sort_disabled="true" />
+									<record id="PSpi" auto_hide_priority="500" sort_disabled="true" />
 									<!-- INF -->
 									<record id="PpsC" auto_hide_priority="5000" sort_disabled="true" />
 									<!-- Positions (#5) -->
@@ -208,17 +168,17 @@
 									<!-- Hierarchy (from Dynamics) (#7) -->
 									<record id="Phgs" auto_hide_priority="4000" sort_disabled="true" />
 									<!-- Home grown status (#4) -->
-									<record id="Pcpt" auto_hide_priority="0" sort_disabled="true" />
+									<record id="Pcpt" auto_hide_priority="500" sort_disabled="true" />
 									<!-- Agreed Playing Time -->
-									<record id="Pcww" auto_hide_priority="2000" sort_disabled="true" />
+									<record id="Pcwo" auto_hide_priority="2000" sort_disabled="true" />
 									<!-- Wage (#2 - Will update for the different season tabs based on the players length of contract and if they are due any increases or decreases) -->
-									<record id="Pced" auto_hide_priority="3000" width="130" sort_disabled="true" />
+									<record id="spCX" auto_hide_priority="3000" sort_disabled="true" width="120" />
 									<!-- Contract Expiry (#3) -->
-									<record id="Pdva" auto_hide_priority="1000" sort_disabled="true" />
+									<record id="Pdva" auto_hide_priority="1000" sort_disabled="true" width="180"/>
 									<!-- Estimated Value (#1 - This will only appear on the current Season tab) -->
-									<record id="PXrR" auto_hide_priority="0" sort_disabled="true" />
+									<record id="PXcS" auto_hide_priority="0" sort_disabled="true" />
 									<!-- Role Ability (This can change depeding on the pitch view set) -->
-									<record id="Pppc" auto_hide_priority="6000" sort_disabled="true" />
+									<record id="pSpA" auto_hide_priority="6000" sort_disabled="true" />
 									<!-- Role Potential (#6) -->
 									<record id="Remp" width="30" auto_hide_priority="0" sort_disabled="true" alignment="centre" />
 									<!-- Hide/Remove -->
@@ -230,7 +190,7 @@
 								<record id="view">
 									<record id="Movp" width="110" auto_hide_priority="0" sort_disabled="true" alignment="centre" />
 									<!-- Choice -->
-									<record id="Pnfo" sort_disabled="true" />
+									<record id="PSpi" sort_disabled="true" />
 									<!-- player status/info -->
 									<record id="Pnms" sort_disabled="true" />
 									<!-- person name -->
@@ -238,7 +198,7 @@
 									<!-- agreed playing time -->
 									<record id="Pctp" sort_disabled="true" />
 									<!-- current playing time -->
-									<record id="Poap" auto_hide_priority="3000" sort_disabled="true" />
+									<record id="PAOa" auto_hide_priority="3000" sort_disabled="true" />
 									<!-- overall appearances -->
 									<record id="Ppth" auto_hide_priority="1000" sort_disabled="true" />
 									<!--playing time happiness-->
@@ -267,13 +227,13 @@
 									<!-- duty -->
 									<record id="Pcac" sort_disabled="true" />
 									<!-- currant ability -->
-									<record id="Pppc" sort_disabled="true" />
+									<record id="pSpA" sort_disabled="true" />
 									<!-- potential ability -->
 								</record>
 							</record>
 
 							<record id="stat">
-								<translation id="text" translation_id="247412" type="use" value="Stats" />
+								<translation id="text" translation_id="227813" type="use" value="Form" />
 
 								<list id="items">
 									<record id="oall">
@@ -281,21 +241,23 @@
 										<record id="view">
 											<record id="Movp" width="110" auto_hide_priority="0" sort_disabled="true" alignment="centre" />
 											<!-- Choice -->
-											<record id="Pnpd" sort_disabled="true" />
+											<record id="PcnD" sort_disabled="true" />
 											<!-- Player -->
-											<record id="Pnfo" sort_disabled="true" />
+											<record id="PSpi" sort_disabled="true" />
 											<!-- INF -->
 											<record id="PpsC" auto_hide_priority="1000" sort_disabled="true" />
 											<!-- Positions -->
-											<record id="Poap" sort_disabled="true" />
+											<record id="PAOa" sort_disabled="true" />
 											<!-- Appearances -->
-											<record id="Pogl" sort_disabled="true" />
+											<record id="PGOa" sort_disabled="true" />
 											<!-- Goals -->
-											<record id="Past" sort_disabled="true" />
-											<!-- Assists -->
-											<record id="Pomo" sort_disabled="true" />
-											<!-- Player Of The Match -->
-											<record id="Poav" sort_disabled="true" />
+											<record id="PaOa" sort_disabled="true" />
+											<!-- Conceded -->
+											<record id="PcOa" sort_disabled="true" />
+											<!-- Saves -->
+											<record id="PCsO" sort_disabled="true" />
+											<!-- Clean Sheets -->
+											<record id="PaOr" auto_hide_priority="1001" sort_disabled="true" />
 											<!-- Average Rating -->
 										</record>
 									</record>
@@ -305,21 +267,23 @@
 										<record id="view">
 											<record id="Movp" width="110" auto_hide_priority="0" sort_disabled="true" alignment="centre" />
 											<!-- Choice -->
-											<record id="Pnpd" sort_disabled="true" />
+											<record id="PcnD" sort_disabled="true" />
 											<!-- Player -->
-											<record id="Pnfo" sort_disabled="true" />
+											<record id="PSpi" sort_disabled="true" />
 											<!-- INF -->
 											<record id="PpsC" sort_disabled="true" />
 											<!-- Positions -->
-											<record id="Poap" sort_disabled="true" />
+											<record id="PAPo" sort_disabled="true" />
 											<!-- Appearances -->
-											<record id="Pogl" sort_disabled="true" />
+											<record id="PGPo" sort_disabled="true" />
 											<!-- Goals -->
-											<record id="Past" sort_disabled="true" />
+											<record id="PaPo" sort_disabled="true" />
 											<!-- Assists -->
-											<record id="Pomo" sort_disabled="true" />
-											<!-- Player Of The Match -->
-											<record id="Poav" sort_disabled="true" />
+											<record id="PcPo" sort_disabled="true" />
+											<!-- Conceded -->
+											<record id="PCsP" sort_disabled="true" />
+											<!-- Clean Sheets -->
+											<record id="PaPr" auto_hide_priority="1001" sort_disabled="true" />
 											<!-- Average Rating -->
 										</record>
 									</record>
@@ -329,21 +293,23 @@
 										<record id="view">
 											<record id="Movp" width="110" auto_hide_priority="0" sort_disabled="true" alignment="centre" />
 											<!-- Choice -->
-											<record id="Pnpd" sort_disabled="true" />
+											<record id="PcnD" sort_disabled="true" />
 											<!-- Player -->
-											<record id="Pnfo" sort_disabled="true" />
+											<record id="PSpi" sort_disabled="true" />
 											<!-- INF -->
 											<record id="PpsC" sort_disabled="true" />
 											<!-- Positions -->
-											<record id="Poap" sort_disabled="true" />
+											<record id="PARo" sort_disabled="true" />
 											<!-- Appearances -->
-											<record id="Pogl" sort_disabled="true" />
+											<record id="PGRo" sort_disabled="true" />
 											<!-- Goals -->
-											<record id="Past" sort_disabled="true" />
-											<!-- Assists -->
-											<record id="Pomo" sort_disabled="true" />
-											<!-- Player Of The Match -->
-											<record id="Poav" sort_disabled="true" />
+											<record id="PaRo" sort_disabled="true" />
+											<!-- Conceded -->
+											<record id="PcRo" sort_disabled="true" />
+											<!-- Saves -->
+											<record id="PCsR" sort_disabled="true" />
+											<!-- Clean Sheets -->
+											<record id="PaRr" auto_hide_priority="1001" sort_disabled="true" />
 											<!-- Average Rating -->
 										</record>
 									</record>
@@ -367,14 +333,26 @@
 						</widget>
 
 						<!-- Offer to clubs -->
-						<widget class="client_action_icon_button" id="offr" appearance="buttons/standard/normal/button" ignore_top_level_submenus="true" allow_single_action="true" auto_size="all" disabled="true">
-							<layout class="stick_to_sides_attachment" alignment="right" />
-							<translation id="text" translation_id="316762" type="use" value="Offer to Clubs[COMMENT: transfer offer panel; action to offer player out to clubs]" />
-							<list id="action_id">
-								<flags value="Otcl" />
-								<flags value="offr" />
-							</list>
-						</widget>
+						<widget class="offer_to_clubs_button" id="offr" auto_size="all"/>
+					</container>
+
+					<!--Analysis section-->
+					<container class="collapsable_box" id="anCn">
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="8" vertical_alignment="top" />
+						<container height="150">
+							<attachment_group class="horizontal_arrange" vertical_inset="4" horizontal_layout="-1, 3, -1, 3, -1" />
+							<container id="anC1">
+								<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+							</container>
+							<widget class="vertical_divider" />
+							<container id="anC2">
+								<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+							</container>
+							<widget class="vertical_divider" />
+							<container id="anC3">
+								<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+							</container>
+						</container>
 					</container>
 				</container>
 			</container>
@@ -395,25 +373,25 @@
 
 		<!--birds eye view pitch-->
 		<container id="birE" class="main_subtle_box" hidden="true">
-			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="10" vertical_offset="1"/>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" horizontal_inset="10" vertical_offset="1" />
 			
 			<!--birds eye buttons box-->
 			<container height="35">
-				<attachment_group class="horizontal_arrange" vertical_inset="0" horizontal_alignment="left, extend"/>
+				<attachment_group class="horizontal_arrange" vertical_inset="0" horizontal_alignment="left, extend" />
 				
 				<widget class="icon_button" show_button_appearance="false" icon_colour="text" auto_size="horizontal" icon_alignment="centre" icon="icons/16px/expand">
 					<!--set pitch state minimised-->
-					<record id="click_event" event_id="PiSt" index="0"/>
+					<record id="click_event" event_id="PiSt" index="0" />
 				</widget>
 				
 				<!--tactics popup and full screen button-->
 				<container>
-					<attachment_group class="horizontal_arrange" horizontal_alignment="right, extend"/>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="right, extend" />
 
 					<container>
-						<attachment_group class="horizontal_arrange" horizontal_alignment="middle"/>
+						<attachment_group class="horizontal_arrange" horizontal_alignment="middle" />
 						
-						<widget class="tactic_popup_button" show_button_appearance="false" alignment="centre" request_tactic="false" dont_add_reset_text="true" id="tsbE" auto_size="horizontal"/>
+						<widget class="tactic_popup_button" show_button_appearance="false" alignment="centre" request_tactic="false" dont_add_reset_text="true" id="tsbE" auto_size="horizontal" />
 					</container>
 					
 					<widget class="icon_button" icon_colour="text" auto_size="horizontal" icon_alignment="right" icon="icons/16px/minimise">
@@ -426,10 +404,10 @@
 
 			<!--birds eye view pitch-->
 			<container>
-				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true"/>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
 				
-				<widget class="pitch_with_squad_depth" id="birP" display_centre_side_positions="true" pitch_length_percentage="150" pitch_width_percentage="115" vertical="false" max_icon_width="0.18" max_icon_height="0.18" pitch_alignment="centre" pitch_draw_goals="true" pitch_draw_markings="true" show_position_strength="false" pitch_show_names="false" pitch_draw_grass="false" pitch_line_colour="faded white" pitch_touchline_width_percentage="0" pitch_perspective="0.0" pitch_override_icon_size="2" line_width="1.4" pitch_vertical_padding="0" disable_animations="true">
-					<string id="pitch_kit_icon" value="pitch/icons/dots"/>
+				<widget class="pitch_with_squad_depth" id="birP" display_centre_side_positions="true" pitch_length_percentage="150" pitch_width_percentage="115" vertical="false" max_icon_width="0.18" max_icon_height="0.18" pitch_alignment="centre" pitch_draw_goals="true" pitch_draw_markings="true" show_position_strength="false" pitch_show_names="false" pitch_draw_grass="false" pitch_line_colour="faded white" pitch_touchline_width_percentage="0" pitch_perspective="0.0" pitch_override_icon_size="2" line_width="1.4" pitch_vertical_padding="0" disable_animations="true" pitch_ignore_mouse_hover="true">
+					<string id="pitch_kit_icon" value="pitch/icons/dots" />
 				</widget>
 			</container>
 		</container>

@@ -13,8 +13,8 @@
 	   		 </widget>
 
 			<!-- commentary widget -->
-			<widget class="label" id="cmnt" hidden="true" font="bold">
-				<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,2,2" />
+			<widget class="label" id="cmnt" hidden="true" font="EFL-Bold" size="14">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,3,0" />
 
 				<translation id="text" value="" />
 				<flags id="algn" value="centre" />

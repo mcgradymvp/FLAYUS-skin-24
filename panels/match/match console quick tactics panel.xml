@@ -8,35 +8,34 @@
 
 	<!--formation-->
 	<container>
-		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left,extend" horizontal_gap="0" />
-
-		<container navigation_container="true">
+		<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right" horizontal_gap="0" />
+		
+		<container class="inner_box" appearance="boxes/contrast/no margin/top left/paper" red_replacement="bg" navigation_container="true">
 
 			<attachment_group class="horizontal_arrange_autosize_all" horizontal_gap="0" />
-
 			<!-- Hot seat switcher -->
 			<widget id="TeSe" class="match_team_selector_panel" width="60" height="30">
 				<record id="object_property" get_property="objt" set_property="objt" />
 			</widget>
-       		<container class="inner_box" appearance="boxes/contrast/no margin/top left/paper" red_replacement="bg" height="30">
+			
+       		<container  height="30">
 				<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="left" horizontal_offset="0" horizontal_gap="2" />
 
 				<container>
 					<attachment_group class="horizontal_arrange_autosize" horizontal_gap="12" horizontal_offset="4" vertical_inset="2" />
 
                     <!--keep this id for the match tutorial-->
-					<widget class="icon_button" id="tact" auto_size="horizontal" secondary_icon="icons/16px/maximise" secondary_icon_enabled="true" icon="icons/16px/tactics" appearance="buttons/custom/over state only/button" click_event="EsFT" controller_button="start_button" default_focus="true" font="title" colour="text" size="normal" auto_size_maximum_width="155">
+					<widget class="icon_button" id="tact" auto_size="horizontal" appearance="buttons/custom/over state only/square/button" secondary_icon="icons/16px/maximise" secondary_icon_enabled="true" icon="icons/16px/tactics" click_event="EsFT" controller_button="start_button" default_focus="true" font="title" colour="text" size="normal" auto_size_maximum_width="155">
 						<translation id="text" translation_id="516460" type="use" value="Tactics &amp; Subs[COMMENT: AREA; match UI; SUB-AREA: heading; NOTE: text for section allowing user to make tactics changes and/or subs]" />
 					</widget>
 
 				</container>
-
+              </container>
 			</container>
        
-		</container>
 			<container height="30" navigation_container="true">
 
-				<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0" />
+				<attachment_group class="horizontal_arrange_autosize" horizontal_alignment="right,extend" horizontal_gap="0" />
 
 				<container class="main_box_no_margin" background_colour="bg" width="150" height="30">
 					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
@@ -73,7 +72,7 @@
 		<container navigation_container="true">
 			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="0" />
 
-			<container >
+			<container>
 				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="0" />
 
 				<container>
@@ -96,13 +95,7 @@
 					</widget>
 
 				</container>
-
 			</container>
-
-
-
 		</container>
-
 	</container>
-
 </panel>

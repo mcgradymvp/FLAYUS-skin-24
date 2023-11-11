@@ -1,7 +1,7 @@
 <panel class="client_object_viewer_xml_panel" id="ClEd">
     <attachment_group class="vertical_arrange_autosize"/>
 
-    <container class="tabbed_container" default_item="cnt0" height="600">
+    <container class="tabbed_container" default_item="cnt0" height="650">
 
 	      <container id="cnt0">
             <translation id="title" translation_id="248359" type="use" value="General" />
@@ -358,9 +358,12 @@
                             <integer value="Sucy" />
                             <integer value="Secy" />
                             <integer value="Sdcy" />
+							<integer value="Scrr" />
                             <integer value="Sscl" />
                             <integer value="SsfT" />
+							<integer value="Srrf" />
                             <integer value="Scov" />
+							<integer value="Sdah" />
                             <integer value="Sush" />
                         </list>
                     </widget>
