@@ -1,4 +1,4 @@
-﻿<panel floating_container_appearance="boxes/floating/standard/paper"
+<panel floating_container_appearance="boxes/floating/standard/paper"
     hot_area_top_image="icons/custom/docking/top"
     hot_area_bottom_image="icons/custom/docking/bottom"
     hot_area_left_image="icons/custom/docking/left"

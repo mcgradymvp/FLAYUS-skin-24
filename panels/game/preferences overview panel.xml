@@ -1,4 +1,4 @@
-﻿<panel height="770">
+<panel height="770">
 	<boolean id="should_force_refresh" value="true" />
 	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
