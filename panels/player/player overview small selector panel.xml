@@ -1,50 +1,125 @@
+<!-- MODIFIED BY FMENHANCED -->
 <panel navigation_container="true">
+
 	<container id="SUBP">
 		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="8" />
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 	</container>
 
-	<widget class="popup_button" id="popv" auto_size="horizontal" height="20" click_event="msis" appearance="buttons/custom/customise panel/button" fixed="true">
-		<layout class="stick_to_sides_attachment" alignment="right,top" inset="12,8" />
+	<widget class="popup_button" id="popv" height="30" width="30" click_event="msis" appearance="buttons/custom/over state only/button" fixed="true">
+		<layout class="stick_to_sides_attachment" alignment="right,top"/>
 	</widget>
 
-	<widget class="player_physical_stats_panel" id="ppsp" late_loading="true">
-		<translation id="title" translation_id="247571" type="use" value="Fitness" />
-	</widget>
-	<widget class="client_object_viewer_xml_panel" file="widgets/client object progress graph" section="Pgrg" id="Pgrg" late_loading="true">
-		<translation id="title" translation_id="289978" type="use" value="Progress[COMMENT:person screen; achievements section; heading for achievements panel - cup progress]" />
-	</widget>
-	<widget class="player_bans_overview_panel" section="PHst" id="pbop" late_loading="true">
-		<translation id="title" translation_id="247569" type="use" value="Bans" />
-	</widget>
-	<widget class="player_transfer_information_small_panel" id="ptri" late_loading="true">
+	<!-- TRANSFER -->
+
+	<!-- Transfer Status -->
+	<widget class="player_transfer_information_small_panel" file="player/fme/small selector panel/transfer/player transfer information" id="ptri" late_loading="true">
+		<translation id="subtitle" translation_id="230119" type="use" value="Transfer" />
 		<translation id="title" translation_id="227953" type="use" value="Transfer Status" />
-	</widget>
-	<widget class="person_happiness_panel" file="person/person happiness profile" id="Phap" late_loading="true">
+	</widget>	
+
+	<!-- HAPPINESS -->
+
+	<!-- Dynamics -->
+	<widget class="person_happiness_panel" file="player/fme/small selector panel/happiness/player happiness" id="Phap" late_loading="true">
+		<translation id="subtitle" translation_id="247463" type="use" value="Happiness" />
 		<translation id="title" translation_id="447669" type="use" value="Dynamics[COMMENT: Manager Main/Top Menu; link to Dynamics screen showcasing a representation of interpersonal relationships at the club]" />
 	</widget>
-	<widget class="person_happiness_panel" file="person/person happiness profile plans" id="Ppla" late_loading="true">
+
+	<!-- Plans -->
+	<widget class="person_happiness_panel" file="player/fme/small selector panel/happiness/player plans" id="Ppla" late_loading="true">
+		<translation id="subtitle" translation_id="247463" type="use" value="Happiness" />
 		<translation id="title" translation_id="365298" type="use" value="Plans[COMMENT: FR 512; person happiness panel; title for person future plans section]" />
 	</widget>
-  <widget class="person_chemistry_relationship_panel" file="person/person playing time pathway profile" id="PPtp" late_loading="true" valid_for_unemployed_player="false" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
-    <translation id="title" translation_id="491902" type="use" value="Playing Time Pathway[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
-  </widget>
-	<widget class="player_form_summary_panel" id="Pfor" file="player/player form summary panel profile" late_loading="true">
+
+	<!-- Playing Time Pathway -->
+	<widget class="person_chemistry_relationship_panel" file="player/fme/small selector panel/happiness/player pathway" id="PPtp" late_loading="true" valid_for_unemployed_player="false" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
+		<translation id="subtitle" translation_id="247463" type="use" value="Happiness" />
+		<translation id="title" translation_id="491902" type="use" value="Playing Time Pathway[COMMENT: AREA: Splash Screen; SUB-AREA: What's New; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: splash screen indicating what's new in this version of the game]" />
+	</widget>
+
+	<!-- REPORTS -->
+
+	<!-- Fitness -->
+	<widget class="player_physical_stats_panel" file="player/fme/small selector panel/reports/player fitness" id="ppsp" late_loading="true">
+		<translation id="subtitle" translation_id="254774" type="use" value="Reports" />
+		<translation id="title" translation_id="247571" type="use" value="Fitness" />
+	</widget>
+
+	<!-- Bans -->
+	<widget class="player_bans_overview_panel" file="player/fme/small selector panel/reports/player bans" section="PHst" id="pbop" late_loading="true">
+		<translation id="subtitle" translation_id="254774" type="use" value="Reports" />
+		<translation id="title" translation_id="247569" type="use" value="Bans" />
+	</widget>
+
+	<!-- Form -->
+	<widget class="player_form_summary_panel" id="Pfor" file="player/fme/small selector panel/reports/player form" late_loading="true">
+		<translation id="subtitle" translation_id="254774" type="use" value="Reports" />
 		<translation id="title" translation_id="308194" type="use" value="Form[COMMENT: team form 5 games, all competitions, short version]" />
 	</widget>
-	<widget class="player_training_stats_panel" id="pTTS" late_loading="true" valid_for_international_managers_other_team="false" valid_for_unemployed_player="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
+
+	<!-- DEVELOPMENT -->
+
+	<!-- Training -->
+	<widget class="player_training_stats_panel" file="player/fme/small selector panel/development/player training" id="pTTS" late_loading="true" valid_for_international_managers_other_team="false" valid_for_unemployed_player="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
+		<translation id="subtitle" translation_id="248409" type="use" value="Development" />
 		<translation id="title" translation_id="242773" type="use" value="Training" />
 	</widget>
-	<widget class="player_contract_panel" id="pcon" file="player/player contract small" valid_for_unemployed_player="false" late_loading="true">
+
+	<!-- Progress -->
+	<widget class="client_object_viewer_xml_panel" file="player/fme/small selector panel/development/player progress" section="Pgrg" id="Pgrg" valid_for_international_managers_other_team="false" valid_for_unemployed_player="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false" late_loading="true">
+		<translation id="subtitle" translation_id="248409" type="use" value="Development" />
+		<translation id="title" translation_id="289978" type="use" value="Progress[COMMENT:person screen; achievements section; heading for achievements panel - cup progress]" />
+	</widget>
+
+	<!-- Training -->
+	<widget class="preferred_moves_panel" file="player/fme/small selector panel/development/player traits" id="pTra" late_loading="true">
+		<translation id="subtitle" translation_id="248409" type="use" value="Development" />
+		<translation id="title" translation_id="402385" type="use" value="Player Traits[COMMENT: label for the previously named 'Preferred Moves' section (ID 229993), changed to Player Traits because it fits all potential options more suitably]" />
+	</widget>
+
+	<!-- CONTRACT -->
+
+	<!-- Contract -->
+	<widget class="player_contract_panel" id="pcon" file="player/fme/small selector panel/contract/player contract" valid_for_unemployed_player="false" late_loading="true">
 		<translation id="title" translation_id="230163" type="use" value="Contract" />
 	</widget>
-	<widget class="player_history_achievements_panel" id="pac1" file="player/player history achievements small" late_loading="true">
+
+	<!-- HISTORY -->
+
+	<!-- Career Milestones -->
+	<widget class="player_history_achievements_panel" id="pac1" file="player/fme/small selector panel/history/player achievements" late_loading="true">
+		<translation id="subtitle" translation_id="229719" type="use" value="History" />
 		<translation id="title" translation_id="435775" type="use" value="Career Milestones[COMMENT: was previously ID 329749 Career Achievements, rewording as it's a better term for the content on the screen]" />
 	</widget>
-	<widget class="playing_history_summary_panel" file="player/playing history summary small" id="Pcrs" late_loading="true">
+
+	<!-- Career Stats -->
+	<widget class="client_object_viewer_xml_panel" file="player/fme/small selector panel/history/player history" id="Pcrs" late_loading="true">
+		<translation id="subtitle" translation_id="229719" type="use" value="History" />
 		<translation id="title" translation_id="247605" type="use" value="Career Stats" />
 	</widget>
-	  <widget class="player_positions_details_panel" id="ppdp" file="player/scout/gunzo games played in position1" late_loading="true">
-    <translation id="title" translation_id="257322" type="use" value="Transfer Info" />
-  </widget>
+
+	<widget class="player_games_in_position_panel" id="pgpp" file="player/games in pos">
+	    <translation id="subtitle" translation_id="229719" type="use" value="History" />
+        <translation id="title" translation_id="257322" type="use"/>
+    </widget>
+
+
+
+	<!-- Positives -->
+		<widget class="player_scout_reports_panel" id="ppos" file="player/fme/big selector panel/reports/player positives">
+			<translation id="subtitle" translation_id="257326" type="use" value="Reports" />
+			<translation id="title" translation_id="447605" type="use" value="Positives" />
+		</widget>
+
+	<!-- Negatives -->
+		<widget class="player_scout_reports_panel" id="pneg" file="player/fme/big selector panel/reports/player negatives">
+			<translation id="subtitle" translation_id="257326" type="use" value="Reports" />
+			<translation id="title" translation_id="447606" type="use" value="Negatives" />
+		</widget>
+	<!-- Comparison -->
+		<widget class="player_scout_reports_panel" id="pscR" file="player/fme/big selector panel/reports/player comparison" >
+			<translation id="subtitle" translation_id="257326" type="use" value="Reports" />
+			<translation id="title" translation_id="248428" type="use" value="Comparison" />
+		</widget>	
 </panel>
