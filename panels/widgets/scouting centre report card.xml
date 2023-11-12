@@ -187,23 +187,7 @@
 									<widget class="vertical_divider" width="2">
 							<layout class="stick_to_sides_attachment" alignment="vertical" inset="8"/>
 						</widget>
-			<!-- Buttons -->
-            <container width="200">
-              <layout class="arrange_horizontal_attachment" alignment="top,extend" offset="0" gap="10" />           
-              <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-
-          <widget class="button" id="psh2" appearance="buttons/primary/normal/button" auto_size="all">
-              <translation id="text" type="use" value="능력치 보기" />
-              <event id="click_event" event_id="kev3"/>
-              <attachment class="event_relay_attachment" event_id="kev3">
-                <record id="action_event">
-                  <flags id="event_id" value="show"/>
-                  <flags id="event_target" value="psh1"/>
-                </record>
-              </attachment>
-            </widget>
-          </container> 
-		</container>
+	             	</container>
 
 					<widget class="client_object_property_panel" property="PSpi">
 						<layout class="centre_in_parent_attachment" alignment="vertical"/>
@@ -238,8 +222,13 @@
 						<record id="widget_info" width="60" height="25"/>
 					</widget>
 
-				</container>
+			<container id="mtFC" class="recruitment_focus_widget" width="400" hide_container_title="false" enable_linking="true">
+				<string id="remove_if" value="platform_is_handheld" />
+				<record id="object_property" get_property="PFrM" set_property="valu" />
+				<translation id="text" translation_id="557838" type="use" value="Recruitment Focus Matches[COMMENT: AREA: Scouting; SUB-AREA: Scouting card; FR-BN: FM-4003; NOTE: Title above recruitment focus widget shown on scouting card]" />
+			</container>
 
+			</container>
 				<container class="client_object_viewer_xml_panel" height="54">
 					<record id="object_property" get_property="Pers" set_property="objt" />
 
@@ -369,29 +358,5 @@
 			</container>
 		</container>
 	</container>
-	
-	<!-- Attributes & Hidden popup -->
-    <container>     
-    <container width="700" height="600">
-      <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0"/>
-      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-      <layout class="stick_to_sides_attachment" alignment="left" inset="0" />
-      <layout class="stick_to_sides_attachment" alignment="top" inset="0" />
 
-      <container class="player_attributes_panel" id="psh1" file="attributes/gunzo player attributes panel2" hidn="true" width="700">
-        <record id="object_property">
-          <list id="get_properties">
-            <record>
-              <integer id="get_property" value="Pers" />
-              <integer id="set_property" value="objt" />
-            </record>      
-		<record>
-              <integer id="get_property" value="objt" />
-              <integer id="set_property" value="objt" />
-            </record>
-          </list>
-        </record>
-      </container>
-    </container>
-  </container>
 </panel>
