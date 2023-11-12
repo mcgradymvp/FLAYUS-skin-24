@@ -1,9 +1,11 @@
 <panel>
-	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" />
 
-		<widget class="table" id="Live" mode="fill_rows" auto_size="vertical" row_height="31" layout="-5, -1, -4" row_spacing="0">
+	<container class="tabbed_container">
+		<widget class="table" id="Live" mode="fill_rows" row_height="42" layout="-5, -1, -4" row_spacing="0">
 			<translation id="title" translation_id="289352" type="use" value="Live[COMMENT: match_time_slider; instruction to set the action back to live]" />
-	<widget class="label" row="0" col="1">
+
+			<widget class="label" row="0" col="1">
 				<translation id="text" translation_id="348201" type="use" value="Match[COMMENT: label for a popup showing where to show match highlights when in split view]" />
 			</widget>
 			<widget class="label" row="1" col="0">
@@ -40,26 +42,77 @@
 			<widget class="label" row="3" col="0">
 				<translation id="text" translation_id="348200" type="use" value="Match Speed During Highlights[COMMENT:highlights speed control on match screen]" />
 			</widget>
-			<widget class="slider_horizontal" row="3" col="1" id="masp" final_changed_event="msch" max_value="15" min_value="1" value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" column_span="2">
+			<widget class="plus_minus_slider" row="3" col="1" id="masp" final_changed_event="msch" max_value="15" min_value="1" value="1" notch_frequency="1" item_frequency="3" draw_notches="true" draw_middle_notch="true" show_filler="true" filler_red_replacement="bg accent" thumb_red_replacement="bg accent" thumb_blue_replacement="white" limit_click_to_notch="true" column_span="2" show_current_notch_text_under="true">
 				<translation id="hint" translation_id="356822" type="use" value="Choose the speed at which match action is played when highlights are being shown[COMMENT: match preferences hint]" />
+				<list id="items">
+					<record>
+						<translation id="text" translation_id="297339" type="use" value="Very Slow" />
+					</record>
+					<record>
+						<translation id="text" translation_id="247792" type="use" value="Slow" />
+					</record>
+					<record>
+						<translation id="text" translation_id="297338" type="use" value="Average" />
+					</record>
+					<record>
+						<translation id="text" translation_id="297337" type="use" value="Fast" />
+					</record>
+					<record>
+						<translation id="text" translation_id="297336" type="use" value="Very Fast" />
+					</record>
+				</list>
 			</widget>
 
 			<widget class="label" row="4" col="0">
 				<translation id="text" translation_id="491930" type="use" value="Match Speed During Text-Only Highlights[COMMENT: AREA: Preferences; SUB-AREA: In-Game Preferences; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: 348200; NOTE: preference strings and explanations]" />
 			</widget>
-			<widget class="slider_horizontal" row="4" col="1" id="tasp" final_changed_event="mtch" max_value="15" min_value="1" value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" column_span="2">
+			<widget class="plus_minus_slider" row="4" col="1" id="tasp" final_changed_event="mtch" max_value="15" min_value="1" value="1" notch_frequency="1" item_frequency="3" draw_notches="true" draw_middle_notch="true" show_filler="true" filler_red_replacement="bg accent" thumb_red_replacement="bg accent" thumb_blue_replacement="white" limit_click_to_notch="true" column_span="2" show_current_notch_text_under="true">
 				<translation id="hint" translation_id="491931" type="use" value="Choose the speed at which match action is played when text-only highlights are being shown[COMMENT: AREA: Preferences; SUB-AREA: In-Game Preferences; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: 356822; NOTE: preference strings and explanations]" />
+				<list id="items">
+					<record>
+						<translation id="text" translation_id="297339" type="use" value="Very Slow" />
+					</record>
+					<record>
+						<translation id="text" translation_id="247792" type="use" value="Slow" />
+					</record>
+					<record>
+						<translation id="text" translation_id="297338" type="use" value="Average" />
+					</record>
+					<record>
+						<translation id="text" translation_id="297337" type="use" value="Fast" />
+					</record>
+					<record>
+						<translation id="text" translation_id="297336" type="use" value="Very Fast" />
+					</record>
+				</list>
 			</widget>
 
 			<widget class="label" row="5" col="0">
 				<translation id="text" translation_id="348199" type="use" value="Match Speed Between Highlights[COMMENT:match text speed control on match screen for when no highlights are being shown]" />
 			</widget>
-			<widget class="slider_horizontal" row="5" col="1" id="casp" final_changed_event="csch" max_value="5" min_value="1" value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" column_span="2">
+			<widget class="plus_minus_slider" row="5" col="1" id="casp" final_changed_event="csch" max_value="5" min_value="1" value="1" notch_frequency="1" item_frequency="1" draw_notches="true" draw_middle_notch="true" show_filler="true" filler_red_replacement="bg accent" thumb_red_replacement="bg accent" thumb_blue_replacement="white" limit_click_to_notch="true" column_span="2" show_current_notch_text_under="true">
 				<translation id="hint" translation_id="356823" type="use" value="Choose the speed at which the match progresses when there is no action being shown[COMMENT: match preferences hint]" />
+				<list id="items">
+					<record>
+						<translation id="text" translation_id="297339" type="use" value="Very Slow" />
+					</record>
+					<record>
+						<translation id="text" translation_id="247792" type="use" value="Slow" />
+					</record>
+					<record>
+						<translation id="text" translation_id="297338" type="use" value="Average" />
+					</record>
+					<record>
+						<translation id="text" translation_id="297337" type="use" value="Fast" />
+					</record>
+					<record>
+						<translation id="text" translation_id="297336" type="use" value="Very Fast" />
+					</record>
+				</list>
 			</widget>
 		</widget>
 
-		<widget class="table" id="Repl" mode="fill_rows" auto_size="vertical" row_height="30" layout="-1, -1" row_spacing="0">
+		<widget class="table" id="Repl" mode="fill_rows" layout="-1, -1" row_spacing="5" row_height="42">
 			<translation id="title" translation_id="247332" type="use" value="Replays[COMMENT - match screen; replays popup menu on side panel]" />
 			<widget class="label" row="0" col="0">
 				<translation id="text" translation_id="348308" type="use" value="Show replays for[COMMENT: Label for selecting highlights mode]" />
@@ -83,7 +136,26 @@
 			<widget class="label" row="2" col="0">
 				<translation id="text" translation_id="348320" type="use" value="Speed[COMMENT: replay speed control on match screen]" />
 			</widget>
-			<widget class="slider_horizontal" row="2" col="1" id="rpsp" final_changed_event="rsch" max_value="15" min_value="1" value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" />
+			<widget class="plus_minus_slider" row="2" col="1" id="rpsp" final_changed_event="rsch" max_value="15" min_value="1" value="1" notch_frequency="1" item_frequency="3" draw_notches="true" draw_middle_notch="true" show_current_notch_text_under="true" limit_click_to_notch="true">
+				<translation id="hint" translation_id="596277" type="use" value="Choose the speed at which match action is played when replays are being shown[COMMENT: AREA: Preferences; SUB-AREA: In-Game Preferences; FR-BN: FM27537; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: Replay speed tooltip hint]" />
+				<list id="items">
+					<record>
+						<translation id="text" translation_id="297339" type="use" value="Very Slow" />
+					</record>
+					<record>
+						<translation id="text" translation_id="247792" type="use" value="Slow" />
+					</record>
+					<record>
+						<translation id="text" translation_id="297338" type="use" value="Average" />
+					</record>
+					<record>
+						<translation id="text" translation_id="297337" type="use" value="Fast" />
+					</record>
+					<record>
+						<translation id="text" translation_id="297336" type="use" value="Very Fast" />
+					</record>
+				</list>
+			</widget>
 		</widget>
-
+	</container>
 </panel>
