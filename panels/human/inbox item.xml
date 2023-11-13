@@ -1,42 +1,38 @@
 <panel>
-    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-    <boolean id="save_session_state" value="true" />
-    <boolean id="save_default_state" value="true" />
+	<boolean id="save_session_state" value="true"/>
+	<boolean id="save_default_state" value="true"/>
 
-    <container class="main_box">
-        <layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="4" />
-        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+	<container class="main_box">
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="4" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
 
-        <container id="MnCt">
-            <layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="10" />
-            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="12" apply_to_children="true" />
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="10"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="20" apply_to_children="true"/>
 
-            <container height="200" navigation_container="true">
-                <attachment_group class="vertical_arrange" vertical_gap="0" />
-                <container height="180">
-  			        <layout class="arrange_horizontal_attachment" layout="270,-1" gap="5" offset="0"/>
+			<container height="200">
+				<attachment_group class="vertical_arrange" vertical_gap="0"/>
+				<container  height="200">
+					<layout class="arrange_horizontal_attachment" layout="360,-1" gap="4" offset="0"/>
 					<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
 
-                    <!-- sender picture -->
-                    <container width="180">
-                        <layout class="arrange_horizontal_attachment" alignment="middle,extend" gap="10" />
-                        <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+					<!-- sender picture -->
+					<container width="200">
+						<layout class="arrange_horizontal_attachment" alignment="middle,extend" gap="10"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
 
-                        <widget class="object_portrait_picture" id="sncl" scale_picture="true" image_alignment="left" width="80">				
-						<!-- <layout class="stick_to_sides_attachment" alignment="right" inset="0" /> -->
-						<layout class="stick_to_sides_attachment" alignment="all"/>
+						<widget class="object_portrait_picture" id="snpc" scale_picture="true" image_alignment="left,centre_y" width="120">
+							<layout class="stick_to_sides_attachment" alignment="all"/>
 						</widget>
 
-           				<widget class="object_portrait_picture" id="snpc" scale_picture="true" image_alignment="right,centre_y" width="120">
-							<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
-                            <layout class="stick_to_sides_attachment" alignment="all" inset="20"/>
+						<widget class="object_portrait_picture" id="sncl" scale_picture="true" image_alignment="right" width="80">				
+						<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="20"/>
 						</widget>
-
-
-                    </container>
-
-                    <!-- sender, headline, category and time -->
+					</container>
+      <!-- sender, headline, category and time -->
                     <container>
                         <layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0" />
                         <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
@@ -74,19 +70,18 @@
                                 </container>
 
                                 <!-- headline -->
-                                <widget class="text" id="nwhd" auto_size="vertical" size="xlarge" alignment="left,top" colour="inbox_text" style="bold" multiline="false" />
+                                <widget class="text" id="nwhd" auto_size="vertical" size="large" alignment="left,top" colour="inbox_text" style="bold" multiline="false" />
                             </container>
                         </container>
 
-                 <!--category and time -->
+                        <!--category and time -->
                         <container id="ctco">
                             <layout class="fit_children_attachment" alignment="horizontal" offset="5" gap="0" />
-                            <layout class="arrange_vertical_attachment" layout="19, 20" gap="0" offset="5" />
+                            <layout class="arrange_vertical_attachment" layout="19, 20" gap="0" offset="10" />
                             <layout class="stick_to_sides_attachment" alignment="right" inset="5" apply_to_children="true" />
                             <string id="remove_if" value="ui.is_fmt_controller_skin" />
-                            
-                            <widget class="icon_button" id="catw" auto_size="horizontal" show_button_appearance="false" icon="icons/16px/tag" alignment="right, centre_y" hidden="true" navigation_focus_target="false" />
-                            <widget class="text" id="time" auto_size="horizontal" alignment="right, top" colour="inbox_text" size="xsmall" />
+                            <widget class="icon_button" id="catw" auto_size="horizontal" show_button_appearance="false" icon="icons/16px/tag" alignment="right,centre_y" hidden="true" navigation_focus_target="false" />
+                            <widget class="text" id="time" auto_size="horizontal" alignment="right,top" colour="inbox_text" size="xsmall" />
                         </container>
 
                         <!--show/hide and unread count-->
@@ -101,7 +96,7 @@
                             <container width="30" height="30">
                                 <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
                                 <widget class="picture" file="icons/26px/circle" colour="title" image_alignment="centre" />
-                                <widget class="text" id="unCn" colour="bg" size="large" style="bold" alignment="centre" />
+                                <widget class="text" id="unCn" colour="white" size="large" style="bold" alignment="centre" />
                             </container>
 
                             <widget class="text" colour="title" alignment="left, centre_y" auto_size="all" font="title">
@@ -117,30 +112,32 @@
 
             <!-- the news item content -->
             <container id="nwit" navigation_container="true" default_focus="true" navigation_preferred_left_target="indb" navigation_container_allow_empty="true">
-                <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+                <layout class="stick_to_sides_attachment" alignment="all" inset="7" apply_to_children="true" />
 
                 <!-- inbox content panel gets added here -->
             </container>
         </container>
 
         <container navigation_container="true" id="boCo">
-            <attachment_group class="vertical_arrange_autosize" vertical_gap="4" horizontal_inset="8"/>
+            <attachment_group class="vertical_arrange_autosize" vertical_gap="4" />
 
-            <!-- news effects -->
-            <container id="NEcn">
-                <attachment_group class="vertical_arrange_autosize" vertical_gap="4"/>
+            <container id="nwSf">
+                <attachment_group class="vertical_arrange_autosize" vertical_gap="4" />
 
-                <!-- effects panels added here -->
+                <container height="35" id="pnEF" icon="icons/16px/thumbs up" class="news_effect_item" colour="positive dark" hidden="true" />
+                <container height="35" id="nNEF" icon="icons/16px/thumbs down" class="news_effect_item" colour="negative dark" hidden="true" />
             </container>
 
             <!--  response button containers -->
             <container id="ResC" hidden="true">
-                <attachment_group class="vertical_arrange_autosize" vertical_offset="4" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="4"/>
+                <attachment_group class="vertical_arrange_autosize" vertical_offset="4" vertical_gap="2" horizontal_alignment="horizontal" horizontal_inset="4">
+                    <global id="horizontal_gap" name="ui.button_row_gap" />
+                </attachment_group>
 
                 <container id="mrcn" hidden="true">
                     <layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
                     <layout class="arrange_horizontal_attachment" alignment="right" offset="0">
-                
+                        <global id="gap" name="ui.button_row_gap" />
                     </layout>
 
                     <layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
@@ -168,9 +165,8 @@
                 </container>
 
                 <container height="30" id="sbcn" hidden="true">
-                    <layout class="arrange_horizontal_attachment" alignment="right" offset="0">
-                        <global id="gap" name="ui.button_row_gap" />
-                    </layout>
+                    <layout class="arrange_horizontal_attachment" alignment="right" offset="0"/>
+               
                     <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
                 </container>
             </container>
