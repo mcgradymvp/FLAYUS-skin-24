@@ -28770,7 +28770,7 @@
       <flags id="id" value="Phnp" />
       <integer id="width" value="60" />
       <flags id="customisation_context" value="none" />
-      <translation id="name" type="use" value="취업비자 필요 없음" />
+      <translation id="name" type="use" value="无需工作签证" />
       <record id="widget_edit_info">
         <symbol id="class" value="check_box" />
         <flags id="click_event" value="CDBd" />
