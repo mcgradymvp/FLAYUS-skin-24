@@ -55,7 +55,7 @@
 	<widget class="player_transfer_interest_panel" id="manC" file="player/player transfer interest panel2" late_loading="true">
 		<translation id="title" translation_id="383284" type="use" value="Clubs Interested[COMMENT: FR 10253, player overview; trandfers sub panel; label for number of clubs interested in a player]" />
 	</widget> 
-	<widget class="player_personal_details_panel" id="ptis" file="gunzo/gunzo transfer information small" late_loading="true">
+	<widget class="transfer_offer_interest_panel" id="ptis" file="gunzo/gunzo transfer information small">
 		<translation id="title" translation_id="316646" type="use" value="Transfer Info" />
 	</widget> 
 	<widget class="player_games_in_position_panel" id="ptgs" file="gunzo/gunzo games played in position1" late_loading="true">

@@ -11,7 +11,6 @@
 			<global id="inset" name="calibration_inset_y" />
 		</layout>
 
-
 		<!-- Add on manager helper layer -->
 		<container id="adMN" class="add_on_manager_helper_panel">
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
@@ -34,6 +33,7 @@
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
 		</container>
 
+<container id="bgs1" file="background_selector/workings" hidn="true"/>
 		<!-- Comment this out if the tutorial is disabled -->
 		<!-- tutorial layer -->
 		<container id="tutL" hidden="true" >
