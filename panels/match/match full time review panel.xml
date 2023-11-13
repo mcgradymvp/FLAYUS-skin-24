@@ -38,7 +38,7 @@
         <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 		
 	<container id="bmf1">
- 	    <translation id="title" type="use" value="主队阵型-传球图" />
+ 	    <translation id="title" type="use" value="主队阵型-路线图" />
             <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="1" />
             <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 		    <boolean id="save_session_state" value="true" />
@@ -89,7 +89,7 @@
 					<integer id="set_property" value="objt" />
 				</record>
 					<widget class="post_match_report_widget" file="widgets/match/post match report widget1" id="pstL">
-					<translation id="title" type="use" value="预期得分" />
+					<translation id="title" type="use" value="期望得分明细" />
 						<record id="object_property" get_property="objt" set_property="objt" />
 					</widget>
 				    <widget class="post_match_report_widget" file="widgets/match/post match report widget2" id="pst2">
@@ -127,7 +127,7 @@
 			</container>
 
 	<container id="bmf2">
- 	    <translation id="title" type="use" value="客队阵型-传球图" />
+ 	    <translation id="title" type="use" value="客队阵型-路线图" />
             <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="1" />
             <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 		    <boolean id="save_session_state" value="true" />
