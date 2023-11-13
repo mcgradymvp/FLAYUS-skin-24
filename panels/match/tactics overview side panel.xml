@@ -253,7 +253,7 @@
     <layout class="stick_to_sides_attachment" apply_to_children="true" alignment="none,all" inset="0" />
     <layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
     <layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
-    <layout class="stick_to_object_attachment" id="align_right" get_side="none,left" set_side="none,left" move_side="true" target="main" />
+    <layout class="stick_to_object_attachment" id="align_right" get_side="none,left" set_side="none,left" offset="810" move_side="true" target="main" />
   </container>
   <container class="player_attributes_comparison_panel" entity_layout_id="it11" file="player/player attributes comparison panel tactics" id="comP" hidden="true" name="comparison" width="210">
     <layout class="stick_to_sides_attachment" apply_to_children="true" alignment="none,all" inset="0" />
