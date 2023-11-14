@@ -18,8 +18,8 @@
 		</widget>
 		
 		<!-- player number -large -->
-		<widget class="picture" id="bNUM" image_alignment="middle" scale_picture="false" keep_aspect_ratio="true">
-			<layout class="stick_to_sides_attachment" alignment="bottom" inset="15"/>
+		<widget class="picture" id="bNUM" image_alignment="middle" scale_picture="true" keep_aspect_ratio="true">
+			<layout class="stick_to_sides_attachment" alignment="bottom" inset="5"/>
 		</widget>
 
 	</container>
