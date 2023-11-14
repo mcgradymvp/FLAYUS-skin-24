@@ -53,6 +53,11 @@
 			<translation id="title" translation_id="435775" type="use" value="Career Milestones[COMMENT: was previously ID 329749 Career Achievements, rewording as it's a better term for the content on the screen]" />
 		</widget>
 
+		<!-- Eligibility -->
+		<widget class="person_information_panel" id="pelp" file="player/fme/big selector panel/history/player eligibility">
+			<translation id="title" translation_id="260816" type="use" value="Eligibility" />
+		</widget>
+
 	<!-- REPORTS -->
 
 		<!-- Comparison -->

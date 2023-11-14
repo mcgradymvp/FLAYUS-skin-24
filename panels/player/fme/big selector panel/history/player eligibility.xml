@@ -1,0 +1,82 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<container>
+		<layout class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="4"/>
+
+        <widget class="text" auto_size="vertical" font="title" colour="accent">
+            <translation id="text" translation_id="260816" type="use" value="Eligibility[COMMENT: filter panel; a player eligibility for certain squads e.g. U21s]" />
+        </widget>
+
+        <container>
+            <layout class="vertical_arrange" vertical_alignment="fill"/>
+
+            <!-- Nations -->
+
+            <container class="inner_box_no_margin">
+                <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+                <translation id="title" translation_id="363691" type="use" value="Nation trained in[COMMENT: player information; nation player trained at for purposes of domestic eligibility]" />
+
+			<container class="scrolling_box" navigation_container="true">
+
+                    <widget class="table" id="NaEl" layout="-1, -1, -1, 40, 16" mode="stripe_rows" fixed_size_rows="false" auto_size_rows="true" sort_disabled="true" auto_size="vertical" size="normal">
+                        <list id="column_table_properties">
+                            <record index="0" default_width="90" minimum_width="90" auto_hide_priority="1">
+                                <record id="widget_info" class="nation_button" alignment="left,centre_y"/>
+                            </record>
+                            <record index="1" default_width="15" minimum_width="10" auto_hide_priority="2">
+                                <record id="widget_info" class="horizontal_percentage_bar" label_width="0"/>
+                            </record>
+                            <record index="2" default_width="20" minimum_width="20" auto_hide_priority="1">
+                                <record id="widget_info" class="text" alignment="left,centre_y"/>
+                            </record>
+                            <record index="3" default_width="65" minimum_width="65" auto_hide_priority="1">
+                                <record id="widget_info" class="text" alignment="centre"/>
+                            </record>
+                            <record index="4" default_width="14" minimum_width="14" auto_hide_priority="1">
+                                <record id="widget_info" class="info_icon_hint_text" icon_alignment="right"/>
+                            </record>
+                        </list>
+                    </widget>
+
+                </container>
+
+            </container>
+
+            <!-- Clubs -->
+            <container class="inner_box_no_margin">
+                <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+                <translation id="title" translation_id="363611" type="use" value="Club trained at[COMMENT: player information; nation player trained at for purposes of domestic eligibility]" />
+
+			<container class="scrolling_box" navigation_container="true">
+
+                    <widget class="table" id="ClEl" layout="-1, -1, -1, 60, 16" mode="stripe_rows" fixed_size_rows="false" auto_size_rows="true" sort_disabled="true" auto_size="vertical" size="normal">
+                        <list id="column_table_properties">
+                            <record index="0" default_width="90" minimum_width="90" auto_hide_priority="1">
+                                <record id="widget_info" class="club_button" alignment="left,centre_y"/>
+                            </record>
+                            <record index="1" default_width="20" minimum_width="20" auto_hide_priority="2">
+                                <record id="widget_info" class="horizontal_percentage_bar" label_width="0"/>
+                            </record>
+                            <record index="2" default_width="110" minimum_width="110" auto_hide_priority="1">
+                                <record id="widget_info" class="text" alignment="left,centre_y"/>
+                            </record>
+                            <record index="3" default_width="55" minimum_width="55" auto_hide_priority="1">
+                                <record id="widget_info" class="text" alignment="centre"/>
+                            </record>
+                            <record index="4" default_width="15" minimum_width="15" auto_hide_priority="1">
+                                <record id="widget_info" class="info_icon_hint_text" icon_alignment="centre"/>
+                            </record>
+                        </list>
+                    </widget>
+
+                </container>
+
+            </container>
+
+        </container>
+
+    </container>
+
+</panel>
