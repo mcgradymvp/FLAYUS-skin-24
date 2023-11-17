@@ -1,25 +1,53 @@
 <panel>
-	<layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1,-1" offset="0" />
-	<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-    
-	<widget class="manager_upcoming_fixture_panel" id="tufp" file="human/manager upcoming fixture" default_width="-1" minimum_width="100"  priority="1" />
-			
-		<container class="client_object_viewer_selector_panel" id="cos1" file="human/manager home selector panel" default_width="-1" minimum_width="300" priority="1">
+	<layout class="arrange_vertical_attachment" layout="230, -1" offset="0" gap="8"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+	<widget class="manager_upcoming_fixture_panel" id="tufp" default_width="-2" minimum_width="580" height="220" priority="1" navigation_container="true" />
+
+	<container class="horizontal_adaptive_container" inset="0" offset="0" mode="use_positional_appearance" draw_vertical_dividers="true">
+	
+		<container class="client_object_viewer_selector_panel" id="cos1" file="human/manager home selector panel" default_width="-1" minimum_width="350" priority="1">
 			<integer id="default_for_club_teams" value="tlta"/>
 			<integer id="default_for_international_teams" value="pssu"/>
 			<integer id="default_for_international_youth_teams" value="pssu"/>
 			<integer id="default_for_no_team" value="mnew"/>
 
-			<integer id="default_for_pre_season" value="tlta"/>
-			<integer id="default_for_off_season" value="tlta"/>
-			<integer id="default_for_transfer_window" value="tlta"/>
+			<integer id="default_for_pre_season" value="MedC"/>
+			<integer id="default_for_off_season" value="fsws"/>
+			<integer id="default_for_transfer_window" value="fsws"/>
 
 			<integer id="scenario_job_insecure" value="bcsn"/>
 		</container>
-
-		<container class="vertical_adaptive_container" mode="distribute_equally" inset="0" offset="0" minimum_width="600" default_width="-2" priority="2">
+		
+		<container class="main_box" minimum_width="600" default_width="-2" priority="1" mode="distribute_equally" navigation_container="true" >
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="-1" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="-1" apply_to_children="true" />		
 	
-				<container class="client_object_viewer_selector_panel" id="cos2" file="human/manager home selector panel" default_width="-1" minimum_width="300" priority="2">
+		<container class="tabbed_container" id="tppp" default_item="trpt" offset="0" inset="0" gap="0" save_session_state="true" save_default_state="true" priority="1">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />     
+		  
+		    <container class="client_object_viewer_selector_panel" id="trpt" file="human/manager home selector" priority="1" late_loading="true" >
+			   <translation id="title" type="use" value="下一个对手" />
+			   		<integer id="default_for_unemployed_managers" value="trpt"/>
+					<integer id="default_for_international_managers_other_team" value="trpt"/>
+					<integer id="default_for_everyone_else" value="trpt"/>
+					<integer id="default_for_versus_mode" value="trpt"/>
+			</container>    
+		   
+		    <widget class="competition_news_panel" file="human/manager home news panel" id="Pnws" late_loading="true" valid_for_unemployed_manager="true">
+		        <translation id="title" translation_id="308646" type="use" value="News[COMMENT: top level menu title for news screens]" />
+	        </widget>
+		   
+		    <widget class="inbox_feed_panel" id="inbx" section="Pibx" late_loading="true">
+		        <translation id="title" translation_id="248088" type="use" value="Inbox" />
+	        </widget>
+			
+          </container>
+         </container>
+		
+		<container class="vertical_adaptive_container" mode="distribute_equally" inset="0" offset="0" default_width="-1" minimum_width="350" priority="2" gap="0" draw_horizontal_dividers="true" id="qqer">
+			<container class="client_object_viewer_selector_panel" id="cos2" file="human/manager home selector panel" priority="1">
 					<integer id="default_for_club_teams" value="pssu"/>
 					<integer id="default_for_international_teams" value="bcsp"/>
 					<integer id="default_for_international_youth_teams" value="inbx"/>
@@ -29,9 +57,9 @@
 					<integer id="default_for_pre_season" value="pssu"/>
 					<integer id="default_for_pre_match" value="pssu"/>
 					<integer id="default_for_transfer_window" value="pssu"/>	
-				</container>
+			</container>
 
-			<container class="client_object_viewer_selector_panel" id="cos5" file="human/manager home selector panel" default_width="-1" minimum_width="300" priority="1">
+			<container class="client_object_viewer_selector_panel" id="cos4" file="human/manager home selector panel" priority="1">
 					<integer id="default_for_club_teams" value="tssu"/>
 					<integer id="default_for_international_teams" value="tssu"/>
 					<integer id="default_for_international_youth_teams" value="tssu"/>
@@ -41,56 +69,7 @@
 					<integer id="default_for_post_match" value="tssu"/>
 					<integer id="default_for_off_season" value="tssu"/>
 					<integer id="default_for_transfer_window" value="tssu"/>
-				</container>
-			</container>
-
-	        <container class="vertical_adaptive_container" mode="distribute_equally" inset="0" offset="0" minimum_width="300" default_width="-1" priority="2">
-				
-				<container class="client_object_viewer_selector_panel" id="cos3" file="human/manager home selector panel" default_width="-1" minimum_width="300" priority="3">
-					<integer id="default_for_club_teams" value="mnew"/>
-					<integer id="default_for_international_teams" value="mcom"/>
-					<integer id="default_for_international_youth_teams" value="inbx"/>
-					<integer id="default_for_no_team" value="ijsn"/>
-
-					<integer id="default_for_pre_match" value="mnew"/>
-					<integer id="default_for_pre_season" value="mnew"/>
-					<integer id="default_for_off_season" value="mnew"/>
-					<integer id="default_for_transfer_window" value="mnew"/>
-				</container>
-
-				<container class="client_object_viewer_selector_panel" id="cos6" file="human/manager home selector panel" default_width="-1" minimum_width="300" priority="2">
-					<integer id="default_for_club_teams" value="MedC"/>
-					<integer id="default_for_international_teams" value="mngp"/>
-					<integer id="default_for_international_youth_teams" value="mngp"/>
-					<integer id="default_for_no_team" value="ijsn"/>
-
-					<integer id="default_for_pre_match" value="MedC"/>
-					<integer id="default_for_post_match" value="MedC"/>
-					<integer id="default_for_off_season" value="MedC"/>
-				</container>
-			</container>
-	
-		<container class="vertical_adaptive_container" mode="distribute_equally" inset="0" offset="0" minimum_width="300" default_width="-1" priority="2">
-
-			<container class="client_object_viewer_selector_panel" id="cos4" file="human/manager home selector panel" minimum_height="350" default_height="-1" priority="3">
-				<integer id="default_for_club_teams" value="bcsp"/>
-				<integer id="default_for_international_teams" value="comp"/>
-				<integer id="default_for_international_youth_teams" value="comp"/>
-
-				<integer id="default_for_pre_match" value="bcsp"/>
-				<integer id="default_for_post_match" value="bcsp"/>
-				<integer id="default_for_off_season" value="bcsp"/>
-				<integer id="default_for_pre_season" value="bcsp"/>
-				<integer id="default_for_transfer_window" value="bcsp"/>
-			</container>
-
-			<container class="client_object_viewer_selector_panel" id="cos7" file="human/manager home selector panel" minimum_height="350" default_height="-1" priority="3">
-				<integer id="default_for_club_teams" value="fsws"/>
-				<integer id="default_for_international_teams" value="comp"/>
-				<integer id="default_for_international_youth_teams" value="comp"/>
-
-				<integer id="default_for_pre_match" value="fsws"/>
-				<integer id="default_for_post_match" value="fsws"/>
 			</container>
 		</container>
+	</container>
 </panel>

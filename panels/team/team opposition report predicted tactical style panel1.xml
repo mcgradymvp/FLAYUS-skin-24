@@ -1,0 +1,76 @@
+﻿<panel>
+	<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+	<container red_replacement="pitch_box_background">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_layout="600,-1"/>
+
+		<container class="main_box" id="expT">
+			<translation id="title" translation_id="447657" type="use" value="Expected Tactic[COMMENT: oppositon team report; heading]" />
+				<attachment_group class="vertical_arrange" vertical_layout="50,-1"/>
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="0" vertical_alignment="top" horizontal_inset="0" />
+				<translation id="title" translation_id="331967" type="use" value="Summary[COMMENT: MLS draft panel; summary panel title]" />
+				<widget class="text" id="psmS" alignment="left,centre_y" auto_size="vertical" />
+			</container>
+			<widget class="pitch_with_tactics" id="otpc" pitch_vertical_padding="0" pitch_alignment="centre_x,centre_y,can_scale" vertical="false" pitch_is_read_only="true" player_icon_file="tactics/tactics icon opposition predicted team2" icon_flags="show_name,show_number,show_role_duty_labels,dont_colour_names,dont_fade_icons,show_preview_info_popup" pitch_draw_grass="false" pitch_line_colour="text" >
+			  <real id="maximum_player_size" value="0.3" />
+			</widget>
+		 </container>
+			
+			<container class="main_box" id="preT">
+				<translation id="title" translation_id="492032" type="use" value="Expected Tactical Style[COMMENT: AREA: Inbox; SUB-AREA: Opposition Scouting; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: opposition report tactical style label]" />
+				<attachment_group class="vertical_arrange" vertical_layout="30,-1,30" gap="0" />
+				<widget class="text" auto_size="vertical" id="tacD" />
+
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_layout="-2,-3" />
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+						<widget class="animation_player_widget" id="wbPN" />
+					</container>
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_layout="-1, -1" gap="8" />
+
+						<container>
+							<attachment_group class="vertical_arrange" horizontal_inset="0" />
+							<widget class="text" auto_size="vertical" font="title" id="styT" />
+							<widget class="text" auto_size="vertical" id="styD" />
+							<widget class="text" auto_size="vertical" id="opSD" />
+						</container>
+						
+						<container>
+							<attachment_group class="vertical_arrange" horizontal_inset="0" />
+
+							<widget class="text" auto_size="vertical" font="title">
+								<translation id="text" translation_id="229307" type="use" value="Set Pieces[COMMENT - training category]" />
+							</widget>
+
+							<widget class="text" auto_size="vertical" id="spAD" />
+							<widget class="text" auto_size="vertical" id="spDD" />
+							<widget class="text" auto_size="vertical" id="spND" />		
+							
+						</container>
+					</container>
+				</container>
+				<container>
+					<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="right" horizontal_gap="8" />
+
+					<widget class="link_button" section="TSRp" id="scrL" alignment="left,centre_y" auto_size="horizontal">
+						<translation id="text" translation_id="316845" type="use" value="Scout Report[COMMENT: Panel title for when viewing a scout report]" />
+					</widget>
+
+					<widget class="link_button" id="oppA" section="DHoA" alignment="left,centre_y" auto_size="horizontal">
+						<translation id="text" translation_id="539043" type="use" value="Opposition Analytics[COMMENT: AREA: Data Hub; SUB-AREA: Team Performance; FR: 31585; TONE: Formal; CHARLIMIT: None NOTES: opposition performance link header]" />
+						<record id="object_property" get_property="objt" />
+					</widget>
+				</container>
+			</container>		
+		</container>
+	</container>
+
+</panel>

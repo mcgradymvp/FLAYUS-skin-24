@@ -1,4 +1,5 @@
 <panel>
+
   <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
   <!-- Include friendly info -->
@@ -7,6 +8,7 @@
   <!-- This is a list of properties to be displayed in the top table. The number of properties, minus KG/outfield specific ones, here must match the number of columns
         in the main and overview tables minus the first 2 (used for competitions and checkboxes)-->
   <!-- default widget is formatted_label -->
+
 	<list id="tabS">
 		<!-- Appearances -->
 		<record id="PSap" format="[%fraction#1-1.0] ([%fraction#2-1.0])">
@@ -21,6 +23,7 @@
 		<!-- Clean Sheets (GK)-->
 		<record id="PScs" format="[%fraction#1-2.0]">
 			<translation id="hint" translation_id="317291" type="use" value="Clean Sheets[COMMENT: player stats; goalkeeper statistic for games where he didn't concede a goal]" />
+
 			<translation id="text"  type="use" value="零封" />
 		</record>
 		<!-- Save Tipped -->
@@ -48,6 +51,7 @@
 			<translation id="hint" translation_id="227847" type="use" value="Assists" />
 			<translation id="text" translation_id="249488" type="use" value="Asts" />
 		</record>
+
 		<!-- Penalties -->
     <record id="PSpe" format="[%fraction#2-1.0] ([%fraction#1-1.0])">
 			<translation id="hint" translation_id="230022" type="use" value="Penalties" />
@@ -68,6 +72,7 @@
 			<translation id="hint" translation_id="227871" type="use" value="Red cards" />
 			<translation id="text" translation_id="229879" type="use" value="Red" />
 		</record>
+
 		<!-- Dribbles made per game-->
 		<record id="PSdg" format="[%fraction#1-2.2]">
 			<translation id="text" translation_id="337882" type="use" value="DrbPG[COMMENT: dribbles made per game for an individual player, used as a column header, needs to be short as poss but different to 'Drb', which is total dribbles]" />
@@ -88,6 +93,7 @@
 			<translation id="text" translation_id="301168" type="use" value="Tck W[COMMENT: Tackles won (completed), short text]" />
 			<translation id="hint" translation_id="249446" type="use" value="Tackles completed" />
 		</record>
+
 		<!-- Average rating -->
 		<record id="PsAr" class="match_rating_label_formatted" format="[%fraction#1-1.2]">
 			<translation id="hint" translation_id="227853" type="use" value="Average rating" />

@@ -1,33 +1,25 @@
 <panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0"/>
 
-  <string id="skin_style" value="subtle box"/>
+	<boolean id="is_in_inbox" value="true"/>
+	<string id="skin_style" value="subtle box"/>
 
-  <layout class="fit_children_attachment" alignment="vertical" offset="0"/>
-  <layout class="stick_to_sides_attachment" alignment="top, horizontal" apply_to_children="true" inset="0"/>
+	<container class="main_box" red_replacement="dark_box_background">
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="280,-4,-6" horizontal_offset="6" vertical_offset="0"/>
 
-  <boolean id="is_in_inbox" value="true"/>
+		<string id="skin_style" value="contrast box"/>
+		<!-- placing -->
+		<container background_colour="gold" height="26" width="26" embed_in_frame="true">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" embed_in_frame="true"/>
+			<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" embed_in_frame="true"/>
 
-  <container class="bordered_box">
-    <layout class="fit_children_attachment" alignment="vertical" offset="6"/>
-    <layout class="arrange_horizontal_attachment" layout="280, -4, -6" offset="6"/>
-    <layout class="stick_to_sides_attachment" alignment="top, horizontal" inset="6" apply_to_children="true"/>
+			<widget class="label" id="posl" alignment="centre,can_scale" colour="black" size="12" style="bold" embed_in_frame="true" auto_size="none"/>
+		</container>
 
-    <!-- placing -->
-    <container background_colour="gold" height="26" width="26" embed_in_frame="true">
-      <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" embed_in_frame="true" />
-      <layout class="stick_to_sides_attachment" alignment="top, left" inset="0" embed_in_frame="true" />
-
-      <widget class="label" id="posl" alignment="centre,can_scale" colour="black" size="12" style="bold" embed_in_frame="true" auto_size="none"/>
-
-    </container>
-
-    <!-- Player Picture -->
-    <widget class="competition_news_image_panel" id="ptpc" file="competition/competition news image panel2" height="170">
-      <layout class="centre_in_parent_attachment" alignment="vertical"/>
-    </widget>
+		<!-- Player Picture -->
+		<widget class="competition_news_image_panel" id="ptpc" height="170"/>
 
 		<widget class="table" id="pitb" layout="18,-1" row_height="22" auto_size="vertical" all_content_same_height="true" row_spacing="1">
-
 			<list id="column_table_properties">
 				<record index="0" right="20"/>
 			</list>
@@ -51,7 +43,7 @@
 			<widget class="text" id="apmp" col="1" row="5" colour="faded text"/>
 		</widget>
 
-		<widget class="club_overview_team_results_panel" id="cotr" height="140" file="club/club overview team adaptive results panel" show_link="false" />
+		<widget class="club_overview_team_results_panel" id="cotr" height="140" file="club/club overview team adaptive results panel" show_link="false"/>
 	</container>
 
 </panel>
