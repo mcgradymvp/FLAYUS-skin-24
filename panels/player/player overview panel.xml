@@ -300,7 +300,7 @@
             </container>
 		    <!-- Data Hub -->
 				<widget class="data_hub_player_analytics_panel" file="data_hub/data hub player analytics panel" id="pdh1">
-					<translation id="title" type="use" translation_id="296334"/>
+					<translation id="title" type="use" value="数据中心"/>
 						<record id="object_property" get_property="objt" set_property="objt"/>
 				</widget>
              <!-- Form-->       
