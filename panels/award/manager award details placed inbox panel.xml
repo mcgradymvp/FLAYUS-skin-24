@@ -1,53 +1,47 @@
 <panel>
 
-  <string id="skin_style" value="subtle box"/>
+	<string id="skin_style" value="subtle box"/>
 
-  <layout class="fit_children_attachment" alignment="vertical" offset="0"/>
-  <layout class="stick_to_sides_attachment" alignment="top, horizontal" apply_to_children="true" inset="0"/>
+	<attachment_group class="vertical_arrange_autosize" vertical_offset="0" horizontal_inset="0" />
 
-  <boolean id="is_in_inbox" value="true"/>
+	<boolean id="is_in_inbox" value="true"/>
 
-  <container class="bordered_box">
-    <layout class="fit_children_attachment" alignment="vertical" offset="6"/>
-    <layout class="arrange_horizontal_attachment" layout="280, -1" offset="6"/>
-    <layout class="stick_to_sides_attachment" alignment="top, horizontal" inset="6" apply_to_children="true"/>
+	<container class="main_box">
+		<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="280,-1" horizontal_offset="6" vertical_offset="0" />
 
-    <!-- placing -->
-    <container class="bordered_box" appearance="boxes/custom/darken/no margin/paper" height="26" width="26" embed_in_frame="true">
-      <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" embed_in_frame="true" />
-      <layout class="stick_to_sides_attachment" alignment="top, left" inset="0" embed_in_frame="true" />
+		<!-- placing -->
+		<container class="main_box" appearance="boxes/custom/darken/no margin/paper" height="26" width="26" embed_in_frame="true">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" embed_in_frame="true" />
+			<layout class="stick_to_sides_attachment" alignment="left,top" inset="0" embed_in_frame="true" />
 
-      <widget class="label" id="posl" alignment="centre,can_scale" style="bold" colour="white" size="12" embed_in_frame="true" auto_size="none"/>
+			<widget class="label" id="posl" alignment="centre,can_scale" style="bold" colour="white" size="12" embed_in_frame="true" auto_size="none"/>
 
-    </container>
+		</container>
 
-    <!-- Player Picture -->
-    <widget class="competition_news_image_panel" id="ptpc" file="competition/competition news image panel2" height="170">
-      <layout class="centre_in_parent_attachment" alignment="vertical"/>
-    </widget>
+		<!-- Player Picture -->
+		<widget class="competition_news_image_panel" id="ptpc" height="170" />
 
-    <widget class="table" id="pitb" layout="8,-1" row_height="22" auto_size="vertical" all_content_same_height="true" row_spacing="1">
-      <layout class="centre_in_parent_attachment" alignment="vertical"/>
+		<widget class="table" id="pitb" layout="8,-1" row_height="22" auto_size="vertical" all_content_same_height="true" row_spacing="1">
 
-      <list id="column_display_properties">
-        <record index="1" left="10"/>
-      </list>
+			<list id="column_table_properties">
+				<record index="1" left="10"/>
+			</list>
 
-      <!-- Name -->
-      <widget class="person_button" id="apfn" col="0" row="0" style="bold" column_span="2"/>
+			<!-- Name -->
+			<widget class="person_button" id="apfn" col="0" row="0" style="bold" column_span="2"/>
 
-      <!-- Club -->
-      <widget class="team_button" id="apcb" col="1" row="1" icon_enabled="false" colour="faded text"/>
+			<!-- Club -->
+			<widget class="team_button" id="apcb" col="1" row="1" icon_enabled="false" colour="faded text"/>
 
-      <!-- Matches -->
-      <widget class="text" id="apga" col="1" row="2" colour="faded text"/>
+			<!-- Matches -->
+			<widget class="text" id="apga" col="1" row="2" colour="faded text"/>
 
-      <!-- Win ratio -->
-      <widget class="text" id="apwr" col="1" row="3" colour="faded text"/>
+			<!-- Win ratio -->
+			<widget class="text" id="apwr" col="1" row="3" colour="faded text"/>
 
-      <!-- Manager points -->
-      <widget class="text" id="apmp" col="1" row="4" colour="faded text"/>
-    </widget>
-  </container>
+			<!-- Manager points -->
+			<widget class="text" id="apmp" col="1" row="4" colour="faded text"/>
+		</widget>
+	</container>
 
 </panel>

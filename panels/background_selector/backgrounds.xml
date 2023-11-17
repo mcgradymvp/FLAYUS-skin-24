@@ -1,150 +1,150 @@
 <panel title="backgrounds">
-    <boolean id="save_session_state" value="true" />
-    <boolean id="save_default_state" value="true" />
-    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	<boolean id="save_session_state" value="true" />
+	<boolean id="save_default_state" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
 
-    <container>
-        <layout class="arrange_vertical_attachment" alignment="top, extend" gap="0" offset="0"/>
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="top, extend" gap="0" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+
+			<container id="1pic" hidn="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+				<widget class="background" file="backgrounds/1">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+					<attachment class="test_global_attachment" get_property="bgnd" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
+				</widget>
+
+				<widget class="background" file="backgrounds/1" hidden="true">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+					<attachment class="get_global_attachment" get_property="bgnd" set_property="file" skip_if_null="false"/>
+					<attachment class="test_global_attachment" get_property="bgnd" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
+				</widget>
+			</container>
+
+			<container id="2pic" hidn="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+				<widget class="background" file="backgrounds/2">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+					<attachment class="test_global_attachment" get_property="bgnd" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
+				</widget>
+
+				<widget class="background" file="backgrounds/2" hidden="true">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+					<attachment class="get_global_attachment" get_property="bgnd" set_property="file" skip_if_null="false"/>
+					<attachment class="test_global_attachment" get_property="bgnd" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
+				</widget>
+			</container>
+
+			<container id="3pic" hidn="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+				<widget class="background" file="backgrounds/3">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+					<attachment class="test_global_attachment" get_property="bgnd" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
+				</widget>
+
+				<widget class="background" file="backgrounds/3" hidden="true">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+					<attachment class="get_global_attachment" get_property="bgnd" set_property="file" skip_if_null="false"/>
+					<attachment class="test_global_attachment" get_property="bgnd" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
+				</widget>
+			</container>
+
+			<container id="4pic" hidn="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+				<widget class="background" file="backgrounds/4">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+					<attachment class="test_global_attachment" get_property="bgnd" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
+				</widget>
+
+				<widget class="background" file="backgrounds/4" hidden="true">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+					<attachment class="get_global_attachment" get_property="bgnd" set_property="file" skip_if_null="false"/>
+					<attachment class="test_global_attachment" get_property="bgnd" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
+				</widget>
+			</container>
+
+						<container id="5pic" hidn="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+				<widget class="background" file="backgrounds/5">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+					<attachment class="test_global_attachment" get_property="bgnd" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
+				</widget>
+
+				<widget class="background" file="backgrounds/5" hidden="true">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+					<attachment class="get_global_attachment" get_property="bgnd" set_property="file" skip_if_null="false"/>
+					<attachment class="test_global_attachment" get_property="bgnd" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
+				</widget>
+			</container>
+
+						<container id="6pic" hidn="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+				<widget class="background" file="backgrounds/6">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+					<attachment class="test_global_attachment" get_property="bgnd" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
+				</widget>
+
+				<widget class="background" file="backgrounds/6" hidden="true">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+					<attachment class="get_global_attachment" get_property="bgnd" set_property="file" skip_if_null="false"/>
+					<attachment class="test_global_attachment" get_property="bgnd" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
+				</widget>
+			</container>
+	
+       <!-- overlay sections -->
+	   
+       <!-- 10% -->
+      <widget class="picture" id="10bg" file="backgrounds/overlay/10" hidn="true" scale_picture="true" keep_aspect_ratio="false">
         <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+      </widget>
 
-        <container>
-            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+      <!-- 20% -->
+      <widget class="picture" id="20bg" file="backgrounds/overlay/20" hidn="true" scale_picture="true" keep_aspect_ratio="false">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+      </widget>
 
+      <!-- 30% -->
+      <widget class="picture" id="30bg" file="backgrounds/overlay/30" hidn="true" scale_picture="true" keep_aspect_ratio="false">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+      </widget>
 
-            <container id="1pic" hidn="true">
-                <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+      <!-- 40% -->
+      <widget class="picture" id="40bg" file="backgrounds/overlay/40" hidn="true" scale_picture="true" keep_aspect_ratio="false">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+      </widget>
 
-                <widget class="background" file="backgrounds/1">
-                    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-                    <attachment class="test_global_attachment" get_property="bgnd" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
-                </widget>
+      <!-- 50% -->
+      <widget class="picture" id="50bg" file="backgrounds/overlay/50" scale_picture="true" keep_aspect_ratio="false">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+      </widget>
 
-                <widget class="background" file="backgrounds/1" hidden="true">
-                    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-                    <attachment class="get_global_attachment" get_property="bgnd" set_property="file" skip_if_null="false"/>
-                    <attachment class="test_global_attachment" get_property="bgnd" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
-                </widget>
-            </container>
+      <!-- 60% -->
+      <widget class="picture" id="60bg" file="backgrounds/overlay/60" hidn="true" scale_picture="true" keep_aspect_ratio="false">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+      </widget>
 
-            <container id="2pic" hidn="true">
-                <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+      <!-- 70% -->
+      <widget class="picture" id="70bg" file="backgrounds/overlay/70" hidn="true" scale_picture="true" keep_aspect_ratio="false">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+      </widget>
 
-                <widget class="background" file="backgrounds/2">
-                    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-                    <attachment class="test_global_attachment" get_property="bgnd" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
-                </widget>
+      <!-- 80%-->
+      <widget class="picture" id="80bg" file="backgrounds/overlay/80" hidn="true" scale_picture="true" keep_aspect_ratio="false">
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+      </widget>
 
-                <widget class="background" file="backgrounds/2" hidden="true">
-                    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-                    <attachment class="get_global_attachment" get_property="bgnd" set_property="file" skip_if_null="false"/>
-                    <attachment class="test_global_attachment" get_property="bgnd" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
-                </widget>
-            </container>
+	 </container>
 
-            <container id="3pic" hidn="true">
-                <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-
-                <widget class="background" file="backgrounds/3">
-                    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-                    <attachment class="test_global_attachment" get_property="bgnd" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
-                </widget>
-
-                <widget class="background" file="backgrounds/3" hidden="true">
-                    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-                    <attachment class="get_global_attachment" get_property="bgnd" set_property="file" skip_if_null="false"/>
-                    <attachment class="test_global_attachment" get_property="bgnd" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
-                </widget>
-            </container>
-
-            <container id="4pic" hidn="true">
-                <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-
-                <widget class="background" file="backgrounds/4">
-                    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-                    <attachment class="test_global_attachment" get_property="bgnd" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
-                </widget>
-
-                <widget class="background" file="backgrounds/4" hidden="true">
-                    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-                    <attachment class="get_global_attachment" get_property="bgnd" set_property="file" skip_if_null="false"/>
-                    <attachment class="test_global_attachment" get_property="bgnd" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
-                </widget>
-            </container>
-
-            <container id="5pic" hidn="true">
-                <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-
-                <widget class="background" file="backgrounds/5">
-                    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-                    <attachment class="test_global_attachment" get_property="bgnd" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
-                </widget>
-
-                <widget class="background" file="backgrounds/5" hidden="true">
-                    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-                    <attachment class="get_global_attachment" get_property="bgnd" set_property="file" skip_if_null="false"/>
-                    <attachment class="test_global_attachment" get_property="bgnd" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
-                </widget>
-            </container>
-
-            <container id="6pic" hidn="true">
-                <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-
-                <widget class="background" file="backgrounds/6">
-                    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-                    <attachment class="test_global_attachment" get_property="bgnd" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
-                </widget>
-
-                <widget class="background" file="backgrounds/6" hidden="true">
-                    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-                    <attachment class="get_global_attachment" get_property="bgnd" set_property="file" skip_if_null="false"/>
-                    <attachment class="test_global_attachment" get_property="bgnd" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
-                </widget>
-            </container>
-
-            <!-- overlay sections -->
-
-            <!-- 10% -->
-            <widget class="picture" id="10bg" file="backgrounds/overlay/10" hidn="true" scale_picture="true" keep_aspect_ratio="false">
-                <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-            </widget>
-
-            <!-- 20% -->
-            <widget class="picture" id="20bg" file="backgrounds/overlay/20" hidn="true" scale_picture="true" keep_aspect_ratio="false">
-                <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-            </widget>
-
-            <!-- 30% -->
-            <widget class="picture" id="30bg" file="backgrounds/overlay/30" hidn="true" scale_picture="true" keep_aspect_ratio="false">
-                <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-            </widget>
-
-            <!-- 40% -->
-            <widget class="picture" id="40bg" file="backgrounds/overlay/40" hidn="true" scale_picture="true" keep_aspect_ratio="false">
-                <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-            </widget>
-
-            <!-- 50% -->
-            <widget class="picture" id="50bg" file="backgrounds/overlay/50" scale_picture="true" keep_aspect_ratio="false">
-                <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-            </widget>
-
-            <!-- 60% -->
-            <widget class="picture" id="60bg" file="backgrounds/overlay/60" hidn="true" scale_picture="true" keep_aspect_ratio="false">
-                <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-            </widget>
-
-            <!-- 70% -->
-            <widget class="picture" id="70bg" file="backgrounds/overlay/70" hidn="true" scale_picture="true" keep_aspect_ratio="false">
-                <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-            </widget>
-
-            <!-- 80%-->
-            <widget class="picture" id="80bg" file="backgrounds/overlay/80" hidn="true" scale_picture="true" keep_aspect_ratio="false">
-                <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-            </widget>
-
-        </container>
-
-    </container>
+	</container>
 
 </panel>

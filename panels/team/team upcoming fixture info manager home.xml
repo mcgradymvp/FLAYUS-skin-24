@@ -1,7 +1,5 @@
 <panel>
-	<attachment_group class="vertical_arrange" vertical_layout="180,-1" vertical_offset="0" vertical_gap="-10" horizontal_inset="0" />
-
-	<container class="client_object_viewer_xml_panel" file="team/team upcoming fixture badges manager home" id="tmbp" />
+<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 	<string id="skin_style" value="contrast box" />
 	<!-- Comp name, stadium details and weather-->
@@ -21,8 +19,6 @@
 				<widget class="label" id="nMat" alignment="centre_y,centre_x" format="date_and_days" />
 			</container>
 
-			<widget class="horizontal_divider" />
-
 			<container>
 				<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
 
@@ -39,8 +35,25 @@
 					<widget class="text" id="comp" auto_size="vertical" colour="secondary_text" alignment="centre_y,centre_x" multiline="false" size="small"/>
 
 					<!-- stadium name & weather-->
-					<container height="50">
-						<attachment_group class="vertical_arrange" vertical_alignment="left,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
+					<container height="55">
+						<layout class="arrange_horizontal_attachment" layout="-1,-1,-1" offset="0"/>
+            <layout class="stick_to_sides_attachment" alignment="left" inset="50" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+    
+    <!-- Labels-->
+    <container height="26">
+      <layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" gap="0" />
+      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+      <widget class="label" alignment="bottom, left" font="title" auto_size="vertical" colour="faded text">
+        <translation id="text" translation_id="227980" type="use" value="Manager[COMMENT - manager, short text]" />
+      </widget>
+
+      <widget class="person_button" id="mang" spec="text" size="9" height="26" alignment="top, left">
+        <translation id="no_object_text" translation_id="424586" type="use" value="None[COMMENT: string indicating a club has no manager, different to the previously used ID 227487 so translate accordingly if needed]" />
+      </widget>
+
+    </container>
 
 						<widget class="stadium_button" id="stad" alignment="left,centre_y" auto_size="horizontal">
               <translation id="no_object_text" translation_id="227505" type="use" value="Unknown Stadium"/>
@@ -64,32 +77,15 @@
 				</container>
 			</container>
 
-			<container height="5" />
-
-				<widget class="picture" file="dividers/standard/horizontal/line" height="1" />
+			<widget class="picture" file="dividers/standard/horizontal/line" height="1" />
     
   <!-- Manager and past meetings-->
   <container>
     <layout class="arrange_vertical_attachment" layout="-1,26" offset="0" gap="0" />
     <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
-
-    <!-- Labels-->
-    <container height="26">
-      <layout class="arrange_vertical_attachment" layout="-1,-1,1,-1" offset="0" gap="0" />
-      <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
-
-      <widget class="label" alignment="bottom, left" font="title" auto_size="vertical" colour="faded text">
-        <translation id="text" translation_id="227980" type="use" value="Manager[COMMENT - manager, short text]" />
-      </widget>
-
-      <widget class="person_button" id="mang" spec="text" size="9" height="26" alignment="top, left">
-        <translation id="no_object_text" translation_id="424586" type="use" value="None[COMMENT: string indicating a club has no manager, different to the previously used ID 227487 so translate accordingly if needed]" />
-      </widget>
-      <widget class="picture" file="dividers/standard/horizontal/line" height="1" />
-      <widget class="label" alignment="bottom, left" font="title" auto_size="vertical" height="26" colour="faded text">
+      <widget class="label" alignment="top,centre_x,centre_y" font="text" auto_size="vertical" height="26" >
         <translation id="text" translation_id="447705" type="use" value="All-Time Past Meetings[COMMENT: manager home; title for sectiond displaying past meetings between teams]" />
       </widget>
-    </container>
 
      <!-- Data -->
     <container height="26">
@@ -97,9 +93,9 @@
       <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
 
       <container class="property_list_viewer_xml_panel" id="pmet">
-        <layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1,-1,-1" offset="0" gap="0" />
+        <layout class="arrange_horizontal_attachment" layout="35,-1,35,-1,35,-1" offset="50" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="left" inset="25" />
         <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-
         <!-- Wins -->
         <widget class="label" alignment="left, centre_y">
           <translation id="text" translation_id="249367" type="use" value="胜" />
@@ -144,7 +140,6 @@
     </container>
   </container>
  </container>
- 		<widget class="horizontal_divider" />
  </container>
  
 </panel>

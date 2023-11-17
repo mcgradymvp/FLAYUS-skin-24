@@ -4,22 +4,19 @@
 	<container class="title_link_box" force_title_borders="true" id="SUBP" />
 
 	<!-- Make sure everything is late loading! -->
-	<widget class="team_training_week_panel" id="tsBr" section="ttcP" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_fmc="false" valid_for_unemployed_manager="false">
+	<widget class="team_training_week_panel" id="tsBr" section="ttcP" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_fmt="false" valid_for_unemployed_manager="false">
 		<translation id="title" translation_id="466557" type="use" value="Training Session Breakdown[COMMENT; training section of player profile]" />
 	</widget>
 	<widget class="team_injuries_overview_panel" id="MedC" section="InOv" late_loading="true" valid_for_unemployed_manager="false" file="team/team injuries overview panel snapshot">
 		<translation id="title" translation_id="450760" type="use" value="Medical Centre[COMMENT: Panel title for when viewing medical report, was ID 447586 but we've since been asked to change it to Medical Centre]" />
 	</widget>
-	<widget class="training_overview_panel" file="human/manager home training panel" id="tstr" section="ttcP" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_fmc="false" valid_for_unemployed_manager="false">
+	<widget class="training_overview_panel" file="human/manager home training panel" id="tstr" section="ttcP" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_fmt="false" valid_for_unemployed_manager="false">
 		<translation id="title" translation_id="248422" type="use" value="Training[COMMENT; training section of player profile]" />
 	</widget>
-	<widget class="team_training_happiness_widget" id="ttHp" late_loading="true" section="TeTi" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_fmc="false" valid_for_unemployed_manager="false">
+	<widget class="team_training_happiness_widget" id="ttHp" late_loading="true" section="TeTi" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_fmt="false" valid_for_unemployed_manager="false">
 		<translation id="title" translation_id="334174" type="use" value="Training Happiness[COMMENT: player training, player happiness comments]" />
 	</widget>
-	<widget class="training_overview_panel" file="team/team training panel match preparation" id="tMpr" section="ttcP" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_fmc="false" valid_for_unemployed_manager="false">
-		<translation id="title" translation_id="308600" type="use" value="Match Preparation[COMMENT - team screen section for match preparation]" />
-	</widget>
-	<widget class="club_training_performers_panel" id="CTPP" section="TeTi" file="club/club training performers panel2" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_fmc="false" valid_for_unemployed_manager="false">
+	<widget class="club_training_performers_panel" id="CTPP" section="TeTi" late_loading="true" valid_for_international_teams="false" valid_for_international_youth_teams="false" valid_for_fmt="false" valid_for_unemployed_manager="false">
 		<translation id="title" translation_id="466443" type="use" value="Training Performance[COMMENT; training performance section of manager home panel]" />
 	</widget>
 </panel>
