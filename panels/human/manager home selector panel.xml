@@ -79,6 +79,6 @@
 		<translation id="title" translation_id="320154" type="use" value="Promises[COMMENT: player status panel; panel header title for a section listing all promises a manager has made to a player]" />
 	</widget>
 	<widget class="team_opposition_report_predicted_tactical_style_panel" id="trpt" late_loading="true" valid_for_unemployed_manager="false" valid_for_international_teams="false" valid_for_international_youth_teams="false">
-		<translation id="title" type="use" value="다음 상대" />
+		<translation id="title" type="use" value="下一个对手" />
 	</widget>
 </panel>

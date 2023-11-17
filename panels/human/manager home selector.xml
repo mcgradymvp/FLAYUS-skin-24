@@ -5,6 +5,6 @@
   </container>
 
 	<widget class="team_opposition_report_predicted_tactical_style_panel" id="trpt" late_loading="true">
-		<translation id="title" type="use" value="다음 상대" />
+		<translation id="title" type="use" value="下一个对手" />
 	</widget>
 </panel>
