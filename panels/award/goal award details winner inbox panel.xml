@@ -3,63 +3,65 @@
 	<string id="skin_style" value="subtle box"/>
 
 	<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
-	<layout class="stick_to_sides_attachment" alignment="top, horizontal" apply_to_children="true" inset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal,top" apply_to_children="true" inset="0"/>
 
 	<boolean id="is_in_inbox" value="true"/>
 
-	<container class="bordered_box"  red_replacement="dark_box_background">
+	<container class="inner_subtle_box" red_replacement="dark_box_background">
 		<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
 		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" gap="1" />
 		<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true"/>
 
-        <!-- placing -->
-        <container background_colour="gold" embed_in_frame="true" width="26">
+		<!-- placing -->
+		<container background_colour="gold" embed_in_frame="true" width="26">
 			<layout class="fit_children_attachment" alignment="vertical" offset="0" embed_in_frame="true"/>
-          <layout class="stick_to_sides_attachment" alignment="top, horizontal" inset="0,1,0,1" apply_to_children="true" embed_in_frame="true" />
-          <layout class="stick_to_sides_attachment" alignment="top, left" inset="0" embed_in_frame="true" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0,1,0,1" apply_to_children="true" embed_in_frame="true" />
+			<layout class="stick_to_sides_attachment" alignment="left,top" inset="8" embed_in_frame="true" />
 
-          <widget class="label" id="posl" alignment="centre" colour="black" size="12" style="bold" embed_in_frame="true" auto_size="vertical"/>
+			<widget class="label" id="posl" alignment="centre" colour="black" size="12" style="bold" embed_in_frame="true" auto_size="vertical"/>
 
-        </container>
-		
+		</container>
+
 		<container>
-			<layout class="fit_children_attachment" alignment="vertical" offset="6"/>
-			<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="6"/>
-			<layout class="stick_to_sides_attachment" alignment="top" inset="6" apply_to_children="true"/>
+			<layout class="fit_children_attachment" alignment="vertical" offset="10"/>
+			<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="10"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="10" apply_to_children="true"/>
 
 			<!-- Player Picture -->
-			<widget class="competition_news_image_panel" id="ptpc" file="competition/competition news image panel2" height="170">
+			<widget class="competition_news_image_panel" id="ptpc" height="170">
 				<layout class="centre_in_parent_attachment" alignment="vertical"/>
 			</widget>
 
 			<widget class="table" id="pitb" layout="-1" auto_size_rows="true" auto_size="vertical" all_content_same_height="true" row_spacing="1">
 				<layout class="centre_in_parent_attachment" alignment="vertical"/>
 
-				<list id="column_display_properties">
+				<list id="column_table_properties">
 					<record index="0" right="20"/>
 				</list>
 
+				<record id="default_properties" col="0" />
+
 				<!-- Name -->
-				<widget class="person_button" id="apfn" col="0" row="0" style="bold" alignment="left, centre_y"/>
+				<widget class="person_button" id="apfn" row="0" style="bold" alignment="left,centre_y"/>
 
 				<!-- Team -->
-				<widget class="team_button" id="apcb" col="0" row="1" icon_enabled="false" alignment="left, centre_y" colour="faded text"/>
+				<widget class="team_button" id="apcb" row="1" icon_enabled="false" alignment="left,centre_y" colour="faded text"/>
 
 				<!-- Loaning team -->
-				<widget class="label" id="alcb" col="0" row="2" alignment="left, centre_y" colour="faded text"/>
+				<widget class="label" id="alcb" row="2" alignment="left,centre_y" colour="faded text"/>
 
 				<!-- Position -->
-				<widget class="position_label" id="appo" col="0" row="3" alignment="left, centre_y" colour="faded text"/>
+				<widget class="position_label" id="appo" row="3" alignment="left,centre_y" colour="faded text"/>
 
 				<!-- Age -->
-				<widget class="label" col="0" row="4" id="apag" colour="faded text"/>
+				<widget class="label" row="4" id="apag" colour="faded text"/>
 			</widget>
 		</container>
 		<widget class="table" id="stdt" mode="fill_rows, stripe_rows" layout="-1" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical" row_spacing="2">
 			<layout class="stick_to_sides_attachment" alignment="top" inset="10"/>
-			<list id="column_properties">
-				<record index="0" alignment="left, centre_y"/>
-				<record index="1" alignment="right, centre_y"/>
+			<list id="column_widget_properties">
+				<record index="0" alignment="left,centre_y"/>
+				<record index="1" alignment="right,centre_y"/>
 			</list>
 
 			<widget class="text" id="fixl" col="0" row="0" style="bold"/>

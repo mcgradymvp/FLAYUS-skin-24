@@ -1,0 +1,103 @@
+﻿<panel >
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="0" vertical_offset="0" horizontal_inset="0"/>
+
+	<!-- content area -->
+	<widget class="inbox_body_text" id="bdtx"/>
+
+	<!--match focus-->
+	<container class="main_box" id="rpbx" height="820">
+		<attachment_group class="vertical_arrange" vertical_offset="0" vertical_alignment="top,extend" vertical_gap="0"/>
+		<container class="client_object_viewer_xml_panel" id="fxDt">
+
+			<attachment_group class="vertical_arrange_autosize" vertical_gap="0" />
+			<widget class="comp_button" alignment="centre" height="20" auto_size="horizontal" colour="faded text" icon_enabled="false">
+				<record id="object_property" get_property="fxCo" set_property="valu" />
+			</widget>
+			
+			<container>
+				<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" horizontal_gap="8" />
+
+				<!--home details-->
+				<container>
+					<attachment_group class="vertical_arrange_autosize_all" vertical_gap="4" />
+					<widget class="team_button" alignment="left, centre_y" style="bold" size="xlarge" multiline="false"  auto_size="all" icon_enabled="false" mode="1">
+						<record id="object_property" get_property="home" set_property="valu" />
+					</widget>
+					<container class="client_object_viewer_xml_panel">
+						<record id="object_property" get_property="home" set_property="objt" />
+						<attachment_group class="vertical_arrange_autosize_all" vertical_gap="0" />
+						<widget class="division_position_button"  alignment="centre_x,bottom" display_format="1" size="small" colour="faded text" auto_size="all">
+							<record id="object_property">
+								<integer id="get_property" value="Tpos" />
+							</record>
+						</widget>
+					</container>
+				</container>
+
+				<widget class="object_portrait_picture" ignore_sizing="true" scale_picture="true" keep_aspect_ratio="true" width="40"  image_alignment="centre">
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+					<record id="object_property">
+						<integer id="get_property" value="home" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+
+				<widget class="text" ignore_sizing="true" alignment="centre" size="xlarge" style="bold" width="40" >
+					<translation id="text" translation_id="516206" type="use" value="vs[COMMENT: AREA: Prematch Header Panels; SUB-AREA: subtitle text; BN: 35843; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: short for versus, eg Team1 vs Team2]" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+				</widget>
+
+
+				<widget class="object_portrait_picture" ignore_sizing="true" auto_size="horizontal" width="40"  scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+					<record id="object_property">
+						<integer id="get_property" value="away" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+
+				<!--away-->
+				<container>
+					<attachment_group class="vertical_arrange_autosize_all" vertical_gap="4" />
+					<widget class="team_button" alignment="left, centre_y"  style="bold" size="xlarge" multiline="false"  auto_size="all" icon_enabled="false" mode="1">
+						<record id="object_property" get_property="away" set_property="valu" />
+					</widget>
+					<container class="client_object_viewer_xml_panel">
+						<record id="object_property" get_property="away" set_property="objt" />
+						<attachment_group class="vertical_arrange_autosize_all" vertical_gap="0" />
+						<widget class="division_position_button"  alignment="centre_x,bottom" display_format="1" size="small" colour="faded text" auto_size="all">
+							<record id="object_property">
+								<integer id="get_property" value="Tpos" />
+							</record>
+						</widget>
+					</container>
+				</container>
+			</container>
+	
+		</container>
+
+		<widget class="team_opposition_report_predicted_tactical_style_panel" id="topt" file="team/team opposition report predicted tactical style panel1" height="400">
+				<record id="object_property">
+			<list id="get_properties">
+				<record>
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</list>
+		</record>
+	</widget>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+			<widget class="match_focus_session_widget" id="mchF"/>
+
+
+			<widget class="text" alignment="centre" id="fnTx" hidden="true" height="200">
+
+				<translation id="text" translation_id="254539" type="use" value="Finished[COMMENT: scout assignments panel; scout has finished assignments]" />
+			</widget>
+
+		</container>
+	</container>
+</panel>

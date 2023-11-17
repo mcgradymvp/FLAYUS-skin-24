@@ -8,18 +8,19 @@
 	<!-- Subs Styles -->
 	<flags id="subs" value="tables/custom/squad/substitute/row" />
 
-	<widget class="inner_box">
+	<container class="inner_subtle_box">
 		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
-		<widget class="client_object_list_table" id="awsl" database_table_type="1" mode="fill_rows, stripe_rows, printable, keyboard">
+		<widget class="client_object_list_table" id="awsl" database_table_type="1" mode="fill_rows, stripe_rows, printable, keyboard" navigation_container="true">
 			<integer id="contextual_handler_column_id" value="Pers" />
 			<record id="viewed_property_ids">
 				<record id="Pers" auto_hide_priority="10">
 					<boolean id="person_is_player" value="true" />
+					<integer id="minimum_width" value="109" />
 				</record>
-				<record id="TApp" width="160" auto_hide_priority="10"/>
+				<record id="TApp" auto_hide_priority="10" navigation_focus_target="true"/>
 				<record id="Pclb" auto_hide_priority="10"/>
-				<record id="Pnat" auto_hide_priority="40"/>
+				<record id="Pnat" auto_hide_priority="40" navigation_focus_target="true" />
 				<record id="Poap" auto_hide_priority="30"/>
 				<record id="Pogl" auto_hide_priority="35"/>
 				<record id="Poav" auto_hide_priority="20"/>
@@ -44,18 +45,16 @@
 			</list>
 
 		</widget>
-	</widget>
+	</container>
 
 	<widget class="inner_box">
 		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
-		<widget class="pitch_with_tactics" id="attp" player_icon_file="tactics/tactics icon preview info panel12" icon_flags="show_name,use_player_kits_front,show_team_name,show_selection_image">
+		<widget class="pitch_with_tactics" id="attp" icon_flags="show_name,use_player_kits_front,show_team_name,show_selection_image,show_name_highlight">
 			<layout class="stick_to_sides_attachment" alignment="right" inset="0" />
 			<boolean id="vertical" value="true" />
 			<integer id="pitch_vertical_padding" value="20"/>
 			<boolean id="pitch_is_read_only" value="true" />
-      <boolean id="pitch_pattern_opacity" value="0"/>
-      <boolean id="pitch_draw_grass" value="false"/>
 		</widget>
 
 	</widget>

@@ -1,29 +1,44 @@
 <panel>
 	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
-
-	<container class="bordered_box" format="date_and_days">	
-		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
-		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+	
+	<container class="main_box" format="date_and_days">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 		<string id="skin_style" value="contrast box" />
 
 		<!--container shown when there is a next match available-->
 		<container id="nemc" hidden="true">
 			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
 
-			<container class="vertical_adaptive_container" gap="0" inset="0" offset="0" mode="distribute_equally">
+			<container class="horizontal_adaptive_container" gap="15" inset="0" offset="0" mode="distribute_equally">
 
 				<string id="skin_style" value="subtle box" />
-
-				<container default_height="380" priority="1" minimum_height="380">
+                
+				<container class="client_object_viewer_xml_panel" file="team/team upcoming fixture badges manager home" id="tmbp" default_width="-1" priority="1" minimum_width="300"/>
+				
+				<container default_width="-1" priority="1" minimum_width="300">
 					<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_offset="0" vertical_gap="0" horizontal_inset="0" />
 
 					<!-- Info about next fixture -->
 					<widget class="team_upcoming_fixture_info_panel" file="team/team upcoming fixture info manager home" id="tmip" omit_prefix="true"/>
-			
 				</container>
 
+				<!-- Future fixtures list -->
+				<container minimum_width="290" priority="2" default_width="-1">
+					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="2" vertical_gap="0" horizontal_inset="0" />
+
+					<container height="26">
+						<layout class="stick_to_sides_attachment" alignment="left,vertical" inset="0" apply_to_children="true" />
+
+						<string id="skin_style" value="title link" />
+
+						<widget class="link_button_panel_title" id="fixb" auto_size="all" font="title" default_focus="true">
+							<translation id="text" translation_id="348841" type="use" value="Fixtures and Results[COMMENT: title for the previous set of first team results on the club overview panel]" />
+						</widget>
+					</container>
+					<container class="manager_upcoming_fixtures_panel" id="mufp" row_count="5" file="human/manager upcoming fixtures fixed"/>
+				</container>
 				<!--News for next fixture -->
-				<container class="property_list_viewer_xml_panel" id="fixN" minimum_height="100" priority="2" default_height="200">
+				<container class="property_list_viewer_xml_panel" id="fixN" minimum_width="300" priority="3" default_width="-1">
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
 					<record id="object_property">
@@ -34,10 +49,10 @@
 							</record>
 						</list>
 					</record>
-		
+
 					<container>
 						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
-						<container class="scrolling_box">
+						<container class="scrolling_box" navigation_container="true">
 							<container>
 								<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="4" horizontal_inset="0" />
 
@@ -75,23 +90,7 @@
 								</widget>
 							</container>
 						</container>
-					</container>				
-				</container>
-		
-				<!-- Future fixtures list -->
-				<container minimum_height="100" priority="3" default_height="250">
-					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="2" vertical_gap="0" horizontal_inset="0" />
-
-					<container height="26">
-						<layout class="stick_to_sides_attachment" alignment="left,vertical" inset="0" apply_to_children="true" />
-
-						<string id="skin_style" value="title link" />
-
-						<widget class="link_button" id="fixb" auto_size="all" font="title">
-							<translation id="text" translation_id="348841" type="use" value="Fixtures and Results[COMMENT: title for the previous set of first team results on the club overview panel]" />
-						</widget>
 					</container>
-					<container class="manager_upcoming_fixtures_panel" id="mufp" file="human/manager upcoming fixtures2"/>
 				</container>
 			</container>
 		</container>
@@ -99,9 +98,7 @@
 		<!--container shown when there is no next match-->
 		<container id="nonm" hidden="true">
 
-			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
-
-			<widget class="spacer" height="10" />
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4"/>
 
 			<!--team badge(s)-->
 			<container>
@@ -149,10 +146,10 @@
 
 			<!--explanatory text-->
 			<widget class="text" alignment="centre" size="large" auto_size="vertical" style="semi_bold, embossed">
-				<translation id="text" translation_id="296345" type="use" value="You are currently unemployed." />
+				<translation id="text" translation_id="348580" type="use" value="[%person#1-You] are currently unemployed[COMMENT: Game processing panel; punctuation changed - use top-ten matches ]" />
 			</widget>
 			<widget class="text" alignment="centre" size="8" auto_size="vertical">
-				<translation id="text" translation_id="296346" type="use" value="You can look for available jobs in the Jobs section." />
+				<translation id="text" translation_id="348582" type="use" value="[%person#1-You] can look for available jobs in the Jobs section[COMMENT: Game processing panel; punctuation changed - use top-ten matches ]" />
 			</widget>
 
 			<!--button to look for jobs-->
@@ -161,6 +158,7 @@
 				<layout class="centre_in_parent_attachment" alignment="horizontal" />
 			</widget>
 		</container>
-	 </container>
+
+	</container>
 
 </panel>

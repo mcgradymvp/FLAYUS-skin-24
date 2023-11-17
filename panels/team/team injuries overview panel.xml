@@ -1,217 +1,532 @@
 ﻿<panel>
-	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
-
-	<boolean id="should_force_refresh" value="true"/>
-	<string id="skin_style" value="title link"/>
-
-	<container class="bordered_box" id="AsBx" height="155">
-		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
-
-		<container>
-			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_offset="0" horizontal_gap="0" vertical_alignment="vertical" vertical_inset="0"/>
-
-			<widget class="client_object_viewer_xml_panel" file="person/person details panel small1" id="StDt" width="140"/>
-
-			<container class="bordered_box" appearance="boxes/custom/speech bubble/left/paper" red_replacement="blue grey 900">
-				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
-
-				<container class="scrolling_box">
-					<widget class="text" id="StQt" auto_size="vertical" multiline="true" colour="white"/>
-				</container>
-			</container>
-		</container>
-	</container>
-
-	<container>
-		<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0"/>
-
-		<container>
-			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_offset="0" horizontal_alignment="horizontal" horizontal_inset="0" vertical_gap="0"/>
-
-			<container class="bordered_box">
-				<layout class="arrange_vertical_attachment" layout="26, 25, -1" offset="0" gap="0"/>
-				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
-
-				<container>
-					<widget class="link_button" section="InRA" auto_size="all" colour="accent">
-						<translation id="text" translation_id="447655" type="use" value="Risk Assessment[COMMENT: FR20159; team injuries panel; panel title for assessing player injury risk]"/>
-						<layout class="stick_to_sides_attachment" alignment="left,top" inset="0"/>
-					</widget>
-
-					<widget class="embedded_filter_button" id="plsf" needs_width="true" needs_height="true">
-						<translation id="text" translation_id="247166" type="use" value="Show Filters"/>
-						<layout class="stick_to_sides_attachment" alignment="right,top" inset="0"/>
-					</widget>
-				</container>
-
-				<widget class="number_label" id="HRNu" font="value"/>
-
-				<container>
-					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
-					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
-
-					<widget class="team_injuries_risk_assessment_table_panel" id="RAtb" only_show_at_risk_players="true"/>
-
-					<widget class="label" id="NoAR" alignment="centre" auto_size="none" hidden="true">
-						<translation id="text" translation_id="450802" type="use" value="There are currently no players with an above normal risk of injury.[COMMENT: FR 20159; team injuries overview panel; label to explain team has no at risk players]"/>
-					</widget>
-				</container>
-			</container>
-
-			<container height="200">
-				<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_offset="0" vertical_alignment="vertical" vertical_inset="0"/>
-
-				<container class="bordered_box">
-					<attachment_group class="vertical_arrange" vertical_layout="20,25,-1" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
-
-					<widget class="text" auto_size="all" font="title" colour="accent">
-						<translation id="text" translation_id="227748" type="use" value="Injuries"/>
-					</widget>
-
-
-					<container>
-						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
-						<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="12"/>
-
-						<record id="default_properties" auto_size="horizontal"/>
-						
-						<widget class="number_label" id="INNu" font="value"/>
-						<widget class="label" id="MajI" colour="injury_severity_colour_major" alignment="left,centre_y"/>
-						<widget class="label" id="ModI" colour="injury_severity_colour_moderate" alignment="left,centre_y"/>
-						<widget class="label" id="MinI" colour="injury_severity_colour_minor" alignment="left,centre_y"/>
-						<widget class="label" id="SliI" colour="injury_severity_colour_slight" alignment="left,centre_y"/>
-					</container>
-
-					<container>
-						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
-
-						<widget class="table" id="Intb" layout="34, -3, -3, -4, -3" mode="fill_rows, stripe_rows" default_sort_column="4" all_content_same_height="true" auto_size_rows="false" fixed_size_rows="true" row_height="30">
-							<list id="headings">
-								<record index="0">
-									<translation id="text" translation_id="232994" type="use" value="Info"/>
-								</record>
-								<record index="1">
-									<translation id="text" translation_id="227966" type="use" value="Player"/>
-								</record>
-								<record index="2">
-									<translation id="text" translation_id="227783" type="use" value="Squad Status"/>
-								</record>
-								<record index="3">
-									<translation id="text" translation_id="247523" type="use" value="Injury[COMMENT: Player Injury name, table header]"/>
-								</record>
-								<record index="4">
-									<translation id="text" translation_id="450765" type="use" value="Out For[COMMENT: FR 20159; team injuries overview panel; table column header indicating how long a player will be injured for]"/>
-								</record>
-							</list>
-
-							<list id="column_table_properties">
-								<record index="0">
-									<boolean id="sort_ascending" value="false"/>
-								</record>
-								<record index="1">
-									<boolean id="sort_ascending" value="true"/>
-								</record>
-								<record index="2">
-									<boolean id="sort_ascending" value="false"/>
-								</record>
-								<record index="3">
-									<boolean id="sort_ascending" value="true"/>
-								</record>
-								<record index="4">
-									<boolean id="sort_ascending" value="false"/>
-								</record>
-							</list>
-
-							<list id="column_widget_properties">
-								<record index="0" alignment="centre"/>
-								<record index="1" alignment="left,centre_y"/>
-								<record index="2" alignment="left,centre_y"/>
-								<record index="3" alignment="left,centre_y" auto_size="none" multiline="false"/>
-								<record index="4" alignment="left,centre_y" auto_size="none" multiline="false"/>
-							</list>
-						</widget>
-
-						<widget class="label" id="NoIN" alignment="centre" auto_size="none" hidden="true">
-							<translation id="text" translation_id="450803" type="use" value="There are currently no injured players[COMMENT: FR 20159; team injuries overview panel; label to explain team has no inujured players]"/>
-						</widget>
-					</container>
-				</container>
-
-				<container class="bordered_box">
-					<attachment_group class="vertical_arrange" vertical_layout="20,25,-1" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
-
-					<widget class="text" auto_size="all" font="title" colour="accent">
-						<translation id="text" translation_id="450804" type="use" value="Recently Returned from Injury[COMMENT: FR 20159; team injuries overview panel; title for number of players that have recently returned from injury]"/>
-					</widget>
-
-					<widget class="number_label" id="ReNu" font="value"/>
-
-					<container>
-						<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
-
-						<widget class="table" id="Retb" layout="34, -3, -2, -2, -2" mode="fill_rows, stripe_rows" default_sort_column="4" all_content_same_height="true" auto_size_rows="false" fixed_size_rows="true" row_height="30">
-							<list id="headings">
-								<record index="0">
-									<translation id="text" translation_id="232994" type="use" value="Info"/>
-								</record>
-								<record index="1">
-									<translation id="text" translation_id="227966" type="use" value="Player"/>
-								</record>
-								<record index="2">
-									<translation id="text" translation_id="227783" type="use" value="Squad Status"/>
-								</record>
-								<record index="3">
-									<translation id="text" translation_id="450767" type="use" value="Recent Injury[COMMENT: FR 20159; team injuries overview panel; table column header indicating what injury a player has recovered from]"/>
-								</record>
-								<record index="4">
-									<translation id="text" translation_id="227793" type="use" value="Condition"/>
-								</record>
-							</list>
-
-							<list id="column_table_properties">
-								<record index="0">
-									<boolean id="sort_ascending" value="false"/>
-								</record>
-								<record index="1">
-									<boolean id="sort_ascending" value="true"/>
-								</record>
-								<record index="2">
-									<boolean id="sort_ascending" value="false"/>
-								</record>
-								<record index="3">
-									<boolean id="sort_ascending" value="true"/>
-								</record>
-								<record index="4">
-									<boolean id="sort_ascending" value="false"/>
-								</record>
-							</list>
-
-							<list id="column_widget_properties">
-								<record index="0" alignment="centre"/>
-								<record index="1" alignment="left,centre_y"/>
-								<record index="2" alignment="left,centre_y"/>
-								<record index="3" alignment="left,centre_y" auto_size="none" multiline="false"/>
-								<record index="4" alignment="left,centre_y" auto_size="none" multiline="false"/>
-							</list>
-						</widget>
-
-						<widget class="label" id="NoRe" alignment="centre" auto_size="none" hidden="true">
-							<translation id="text" translation_id="450805" type="use" value="There are currently no players recently returned from injury[COMMENT: FR 20159; team injuries overview panel; label to explain team has no players recently returned from injury]"/>
-						</widget>
-					</container>
-				</container>
-			</container>
-		</container>
-
-		<!-- filter editing panel -->
-		<container class="filter_panel" id="filp" width="200" hidden="true" exclude_from_find="true">
-
-			<!-- buttons area -->
-			<widget class="embedded_action_button" id="hdfl" click_event="hdfl" auto_size="all" embed_in_frame="true" save_session_state="true">
-				<layout class="stick_to_sides_attachment" alignment="right,top" embed_in_frame="true" inset="5,0,0,9"/>
-				<translation id="text" translation_id="247168" type="use" value="Hide Filters"/>
+	<list id="draw_order">
+		<record entity_layout_id="at06" />
+		<record entity_layout_id="at05" />
+		<record entity_layout_id="at01" />
+		<record entity_layout_id="at04" />
+		<record entity_layout_id="at03" />
+		<record entity_layout_id="at34" />
+		<record entity_layout_id="at33" />
+		<record entity_layout_id="at32" />
+		<record entity_layout_id="at25" />
+		<record entity_layout_id="at15" />
+		<record entity_layout_id="at21" />
+		<record entity_layout_id="at16" />
+		<record entity_layout_id="at17" />
+		<record entity_layout_id="at18" />
+		<record entity_layout_id="at19" />
+		<record entity_layout_id="at20" />
+		<record entity_layout_id="at24" />
+		<record entity_layout_id="at22" />
+		<record entity_layout_id="at23" />
+		<record entity_layout_id="at31" />
+		<record entity_layout_id="at26" />
+		<record entity_layout_id="at27" />
+		<record entity_layout_id="at30" />
+		<record entity_layout_id="at28" />
+		<record entity_layout_id="at29" />
+		<record entity_layout_id="at14" />
+		<record entity_layout_id="at09" />
+		<record entity_layout_id="at07" />
+		<record entity_layout_id="at08" />
+		<record entity_layout_id="at10" />
+		<record entity_layout_id="at13" />
+		<record entity_layout_id="at11" />
+		<record entity_layout_id="at12" />
+	</list>
+	<boolean id="should_force_refresh" value="true" />
+	<string id="skin_style" value="title link" />
+	<record id="subpanel_data">
+		<record id="gp00">
+			<list id="main_entities">
+				<record alignment="centre_y,left" id="StQt" entity_layout_id="at00" auto_size="vertical" class="text">
+					<string id="value" value="text" />
+				</record>
+			</list>
+			<list id="states_data">
+				<record class="container" id="st00" file="team/team injuries overview panel_layout" />
+			</list>
+		</record>
+	</record>
+	<widget class="spacer" id="main">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</widget>
+	<widget class="spacer" id="fmin" embed_in_frame="true">
+		<boolean id="exclude_from_find" value="true" />
+		<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+	</widget>
+	<container class="main_box" entity_layout_id="at06" id="AsBx" height="100">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container entity_layout_id="at05" id="at05" navigation_container="true" default_focus="true">
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<container class="client_object_viewer_xml_panel" entity_layout_id="at01" file="person/person details panel small" id="StDt" width="200">
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main" />
+			</container>
+			<container class="inner_subtle_box" entity_layout_id="at04" appearance="boxes/custom/speech bubble/left/paper" id="at04">
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+				<layout class="stick_to_object_attachment" id="align_left" get_side="right" set_side="left" target="at01" />
+				<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<container class="smart_scrolling_box" entity_layout_id="at03" id="at03" file="none" sub_group_id="gp00">
+					<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+					<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					<container id="test">
+						<layout class="fit_children_attachment" alignment="vertical,extend" offset="0" gap="0" />
+						<widget class="spacer" id="main" auto_size="12">
+							<boolean id="exclude_from_find" value="true" />
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+						</widget>
+						<widget class="spacer" id="fmin" embed_in_frame="true">
+							<boolean id="exclude_from_find" value="true" />
+							<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+						</widget>
+						<widget class="text" alignment="centre_y,left" id="StQt" entity_layout_id="at00" auto_size="vertical" needs_height="true" >
+							<string id="value" value="text" />
+							<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+							<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+							<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+						</widget>
+					</container>
+				</container>
+			</container>
 		</container>
 	</container>
-
+	<container entity_layout_id="at34" id="at34">
+		<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" target="at06">
+			<global id="offset" name="ui.main_contrast_box_gap" />
+		</layout>
+		<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+		<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+		<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+		<widget class="spacer" id="main">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+		</widget>
+		<widget class="spacer" id="fmin" embed_in_frame="true">
+			<boolean id="exclude_from_find" value="true" />
+			<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+		</widget>
+		<container entity_layout_id="at33" id="at33">
+			<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+			<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+			<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+			<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+			<widget class="spacer" id="main">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+			</widget>
+			<widget class="spacer" id="fmin" embed_in_frame="true">
+				<boolean id="exclude_from_find" value="true" />
+				<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+			</widget>
+			<container entity_layout_id="at32" id="at32" height="200">
+				<string id="draw_vertical_dividers" value="true" />
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" move_side="true" target="main" />
+				<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<container class="main_box" entity_layout_id="at25" id="at25" navigation_container="true">
+					<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+					<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main" />
+					<layout class="stick_to_sizes_attachment" width="50.000000" />
+					<widget class="spacer" id="main">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					</widget>
+					<widget class="spacer" id="fmin" embed_in_frame="true">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+					</widget>
+					<widget class="text" entity_layout_id="at15" auto_size="all" id="at15" height="20">
+						<string id="font" value="title" />
+						<string id="colour" value="accent" />
+						<translation id="text" value="Injuries" translation_id="227748" type="use" />
+						<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+						<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+						<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					</widget>
+					<container entity_layout_id="at21" id="at21" height="25">
+						<record id="default_properties" auto_size="horizontal" />
+						<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" move_side="true" target="at15" />
+						<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+						<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+						<widget class="spacer" id="main">
+							<boolean id="exclude_from_find" value="true" />
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+						</widget>
+						<widget class="spacer" id="fmin" embed_in_frame="true">
+							<boolean id="exclude_from_find" value="true" />
+							<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+						</widget>
+						<widget class="number_label" entity_layout_id="at16" id="INNu" auto_size="horizontal" height="22" alignment="centre_y" needs_width="true" needs_height="true">
+							<string id="font" value="value" />
+							<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+							<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main" />
+						</widget>
+						<widget class="label" entity_layout_id="at17" id="MajI" alignment="centre_y,left" auto_size="all" needs_width="true" needs_height="true">
+							<string id="colour" value="injury_severity_colour_major" />
+							<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="top" set_side="top" move_side="true" target="main" />
+							<layout class="stick_to_object_attachment" id="align_left" offset="16" get_side="right" set_side="left" move_side="true" target="at16" />
+						</widget>
+						<widget class="label" entity_layout_id="at18" id="ModI" alignment="centre_y,left" auto_size="all" needs_width="true" needs_height="true">
+							<string id="colour" value="injury_severity_colour_moderate" />
+							<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="top" set_side="top" move_side="true" target="main" />
+							<layout class="stick_to_object_attachment" id="align_left" offset="16" get_side="right" set_side="left" move_side="true" target="at17" />
+						</widget>
+						<widget class="label" entity_layout_id="at19" id="MinI" alignment="centre_y,left" auto_size="all" needs_width="true" needs_height="true">
+							<string id="colour" value="injury_severity_colour_minor" />
+							<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="top" set_side="top" move_side="true" target="main" />
+							<layout class="stick_to_object_attachment" id="align_left" offset="16" get_side="right" set_side="left" move_side="true" target="at18" />
+						</widget>
+						<widget class="label" entity_layout_id="at20" id="SliI" alignment="centre_y,left" auto_size="all" needs_width="true" needs_height="true">
+							<string id="colour" value="injury_severity_colour_slight" />
+							<layout class="stick_to_object_attachment" id="align_top" offset="4" get_side="top" set_side="top" move_side="true" target="main" />
+							<layout class="stick_to_object_attachment" id="align_left" offset="16" get_side="right" set_side="left" move_side="true" target="at19" />
+						</widget>
+					</container>
+					<container entity_layout_id="at24" id="at24">
+						<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" target="at21" />
+						<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+						<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+						<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+						<widget class="spacer" id="main">
+							<boolean id="exclude_from_find" value="true" />
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+						</widget>
+						<widget class="spacer" id="fmin" embed_in_frame="true">
+							<boolean id="exclude_from_find" value="true" />
+							<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+						</widget>
+						<container class="table" entity_layout_id="at22" id="Intb" layout="34, -3, -3, -4, -3" mode="fill_rows, stripe_rows">
+							<integer id="default_sort_column" value="4" />
+							<string id="all_content_same_height" value="true" />
+							<string id="auto_size_rows" value="false" />
+							<string id="fixed_size_rows" value="true" />
+							<integer id="row_height" value="30" />
+							<list id="headings">
+								<record>
+									<integer id="index" value="0" />
+									<translation id="text" value="Info" translation_id="232994" type="use" />
+								</record>
+								<record>
+									<integer id="index" value="1" />
+									<translation id="text" value="Player" translation_id="227966" type="use" />
+								</record>
+								<record>
+									<integer id="index" value="2" />
+									<translation id="text" translation_id="492002" type="use" value="Agreed Playing Time[COMMENT: AREA: Player Happiness; SUB-AREA: Contract Promises; FR-BN: 14013; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: contract promise type]" />
+								</record>
+								<record>
+									<integer id="index" value="3" />
+									<translation id="text" translation_id="247523" type="use" value="Injury[COMMENT: Player Injury name, table header]" />
+								</record>
+								<record>
+									<integer id="index" value="4" />
+									<translation id="text" translation_id="450765" type="use" value="Out For[COMMENT: FR 20159; team injuries overview panel; table column header indicating how long a player will be injured for]" />
+								</record>
+							</list>
+							<list id="column_table_properties">
+								<record>
+									<integer id="index" value="0" />
+									<boolean id="sort_ascending" value="false" />
+								</record>
+								<record>
+									<integer id="index" value="1" />
+									<boolean id="sort_ascending" value="true" />
+								</record>
+								<record>
+									<integer id="index" value="2" />
+									<boolean id="sort_ascending" value="false" />
+								</record>
+								<record>
+									<integer id="index" value="3" />
+									<boolean id="sort_ascending" value="true" />
+								</record>
+								<record>
+									<integer id="index" value="4" />
+									<boolean id="sort_ascending" value="false" />
+								</record>
+							</list>
+							<list id="column_widget_properties">
+								<record alignment="centre_x,centre_y">
+									<integer id="index" value="0" />
+								</record>
+								<record alignment="centre_y,left">
+									<integer id="index" value="1" />
+								</record>
+								<record alignment="centre_y,left">
+									<integer id="index" value="2" />
+								</record>
+								<record alignment="centre_y,left" auto_size="none">
+									<integer id="index" value="3" />
+									<string id="multiline" value="false" />
+								</record>
+								<record alignment="centre_y,left" auto_size="none">
+									<integer id="index" value="4" />
+									<string id="multiline" value="false" />
+								</record>
+							</list>
+							<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+							<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+							<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+							<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+						</container>
+						<widget class="label" entity_layout_id="at23" id="NoIN" alignment="centre_x,centre_y" auto_size="all" hidden="true" needs_width="true" needs_height="true">
+							<translation id="text" translation_id="450803" type="use" value="There are currently no injured players[COMMENT: FR 20159; team injuries overview panel; label to explain team has no inujured players]" />
+							<layout class="centre_in_parent_attachment" id="align_centre_horiz" alignment="horizontal" offset="0" />
+							<layout class="centre_in_parent_attachment" id="align_centre_vert" alignment="vertical" offset="0" />
+						</widget>
+					</container>
+				</container>
+				<container class="main_box" entity_layout_id="at31" id="at31" navigation_container="true">
+					<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+					<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" offset="20" get_side="right" set_side="left" target="at25" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					<widget class="spacer" id="main">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					</widget>
+					<widget class="spacer" id="fmin" embed_in_frame="true">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+					</widget>
+					<widget class="text" entity_layout_id="at26" auto_size="all" id="at26" height="20">
+						<string id="font" value="title" />
+						<string id="colour" value="accent" />
+						<translation id="text" translation_id="450804" type="use" value="Recently Returned from Injury[COMMENT: FR 20159; team injuries overview panel; title for number of players that have recently returned from injury]" />
+						<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+						<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+						<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					</widget>
+					<widget class="number_label" entity_layout_id="at27" id="ReNu" height="25">
+						<string id="font" value="value" />
+						<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" move_side="true" target="at26" />
+						<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+						<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					</widget>
+					<container entity_layout_id="at30" id="at30">
+						<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" target="at27" />
+						<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+						<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+						<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+						<widget class="spacer" id="main">
+							<boolean id="exclude_from_find" value="true" />
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+						</widget>
+						<widget class="spacer" id="fmin" embed_in_frame="true">
+							<boolean id="exclude_from_find" value="true" />
+							<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+						</widget>
+						<container class="table" entity_layout_id="at28" id="Retb" layout="34, -3, -2, -2, -1,-1" mode="fill_rows, stripe_rows">
+							<integer id="default_sort_column" value="4" />
+							<string id="all_content_same_height" value="true" />
+							<string id="auto_size_rows" value="false" />
+							<string id="fixed_size_rows" value="true" />
+							<integer id="row_height" value="30" />
+							<list id="headings">
+								<record>
+									<integer id="index" value="0" />
+									<translation id="text" value="Info" translation_id="232994" type="use" />
+								</record>
+								<record>
+									<integer id="index" value="1" />
+									<translation id="text" value="Player" translation_id="227966" type="use" />
+								</record>
+								<record>
+									<integer id="index" value="2" />
+									<translation id="text" translation_id="492002" type="use" value="Agreed Playing Time[COMMENT: AREA: Player Happiness; SUB-AREA: Contract Promises; FR-BN: 14013; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: contract promise type]" />
+								</record>
+								<record>
+									<integer id="index" value="3" />
+									<translation id="text" translation_id="450767" type="use" value="Recent Injury[COMMENT: FR 20159; team injuries overview panel; table column header indicating what injury a player has recovered from]" />
+								</record>
+								<record>
+									<integer id="index" value="4" />
+									<translation id="text" translation_id="394524" type="use" value="Overall Physical Condition[COMMENT: label for a player's overall physical condition, when taking every element of his game into account]"/>
+								</record>
+							<record>
+									<integer id="index" value="5" />
+									<translation id="text" translation_id="388919" type="use" value="Match Sharpness[COMMENT: label for the player's match fitness, i.e. what condition he's currently in if he were to be selected for the next fixture]"/>
+								</record>
+							</list>
+							<list id="column_table_properties">
+								<record>
+									<integer id="index" value="0" />
+									<boolean id="sort_ascending" value="false" />
+								</record>
+								<record>
+									<integer id="index" value="1" />
+									<boolean id="sort_ascending" value="true" />
+								</record>
+								<record>
+									<integer id="index" value="2" />
+									<boolean id="sort_ascending" value="false" />
+								</record>
+								<record>
+									<integer id="index" value="3" />
+									<boolean id="sort_ascending" value="true" />
+								</record>
+								<record>
+									<integer id="index" value="4" />
+									<boolean id="sort_ascending" value="false" />
+								</record>
+							<record>
+									<integer id="index" value="5" />
+									<boolean id="sort_ascending" value="false" />
+								</record>
+							</list>
+							<list id="column_widget_properties">
+								<record alignment="centre_x,centre_y">
+									<integer id="index" value="0" />
+								</record>
+								<record alignment="centre_y,left">
+									<integer id="index" value="1" />
+								</record>
+								<record alignment="centre_y,left">
+									<integer id="index" value="2" />
+								</record>
+								<record alignment="centre_y,left" auto_size="none">
+									<integer id="index" value="3" />
+									<string id="multiline" value="false" />
+								</record>
+								<record alignment="centre" auto_size="none">
+									<integer id="index" value="4" />
+									<string id="multiline" value="false" />
+								</record>
+								<record alignment="centre" auto_size="none">
+									<integer id="index" value="5" />
+									<string id="multiline" value="false" />
+								</record>
+							</list>
+							<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+							<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+							<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+							<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+						</container>
+						<widget class="label" entity_layout_id="at29" id="NoRe" alignment="centre_x,centre_y" auto_size="all" hidden="true" needs_width="true" needs_height="true">
+							<translation id="text" translation_id="450805" type="use" value="There are currently no players recently returned from injury[COMMENT: FR 20159; team injuries overview panel; label to explain team has no players recently returned from injury]" />
+							<layout class="centre_in_parent_attachment" id="align_centre_horiz" alignment="horizontal" offset="0" />
+							<layout class="centre_in_parent_attachment" id="align_centre_vert" alignment="vertical" offset="0" />
+						</widget>
+					</container>
+				</container>
+			</container>
+			<container class="main_subtle_box" entity_layout_id="at14" id="TopP" navigation_container="true">
+				<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+				<layout class="stick_to_object_attachment" id="align_bottom" get_side="top" set_side="bottom" target="at32">
+					<global id="offset" name="ui.main_contrast_box_gap" />
+				</layout>
+				<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+				<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+				<widget class="spacer" id="main">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				</widget>
+				<widget class="spacer" id="fmin" embed_in_frame="true">
+					<boolean id="exclude_from_find" value="true" />
+					<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+				</widget>
+				<container entity_layout_id="at09" id="at09" height="30">
+					<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" move_side="true" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					<widget class="spacer" id="main">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					</widget>
+					<widget class="spacer" id="fmin" embed_in_frame="true">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+					</widget>
+					<widget class="link_button" entity_layout_id="at07" auto_size="horizontal" id="at07" needs_width="true">
+						<string id="section" value="InRA" />
+						<translation id="text" translation_id="447655" type="use" value="Risk Assessment[COMMENT: FR20159; team injuries panel; panel title for assessing player injury risk]" />
+						<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+						<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+						<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" move_side="true" target="main" />
+					</widget>
+					<container class="embedded_filter_button" entity_layout_id="at08" id="plsf" target="TopP" needs_width="true">
+						<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+						<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+						<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" move_side="true" target="main" />
+					</container>
+				</container>
+				<widget class="number_label" entity_layout_id="at10" id="HRNu" height="20">
+					<string id="font" value="value" />
+					<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" move_side="true" target="at09" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+				</widget>
+				<container entity_layout_id="at13" id="at13">
+					<layout class="stick_to_object_attachment" id="align_top" get_side="bottom" set_side="top" target="at10" />
+					<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+					<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+					<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					<widget class="spacer" id="main">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+					</widget>
+					<widget class="spacer" id="fmin" embed_in_frame="true">
+						<boolean id="exclude_from_find" value="true" />
+						<layout class="stick_to_sides_attachment" embed_in_frame="true" alignment="all" inset="0" />
+					</widget>
+					<container class="team_injuries_risk_assessment_table_panel" entity_layout_id="at11" id="RAtb">
+						<string id="only_show_at_risk_players" value="true" />
+						<layout class="stick_to_object_attachment" id="align_top" get_side="top" set_side="top" target="main" />
+						<layout class="stick_to_object_attachment" id="align_bottom" get_side="bottom" set_side="bottom" target="main" />
+						<layout class="stick_to_object_attachment" id="align_left" get_side="left" set_side="left" target="main" />
+						<layout class="stick_to_object_attachment" id="align_right" get_side="right" set_side="right" target="main" />
+					</container>
+					<widget class="label" entity_layout_id="at12" id="NoAR" alignment="centre_x,centre_y" auto_size="all" hidden="true" needs_width="true" needs_height="true">
+						<translation id="text" translation_id="450802" type="use" value="There are currently no players with an above normal risk of injury.[COMMENT: FR 20159; team injuries overview panel; label to explain team has no at risk players]" />
+						<layout class="centre_in_parent_attachment" id="align_centre_horiz" alignment="horizontal" offset="0" />
+						<layout class="centre_in_parent_attachment" id="align_centre_vert" alignment="vertical" offset="0" />
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
 </panel>
