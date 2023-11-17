@@ -1,212 +1,205 @@
-<!-- person award details -->
-<panel height="320">
-  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+<panel height="320" navigation_container="true">
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
-  <container class="bordered_box">
-      <layout class="arrange_horizontal_attachment" layout="-2, -2" offset="0" gap="1" />
-      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
-      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
-      
-	
-      <!-- Player Picture -->
-      <widget class="picture" id="ppic" height="200" scale_picture="true" image_alignment="centre" column_span="2" row_span="5" col="0" row="0">
-        <!-- only show the picture if we should show portraits -->
-        <attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
-          <boolean id="value" value="false"/>
-        </attachment>
-      </widget>
-	
-	
-    <!-- Table containing data about the player, only 10 rows shown at a time -->
-    <widget class="table" id="padt" mode="fill_rows, stripe_rows" layout="1,-5, -6" auto_size_rows="true" fixed_size_rows="false">
+	<container class="inner_subtle_box">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
-      <list id="headings">
-        <record id="hedi" alignment="right,centre_y" size="11" font="gz_title" colour="gzc" column_span="3"/>
-      </list>
+		<!-- Table containing data about the player, only 10 rows shown at a time -->
+		<widget class="table" id="padt" mode="fill_rows, stripe_rows" layout="1, -5, -6" auto_size_rows="true" fixed_size_rows="false">
 
-      <list id="column_properties">
-        <record index="1" alignment="left, centre_y"/>
-        <record index="2" alignment="right, centre_y" colour="selection"/>
-      </list>
+			<list id="headings">
+				<record id="hedi" alignment="left,centre_y" column_span="3" />
+			</list>
 
-      <list id="column_display_properties">
-        <record index="0" sort_disabled="true"/>
-        <record index="1" left="2" sort_disabled="true"/>
-        <record index="2" alignment="right, centre_y" sort_disabled="true"/>
-      </list>
+			<list id="column_widget_properties">
+				<record index="1" alignment="left,centre_y" />
+				<record index="2" alignment="right,centre_y" colour="selection" />
+			</list>
 
-      <!-- These match upto the rows defined in the table -->
-      <!-- if the widgets order is changed, update this	-->
-      <list id="row_properties">
-        <record index="1" initial_id="rwcb"/>
-        <record index="5" initial_id="rwpo"/>
-        <record index="6" initial_id="rwap"/>
-        <record index="7" initial_id="rwga"/>
-        <record index="8" initial_id="rwwr"/>
-        <record index="9" initial_id="rwgl"/>
-        <record index="10" initial_id="rwas"/>
-        <record index="11" initial_id="rwco"/>
-        <record index="12" initial_id="rwyc"/>
-        <record index="13" initial_id="rwrc"/>
-        <record index="14" initial_id="rwgb"/>
-        <record index="15" initial_id="rwmm"/>
-        <record index="16" initial_id="rwvo"/>
-        <record index="17" initial_id="rwcs"/>
-        <record index="18" initial_id="rwav"/>
-        <record index="19" initial_id="rwmp"/>
-      </list>
+			<list id="column_table_properties">
+				<record index="0" sort_disabled="true" />
+				<record index="1" left="2" sort_disabled="true" />
+				<record index="2" alignment="right,centre_y" sort_disabled="true" />
+			</list>
 
+			<!-- These match upto the rows defined in the table -->
+			<!-- if the widgets order is changed, update this	-->
+			<list id="row_properties">
+				<record index="1" initial_id="rwcb" />
+				<record index="5" initial_id="rwpo" />
+				<record index="6" initial_id="rwap" />
+				<record index="7" initial_id="rwga" />
+				<record index="8" initial_id="rwwr" />
+				<record index="9" initial_id="rwgl" />
+				<record index="10" initial_id="rwas" />
+				<record index="11" initial_id="rwco" />
+				<record index="12" initial_id="rwyc" />
+				<record index="13" initial_id="rwrc" />
+				<record index="14" initial_id="rwgb" />
+				<record index="15" initial_id="rwmm" />
+				<record index="16" initial_id="rwvo" />
+				<record index="17" initial_id="rwcs" />
+				<record index="18" initial_id="rwav" />
+				<record index="19" initial_id="rwmp" />
+			</list>
 
-      <!-- Name -->
-      <widget class="label" col="0" row="0">
-        <translation id="text" translation_id="229689" type="use" value="Name"/>
-        <!-- only show the label if we should not show portraits -->
-        <attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
-          <boolean id="value" value="true"/>
-        </attachment>
-      </widget>
+			<!-- Player Picture -->
+			<widget class="picture" id="ppic" height="120" scale_picture="true" image_alignment="centre" column_span="2" row_span="5" col="0" row="0">
+				<!-- only show the picture if we should show portraits -->
+				<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+					<boolean id="value" value="false" />
+				</attachment>
+			</widget>
 
-      <widget class="person_button" id="apfn" col="1" row="0" size="10" font="gz_title" alignment="centre_y,can_scale" colour="gzc" column_span="2"/>
+			<!-- Name -->
+			<widget class="label" col="1" row="0">
+				<translation id="text" translation_id="229689" type="use" value="Name" />
+				<!-- only show the label if we should not show portraits -->
+				<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+					<boolean id="value" value="true" />
+				</attachment>
+			</widget>
 
-      <!-- Club -->
-      <widget class="label" col="0" row="1">
-        <translation id="text" translation_id="227737" type="use" value="Club"/>
-        <!-- only show the label if we should not show portraits -->
-        <attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
-          <boolean id="value" value="true"/>
-        </attachment>
-      </widget>
+			<widget class="person_button" id="apfn" col="2" row="0" />
 
-      <widget class="team_button" id="apcb" col="1" row="1" icon_alignment="left" alignment="centre_y,can_scale" column_span="2"/>
+			<!-- Club -->
+			<widget class="label" col="1" row="1">
+				<translation id="text" translation_id="227737" type="use" value="Club" />
+				<!-- only show the label if we should not show portraits -->
+				<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+					<boolean id="value" value="true" />
+				</attachment>
+			</widget>
 
-      <!-- Nationality -->
-      <widget class="label" col="0" row="2">
-        <translation id="text" translation_id="229390" type="use" value="Nation"/>
-        <!-- only show the label if we should not show portraits -->
-        <attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
-          <boolean id="value" value="true"/>
-        </attachment>
-      </widget>
+			<widget class="team_button" id="apcb" col="2" row="1" icon_alignment="far_right" navigation_focus_target="true" />
 
-      <widget class="nation_button" id="apna" col="1" row="2" icon_alignment="left" alignment="centre_y,can_scale" column_span="2" dspf="1"/>
+			<!-- Nationality -->
+			<widget class="label" col="1" row="2">
+				<translation id="text" translation_id="229390" type="use" value="Nation" />
+				<!-- only show the label if we should not show portraits -->
+				<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+					<boolean id="value" value="true" />
+				</attachment>
+			</widget>
 
-      <!-- Age -->
-      <widget class="label" col="1" row="3">
-        <translation id="text" translation_id="227770" type="use" value="Age[comment - person age]"/>
-        <!-- only show the label if we should not show portraits -->
-        <attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" >
-          <boolean id="value" value="true"/>
-        </attachment>
-      </widget>
+			<widget class="nation_button" id="apna" col="2" row="2" icon_alignment="far_right" dspf="1" />
 
-      <widget class="label" id="apag" col="2" row="3"/>
-	  	 
+			<!-- Age -->
+			<widget class="label" col="1" row="3">
+				<translation id="text" translation_id="227770" type="use" value="Age[comment - person age]" />
+				<!-- only show the label if we should not show portraits -->
+				<attachment class="test_setting_attachment" get_setting="show_portraits" default_value="true" set_property="hidn">
+					<boolean id="value" value="true" />
+				</attachment>
+			</widget>
 
-      <!-- Empty row to prop up the table -->
-      <container col="1" row="4" height="22"/>
+			<widget class="label" id="apag" col="2" row="3" />
 
-      <!-- Position -->
-      <widget class="label" col="1" row="5">
-        <translation id="text" translation_id="227884" type="use" value="Position"/>
-      </widget>
-      <widget class="position_label" id="appo" col="2" row="5"/>
+			<!-- Empty row to prop up the table -->
+			<container col="1" row="4" height="22" />
 
-      <!-- Appearances -->
-      <widget class="label" col="1" row="6">
-        <translation id="text" translation_id="227845" type="use" value="Appearances"/>
-      </widget>
-      <widget class="label" id="apps" col="2" row="6"/>
+			<!-- Position -->
+			<widget class="label" col="1" row="5">
+				<translation id="text" translation_id="227884" type="use" value="Position" />
+			</widget>
+			<widget class="position_label" id="appo" col="2" row="5" navigation_focus_target="false" />
 
-      <widget class="label" col="1" row="7">
-        <translation id="text" translation_id="247159" type="use" value="Games"/>
-      </widget>
-      <widget class="label" id="apga" col="2" row="7"/>
+			<!-- Appearances -->
+			<widget class="label" col="1" row="6">
+				<translation id="text" translation_id="227845" type="use" value="Appearances" />
+			</widget>
+			<widget class="label" id="apps" col="2" row="6" />
 
-      <widget class="label" col="1" row="8">
-        <translation id="text" translation_id="306798" type="use" value="Win Ratio[COMMENT: manager stat; games divided by wins]"/>
-      </widget>
-      <widget class="percentage_label" id="apwr" col="2" row="8"/>
+			<widget class="label" col="1" row="7">
+				<translation id="text" translation_id="247159" type="use" value="Games" />
+			</widget>
+			<widget class="label" id="apga" col="2" row="7" />
 
-      <!-- Goals -->
-      <widget class="label" col="1" row="9">
-        <translation id="text" translation_id="227857" type="use" value="Goals"/>
-      </widget>
-      <widget class="label" id="apgl" col="2" row="9"/>
+			<widget class="label" col="1" row="8">
+				<translation id="text" translation_id="306798" type="use" value="Win Ratio[COMMENT: manager stat; games divided by wins]" />
+			</widget>
+			<widget class="percentage_label" id="apwr" col="2" row="8" />
 
-      <!-- Assists -->
-      <widget class="label" col="1" row="10">
-        <translation id="text" translation_id="227847" type="use" value="Assists"/>
-      </widget>
-      <widget class="label" id="apas" col="2" row="10"/>
+			<!-- Goals -->
+			<widget class="label" col="1" row="9">
+				<translation id="text" translation_id="227857" type="use" value="Goals" />
+			</widget>
+			<widget class="label" id="apgl" col="2" row="9" />
 
-      <!-- Conceded -->
-      <widget class="label" col="1" row="11">
-        <translation id="text" translation_id="247734" type="use" value="Conceded"/>
-      </widget>
-      <widget class="label" id="apco" col="2" row="11"/>
+			<!-- Assists -->
+			<widget class="label" col="1" row="10">
+				<translation id="text" translation_id="227847" type="use" value="Assists" />
+			</widget>
+			<widget class="label" id="apas" col="2" row="10" />
 
-      <!-- Yellow Cards -->
-      <widget class="label" col="1" row="12">
-        <translation id="text" translation_id="247391" type="use" value="Yellow Cards"/>
-      </widget>
-      <widget class="label" id="apyc" col="2" row="12"/>
+			<!-- Conceded -->
+			<widget class="label" col="1" row="11">
+				<translation id="text" translation_id="247734" type="use" value="Conceded" />
+			</widget>
+			<widget class="label" id="apco" col="2" row="11" />
 
-      <!-- Red Cards -->
-      <widget class="label" col="1" row="13">
-        <translation id="text" translation_id="247392" type="use" value="Red Cards"/>
-      </widget>
-      <widget class="label" id="aprc" col="2" row="13"/>
+			<!-- Yellow Cards -->
+			<widget class="label" col="1" row="12">
+				<translation id="text" translation_id="247391" type="use" value="Yellow Cards" />
+			</widget>
+			<widget class="label" id="apyc" col="2" row="12" />
 
-      <!-- Golden boot points -->
-      <widget class="label" col="1" row="14">
-        <translation id="text" translation_id="317385" type="use" value="Score"/>
-      </widget>
-      <widget class="label" id="apgb" col="2" row="14"/>
+			<!-- Red Cards -->
+			<widget class="label" col="1" row="13">
+				<translation id="text" translation_id="247392" type="use" value="Red Cards" />
+			</widget>
+			<widget class="label" id="aprc" col="2" row="13" />
 
-      <!-- Man of the Match -->
-      <widget class="label" col="1" row="15">
-        <translation id="text" translation_id="257306" type="use" value="Man of the Match"/>
-      </widget>
-      <widget class="label" id="apmo" col="2" row="15"/>
+			<!-- Golden boot points -->
+			<widget class="label" col="1" row="14">
+				<translation id="text" translation_id="317385" type="use" value="Score" />
+			</widget>
+			<widget class="label" id="apgb" col="2" row="14" />
 
-      <!-- Clean Sheets -->
-      <widget class="label" col="1" row="16">
-        <translation id="text" translation_id="317291" type="use" value="Clean Sheets[COMMENT: player stats; goalkeeper statistic for games where he didn't concede a goal]"/>
-      </widget>
-      <widget class="label" id="apcs" col="2" row="16"/>
-      
-      <!-- Votes -->
-      <widget class="label" col="1" row="17">
-        <translation id="text" translation_id="258625" type="use" value="Voting Points"/>
-      </widget>
-      <widget class="label" id="apvo" col="2" row="17"/>
+			<!-- Man of the Match -->
+			<widget class="label" col="1" row="15">
+				<translation id="text" translation_id="257306" type="use" value="Player of the Match" />
+			</widget>
+			<widget class="label" id="apmo" col="2" row="15" />
 
-      <!-- Average Rating -->
-      <widget class="label" col="1" row="18">
-        <translation id="text" translation_id="233158" type="use" value="Average Rating"/>
-      </widget>
-      <widget class="label" id="apav" col="2" row="18"/>
+			<!-- Clean Sheets -->
+			<widget class="label" col="1" row="16">
+				<translation id="text" translation_id="317291" type="use" value="Clean Sheets[COMMENT: player stats; goalkeeper statistic for games where he didn't concede a goal]" />
+			</widget>
+			<widget class="label" id="apcs" col="2" row="16" />
 
-      <widget class="label" col="1" row="19">
-        <translation id="text" translation_id="257305" type="use" value="Manager Points"/>
-      </widget>
-      <widget class="label" id="apmp" col="2" row="19"/>
-    </widget>
+			<!-- Votes -->
+			<widget class="label" col="1" row="17">
+				<translation id="text" translation_id="258625" type="use" value="Voting Points" />
+			</widget>
+			<widget class="label" id="apvo" col="2" row="17" />
 
-    <!-- Table displaying a message when there is no award for the place -->
-    <widget class="table" id="noaw" mode="fill_rows" layout="-1" auto_size_rows="true" fixed_size_rows="false" hidden="true" sort_disabled="true">
-      <list id="headings">
-        <record id="hedi" alignment="left, centre_y"/>
-      </list>
+			<!-- Average Rating -->
+			<widget class="label" col="1" row="18">
+				<translation id="text" translation_id="233158" type="use" value="Average Rating" />
+			</widget>
+			<widget class="label" id="apav" col="2" row="18" />
 
-      <list id="column_display_properties">
-        <record index="0" sort_disabled="true"/>
-      </list>
+			<widget class="label" col="1" row="19">
+				<translation id="text" translation_id="257305" type="use" value="Manager Points" />
+			</widget>
+			<widget class="label" id="apmp" col="2" row="19" />
+		</widget>
 
-      <widget class="label" col="0" row="5" alignment="centre_x, centre_y">
-        <translation id="text" translation_id="308074" type="use" value="No Award"/>
-      </widget>
-    </widget>
-  </container>
+		<!-- Table displaying a message when there is no award for the place -->
+		<widget class="table" id="noaw" mode="fill_rows" layout="-1" auto_size_rows="true" fixed_size_rows="false" hidden="true" sort_disabled="true">
+			<list id="headings">
+				<record id="hedi" alignment="left,centre_y" />
+			</list>
+
+			<list id="column_table_properties">
+				<record index="0" sort_disabled="true" />
+			</list>
+
+			<widget class="label" col="0" row="5" alignment="centre">
+				<translation id="text" translation_id="467840" type="use" value="No award given[COMMENT: award history panel; used for when an award isnt given in a year]" />
+			</widget>
+		</widget>
+	</container>
 
 </panel>

@@ -13,7 +13,7 @@
 	   		 </widget>
 
 			<!-- commentary widget -->
-			<widget class="label" id="cmnt" hidden="true" font="EFL-Bold" size="14">
+			<widget class="label" id="cmnt" hidden="true" font="text" size="14">
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,3,0" />
 
 				<translation id="text" value="" />
