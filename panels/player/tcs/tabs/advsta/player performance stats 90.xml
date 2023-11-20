@@ -116,7 +116,7 @@
 					<layout class="vertical_arrange" vertical_layout="-7,-6" offset="0" inset="0" gap="0" draw_horizontal_dividers="false"/>
 
 					<widget class="label" font="text" size="7" multiline="true" alignment="centre_x,top" colour="fg">
-						<translation id="text" type="use" value="Chances created" />
+						<translation id="text" type="use" value="Chances created" translation_id="447677"/>
 					</widget>
 
 					<widget class="dashed_number_label" style="semi_bold" colour="fg" size="10" alignment="centre_x,top">
@@ -276,7 +276,7 @@
 					<layout class="vertical_arrange" vertical_layout="-7,-6" offset="0" inset="0" gap="0" draw_horizontal_dividers="false"/>
 
 					<widget class="label" font="text" size="7" multiline="true" alignment="centre_x,top" colour="fg">
-						<translation id="text" type="use" value="High intensity sprints" />
+						<translation id="text" type="use" value="High intensity sprints" translation_id="585451"/>
 					</widget>
 
 					<widget class="dashed_number_label" style="semi_bold"  colour="fg" size="10" alignment="centre_x,top">
@@ -288,8 +288,8 @@
 				<container class="contrast_box" >
 <attachment_group class="vertical_arrange_autosize" />
 
-					<widget class="label" font="text" size="5" multiline="true" alignment="centre_x,top" colour="fg" auto_size="vertical">
-						<translation id="text" type="use" value="Cross Completion Ratio" />
+					<widget class="label" font="text" size="7" multiline="true" alignment="centre_x,top" colour="fg" auto_size="vertical">
+						<translation id="text" type="use" value="Cross Completion Ratio" translation_id="318352"/>
 					</widget>
 
 					<widget class="dashed_record_percentage_label" colour="fg" size="10" alignment="centre_x,top" style="semi_bold" auto_size="vertical">
@@ -354,7 +354,7 @@
 					<layout class="vertical_arrange" vertical_layout="-7,-6" offset="0" inset="0" gap="0" draw_horizontal_dividers="false"/>
 
 					<widget class="label" font="text" size="7" multiline="true" alignment="centre_x,top" colour="fg">
-						<translation id="text" type="use" value="Win rate" />
+						<translation id="text" type="use" value="胜率" />
 					</widget>
 
 					<widget class="dashed_record_percentage_label" style="semi_bold" colour="fg" size="10" alignment="centre_x,top">
@@ -514,7 +514,7 @@
 					<layout class="vertical_arrange" vertical_layout="-7,-6" offset="0" inset="0" gap="0" draw_horizontal_dividers="false"/>
 
 					<widget class="label" font="text" size="7" multiline="true" alignment="centre_x,top" colour="fg">
-						<translation id="text" type="use" value="Mistakes leading to the goal" />
+						<translation id="text" type="use" value="Mistakes leading to the goal" translation_id="515100"/>
 					</widget>
 
 					<widget class="dashed_number_label" colour="fg" size="10" alignment="centre_x,top" style="semi_bold">

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE propertylist SYSTEM "http://www.sigames.com/dtds/sios/properties.dtd">
+
+<!-- image properties -->
+<properties>
+	
+	<colour id="red_replacement" name="heffem1"/>
+	
+</properties>
