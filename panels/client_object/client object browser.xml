@@ -384,7 +384,9 @@
 
 		<!--replay controls-->
 		<widget class="match_replay_controls_panel" id="mrcp" disable_layout_attachments_when_embedded="true">
-			<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="40,0,0,222" />
+			<layout class="arrange_horizontal_attachment" alignment="all" gap="0" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top,right" inset="40,0,0,-400" />
+
 			<record id="object_property" get_property="objt" set_property="objt" />
 		</widget>
 	</container>
