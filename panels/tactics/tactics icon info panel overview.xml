@@ -43,11 +43,9 @@
 			<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0"/>
 			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
 			
-			<!--name-->
-				<widget class="player_picker_button" entity_layout_id="it02" id="plPB" file="widgets/player selection button tacitcs" editor_group_id="it10">
-					<string id="draggable" value="false"/>
-				</widget>
-			
+	<!--name-->
+  	    <widget class="player_picker_button" id="plPB" file="widgets/player selection button tactics" draggable="false" format="[%person#1-surname]"/>
+
 			<container>
 				<container id="OUTE">
 					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
@@ -55,61 +53,75 @@
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 
 					<!--role/duty-->
-		            <widget class="position_role_duty_popup_button_mini" appearance="switches/custom/team picker/button_showing" id="rodu" size="8.5" font="gzmain" auto_size="vertical" secondary_icon="icons/custom/misc/small down" alignment="centre_x,centre_y" disabled_colour="faded white">
-                     <layout class="stick_to_sides_attachment" alignment="all" inset="0,0,0,0" />
+	                <widget class="position_role_duty_popup_button_mini" appearance="switches/custom/team picker/button_showing" id="rodu" size="8.5" font="gzmain" auto_size="vertical" secondary_icon="icons/custom/misc/small down" alignment="centre_x,centre_y" disabled_colour="faded white">
+                       	<animation class="scale_animation" animation_id="extd" duration="0.15" trigger_id="hidden" trigger_value="false" start_value="1.0,0.0" end_value="1.0,1.0" centre_point="0.0, 0.0" delay_widget_hide="false" />
+					   <layout class="stick_to_sides_attachment" alignment="all" inset="0,0,0,0" />
 					</widget>
+					<!-- Extra container level to make the animations work -->
+					<container height="20">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-					<!--info (morale, rating, condition)-->
-					<container id="info" height="18">
-			  <layout class="arrange_horizontal_attachment" layout="12,-1,20" offset="4" gap="2"/>
-            <layout class="stick_to_sides_attachment" alignment="vertical" inset="1" apply_to_children="true"/>
+						<!--info (morale, rating, condition)-->
+						<container id="info" hidden="true">
+							<layout class="arrange_horizontal_attachment" layout="12,-1,20" offset="4" gap="2"/>
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="1" apply_to_children="true"/>
 
-            <!--morale-->
-            <widget class="morale_label" id="Mora" smpc="true" width="12" height="12" colour="faded white" ShTx="false" scale_picture="true" />
+							<animation class="scale_animation" animation_id="extd" duration="0.15" trigger_id="hidden" trigger_value="false" start_value="1.0,0.0" end_value="1.0,1.0" centre_point="0.0, 1.0" delay_widget_hide="false" />
 
-            <!--rating and position share a slot - show one or the other-->
-            <container>
-              <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+							<!--morale-->
+							<widget class="morale_label" id="Mora" width="12" height="12" colour="faded white" smpc="true" ShTx="false" scale_picture="true" />
 
-              <widget class="dashed_number_label" id="avra" alignment="centre" size="small" colour="white"/>
-              <widget class="position_label" id="Ppos" alignment="centre" colour="faded white" size="6.4"/>
-            </container>
+							<!--rating and position share a slot - show one or the other-->
+							<container>
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 
-            <!--condition-->
-            <widget class="player_condition_icon_widget" id="cond" >
+								<widget class="dashed_number_label" id="avra" alignment="centre" size="small" colour="white" wants_mouse_events="false"/>
+								<widget class="position_label" id="Ppos" alignment="centre" colour="faded white" size="6.4" wants_mouse_events="false"/>
+							</container>
+
+							<!--condition-->
+							<widget class="player_condition_icon_widget" id="cond" >
 								<flags id="appearance" value="" />
 								<boolean id="label_disabled" value="true" />
 							</widget>
-					</container>
+						</container>
 
-					<!--familiarity container-->
-						<container id="fmiL" height="18">
+						<!--familiarity container-->
+						<container id="fmiL">
 							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
 							<widget class="player_tactical_familiarity_bar" id="fmBR" auto_hidden="false">
 								<animation class="scale_animation" animation_id="extd" duration="0.15" trigger_id="hidden" trigger_value="false" start_value="1.0,0.0" end_value="1.0,1.0" centre_point="0.0, 0.0" delay_widget_hide="false" />
 							</widget>
 
 						</container>
+
+						<!--playing time container-->
+						<container id="play">
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+							<widget class="reserves_recommended_playing_time_popup" id="ptBR" select_event="eRSP" appearance="buttons/custom/tactics/role picker mini/button" red_replacement="black" alignment="centre">
+								<animation class="scale_animation" animation_id="extd" duration="0.15" trigger_id="hidden" trigger_value="false" start_value="1.0,0.0" end_value="1.0,1.0" centre_point="0.0, 0.0" />
+							</widget>
+
+						</container>
+                     </container>
+					</container>
+                    </container>
 				</container>
-			</container>
-		</container>
-	</container>	
+              </container>
 
 	<container id="gpIN">
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 		
 		<widget class="picture" file="icons/custom/player instruction/player pitch" id="PInI" image_alignment="bottom,left" scale_picture="false">
-			<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,35,0" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0,0,36,0" />
 		</widget>
 	</container>
-
-	<container>
-		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
-
-		<!--pos/role/duty indicator-->
-		<widget class="position_role_duty_suitability_pie" id="prdF" width="20" height="25">
-			<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
-			<layout class="stick_to_sides_attachment" alignment="top" inset="37"/>
-		</widget>
-	</container>
-</panel>
+<container>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+        <!-- pos/role/duty indicator -->
+        <widget class="position_role_duty_suitability_pie" id="prdF" width="20" height="25">
+        <layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+        <layout class="stick_to_sides_attachment" alignment="top" inset="37"/>
+        </widget>
+</container>
+	</panel>

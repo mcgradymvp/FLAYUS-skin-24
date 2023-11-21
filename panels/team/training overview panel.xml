@@ -1,5 +1,5 @@
 <panel>
-	<layout class="arrange_vertical_attachment" layout="70,320, -1" offset="0">
+	<layout class="arrange_vertical_attachment" layout="100,320, -1" offset="0">
 
 	</layout>
 	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />

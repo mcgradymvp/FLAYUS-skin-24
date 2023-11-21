@@ -1,17 +1,21 @@
 ﻿<panel>
-	<layout class="arrange_vertical_attachment" layout="180, 180, -1" offset="0"/>
+	<layout class="arrange_vertical_attachment" layout="220, 90, -1" offset="0">
+		<global id="gap" name="ui.main_contrast_box_gap"/>
+	</layout>
 	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
 
 	<boolean id="should_force_refresh" value="true"/>
 	<string id="skin_style" value="title link"/>
 
 	<!-- Top row - Injury category breakdown, league injuries graph panel-->
-	<container>
-		<layout class="arrange_horizontal_attachment" layout="-5, -2" offset="0"/>
+	<container class="main_subtle_box" draw_vertical_dividers="true">
+		<layout class="arrange_horizontal_attachment" layout="-1, 400" offset="0">
+			<global id="gap" name="ui.inner_box_gap"/>
+		</layout>
 		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
 
 		<!-- Injury categories breakdown and graph -->
-		<container class="bordered_box">
+		<container class="inner_box">
 			<layout class="arrange_vertical_attachment" layout="90, -1" offset="0" gap="0"/>
 			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
 
@@ -23,26 +27,30 @@
 				<container>
 					<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0"/>
 
-					<widget class="label" font="title" colour="accent" auto_size="vertical">
+					<widget class="label" font="title" auto_size="vertical">
 						<translation id="text" translation_id="227748" type="use" value="Injuries"/>
 					</widget>
 
 					<!-- Injuries by category-->
 					<container height="25">
 						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
-						<layout class="arrange_horizontal_attachment" alignment="left" offset="10" gap="10"/>
+						<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="8"/>
 
 						<record id="default_properties" auto_size="horizontal"/>
 						
-						<widget class="label" id="InjT" font="value"/>
+						<widget class="label" id="InjT" font="title" size="large"/>
+						<widget class="vertical_divider"/>
 						<widget class="label" id="MajI" colour="injury_severity_colour_major" alignment="left,centre_y"/>
+						<widget class="vertical_divider"/>
 						<widget class="label" id="ModI" colour="injury_severity_colour_moderate" alignment="left,centre_y"/>
+						<widget class="vertical_divider"/>
 						<widget class="label" id="MinI" colour="injury_severity_colour_minor" alignment="left,centre_y"/>
+						<widget class="vertical_divider"/>
 						<widget class="label" id="SliI" colour="injury_severity_colour_slight" alignment="left,centre_y"/>
 					</container>
 
 					<!-- League average -->
-					<widget class="label" id="InjA" size="small" colour="faded text"/>
+					<widget class="label" id="InjA" size="small" colour="faded text" auto_size="vertical"/>
 				</container>
 
 				<!-- Right side - expected injuries -->
@@ -67,8 +75,6 @@
 				<record id="instant_hint" format="[%string#1]"/>
 				<record id="y_axis" min_value="0" hidden="true"/>
 				<record id="x_axis" min_value="0" max_value="12" mark_size="0" line_colour="grey" inset="0" label_font="xsmall" gap="0"/>
-				<flags id="graph_this_season_line_colour" value="grey1"/>
-				<flags id="graph_last_season_line_colour" value="text"/>
 				<list id="graph_series">
 					<record id="hist" type="line">
 						<record id="line_style" colour="grey1" width="2" dashed="4" gap="2"/>
@@ -78,11 +84,11 @@
 			</widget>
 		</container>
 
-		<container class="bordered_box">
-			<layout class="arrange_vertical_attachment" layout="20, -1" offset="0" gap="0"/>
+		<container class="inner_box">
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
 			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
 
-			<widget class="text" auto_size="all" font="title" colour="accent">
+			<widget class="text" auto_size="vertical" font="title">
 				<translation id="text" translation_id="458480" type="use" value="League comparison[COMMENT: FR 22737; Injury history panel; Title for panel comparing injuries to other teams in league]"/>
 			</widget>
 
@@ -91,16 +97,16 @@
 	</container>
 
 	<!-- MId row - Players with most days missed due to injuries -->
-	<container class="bordered_box" height="180">
-		<layout class="arrange_vertical_attachment" layout="20, -1" offset="0" gap="8"/>
+	<container class="main_subtle_box" height="70" navigation_container="true">
+		<layout class="arrange_vertical_attachment" layout="20, -1" offset="0" gap="0"/>
 		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
 
-		<widget class="text" auto_size="all" font="title" colour="accent">
+		<widget class="text" auto_size="all" font="title">
 			<translation id="text" translation_id="447649" type="use" value="Most Days Missed in Last 12 Months[COMMENT: FR 20159; tema injuries injuries panel; box title for which players have missed most days through injury]"/>
 		</widget>
 
 		<container class="horizontal_adaptive_container">
-			<record id="default_properties" file="player/player details panel small text1" minimum_width="220"/>
+			<record id="default_properties" file="player/player details panel small text" minimum_width="220"/>
 			
 			<widget class="client_object_viewer_xml_panel" id="DsM1" priority="1"/>
 			<widget class="client_object_viewer_xml_panel" id="DsM2" priority="1"/>
@@ -116,23 +122,25 @@
 		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
 		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0"/>
 
-		<container class="bordered_box" id="trtb">
+		<container class="main_box" id="trtb" navigation_container="true" default_focus="true">
 			<layout class="arrange_vertical_attachment" layout="31, -1" offset="0" gap="4"/>
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0"/>
 
 			<container>
 				<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" offset="0"/>
-				<layout class="arrange_horizontal_attachment" alignment="right" offset="0"/>
+				<layout class="arrange_horizontal_attachment" alignment="right" offset="0">
+				<global id="gap" name="ui.button_row_gap"/>
+				</layout>
 
 				<!-- seasons popup -->
-				<widget class="embedded_season_selection_list" id="tsbw" save_immediate_state="true" sele="tsch" width="300"/>
-
-				<widget class="embedded_action_button" id="shfl" auto_size="all" click_event="shfl" save_session_state="true">
-					<translation id="text" translation_id="247166" type="use" value="Show Filters"/>
+				<widget class="embedded_season_selection_list" id="tsbw" save_immediate_state="true" sele="tsch" width="300">
+				<global id="gap_adjustment" name="ui.split_button_row_gap" />
 				</widget>
-			</container>
 
-			<widget class="table" id="InjP" layout="100, -2, 100, -2, -1, -1, -1, -1" mode="fill_rows" default_sort_column="2">
+				<widget class="embedded_filter_button" id="plsf" target="trtb" auto_size="horizontal"/>
+		  </container>
+
+			<widget class="table" id="InjP" layout="100, -2, 100, -2, -1, -1, -1, -1" mode="fill_rows" default_sort_column="2" navigation_container="true">
 				<list id="headings">
 					<record index="0">
 						<translation id="text" translation_id="230120" type="use" value="Date"/>
@@ -188,17 +196,6 @@
 				</list>
 
 				<record id="default_properties" auto_size="vertical" multiline="false"/>
-			</widget>
-		</container>
-
-		<!-- filter editing panel -->
-		<container class="filter_panel" id="filp" width="200" hidden="true" exclude_from_find="true">
-			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
-
-			<!-- buttons area -->
-			<widget class="embedded_action_button" id="hdfl" click_event="hdfl" auto_size="all" embed_in_frame="true" save_session_state="true">
-				<layout class="stick_to_sides_attachment" alignment="right,top" embed_in_frame="true" inset="10,8"/>
-				<translation id="text" translation_id="247168" type="use" value="Hide Filters"/>
 			</widget>
 		</container>
 	</container>

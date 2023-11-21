@@ -1,0 +1,10 @@
+<panel>
+  <container id="SUBP">
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="2" />
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+  </container>
+
+	<widget class="team_opposition_report_predicted_tactical_style_panel" id="trpt" late_loading="true">
+		<translation id="title" type="use" value="下一个对象" />
+	</widget>
+</panel>

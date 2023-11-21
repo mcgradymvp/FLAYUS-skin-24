@@ -166,7 +166,7 @@
 								<flags id="Psnu" />
 								<!-- squad number -->
 								<flags id="Pcpt" />
-                <!-- proposed playing time -->
+                <!-- agreed playing time -->
 								<flags id="Pcif" />
 								<!-- full time or part-time contract -->
 								<flags id="Pcww" />
@@ -308,8 +308,10 @@
 								<!-- player morale -->
 								<record id="Pfrm" auto_hide_priority="6" />
 								<!-- player form -->
-								<record id="Pcon" auto_hide_priority="2" />
+								<record id="PcOI" auto_hide_priority="2" />
 								<!-- player condition -->
+								<record id="PftI" auto_hide_priority="2" />
+								<!-- player sharpness -->
 								<record id="Poap" auto_hide_priority="3" />
 								<!-- overall appearances -->
 								<record id="Pogl" auto_hide_priority="4" />
@@ -339,8 +341,10 @@
 								<!-- player morale -->
 								<flags id="Pfrm" />
 								<!-- player form -->
-								<flags id="Pcon" />
+								<flags id="PcOI" />
 								<!-- player condition -->
+								<record id="PftI" />
+								<!-- player sharpness -->
 								<flags id="Poap" />
 								<!-- overall appearances -->
 								<flags id="Pogl" />
@@ -370,8 +374,10 @@
 								<!-- player international morale -->
 								<flags id="Pfrm" />
 								<!-- player international form -->
-								<flags id="Pcon" />
+								<flags id="PcOI" />
 								<!-- player condition -->
+								<record id="PftI" />
+								<!-- player sharpness -->
 								<flags id="Poap" />
 								<!-- player int apps -->
 								<flags id="Pogl" />
@@ -426,8 +432,10 @@
 								<!-- player injured date-->
 								<record id="iito" auto_hide_priority="5" />
 								<!-- player injury time out -->
-								<record id="Pcon" auto_hide_priority="2" />
+								<record id="PcOI" auto_hide_priority="2" />
 								<!-- player condition -->
+								<record id="PftI" auto_hide_priority="2" />
+								<!-- player sharpness -->
 							</record>
 						</record>
 
@@ -442,10 +450,10 @@
 								<!-- person name -->
 								<record id="PpsC" navigation_focus_target="false"/>
 								<!-- position -->
-								<record id="Pcon" auto_hide_priority="2" />
+								<record id="PcOI" auto_hide_priority="2" />
 								<!-- player condition -->
-								<record id="Pcsr" auto_hide_priority="1" />
-								<!-- player condition string (match fit, lacking match fitness etc.)-->
+								<record id="PftI" auto_hide_priority="2" />
+								<!-- player sharpness -->
 							</record>
 						</record>
 
@@ -998,14 +1006,17 @@
 
 				<container id="butp" navigation_container="true">
 					<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
-					<layout class="arrange_horizontal_attachment" alignment="right" />
+					<layout class="arrange_horizontal_attachment" alignment="right, extend" />
 					<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
 
 					<!-- Select your numbers for your players-->
-					<widget class="primary_icon_tick_button" id="cspa" click_event="css?">
+					<widget class="text" id="comm" alignment="centre_y">
+						<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="false" />
+					</widget>
+					<widget class="primary_icon_tick_button" id="cspa" click_event="css?" controller_button="y_button">
 						<translation id="text" translation_id="247765" type="use" value="Confirm Selection[COMMENT - team screen pick euro/continental squad]" />
 					</widget>
-					<widget class="button" id="aspb" auto_size="all" click_event="ssau">
+					<widget class="icon_button" id="aspb" auto_size="all" click_event="ssau" controller_button="x_button">
 						<translation id="text" translation_id="247766" type="use" value="Auto Select[COMMENT - team screen pick euro/continental squad]" />
 					</widget>
 					<widget class="button" id="undo" auto_size="all" click_event="undo">
@@ -1034,7 +1045,4 @@
 			</container>
 		</container>
 	</container>
-	<!-- players titled box -->
-
-
 </panel>

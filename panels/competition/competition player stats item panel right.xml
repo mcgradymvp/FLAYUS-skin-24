@@ -45,7 +45,7 @@
       <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="2" />
       <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 
-      <widget class="formatted_label" id="fmrh" alignment="left,bottom" colour="faded white" auto_size="vertical" size="xsmall" multiline="false">
+      <widget class="formatted_label" id="fmrh" alignment="left,bottom" colour="gzc" auto_size="vertical" size="xsmall" multiline="false">
         <record id="object_property" get_property="type" dont_set_object="true" />
         <list id="format">
 					<record value="2">

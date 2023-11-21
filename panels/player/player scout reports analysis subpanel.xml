@@ -1,9 +1,8 @@
 ﻿<panel save_session_state="true" save_default_state="true" should_force_refresh="true">
 	<flags id="cham" value="tables/custom/league/champions/row" />
 
-	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0">
-		<global id="gap" name="ui.main_box_gap" />
-	</layout>
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+
 	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 
 	<attachment class="test_screen_size_attachment" skip_if_false="true">
@@ -45,13 +44,9 @@
 				</container>
 			</container>
 
-			<widget id="nocn" class="label" spec="text" size="11" alignment="centre" auto_size="vertical">
-
-			</widget>
-
+			<widget id="nocn" class="label" spec="text" size="11" alignment="centre" auto_size="vertical"/>
 
 			<widget class="spacer" height="10" />
-
 		</container>
 
 		<!-- No Coach Report-->
@@ -154,23 +149,24 @@
 
 	<container class="horizontal_adaptive_container" id="adSP" draw_vertical_dividers="true">
 
-		<container priority="1" minimum_width="250" default_width="-1" id="pcCL">
+		<container priority="1" minimum_width="450" default_width="-2" id="pcCL">
 			<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0"/>
 		
 			<layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
 
-			<container id="mtFC" class="recruitment_focus_widget" width="400" hide_container_title="false" enable_linking="true">
-				<string id="remove_if" value="platform_is_handheld" />
-				<record id="object_property" get_property="PFrM" set_property="valu" />
-				<translation id="text" translation_id="557838" type="use" value="Recruitment Focus Matches[COMMENT: AREA: Scouting; SUB-AREA: Scouting card; FR-BN: FM-4003; NOTE: Title above recruitment focus widget shown on scouting card]" />
-			</container>
-
 			<container>
-				<layout class="arrange_vertical_attachment" layout="-1,-1,-1" offset="0"/>
+				<layout class="arrange_vertical_attachment" layout="-1,350,-1" offset="0"/>
 		
 				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
 				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
-									
+				
+				<widget class="player_attributes_panel" file="attributes/gunzo player attributes panel1">
+				<record id="object_property" get_property="Pers" set_property="objt" />
+		        </widget>	
+			
+			<container>
+			    <layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0"/>	
+			    <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />			
 				<!-- Start these panels as hidden or we get some early layouts that can throw asserts -->
 				<container id="prsC" hidden="true">
 					<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
@@ -202,7 +198,7 @@
 
 					<widget class="text" id="nCon" auto_size="vertical" colour="faded text" multiline="true" hidden="true" />
 				</container>
-
+               </container>
 				<container class="main_box" id="trsF" hidden="true">
 					<translation id="title" translation_id="227953" type="use" value="Transfer Status" />
 					<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
