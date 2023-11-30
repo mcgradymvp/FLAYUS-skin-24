@@ -1,0 +1,7 @@
+<panel>
+	<attachment class="horizontal_arrange" horizontal_layout="-3,-2"/>
+	<widget class="label" colour="faded text"  id="sttx">
+		<translation id="text" translation_id="227963" type="use" value="Reputation" />
+	</widget>
+	<widget class="formatted_label" id="stVL" size="8" alignment="right" style="text"/>
+</panel>

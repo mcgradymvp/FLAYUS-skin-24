@@ -293,6 +293,16 @@
                 <record id="object_property" get_property="objt" set_property="objt" />
             </widget>
 
+            <!-- HAPPINESS -->
+            <container id="smile">
+                <translation id="title" translation_id="309189" type="use"/>
+                <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+                <container id="Prel" class="person_chemistry_relationship_panel" file="player/tcs/happiness">
+                    <record id="object_property" get_property="Pers"/>
+                </container>
+            </container>
+
             <!-- History -->
             <container id="po07" class="client_object_viewer_xml_panel" file="player/fme/tabs/history/player history" late_loading="true">
                 <translation id="title" translation_id="229719" type="use" value="History" />
@@ -324,6 +334,10 @@
 			              <translation id="title" type="use" translation_id="330715" value="Stats (Total)" />
 			                 <record id="object_property" get_property="objt" set_property="objt"/>
 		                </container>
+                        <container class="client_object_viewer_xml_panel" file="player/tcs/overview/tab/player statistic" id="ptas" >
+                            <translation id="title" type="use" value="赛季数据" />
+                                <record id="object_property" get_property="objt" set_property="objt"/>
+                        </container>
 					</container>
 
 				</container>

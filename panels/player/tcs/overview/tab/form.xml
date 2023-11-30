@@ -1,0 +1,70 @@
+<panel>
+	<translation id="title" translation_id="247581" type="use" value="Player Form Panel" />
+	<!--<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>-->
+	<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+	<container>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+	
+		
+		<!-- table containing summary -->
+		<widget class="table" id="summ" layout="-1,-1" mode="fill_rows, stripe_rows" auto_size="none" save_session_state="true">
+
+			<!-- 2nd column should be yellow, and have the same text style as the labels -->
+			<list id="column_widget_properties">
+				<record index="0" alignment="left,centre_y" />
+				<record index="1" spec="text" colour="selection" alignment="right,centre_y" />
+			</list>
+
+			<!-- table isn't sortable -->
+			<list id="column_table_properties">
+				<record indx="0" sort_disabled="true" />
+				<record indx="1" sort_disabled="true" />
+			</list>
+
+			<!-- appearances -->
+			<widget class="label" col="0" row="0">
+				<translation id="text" translation_id="247584" type="use" value="Appearances[COMMENT - player form section; appearances label]" />
+			</widget>
+			<widget class="label" id="apps" col="1" row="0" />
+
+			<!-- max rating -->
+			<widget class="label" col="0" row="1">
+				<translation id="text" translation_id="247585" type="use" value="Maximum Rating[COMMENT - player form section; max average rating label]" />
+			</widget>
+			<widget class="number_label" id="mxrt" col="1" row="1"/>
+
+			<!-- min rating -->
+			<widget class="label" col="0" row="2">
+				<translation id="text" translation_id="247586" type="use" value="Minimum Rating[COMMENT - player form section; min average rating label]" />
+			</widget>
+			<widget class="number_label" id="mnrt" col="1" row="2" />
+
+			<!-- average rating -->
+			<widget class="label" col="0" row="3">
+				<translation id="text" translation_id="247587" type="use" value="Average Rating[COMMENT - player form section; average rating label]" />
+			</widget>
+			<widget class="number_label" id="avrt" col="1" row="3" />
+
+			<!-- goals scored rating -->
+			<widget class="label" col="0" row="4">
+				<translation id="text" translation_id="247588" type="use" value="Goals Scored[COMMENT - player form section; goals scored label]" />
+			</widget>
+			<widget class="label" id="glsc" col="1" row="4" />
+
+			<!-- goals conceded rating -->
+			<widget class="label" col="0" row="5">
+				<translation id="text" translation_id="247589" type="use" value="Goals Conceded[COMMENT - player form section; goals conceded label]" />
+			</widget>
+			<widget class="label" id="glcd" col="1" row="5" />
+
+			<!-- assists rating -->
+			<widget class="label" col="0" row="6">
+				<translation id="text" translation_id="247590" type="use" value="Assists[COMMENT - player form section; assists label]" />
+			</widget>
+			<widget class="label" id="asst" col="1" row="6" />
+		</widget>
+	</container>
+
+</panel>

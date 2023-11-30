@@ -1,0 +1,46 @@
+<panel>
+	<translation id="title" translation_id="247581" type="use" value="Player Form Panel" />
+	<!--<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>-->
+		<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<!-- plain box containing graph -->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+	
+					<!-- HEADER -->
+					<widget class="link_button"  auto_size="vertical" alignment="top,centre_x" appearance="sas/buttons/selector/button2" red_replacement="primary" style="bold" colour="bubble">
+						<translation id="text" type="use" value="" />
+					</widget>
+
+					<widget class="graph" id="grap" inset="1">
+						<record id="instant_hint">
+							<string id="format" value="[%fraction#1-3.1]"/>
+						</record>
+						
+						<record id="default_series_properties" colour="selection" type="bar"/>
+						
+						<record id="x_axis">
+							<string id="format" value="[%fraction#1-3.0]"/>
+						</record>
+						<record id="y_axis">
+							<string id="format" value="[%fraction#1-3.0]"/>
+							
+							<record id="title_font" style="vertical"/>
+							
+							<translation id="title" translation_id="242661" type="use" value="Rating[COMMENT - player form section; label for y-axis of average rating graph]" />
+        
+							<list id="labels">
+								<record text="0" value="0"/>
+								<record text="5" value="5"/>
+								<record text="10" value="10"/>
+							</list>
+						</record>
+					
+						<list id="grid_line_styles">
+							<record colour="graph row"/>
+							<record colour="graph row"/>
+						</list>
+					</widget>
+			</container>
+</panel>

@@ -1,0 +1,20 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+	
+	<!-- HEADER -->
+	<widget class="button" section="Psta" auto_size="vertical" alignment="top,centre_x" appearance="sas/buttons/selector/button2" red_replacement="primary" style="bold">
+		<translation id="text" type="use" value="" />
+	</widget>
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<widget class="player_additional_stats_panel" id="staP" file="player/player additional stats mini report">
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+				
+		<widget class="data_analyst_visualisation_widget" id="visU" hidden="true" visualisation_type="3" data_type="2"  category="5" file="player/tcs/overview/tab/xg graph nm">
+			<record id="object_property" get_property="objt" set_property="objt" />
+		</widget>
+	</container>
+
+</panel>
