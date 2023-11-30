@@ -1,0 +1,83 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="middle,extend" />
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<!-- Bit that shows the data-->
+		<container id="scou">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+			<widget class="text" id="recw" alignment="left,centre_y" multiline="true" auto_size="vertical">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+	
+				<container>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+				<layout class="arrange_horizontal_attachment" layout="-1,-1" inset="0" offset="0" gap="4" />
+
+				<!-- Pros icons -->
+				<container class="plain_box">
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<container class="bordered_box" height="30" appearance="boxes/custom/teal50/paper" red_replacement="bg positive">
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+
+						<widget class="label" spec="text,small" alignment="centre" colour="white" font="label" height="30" background_colour="pro high">
+							<translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]" />
+						</widget>
+					</container>
+
+					<container class="scrolling_box">
+						<container id="mprT">
+							<layout class="arrange_vertical_attachment" alignment="top" />
+							<layout class="fit_children_attachment" alignment="vertical,fill"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+							<integer id="size" value="20"/>
+							<record id="default_properties" multiline="true" colour="white"/>
+						</container>
+					</container>
+					
+				</container>
+
+				<!-- Cons icons -->
+				<container class="plain_box">
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="4" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+					<container class="bordered_box" height="30" appearance="boxes/custom/teal50/paper" red_replacement="con high">
+						<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+						<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="4" />
+
+						<widget class="label" spec="text,small"  alignment="centre" colour="white" font="label" height="30" background_colour="con high">
+							<translation id="text" translation_id="361094" type="use" value="Cons[COMMENT: FR 8316 ]" />
+						</widget>
+					</container>
+
+
+
+					<container class="scrolling_box">
+						<container id="mcoT">
+							<layout class="arrange_vertical_attachment" alignment="top" />
+							<layout class="fit_children_attachment" alignment="vertical,fill"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+							<integer id="size" value="20"/>
+							<record id="default_properties" multiline="true" colour="white"/>
+						</container>
+					</container>
+
+				</container>				
+
+			</container>
+			</container>
+		</container>
+
+		
+	</container>
+
+</panel>

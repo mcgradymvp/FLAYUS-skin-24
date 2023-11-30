@@ -1,0 +1,29 @@
+<panel>
+	<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+	<container>
+		<layout class="vertical_arrange" vertical_layout="205,-1" />
+
+		<widget class="player_additional_stats_panel" id="TAdS" file="player/tcs/overview/tab/additional stats" late_loading="true" valid_for_unemployed_player="false">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget> 	
+
+		<widget class="player_form_summary_panel" id="TPfs" file="player/tcs/overview/tab/form guide">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget> 	
+
+		<container />
+
+	</container>
+
+	<container >
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+		<!-- XG -->
+		<widget class="player_scout_reports_panel" id="toxG" file="player/tcs/overview/tab/xg" late_loading="true" valid_for_unemployed_player="false">
+			<translation id="title" type="use" value="Statistic" />
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget> 
+	</container>
+
+
+</panel>

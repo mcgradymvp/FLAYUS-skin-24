@@ -1,0 +1,71 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+		<container id="detS" draw_vertical_dividers="true">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="32" />
+
+			<!-- THIS IS A TABLE/CARD THAT IS SHOWN ON THE PLAYER OVERVIEW PANEL-->
+			
+
+				<widget class="player_form_summary_panel" id="TPfs" file="player/tcs/overview/tab/form">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+			
+			<!-- THIS IS A TABLE/CARD THAT IS SHOWN ON THE PLAYER OVERVIEW PANEL-->
+			<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+
+
+				<!-- THIS IS A TABLE/CARD THAT IS SHOWN ON THE PLAYER OVERVIEW PANEL-->
+				<container>
+					<layout class="vertical_arrange" vertical_layout="-7,-7,-7,-7,-7,-7" />
+
+					<!-- DRIBBLES MADE -->
+					<container class="main_subtle_box">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+						<container id="mtWV" file="player/tcs/overview/tab/pasi l" />
+					</container>
+
+					<!-- PASSES COMPLETED -->
+					<container class="main_box">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+						<container id="avBE" file="player/tcs/overview/tab/pasi l" />
+					</container>
+
+					<!-- FOULS AGAINST -->
+					<container class="main_subtle_box">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+						<container id="avWR" file="player/tcs/overview/tab/pasi l" />
+					</container>
+
+					<!-- TACKLES WON -->
+					<container class="main_box" id="dsCV">
+						<attachment class="horizontal_arrange" horizontal_layout="-3,-2"/>
+						<widget class="label" colour="faded text"  id="sttx" />
+						<widget class="distance_label" id="stVL" alignment="right"  style="text"/>
+					</container>
+
+					<!-- TACKLES WON -->
+					<container class="main_subtle_box" id="ds9V">
+						<attachment class="horizontal_arrange" horizontal_layout="-3,-2"/>
+						<widget class="label" colour="faded text"  id="sttx" />
+						<widget class="distance_label" id="stVL" alignment="right"  style="text"/>
+					</container>
+				</container>
+			</container>
+		</container>
+
+		<!-- panel for no available feeder clubs-->
+		<container class="empty_state" id="nost" hidden="true" header_widget="BShe">
+			<widget class="text" id="BShe">
+				<translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+			</widget>
+		</container>
+	</container>
+
+</panel>
