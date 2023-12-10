@@ -1,6 +1,4 @@
 ﻿<panel>
-	<boolean id="save_session_state" value="true" />
-
 	<boolean id="RsuH" value="true"/>		
 	
 	<set_var name="sheet_text_colour">
@@ -11,17 +9,21 @@
 		<record>
 			<var id="colour" name="sheet_text_colour" />
 			<boolean id="person_is_player" value="true" />
-			<boolean id="dslk" value="true" />
-			<boolean id="info_popup_enabled" value="true" />
+			<boolean id="disable_link" value="true" />
+			<boolean id="info_popup_enabled" value="false" />
 			<boolean id="links_enabled_in_popup" value="false" />
+			<string id="format" value="[%person#1-bold_surname]" />
+			<string id="alternate_format" value="[%person#1-initial_bold_surname]" />
 		</record>
 	</set_var>
 
 	<set_var name="captain_view_props">
+		<flags id="appearance" value="buttons/text/button" />
 		<flags id="alignment" value="centre" />
+		<flags id="auto_size" value="all" />
 		<translation id="text" translation_id="515078" type="use" value="(c)[COMMENT: AREA: Team lineups in the match; SUB-AREA: Captaincy; FR-BN: n/a; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: abbreviation for Captain; same as 260925 but with parentheses]" />
 		<var id="colour" name="sheet_text_colour" />
-		<integer id="width" value="45" />
+		<integer id="width" value="20" />
 	</set_var>
 
 	<set_var name="home_views">
@@ -378,7 +380,7 @@
 	    </container>    
 
 			<container class="main_transparent_box" id="rdrd" height="220">
-				<translation id="title" type="use" value="其他信息" />
+				<translation id="title" type="use" value="기타 정보" />
 				<layout class="arrange_horizontal_attachment" alignment="top,extend" offset="0" />
                  <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 			
@@ -443,16 +445,14 @@
 				</widget>
 
 				<container>
-					<attachment_group class="horizontal_arrange" horizontal_layout="-1,-20,-1" />
-
-					<container />
+					<attachment_group class="horizontal_arrange" horizontal_layout="-1" />
 
 					<container>
 						<attachment_group class="vertical_arrange" vertical_layout="60,35,25,-1" vertical_gap="0" />
 
 					<!-- Logos, stadium, detials -->
 					<container height="50">
-						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-1,-2,-1" horizontal_gap="2" />
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_layout="-1,-3,-1" horizontal_gap="2" />
 
 						<container id="tsHL" height="50" class="main_box" appearance="boxes/custom/match/team sheet/home team layer/paper">
 							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
@@ -461,18 +461,32 @@
 
 						</container>
 
-						<container>
-							<attachment_group class="vertical_arrange_autosize" vertical_gap="0" />
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_gap="0" />
 							
-							<record id="default_properties">
-								<var id="colour" name="sheet_text_colour" />
-							</record>
+						<record id="default_properties">
+							<var id="colour" name="sheet_text_colour" />
+						</record>
 
-							<widget class="text" height="20" font="title" colour="black" alignment="centre, centre_y,auto_fit" size="xlarge" id="otst">
-								<translation id="text" translation_id="515081" type="use" value="Official Team Sheet[COMMENT: AREA: Match; SUB-AREA: Pre match flow; FR: 30889; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title for pre match flow screen that shows the Teams sheets]" />
-							</widget>
+		        <container height="24">
+			        <attachment_group class="horizontal_arrange_autosize" horizontal_offset="0"/>
+                     
+					<widget class="game_formatted_label" id="date" alignment="centre_x, centre_y" font="title" size="normal" colour="sheet_text_colour" auto_size="horizontal">
+						<translation id="format" translation_id="515082" type="use" value="[%date#2-long]. Kick-off [%date#3-time][COMMENT: AREA: Match; SUB-AREA: Pre match flow; FR: 30889; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: text for the kick off date and time]" />				
+						<record id="object_property">
+							<list id="get_properties">
+								<record get_property="fxdt" set_property="var2" />
+								<record get_property="fxdt" set_property="var3" />
+							</list>
+						</record>
+					</widget>
 
-							<container height="34">
+					<widget class="stadium_button" font="title" alignment="centre_x, centre_y" size="normal" colour="sheet_text_colour" auto_size="horizontal" icon_enabled="false" disable_link="true" id="stad" navigation_focus_target="false">
+						<record id="object_property" get_property="stad" set_property="valu" />
+					</widget>
+				</container>
+
+							<container height="40">
 								<attachment_group class="horizontal_arrange" horizontal_offset="0" horizontal_alignment="middle,fill"/>
 	                           <container/>
 								<container >
@@ -564,26 +578,10 @@
 							</container>
 						</container>
 					</container>
-				
-		        <container class="bordered_box" height="24">
-					<attachment_group class="horizontal_arrange_autosize"  horizontal_gap="0" />
-					<layout class="centre_in_parent_attachment" alignment="horizontal" />
-
-					<widget class="game_formatted_label" id="date" alignment="right, centre_y" font="title" size="normal" colour="sheet_text_colour" auto_size="horizontal">
-						<translation id="format" translation_id="515082" type="use" value="[%date#2-long]. Kick-off [%date#3-time][COMMENT: AREA: Match; SUB-AREA: Pre match flow; FR: 30889; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: text for the kick off date and time]" />
-						
-						<record id="object_property">
-							<list id="get_properties">
-								<record get_property="fxdt" set_property="var2" />
-								<record get_property="fxdt" set_property="var3" />
-							</list>
-						</record>
+					
+					<widget class="text" height="20" font="title" colour="black" alignment="centre, centre_y" size="xlarge" id="otst">
+						<translation id="text" translation_id="515081" type="use" value="Official Team Sheet[COMMENT: AREA: Match; SUB-AREA: Pre match flow; FR: 30889; TONE: Formal; CHARLIMIT: None; REF-ID: n/a; NOTE: Title for pre match flow screen that shows the Teams sheets]" />
 					</widget>
-
-					<widget class="stadium_button" font="title" alignment="left, centre_y" size="normal" colour="sheet_text_colour" auto_size="horizontal" icon_enabled="false" disable_link="true" id="stad" navigation_focus_target="false">
-						<record id="object_property" get_property="stad" set_property="valu" />
-					</widget>
-				</container>
 				
 					<container>
 						<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" vertical_gap="0" vertical_offset="0" horizontal_inset="0"/>
