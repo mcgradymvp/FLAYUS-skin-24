@@ -17,72 +17,72 @@
 
 	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
-	<container class="main_box" id="plti" force_title_borders="true">
+	<container class="main_box" id="plti" force_title_borders="false">
 
-		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="0" />
-		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
-
-		<container embed_in_frame="true">
-			<attachment_group class="title_embedded_panel_left" />
-
-			<widget class="view_menu_popup" id="plvi" auto_tick_exclusive="true" fixed="false" />
-		</container>
-
+		<layout class="arrange_vertical_attachment" alignment="middle,extend" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0,4,0,0" />
+		
 		<!-- buttons area -->
-		<container height="30" embed_in_frame="true">
-			<attachment_group class="title_embedded_panel_right" horizontal_offset="0"/>
-
-			<!--team container stuff-->
-			<widget class="embedded_action_button" id="slAd" auto_size="horizontal" embed_in_frame="true" click_event="sAVC">
-				<translation id="text" translation_id="492040" type="use" value="Selection Advice[COMMENT: AREA: A Button in the tactics panel; SUB-AREA: Opening a dialog suggesting the manager a team selection; FR-BN: 27347; ; CHARLIMIT: None;]" />
-			</widget>
-
-			<container embed_in_frame="true" height="30">
-				<layout class="arrange_horizontal_attachment" alignment="left" embed_in_frame="true" offset="0">
-					<global id="gap" name="ui.split_button_row_gap" />
-				</layout>
-				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" embed_in_frame="true" />
-				<layout class="fit_children_attachment" alignment="horizontal,fill" embed_in_frame="true" offset="0"/>
-
-				<!--team container stuff-->
-				<widget class="icon_button" id="askp" auto_size="horizontal" embed_in_frame="true" appearance="buttons/subtle/split/left/button" controller_button="y_button">
-					<translation id="text" translation_id="344655" type="use" value="Quick Pick[COMMENT - team screen team selection, contains the former Ask To Pick menu but also acts as a standalone button which picks the team, renamed for accuracy]" />
-				</widget>
-				<widget class="popup_button" id="apic" fixed="true" fixed_icon="true" auto_size="horizontal" embed_in_frame="true" appearance="buttons/subtle/split/right/button"  />
-			</container>
-
-			<!-- filter menu -->
-			<widget class="embedded_filter_button" id="plsf" target="plti" auto_size="horizontal" embed_in_frame="true" />
+		<container navigation_container="true">
+         <attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left, extend" />
 			
-			<!--instant match button-->
-			<widget class="icon_button" id="INST" icon="icons/26px/whistle" width="130" style="bold" alignment="centre" appearance="buttons/subtle/normal/button" icon_alignment="centre_right, centre_y" font="text" colour="text" embed_in_frame="true">
-				<record id="primary_icon_properties" red_replacement="text" />
-				<translation id="text" translation_id="339740" type="use" value="Instant Result[COMMENT: text for a button that will generate an instant result for the upcoming match rather than having to go through and play it]" />
-				<record id="click_event" event_id="INST" event_target="glob" />
+			<!-- left side buttons -->
+			<widget class="view_menu_popup" id="plvi" auto_tick_exclusive="true" fixed="false" embed_in_frame="false"/>
+			
+			<!-- right side buttons  -->
+			<container>
+				<layout class="fit_children_attachment" alignment="vertical,extend" gap="0" offset="0"/>
+				<layout class="arrange_horizontal_attachment" alignment="right" wrap="true"  offset="0"/>
+						
+				<widget class="embedded_action_button" id="slAd" auto_size="horizontal" embed_in_frame="false" click_event="sAVC">
+					<translation id="text" translation_id="492040" type="use" value="Selection Advice[COMMENT: AREA: A Button in the tactics panel; SUB-AREA: Opening a dialog suggesting the manager a team selection; FR-BN: 27347; ; CHARLIMIT: None;]" />
+				</widget>
+								
+				<container height="30">
+					<layout class="arrange_horizontal_attachment" alignment="left" embed_in_frame="false" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" embed_in_frame="false" />
+					<layout class="fit_children_attachment" alignment="horizontal,fill" embed_in_frame="false" offset="0"/>
 
-				<attachment class="test_global_attachment" get_property="section" mode="1" set_property="hidden">
-					<list id="value">
-						<integer value="phtc" />
-						<integer value="PhcP" />
-						<integer value="PhcR" />
-						<integer value="PhcK" />
-						<integer value="PhcH" />
-						<integer value="PhcN" />
-						<integer value="PhcC" />
-						<integer value="PhcF" />
-						<integer value="patc" />
-						<integer value="PacP" />
-						<integer value="PacR" />
-						<integer value="PacK" />
-						<integer value="PacH" />
-						<integer value="PacN" />
-						<integer value="PacC" />
-						<integer value="PacF" />
-					</list>
-				</attachment>
-			</widget>
+					<!-- team container stuff -->
+					<widget class="icon_button" id="askp" auto_size="horizontal" embed_in_frame="false" appearance="buttons/subtle/split/left/button" controller_button="y_button">
+						<translation id="text" translation_id="344655" type="use" value="Quick Pick[COMMENT - team screen team selection, contains the former Ask To Pick menu but also acts as a standalone button which picks the team, renamed for accuracy]" />
+					</widget>
+					<widget class="popup_button" id="apic" fixed="true" fixed_icon="true" auto_size="horizontal" embed_in_frame="false" appearance="buttons/subtle/split/right/button"  />
+				</container>
+				
+				<!-- filter menu -->
+				<widget class="embedded_filter_button" id="plsf" target="plti" auto_size="horizontal" embed_in_frame="false" />
+	
+		<!--instant match button-->
+		<widget class="icon_button" id="INST" icon="icons/26px/whistle" width="130" style="bold" alignment="centre" appearance="buttons/subtle/normal/button" icon_alignment="centre_right, centre_y" font="text" colour="text" embed_in_frame="false">
+          <record id="primary_icon_properties" red_replacement="text"/>
+          <translation id="text" translation_id="339740" type="use" value="Instant Result[COMMENT: text for a button that will generate an instant result for the upcoming match rather than having to go through and play it]"/>
+          <record id="click_event" event_id="INST" event_target="glob"/>
+          <attachment class="test_global_attachment" get_property="section" mode="1" set_property="hidden">
+            <list id="value">
+              <integer value="phtc"/>
+              <integer value="PhcP"/>
+              <integer value="PhcR"/>
+              <integer value="PhcK"/>
+              <integer value="PhcH"/>
+              <integer value="PhcN"/>
+              <integer value="PhcC"/>
+              <integer value="PhcF"/>
+              <integer value="patc"/>
+              <integer value="PacP"/>
+              <integer value="PacR"/>
+              <integer value="PacK"/>
+              <integer value="PacH"/>
+              <integer value="PacN"/>
+              <integer value="PacC"/>
+              <integer value="PacF"/>
+            </list>
+          </attachment>
+        </widget>
 		</container>
-		<widget class="tactic_player_list_table" column_spacing="0" id="pltb" customisation_context="play" database_table_type="1" view_setting_name="stored_tactics_view" mode="fill_rows, select_rows, select_multiple, printable, store_sort_state, drag_rows, drop_on_rows, show_insert_column_popup, stripe_rows" column_mode="resize_columns, move_columns, custom_views" row_spacing="0" popup_menu_class="popup_button_table_header" row_height="38">
+		</container>
+
+		<widget class="tactic_player_list_table" column_spacing="0" id="pltb" customisation_context="play" database_table_type="1" view_setting_name="stored_tactics_view" mode="fill_rows, select_rows, select_multiple, printable, store_sort_state, drag_rows, drop_on_rows, show_insert_column_popup, stripe_rows" column_mode="resize_columns, move_columns, custom_views" row_spacing="0" popup_menu_class="popup_button_table_header" row_height="38" navigation_container="true">
 
 			<boolean id="auto_size_rows" value="false" />
 			<boolean id="fixed_size_rows" value="true" />
@@ -118,10 +118,8 @@
 				<integer value="PCpQ" />
 			</list>
 
-
 			<!--default view-->
 			<flags id="default_view" value="sltn" />
-
 
 			<!--available views-->
 			<list id="viws">
@@ -466,12 +464,10 @@
 						</record>
 					</list>
 
-
 					<record id="object_list_view_context">
 						<integer id="player_stats_scope" value="5" />
 					</record>
 				</record>
-
 			</list>
 
 		</widget>
@@ -479,6 +475,5 @@
 		<!-- panel showing squad selection rules for the next match -->
 		<widget class="match_squad_info_panel" id="ssnm" show_all_comps="false" should_force_refresh="true" file="match/match squad info tactics"/>
 	</container>
-
 
 </panel>

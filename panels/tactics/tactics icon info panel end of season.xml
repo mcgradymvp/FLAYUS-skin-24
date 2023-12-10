@@ -1,0 +1,70 @@
+<panel navigation_focus_target="true">
+	<flags id="selected_appearance" value="boxes/custom/tactics kit/selected/paper"/>
+	<boolean id="fEXd" value="true"/>
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0" gap="-1"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<container class="plain_box" id="bssl" appearance="boxes/custom/tactics kit/selected/paper" hidden="true">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		</container>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1,-1,-1,-1" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+
+			<container>
+					<!-- Player picture -->
+		<widget class="object_portrait_picture" id="pict" scale_picture="true" image_alignment="top" wants_mouse_events="false">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+			<record id="object_property">
+				<integer id="get_property" value="objt"/>
+				<integer id="set_property" value="objt"/>
+			</record>
+		</widget>
+				<!--containers for the indicators-->
+				<!--injury/red/yellow card-->
+				<container id="inji" width="16" height="14">
+					<layout class="stick_to_sides_attachment" alignment="left" inset="15"/>
+					<layout class="stick_to_sides_attachment" alignment="bottom" inset="2"/>
+				</container>
+				<!--captain icon-->
+				<widget class="picture" id="capi" scale_picture="true" file="icons/16px/captain" width="14" height="14">
+					<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="bottom" inset="9"/>
+				</widget>
+				<!--position in scouting focus icon-->
+				<widget class="picture" id="scfI" scale_picture="true" file="icons/16px/recommended nation" width="14" height="14" hidden="true">
+					<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="top" inset="9"/>
+				</widget>
+			</container>
+
+
+		</container>
+
+		<container id="nmcN">
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="5"/>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="5"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+			<container class="bordered_box" appearance="boxes/custom/darken/rounded/no margin/paper" >
+				<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="3" do_not_size="true"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+				<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="5"/>
+
+				<widget class="text" id="name" size="medium" alignment="centre,can_scale" auto_size="vertical" multiline="false" style="semi_bold">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+				</widget>
+
+
+				<widget class="match_rating_label_formatted" id="avra" height="25" alignment="centre" size="small" wants_mouse_events="false" format="[%fraction#1-3.2]" dont_format_numeric_grouping="true"/>
+
+			</container>
+		</container>
+	</container>
+
+</panel>
