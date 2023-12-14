@@ -1,5 +1,21 @@
 ﻿<panel>
   <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	
+  <!--icons used for happiness strings type-->
+	<string id="tuIC" value="icons/16px/thumbs up"/> <!-- GENERIC_GOOD -->
+	<string id="tdIC" value="icons/16px/thumbs down"/> <!-- GENERIC_BAD -->
+	<string id="haIC" value="icons/16px/happy"/> <!-- HAPPINESS / INTERNATIONAL_HAPPINESS / HAPPINESS_LEVEL when positive--> 
+	<string id="uhIC" value="icons/16px/angry"/> <!-- HAPPINESS / INTERNATIONAL_HAPPINESS / HAPPINESS_LEVEL when negative-->
+	<string id="tvIC" value="icons/16px/tv"/> <!-- PRESS_CONFERENCE -->
+	<string id="sbIC" value="icons/16px/speech bubble"/> <!-- PROMISE -->
+	<string id="clIC" value="icons/16px/club"/> <!-- CLUB_EVENTS / CLUB_MEDIA-->
+	<string id="boIC" value="icons/16px/bonus"/> <!-- BONUS -->
+	<string id="meIC" value="icons/16px/medical"/> <!-- INJURY -->
+	<string id="coIC" value="icons/custom/transfer deadline day/transfer status/contract offer"/> <!-- CONTRACT_EXPIRING / CONTRACT_OFFER /  CONSIDERING_RETIREMENT / RETIRING-->
+	<string id="trIC" value="icons/16px/transfer"/> <!-- JUST_JOINED / FUTURE_TRANSFER / TRANSFER_LISTED / FREE_AGENT / LOAN / INTEREST_LEVEL -->
+	<string id="taIC" value="icons/16px/target"/> <!-- TARGET -->
+	<string id="dyIC" value="icons/16px/dynamics"/> <!-- TEAM_PERFORMANCE / CHEMISTRY / PARTNERSHIP_GOOD / PARTNERSHIP_BAD / RELATIONSHIP_GOOD / RELATIONSHIP_BAD -->
+	<string id="TrIC" value="icons/16px/training"/> <!-- TRAINING -->
 
   <container class="scrolling_box">
   <container >
@@ -32,10 +48,6 @@
         <translation id="text" translation_id="247463" type="use" value="Happiness"/>
       </widget>
 
-      <!-- Overall Happiness Level
-      <widget class="label" alignment="right,centre_y" colour="faded text" font="title" auto_size="all">
-        <record id="object_property" get_property="Pohl" name="true"/>
-      </widget> -->
       <widget class="person_happiness_icon_widget" alignment="centre">
         <boolean id="use_morale_icon" value="false" />
         <integer id="happiness_type" value="6" />
@@ -79,47 +91,43 @@
     <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2" />
     <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 
-      <!-- Positives -->
-      <container>
-        <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2" />
-        <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
-        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+  			<!-- Positives -->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
 
-        <widget class="label" font="title" colour="positive" auto_size="vertical">
-          <translation id="text" translation_id="365300" type="use" value="Positives[COMMENT: FR 512; person happiness panel; section listing things that have a positive impact on the person's happiness]" />
-        </widget>
-        <widget class="table" id="genw" layout="20,-1" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false" >
-          <list id="column_table_properties">
-            <record id="bull">
-              <record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" height="14"/>
-            </record>
-            <record id="text">
-              <record id="widget_info" class="text" auto_size="vertical"/>
-            </record>
-          </list>
-        </widget>
-      </container>
+						<widget class="label" font="title" colour="positive" auto_size="vertical">
+							<translation id="text" translation_id="365300" type="use" value="Positives[COMMENT: FR 512; person happiness panel; section listing things that have a positive impact on the person's happiness]" />
+						</widget>
+						<widget class="table" id="genw" layout="28,-1" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false" row_spacing="0">
+							<list id="column_table_properties">
+								<record id="bull">
+									<record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" height="14" image_alignment="centre" />
+								</record>
+								<record id="text">
+									<record id="widget_info" class="text" auto_size="vertical"/>
+								</record>
+							</list>
+						</widget>
+					</container>
 
-      <!-- Negatives -->
-      <container>
-    <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="2" />
-    <layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="2" />
-    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+ 			<!-- Negatives -->
+					<container>
+						<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="6" horizontal_alignment="horizontal" horizontal_inset="0" />
 
-        <widget class="label" font="title" colour="negative" auto_size="vertical">
-          <translation id="text" translation_id="365291" type="use" value="Negatives[COMMENT: FR 512; person happiness panel; section listing things that have a negative impact on the person's happiness]" />
-        </widget>
-        <widget class="table" id="geni" layout="20,-1" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false">
-          <list id="column_table_properties">
-            <record id="bull">
-              <record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" height="14"/>
-            </record>
-            <record id="text">
-              <record id="widget_info" class="text" auto_size="vertical"/>
-            </record>
-          </list>
-        </widget>
-      </container>
+						<widget class="label" font="title" colour="negative" auto_size="vertical">
+							<translation id="text" translation_id="365291" type="use" value="Negatives[COMMENT: FR 512; person happiness panel; section listing things that have a negative impact on the person's happiness]" />
+						</widget>
+						<widget class="table" id="geni" layout="20,-1" auto_size="vertical" auto_size_rows="true" fixed_size_rows="false" row_spacing="12">
+							<list id="column_table_properties">
+								<record id="bull">
+									<record id="widget_info" class="picture" file="icons/16px/bullet" red_replacement="text" height="14" image_alignment="centre"/>
+								</record>
+								<record id="text">
+									<record id="widget_info" class="text" auto_size="vertical"/>
+								</record>
+							</list>
+						</widget>
+					</container>
 
     </container>
   </container>
