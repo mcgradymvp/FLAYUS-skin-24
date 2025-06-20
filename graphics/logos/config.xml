@@ -1,0 +1,14 @@
+<record>
+
+	<!-- resource manager options -->
+
+	<!-- dont preload or cache anything in this folder -->
+	<boolean id="preload" value="false"/>
+	<boolean id="cache" value="false"/>
+	
+	<list id="maps">
+	
+		<record from="default" to="graphics/logos/default/default"/>
+			
+	</list>
+</record>
