@@ -97,8 +97,8 @@
         <layout class="stick_to_sides_attachment" alignment="left" inset="25" />
         <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
         <!-- Wins -->
-        <widget class="label" alignment="left, centre_y">
-          <translation id="text" translation_id="249367" type="use" value="胜" />
+        <widget class="label" alignment="left, centre_y" font="title" size="11">
+          <translation id="text" translation_id="249367" type="use" value="승" />
           <translation id="hint" translation_id="249411" type="use" value="Games Won[COMMENT: player stat: games won table label]" />
         </widget>
         <container>
@@ -110,8 +110,8 @@
           </widget>
         </container>
         <!-- Draws -->
-        <widget class="label" alignment="left, centre_y">
-          <translation id="text" translation_id="249065" type="use" value="平" />
+        <widget class="label" alignment="left, centre_y" font="title" size="11">
+          <translation id="text" translation_id="249065" type="use" value="무" />
           <translation id="hint" translation_id="249412" type="use" value="Games Drawn[COMMENT: player stat: games drawn table label]" />
         </widget>
         <container>
@@ -123,8 +123,8 @@
           </widget>
         </container>
         <!-- Losses -->
-        <widget class="label" alignment="left, centre_y">
-          <translation id="text" translation_id="242496" type="use" value="负" />
+        <widget class="label" alignment="left, centre_y" font="title" size="11">
+          <translation id="text" translation_id="242496" type="use" value="패" />
           <translation id="hint" translation_id="249413" type="use" value="Games Lost[COMMENT: player stat: games lost table label]" />
         </widget>
         <container>

@@ -44,8 +44,8 @@
 			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
 			
 		<!--name-->
-			<widget class="player_picker_button" id="plPB"  file="widgets/player selection button tactics" widget_type="match_team_squad_player_selection_panel" draggable="false"  format="[%person#1-surname]">
-			</widget>
+  	    <widget class="player_picker_button" id="plPB" file="widgets/player selection button tactics" draggable="false" format="[%person#1-surname]"/>
+
 			<container>
 				<container id="OUTE">
 					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>

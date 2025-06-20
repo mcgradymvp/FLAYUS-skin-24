@@ -1,0 +1,118 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<!--very close relationship colour-->
+	<colour id="pVgC" name="very close relationship" />
+	<!--close relationship colour-->
+	<colour id="pgCl" name="close relationship" />
+	<!--aquaintance relationship colour-->
+	<colour id="pACl" name="aquaintance relationship" />
+	<!--contact relationship colour-->
+	<colour id="pCTr" name="contact relationship" />
+	<!--rival relationship colour-->
+	<colour id="prVr" name="rival relationship" />
+	<!--adversary relationship colour-->
+	<colour id="pAdv" name="adversary relationship" />
+	<!--distant relationship colour-->
+	<colour id="pCds" name="distant relationship" />
+
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+  <container class="bordered_box" appearance="">
+    <layout class="arrange_vertical_attachment" layout="60,-1" offset="10" />
+    <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+    <!--Header box-->
+    <container class="inner_box">
+      <layout class="arrange_horizontal_attachment" layout="-2, -3, 35" offset="8" gap="25" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+      <!--relationship-->
+      <container>
+        <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="6" />
+        <layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="6" />
+        <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+				<widget class="picture" id="hrcP" height="24" width="24" file="icons/48px/relationship" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" />
+
+				<widget class="text" id="dreL" auto_size="horizontal" alignment="left,centre_y" font="value" />
+				<widget class="relationship_label" id="relL" display_format="0" auto_size="horizontal"  alignment="left,centre_y" font="value" />
+
+      </container>
+      <!--Opinion-->
+      <container>
+        <layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+        <layout class="stick_to_sides_attachment" alignment="left" apply_to_children="true" inset="0" />
+        <layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0" />
+
+        <widget class="label" colour="faded text" id="opHd" auto_size="all" alignment="left,centre_y" font="label">
+          <translation id="text" translation_id="447596" type="use" value="Opinion of [%person#1-you][COMMENT: player Relationships panel; panel header title for players opinion of manager]" />
+        </widget>
+
+        <widget class="label" id="opiL" auto_size="all" alignment="left,centre_y" font="value" />
+
+      </container>
+
+    </container>
+    <container>
+			<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+			
+				<!--Favoured Personnel-->
+			<container>
+				<layout class="arrange_vertical_attachment" layout="-1,-1" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+				
+				<!--Favoured Personnel-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" gap="6" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+					<translation id="title" translation_id="247454" type="use" value="Favoured Personnel" />
+					
+					<!--favoured personnel table-->
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="8,0" />
+						<widget class="table" id="tabl" layout="-2,-2,-1,-1,-1" auto_size_rows="true">
+							<list id="headings">
+								<record index="0" alignment="left, centre_y" auto_hide_priority="1">
+									<translation id="text" translation_id="229689" type="use" value="Name" />
+								</record>
+								<record index="1" alignment="left, centre_y" auto_hide_priority="1">
+									<translation id="text" translation_id="447597" type="use" value="Reason[COMMENT: table heading; reason for relationship]" />
+								</record>
+								<record index="2" alignment="left, centre_y" auto_hide_priority="1">
+									<translation id="text" translation_id="248033" type="use" value="Nationality[COMMENT - Hall of fame section]" />
+								</record>
+								<record index="3" alignment="left, centre_y" auto_hide_priority="1">
+									<translation id="text" translation_id="323297" type="use" value="Club[COMMENT: Person table type name]" />
+								</record>
+								<record index="4" alignment="left, centre_y" auto_hide_priority="1">
+									<translation id="text" translation_id="227964" type="use" value="Job" />
+								</record>
+							</list>
+
+							<list id="column_display_properties">
+								<record index="0" sort_disabled="true" auto_hide_priority="1" width="180"/>
+								<record index="1" sort_disabled="true" auto_hide_priority="1" width="80"/>
+								<record index="2" sort_disabled="true" auto_hide_priority="1" width="120"/>
+								<record index="3" sort_disabled="true" auto_hide_priority="1" width="180"/>
+								<record index="4" sort_disabled="true" auto_hide_priority="1" />
+							</list>
+
+							<list id="column_properties">
+								<record index="1" alignment="left,centre_y" />
+							</list>
+						</widget>
+					</container>
+				
+				</container>
+
+      <!--Squad Hierarchy-->
+      <container id="plHr" >
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+        <container class="team_hierarchy_player_details_panel" id="pHrc" file="attributes/hierarchy player details panel" />
+      </container>
+    </container>
+    </container>
+  </container>
+
+</panel>

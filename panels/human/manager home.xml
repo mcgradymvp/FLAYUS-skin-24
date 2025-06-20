@@ -28,7 +28,7 @@
 				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />     
 		  
 		    <container class="client_object_viewer_selector_panel" id="trpt" file="human/manager home selector" priority="1" late_loading="true" >
-			   <translation id="title" type="use" value="下一个对手" />
+			   <translation id="title" type="use" value="下个对手" />
 			   		<integer id="default_for_unemployed_managers" value="trpt"/>
 					<integer id="default_for_international_managers_other_team" value="trpt"/>
 					<integer id="default_for_everyone_else" value="trpt"/>

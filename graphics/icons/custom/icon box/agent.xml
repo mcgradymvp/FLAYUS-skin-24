@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE propertylist SYSTEM "http://www.sigames.com/dtds/sios/properties.dtd">
+
+<!-- image properties -->
+<properties>
+	
+	<colour id="red_replacement" name="primary"/>
+	<colour id="blue_replacement" name="secondary"/>
+	
+</properties>

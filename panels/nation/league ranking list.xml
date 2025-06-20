@@ -4,7 +4,7 @@
 	<flags id="save_session_state" value="true" />
 	<flags id="save_default_state" value="true" />
 
-	<container class="main_box" id="titl">
+	<container class="inner_titled_box" id="titl" >
 		<translation id="title" translation_id="306915" type="use" value="Competitions[COMMENT: this refers to a panel which lists the top leagues + comps in a continent]" />
 		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
@@ -14,7 +14,7 @@
 			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
 
 			<!-- buttons area -->
-			<container id="btna" navigation_container="true">
+			<container id="btna">
 				<layout class="arrange_horizontal_attachment" alignment="right" />
 				<layout class="centre_in_parent_attachment" alignment="vertical" apply_to_children="true" />
 				<layout class="stick_to_sides_attachment" inset="2" alignment="top, right"/>
@@ -32,16 +32,16 @@
 				<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
 				<layout class="arrange_horizontal_attachment" offset="0" layout="-1,-1,-1" />
 
-				<widget class="league_mini_profile_panel" id="L1st" navigation_container="true"/>
-				<widget class="league_mini_profile_panel" id="L2nd" navigation_container="true"/>
-				<widget class="league_mini_profile_panel" id="L3rd" navigation_container="true"/>
+				<widget class="league_mini_profile_panel" id="L1st" />
+				<widget class="league_mini_profile_panel" id="L2nd" />
+				<widget class="league_mini_profile_panel" id="L3rd" />
 			</container>
 			
 			<container class="inner_box" id="tcnt">
 				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 				<!-- competition league table -->
-				<widget class="client_object_list_table" id="pltb" mode="fill_rows,stripe_rows,printable,keyboard,show_bullets,select_rows,select_multiple" column_mode="resize_columns" database_table_type="25" navigation_container="true">
+				<widget class="client_object_list_table" id="pltb" mode="fill_rows,stripe_rows,printable,keyboard,show_bullets,select_rows,select_multiple" column_mode="resize_columns" database_table_type="25">
 					<flags id="save_session_state" value="true" />
 					<flags id="save_default_state" value="false" />
 

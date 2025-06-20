@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+  <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+ 
+
+  <widget class="label" id="nost" alignment="centre" size="11" hidden="true">
+	  <translation id="text" translation_id="260962" type="use" value="No matches played yet[COMMENT comp player stats panel: no matches: title]" />
+  </widget>
+
+      <container>
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	 
+        <container>
+          <layout class="arrange_horizontal_attachment" layout="-1,-1,-1" offset="0" gap="10" />
+          <layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+          <!--Left-->
+          <container>
+            <layout class="arrange_vertical_attachment" layout="75,65" offset="0" gap="-5" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+            <!--Shots-->
+            <container>
+              <layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="2" />
+              <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+              <container>
+                <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+                <widget class="percentage_pie_chart" id="ShSP" value_colour="shots on target colour" is_donut_chart="true" layout="-6,-3,-1" />
+
+                <widget class="pie_chart" id="shSC" is_donut_chart="true" layout="-6,-1,-2,-1" />
+
+
+                <container>
+                  <layout class="arrange_vertical_attachment" layout="-3,-2" offset="0" gap="0" />
+                  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                  <widget class="text" id="shTX" alignment="bottom, centre_x" style="semi, bold" colour="shots goal colour" />
+                  <widget class="formatted_label" style="semi, bold" format="[%fraction#1-1.0]" id="ShSK" alignment="top, centre_x" colour="shots goal colour" />
+                </container>
+
+              </container>
+
+            </container>
+
+			
+              <container>
+                <layout class="arrange_vertical_attachment" alignment="all" offset="0" gap="-10" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                <container id="ShSV" file="gunzo/gunzo additional stats item horizontal" height="20"/>
+                <container id="SoTV" file="gunzo/gunzo additional stats item" height="35" />
+                <container id="SfTV" file="player/player additional stats item" height="0" />
+              </container>
+			
+			</container>
+
+
+          <!--Middle-->
+          <container>
+            <layout class="arrange_vertical_attachment" layout="75,65" offset="0" gap="-5" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+            <!--Passes-->
+            
+            <container>
+              <layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+              <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+              
+
+              <container>
+                <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+                <widget class="percentage_pie_chart" id="PasP" value_colour="passes succeeded colour" is_donut_chart="true" layout="-6,-3,-1" />
+
+                <widget class="pie_chart" id="PaSF" is_donut_chart="true" layout="-6,-1,-2,-1" />
+                
+                <container>
+                  <layout class="arrange_vertical_attachment" layout="-3,-2" offset="0" gap="0" />
+                  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                  <widget class="text" alignment="bottom, centre_x" style="semi, bold" colour="key passes colour">
+                    <translation id="text" translation_id="318356" type="use" value="Key[COMMENT: Player's stat panel; graph guide; key passes made during match, released for translation as I have no idea of the context of the existing Key translation]" />
+                  </widget>
+                  
+                  <widget class="formatted_label" format="[%fraction#1-1.0]" style="semi, bold" id="pasK" alignment="top, centre_x" colour="key passes colour" />
+                </container>
+                
+              </container>
+          
+            </container>
+
+			
+              <container>
+                <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="-10" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                <container id="PasV" file="gunzo/gunzo additional stats item horizontal pass" height="20" />
+                <container id="PSUV" file="gunzo/gunzo additional stats item" height="35" />
+                <container id="PFIV" file="player/player additional stats item" height="0" />
+              </container>
+			
+			</container>
+
+          <!--Right-->
+          <container>
+            <layout class="arrange_vertical_attachment" layout="75,65" offset="0" gap="-5" />
+            <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+            <!--Tackles-->
+            <container>
+              <layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
+              <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+              <container>
+                <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+                <widget class="percentage_pie_chart" id="tacP" value_colour="tackles won colour" is_donut_chart="true" layout="-6,-3,-1" />
+
+                <widget class="pie_chart" id="tacK" is_donut_chart="true" layout="-6,-1,-2,-1" />
+
+                <container>
+                  <layout class="arrange_vertical_attachment" layout="-3,-2" offset="0" gap="0" />
+                  <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                  <widget class="text" alignment="bottom, centre_x" style="semi, bold" colour="key tackles colour">
+                    <translation id="text" translation_id="318359" type="use" value="Key[COMMENT: Player's stat panel; graph guide; key passes made during match, released for translation as I have no idea of the context of the existing Key translation]" />
+                  </widget>
+                  <widget class="formatted_label" format="[%fraction#1-1.0]" id="taVK" alignment="top, centre_x" style="semi, bold" colour="key tackles colour" />
+                </container>
+                
+              </container>
+
+            </container>
+
+              <container>
+                <layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="-10" />
+                <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+                <container id="tacV" file="gunzo/gunzo additional stats item horizontal" height="20" />
+                <container id="twoV" file="gunzo/gunzo additional stats item" height="35" />
+                <container id="tfiV" file="player/player additional stats item" height="0" />
+              </container>
+			
+          </container>
+        </container>
+		  
+	  
+        </container>
+ 
+ 
+
+</panel>

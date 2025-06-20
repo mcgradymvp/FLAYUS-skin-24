@@ -15,14 +15,15 @@
 		<!--<animation class="fade_animation" trigger_start="msen" trigger_end="msex" start_value="0.0" end_value="1.0" duration="0.4" end_mode="hold_auto_reverse"/>-->
 	</widget>
 
-  <widget class="player_personal_details_panel" id="gzn1" file="non_player/non player profile1">
+  <widget class="non_player_profile_panel" id="gzp1" file="non_player/non player profile1" late_loading="true">
     <translation id="title" type="use" value="GZ" />
-       <record id="object_property" get_property="object" set_property="object"/>
+    		<record id="object_property" get_property="objt" set_property="objt" />
   </widget>
   
-  <widget class="player_personal_details_panel" id="gzn4" file="non_player/non player profile cut out">
+  <widget class="non_player_profile_panel" id="gzp4" file="non_player/non player profile cut out" late_loading="true">
     <translation id="title" type="use" value="Cut-Out" />
-       <record id="object_property" get_property="object" set_property="object"/>
+    <record id="object_property" get_property="objt" set_property="objt" />
   </widget>
+
 
 </panel>
