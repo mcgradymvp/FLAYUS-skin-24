@@ -15,10 +15,10 @@
 		<widget class="text" id="mits" auto_size="horizontal" alignment="left,centre_y" size="12" multiline="false" style="bold"/>
 
 		<!-- aggregate score -->
-		<widget class="text" id="mita" auto_size="horizontal" spec="title" alignment="left,centre_y" size="10" multiline="false"/>
+		<widget class="text" id="mita" auto_size="horizontal" spec="title" alignment="left,centre_y" size="12" multiline="false"/>
 
 		<!-- team name -->
-		<widget class="text" id="mitn" size="12" style="semi_bold" width="180" alignment="centre_x,centre_y"/>
+		<widget class="text" id="mitn" size="12" style="semi_bold"  width="200" alignment="centre_x,centre_y"/>
 	
 	<widget class="match_team_logo_picture" id="TeLo" width="45" height="45" alignment="right,centre_y">
 		<layout class="stick_to_sides_attachment" alignment="right" inset="0" />

@@ -9,7 +9,7 @@
 			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" horizontal_gap="4" horizontal_offset="0" vertical_inset="0" />
 
 			<container>
-				<attachment_group class="horizontal_arrange_autosize" horizontal_gap="0" horizontal_offset="0" vertical_inset="0" />
+				<attachment_group class="horizontal_arrange_autosize" horizontal_gap="-14" horizontal_offset="0" vertical_inset="0" />
 
 				<!-- Back Button -->
 				<widget class="screen_history_button" id="back" appearance="buttons/standard/flex/button" fixed="true" width="60" icon="icons/26px/left" icon_alignment="centre">

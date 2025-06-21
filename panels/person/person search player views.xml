@@ -8,6 +8,10 @@
 			</record>
 			<translation id="name" translation_id="247414" type="use" value="Overview" />
 			<record id="view">
+				<record id="PsRK" auto_hide_priority="3" width="70" />
+				<record id="PRpo" auto_hide_priority="3" minimum_width="70" width="70" />
+				
+				<record id="port" auto_hide_priority="4" width="32" />
 				<record id="PSpi" auto_hide_priority="4" />
 				<!-- player status/info -->
 				<record id="PFrM" auto_hide_priority="2" />
@@ -28,67 +32,40 @@
 				<!-- value -->
 				<record id="Pcww" auto_hide_priority="7" />
 				<!-- weekly wage -->
-				<record id="PRpo" auto_hide_priority="3" minimum_width="70" width="70" />
-				<!-- recommended -->
+				
 				<record id="PsKL" auto_hide_priority="1" minimum_width="70" width="70" />
 				<!-- knowledge level -->
 			</record>
 		</record>
+
 		<record id="evvw" >
 			<record id="view_table_properties">
 				<integer id="row_height" value="60" />
 			</record>
 			<translation id="name" type="use" value="Emon Scout View" />
-		  <record id="view">
-                    <record id="PsRK" auto_hide_priority="3" width="70" />
-<record id="port" auto_hide_priority="4" width="32" />
-                    <record id="PSpi" auto_hide_priority="2" width="10"  />                    <!-- player status/info -->
-                    <record id="PNaN" auto_hide_priority="3" width="140" />     <!-- player name/nation -->                   
-					<record id="PCaD" auto_hide_priority="4" minimum_width="100"/>             <!-- player club/division -->                    
-                    <record id="PSag" auto_hide_priority="5" width="20" colour="yellow1"  /> 	<!-- age -->
-                    <record id="PpsP" auto_hide_priority="6" width="130"/> <!-- person position-->
-					<record id="Pfot" auto_hide_priority="1100" width="20"  />  <!-- preferred feet -->   
-					<record id="Pcab" auto_hide_priority="10" width="30" />                    <!-- currant ability -->
-                    <record id="Ppab" auto_hide_priority="11" width="30" />                    <!-- potential ability -->   					                              
-				    <record id="Poav" auto_hide_priority="1070" colour="lime"  width="20"/> <!-- Average rating -->
-					<record id="Pogl" auto_hide_priority="1070" colour="light green 400"  width="20"/> <!-- goal -->
-					<record id="Poas" auto_hide_priority="1070" colour="light green 400"  width="20"/> <!-- asist -->          
-					<record id="Pdva" auto_hide_priority="7" width="100" />              <!-- player value -->
-					<record id="Pnar" auto_hide_priority="17" width="40" colour="yellow1" alignment="centre,centre_y" />      <!-- asking price -->			     				
-					<record id="Pced" auto_hide_priority="18" width="70" colour="gold" alignment="centre,centre_y" auto_size="horizontal"/>      <!-- Contract Expiry -->
-					<record id="Phgs" auto_hide_priority="19" width="130" colour="blue 500" alignment="centre,centre_y" multiline="false" auto_size="horizontal"/>      <!-- Home grown -->                 
-                 	<record id="PRpo" auto_hide_priority="3" width="40" /><!-- recommended -->				    
-				    <record id="PsKL" auto_hide_priority="1" width="50" /><!-- knowledge level -->
-				    
-				  </record>
+		  	<record id="view">
+				<record id="PsRK" auto_hide_priority="3" width="70" />
+				<record id="PRpo" auto_hide_priority="3" width="40" /><!-- recommended -->				 
+	
+				<record id="port" auto_hide_priority="4" width="32" />
+				<record id="PSpi" auto_hide_priority="2" width="10"  />                    <!-- player status/info -->
+            	<record id="PNaN" auto_hide_priority="3" width="140" />     <!-- player name/nation -->                   
+				<record id="PCaD" auto_hide_priority="4" minimum_width="100"/>             <!-- player club/division -->                    
+            	<record id="PSag" auto_hide_priority="5" width="20" colour="yellow1"  /> 	<!-- age -->
+            	<record id="PpsP" auto_hide_priority="6" width="130"/> <!-- person position-->
+				<record id="Pfot" auto_hide_priority="1100" width="20"  />  <!-- preferred feet -->   
+				<record id="Pcab" auto_hide_priority="10" width="30" />                    <!-- currant ability -->
+            	<record id="Ppab" auto_hide_priority="11" width="30" />                    <!-- potential ability -->   					                              
+				<record id="Poav" auto_hide_priority="1070" colour="lime"  width="20"/> <!-- Average rating -->
+				<record id="Pogl" auto_hide_priority="1070" colour="light green 400"  width="20"/> <!-- goal -->
+				<record id="Poas" auto_hide_priority="1070" colour="light green 400"  width="20"/> <!-- asist -->          
+				<record id="Pdva" auto_hide_priority="7" width="100" />              <!-- player value -->
+				<record id="Pnar" auto_hide_priority="17" width="40" colour="yellow1" alignment="centre,centre_y" />      <!-- asking price -->			     				
+				<record id="Pced" auto_hide_priority="18" width="70" colour="gold" alignment="centre,centre_y" auto_size="horizontal"/>      <!-- Contract Expiry -->
+				<record id="Phgs" auto_hide_priority="19" width="130" colour="blue 800" alignment="centre,centre_y" multiline="false" auto_size="horizontal"/>      <!-- Home grown -->                 
+        	</record>
 		</record>
 
-		<!-- overview view for FMT -->
-		<record id="ovwt">
-			<record id="view_table_properties">
-				<integer id="row_height" value="60" />
-			</record>
-			<translation id="name" translation_id="247414" type="use" value="Overview" />
-			<record id="view">
-				<record id="PSpi" auto_hide_priority="4" />
-				<!-- player status/info -->
-				<record id="PNaC" auto_hide_priority="1" />
-				<!-- player name/club -->
-				<record id="PpsP" auto_hide_priority="5" />
-				<!-- person position-->
-				<record id="PSag" auto_hide_priority="7" />
-				<!-- person age -->
-				<record id="Pcab" auto_hide_priority="8" />
-				<!-- currant ability -->
-				<record id="Ppab" auto_hide_priority="9" />
-				<!-- potential ability -->
-				<record id="Pdva" auto_hide_priority="4" />
-				<!-- value -->
-				<record id="PRpo" auto_hide_priority="3" minimum_width="70" width="70" />
-				<!-- recommended -->
-			</record>
-		</record>
-		
 		<record id="geni">
 			<translation id="name" translation_id="247410" type="use" value="General Info" />
 			<!-- Define attributes/properties to view in this view type on the panel.
@@ -96,6 +73,8 @@
 			<record id="view">
 				<flags id="Pday" />
 				<!-- days left on shortlist -->
+				<flags id="PsrK" />
+				<!-- recommended -->
 				<flags id="PRps" />
 				<!-- recommended -->
 				<flags id="PSpi" />
@@ -150,33 +129,39 @@
 		</record>
 
     <!-- overview view for create a club-->
-    <record id="oveC">
-      <record id="view_table_properties">
-        <integer id="row_height" value="60" />
-      </record>
-      <translation id="name" translation_id="247414" type="use" value="Overview" />
-      <record id="view">
-        <record id="PSpi" auto_hide_priority="4" />
-        <!-- player status/info -->
-        <record id="PNaN" auto_hide_priority="1" minimum_width="200" />
-        <!-- player name/nation -->
-        <record id="PCaD" auto_hide_priority="2" minimum_width="150" width="-1" />
-        <!-- player club/division -->
-        <record id="PpsP" auto_hide_priority="5" />
-        <!-- person position-->
-        <record id="Pmor" auto_hide_priority="12" />
-        <!-- player morale -->
-        <record id="PSag" auto_hide_priority="6" />
-        <!-- person age -->
-        <record id="Poav" auto_hide_priority="8" width="55" />
-        <!-- overall average rating -->
-        <record id="Pcww" auto_hide_priority="11" />
-        <!-- weekly wage -->
-        <record id="fTsQ" auto_hide_priority="4" />
-        <!-- value -->
-        <flags id="PsSA" auto_hide_priority="1" />
-        <!-- action -->
-      </record>
+    <record id="oveC" >
+    	<record id="view_table_properties">
+    		<integer id="row_height" value="60" />
+    	</record>
+    	<translation id="name" translation_id="247414" type="use" value="Overview" />
+    	<record id="view">
+        	<record id="PSpi" auto_hide_priority="4"/>
+        	<!-- player status/info -->
+        	<record id="PNaN" auto_hide_priority="1" minimum_width="200"/>
+        	<!-- player name/nation -->
+        	<record id="PCaD" auto_hide_priority="2" minimum_width="150" width="-1"/>
+        	<!-- player club/division -->
+        	<record id="PpsP" auto_hide_priority="5"/>
+        	<!-- person position-->
+        	<record id="Pmor" auto_hide_priority="12"/>
+        	<!-- player morale -->
+        	<record id="PSag" auto_hide_priority="6" width="25"/>
+        	<!-- person age -->
+        	<record id="Poav" auto_hide_priority="8" width="55"/>
+        	<!-- overall average rating -->
+        	<record id="Pcww" auto_hide_priority="11"/>
+        	<!-- weekly wage -->
+        	<record id="fTsQ" auto_hide_priority="4"/>
+        	<!-- value -->
+        	<record id="Pmna" auto_hide_priority="9"/>
+        	<!-- min asking price -->
+        	<record id="Pmxa" auto_hide_priority="7"/>
+        	<!-- max asking price -->
+        	<record id="Psrk" auto_hide_priority="3" minimum_width="70" width="70"/>
+        	<!-- recommended -->
+        	<flags id="PsSA" auto_hide_priority="1"/>
+        	<!-- action -->
+      	</record>
     </record>
     
     <!-- general view for create a club-->
@@ -206,6 +191,8 @@
 			<record id="view">
 				<flags id="Pday" />
 				<!-- days left on shortlist -->
+				<flags id="PsrK" />
+				<!-- recommended -->
 				<flags id="PRps" />
 				<!-- recommended -->
 				<flags id="PSpi" />
@@ -214,8 +201,11 @@
 				<!-- person name -->
 				<flags id="Pclb" />
 				<!-- club team -->
+				<flags id="Pccs" />
+				<!-- squad status -->
+				<flags id="Pcif" />
 				<flags id="Pcpt" />
-        <!-- agreed playing time -->
+        		<!-- agreed playing time -->
 				<flags id="Pcif" />
 				<!-- full time or part-time contract -->
 				<flags id="Pcww" />
@@ -232,6 +222,8 @@
 			<record id="view">
 				<flags id="Pday" />
 				<!-- days left on shortlist -->
+				<flags id="PsrK" />
+				<!-- recommended -->
 				<flags id="PRps" />
 				<!-- recommended -->
 				<flags id="PSpi" />
@@ -240,6 +232,8 @@
 				<!-- person name -->
 				<flags id="Pagn" />
 				<!-- person agent -->
+				<flags id="PagP" />
+				<!-- person agent percentage -->
 				<flags id="PcTp" />
 				<!-- transfer status -->
 				<flags id="PcLp" />
@@ -258,6 +252,8 @@
 			<record id="view">
 				<flags id="Pday" />
 				<!-- days left on shortlist -->
+				<flags id="PsrK" />
+				<!-- recommended -->
 				<flags id="PRps" />
 				<!-- recommended -->
 				<flags id="PSpi" />
@@ -270,7 +266,7 @@
 				<!-- player morale -->
 				<record id="Pfrm" auto_hide_priority="6" />
 				<!-- player form -->
-				<record id="PcOI" auto_hide_priority="2" />
+				<record id="Pcon" auto_hide_priority="2" />
 				<!-- player condition -->
 				<record id="PftI" auto_hide_priority="2" />
 				<!-- player sharpness -->
@@ -288,6 +284,8 @@
 			<record id="view">
 				<flags id="Pday" />
 				<!-- days left on shortlist -->
+				<flags id="PsrK" />
+				<!-- recommended -->
 				<flags id="PRps" />
 				<!-- recommended -->
 				<flags id="PSpi" />
@@ -296,6 +294,10 @@
 				<!-- person name -->
 				<flags id="PSag" />
 				<!-- age -->
+				<flags id="Pmna" />
+				<!-- min asking price -->
+				<flags id="Pmxa" />
+				<!-- max asking price -->
 				<flags id="PscC" />
 				<!-- scouting cost -->
 				<flags id="Pdva" />
@@ -347,6 +349,8 @@
 					<record id="view">
 						<flags id="Pday" />
 						<!-- days left on shortlist -->
+						<flags id="PsrK" />
+						<!-- recommended -->
 						<flags id="PRps" />
 						<!-- recommended -->
 						<flags id="PSpi" />
@@ -382,6 +386,8 @@
 					<record id="view">
 						<flags id="Pday" />
 						<!-- days left on shortlist -->
+						<flags id="PsrK" />
+						<!-- recommended -->
 						<flags id="PRps" />
 						<!-- recommended -->
 						<flags id="PSpi" />
@@ -414,7 +420,6 @@
 				</record>
 			</list>
 		</record>
-
 
 		<record id="arvw">
 			<record id="view_table_properties">
@@ -449,12 +454,13 @@
 
 		</record>
 
-
 		<record id="inca">
 			<translation id="name" translation_id="227820" type="use" value="International" />
 			<record id="view">
 				<flags id="Pday" />
 				<!-- days left on shortlist -->
+				<flags id="PsrK" />
+				<!-- recommended -->
 				<flags id="PRps" />
 				<!-- recommended -->
 				<flags id="PSpi" />
@@ -486,8 +492,10 @@
 					<record id="view">
 						<flags id="Pday" />
 						<!-- days left on shortlist -->
-						<flags id="PRps" />
+						<flags id="PsrK" />
 						<!-- recommended -->
+						<flags id="PRps" />
+				<!-- recommended -->
 						<flags id="PSpi" />
 						<!-- player status/info -->
 						<record id="PnmP" />
@@ -518,8 +526,10 @@
 					<record id="view">
 						<record id="Pday" />
 						<!-- days left on shortlist -->
-						<record id="PRps" />
+						<record id="PsrK" />
 						<!-- recommended -->
+						<record id="PRps" />
+						<!-- recommended -->						
 						<record id="PSpi" />
 						<!-- player status/info -->
 						<record id="PnmP" />
@@ -562,6 +572,8 @@
 					<record id="view">
 						<record id="Pday" />
 						<!-- days left on shortlist -->
+						<record id="PsrK" />
+						<!-- recommended -->
 						<record id="PRps" />
 						<!-- recommended -->
 						<record id="PSpi" />
@@ -606,6 +618,8 @@
 					<record id="view">
 						<flags id="Pday" />
 						<!-- days left on shortlist -->
+						<flags id="PsrK" />
+						<!-- recommended -->
 						<flags id="PRps" />
 						<!-- recommended -->
 						<flags id="PSpi" />
@@ -644,6 +658,8 @@
 					<record id="view">
 						<flags id="Pday" />
 						<!-- days left on shortlist -->
+						<flags id="PsrK" />
+						<!-- recommended -->
 						<flags id="PRps" />
 						<!-- recommended -->
 						<flags id="PSpi" />
@@ -680,6 +696,8 @@
 					<record id="view">
 						<flags id="Pday" />
 						<!-- days left on shortlist -->
+						<flags id="PsrK" />
+						<!-- recommended -->
 						<flags id="PRps" />
 						<!-- recommended -->
 						<flags id="PSpi" />
@@ -723,6 +741,8 @@
 			<record id="view">
 				<flags id="Pday" />
 				<!-- days left on shortlist -->
+				<flags id="PsrK" />
+				<!-- recommended -->
 				<flags id="PRps" />
 				<!-- recommended -->
 				<flags id="PSpi" />
@@ -747,6 +767,8 @@
 			<record id="view">
 				<flags id="Pday" />
 				<!-- days left on shortlist -->
+				<flags id="PsrK" />
+				<!-- recommended -->
 				<flags id="PRps" />
 				<!-- recommended -->
 				<flags id="PSpi" />
@@ -775,6 +797,8 @@
 			<record id="view">
 				<flags id="Pday" />
 				<!-- days left on shortlist -->
+				<flags id="PsrK" />
+				<!-- recommended -->
 				<flags id="PRps" />
 				<!-- recommended -->
 				<flags id="PSpi" />
@@ -796,6 +820,8 @@
 			<record id="view">
 				<flags id="Pday" />
 				<!-- days left on shortlist -->
+				<flags id="PsrK" />
+				<!-- recommended -->
 				<flags id="PRps" />
 				<!-- recommended -->
 				<flags id="PSpi" />
@@ -818,6 +844,8 @@
 			<record id="view">
 				<flags id="Pday" />
 				<!-- days left on shortlist -->
+				<flags id="PsrK" />
+				<!-- recommended -->
 				<flags id="PRps" />
 				<!-- recommended -->
 				<flags id="PSpi" />

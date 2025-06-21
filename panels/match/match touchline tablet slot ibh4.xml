@@ -101,9 +101,9 @@
 			<translation id="title" translation_id="535500" type="use" value="Match Momentum[COMMENT: AREA: Data Visualisation; SUB-AREA: Pass map FR: 32708; TONE: Formal; CHARLIMIT: None; NOTE: dataviz title string, the match momentum data viz charts how the match went with regards to each team enjoying spells on top/chances created]" />
 			
 		</widget>
-		<!-- <widget class="match_team_stats_panel" id="hfMs" file="match/match team stats full floating" use_short_name_format="true" team_index="0">
+		<widget class="match_team_stats_panel" id="hfMs" file="match/match team stats full floating" use_short_name_format="true" team_index="0">
 			<translation id="title" translation_id="247393" type="use" value="Team Stats" />
-		</widget> -->
+		</widget>
  	
 		<widget class="match_team_stats_panel" id="afMs" file="match/match team stats full floating" use_short_name_format="true" team_index="1">
 			<translation id="title" translation_id="247393" type="use" value="Team Stats" />

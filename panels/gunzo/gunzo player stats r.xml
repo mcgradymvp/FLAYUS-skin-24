@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	
+					
+	<layout class="arrange_vertical_attachment" layout="15,-1, 1" offset="0" gap="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+
+    <container height="15">
+      <layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+      <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+      
+      <string id="skin_style" value="title link" />
+
+      <!-- Linked header -->
+      
+      <widget class="link_button" section="Psta" auto_size="all">
+        <translation id="text" translation_id="247412" type="use" value="Stats" />
+      </widget>
+    </container>  
+
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+		<container class="vertical_adaptive_container" id="PDvc" inset="0" offset="0" gap="0">
+
+
+
+			<!-- small stats -->
+			<container default_height="135" minimum_height="80" priority="2">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="player_additional_stats_panel" id="gzas" file="gunzo/gunzo additional stats profile" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
+
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+
+			<container height="5" priority="3"/>
+
+				
+			<!-- small stats2 -->
+			<container default_height="50" minimum_height="30" priority="2">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="player_additional_stats_panel" id="gza2" file="gunzo/gunzo additional stats profile2" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
+
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+	
+
+			<!-- small stats1 -->
+			<container default_height="70" minimum_height="80" priority="2">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="player_additional_stats_panel" id="gza1" file="gunzo/gunzo additional stats profile1 r" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
+
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+		
+				<container height="3" priority="3"/>
+
+		
+			
+			<!-- small report -->
+			<container default_height="-1" minimum_height="30" priority="2">
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<widget class="player_scout_reports_panel" id="gprp" file="gunzo/gunzo player reports profile" late_loading="true" valid_for_unemployed_managers="false" valid_for_international_managers_other_team="false">
+
+					<record id="object_property">
+						<integer id="get_property" value="objt" />
+						<integer id="set_property" value="objt" />
+					</record>
+				</widget>
+			</container>
+
+
+
+
+		</container>
+	</container>
+	
+</panel>

@@ -333,7 +333,7 @@
 
 							<list id="headings">
 								<record alignment="left,centre_y" column_span="2">
-									<translation id="text" type="use" translation_id="361135" value="隐藏" />
+									<translation id="text" type="use" translation_id="361135" value="히든" />
 								</record>
 							</list>
 
@@ -433,7 +433,7 @@
 			
 			<!-- Tactics overview -->
 			<container class="titled_box">	    
-				<translation id="title" type="use" value="战术类型" /> 
+				<translation id="title" type="use" value="전술 유형" /> 
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
 				<widget class="non_player_tactics_overview_panel" id="tact" file="human/manager tactics overview">		
@@ -465,7 +465,7 @@
 			
 			<!-- Knowledge panel -->
 			<container class="titled_box">	    
-				<translation id="title" type="use" value="知识" /> 
+				<translation id="title" type="use" value="정보력" /> 
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 			
 			    <widget class="non_player_knowledge_panel" id="know" file="non_player/non player knowledge vertical1">

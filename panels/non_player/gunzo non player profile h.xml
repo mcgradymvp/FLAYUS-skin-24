@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version='1.0' encoding='utf-8'?>
 <panel>
 	<layout class="arrange_vertical_attachment" layout="-1" offset="0" gap="0" />
 	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />

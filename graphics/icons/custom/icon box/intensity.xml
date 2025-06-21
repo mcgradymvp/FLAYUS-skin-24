@@ -1,0 +1,7 @@
+﻿<!-- image properties -->
+<properties>
+	
+	<colour id="red_replacement" name="primary"/>
+	<colour id="blue_replacement" name="secondary"/>
+	
+</properties>
