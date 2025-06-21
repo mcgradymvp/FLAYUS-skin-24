@@ -1,4 +1,4 @@
-<panel width="700">
+﻿<panel width="700">
 <!--Alternate UI mode-->
 	<integer id="alSM" value="0" />
 

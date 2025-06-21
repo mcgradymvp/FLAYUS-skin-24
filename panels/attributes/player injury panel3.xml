@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<panel>
+  <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+
+  <boolean id="should_force_refresh" value="true"/>
+  <string id="skin_style" value="title link"/>
+
+      <container>
+        <layout class="arrange_vertical_attachment" alignment="top, extend"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true"/>
+
+        <widget class="link_button" section="PHin" auto_size="all" colour="accent">
+          <translation id="text" translation_id="450787" type="use" value="Injury History[COMMENT: FR20159; team injuries panel; panel title for player's historical injury list]"/>
+        </widget>
+
+        <widget class="table" id="InHi" layout="120, -1, 40" mode="fill_rows, select_rows" sort_disabled="true" select_event="seli" fixed_size_rows="false" auto_size_rows="true" row_spacing="5">
+          <list id="headings">
+            <record index="0">
+              <translation id="text" translation_id="230120" type="use" value="Date"/>
+            </record>
+            <record index="1">
+              <translation id="text" translation_id="247523" type="use" value="Injury[COMMENT: Player Injury name, table header]"/>
+            </record>
+            <record index="2">
+              <translation id="text" type="use" value="缺阵期间"/>
+            </record>
+          </list>
+
+          <record id="default_properties">
+            <flags id="auto_size" value="vertical"/>
+            <boolean id="multiline" value="true"/>
+            <flags id="alignment" value="left,centre_y"/>
+          </record>
+
+
+          <list id="column_display_properties">
+            <record index="0" alignment="left,centre_y"/>
+            <record index="1" alignment="left,centre_y"/>
+            <record index="2" alignment="left,centre_y"/>
+          </list>
+        </widget>
+      </container>
+
+</panel>

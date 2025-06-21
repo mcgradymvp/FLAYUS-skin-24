@@ -117,9 +117,9 @@
 			<translation id="title" translation_id="247393" type="use" value="Team Stats" />
 		</widget>
  	
-		<!-- <widget class="match_team_stats_panel" id="afMs" file="match/match team stats full floating" use_short_name_format="true" team_index="1">
+		<widget class="match_team_stats_panel" id="afMs" file="match/match team stats full floating" use_short_name_format="true" team_index="1">
 			<translation id="title" translation_id="247393" type="use" value="Team Stats" />
-		</widget> -->
+		</widget>
 			<widget class="match_formation_panel" id="hmtt" file="match/match formation panel review" team_index="0" read_only="true">
 			<translation id="title" translation_id="230056" type="use" value="Tactics" />
 		</widget>

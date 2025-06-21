@@ -3,20 +3,20 @@
 	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
 	<container>
-		<translation id="title" translation_id="349045" type="use" value="Profile[COMMENT: media source profile tab, use top 10 matches]" />
 		<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="1" />
 		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
 
 		<!-- General info -->
-		<container height="120" class="main_contrast_box"> 
-			<attachment_group class="vertical_arrange" vertical_offset="5" vertical_gap="5" horizontal_alignment="horizontal" horizontal_inset="50" />
+		<container class="inner_titled_box" height="100"> 
+		<translation id="title" translation_id="349045" type="use" value="Profile[COMMENT: media source profile tab, use top 10 matches]" />
+			<attachment_group class="vertical_arrange" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="50" />
 
 			<!-- General info labels -->
 			<container height="30">
 				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
 				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 
-				<record id="default_properties" alignment="centre_x,bottom" font="label" colour="text"/>
+				<record id="default_properties" alignment="centre_x,bottom" font="label" colour="secondary"/>
 
 				<!-- Type -->
 				<widget class="label" id="typl">
@@ -69,7 +69,7 @@
 				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" />
 				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 
-				<record id="default_properties" alignment="centre_x,top" font="value" colour="text"/>
+				<record id="default_properties" alignment="centre_x,top" font="value" colour="secondary"/>
 				
 				<!-- Type -->
 				<widget class="media_source_type_label" id="Mtyp">
@@ -108,7 +108,7 @@
 			</container>
 
 			<!-- Website link -->
-			<widget class="url_text" id="urlt" auto_size="vertical" size="xlarge" colour="text" alignment="centre_x,top">
+			<widget class="url_text" id="urlt" auto_size="vertical" size="xlarge" colour="secondary" alignment="centre_x,top">
 				<string id="url_tracking_category" value="feature_news_item_url_clicked" />
 				<record id="object_property">
 					<integer id="get_property" value="Murl" />
@@ -130,7 +130,7 @@
 					<layout class="arrange_horizontal_attachment" alignment="fill" offset="0"  />
 					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
 
-					<container class="main_box">
+					<container class="subsection_box">
 						<translation id="title" translation_id="348966" type="use" value="Journalists[COMMENT: media profile; list of journalists attached to media source]" />
 						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
@@ -152,7 +152,7 @@
 
 
 					<!-- Related media list -->
-					<container class="main_box">
+					<container class="subsection_box">
 						<translation id="title" translation_id="348977" type="use" value="Linked Media[COMMENT: media profile; list of other media sources link to media source]" />
 						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
@@ -173,7 +173,7 @@
 				</container>
 
 				<!-- Covered objects -->
-				<container class="main_box">
+				<container class="subsection_box">
 					<translation id="title" translation_id="306508" type="use" value="Coverage" />
 					<!--Kept for string reuse <translation id="title" translation_id="348799" type="use" value="Covered Clubs[COMMENT: media profile; list of clubs covered by media source]" />-->
 					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
@@ -192,7 +192,7 @@
 			</container>
 
 			<!-- Recent news -->
-			<container class="main_box">
+			<container class="subsection_box">
 				<translation id="title" translation_id="295149" type="use" value="News[comment: option that appears on the competition context menu]" />
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 

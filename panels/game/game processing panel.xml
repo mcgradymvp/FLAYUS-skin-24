@@ -19,19 +19,19 @@
 
 	<!-- This is a bit of a hack. In order to give the other animations time to finish when we hide we use an animation that does nothing to postpone hiding -->
 	<!-- The duration of this animation should be the same as the longest reversible one on this panel -->
-	<animation class="fade_on_hide_animation" duration="0.4" end_mode="hold_auto_reverse" />
+	<animation class="fade_on_hide_animation" duration="0.2" end_mode="hold_auto_reverse" />
 
 	<!-- Modal sheet to darken and disable the main game contents -->
 	<container class="modal_sheet" id="mods">
 		<!-- Fade in -->
-		<animation class="fade_on_hide_animation" duration="0.4" />
+		<animation class="fade_on_hide_animation" duration="0.2" />
 	</container>
 
 	<!-- Panel contents -->
 	<container background_colour="bg">
 		<attachment_group class="vertical_arrange_autosize" vertical_offset="0" vertical_gap="0" horizontal_alignment="horizontal" horizontal_inset="0" />
 
-		<animation class="slide_in_top_animation" duration="0.4" tween="ease_out" />
+		<animation class="slide_in_top_animation" duration="0.2" tween="ease_out" />
 
 		<!-- Header with next match info and browse button -->
 		<container background_colour="bg" height="85">

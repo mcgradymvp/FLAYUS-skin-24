@@ -19,6 +19,7 @@
 					<integer value="63" />
 					<!-- Heatmap -->
 					<integer value="42" />	
+					<integer value="62" />  	
 				</list>
 				</widget>
 			</container>

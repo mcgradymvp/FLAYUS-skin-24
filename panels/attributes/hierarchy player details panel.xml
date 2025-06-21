@@ -1,0 +1,89 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+	<container class="plain_box">
+		<layout class="arrange_vertical_attachment" alignment="top,extend" gap="4" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-1, -1" offset="0" gap="5" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+		
+			<!--category and description-->
+			<container class="inner_box" >
+				<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10" apply_to_children="true" />
+
+				<!-- Hierarchy category header-->
+				<container id="tmTC" height="28" >
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+					<layout class="arrange_vertical_attachment" alignment="middle" offset="0" gap="0" />
+
+					<container class="bordered_box" id="tmCc" appearance="boxes/custom/hierarchy/header/paper"  height="22">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="text" id="tmCl" multiline="false" alignment="centre" spec="text" style="semi_bold" colour="black" />
+					</container>
+				</container>
+
+				<!-- Hierarchy description and prop/cons-->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="top, extend" offset="0" />
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" apply_to_children="true" />
+						<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+						<layout class="arrange_horizontal_attachment" alignment="left, extend" offset="0" gap="10" />
+
+						<container width="16" id="inDC">
+							<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
+							<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+							<widget class="picture" id="hrcI" file="icons/16px/change up" image_alignment="centre" scale_picture="true" />
+							<widget class="picture" id="hrcD" file="icons/16px/change down" image_alignment="centre" scale_picture="true" />
+						</container>
+						<widget class="label" id="tmde" multiline="true" alignment="top,left" height="55" />
+					</container>
+
+					<!--support pros/cons-->
+					<container class="scrolling_box">
+						<container id="Ppcn">
+							<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+							<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="0"/>
+							<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
+						</container>
+					</container>
+				</container>
+			</container>
+
+			<!--social group-->
+			<!--Social group and description-->
+			<container class="inner_box" id="cGbx">
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="6" apply_to_children="true" />
+				<layout class="arrange_vertical_attachment" layout="30,-1,30" offset="0" />
+		
+				<container class="bordered_box" appearance="boxes/custom/solid/rounded/paper" red_replacement="chemistry_influences_colour">
+					<layout class="arrange_horizontal_attachment" alignment="left" offset="6" gap="5" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="4" apply_to_children="true" />
+					<!--Social group Icon and text-->
+					<widget class="picture" width="16" file="icons/16px/dynamics" image_alignment="centre" scale_picture="true" red_replacement="black" />
+
+					<widget class="link_button" id="infL" spec="text" alignment="left,centre_y" auto_size="horizontal" style="semi_bold" colour="black" red_replacement="black" appearance="buttons/link/title/button" section="tHSg">
+						<record id="object_property">
+							<integer id="get_property" value="Pcte" />
+							<integer id="set_property" value="objt" />
+						</record>
+					</widget>
+				</container>
+				<widget class="label" id="Sgds" multiline="true" alignment="top,left" />
+        <!--interaction-->
+        <container >
+          <layout class="stick_to_sides_attachment" alignment="top,horizontal" apply_to_children="true" inset="0"/>
+          <widget class="client_action_popup_button" id="papb" auto_size="vertical" icon_alignment="centre" dont_set_selection="true">
+            <record id="object_property" get_property="objt" set_property="objt"/>
+          </widget>
+        </container>
+			</container>
+		</container>
+	</container>
+</panel>

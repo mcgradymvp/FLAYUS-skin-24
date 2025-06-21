@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<panel>
+	<layout class="arrange_vertical_attachment" layout="15,-1" inset="0" gap="0" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" apply_to_children="true" />
+	
+    <container>
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+	<string id="skin_style" value="title link" />
+
+	<!-- Linked header -->
+    <widget class="link_button" section="Ppin" auto_size="all">
+        <translation id="text"  type="use" value="球员信息"/>
+    </widget>
+       </container>
+  
+   <container class="scrolling_box">
+   <container>
+   <attachment_group class="vertical_arrange_autosize" horizontal_inset="0" />
+
+	<widget class="table" id="left" layout="-1,-2" mode="fill_rows" auto_size_rows="true" fixed_size_rows="false" auto_size="vertical">
+			
+	<!-- place of birth -->
+	<widget class="label" id="cobp" col="0" row="1" alignment="left,centre_y" auto_size="vertical" font="label">
+		<translation id="text" translation_id="227960" type="use" value="Place Of Birth" />
+	</widget>
+	<widget class="place_of_birth_label" id="cobw" col="1" row="1" alignment="left,centre_y" auto_size="vertical" spec="text" />
+
+	<!-- national service-->
+	<widget class="label" col="0" row="2" alignment="left,centre_y"  auto_size="vertical" font="label">
+		<translation id="text" translation_id="312493" type="use" value="National Service Status[COMMENT; editor field]" />
+	</widget>
+	<widget class="text" id="ntst" col="1" row="2" auto_size="horizontal" alignment="left,centre_y" icon_alignment="left,centre_y" spec="text" />
+    
+	<!-- favoured persons -->
+    <widget class="label" col="0" row="3" auto_size="vertical" alignment="left,centre_y" font="label">
+        <translation id="text" translation_id="247454" type="use" value="Favoured Personnel" />
+    </widget>
+    <widget class="favourite_personel_text" id="fvpw" col="1" row="3"  alignment="left,centre_y" auto_size="vertical" spec="text"  />
+
+	</widget>
+
+	</container>
+    </container>
+</panel>

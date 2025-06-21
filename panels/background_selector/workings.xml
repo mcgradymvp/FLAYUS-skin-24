@@ -1,21 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE panel SYSTEM "http://www.sigames.com/dtds/sios/panel.dtd">
-
 <panel title="workings">
-	<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
 
 	<!-- closing selector by clicking on empty space -->
 
 	<widget class="button" text="" appearance="button/hide_options/button">
-		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 
-		<event id="click_event" event_id="kev3"/>
+		<event id="click_event" event_id="kev3" />
 
 		<attachment class="event_relay_attachment" event_id="kev3">
 			<record id="action_event">
-				<flags id="event_id" value="hide"/>
-				<flags id="event_target" value="bgs1"/>
+				<flags id="event_id" value="hide" />
+				<flags id="event_target" value="bgs1" />
 			</record>
 		</attachment>
 
@@ -24,834 +21,848 @@
 	<!-- background previews -->
 
 	<container height="200">
-		<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" layout="100, -1"/>
-		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" layout="100, -1" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"
+			apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 
 		<container class="bordered_box" appearance="boxes/bordered/standard/bg/1">
-			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
 			<container>
-				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" layout="10, -1, 10"/>
-				<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
-				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
-				<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0"
+					layout="10, -1, 10" />
+				<layout class="centre_in_parent_attachment" alignment="vertical" offset="0"
+					apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
 
 				<real id="delay_modal_close" value="0.8" />
-				<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="1, 0" end_value="0, 0" duration="0.8" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen"/>
+				<animation class="translate_animation" trigger_id="hidden" trigger_value="false"
+					start_value="1, 0" end_value="0, 0" duration="0.8" end_mode="hold_auto_reverse_hold"
+					tween="ease_out" coord_mode="relative_to_screen" />
 
-				<container/>
+				<container />
 
-				<container class="horizontal_adaptive_container" id="xxxx" mode="distribute_equally" height="100" gap="0" offset="0">
-					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+				<container class="horizontal_adaptive_container" id="xxxx" mode="distribute_equally"
+					height="100" gap="0" offset="0">
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"
+						apply_to_children="true" />
 
-					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true" keep_aspect_ratio="false" file="backgrounds/1"/>
-					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true" keep_aspect_ratio="false" file="backgrounds/2"/>
-					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true" keep_aspect_ratio="false" file="backgrounds/3"/>
-					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true" keep_aspect_ratio="false" file="backgrounds/4"/>
-					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true" keep_aspect_ratio="false" file="backgrounds/5"/>
-					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true" keep_aspect_ratio="false" file="backgrounds/6"/>
-					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true" keep_aspect_ratio="false" file="backgrounds/7"/>
-					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true" keep_aspect_ratio="false" file="backgrounds/8"/>
-					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true" keep_aspect_ratio="false" file="backgrounds/9"/>
-					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true" keep_aspect_ratio="false" file="backgrounds/default"/>
+					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true"
+						keep_aspect_ratio="false" file="backgrounds/1" />
+					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true"
+						keep_aspect_ratio="false" file="backgrounds/2" />
+					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true"
+						keep_aspect_ratio="false" file="backgrounds/3" />
+					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true"
+						keep_aspect_ratio="false" file="backgrounds/4" />
+					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true"
+						keep_aspect_ratio="false" file="backgrounds/5" />
+					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true"
+						keep_aspect_ratio="false" file="backgrounds/6" />
+					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true"
+						keep_aspect_ratio="false" file="backgrounds/7" />
+					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true"
+						keep_aspect_ratio="false" file="backgrounds/8" />
+					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true"
+						keep_aspect_ratio="false" file="backgrounds/9" />
+					<widget class="picture" alignment="fill" height="200" width="130" scale_picture="true"
+						keep_aspect_ratio="false" file="backgrounds/default" />
 
 				</container>
 
-				<container/>
+				<container />
 
 			</container>
 
 			<!-- background changing buttons -->
 
 			<container>
-				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" layout="10, -1, 10"/>
-				<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true" />
-				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
-				<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0"
+					layout="10, -1, 10" />
+				<layout class="centre_in_parent_attachment" alignment="vertical" offset="0"
+					apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" />
 
 				<real id="delay_modal_close" value="0.8" />
-				<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="1, 0" end_value="0, 0" duration="0.8" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen"/>
+				<animation class="translate_animation" trigger_id="hidden" trigger_value="false"
+					start_value="1, 0" end_value="0, 0" duration="0.8" end_mode="hold_auto_reverse_hold"
+					tween="ease_out" coord_mode="relative_to_screen" />
 
-				<container/>
+				<container />
 
-				<container class="horizontal_adaptive_container" id="xxxx" mode="distribute_equally" height="350" gap="8" offset="0">
-					<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" apply_to_children="true"/>
+				<container class="horizontal_adaptive_container" id="xxxx" mode="distribute_equally"
+					height="350" gap="8" offset="0">
+					<layout class="centre_in_parent_attachment" alignment="vertical" offset="0"
+						apply_to_children="true" />
 
 
-					<widget class="button" text="" appearance="buttons/graphics options/select/button" height="350" auto_size="horizontal">
-						<event id="click_event" event_id="kev1"/>
+					<widget class="button" text="" appearance="buttons/graphics options/select/button"
+						height="350" auto_size="horizontal">
+						<event id="click_event" event_id="kev1" />
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="1pic"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="1pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="2pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="2pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="3pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="3pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="4pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="4pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="5pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="5pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="6pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="6pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="7pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="7pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="8pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="8pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="9pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="9pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="10pic"/>
-							</record>
-						</attachment>
-
-					</widget>
-
-
-
-					<widget class="button" text="" appearance="buttons/graphics options/select/button" height="350" auto_size="horizontal">
-						<event id="click_event" event_id="kev1"/>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="1pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="2pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="3pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="4pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="5pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="6pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="7pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="8pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="9pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="10pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="10pic" />
 							</record>
 						</attachment>
 
 					</widget>
 
 
-
-					<widget class="button" text="" appearance="buttons/graphics options/select/button" height="350" auto_size="horizontal">
-						<event id="click_event" event_id="kev1"/>
+					<widget class="button" text="" appearance="buttons/graphics options/select/button"
+						height="350" auto_size="horizontal">
+						<event id="click_event" event_id="kev1" />
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="1pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="1pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="2pic"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="2pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="3pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="3pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="4pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="4pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="5pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="5pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="6pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="6pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="7pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="7pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="8pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="8pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="9pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="9pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="10pic"/>
-							</record>
-						</attachment>
-
-					</widget>
-
-
-
-					<widget class="button" text="" appearance="buttons/graphics options/select/button" height="350" auto_size="horizontal">
-						<event id="click_event" event_id="kev1"/>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="1pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="2pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="3pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="4pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="5pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="6pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="7pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="8pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="9pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="10pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="10pic" />
 							</record>
 						</attachment>
 
 					</widget>
 
 
-
-					<widget class="button" text="" appearance="buttons/graphics options/select/button" height="350" auto_size="horizontal">
-						<event id="click_event" event_id="kev1"/>
+					<widget class="button" text="" appearance="buttons/graphics options/select/button"
+						height="350" auto_size="horizontal">
+						<event id="click_event" event_id="kev1" />
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="1pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="1pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="2pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="2pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="3pic"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="3pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="4pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="4pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="5pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="5pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="6pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="6pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="7pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="7pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="8pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="8pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="9pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="9pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="10pic"/>
-							</record>
-						</attachment>
-
-					</widget>
-
-
-
-
-
-					<widget class="button" text="" appearance="buttons/graphics options/select/button" height="350" auto_size="horizontal">
-						<event id="click_event" event_id="kev1"/>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="1pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="2pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="3pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="4pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="5pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="6pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="7pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="8pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="9pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="10pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="10pic" />
 							</record>
 						</attachment>
 
 					</widget>
 
 
-
-
-
-					<widget class="button" text="" appearance="buttons/graphics options/select/button" height="350" auto_size="horizontal">
-						<event id="click_event" event_id="kev1"/>
+					<widget class="button" text="" appearance="buttons/graphics options/select/button"
+						height="350" auto_size="horizontal">
+						<event id="click_event" event_id="kev1" />
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="1pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="1pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="2pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="2pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="3pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="3pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="4pic"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="4pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="5pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="5pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="6pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="6pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="7pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="7pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="8pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="8pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="9pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="9pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="10pic"/>
-							</record>
-						</attachment>
-
-					</widget>
-
-
-
-
-
-					<widget class="button" text="" appearance="buttons/graphics options/select/button" height="350" auto_size="horizontal">
-						<event id="click_event" event_id="kev1"/>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="1pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="2pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="3pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="4pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="5pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="6pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="7pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="8pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="9pic"/>
-							</record>
-						</attachment>
-
-						<attachment class="event_relay_attachment" event_id="kev1">
-							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="10pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="10pic" />
 							</record>
 						</attachment>
 
 					</widget>
 
 
-
-
-
-					<widget class="button" text="" appearance="buttons/graphics options/select/button" height="350" auto_size="horizontal">
-						<event id="click_event" event_id="kev1"/>
+					<widget class="button" text="" appearance="buttons/graphics options/select/button"
+						height="350" auto_size="horizontal">
+						<event id="click_event" event_id="kev1" />
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="1pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="1pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="2pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="2pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="3pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="3pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="4pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="4pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="5pic"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="5pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="6pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="6pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="7pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="7pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="8pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="8pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="9pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="9pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="10pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="10pic" />
 							</record>
 						</attachment>
 
 					</widget>
 
 
-
-
-
-					<widget class="button" text="" appearance="buttons/graphics options/select/button" height="350" auto_size="horizontal">
-						<event id="click_event" event_id="kev1"/>
+					<widget class="button" text="" appearance="buttons/graphics options/select/button"
+						height="350" auto_size="horizontal">
+						<event id="click_event" event_id="kev1" />
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="1pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="1pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="2pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="2pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="3pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="3pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="4pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="4pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="5pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="5pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="6pic"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="6pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="7pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="7pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="8pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="8pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="9pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="9pic" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="kev1">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="10pic"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="10pic" />
+							</record>
+						</attachment>
+
+					</widget>
+
+
+					<widget class="button" text="" appearance="buttons/graphics options/select/button"
+						height="350" auto_size="horizontal">
+						<event id="click_event" event_id="kev1" />
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="1pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="2pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="3pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="4pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="5pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="6pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="7pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="8pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="9pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="10pic" />
+							</record>
+						</attachment>
+
+					</widget>
+
+
+					<widget class="button" text="" appearance="buttons/graphics options/select/button"
+						height="350" auto_size="horizontal">
+						<event id="click_event" event_id="kev1" />
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="1pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="2pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="3pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="4pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="5pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="6pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="7pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="8pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="9pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="10pic" />
+							</record>
+						</attachment>
+
+					</widget>
+
+
+					<widget class="button" text="" appearance="buttons/graphics options/select/button"
+						height="350" auto_size="horizontal">
+						<event id="click_event" event_id="kev1" />
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="1pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="2pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="3pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="4pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="5pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="6pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="7pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="8pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="9pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="10pic" />
+							</record>
+						</attachment>
+
+					</widget>
+
+
+					<widget class="button" text="" appearance="buttons/graphics options/select/button"
+						height="350" auto_size="horizontal">
+						<event id="click_event" event_id="kev1" />
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="1pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="2pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="3pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="4pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="5pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="6pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="7pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="8pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="9pic" />
+							</record>
+						</attachment>
+
+						<attachment class="event_relay_attachment" event_id="kev1">
+							<record id="action_event">
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="10pic" />
 							</record>
 						</attachment>
 
@@ -859,7 +870,7 @@
 
 				</container>
 
-				<container/>
+				<container />
 
 			</container>
 
@@ -871,377 +882,392 @@
 	<!-- opacity selector -->
 
 
-
 	<container>
-		<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" layout="100, -1"/>
-		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true" />
-		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		<layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0" layout="100, -1" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"
+			apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 
-		<container/>
+		<container />
 
 		<container>
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
 
 			<container>
-				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0" layout="-1, 300, -1"/>
-				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
-				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
-				<layout class="stick_to_sides_attachment" alignment="bottom" inset="0"/>
+				<layout class="arrange_horizontal_attachment" alignment="fill" offset="0" gap="0"
+					layout="-1, 300, -1" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"
+					apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+				<layout class="stick_to_sides_attachment" alignment="bottom" inset="0" />
 
 				<real id="delay_modal_close" value="0.8" />
-				<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="1, 0" end_value="0, 0" duration="0.8" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen"/>
+				<animation class="translate_animation" trigger_id="hidden" trigger_value="false"
+					start_value="1, 0" end_value="0, 0" duration="0.8" end_mode="hold_auto_reverse_hold"
+					tween="ease_out" coord_mode="relative_to_screen" />
 
-				<container/>
+				<container />
 
 				<container height="125">
-					<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0"
+						apply_to_children="true" />
 
-					<widget class="button" id="os90" text="90%" font="title" colour="yellow 600" size="100" appearance="button/empty/button" auto_size="all" hidn="true">
+					<widget class="button" id="os90" text="90%" font="title" colour="yellow 600" size="100"
+						appearance="button/empty/button" auto_size="all" hidn="true">
 						<string id="hint" value="90% opaque filter, next is 0%" />
 
-						<event id="click_event" event_id="o90c"/>
+						<event id="click_event" event_id="o90c" />
 
 						<attachment class="event_relay_attachment" event_id="o90c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="os0"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="os0" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o90c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="os90"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="os90" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o90c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="0bg"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="0bg" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o90c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="90bg"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="90bg" />
 							</record>
 						</attachment>
 
 					</widget>
 
-					<widget class="button" id="os80" text="80%" font="title" colour="yellow 600" size="100" appearance="button/empty/button" auto_size="all" hidn="true">
+					<widget class="button" id="os80" text="80%" font="title" colour="yellow 600" size="100"
+						appearance="button/empty/button" auto_size="all" hidn="true">
 						<string id="hint" value="80% opaque filter, next is 90%" />
 
-						<event id="click_event" event_id="o80c"/>
+						<event id="click_event" event_id="o80c" />
 
 						<attachment class="event_relay_attachment" event_id="o80c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="os90"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="os90" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o80c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="os80"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="os80" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o80c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="90bg"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="90bg" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o80c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="80bg"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="80bg" />
 							</record>
 						</attachment>
 
 					</widget>
 
-					<widget class="button" id="os70" text="70%" font="title" colour="yellow 600" size="100" appearance="button/empty/button" auto_size="all" hidn="true">
+					<widget class="button" id="os70" text="70%" font="title" colour="yellow 600" size="100"
+						appearance="button/empty/button" auto_size="all" hidn="true">
 
 						<string id="hint" value="70% opaque filter, next is 80%" />
 
-						<event id="click_event" event_id="o70c"/>
+						<event id="click_event" event_id="o70c" />
 
 						<attachment class="event_relay_attachment" event_id="o70c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="os80"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="os80" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o70c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="os70"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="os70" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o70c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="80bg"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="80bg" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o70c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="70bg"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="70bg" />
 							</record>
 						</attachment>
 					</widget>
 
-					<widget class="button" id="os60" text="60%" font="title" colour="yellow 600" size="100" appearance="button/empty/button" auto_size="all" hidn="true">
+					<widget class="button" id="os60" text="60%" font="title" colour="yellow 600" size="100"
+						appearance="button/empty/button" auto_size="all" hidn="true">
 
 						<string id="hint" value="60% opaque filter, next is 70%" />
 
-						<event id="click_event" event_id="o60c"/>
+						<event id="click_event" event_id="o60c" />
 
 						<attachment class="event_relay_attachment" event_id="o60c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="os70"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="os70" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o60c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="os60"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="os60" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o60c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="70bg"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="70bg" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o60c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="60bg"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="60bg" />
 							</record>
 						</attachment>
 					</widget>
 
-					<widget class="button" id="os50" text="50%" font="title" colour="yellow 600" size="100" appearance="button/empty/button" auto_size="all" hidn="true">
+					<widget class="button" id="os50" text="50%" font="title" colour="yellow 600" size="100"
+						appearance="button/empty/button" auto_size="all" hidn="true">
 
 						<string id="hint" value="50% opaque filter, next is 60%" />
 
-						<event id="click_event" event_id="o50c"/>
+						<event id="click_event" event_id="o50c" />
 
 						<attachment class="event_relay_attachment" event_id="o50c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="os60"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="os60" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o50c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="os50"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="os50" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o50c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="60bg"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="60bg" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o50c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="50bg"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="50bg" />
 							</record>
 						</attachment>
 					</widget>
 
-					<widget class="button" id="os40" text="40%" font="title" colour="yellow 600" size="100" appearance="button/empty/button" auto_size="all" hidn="true">
+					<widget class="button" id="os40" text="40%" font="title" colour="yellow 600" size="100"
+						appearance="button/empty/button" auto_size="all" hidn="true">
 
 						<string id="hint" value="40% opaque filter, next is 50%" />
 
-						<event id="click_event" event_id="o40c"/>
+						<event id="click_event" event_id="o40c" />
 
 						<attachment class="event_relay_attachment" event_id="o40c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="os50"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="os50" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o40c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="os40"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="os40" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o40c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="50bg"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="50bg" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o40c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="40bg"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="40bg" />
 							</record>
 						</attachment>
 
 					</widget>
 
-					<widget class="button" id="os30" text="30%" font="title" colour="yellow 600" size="100" appearance="button/empty/button" auto_size="all" hidn="true">
+					<widget class="button" id="os30" text="30%" font="title" colour="yellow 600" size="100"
+						appearance="button/empty/button" auto_size="all" hidn="true">
 
 						<string id="hint" value="30% opaque filter, next is 40%" />
 
-						<event id="click_event" event_id="o30c"/>
+						<event id="click_event" event_id="o30c" />
 
 						<attachment class="event_relay_attachment" event_id="o30c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="os40"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="os40" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o30c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="os30"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="os30" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o30c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="40bg"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="40bg" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o30c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="30bg"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="30bg" />
 							</record>
 						</attachment>
 					</widget>
 
-					<widget class="button" id="os20" text="20%" font="title" colour="yellow 600" size="100" appearance="button/empty/button" auto_size="all" hidn="true">
+					<widget class="button" id="os20" text="20%" font="title" colour="yellow 600" size="100"
+						appearance="button/empty/button" auto_size="all" hidn="true">
 						<string id="hint" value="20% opaque filter, next is 30%" />
 
-						<event id="click_event" event_id="o20c"/>
+						<event id="click_event" event_id="o20c" />
 
 						<attachment class="event_relay_attachment" event_id="o20c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="os30"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="os30" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o20c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="os20"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="os20" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o20c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="30bg"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="30bg" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o20c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="20bg"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="20bg" />
 							</record>
 						</attachment>
 					</widget>
 
-					<widget class="button" id="os10" text="10%" font="title" colour="yellow 600" size="100" appearance="button/empty/button" auto_size="all" hidn="true">
+					<widget class="button" id="os10" text="10%" font="title" colour="yellow 600" size="100"
+						appearance="button/empty/button" auto_size="all" hidn="true">
 						<string id="hint" value="10% opaque filter, next is 20%" />
 
-						<event id="click_event" event_id="o10c"/>
+						<event id="click_event" event_id="o10c" />
 
 						<attachment class="event_relay_attachment" event_id="o10c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="os20"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="os20" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o10c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="os10"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="os10" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o10c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="20bg"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="20bg" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o10c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="10bg"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="10bg" />
 							</record>
 						</attachment>
 
 					</widget>
 
-					<widget class="button" id="os0" text="0%" font="title" colour="yellow 600" size="100" appearance="button/empty/button" auto_size="all" hidn="false">
+					<widget class="button" id="os0" text="0%" font="title" colour="yellow 600" size="100"
+						appearance="button/empty/button" auto_size="all" hidn="false">
 						<string id="hint" value="0% opaque filter, next is 10%" />
 
-						<event id="click_event" event_id="o0c"/>
+						<event id="click_event" event_id="o0c" />
 
 						<attachment class="event_relay_attachment" event_id="o0c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="os10"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="os10" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o0c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="os0"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="os0" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o0c">
 							<record id="action_event">
-								<flags id="event_id" value="show"/>
-								<flags id="event_target" value="10bg"/>
+								<flags id="event_id" value="show" />
+								<flags id="event_target" value="10bg" />
 							</record>
 						</attachment>
 
 						<attachment class="event_relay_attachment" event_id="o0c">
 							<record id="action_event">
-								<flags id="event_id" value="hide"/>
-								<flags id="event_target" value="0bg"/>
+								<flags id="event_id" value="hide" />
+								<flags id="event_target" value="0bg" />
 							</record>
 						</attachment>
 
@@ -1249,12 +1275,12 @@
 
 				</container>
 
-				<container/>
+				<container />
 			</container>
 
 		</container>
 
-		<container/>
+		<container />
 	</container>
 
 
